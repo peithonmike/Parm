@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ZV173X2-LOGTESTBAT
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%TEMPFILE=\\msbmcc03\c$\temp\testbat.tmp
+%%LOGFILE=\\msbmcc03\c$\temp\testbat.csv
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\c$\temp\testbat.csv
+* ------------------------------------------------------------------

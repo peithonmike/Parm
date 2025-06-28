@@ -1,0 +1,33 @@
+Abgelöst durch MEE-Familienbrief                           
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+
+%%TERMIN="jedenSonntag"  
+%%REPORT=Jobs\Auswertungen\Reportverwaltung\EWO Standardauswertungen\
+%%REPORT2=Veränderungslisten\D_GEBURTEN 
+
+%%VON=%%TTMMJJJJP_TT_M36_%%$ODATE   
+%%BIS=%%TTMMJJJJP_TT_M30_%%$ODATE  
+%%VLK1=%%VON.-%%BIS
+%%VLK2=
+%%HINWEIS=
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+
+
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+*  Druckvorlage
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\OKEWO-AUFTRAG.skels
+$$INCLUDE=%%PRT_SKELS
+
+*
+
+ 
+

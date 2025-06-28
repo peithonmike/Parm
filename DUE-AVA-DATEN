@@ -1,0 +1,60 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : DUE-AVA-DATEN
+* erstellt : 11.04.2016 08:24:28
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=DUE-AVA-DATEN.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/DUE-AVA-DATEN
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\Daten-AVA..%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : Daten-AVA.
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+%%EMAIL-T=avaduesseldorf@berner-telecom.de;
+**EMAIL-BCC=burghard.schramm@itk-rheinland.de;
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=OK.Ewo Verfahren AVA \n  \n Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n  \n 
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-AVA_Daten.pdf
+* ------------------------------------------------------------------

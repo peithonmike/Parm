@@ -1,0 +1,50 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-SYSOUT-Monat-sammeln
+* Job sammelt alle TXT Dateien Jahr -2 Monat -1
+* somit kann auf den Sysout der letzen 2 Jahr zugegriffen werden
+*********************************************************** 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%JJJJ=%%JJJJ_M2_%%$ODATE
+%%MM=%%MM_M1_%%$ODATE
+
+
+ 
+* Eingabe Ordner
+* um einen Zip fähiger Ordner zu erstellt 
+%%INDIR=\\msbmcc03\G$\CTM\Sysout\%%JJJJ
+* von bis datum 
+%%DATE_VON=01.%%MM..%%JJJJ
+%%DATE_BIS=%%LD_MM_M1_%%$ODATE...%%MM..%%JJJJ
+*%%DATE_BIS=28.02.2022
+   
+* nur  txt Dateien
+%%INCLUDE=*.txt
+
+
+* Ausgabeordner auf Monatsbasis 
+%%OUTDIR=\\msbmcc03\g$\CTM\Sysout\%%JJJJ.\%%MM
+
+%%DEBUG=N
+
+* läuft auch im Test lange, da das selektieren der Datein  lange dauert
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.03.2015  10:13:32  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+  
+
+
+
+
+

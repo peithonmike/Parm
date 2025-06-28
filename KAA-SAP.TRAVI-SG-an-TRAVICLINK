@@ -1,0 +1,38 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-SAP.TRAVI-SG-an-TRAVICLINK
+* 
+* 
+*********************************************************** 
+* AN AUSCHALTEN 
+* BAT-Echo
+%%ECHO_ON=N
+*********************************************************** 
+
+
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\SAP\KAA??
+%%GESENDET_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+
+%%SEARCH=*.*
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\TRAVIC-LINK
+
+%%TEST=J
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\TRAVICLINK-Dateinamen.pdf
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\TRAVIC-LINK-Dateinamen-'Konventionen' für Referenznummer-Mapping.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\TRAVIC-LINK-Testuser.pdf
+$$INCLUDE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\TRAVIC-LINK-%%$OYEAR..csv
+
+* ------------------------------------------------------------------
+
+
+
+
+

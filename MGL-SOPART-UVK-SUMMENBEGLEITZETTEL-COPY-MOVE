@@ -1,0 +1,31 @@
+* *************************************************************
+* Table Variablen          
+* MGL-SOPART-UVK-SUMMENBEGLEITZETTEL-COPY-MOVE
+* Summenbegleitzettel automatisch an die Kasse schicken und sichern
+* CC-Jugend (Martina Schellen)
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%INDIR=\\srv03\qaspmg$\Daten\Apps\SopartMGL\SoPart\Export\FiBu\UV
+%%OUTDIR=\\srv03\qaspmg$\Daten\Apps\SopartMGL\SoPart\Export\FiBu\UV\ARCHIV
+%%OUTDIR_PROCESSED=\\vfmgapps\apps\Verfahren\Filetransfer-SFIRM32-FB51\UVK
+
+
+
+%%INCLUDE=Summenbegleitzettel_%%ODAY.-%%OMONTH.-%%$OYEAR._*.rtf
+%%EXCLUDE="-"
+
+
+**MAIL_NOTOK2=ccjugend@itk-rheinland.de
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT_NOTOK=Bitte überprüfen
+
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\MGL-SOPART-UVK-COPY-MOVE.ps1

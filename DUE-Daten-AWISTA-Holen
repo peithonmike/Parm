@@ -1,0 +1,96 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Daten-AWISTA-holen
+* 
+* 
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job holt Dateien über FTP ab
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-FTP-Get.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-AWISTA
+%%LIBMEMSYM=\\msbmcc03\ctm_av\doc\bl\DUE-SAP-AWISTA.TXT
+
+
+
+* hier die laufende Datei-Nummer eintragen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\DUE-AWISTA-PAKET-NR
+
+
+
+
+%%WINSCP_AKTION=KontokorrentdateN von AWISTA abrufen 
+%%WINSCP_EXE=C:\Program Files (x86)\WinSCP\WinSCP.exe
+
+
+%%INCLUDE=*.txt
+
+**OUTFILE=DUE_AWI_T%%$ODATE.%%AW..TXT
+%%OUTFILE=DUE_AWI_T%%$ODATE.%%AW..TXT
+
+
+* Local Empfangs Directory
+
+%%OUTDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\AWISTA
+
+%%OUTDIR2=\\vfdussap\sap\sap\19_DUEL_Awista\AWI
+
+
+* SERVERname oder IP Adresse kommt meist mit User und Password aus IP-UP Member
+
+%%Z01=open %%SITE
+%%Z02=ascii
+%%Z03=LS
+
+* Local Empfangs Directory-1
+%%Z04=LCD %%OUTDIR
+
+* Datei Auswahlmaske
+%%Z05=get D%%$ODATE.%%AW..txt DUE_AWI_T%%$ODATE.%%AW..TXT
+**Z05=get D20240311007T03.txt DUE_AWI_T20240311007T03.txt
+**Z05=get D2024102101*.txt
+
+
+* Local Empfangs Directory-2
+%%Z06=LCD %%OUTDIR2
+
+* Datei Auswahlmaske
+%%Z07=get D%%$ODATE.%%AW..txt DUE_AWI_T%%$ODATE.%%AW..TXT
+**Z07=get D20240311007T03.txt DUE_AWI_T20240311007T03.txt
+
+* Datei löschen    delete hat nicht funktioniert. Mal schauen ob rm klappt.
+%%Z08=rm D%%$ODATE.%%AW..txt 
+
+* FTP beenden
+%%Z20=bye 
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC01\c$\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    06.08.2021  07:48:36  zv173x2 LCD OUTDIR2
+*    13.08.2019  16:11:33  zv173x2 006
+*    13.07.2018  12:37:39  zv173x2 006
+*    01.06.2016  12:16:24  zv173x2 005
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

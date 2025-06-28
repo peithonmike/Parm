@@ -1,0 +1,175 @@
+*
+*  L O G A       A N G E S T E L L T E   A R B E I T E R   
+* -------------------------------------------------------------------------------------
+
+%%MAN=%%SUBSTRING %%JOBNAME 18 4
+
+* -------------------------------------------------------------------------------------
+* LOGA_ART  KN oder DN 
+* DOR-LOGA- KN _1200_1210_5060_03-BU
+*           10   
+%%LOGA_ART=%%SUBSTR %%JOBNAME 10 2
+* -------------------------------------------------------------------------------------
+ 
+* -------------------------------------------------------------------------------------
+* LOGA_DAT
+* Datum der Eingabeordner 
+* aktuelle Monat
+* -------------------------------------------------------------------------------------
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+* -------------------------------------------------------------------------------------
+
+
+* -------------------------------------------------------------------------------------
+*    %%PDF_INDIR=\\PZVPRINTS\e\daten\personal\NAR%%LOGA_DAT.\%%LOGA_ART
+* -------------------------------------------------------------------------------------
+%%PDF_INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\%%LOGA_ART
+%%INDIR=%%PDF_INDIR
+
+
+
+
+
+
+
+* -------------------------------------------------------------------------------------
+* Pfad für die Deckblätter 
+* Verwaltung und PDF-Dateien  
+* -------------------------------------------------------------------------------------
+%%PDF_COVERDIR=\\msbmcc03\ctm_av\PDF-COVER\loga
+* -------------------------------------------------------------------------------------
+
+
+
+* -------------------------------------------------------------------------------------
+* Standard Trenblatt 1-seitig
+%%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Trennblatt.pdf
+
+* wenn 2-seitig gefordert wird, dann  im Job-LIBMEMSYM 
+* %%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\2-seitig\Trennblatt.pdf angeben
+* -------------------------------------------------------------------------------------
+
+* -------------------------------------------------------------------------------------
+* LOGA STANDARD
+* Sachgebiet aus Jobnamen ermitteln
+*           10------------- 
+* DOR-LOGA- DN_1200_1200_01 -BU
+%%LOGA_SACHG=%%SUBSTR %%JOBNAME 10 15
+* -------------------------------------------------------------------------------------
+
+* Beschäftigungsart funktioniert nicht bei Meldebescheinigungen
+%%B_ART=%%SUBSTRING %%JOBNAME 23 2
+
+%%USE_FREEFLOW=J
+%%USE_DRUCKEREI=N
+
+
+* -------------------------------------------------------------------------------------
+* FreeFlow
+%%LOGA_DN_DRUCKER=\\msprintff01\d$\R18LP
+%%LOGA_KN_DRUCKER=\\msprintff01\d$\R18personal
+* -------------------------------------------------------------------------------------
+
+
+
+* -------------------------------------------------------------------------------------
+* INCLUDE EXCLUDE
+%%INCLUDE=%%LOGA_SACHG.*.pdf
+
+* Exclude DUEVO Mitteilungen wird separat gebündelt vormals 5060
+%%EXCLUDE=*_5014_*
+%%EXCLUDE_NEU=*_7541_*
+* -------------------------------------------------------------------------------------
+
+
+* -------------------------------------------------------------------------------------
+%%PDF_SAMMELDIR          =%%PDF_INDIR.\%%LOGA_SACHG.
+%%PDF_SAMMELDIR_PROCESSED=%%PDF_SAMMELDIR.\erledigt
+* -------------------------------------------------------------------------------------
+
+
+
+* ---------------------------------------------------------------
+* PDF_OUTDIR
+* dahin kommt das erstellte Bündel
+* %%PDF_OUTDIR=%%PDF_INDIR.\BUENDEL
+* -------------------------------------------------------------------------------------
+* -------------------------------------------------------------------------------------
+* PDF_OUTDIR
+* dahin kommt das erstellte Bündel
+%%PDF_OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NAR\%%LOGA_ART.\BUENDEL
+* -------------------------------------------------------------------------------------
+
+
+
+* -------------------------------------------------------------------------------------
+* ANZAHL Ausdrucke
+%%ANZAHL=1
+* -------------------------------------------------------------------------------------
+
+
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+%%PDF_FILENAME=%%GEM3.-%%LOGA_SACHG.-%%LOGA_DAT.-BU.PDF
+* ---------------------------------------------------------------
+
+*\\msbmcc03\ctm_av\PDF-COVER\LOGA\1-seitig
+* -------------------------------------------------------------------------------------
+* FRONTCOVER
+**%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\LOGA\1-seitig\AAA-%%GEM3.-%%LOGA_SACHG..Pdf
+%%PDF_FRONTCOVER=
+
+* BACKCOVER
+**%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\LOGA\1-seitig\ZZZ-%%GEM3.-%%LOGA_SACHG..Pdf
+%%PDF_BACKCOVER=
+* -------------------------------------------------------------------------------------
+
+
+
+* -------------------------------------------------------------------------------------
+* PDF Programm
+%%PDF_EXE=\\msbmcc03\ctm_av\Bin\sontiges\PDFtk\bin\pdftk.exe
+%%DRUCK_LOG=\\msbmcc03\ctm_av\Log\ErgebnisLog\LOGA-DRUCK-%%$OYEAR..csv
+* -------------------------------------------------------------------------------------
+
+
+* -------------------------------------------------------------------------------------
+%%ONLY_BUENDEL=N
+%%FORCE_PDF_SAMMELDIR_PROCESSED=J
+%%DEBUG=N
+* -------------------------------------------------------------------------------------
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+*$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-FILES-SAMMELN_LOGA.ps1
+*$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-PDFTK.ps1
+
+** Globale ExcludeListe
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-EXCLUDE-%%GEM3.-%%LOGA_ART
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.08.2020  09:24:27  zv173x2 USE_Freeflow=J USE_DRUCKEREi=N 
+*    12.08.2020  08:12:38  zv173x2 PDF_??? auch in ??? ohne PDF 
+*    15.10.2019  09:51:39  zv173x2 %%EXCLUDE *_3601_*,*_7451_*  entfernt
+
+*    11.10.2019  10:56:46  zv173x2 Beschäftigungsart
+*    11.10.2019  10:35:12  zv173x2 Excludeliste
+*    13.02.2019  10:14:55  zv173x2 %%MAN=%%SUBSTRING %%JOBNAME 18 4
+
+
+*     08.06.2018  11:04:09  zv173x2  $$INCLUDE *
+*    15.11.2016  10:21:51  zv173x2 Bündel auf Printserver Druckdaten
+*    25.10.2016  15:06:55  zv173x2 umgestellt auf Printserver
+*    16.12.2015  12:37:57  zv173x2 %%PDF_SAMMELDIR.\erledigt
+*    20.10.2015  15:50:21  zv173x2 %PDF_SAMMELDIR\erledigt 
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

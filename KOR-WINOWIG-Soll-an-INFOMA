@@ -1,0 +1,73 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KOR-WINOWIG-Soll-an-INFOMA
+* 
+* 04.04.2019  09:47:32  zv173x2 neu unter PS1 löst Bat ab
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-KOR-INFOMA
+
+
+
+%%NETUSE=J
+%%NETUSE_PATH=\\10.106.0.34\transferNE$\Owig\Import
+%%LAUFWERK=X:
+
+%%EMAIL_U=%%JOBNAME NOT OK gelaufen
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de     
+%%EMAIL_CC=   
+
+
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qaspKO$\Daten\Apps\winowig\ftp\ausgang\soll\
+
+* Datei Auswahl
+%%INCLUDE=WiNOWIG_Soll_*_*.txt
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=%%IP
+
+* erledigt Ordner
+* wenn nicht vorhanden anlegen J/N
+%%FORCE_OUTDIR_PROCESSED=N
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspKO$\Daten\Apps\winowig\ftp\ausgang\soll\erledigt
+
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC01\c$\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.04.2019  09:47:32  zv173x2 neu unter PS1 löst Bat ab
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

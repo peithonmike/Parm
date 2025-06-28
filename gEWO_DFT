@@ -1,0 +1,38 @@
+
+***************************************************************************************
+* neues OKEWO ab 2021
+***************************************************************************************
+
+
+
+%%GEM3=DFT
+* -------------------------------------------------
+* ab hier Mandantenspezifisch
+* -------------------------------------------------
+
+%%MANDANT=e01_duetest
+%%MANDANT=e01_dueTest
+
+
+%%USER=ewoav_dueTest
+%%PASS=secret-server
+
+* Mandanten-Server immer 2x auch in der URL
+%%JBOSS=MSNPALHD02
+%%EWODIR_AUSWERTUNGEN=\\%%JBOSS.\Auswertungen$
+
+* Slash's müssen so bleiben sonst funktioniert die Auswertung nicht
+%%URL=http://msnpalhd02:8380
+
+%%JAR_FILE=\\msbmcc03\CTM_AV\Bin\Java\EWO_BATCH\jar-files\%%GEM3.\qjob-cmdline-client-jar-with-dependencies.jar
+
+
+
+* -------------------------------------------------
+* globale für alle geltenden Variablen
+* -------------------------------------------------
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\gEWO
+
+
+
+

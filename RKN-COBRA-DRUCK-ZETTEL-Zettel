@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEUCOBRA-DRUCK-ZETTEL-Zettel
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+ 
+ 
+* ------------------------------------------------------------------
+*  Druckvorlage
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\RKN-COBRA-Druckzettel.skels
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV-QUER
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\RKN-COBRA-Druckzettel.skels
+%%TEST=N
+

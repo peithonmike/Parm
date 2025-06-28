@@ -1,0 +1,34 @@
+*************************************************************** 
+* LIBMEMSYM 
+* NEU-SOPART.AV-Export
+* 
+* SoPart® AV - Amtsvormundschaft / Beistandschaft / Mündelgeld 
+* 
+*************************************************************** 
+* Abholen Daten aus dem Mandantenbereich in den Prodbereich
+* ------------------------------------------------------------
+*  Host Nachfolgeauftrag R50a44
+* Eingabe aus Mandantenbereich
+*          
+* Directory  
+* \\srv03.asp.rzne.de\qaspne$\daten\apps\sopav\avor\export
+* Datei 
+* sopart_export_an_kasse.txt
+*
+* Ausgabe im AV-Bereich     \\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\ne\Sopart\Avor\Export 
+*************************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+ 
+%%INDIR=\\srv03.asp.rzne.de\qaspne$\daten\apps\sopav\avor\export
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\srv03.asp.rzne.de\ftp$\ne\Sopart\Avor\Export\transpid.bat
+$$INCLUDE=\\srv03.asp.rzne.de\ftp$\ne\Sopart\Avor\Export\roboexp.txt
+$$INCLUDE=\\srv03.asp.rzne.de\ftp$\ne\Sopart\Avor\Export\protokol.dat
+* ------------------------------------------------------------------

@@ -1,0 +1,129 @@
+*********************************************************** 
+* LIBMEMSYM 
+* LOGA-MSP-EGM
+* Mitarbeitenden Service Portal
+*********************************************************** 
+* S O N S T I G E
+*********************************************************** 
+ 
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+* MUSTER
+*                         HMAN alle 
+* DOR-LOGA-MSP-EGM-Sonstige-1200-XXXX-BU
+
+%%HMAN =%%SUBSTR %%JOBNAME 27 4
+%%MAN  =%%SUBSTR %%JOBNAME 33 4
+
+
+
+
+%%EXCLUDE="-"
+
+
+*** Abholen der Daten             : XXX-LOGA-MSP-Stammdaten-abholen-Winscp
+*** Daten aus Lemgo liegen        : Source Loga Jahr Monat Art KN 
+
+*** kopieren nach MSP             : XXX-LOGA-MSP-EGM-Sonstige-Copy                                 
+*** kopierte MSP Daten gehen nach : Source Loga Jahr Monat Art MSP
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\KN
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\MSP-EGM
+
+
+
+*** in OUTDIR2 kommen jeweils die aktuellen Eingaben des Monats für die täglichen Updates ohne DRUCK
+%%OUTDIR2=\\srv03.asp.rzne.de\ftp$\av\MSP\LOGA_MSP_DAILY
+
+
+*** werden kopiert nach            : Source  Loga Jahr Monat Art MSP
+*** und sind dann die Eingabe 
+*** für die Druckaufbereitung      : XXX-LOGA-MSP-EGM-Sonstige-Druck-erzeugen
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\MSP-EGM
+
+
+*** EGM Druck erzeugen             : XXX-LOGA-MSP-EGM-Sonstige-Druck-erzeugen
+%%DRUCK_INDIR=%%OUTDIR
+%%DRUCK_OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NZI\MSP-EGM
+%%DRUCK_OUTDIR_PROCESSED=%%DRUCK_OUTDIR.\erledigt
+%%DRUCK_USE_OUTDIR_PROCESSED=J
+
+
+%%KOPIE01=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie01.pdf
+%%KOPIE02=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie02.pdf
+%%COPYCOUNT=0
+
+
+* P&I verwenden
+%%USE_PI=J
+
+* P&I Druck Queue
+%%PRINTER_QUEUE=\\msprintff01\d$\R18personal
+
+
+* Standard 
+%%INCLUDE =*KN_%%HMAN._**.pdf
+%%EXCLUDE=*_5060_*
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\PI-DRUCK-%%$OYEAR..csv
+%%OUTFILE =%%GEM3.-MSP-KUVERT-Sonstige-%%LOGA_DAT.-BU.pdf
+
+* Sammeldir für mehr als eine PDF
+%%SAMMELDIR_DELETE=J
+  
+%%ADD_TRENNBLATT=N
+%%ADD_FRONTCOVER=N
+%%ADD_BACKCOVER=N
+%%ADD_KOPIE=N
+%%FORCE_OUTDIR_PROCESSED=J
+
+
+%%AUFTAGGEBER=S.Huennekes ab 02.2020
+
+
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*    11.02.2020  16:31:22  zv173x2 S.Huennekes ab 02.2020
+*    11.02.2020  16:30:38  zv173x2 outfile mit msp
+*    04.07.2018  12:56:11  zv173x2  %%AUFTAGGEBER=S.Berktin
+*    30.11.2017  08:31:16  zv173x2 OUTDIR2
+*    09.08.2017  09:11:45  zv173x2 erster lauf
+*    14.03.2017  08:10:21  zv173x2  neu
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+*  ********************************************************************************** 
+*  Übersicht 
+*  Listennummern Kuvertierung
+*  ********************************************************************************** 
+
+*  JEL     Jahreslohnkonten aktiver Mitarbeiter 
+*  Elster  Jahreslohnkonten ausgeschiedene Mitarbeiter 
+*  DN_*_*_*_6011_C1.pdf
+
+*  Meldebescheinigungen 
+*  KN_*_*_*_5060_C1.pdf
+
+*  Entgeltabrechnung  03 04 .... 
+*  SonstigeNZIsoldung   01
+*  Pensionsabrechnung 02
+
+*  KN_*_*_*_1080_C1.pdf
+
+*  ********************************************************************************** 
+
+* monatlich  
+* KN_*_*_*_6011_C1.pdf
+* KN_*_*_*_1080_C1.pdf
+* KN_*_*_*_5060_C1.pdf
+* KN_*_*_*_1060_C1.pdf    Verdienstabrechnung
+* KN_*_*_*_1061_C1.PDF    Pensionsabrechnung
+* KN_*_*_*_1051_C1.pdf    SonstigeNZIsoldung
+
+
+
+
+
+

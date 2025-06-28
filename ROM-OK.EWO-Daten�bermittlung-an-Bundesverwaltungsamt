@@ -1,0 +1,50 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : ROM                                                                  *
+***********************************************************************************
+*  Jobname     : ROM-OK.EWO-Datenübermittlung-an-Bundesverwaltungsamt
+*  Description : Datenübermittlung (0560/0561-Nachrichten)
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%VON *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=8624-E01U0000
+*
+%%OKEWO_NR=P8624
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=J
+  
+*  Liste1 
+%%LISTE1=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON..DBL 
+%%LISTE1_ACTION=N
+  
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=Datenübermittlung (0560/0561-Nachrichten)
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U295A#DUE_DAT_N.E01E300#15.08.2015#V_UZ331_LISTE.E01DUMMY#$$

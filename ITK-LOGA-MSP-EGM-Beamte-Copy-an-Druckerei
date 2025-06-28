@@ -1,0 +1,86 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-LOGA-MSP-EGM-Beamte-Copy-an-Druckerei
+* 
+* 
+*********************************************************** 
+ 
+* alle Mitarbeiter der ITK verwnden MSP.
+* Standard : es beommt keine eine ausgedruckte Bescheinigung.
+* Ausnahme : Versorgungsempfänger
+*            das ist der einzige MSP-Output der ITK der noch gedruckt wird
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-MSP-EGM-NBE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-USE-DRUCKEREI-NEUSS
+
+*\\MSPRINTFF01\Druckdaten$\2021\LOGA\04\MSP-EGM\ITK\Buendel\ITK-MSP-KUVERT-NBE-0421-BU.pdf
+
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\MSP-EGM\m-28\Buendel
+
+
+%%EMAIL_U=Gehaltsmitteilungen VERSORGUNGSEMPFÄNGER  %%GEM3 MSP stehen bereit  %%OMONTH..%%$OYEAR 
+%%DESCRIPTION=Druck Versorgungsempfänger %%GEM3
+%%DESCRIPTION1=%%EMAIL_U
+
+
+
+
+
+
+
+* Datei Auswahl
+%%INCLUDE=%%GEM3.*NBE*.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=%%DRUCKEREI_DIR
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\kopiert
+
+
+* ***************************************************************************
+* %%NETUSE=J oder N
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+* %%NETUSE_PATH=nicht-verwendet 
+*
+* Laufwerksbuchstabe in der Form Y:
+* %%LAUFWERK=nicht-verwendet
+* ***************************************************************************
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+************************************************************************* 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.11.2021  08:50:19  zv173x2 Eingabe ordner war falsch 
+*    28.04.2021  10:27:07  zv173x2 nur VERSORGUNGSEMPFÄNGER 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,22 @@
+* --------------------------------------------------------------------------------
+*      Job : ITK-PrintServer-Backup
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%TEST=N
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de;
+%%MAILNOTOK=rainer.ledueck@itk-rheinland.de;doris.huhn@itk-rheinland.de;stefan.holzum@itk-rheinland.de
+
+%%BETREFF_OK=ITK-PrintServer-Backup_%%NODEID OK
+%%BETREFF_NOTOK=ITK-PrintServer-Backup_%%NODEID NOTOK
+
+%%TEXT_OK=Joblog: ITK-PrintServer-Backup_%%NODEID ist OK.
+%%TEXT_NOTOK=Joblog: ITK-PrintServer-Backup_%%NODEID NOTOK

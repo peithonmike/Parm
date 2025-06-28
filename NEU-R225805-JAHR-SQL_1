@@ -1,0 +1,42 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : NEU-R225805-JAHR-SQL_1
+* erstellt : 21.10.2013 14:27:51
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%TEST=N
+*
+* Config-Datei
+%%CONFIG= 
+* Input-Datei
+%%CSV=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Ausgabe\R22J5805_AUSGABE_JAHR-%%$ODATE..CSV
+
+* Datenbank
+%%DB=jasperjob
+* SQL-File
+%%SQL=\\msbmcc03\ctm_av\Parm\R22J5805_AUSGABE_JAHR.sql
+*Tabelle
+%%TABLE=R22J5805_AUSGABE_JAHR
+* JAVA
+%%JAR=\\msbmcc03\ctm_av\Bin\Java\CsvToSql.jar
+ 
+ 
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\NEU-JASPER-R225805-JAHR.pdf
+* ------------------------------------------------------------------

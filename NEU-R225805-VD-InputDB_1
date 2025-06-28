@@ -1,0 +1,27 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : NEU-R225805-VD-InputDB_1
+* erstellt : 21.10.2013 14:27:51
+*    durch : ZV171E3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%TEST=N
+*
+* Config-Datei
+%%CONFIG= 
+* Input-Datei
+%%INPUT=jasperjob
+* OUTFILE
+%%OUTFILE=\\msbmcc03\ctm_av\Parm\R22J5805_AUSGABE_VD.sql
+* JAVA
+%%JAR=

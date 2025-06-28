@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.EZ-Zahlungsdatei-an-PTV
+* 
+* 
+*********************************************************** 
+ 
+
+%%TEST=N
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+ 
+
+* Beschreibung
+%%DESCRIPTION=EZ-Düsseldorf Zahlungen an den PTV Server senden
+
+* Eingabe
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\EZ\PTV
+%%INFILE=EZ-030-DF-SAP_PFVBK22E_ASKIRP_EZ_%%$ODATE..txt
+
+
+* Ausgabe
+%%OUTDIR=\\msptv02\PTVProjekte$\SAP_Export\AKDN_EDUE\InDir
+%%OUTFILE=DUE_SOZE_T%%$ODATE..txt
+
+
+* erledigt
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+%%OUTFILE_PROCESSED=%%INFILE
+
+
+******************   TEST  BEREICH   ************************
+
+* Eingabe-Test
+*%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\EZ\Test
+*%%INFILE=EZ-030-DF-SAP_PFVBK22E_ASKIRP_DF_EZ_%%$ODATE..txt
+
+
+* Ausgabe-Test
+*%%OUTDIR=\\msptv03\d$\PTV\Projekte\SAP_Export\AKDN_EDUE\InDir
+*%%OUTFILE=DUE_SOZE_T%%$ODATE..txt
+
+*************************************************************
+
+
+* Log
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+ 
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.10.2015  13:54:45  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+  
+
+

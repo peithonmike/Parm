@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-ETP-EXCELEXPORT-TEST
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND="C:\Program Files\Scripte\AutomatisierungKosy\MAGS_TEST_EXCELEXPORT.bat"
+
+%%MAIL=produktions-steuerung@itk-rheinland.de;simone.thissen@itk-rheinland.de;dieter.assenmacher@itk-rheinland.de;erich.janke@itk-rheinland.de
+

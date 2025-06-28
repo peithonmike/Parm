@@ -1,0 +1,66 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-WINOWIG-Druck-im-Amt
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-WINOWIG-DRUCK-RKN
+
+%%NETUSE_PATH=\\N900D01M63.n900d01.int.de\Input_ITK_WINOWIG$
+            
+
+%%LAUFWERK=Y:
+* WINOWIG_DRUCK_DIR  aus gRKN
+%%INDIR=%%WINOWIG_DRUCK_DIR.\P%%$ODATE
+
+* PROD RKN Druck-Verzeichnis  
+%%OUTDIR=\\N900D01M63.n900d01.int.de\Input_ITK_WINOWIG$\
+
+
+
+* TEST überschreibt OUTDIR
+* %%NETUSE_PATH=\\N900d01m63\e$\RKN\WinOWiG_Test
+* %%OUTDIR=\\N900d01m63\e$\RKN\WinOWiG_Test
+* TEST Ende
+
+
+
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+* Datei Auswahl
+%%INCLUDE=*.*
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%PREFIX=%%$ODATE.-
+
+
+%%FORCE_OUTDIR=N
+%%TEST=N
+%%DEBUG=N
+
+%%EMAIL_T=Andreas.hillebrands@itk-rheinland.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC01\c$\CTM_AV\Bin\Powershell\BL\JOB\Job-Prefix-Copy-Files.ps1 -INCLUDE %%INCLUDE
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.05.2020  07:47:04  zv173x2 email Adressen
+*    24.04.2020  15:11:31  zv173x2 neu ab 29.04.2020
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

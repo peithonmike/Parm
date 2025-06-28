@@ -1,0 +1,64 @@
+* *******************************************************************************
+* LIBMEMSYM
+* ZSTV
+*
+* S Y S T E M F I L E 
+* USER : WAFAV
+* -------------------------------------------------------------------------------
+* Die Abkürzung ZStV steht für:
+* Zentrales Staatsanwaltschaftliches Verfahrensregister
+* -------------------------------------------------------------------------------
+
+* *******************************************************************************
+* sonstige Variablen 
+* *******************************************************************************
+%%GEM3            =%%SUBSTR %%JOBNAME 1 3
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+* Sysout 
+%%SYSOUT=%%OPENFT_SYSOUT
+
+* OPENFT
+%%TRANSFER_ADMISSION=Ra99FxY6
+%%ANSCHLUSS=toBZRneu
+%%BFJ_ID_ZSTV=R6128B
+
+
+* *******************************************************************************
+* Variablen zum Verfahren ZSTV
+* *******************************************************************************
+
+* Anfrage Directory des Mandanten 
+
+%%ZSTV_EXPORT=\\srv03.asp.rzne.de\Transfer\RKN\Kasse\Jagdwesen\Registerauskunft\Export
+
+
+
+
+* Antwort EmpfangsDirectory des Mandanten 
+
+%%ZSTV_IMPORT=\\srv03.asp.rzne.de\Transfer\RKN\Kasse\Jagdwesen\Registerauskunft\Import
+         
+
+
+* Antwort Empfangsdirectory auf dem OpenFT Server (dahin kommen die Daten vom BZR zurück)                   
+%%ZSTV_DIR_ANTWORT=\\msbmcbatch01\c$\CTM_AV\AntwortZSTV
+
+
+* Anfrage Directory auf dem OpenFT Server (von da aus wird zum BZR gesendet)                   
+%%ZSTV_DIR_ANFRAGE=\\msbmcbatch01\c$\CTM_AV\OpenFT-Prod-Dateien\ZSTV
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.02.2015  13:07:03  zv171e1 Job neu angelegt
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

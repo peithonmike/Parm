@@ -1,0 +1,71 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Familienverband-Aufloesen-Senden-TEST
+* 
+* 
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job senden Daten per FTP
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-FTP-Put.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-KDVZ-FRECHEN
+
+
+*%%SDAT=%%ODAY.-%%M2NAME_%%$ODATE..-%%JJJJ
+%%SDAT=%%JJMMTT_%%$ODATE
+ 
+
+
+*  Eingabe Directory
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\AufloesenFamilienverband\DUE
+
+* Auswahlmaske
+%%INCLUDE=*%%SDAT.*.zip
+
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+* SERVERname oder IP Adresse kommt meist mit User und Password aus IP-UP Member
+
+%%Z01=open %%SITE
+
+* auf ascii oder binar einstellen
+%%Z04=ascii
+%%Z05=cd aufl_itk
+%%Z06=put \\srv03.asp.rzne.de\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div\OM_%%GKZ8..csv
+%%Z07=mkdir DUE_%%$ODATE
+%%Z08=cd DUE_%%$ODATE
+%%Z09=mput \\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\AufloesenFamilienverband\DUE\DUE-*_%%SDAT.*_*.zip
+* FTP beenden
+%%Z20=bye 
+
+
+
+%%TEST=J
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    08.12.2015  12:19:11  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

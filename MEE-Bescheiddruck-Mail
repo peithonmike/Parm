@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-Bescheiddruck-Mail
+* 
+* DUMMY-Member
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%EINGABE="\\vfapps\apps\ITK\KMV\Produktion\8000\50101\Aktuell"
+%%FILTER=*
+%%DRUCKDATEI=Druck_GEW-Meerbusch_%%ODATE
+%%ZIEL="\\vfapps\apps\ITK\KMV\Produktion\8000\50101\Druck"
+%%MOVEZIEL="\\vfapps\apps\ITK\KMV\Produktion\8000\50101\Aktuell\Verarbeitet"
+%%LOG="\\msbmcc03\ctm_av\bin\Log\%%JOBNAME..txt"
+%%DRUCKDATEI_FF=*.pdf
+%%MANDANT=MEE
+%%VORBLATT=MEE-GEW-Druck_Vorblatt.pdf
+
+ 

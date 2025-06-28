@@ -1,0 +1,52 @@
+
+B A U S T E L L E
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-SAP.TRAVI-SG-abholen
+* 
+* 
+*********************************************************** 
+* abholen vom PTV Server an TravicLink Sendeordner
+ 
+*********************************************************** 
+ 
+
+* bei TEST J wird nur ein Anlist der Dateien erzeugt
+%%TEST=J
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+* Eingabe SAP-Server  
+%%SEARCH_DIR=\\sapftpitk.sapitk.krzn.de\sapmntitk\SST\IFP\500\DTAUS
+
+* Daten-Datei Suchmaske
+%%SEARCH=000.SAP.SRZ.KAA-SEPA_CT_*
+
+
+* Ausgabe TravicLink Verzeichnis
+%%OUTDIR\\srv03.asp.rzne.de\ftp$\av\TravicLink\SAP\KAA\DTAUS
+
+
+* Logfile
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+
+* erledigt Ordner,
+* dieser liegt immer in der search_dir  
+%%MOVE_ORDNER=erledigt
+
+
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+ 
+
+ 
+

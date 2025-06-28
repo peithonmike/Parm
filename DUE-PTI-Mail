@@ -1,0 +1,12 @@
+%%EMAIL_T=Stephan.Huennekes@itk-rheinland.de;Vicky.Dworak@itk-rheinland.de
+
+%%MAIL-NOTOK=hr-support@itk-rheinland.de
+%%BETREFF-NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT-NOTOK=Bitte ueberprüfen. Siehe Anhang
+
+%%MAIL-OK=hr-support@itk-rheinland.de
+
+%%BETREFF-OK=%%JOBNAME ist erfolgreich gelaufen
+
+%%TEXT-OK=Siehe Anhang

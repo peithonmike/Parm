@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-PTVnachSAP-JSS
+* Lauf nach Jahressollstellung GWST - letzter AT im Monat
+* Job ist fuer Klaus Kawig
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%CLIENT=IFP
+%%PROJECT=KIVISOLL
+
+%%MAIL_NOTOK=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de
+
+
+%%BETREFF_NOTOK=Uebergabe Kassensätze JSS vom PTV-Server nach SAP ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog:%%JOBNAME ist NOTOK. Bitte ueberpruefen.
+
+**SYSOUT=\\msbmcc03\ctm_av\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt

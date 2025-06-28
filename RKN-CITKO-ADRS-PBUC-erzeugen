@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-CITKO-ADRS-PBUC-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+%%INDIR=\\srv03\ftp$\av\CITKO\
+%%INCLUDE=%%$ODATE..hiz
+%%ADRS_FILE=ADRS_%%INCLUDE..txt
+%%PBUC_FILE=PBUC_%%INCLUDE..txt
+
+%%OUTDIR=\\srv03\ftp$\av\CITKO\
+%%OUTDIR_PROCESSED=\\srv03\ftp$\av\CITKO\verarbeitet
+%%TEST=N

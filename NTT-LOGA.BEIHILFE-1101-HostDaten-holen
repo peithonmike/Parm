@@ -1,0 +1,65 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NTT-LOGA.BEIHILFE-1101-HostDaten-holen
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+* Test=J nur Anlist der gefunden Daten
+%%TEST=N
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Daten Bereich  
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspne$\daten\apps\Beihilfe\export_SEPA\%%GEM3.-%%BEIHILFE_MANDANT
+
+* S E P A  
+* Daten-Datei Suchmaske PAIN SEPA
+%%SEARCH_PAIN=BE-%%$ODATE.-*-PAIN.XML
+
+* Ausgabe TravicLink Sende-Verzeichnis
+%%OUTDIR_PAIN=\\srv03.asp.rzne.de\ftp$\av\TravicLink\BEIHILFE\FREIGABE
+%%OUTFILE_PAIN=113.BEI.SRZ.%%GEM3.-BEIHILFE_CT_%%$ODATE  
+
+
+
+* J A S P E R 
+* Daten-Datei Suchmaske VERW Eingabe für JasperReport
+%%SEARCH_VERW=BE-%%$ODATE.-*-VERW.DAT
+%%OUTFILE_VERW=%%GEM3.-%%BEIHILFE_MANDANT.-BE-VERW_%%$ODATE..DAT  
+%%OUTDIR_VERW= \\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\BeihilfeNRW
+
+
+* U N I 
+* wird nicht verwendet
+* nur verschoben
+%%SEARCH_UNI=BE-%%$ODATE.-*-UNI.DAT
+
+* erledigt Ordner,
+%%MOVE_ORDNER=erledigt
+
+* Logfile
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+
+
+ 
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    13.02.2014  10:19:44  zv173x2 TravicLink-Name enthielt - anstatt .
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

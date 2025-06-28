@@ -1,0 +1,75 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-UMWELT-Pegel-Online-Messstellen-Daten-abholen
+* abgeholte Daten sollen nach der Abholung entfernt werden.
+* Ist noch nicht realisiert. Stand 22.22.2019
+* Die verwendete Powershell ist teils dafür vorbereitet
+*********************************************************** 
+* Abholen Daten 
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc01\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-by-Inifile.ps1 
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+* SERVER_TEXT IP, P , U  und SITE kommen meist aus IP-UP Member 
+%%SERVER_TEXT=Grundwasser Pegel
+*%%IP
+*%%P
+*%%U=Secret-Server
+*%%SITE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen Pegelstanddateien Messergebnisse
+
+* Aktion put get
+%%WINSCP_DO_AKTION=get
+
+* Nachverarbeitung delete rename none 
+%%WINSCP_DO_OK_AKTION=delete
+*---------------------------------------------------------------
+* Remote Verzeichnis
+
+**REMOTE_INDIR=httpdocs    ---  Verzeichnis existiert nicht mehr 07.11.2023 zvaa405
+
+* Remote Datei Auswahl Maske
+
+* include nur für den Anlist der abgeholten Dateien bzw Dateien die in dem Verzeichnis liegen....
+%%INCLUDE=*.dat
+
+%%INIFILE=\\msbmcc01\ctm_av\temp\DUE-UMWELT-Pegel-Online-Messstellen-Nummern-ermitteln.vlk
+%%AUFTRAGGEBER=B.Nilkes
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\msbmcc03\ctm_av\temp\Pegel-Online\Messdateien
+
+%%SITE=DUE-ONLINE-PEGEL
+%%WINSCP_BATCH_OPTION=continue
+%%IGNORE_MISSING_FILES=J
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-by-Inifile.ps1
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.06.2020  06:51:42  zv173x2 DUE-PEGEL-ONLINE-NEU als DUE-PEGEL-ONLINE aktiv.
+*    09.06.2020  12:08:50  zv173x2 DUE-PEGEL-ONLINE-NEU vorbereitet.Neuer User Password Server
+*    26.11.2019  12:47:59  zv173x2 1. Lauf Prod 27.11.2019 ohne löschen der abgeholten
+*    12.11.2019  11:48:54  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

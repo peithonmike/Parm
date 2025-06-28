@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Beihilfe-MGL-abholen
+* 
+* 
+*********************************************************** 
+  
+%%SLEEP=10 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-BEIHILFE-MGL
+
+* wird bei jedem Start temp. erzeugt 
+%%SFTP_SCRIPT=\\msbmcc03\ctm_av\Parm\SFTP\%%JOBNAME..txt
+%%SLEEP=20
+
+%%SFTP_LOG=\\msbmcc03\c$\TEMP\%%JOBNAME..log
+
+* Remote Verzeichnis im CC-SOZ
+* EZ MZ
+%%SFTP_INDIR=Beihilfe-MG
+
+%%SFTP_MASK=st*
+* Lokales Empfangsverzeichnis aufgetrennt nach EZ MZ mit ODATE 
+%%SFTP_OUTDIR=\\vfdusalt\16\amt16\423 PBH\Schnittstelle LOGA PBH\TransferMG
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SFTP\%%JOBNAME..txt
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\gGET-CONTENT.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\BEIHILFE-SCRIPT-MGL-Daten-abholen.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avWINSCP_GET.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avLIST-FILES.ps1 
+
+* ------------------------------------------------------------------
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*     01.03.2017  09:40:29  zv173x2 inaktiv
+*     14.08.2014  16:14:49  zv173x2 debug n
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

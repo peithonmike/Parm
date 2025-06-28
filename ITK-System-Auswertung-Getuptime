@@ -1,0 +1,23 @@
+* --------------------------------------------------------------------------------
+*      Job : ITK-System-Auswertung-Getuptime
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%TEST=N
+
+**COMMAND="\\Msaip01\ctm_av$\Bin\VBS\uptime\getuptime_itk_excel - 03.vbs"
+**COMMAND="\\Msaip01\ctm_av$\Bin\VBS\uptime\getuptime_itk_excel-03cmd.bat"
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "\\Msaip01\ctm_av$\Bin\PS\reboot\uptime_reboot.ps1"
+%%MAILNOTOK=dietmar.bolten@itk-rheinland.de
+%%MAILSB13=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+%%BETREFF_OK=%%JOBNAME ist gelaufen
+%%TEXT_NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT_OK=%%JOBNAME ist gelaufen

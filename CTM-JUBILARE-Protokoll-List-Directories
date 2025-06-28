@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-JUBILARE-Protokoll-List-Directories
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\vfdusalt\B01\B01\01-14 Protokoll\Alters_und_Ehejubiläen\Hilden\Ehrungen\Altersjubiläen
+*%%INDIR=\\vfdusalt\16\Amt16\DocuShare16\
+%%TEST=N
+%%DEBUG=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    12.02.2019  12:34:13  zv173x2 neu dient nur zur Überprüfung
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

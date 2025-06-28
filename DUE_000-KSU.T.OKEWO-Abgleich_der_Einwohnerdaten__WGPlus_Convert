@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE_000-KSU.T.OKEWO-Abgleich_der_Einwohnerdaten_SQL
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\KSU2000
+
+SYSOUT          =\\msbmcc03\ctm_av\Sysout\%%$OYEAR\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+*%%SYSOUT          =\\msbmcc03\ctm_av\Sysout\OKEWO_%%GEM..txt

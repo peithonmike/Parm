@@ -1,0 +1,190 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Geburtstagsliste-80-plus
+* 
+* 
+*********************************************************** 
+ 
+
+********************
+* EWO Job Typ-3    *
+********************
+
+*\\msbmcc01\ctm_av\DOC\BL\EWO-Typ-3_Geburtstagslisten_Vorgaben.docx
+
+%%DESCRIPTION=Geburtstagsliste   80 Jahre und älter und erzeugen einer PTV Datei
+ 
+%%DESCRIPTION2=Job kann wiederholt werden
+
+
+
+
+**********************************************************************************
+* Name aus Datei der EWO Truppe  *_*_config.properties :     --job-name=
+*                                                      
+*             Ausgabeordner Parm-Member gEWO                            
+*             |                              EWOSUBDIR_AUSWERTUNGEN_TYP_3
+*             |                              |                                       
+%%EWOJOB_NAME=de.akdb.oesio.okewo.auswertung.job.JubilareJob
+***********************************************************************************
+
+%%LIBMEMSYM=\\msbmcc01\ctm_av\PARM\OKEWO
+
+
+* -----------------------------------------------------------------------------------
+* Mandantenspezifische JBOSS Angaben
+%%LIBMEMSYM=\\msbmcc01\CTM_AV\PARM\gEWO_%%GEM3
+* -----------------------------------------------------------------------------------
+
+
+
+
+* -----------------------------------------------------------------------------------
+* überschreibt bei Bedarf den Standard Auswerte Ordner 
+* es gibt mehrere aktive Überschreibungen
+* hier auswählen wenn nicht Standard \\%%JBOSS.\Auswertungen$
+* %%LIBMEMSYM=\\msbmcc01\CTM_AV\PARM\gEWO_DATEN_UEBERMITTLUNG
+* %%LIBMEMSYM=\\msbmcc01\CTM_AV\PARM\gEWO_OPTIONSVERFAHREN
+* -----------------------------------------------------------------------------------
+
+
+* -----------------------------------------------------------------------------------
+* Zeitraum VON - BIS verwenden (J\(N)
+%%USE_VON_BIS=J
+%%VON=01.%%MM_P1_%%$ODATE...%%JJJJ_MM_P1_%%$ODATE
+%%BIS=%%LD_MM_P1_%%$ODATE...%%MM_P1_%%$ODATE...%%JJJJ_MM_P1_%%$ODATE
+* -----------------------------------------------------------------------------------
+
+
+
+
+
+* -----------------------------------------------------------------------------------
+* SubDirName wird zur Laufzeit um -JobNr erweitert
+* Name ist der letzte Teil von: %%EWOJOB_NAME
+%%EWOSUBDIR_AUSWERTUNGEN_TYP_3=JubilareJob
+* -----------------------------------------------------------------------------------
+
+
+
+
+* -----------------------------------------------------------------------------------
+* Ausgabeordner 
+* für die gefundene Datei zur Weiterverarbeitung
+%%OUTDIR_TYP_3=%%OKEWO_ROOT.\CTM\
+* -----------------------------------------------------------------------------------
+
+
+
+
+
+* -----------------------------------------------------------------------------------
+* Ausgabe Dateiname selber festlegen (J)/N
+%%USE_OUTFILE_TYP_3=J
+* -----------------------------------------------------------------------------------
+
+* -----------------------------------------------------------------------------------
+* Ausgabe Dateiname 
+* für die gefundene Datei wenn USE_OUTFILE_TYP_3=J
+%%OUTFILE_TYP_3=%%JOBNAME.-%%VON.-%%BIS..CSV
+* -----------------------------------------------------------------------------------
+
+
+* -----------------------------------------------------------------------------------
+* Leere Ausgabe Directory nach verschieben löschen (J)/N 
+%%DELETE_EMPTY_DIR_TYP_3=J
+* -----------------------------------------------------------------------------------
+
+
+
+* -----------------------------------------------------------------------------------
+* Ausgabedatei Überschreiben, wenn vorhanden J/(N)
+* Jobs mit zB Zeitraumangaben %%VON %%BIS oder ähnlich können meist wiederholt werden
+* dann MOVE_OVERWRITE=J verwenden
+* -----------------------------------------------------------------------------------
+%%MOVE_OVERWRITE=J
+* -----------------------------------------------------------------------------------
+
+
+
+
+*---------------------------------------------------------------------------------------------------------
+*-    Spezial Variablen für DUE Geburtstagslisten 80plus
+*-    wird aus der erstellten EWO CSV erzeugt
+*-    alte Namen werden beibehalten
+*---------------------------------------------------------------------------------------------------------
+%%PTV_FULLNAME=%%OKEWO_ROOT.\div\ALTJ%%ODAY.%%OMONTH..DBL
+* -----------------------------------------------------------------------------------
+
+
+
+
+
+*---------------------------------------------------------------------------------------------------------
+*-    Spezial Variablen für Geburtstagslisten und Jubilare
+*-
+*---------------------------------------------------------------------------------------------------------
+%%AUSGABEDATEI=%%JOBNAME.-%%VON.-%%BIS..CSV
+%%ART_DES_JUBILARS=2
+%%EMPFAENGER_DES_JUBILARS=05111000_av_geb_80_90_95_ue100
+* -----------------------------------------------------------------------------------
+
+
+
+
+* -----------------------------------------------------------------------------------
+* Standard 
+%%NEBENWOHNUNGEN_BEACHTEN=0
+%%SPERRENTYPEN=2,5,7,10,13
+* -----------------------------------------------------------------------------------
+
+
+
+
+
+* -----------------------------------------------------------------------------------
+* PARM
+%%PARAM=--joblog=%%JOBLOG --syslog=%%SYSLOG --run --job-name=de.akdb.oesio.okewo.auswertung.job.JubilareJob --param=artDesJubilars=S%%ART_DES_JUBILARS;empfaengerDesJubilars=S%%EMPFAENGER_DES_JUBILARS;nebenwohnungenBeachten=B%%NEBENWOHNUNGEN_BEACHTEN;auswertungszeitraumVon=D%%VON;auswertungszeitraumBis=D%%BIS;sperrentypen=S%%SPERRENTYPEN;dateiausgabeFormatOption=SCSV;ausgabeDateiFeldTrenner=S\;;ausgabeDatei=S%%AUSGABEDATEI
+* -----------------------------------------------------------------------------------
+
+
+
+
+* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+* TEST = J ist eingeschaltet um am 15.02.2022 den Job zu überwachen
+* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+%%TEST=N
+%%DEBUG=N
+
+* Parameter erstellt aus Job Config  Vorlage
+* \\msbmcc01\CTM_AV\DOC\BL\EWO-Typ-3-Arbeitsanweisung-Vorbereiten-VariablenÃ¼bergabe.docx
+*******************************************************************************************************************
+*  Job Config  
+*  \\msbmcc01\CTM_AV\Bin\Java\EWO_BATCH\AKDB-Sourcen\Geburtstagslisten
+*
+*******************************************************************************************************************
+*  \\msbmcc01\CTM_AV\DOC\BL\EWO-Typ-3-Arbeitsanweisung-Vorbereiten-Variablenübergabe.docx
+*****************************************************************************************
+* EWO-Synergo-Verzeichnisse
+*  \\msbmcc01\ctm_av\DOC\BL\EWO-Synergo-Verzeichnisse-etc.txt
+*  
+*******************************************************************************************************************
+*******************************************************************************************************************
+
+************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

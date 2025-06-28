@@ -1,0 +1,68 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-W-16-jaehrige-Meldepflicht-AUS-CSV-erzeugen
+* CSV Datei erzeugen
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+%%AUFTRAGGEBER=T.Heister
+
+
+%%Server=mssql04.itk.local
+%%DB=e01_due
+%%U=e01_jasper
+%%P=jasperav
+
+*%%P=siehe-Secret-Server
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+
+%%SQL_FILE=\\msbmcc03\CTM_AV\OK.EWO\16-jaehrige-Meldepflicht\Auslaendisch\Vorlagen\qry_Auslaendisch_16JaehrigeAusweis_LHD.sql
+
+** neue Version mit Python - zvaa405
+**SQL_FILE=\\msbmcc03\CTM_AV\OK.EWO\16-jaehrige-Meldepflicht\Auslaendisch\Mit_Python\qry_Deutsch_16JaehrigeAusweis_LHD.sql
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+*%%VON=nicht-verwendet
+*%%BIS=nicht-verwendet
+
+
+
+* Name der Ausgabe Directory und Datei
+%%OUTDIR=\\msbmcc03\CTM_AV\OK.EWO\16-jaehrige-Meldepflicht\Auslaendisch\Vorlagen
+
+** neue Version mit Python - zvaa405
+**OUTDIR=\\msbmcc03\CTM_AV\OK.EWO\16-jaehrige-Meldepflicht\Auslaendisch\Mit_Python
+
+%%FILENAME=SQLCMD.csv
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+ 
+%%TEST=N
+%%DEBUG=N 
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-SqlCmd-exe.ps1
+ 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.12.2022  12:30:00  zvaa241 neu
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

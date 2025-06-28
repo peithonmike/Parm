@@ -1,0 +1,17 @@
+* überschreiben der Standard Namen 
+%%PDF_INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\DUPL
+%%PDF_OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\DUPL\BUENDEL
+%%PDF_FRONTCOVER=\\srv03\ftp$\av\LOGA\Deckblatt-Source\AAA-%%GEM3.-LOGA-Personalamt.pdf
+%%PDF_BACKCOVER=\\srv03\ftp$\av\LOGA\Deckblatt-Source\ZZZ-LOGA-Personalamt.pdf
+
+
+%%HMAN=%%SUBSTRING %%JOBNAME 15 4
+
+
+%%INCL=%%SUBSTRING %%JOBNAME 15 9
+
+%%INCLUDE=KN*%%INCL.*.pdf
+
+
+
+*

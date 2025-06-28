@@ -1,0 +1,66 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-Druckdaten-Copy-an-Druckerei
+* Copy MSP-Druckdaten zur Druckerei Stadt Neuss
+* 
+*********************************************************** 
+
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-BEAMTE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-USE-DRUCKEREI-NEUSS
+
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+*Indir
+**INDIR=%%BUENDEL_DIR
+%%INDIR=\\mspdfwb01\DAbrechWork$\Fertig
+*Outdir
+%%OUTDIR=%%DRUCKEREI_DIR
+
+
+%%EMAIL_U=Gehaltsmitteilungen BEAMTE stehen bereit  %%OMONTH..%%$OYEAR 
+%%BUENDEL_DIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\KN\BUENDEL
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Move-FileS_2.ps1
+
+%%OUTDIR_PROCESSED=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\MSP-EGM\M-28\Buendel\kopiert
+
+
+%%TEST=N
+%%DEBUG=N
+* ***************************************************************************
+* %%NETUSE=J oder N
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+* %%NETUSE_PATH=nicht-verwendet 
+*
+* Laufwerksbuchstabe in der Form Y:
+* %%LAUFWERK=nicht-verwendet
+* ***************************************************************************
+
+
+
+
+
+
+

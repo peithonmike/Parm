@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EAT-DATEN-COPY-CLOUD
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%VZ=DVA
+
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\itkcloud.cmd
+
+
+%%eindat=\\msbmcc03\ctm_av\Jasper-Output\Daten-EAT..CSV
+%%ausdat1=X:\DVA\Daten-EAT.CSV
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-EAT_Daten.pdf
+* ------------------------------------------------------------------
+

@@ -1,0 +1,23 @@
+***********************************************************
+* LIBMEMSYM 
+* RKN-Kasse-T-XFLOW-Transfer
+* Job ist fuer M.Gehring
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_RKN
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass "\\vfcache\finanz\Daten\PS\Scripts\DTAUS\RKN-XFLOW-Transfer.ps1"
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\RKN-Kasse-T-XFLOW.pdf
+* ------------------------------------------------------------------

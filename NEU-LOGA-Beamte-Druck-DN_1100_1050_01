@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA-Beamte-Druck-DN_1100_1050_01
+* 
+* 
+*********************************************************** 
+ 
+%%NUR_BUENDELN=J
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Teil des Dateinamens, der ausg
+%%LISTTYP=DN_1100_1100_01
+
+* Eingabe aller PDF-Dateien  
+%%PDF_INDIR=\\msbmcbatch01\c$\CTM_AV\Personal-DruckTest\NBE0112\DN
+
+* Ausgabe der ausgewählen PDF-Dateien  
+%%PDF_OUTDIR=\\msbmcbatch01\c$\CTM_AV\Personal-DruckTest\NBE0112\%%LISTTYP
+
+
+* erledigt Ordner,
+%%MOVE_ORDNER=verarbeitet
+
+* Daten-Datei Suchmaske
+%%SEARCH=%%LISTTYP.*
+
+%%DECKBLATT_DIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\Apps\ftp\av\Deckblatt-Source\Deckblatt-%%LISTTYP
+
+* Ausgabe des fertigen Bündels
+%%BUENDEL_DIR=\\msbmcbatch01\c$\CTM_AV\Personal-DruckTest\NBE0112\DN\BUENDEL
+%%BUENDEL_NAME=%%GEM3.-DN_1100_1050_01.PDF
+
+%%TEST=N
+

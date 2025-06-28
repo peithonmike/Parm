@@ -1,0 +1,13 @@
+*
+* LIBMEMSYM
+* Aufruf   ermittelten Gesamten Monataszeitraum
+*
+*
+*
+
+* TYP 31   
+* Lauf soll am letzten Tag des Monat nach Online stattfinden
+* 
+
+%%VON=01.%%OMONTH..%%$OYEAR
+%%BIS=%%ODAY..%%OMONTH..%%$OYEAR

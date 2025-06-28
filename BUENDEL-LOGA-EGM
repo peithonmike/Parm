@@ -1,0 +1,71 @@
+* -------------------------------------------------------------------------------------
+* LOGA EGM STANDARD
+* -------------------------------------------------------------------------------------
+
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+
+
+
+* Sachgebiet und Sysout-art aus Jobnamen ermitteln
+* 1                 10      14    17
+* K A A - L O G A - E G M - K N _ 1 5 0 0 _ 1 5 0 0 - B U
+%%LOGA_SACHG=%%SUBSTR %%JOBNAME 17 9
+
+%%LOGA_ART=%%SUBSTR %%JOBNAME 14 2
+
+
+
+* Beispiel Dateiname der EGM Eingabe PDF's 
+* KN_1500_1500_??_1051_C1_drucken_.pdf
+* -------------------------------------------------------------------------------------
+
+
+
+* -------------------------------------------------------------------------------------
+* P&I
+%%USE_PI=J
+%%ADD_TRENNBLATT=N
+%%SAMMELDIR_DELETE=J
+%%LOGA_DN_DRUCKER=\\msprintff01\d$\R18LP
+%%LOGA_KN_DRUCKER=\\msprintff01\d$\R18personal
+
+* -------------------------------------------------------------------------------------
+* Pfad für die Deckblätter 
+* Verwaltung und PDF-Dateien  
+* -------------------------------------------------------------------------------------
+%%PDF_COVERDIR=\\msbmcc03\ctm_av\PDF-COVER\loga
+* -------------------------------------------------------------------------------------
+
+
+
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\EGM\%%GEM3.\%%MAN.\%%LOGA_DAT.\druck
+
+%%OUTDIR=\\PZVPRINTS\e\daten\personal\EGM\%%LOGA_DAT
+%%OUTDIR_PROCESSED=OUTDIR_PROCESSED
+%%OUTFILE=%%GEM3.-LOGA-%%LOGA_ART._%%LOGA_SACHG.-%%LOGA_DAT.-EGM-BU.PDF
+
+%%COPYCOUNT=0
+*                \\msbmcc03\ctm_av\PDF-COVER\loga\1-seitig\AAA-KAA-KN_1500_1500_EGM.pdf
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\LOGA\1-seitig\AAA-%%GEM3.-%%LOGA_ART._%%LOGA_SACHG._EGM.pdf 
+%%PDF_BACKCOVER =\\msbmcc03\ctm_av\PDF-COVER\LOGA\1-seitig\ZZZ-%%GEM3.-%%LOGA_ART._%%LOGA_SACHG._EGM.pdf
+%%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Trennblatt.pdf
+%%KOPIE01=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie01.pdf
+%%KOPIE02=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie02.pdf
+
+
+* -------------------------------------------------------------------------------------
+* INCLUDE EXCLUDE
+%%INCLUDE=%%LOGA_ART*%%LOGA_SACHG.*.pdf
+
+* Exclude DUEVO Mitteilungen wird separat gebündelt
+%%EXCLUDE=*_5060_*
+* -------------------------------------------------------------------------------------
+
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\PI-DRUCK-%%$OYEAR..csv
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.08.2016  16:35:38  zv173x2 MAN
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

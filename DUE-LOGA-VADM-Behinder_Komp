@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-VADM-Behinder_Komp
+*
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\GovConnect.ps1"
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\LOGA_Behinder_Komp.ps1" -InDirM "\\vfdussap\SAPHCM_P1P\Daten\VADM\Mapping\" -InDir "\\vfdussap\SAPHCM_P1P\Daten\VADM\Eingabe\" -OutDir "\\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\" -DatumParam %ODATE%
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\LOGA_Behinder_Komp.ps1" -InDirM \\vfdussap\SAPHCM_P1P\Daten\VADM\Mapping\ -InDir \\vfdussap\SAPHCM_P1P\Daten\VADM\Eingabe\ -OutDir \\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\ -DatumParam %ODATE%
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\VADM_Vorpruef.ps1" -InDirM \\vfdussap\SAPHCM_P1P\Daten\VADM\Mapping\ -InDir \\vfdussap\SAPHCM_P1P\Daten\VADM\Eingabe\ -OutDir \\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\ -DatumParam %ODATE%
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\VADM_Behinder_Komp.ps1" -InDirM \\vfdussap\SAPHCM_P1P\Daten\VADM\Mapping\ -InDir \\vfdussap\SAPHCM_P1P\Daten\VADM\Eingabe\ -OutDir \\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\ -DatumParam %ODATE% -Druck_File N

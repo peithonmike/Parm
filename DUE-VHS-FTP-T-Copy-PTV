@@ -1,0 +1,35 @@
+* *************************************************************
+* Table Variablen          
+* DUE-VHS-FTP-T-Copy-PTV
+* alter Hostname Y4063FTP
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* bei der Userid "ASP" gegen "ITK" getauscht/29.4.2016 B.Schr.
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+
+**EINGABE_VZ=\\srv03\qaspdf$\Daten\Apps\SQLBasys\Transfer
+%%EINGABE_VZ=\\srv03\qaspdf$\Daten\Apps\SQLBasys\Transfer
+
+%%USERID=ZVDUEFTP
+%%PW=sgbTabelle21
+
+%%EINDAT=ka%%$ODATE..txt
+
+
+
+
+*%%USERID=itk\ldftp
+*%%PW=@Heine123
+
+
+%%AUSGABE_VZ=\\msptv02\PTVProjekte$\SAP_Export\VHS_EDUE\InDir
+%%AUSDAT=DUE_VHS_T%%$ODATE..TXT
+**AUSDAT2=\\srv03\qaspd$\Daten\Apps\SQL_Bass\Transfer\Backup\KA%%ODATE..TXT
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\DUE-PTV-VHS.cmd

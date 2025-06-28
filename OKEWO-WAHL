@@ -1,0 +1,62 @@
+*********************************************************** 
+* Output wird manuell über OKEWO als PDF erzeugt
+* und mit diesem Job auf den Prinserver nach Freigabe 
+* übertragen.
+* möglich Wahlarten und deren Prefix
+*                   (I)ntegrationswahl   %%GEM.__
+* BW KW EW          (W)ahl               %%GEM3._
+* B.Lieven
+*********************************************************** 
+* E.Hamers
+* I.Franz
+* M.Smits
+*********************************************************** 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+* Eingabe Directory 
+*%%INDIR=\\Msprintff01\source$\WAHL\KW-2020\%%GEM3
+*%%INDIR=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_%%GEM3.test.\pdf
+%%INDIR=%%OKEWO_ROOT.\pdf
+%%DESCRIPTION=  OKEWO Wahl Unterlagen an Drucker senden
+
+* **********************************************************************
+* * Actung   T E S T 
+*   %%INDIR=%%OKEWO_ROOT.\pdf\WVZ_ITK_TEST_BW
+*   %%DESCRIPTION=" T E S T D A T E N   ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
+* **********************************************************************
+
+%%EXCLUDE="-"
+* Datei Auswahl
+%%INCLUDE=*Wahllokal*Waehlerverzeichnis.pdf
+
+
+
+* TEST
+*%%INDIR=\\Msprintff01\source$\WAHL\TEST\%%GEM3
+*%%INCLUDE=Adobe Sign White Paper.pdf
+
+
+* Duck Library Ausgabe Directory ITK alle ausser Düsseldorf
+%%OUTDIR=\\msprintff01\d$\R18gelocht
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\Waehlerverzeichnis_erledigt
+
+
+*MAIL melden, dass der Job Output gefunden hat
+%%MAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+
+%%MAIL_CC=Melanie.Smits@itk-rheinland.de;Erica.Hamers@ITK-Rheinland.de
+*%%MAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.08.2020  11:16:06  zv173x2 INDIR angepasst  Irmgard entfernt :-(
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

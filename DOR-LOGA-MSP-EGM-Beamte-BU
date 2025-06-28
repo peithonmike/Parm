@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-LOGA-MSP-EGM-Beamte-BU
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NBE
+
+* Eingabe aus XXX-LOGA-MSP-EGM-Beamte-Druck-erzeugen
+%%INDIR =%%DRUCK_OUTDIR
+
+
+
+%%HMAN =1200
+
+%%INCLUDE =*KN_%%HMAN._**.pdf
+%%EXCLUDE=*_5060_*
+
+$LOGFILE="\\msbmcc03\ctm_av\log\ErgebnisLOG\PI-DRUCK-2017.csv"
+%%OUTDIR=%%INDIR.\BUENDEL
+
+%%OUTFILE =%%GEM3.-KUVERT-BEAMTE-%%LOGA_DAT.-BU.pdf
+%%SAMMELDIR_DELETE=J   
+   
+%%PRINTER_QUEUE=\\msprintff01\d$\R18personal
+%%ADD_TRENNBLATT=N
+%%ADD_FRONTCOVER=N
+%%ADD_BACKCOVER=N
+%%ADD_KOPIE=N
+%%USE_PI=J
+%%TEST=J
+%%DEBUG=N 

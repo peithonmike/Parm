@@ -1,0 +1,59 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : DUE-Elternbesuchsdienst
+* erstellt : 27.05.2010 12:23:55
+*    durch : zv173x2
+* --------------------------------------------------------------------------------
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+%%TEST=N
+*
+*********************************************************************************** 
+* 
+* 
+* Jasper/ CTM Variablen
+%%e01e205_gebiet_nr=1
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=DUE-Elternbesuchsdienst.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/DUE-Elternbesuchsdienst
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=%%JASPER_OUTPUT.\DUE-Elternbesuchsdienst_1.%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : DUE-Elternbesuchsdienst_1
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+%%EMAIL-T=Burghard.Schramm@ITK-Rheinland.de;
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n   \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n   \n   \n 
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-Elternbesuchsdienst.pdf
+* ------------------------------------------------------------------

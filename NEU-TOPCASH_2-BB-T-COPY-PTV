@@ -1,0 +1,23 @@
+* *************************************************************
+* Table Variablen          
+* NEU-TOPCASH_2-BB-T-COPY-PTV
+* 
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+%%EINGABE_VZ=\\mstopcashneu01\sapexport$\Neuss_BB
+
+%%EINDAT=TCtoSAP*.TXT
+
+
+%%AUSGABE_VZ=\\msptv02\ptvprojekte$\SAP_Export\TOPCASH_EXXX\inDir
+%%AUSDAT=NEU_100_BB_*%%EINDAT._T%%$ODATE..TXT
+%%AUSDAT2=%%EINDAT._T%%$ODATE..TXT
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\TOPCASH_2_PTV.cmd

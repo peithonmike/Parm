@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-SOZ.MZ-004-HostDaten-holen
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%SOZ_GKZ=004
+
+ 
+
+* Eingabe HOST-Daten Bereich  
+%%SEARCH_DIR=\\srv03.asp.rzne.de\ftp$\av\soz\MZ\UTF8
+
+* erledigt Ordner,
+%%MOVE_ORDNER=verarbeitet
+
+* Daten-Datei Suchmaske
+%%SEARCH=500.SOZ.SRZ.%%GEM3.-SEPAMZ.%%SOZ_GKZ._CT_%%$OYEAR.%%OMONTH.*
+
+
+* Ausgabe TravicLink Sende-Verzeichnis
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\TravicLink\SOZ\MZ
+
+* Logfile
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+%%TEST=N
+
+*
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.10.2015  12:23:44  zv173x2 search %%$OYEAR.%%OMONTH.*
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,104 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SEBD-WinSCP
+* 
+* 
+*********************************************************** 
+ 
+%%AUFTRAGGEBER=T.Kuehnen
+
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* spezieles Format erzeugen
+%%DATE=%%$OYEAR.-%%OMONTH.-%%ODAY
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+%%SITE=DUE-Stadtwerke-SEBD
+%%U =nicht-verwendet
+%%P =nicht-verwendet
+%%IP=nicht-verwendet
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=aktuelle VADM-Daten  abholen
+%%WINSCP_EXE=C:\Program Files (x86)\WinSCP\WinSCP.exe
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=\
+
+* Datei Ergebnis Anzeige-Maske
+%%INCLUDE=*.*
+
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\VFDUSTVG\67\Amt67\A671\Daten_Stadtwerke\
+
+
+
+
+
+*für Testphase
+*%%OUTDIR=\\vftest\SAPHCM_P1T\Daten\Inbox\
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+*%%Z05=CD %%REMOTE_INDIR
+%%Z05=ascii
+%%Z06=get *.csv   %%OUTDIR
+*%%Z08=get DZ_*_%%$ODATE..csv \\vfdussap\SAPHCM_P1P\Daten\VADM\Eingabe\
+*%%Z08=ls
+%%Z07=close
+%%Z08=exit 
+*%%Z11=?
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*    06.07.2021  15:02:37  zv171e1 neu
+
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+

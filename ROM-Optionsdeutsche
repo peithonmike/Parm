@@ -1,0 +1,69 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : ROM-Optionsdeutsche
+* erstellt : 05.01.2017 08:55:48
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+ 
+* 
+* es wird eine zusätzliche LIBMEMSYM verwendet
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###Optionsdeutsche
+ 
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+%%gebdat_von=%%GEBDAT_VON
+%%gebdat_bis=%%GEBDAT_BIS
+%%e01e200_ortnr=%%E01E200_ORTNR
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=ROM-Optionsdeutsche.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/ROM-Optionsdeutsche
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=XLSX
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\ROM-Optionsdeutsche-%%TTMMJJJJP_%%$ODATE...%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : ROM-Optionsdeutsche-%%TTMMJJJJP_%%$ODATE..
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+%%EMAIL-T=standesamt@rommerskirchen.de;
+** %%EMAIL-T=Hans.Knelleken@Rommerskirchen.de;standesamt@rommerskirchen.de;
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n  \n 
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-Optionsdeutsche.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-ROM-Optionsdeutsche.Mail.pdf
+* ------------------------------------------------------------------

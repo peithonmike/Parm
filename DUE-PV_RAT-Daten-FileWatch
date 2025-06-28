@@ -1,0 +1,23 @@
+﻿***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Düsseldorf 
+***********************************************************************************
+*  Jobname     : DUE-PV_RAT-Daten-FileWatch
+   %%APPLICATION=PV_RAT
+***********************************************************************************
+ 
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%Eingabepfad=\\vfdusalt\b01\b01\01-13 Rat-HFA-VK-Stadtverfassung\Stadtverfassung\Ratsabrechnung\Monatsbescheide\Starte_Verarbeitung
+%%Zielpfad=\\vfdusalt\b01\b01\01-13 Rat-HFA-VK-Stadtverfassung\Stadtverfassung\Ratsabrechnung\Monatsbescheide
+%%Zielpfad_Jahr=\\vfdusalt\b01\b01\01-13 Rat-HFA-VK-Stadtverfassung\Stadtverfassung\Ratsabrechnung\Jahresbescheide
+%%ErledigtPfad=
+%%MANDANT=DF
+%%DATADATEI=data*.xml
+%%PAYMENTDATEI=Payment*.xml
+%%TEST=nein
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\XXX-PV_RAT-Daten-FileWatch.ps1

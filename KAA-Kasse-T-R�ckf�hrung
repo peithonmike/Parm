@@ -1,0 +1,16 @@
+* *************************************************************
+* Table Variablen          
+* KAA-Kasse-T-Ist-Rückführung
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_Kaarst
+
+%%SYSOUT          =\\srv03.asp.rzne.de\qaspkdvz$\Daten\Orgaeinheit\Alle\Sysout\SAP\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+%%TEXT_NOTOK=bitte pruefen!

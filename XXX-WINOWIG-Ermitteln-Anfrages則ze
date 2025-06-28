@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-Ermitteln-Anfragesätze
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG 
+
+ 
+%%DESCRIPTION=KBA Anfragen und Mitteilungen ermitteln
+*\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\ausgang\kba
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\Msowigbat01\c$\CTM_AV\bin\BAT\Originale\12.12.2012\2000_WiNOWiG_Batch_KBA
+* ------------------------------------------------------------------
+
+%%TEST=N
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-KBA-DTA-Ermitteln.BAT

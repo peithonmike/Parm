@@ -1,0 +1,44 @@
+*ITK 
+%%ITK_SPRENGSTOFF_MAIL=Produktions-Steuerung@ITK-Rheinland.de
+
+*Düsseldorf TEST
+%%DFT_SPRENGSTOFF_MAIL=Produktions-Steuerung@itk-rheinland.de
+
+
+*Düsseldorf
+%%DUE_SPRENGSTOFF_MAIL=adv33@duesseldorf.de;einwohnermeldeamt_auswertung@duesseldorf.de
+
+*Mönchengladbach	
+%%MGL_SPRENGSTOFF_MAIL=Claudia.pflippen@moenchengladbach.de
+
+*Dormagen	
+%%DOR_SPRENGSTOFF_MAIL=ordnungsamt@rhein-kreis-neuss.de;ewo-auswertungen@stadt-dormagen.de
+
+*Grevenbroich	
+%%GRE_SPRENGSTOFF_MAIL=ordnungsamt@rhein-kreis-neuss.de;buergerbuero@grevenbroich.de
+
+*Jüchen	
+%%JUE_SPRENGSTOFF_MAIL=ordnungsamt@rhein-kreis-neuss.de;Lukas.Baettgen@juechen.de
+
+*Kaarst 	
+%%KAA_SPRENGSTOFF_MAIL=ordnungsamt@rhein-kreis-neuss.de;Stefan.Borck@kaarst.de
+
+*Korschenbroich
+%%KOR_SPRENGSTOFF_MAIL=ordnungsamt@rhein-kreis-neuss.de;sabine.moebius@korschenbroich.de
+
+*Meerbusch	
+%%MEE_SPRENGSTOFF_MAIL=ordnungsamt@rhein-kreis-neuss.de;andrea.sarabi@meerbusch.de
+
+*Neuss
+%%NEU_SPRENGSTOFF_MAIL=ordnungsamt@rhein-kreis-neuss.de
+
+*Rommerskirchen
+%%ROM_SPRENGSTOFF_MAIL=ordnungsamt@rhein-kreis-neuss.de;buergerbuero@rommerskirchen.de
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.02.2022  13:03:24  zv173x2 okewo entfernt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

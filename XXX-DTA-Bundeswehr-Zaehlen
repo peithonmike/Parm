@@ -1,0 +1,21 @@
+*
+* LIBMEMSYM
+* Aufruf   ermittelten Anzahl Fälle DTA-Bundeswehr
+* DTAWUEBW
+*
+*
+*
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\parm\OKEWO
+
+
+
+* variablen für das Zählprogramm
+*
+%%VON=%%TTMMJJJJP_TT_M7_%%$ODATE
+%%BIS=%%TTMMJJJJP_TT_M1_%%$ODATE
+%%VERFAHREN=OK.EWO.DTA-DTAWUEBW
+%%DATUM =%%$ODATE
+%%LOGOUT=\\msbmcc03\c_bmc\ctm_av\log\OK.EWO-Bundeswehr-DTAWUEBW-Satz.csv
+%%OFFSET=-1
+%%FILES=\\msbmcc03\ctm_av\Parm\OK.EWO-DTA-Bundeswehr-DTAWUEBW.vlk
+

@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-Kasse-T-ELKO
+* 
+* neu - gültig ab 03.01.2014
+* 20.04.2017 - Umstellung auf Powershell-FTP
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_RKN
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%client=IFP
+%%mandant=900
+%%source=\\srv03\qaspkdvz$\Daten\Apps\ftp\Travic-Link\RKN\
+%%pattern=ELKO_SK,ELKO_RB
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\copy_SAP_ELKO.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_900.cred" -sysid %client% -mandt %mandant% -source %source% -pattern %pattern% -jahr %elkoyear%
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\copy_SAP_ELKO_2.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_900.cred" -sysid %client% -mandt %mandant% -source %source% -pattern %pattern% -jahr %elkoyear%

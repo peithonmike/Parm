@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* SEBD-Kasse-T-Wert-Schnittstelle
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_SEBD
+
+%%CLIENT=IFP
+%%MANDANT=420
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msptv02\c$\CTM_AV\Bin\ps\ptvWorker.ps1 -ptv_project "\\msptv02\PTVProjekte$\SAP_Export\WERT_ESEBD" -src_path "\\vfdustvg\67\amt67\sap_daten_wert" -src_pattern "^WERT.*\.csv$" -dest_path "\\vfdustvg\67\amt67\sap_daten_wert\Protokolle" -dest_pattern "^.*\.xls$" -done_ts "1"
+
+
+%%MAIL_OK=anla.sebd@duesseldorf.de
+%%MAIL_NOTOK=Steffen.Brandemann@ITK-RHEINLAND.DE;martin.gehring@itk-rheinland.de;PRODUKTIONS-STEUERUNG@ITK-RHEINLAND.DE
+
+%%BETREFF_OK=SEBD - Wert-Schnittstelle
+%%BETREFF_NOTOK=%%JOBNAME IST NOTOK
+
+%%TEXT_OK=Die Daten in der SEBD - Wert-Schnittstelle sind verarbeitet
+%%TEXT_NOTOK=Das PowershellScript  \\msptv01\c$\CTM_AV\Bin\ps\ptvWorker.ps1 ist abgebrochen
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\SEBD-Kasse-T-Wert-Schnittstelle_20150623.pdf
+* ------------------------------------------------------------------

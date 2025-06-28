@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Y22GBAAD-AUSW
+* 
+* 
+***********************************************************
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+**LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt
+
+%%COMMAND=./Shell-Scripte/AdrTabFuellen/AuswAdress.sh
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-Y22GBAAD-AUSW.pdf
+* ------------------------------------------------------------------

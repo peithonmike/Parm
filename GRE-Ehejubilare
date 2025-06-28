@@ -1,0 +1,67 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : GRE-Ehejubilare
+* erstellt : 15.08.2017 06:20:06
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+%%Jahr=%%JJJJ_TT_P35_%%$ODATE
+
+** geändert am 22.11.2023 um das nächste Jahr auszugeben     zvaa405
+**Jahr=%%JJJJ_P1_%%$ODATE          
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=GRE-Ehejubilare.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/GRE-Ehejubilare
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\GRE-Ehejubilare.%%JJJJ_TT_M1_%%$ODATE...%%EXT
+
+** geändert am 22.11.2023 um das nächste Jahr auszugeben zvaa405
+**OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\GRE-Ehejubilare.%%JJJJ_P1_%%$ODATE...%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : GRE-Ehejubilare.%%JJJJ_TT_M1_%%$ODATE.
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+%%EMAIL-T=Silke.Becker@grevenbroich.de;Sonja.Oberbach@Grevenbroich.de;
+%%EMAIL-CC=Produktions-Steuerung@itk-rheinland.de;
+* 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n OK.Ewo Jasper \n Ehejubilare Grevenbroich \n  \n 
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-GRE-Ehejubilare.pdf
+* ------------------------------------------------------------------

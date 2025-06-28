@@ -1,0 +1,26 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Düsseldorf
+***********************************************************************************
+*  Jobname     : DUE-LOGA.PBS-Daten-abholen_05
+*  APPLICATION : LOGA.PBS
+*  Auftrag ist von Gudrun Ring
+***********************************************************************************
+* Job kopiert die vom Vorjob abgeholten Dateien ins Zielverzeichnis
+*********************************************************************************** 
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-Bochum
+
+
+
+%
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Log\Ergebnislog\%%GEM3.-LOGA-PBS-Daten-%%$OYEAR..csv
+* ------------------------------------------------------------------

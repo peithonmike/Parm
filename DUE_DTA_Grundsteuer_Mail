@@ -1,0 +1,15 @@
+***********************************************************************************
+* LIBMEMSYM                                                                      *
+*
+* DUE_DTA_Grundsteuer_Mail
+***********************************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt
+
+%%MAIL01=volker.ehmann@itk-rheinland.de;david.mertens@itk-rheinland.de;nicole.schmeling@duesseldorf.de;claudia.thiel@duesseldorf.de
+%%MAIL02=alexander.schoenfeld@itk-rheinland.de
+%%BETREFF_OK=GBA-Band	
+%%TEXT_OK=Guten Tag zusammen, \n ein DTA-Band ist angekommen und kann eingespielt werden. \n Geben Sie mir bitte eine kurze Info wenn ich das erledigen kann.\n Liebe Grüße \n A.Schönfeld

@@ -1,0 +1,55 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-SOZ-Rente-Druckdaten-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-Rente
+ 
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+%%SOZ_DAT=%%OYEAR.%%OMONTH
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1
+%%INDIR=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%SOZ_DAT
+%%OUTDIR=\\vfgv1\voldaten1\Daten\DruckausgabeITK\Sozial\Rente\%%$ODATE
+
+%%OUTDIR_PROCESSED=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%OYEAR.%%OMONTH\kopiert
+
+
+
+
+%%INCLUDE=*_2*08_%%$OYEAR.%%OMONTH..PDF
+%%EXCLUDE="-"
+
+  
+%%MAIL_OK=Catharina.floeck@grevenbroich.de;Rebecca.ende@grevenbroich.de;Poststelle.Druckerei@grevenbroich.de
+%%BETREFF_OK=Neue Daten aus SOZ-Einmalzahlung bereitgestellt
+%%TEXT_OK=Es stehen neue Daten in \\vfgv1\voldaten1\Daten\DruckausgabeITK\Sozial\Rente\%%$ODATE bereit
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+

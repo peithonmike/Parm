@@ -1,0 +1,23 @@
+* *************************************************************
+* Table Variablen          
+* DUE-AMADEE-T-Copy-PTV
+* alter Hostname Y40604SB
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+
+%%EINGABE_VZ=\\srv03.asp.rzne.de\FTP$\AV\Amadee
+
+%%EINDAT=amade.sbz
+
+%%AUSGABE_VZ=\\msptv02\PTVProjekte$\SAP_Export\Amadee_EDUE\InDir
+%%AUSDAT=DUE_AMA_DATEN_T%%$ODATE..sbz
+%%AUSDAT2=amade_T%%$ODATE..sbz
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\DUE-PTV_SRV03.cmd

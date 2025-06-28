@@ -1,0 +1,19 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland
+***********************************************************************************
+*  APPLICATION : KSU.W.KASSE
+***********************************************************************************
+%%Tag=%%ODAY
+%%Monat=%%OMONTH
+%%Jahr=%%$OYEAR
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\KSU_MAIL_MOERS
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\KSU_MAIL_ITKR
+
+%%FW_ImportDatei=\\srv03\ftp$\ksu2000_krzn\prod\%%KSU_NR.\kasse\%%KSU_NR._HIZ2_*.dat
+
+%%COMMAND=\\msbatch02\c$\Programme\KSU2000Batch\kasse-prod.cmd
+%%COMMAND_DEL_IMPORT=del \\srv03\ftp$\ksu2000_krzn\prod\%%KSU_NR.\kasse\%%KSU_NR._HIZ2_*.dat

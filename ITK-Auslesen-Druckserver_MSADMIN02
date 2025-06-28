@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-Auslesen-Druckserver_MSADMIN02
+   %%APPLICATION=ITK-System
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DruckerPfad=\\msbmcc03\ctm_av\Drucker\
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\DruckServerAuslesen.ps1

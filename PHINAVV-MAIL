@@ -1,0 +1,26 @@
+* * * * * ** * * * * * *
+* Mail Empfänger 
+* PHINAVV
+* * * * * ** * * * * * *
+
+
+%%BETREFF_OK=%%JOBNAME OK
+%%BETREFF_NOTOK=%%JOBNAME NOTOK
+
+%%TEXT_OK=Joblog: %%JOBNAME is OK.
+%%TEXT_NOTOK=Joblog: %%JOBNAME NOTOK.
+
+##MAIL01=support-finanzen@itk-rheinland.de;steffen.brandemann@itk-rheinland.de;zoe.abel@itk-rheinland.de
+
+
+%%MAIL01=steffen.brandemann@itk-rheinland.de;Vollstreckung@ITK-Rheinland.de
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.06.2014  09:24:36  zv173x2 lieven entfernt
+*    26.10.2017  09:24:36  Mareen.Mengel hinzugefügt - BSchr.
+*    25.09.2019  09:24:36  Zoe.Abel hinzugefügt - BSchr.
+*    10.02.2021  09:47:00  support-finanzen@itk-rheinland.de entfernt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

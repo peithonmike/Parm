@@ -1,0 +1,24 @@
+﻿*********************************************************** 
+* LIBMEMSYM 
+* ITK_Reboot_W_MSRSM
+* Reboot des MSRSM Samstag um 03:30 Uhr
+* 
+*********************************************************** 
+
+%%COMMAND=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File \\MSAIP01\ctm_av$\Bin\PS\wsus_reboot\wsus-reboot.ps1
+
+%%NODEID=MSRSM
+
+%%DOM=ITK
+
+%%OWNER=%%DOM.\controlm
+
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+%%MAIL02=itk.FB1_SB131_Windows@itk-rheinland.de
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=ACHTUNG!!! - %%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Keine Weiteren Schritte nötig.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte ueberpruefen.

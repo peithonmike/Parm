@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA-MSP-EGM-Beamte-1800-6025-BU
+* 
+* 
+*********************************************************** 
+ 
+
+
+ 
+%%ART=NBE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-LOGA-ELSTER-%%ART
+
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\Elster\%%GEM3
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\Elster\%%GEM3.\an-Druckerei-Neuss
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.02.2021  11:37:21  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

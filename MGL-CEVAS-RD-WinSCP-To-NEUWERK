@@ -1,0 +1,67 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-CEVAS-RD-WinSCP-To-NEUWERK
+* 
+%%DESCRIPTION= Neuwerk läuft mit einer eigene PS1 wegen Fehlernachricht vom Server : SSHServerAPI.SFTP.fxp_attrs"
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\CEVAS-KLINIKEN-MAIL
+
+
+
+
+%%SITE=MGL-CEVAS-RD-Neuwerk
+
+%%PROTOCOL=[WinSCP.Protocol]::Sftp
+%%HOSTNAME=10.98.112.131
+%%USERNAME=divi_ftp
+%%PASSWORD=TYvmjHhq9F7x4aY
+%%SshHostKeyFingerprint=ssh-rsa 1024 fG5c8pGX2NnjhIPWYXzWH3j7KKzn/65oj5uyzR1LUvM=
+
+
+
+
+
+
+%%INCLUDE=*.xml , *.pdf
+%%EXCLUDE="-"
+%%INDIR=\\MSCEVAS01\c$\cks\dta_Krankenhaeuser\CEUS_VPN_Krhs-Neuwerk\
+%%OUTDIR_PROCESSED=%%INDIR.gesendet-neuwerk\
+%%REMOTE_OUTDIR=/DIVI_Protokoll/
+
+%%HOSTKEY=
+
+* DIRECTORYLIST_REMOTE J/N noch nicht implementiert
+%%DIRECTORYLIST_REMOTE=N
+
+* Logfile muss im C: Laufwerkliegen
+%%LOGFILE=c:\temp\%%JOBNAME._winscp.log
+
+* UPLOAD J/N 
+%%UPLOAD=J
+
+
+* Dateien die nach erledigt verschoben werden, 
+* bekommen einen TimeStamp J/N
+%%USE_MOVE_WITH_TIMESTAMP=J
+
+%%ANSPRECH_PARTNER_EMAIL=mark.gottmanns@sk-mg.de    
+**               Telefon: +49 2166 3942756
+
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-WinSCP-Copy-To-Remote-SEM-Neuwerk.ps1
+
+*IP 10.98.112.131  Stand 14.05.2021
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.09.2020  15:52:27  zv173x2 USE_MOVE_WITH_TIMESTAMP
+*    04.08.2020  15:49:55  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 

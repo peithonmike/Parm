@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* TEST.TRAVI-senden2
+* 
+* Senden aus TEST Verzeichnis auf Testserver Moers
+* Daten müssen ohne T.000 bereitstehen
+* TEST=J listet nur an ohne SENDEN!!! 
+*********************************************************** 
+ 
+
+
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\TEST
+*%%SEARCH=*.*
+* so lautet der zugelassene Testname
+%%SEARCH=000.SIZ.VORVERF.SEPA.TEST*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\TRAVIC-LINK-TEST
+
+%%TEST=N
+* ------------------------------------------------------------------
+

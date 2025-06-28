@@ -1,0 +1,27 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Meerbusch
+***********************************************************************************
+*  Jobname     : MEE-Bescheiddruck-GBA-JVA_Inn_072_Druck_Move
+*  APPLICATION : SAP
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%EINGABE="\\vfapps\apps\ITK\KMV\Produktion\8000\50100\JSS2023\Innerhalb\72"
+%%FILTER1=*
+%%DRUCKDATEI=%%GEM3._GBA_JVA_Inn_072
+%%LOG="\\msbmcc03\ctm_av\Log\SAP\%%JOBNAME..txt"
+%%ZIEL="\\vfapps\apps\ITK\KMV\Produktion\8000\50100\Druck"
+%%MOVEZIEL="\\vfapps\apps\ITK\KMV\Produktion\8000\50100\JSS2023\Innerhalb\72\Verarbeitet"
+
+%%VORBLATT=
+
+%%EINGABE_FF="\\vfapps\apps\ITK\KMV\Produktion\8000\50100\Druck"
+%%DRUCKDATEI_FF=%%DRUCKDATEI..pdf
+%%HOTFOLDER=R18doppel
+%%MANDANT=

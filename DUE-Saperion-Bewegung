@@ -1,0 +1,59 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : DUE-Saperion-Bewegung
+* erstellt : 14.04.2016 06:09:57
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+%%Tagesdatum=%%TTMMJJJJP_%%$ODATE
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=DUE-Saperion-Bewegung.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/DUE-Saperion-Bewegung
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\DUE-Saperion-Bewegung-%%TTMMJJJJP_%%$ODATE...%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=N
+%%EMAIL-U=Auftrag : DUE-Saperion-Bewegung-%%TTMMJJJJP_%%$ODATE..
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=OK.EWO Verfahren Saperion-Bewegung \n  \n Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n CSV-Datei soll im Anschluß als FTP ans KRZN geschickt werden. \n  \n 
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-Saperion-Bewegung.pdf
+* ------------------------------------------------------------------

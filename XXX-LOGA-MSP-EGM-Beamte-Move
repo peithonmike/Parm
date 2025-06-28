@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-EGM-Beamte-Move
+* 
+* 
+*********************************************************** 
+ 
+
+
+*********************************************************** 
+* Mitarbeiter Service Portal 
+* 
+*********************************************************** 
+%%INIFILE=\\msbmcc03\ctm_av\PARM\LOGA-MSP-INCLUDE-INIDATEI
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NBE
+%%LIBMEMSYM=%%INIFILE
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\KN
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\MSP-EGM
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\KN\verschoben
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+%%DESCRIPTION = INDIR  beinhaltet die Loagadaten aus Lemgo
+%%DESCRIPTION1= OUTDIR hierin kommen die MSP-relevanten Dateien
+%%DESCRIPTION2= OUTDIR2 ist die Directory für die täglichen Dokument Updates
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.05.2024  17:59:09  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

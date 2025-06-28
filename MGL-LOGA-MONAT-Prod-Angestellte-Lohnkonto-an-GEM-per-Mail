@@ -1,0 +1,68 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Angestellte-Lohnkonto-an-GEM-per-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+%%NETUSE=N
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+
+%%INDIR=\\vfmgapps\apps\Verfahren\Loga\Personalwesen-Abrechnung\manuprodanup\output
+
+
+
+
+%%INCLUDE=MANUPROD%%MM.-11015-03-3200-*.pdf
+%%EXCLUDE="-"
+
+
+
+
+
+* Empfänger MG-Buchhaltung (durch Semikolon getrennt) 
+         
+**EMAIL_T=Axel.Peters@gem-mg.de;Sabine.Buegers@gem-mg.de
+%%EMAIL_T=Alisha.Pluntke@gem-mg.de;Sabine.Buegers@gem-mg.de
+
+* Subject
+%%EMAIL_U=Job-Nachricht:  Lohnkonto Angestellte steht zur verfuegung
+
+* Kopie
+%%EMAIL_CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;
+
+
+* Blindkopie
+*%%EMAIL_BCC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;Produktions-Steuerung@itk-rheinland.de
+
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+%%EMAIL_A_MOVE=N
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+
+
+
+
+

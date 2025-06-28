@@ -1,0 +1,76 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA-MSP-EGM-Angestellte-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+
+*********************************************************** 
+* Mitarbeiter Service Portal 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NAR
+%%INIFILE=\\msbmcc03\ctm_av\PARM\LOGA-MSP-%%GEM3.-INCLUDE-INIDATEI
+%%LIBMEMSYM=%%INIFILE
+
+
+
+%%DESCRIPTION=Daten werden kopiert und nicht verschoben wegen Parallel-Test-Neuss
+*** Standard OUTDIR wird hier überschrieben !!!!!
+*** werden kopiert nach            : Source  Loga Jahr Monat Art MSP GEM3
+*** und sind dann die Eingabe 
+*** für die Druckaufbereitung      : XXX-LOGA-MSP-EGM-Angestellte-Beamte-Druck-erzeugen
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\MSP-EGM\M-28\
+
+*** in OUTDIR2 kommen jeweils die aktuellen Eingaben des Monats für die täglichen Updates ohne DRUCK
+%%OUTDIR2=\\srv03.asp.rzne.de\ftp$\av\MSP\LOGA_MSP_DAILY\M-28
+
+
+
+* Test j für den ersten Lauf 02.2021
+%%TEST=N
+%%DEBUG=N
+
+
+
+*%%DESCRIPTION = INDIR  beinhaltet die Loagadaten aus Lemgo
+%%DESCRIPTION1= OUTDIR hierin kommen die MSP-relevanten Dateien
+%%DESCRIPTION2= OUTDIR2 ist die Directory für die täglichen Dokument Updates
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.02.2021  10:00:31  zv173x2   neuss soll wie 1860 nach MSP gespielt werden  Ohne Druck!!!
+*                                    soll bis dahin aber noch normal ausgedruckt werden  
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+* Mail vom 25.01.2021
+
+* WG: Kickoff Einführung MSP Stadt Neuss
+* Moin Bernd,
+* die Stadt Neuss möchte zunächst pilotweise am MSP teilnehmen.
+* Mögt ihr bitte für den Mandanten 1800 den Ladejob einrichten, analog zu 1860.
+* Bis etwa Juni läuft das Ganze in einer Testphase, 
+* d.h. der bisherige Papierausdruck läuft erstmal parallel unverändert weiter-
+*
+* Danke und viele Grüße
+* Stephan
+
+

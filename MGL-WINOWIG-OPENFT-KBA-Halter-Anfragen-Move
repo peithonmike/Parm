@@ -1,0 +1,69 @@
+* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*   W I N O W I G 
+* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-OPENFT-KBA-Halter-Anfragen-Move
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%DESCRIPTION=Halter Anfragedateien 
+%%DESCRIPTION=Halter Anfragedateien der %%STADT %%ORT aus Anwender-Verzeichnis nach OpenFT kopieren 
+
+%%DESCRIPTION1=Bei OS completion Status 0 wird das Sendejob geforced 
+
+
+
+* Anwender Eingabe Verzeichnis 03.03.2021
+%%INDIR=\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\ausgang\kba
+
+* nach kopieren verschieben nach erledigt
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt\%%GEM3.\%%$ODATE
+
+*OpenFT Sendeverzeichnis 
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\%%GEM3.\%%$ODATE.\WINOWIG\
+
+
+ 
+%%INCLUDE=anfrage*%%KBA_NR.*
+%%EXCLUDE="-"
+%%ANSCHLUSS=KBA
+%%RICHTUNG=SENDEN
+
+
+%%MOVE_OVERWRITE=J
+
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\OPENFT01-%%$OYEAR..csv
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-OPENFT-Copy-Move-Files.ps1
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.02.2021  10:46:34  zv173x2 neu ab 01.03.2021 nimmt MGL an Winowig teil
+*                                      hier Anpassung der PMOWI Jobs an Winowig
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+

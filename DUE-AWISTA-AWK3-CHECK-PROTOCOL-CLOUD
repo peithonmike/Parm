@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-AWISTA-AWK2-CHECK-PROTOCOL-CLOUD  
+* Auftraggeber: Daniel Mendoza
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%NETWORKPATH=https://cloud.itk.local/remote.php/webdav
+%%DRIVELETTER=O:
+%%U=s-zv-awklhd
+%%INDIR=O:\AWK\AWK3\AWK3_Protokolle
+%%INCLUDE=AWK3PE_%%$ODATE.*.csv
+
+
+%%SMTPSERVER=smtp
+%%FROM=Produktions-Steuerung@itk-rheinland.de
+%%TO=schnittstellen-finanzwesen@itk-rheinland.de;Sabine.Manz@duesseldorf.de;natali.mares@duesseldorf.de;MOenen@awista-kommunal.de
+%%SUBJECT=Schnittstelle 3 : Keine Datenanlieferung zum vereinbarten Zeitpunkt.
+%%BODY=Schnittstelle 3 : Keine Datenanlieferung zum vereinbarten Zeitpunkt !
+
+
+***************************************
+
+
+
+%%TEST=N
+
+%%DEBUG=N
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de;schnittstellen-finanzwesen@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog: %%JOBNAME hat keie Protokoll-Datei gefunden. 
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\CF\JOB\AWK3-Check-csv-File.ps1
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+

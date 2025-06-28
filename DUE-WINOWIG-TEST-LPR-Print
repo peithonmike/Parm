@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-TEST-LPR-Print
+* 
+* 
+*********************************************************** 
+%%TEXT1=Senden
+%%TEXT2=Gesendet
+
+*   Test=j nur Anlist der gefundenen Dateien 
+
+%%DESCRIPTION=Druckdaten aus Verfahrensordner in DUE Druck-Queue kopieren
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+
+%%LPR_EXE=\\msowigbat01\c$\Windows\System32\lpr.exe
+
+
+%%INDIR=\\srv03.asp.rzne.de\wow$
+
+%%INCLUDE=2018-04-25-MNR_111_Verwarngeldangebot_Betroffener_RV__2_.prn
+
+%%EXCLUDE="-"
+
+%%DRUCKSERVER=MSDPIOM01
+
+%%DRUCKERNAME=DFZSDST
+
+
+
+* MAIL nur für AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+
+%%TEST=N
+%%DEBUG=J

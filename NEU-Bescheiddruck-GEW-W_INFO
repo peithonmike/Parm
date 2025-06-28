@@ -1,0 +1,26 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Bescheiddruck-GEW-W_Info
+* 
+* 
+*********************************************************** 
+ 
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+ 
+
+* Datei Auswahl
+%%COMMAND=\\msaip01\swablage$\FB2\Software\KIVi\ControlM\NKM\NEU_GEW_GEWInfo.bat
+
+%%MAIL_NOTOK=david.mertens@itk-rheinland.de;volker.ehmann@itk-rheinland.de
+%%MAIL_NOTOK_2=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT_NOTOK=%%COMMAND. ist abgebrochen. Siehe Anhang!

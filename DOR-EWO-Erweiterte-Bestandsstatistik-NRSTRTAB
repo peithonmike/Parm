@@ -1,0 +1,52 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-EWO-Erweiterte-Bestandsstatistik-NRSTRTAB
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+* ------------------------------------------------------------------
+
+%%REPLACE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO_DB
+
+%%TRENNER=";"
+
+%%COPYLIST=J
+%%LISTE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Statistik\ErwBestandsstatistik\DOR-%%$RYEAR.%%RMONTH.-NRSTRTAB.csv
+
+
+%%TEST=N
+ 
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\DOR_NRSTRTAB_Statistik.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\DOR_NRSTRTAB_Statistik.sql
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+*$$INCLUDE=\\msbmcc03\ctm_av\DOC\SQL.BAT.csv
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\OK.EWO.STATI-DOR  monatliche SQL Straßentabelle.pdf
+* ------------------------------------------------------------------
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.12.2021  08:33:53  zv173x2 neuer Name
+*                                  DOR-STATI-Erweiterte-BestStat-NRSTRTAB alter Name 
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

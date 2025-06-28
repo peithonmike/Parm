@@ -1,0 +1,23 @@
+***********************************************************************************
+*  JOB-LIBMEMSYM                                                                   *
+***********************************************************************************
+*  Jobname     : DOR-WINOWIG-AMMBGS-Austausch
+***********************************************************************************
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%EMAIL_T=Andreas.Hillebrands@itk-rheinland.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL_U=%%JOBNAME ist NOTOK gelaufen
+
+%%TEST=N
+%%DEBUG=N
+
+%%AUFTRAGGEBER=A.Hillebrands
+
+%%COMMAND=\\srv03\sys_all$\Programme\winowig\automatik\WiNOWiG_AMMBGS_Austausch.cmd
+

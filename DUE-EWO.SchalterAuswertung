@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO.SchalterAuswertung
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+%%DB=netcallup_due
+
+
+%%SENDMAIL=J
+%%EMAIL-U=%%JOBNAME %%TTMMJJJJP_%%$ODATE
+%%EMAIL-T=ok-hotline@duesseldorf.de
+%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\UP-DUE-EWO 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\DUE_EWO_AUSWERT.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\DUE_EWO_AUSWERT.sql
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    06.12.2012  09:59:17  zv173x2 Anwender wünscht , als Trenner
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

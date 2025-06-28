@@ -1,0 +1,9 @@
+%%OWNER=ITK\controlm
+
+%%COMMAND=C:\WINDOWS\system32\shutdown.exe -r -f
+
+%%BETREFF_OK=Reboot des %%SERVER OK
+%%BETREFF_NOTOK=ACHTUNG!!! Reboot des %%SERVER NOTOK
+
+%%TEXT_OK=Ein Reboot des Server %%SERVER wurde angestoßen. /n Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+%%TEXT_NOTOK=Ein Reboot des Server %%SERVER wurde nicht ausgeführt. /n Returncode=%%COMPSTAT /n Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.

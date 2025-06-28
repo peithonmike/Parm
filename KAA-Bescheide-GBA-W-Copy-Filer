@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-Bescheide-GBA-W-Copy-Filer
+* Copy GBA-Bescheide zur Druckerei Stadt Kaarst und
+* verschieben nach verarbeitet
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Move-FileS.ps1
+
+%%OUTDIR=\\vfka\20\Bereich 20\AustauschITK\GBA
+
+%%OUTDIR_PROCESSED=\\vfapps\apps\ITK\KMV\Produktion\5000\50100\Aktuell\verarbeitet
+
+%%INDIR=\\vfapps\apps\ITK\KMV\Produktion\5000\50100\Aktuell
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=N
+%%DEBUG=N
+

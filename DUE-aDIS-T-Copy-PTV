@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-aDIS-T-Copy-PTV
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+
+%%INDIR=\\vfapps\apps\ITK\Bibliotheksverfahren\aDIS-Server\PROD\i07\sepa\
+
+%%OUTDIR=\\msptv02\d$\Daten\aDis_EXXX\outDir
+
+%%INCLUDE=e_d*.csv
+%%EXCLUDE="-"
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfapps\apps\ITK\Bibliotheksverfahren\aDIS-Server\PROD\i07\sepa\erledigt
+
+%%MAIL_NOTOK=dagmar.sauer@itk-rheinland.de;richard.sengfelder@itk-rheinland.de;markus.guenther@itk-rheinland.de;Agata.Krawczyk@itk-rheinland.de
+%%MAIL_NOTOK_CC=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen	
+
+%%TEXT_NOTOK=Es wurden keine Daten gefunden. Siehe Anhang.
+
+%%TEST=N
+%%DEBUG=N
+

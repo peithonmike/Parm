@@ -1,0 +1,26 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-ZSTV-Anfragen-WuS
+* Waffen und Sprengstoffverwaltungs Anfragen aus 
+* Sendebereich (OpenFT Server) an das BfJ (ZSTV) senden
+* 
+*********************************************************** 
+%%TEST=N
+
+
+%
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\ZSTV
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\ZSTV-OPENFT-SENDEN
+
+
+ 
+ 
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\CTM_AV\Log\ErgebnisLog\DUE-ZSTV-Anfragen-WuS.csv
+
+* ------------------------------------------------------------------

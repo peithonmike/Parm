@@ -1,0 +1,38 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Bescheide-GBA-Copy-Filer
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Move-FileS.ps1
+
+%%OUTDIR=\\vfne\11\Amt11\03 Verwaltungsservice\04 Druckdienstleistungen\13 Druckaufträge Finanzen
+
+%%OUTDIR_PROCESSED=\\vfapps\apps\ITK\KMV\Produktion\1000\50100\Aktuell\gedruckt
+
+%%INDIR=\\vfapps\apps\ITK\KMV\Produktion\1000\50100\Aktuell
+
+%%INCLUDE=*_GBA-Bescheide_*.pdf
+%%EXCLUDE="-"
+
+%%MAIL_OK=vervielfaeltigungsstelle@stadt.neuss.de
+%%BETREFF_OK=Neue PDFs zum Drucken
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=N
+%%DEBUG=N
+

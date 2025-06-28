@@ -1,0 +1,21 @@
+* --------------------------------------------------------------------------------
+*      Job : ITK-Backup-Papyrus02-PDFtoBackup
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%TEST=N
+%%MAIL-NOTOK=produktions-steuerung@itk-rheinland.de;doris.huhn@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT_NOTOK=PDFtoBackup auf dem MSPAPYRUS02 ist abgebrochen. Siehe Anhang
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -file c:\ctm_av\bin\bat\PDFtoBackup.ps1
+

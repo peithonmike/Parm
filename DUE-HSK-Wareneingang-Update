@@ -1,0 +1,70 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-HSK-Wareneingang-Update
+* 
+* HASAR
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\HSK
+
+%%AUFTRAGGEBER=Daniela Polarz, Rafael Nic
+
+%%DESCIPTION=wird durch DUE-HSK-Wareneingang-abholen geFORCED
+
+%%INDIR=\\srv03\ftp$\av\HSK\Wareneingang\%%$ODATE
+
+*\\msbmcc03\CTM_AV\Bin\Java\HSK_Wareneingang\Wareneingang
+%%JAR_FILE=\\msbmcc03\CTM_AV\Bin\Java\HSK_Wareneingang\Wareneingang\ARS_CC_Wareneingang_PROD.jar
+
+********************************************************************** 
+*  config:
+*  Wichtig für die Testphase 10.04.2019 Lie
+* \\msbmcc03\ctm_av\Bin\Java\HSK_Wareneingang\Wareneingang\config
+*  TEST DB  HWEC.properties
+*
+*  PROD DB  HWEC.properties_prod
+********************************************************************** 
+%%HWEC_FILE=\\msbmcc03\ctm_av\Bin\Java\HSK_Wareneingang\Wareneingang\config\HWEC.properties_prod
+
+%%ID_FILE=\\msbmcc03\ctm_av\Bin\Java\HSK_Wareneingang\Wareneingang\config\customerIDs.txt
+
+%%KATEGORIEN_FILE=\\msbmcc03\ctm_av\Bin\Java\HSK_Wareneingang\Wareneingang\config\LHDKategorien.csv
+
+%%LOG_FILE=\\msbmcc03\ctm_av\Bin\Java\HSK_Wareneingang\Wareneingang\config\log4j.properties
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+******************************************************************************************
+*  bei Serverwechsel auch in 
+*  \\msbmcc03\ctm_av\Bin\Java\HSK_Wareneingang\Wareneingang\config\HWEC.properties_prod
+*  ändern !!!!
+******************************************************************************************
+
+
+ 
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.11.2021  15:10:20  zv173x2 neue jar 
+*    09.09.2021  11:30:02  zv173x2 Berli in Berktin
+*    02.06.2021  08:14:39  zv173x2 HWEC.properties_prod Server Eintrag geändert
+  
+*    16.09.2020  14:36:41  zv173x2 PROD aktiv
+*    16.09.2020  14:36:12  zv173x2 ARS_CC_Wareneingang_PROD.jar
+*    16.09.2020  14:34:21  zv173x2 neue Jar und config von HWEC.properties auf HWEC.properties_prod
+*    25.08.2020  15:45:58  zv173x2 ARS_CC_Wareneingang_TEST05V2.jar
+*    23.06.2020  09:54:23  zv173x2 %%AUFTRAGGEBER=S.Berli
+*    10.04.2019  12:31:46  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

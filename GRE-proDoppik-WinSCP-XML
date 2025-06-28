@@ -1,0 +1,120 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-proDoppik-WinSCP-XML
+* 
+* 
+*********************************************************** 
+ 
+%%AUFTRAGGEBER=S.Buse
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* spezieles Format erzeugen  
+**DATE=%%OYEAR.%%OMONTH.%%TT_P1_%%$ODATE.
+**DATE=240401
+
+****************************************************************************************************************************
+
+* Änderung am 02.04.2024 zvaa405
+* Datum und Indir werden im Powershellscript definiert, weil sonst am Ende jedes Monats manuell eingegriffen werden muss
+
+%%Date_from_ODATE=%%ODATE
+%%INDIR=/Import_Daten/%%DATE
+
+%%COMMAND=powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\PowerShell\BL\JOB\JOB-WinSCP-Get-Date-P1-Day.ps1
+
+*****************************************************************************************************************************
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+
+
+**INDIR=/Import_Daten/%%DATE
+
+
+**INDIR=/Import_Daten/231101    bei Fehler manuell Datum eingeben
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+%%SITE=PRODOPPIK-GRE-XML
+%%U =nicht-verwendet
+%%P =nicht-verwendet
+%%IP=nicht-verwendet
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=aktuelle XML-Dateien  abholen
+%%WINSCP_EXE=C:\Program Files (x86)\WinSCP\WinSCP.exe
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=%%INDIR
+
+* Datei Ergebnis Anzeige-Maske
+%%INCLUDE=*.xml
+
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\HUH\GR\
+
+
+
+
+
+
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get -delete  %%INCLUDE   %%OUTDIR 
+%%Z09=CD ..
+%%Z10=rmdir %%DATE
+%%Z11=close
+%%Z12=exit 
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+**InDir="/Import_Daten/%%DATE"
+**OutDir="\\msbmcbatch01\CTM_AV\PRODOPPIK\GRE"
+**DoneDir="\\srv03\qaspkdvz$\Daten\Apps\ftp\av\HUH\GR"
+**DoneDir="\\msbmcbatch01\CTM_AV\PRODOPPIK\DONE"
+**FileName="*.xml"
+**Verbindung="PRODOPPIK-GRE-XML"
+
+
+
+   
+**powershell.exe -executionpolicy bypass -File \\msbmcc03\ctm_av\Bin\PowerShell\AS\Get-Files-WinSCP.ps1 -FTPScript %%FTPScript -InDir %%InDir -OutDir %%OutDir -DoneDir %%DoneDir -FileName %%FileName -Verbindung %%Verbindung
+
+
+
+%%MAIL_OK=Produktions-Steuerung@itk-rheinland.de
+**MAIL_OK_CC=Alexander.Schoenfeld@itk-rheinland.de; Michael.Hurtz@itk-rheinland.de; Cristian.Fuchs@itk-rheinland.de
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+**TEXT_OK=
+%%TEXT_NOTOK=Bitte ueberpruefen!!!

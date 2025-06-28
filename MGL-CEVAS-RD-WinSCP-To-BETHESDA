@@ -1,0 +1,80 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-CEVAS-RD-WinSCP-To-BETHESDA
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\CEVAS-KLINIKEN-MAIL 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Doc\BL\Folder_MGL-CEVAS-Winscp-Copy.txt
+
+
+
+
+%%SITE=MGL-CEVAS-RD-BETHESDA
+%%INCLUDE=*.xml , *.pdf
+%%EXCLUDE="-"
+%%INDIR=\\MSCEVAS01\c$\cks\dta_Krankenhaeuser\CEUS_VPN_Krhs-Bethesda\
+**INDIR=\\msbmcc03\CTM_AV\Bin\Powershell\CF\CEVAS\
+%%OUTDIR_PROCESSED=%%INDIR.gesendet-bethesda\
+%%REMOTE_OUTDIR=/
+%%HOSTKEY=
+
+%%PROTOCOL=[WinSCP.Protocol]::Sftp
+%%HOSTNAME=91.220.125.52
+%%USERNAME=Itkrheinland
+**PASSWORD=u3Vi6mqP#r     wird jetzt verschlüsselt !!!
+%%SshHostKeyFingerprint=ssh-ed25519 256 P0H1liw4BUZZTKKo+oKp/GDQEgTL3czkkP8MxLX/1pk=
+
+
+%%PROXY_LIST=wsaproxy.itk.local,cwsa31.itk.local,cwsa32.itk.local,cwsa33.itk.local,cwsa34.itk.local,cwsa35.itk.local
+
+
+* DIRECTORYLIST_REMOTE J/N noch nicht implementiert
+%%DIRECTORYLIST_REMOTE=N
+
+* Logfile muss im C: Laufwerkliegen
+%%LOGFILE=c:\temp\%%JOBNAME._winscp.log
+
+* UPLOAD J/N 
+%%UPLOAD=J
+
+
+* Dateien die nach erledigt verschoben werden, 
+* bekommen einen TimeStamp J/N
+%%USE_MOVE_WITH_TIMESTAMP=J
+
+
+%%ANSPRECH_PARTNER_EMAIL=marco.hoff@jcc.johanniter.de
+
+%%TEST=N
+%%DEBUG=N
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-WinSCP-Copy-To-Remote-SEM_extern-cf.ps1
+
+
+
+
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-WinSCP-Copy-To-Remote-SEM_extern.ps1
+**COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\CF\JOB\Job-WinSCP-Copy-To-Remote-SEM-ELISABETH.ps1
+**COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\CF\JOB\CEVAS-Test.ps1
+
+**  orginal Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-WinSCP-Copy-To-Remote-SEM.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+
+
+
+
+* IP : 91.220.125.52   Stand 14.05.2021
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.09.2020  15:52:17  zv173x2 USE_MOVE_WITH_TIMESTAMP
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

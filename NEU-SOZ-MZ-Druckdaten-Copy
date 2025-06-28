@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-SOZ-EZ-Druckdaten-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-EZ
+
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-FileS.ps1
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\MH\copy_pdf_kaarst.ps1
+
+
+**OUTDIR='"\\vfka\50\Bereich 50\AustauschITK\EZ\%%$ODATE"'
+%%OUTDIR=\\vfne\11\Amt11\03 Verwaltungsservice\02 Post- und Druckdienstleistungen\02 Druckdienstleistungen\12 Druckaufträge Soziales
+
+%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\kopiert
+
+
+*%%STEPNAME=Kopieren-EZ-Druckdaten
+*EZ-*PROT*2%%SOZ_GKZ.
+**INDIR=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\verarbeitet
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\SOZ-MZ\BUENDEL\MZ-%%SOZ_DAT
+\\MSPRINTFF01\Druckdaten$\2022\SOZ-MZ\BUENDEL\MZ-202212
+%%INCLUDE=NEU-SOZ-MZ*.pdf
+  
+
+
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=J
+%%DEBUG=N
+
+
+
+
+
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+

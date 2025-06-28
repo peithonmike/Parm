@@ -1,0 +1,22 @@
+﻿*********************************************************** 
+* LIBMEMSYM 
+* ITK_Dienste_W_MSRSM_Starten
+* QR MSRSM starten
+* 
+*********************************************************** 
+%%COMMAND=ecaqrtab UPDATE MSRSM 50
+
+%%NODEID=MSBMCC03
+%%DOM=ITK
+
+%%OWNER=%%DOM.\controlm
+
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+%%MAIL02=itk.FB1_SB131_Windows@itk-rheinland.de
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=ACHTUNG!!! - %%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Keine Weiteren Schritte nötig.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte ueberpruefen.

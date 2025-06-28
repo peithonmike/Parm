@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Kasse-Protokolle-Export
+* 
+* 21.04.2017 - Umstellung auf neue Powershell-FTP
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\Transfer_SAP_Log_400.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_400.cred"

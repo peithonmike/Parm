@@ -1,0 +1,45 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Geburtstagsliste-80-plus-Copy-To-ANSI
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* Jobname alt bis 12.2021 
+* DUE-Geburtstagsliste-80-plus-Copy-To-ANSI
+* Job überschreibt Datei in OUTDIR
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\srv03\qaspDF$\Daten\Apps\OKEWO\okprg\okewo_DUE\div
+
+%%INCLUDE=ALTJ%%ODAY.%%OMONTH..DBL
+%%EXCLUDE="-"
+%%OUTDIR=\\srv03\qaspDF$\Daten\Apps\OKEWO\okprg\okewo_DUE\div\daten_lhd
+%%OUTDIR_PROCESSED=\\srv03\qaspDF$\Daten\Apps\OKEWO\okprg\okewo_DUE\CTM\erledigt\%%$OYEAR
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.02.2022  16:08:29  zv173x2 erlidugt Orner mit jahreszahl
+*    13.01.2022  13:51:47  zv173x2 neuer Jobname
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

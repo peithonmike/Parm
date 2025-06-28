@@ -1,0 +1,13 @@
+*  Lese Zugriff auf Baumpflanungen RKN
+*  bei Winscp Powershell ist USERID usw. fest im Script verdrahtet
+%%IP=daten.rhein-kreis-neuss.de
+%%U=p321218f11
+%%P=Secret-Server
+%%SITE=Baumpflanzungen_Stadt_Neuss
+%%SERVER_TEXT=Baumpflanzungen_Stadt_Neuss
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.12.2019  12:31:06  zv173x2  password entfernt
+*    28.11.2019  14:00:39  zv171e1 Site
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Auswertung-Drittanwender-1920
+* 
+* 
+*********************************************************** 
+%%JJJJ=2021
+
+%%INCLUDE=NEU-KN_1920_1920****-BU.PDF
+%%HMAN=%%SUBSTRING %%JOBNAME 30 4
+
+%%LIBMEMSYM=\\MSBMCC03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\MSBMCC03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC03\CTM_AV\PARM\g%%GEM3
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-LEMGO
+%%INDIR=\\Msprintff01\source$\LOGA\%%JJJJ
+
+%%MANDANTENTEXT=%%LOGA_MAN_%%HMAN
+%%OUTDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\DrittAnwender
+
+%%TEST=N
+%%DEBUG=N

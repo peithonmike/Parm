@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-R22W0603
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Eingabe\R22W0603_ST0015_Eingabe.txt
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Ausgabe\R22W0603_ST0015_Ausgabe.txt

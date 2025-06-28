@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-EEL-Listen-Mail
+* 
+* 
+*********************************************************** 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VLK\%%JOBNAME..vlk
+
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland
+
+* Message File
+%%EMAIL_O=\\msbmcc03\ctm_av\Parm\vlk\%%JOBNAME..TXT
+
+
+* Empfänger (durch Semikolon getrennt)  
+        
+%%INIFILE_MAILADR=\\msbmcc03\ctm_av\Parm\VLK\%%JOBNAME..vlk
+
+* Subject
+%%EMAIL_U=Job:  %%JOBNAME. vom %%ODATE_P. ist gelaufen, EEL Listen stehen zur Verfuegung
+
+* Kopie
+*%%EMAIL-CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;
+
+
+
+
+
+%%DEBUG=N
+%%TEST=N
+

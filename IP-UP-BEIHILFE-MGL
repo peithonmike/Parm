@@ -1,0 +1,6 @@
+*  Lese Zugriff auf CC-SOZ Düsseldorf
+*  bei Winscp Powershell ist USERID usw. fest im Script verdrahtet
+%%IP=10.50.73.216
+%%U=MGBAdmin
+%%P=6vhtHcV?%C;
+%%SITE=MGL-BEIHILFE-DUESSELDORF

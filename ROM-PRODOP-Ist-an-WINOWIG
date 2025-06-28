@@ -1,0 +1,73 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-PRODOP-Ist-an-WINOWIG
+* 
+* 
+*********************************************************** 
+ 
+
+*Dormagen-> WINOWIG\Eingang\Zahlungen
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR eine Datei mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-File.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Doc\WINOWIG\WINOWIG-ROM-2021
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\IP-UP-PRODOP-DOR
+* Eingabe Directory
+%%INDIR=\\n200d01s29.ad.stadt-dormagen.de\HH-Prog\Schnittstellen_Roki\ITKR_Roki\WinOWIG\Export
+
+* Eingabe Datei
+%%INFILE=WinOWIG_Ist.txt
+
+* Ausgabe Directory
+%%OUTDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\zahlungen
+
+* Ausgabe Datei
+%%OUTFILE=%%INFILE._%%ODATE
+%%OUTFILE_PROCESSED=%%INFILE._%%ODATE..bak
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+* ***************************************************************************
+%%NETUSE=J
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+%%NETUSE_PATH=\\n200d01s29.ad.stadt-dormagen.de\HH-Prog\Schnittstellen_Roki\ITKR_Roki\WinOWIG\Export
+
+*
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* ***************************************************************************
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.06.2021  11:36:00  zv173x2 neu
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

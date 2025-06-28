@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* LOGA-EGM-HMAN-MAN
+* 
+* 
+*********************************************************** 
+ 
+* Hauptmandant zb Dormagen und Untermandant ermitteln
+%%HMAN=%%SUBSTR %%JOBNAME 17 4
+%%MAN =%%SUBSTR %%JOBNAME  22 4
+
+************************************************ 
+%%ART =%%SUBSTR %%JOBNAME  27 2
+
+

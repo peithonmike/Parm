@@ -1,0 +1,24 @@
+* LIBMEMSYM 
+* OK.EWO Datenträger Austausch Montag
+*
+* Lauftermin Montag 
+* Ausgewertet wird die vergangene Woche
+* Montag bis Sonntag in der Form tt..mm.jjjj
+*
+* wird im Schedule unter SET/LIBMEMSYM an 1. Stelle eingetragen
+
+*%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+
+* Check1 beinhaltet den Odate Wochentag
+%%CHECK1=%%WDAY_%%$ODATE
+
+%%VON=%%TTMMJJJJP_TT_M7_%%$ODATE
+%%BIS=%%TTMMJJJJP_TT_M1_%%$ODATE
+*
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.02.2012  14:57:19  zv173x2 libmemsym d:odate  GESTERNT:
+*                                  HAT mONATE LANG FUNKIONIERT:
+*                                  auf einmal werden keine Variablen mehr an die BAT weiter geleitett    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

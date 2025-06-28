@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-CAMPUS-ONE-FTP
+* 
+* SFTP -> campus-one.com
+*********************************************************** 
+ 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INCLUDE=id_ne_elearning.csv
+*%%INCLUDE=*.*
+%%INDIR=\\msidmitk01\ne-eLearn
+%%SITE=stadt-neuss@ftp.campus-one.com
+%%MOVE_OVERWRITE=J
+%%WINSCP_AKTION=Elearning-Daten an campus-one.com 
+%%OUTDIR_PROCESSED=\\msidmitk01\ne-eLearn\verarbeitet
+**OUTDIR_PROCESSED="\"
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-WinSCP-Put.ps1
+
+
+%%MAIL-NOTOK=henning.henze@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%BETREFF-NOTOK=%%JOBNAME - Abbruch - Bitte ueberpuefen
+%%TEXT-NOTOK=SFTP -> campus-one.com ist abgebrochen
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch continue
+%%Z02=option confirm off
+%%Z03=option echo off
+
+%%Z04=open stadt-neuss@sftp.campus-one.com
+
+*%%Z05=CD
+*%Z06=CD upload
+
+%%z07=dir
+%%Z09=put %%INDIR.\%%INCLUDE 
+%%z10=dir
+ 
+*%%Z29=close
+%%Z30=exit 
+
+%%TEST=N
+%%DEBUG=N
+

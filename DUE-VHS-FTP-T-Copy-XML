@@ -1,0 +1,30 @@
+* *************************************************************
+* Table Variablen          
+*
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\DUE-PTV
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\VHS-MAIL
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%EINGABE_VZ=\\srv03\qaspdf$\Daten\Apps\SQLBasys\Transfer
+
+%%USERID=ZVDUEFTP
+%%PW=sgbTabelle21
+
+%%EINDAT=SEPA_%%$ODATE.*.xml
+
+
+%%AUSGABE_VZ=\\vfdussap\sap\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_VHS
+
+%%AUSDAT2=\\srv03\qaspdf$\Daten\Apps\SQLBasys\Transfer\Backup\SEPA_%%$ODATE.*.xml
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\DUE-PTV-XML.cmd
+**\\srv03\qaspdf$\Daten\Apps\SQLBasys\Transfer\Backup
+
+**\\vfdussap\sap\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_VHS

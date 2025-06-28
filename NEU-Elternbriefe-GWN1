@@ -1,0 +1,71 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : NEU                                                                  *
+***********************************************************************************
+*  Jobname     : NEU-Elternbriefe-GWN1
+*  Description : Elternbriefe-GWN-1-jährige
+*  ermitteln Kinder die im vergangenen Monat vor 1 Jahr geboren wurden
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+%%VON=01.%%MM_MM_M13_%%$ODATE...%%JJJJ_MM_M13_%%$ODATE
+%%BIS=%%LD_MM_M13_%%$ODATE...%%MM_MM_M13_%%$ODATE...%%JJJJ_MM_M13_%%$ODATE
+
+
+
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%VON.-%%BIS *** %%ID.-%%RUNNR
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=7624-E01U0000
+*
+%%OKEWO_NR=P7624
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  Liste1 
+%%LISTE1=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..DBL
+%%LISTE1_ACTION=N
+
+*  Liste2 
+%%LISTE2=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..STS
+%%LISTE2_ACTION=N
+
+
+%%COPY_STS_DBL=J
+%%LISTE_CSV=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..csv
+  
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=Elternbriefe-GWN-1-jährige
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U19609#A_VON_N.E01DUMMY#%%VON#A_BIS_N.E01DUMMY#%%BIS#A_TRENNER_N.E01DUMMY#;#A_AUSWAHL_N.E01DUMMY#5#A_SPERREN_N#JNJJNJNNNN__NNNNN_NN1#A_FLAG_N.E01DUMMY#0#A_GEBIETTYP_N.E01DUMMY#901#A_GEBIET1_N.E01DUMMY#1#A_GEBIET2_N.E01DUMMY#1#A_IQDRUCK_N.E01DUMMY#N#A_GESCHLECHT_N.E01DUMMY#0#A_FAMSTAND_N.E01DUMMY#AL#A_STAATANG_N.E01DUMMY#0#A_STAAT_N.E01DUMMY##ZUZUG_GDE_VON.E01DUMMY##ZUZUG_GDE_BIS.E01DUMMY##AUSG_FILE.E01DUMMY#%%LISTE1#V_UZ331_LISTE.E01DUMMY#$$
+*
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.07.2014  09:35:58  zv173x2 csv erzeugen
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

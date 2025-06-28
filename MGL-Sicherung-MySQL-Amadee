@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-Sicherung-MySQL-Amadee
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\sicherung.cmd
+
+
+%%MAIL_NOTOK=tim.kuehnen@itk-rheinland.de
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+
+%%BETREFF_OK=Sicherung MySQL-DB Amadee %%GEM3. NOTOK
+%%BETREFF_NOTOK=Sicherung MySQL-DB Amadee %%GEM3. NOTOK
+
+%%TEXT_OK=Joblog: Sicherung abgebroch. bitte überprüfen
+%%TEXT_NOTOK=Joblog: Sicherung abgebroch. bitte überprüfen

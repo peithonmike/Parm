@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-Kataster-T-COPY-PTV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\srv03.asp.rzne.de\transfer\RKN\Kasse\Kataster\host.dat
+**ausdat2=\\msptv01.itk.local\ptv-projekte\hizadrs_sap\inDir
+**ausdat3=\\msptv01.itk.local\ptv-projekte\hizpbuc_sap\inDir
+
+%%ausdat2=\\msptv02\ptvprojekte$\SAP_Export\HIZADRS_EXXX\inDir
+%%ausdat3=\\msptv02\ptvprojekte$\SAP_Export\HIZPBUC_EXXX\inDir
+%%ausdat1=\\srv03.asp.rzne.de\transfer\RKN\Kasse\Kataster\Verarbeitet\host_D%%$ODAT.%%TIME..dat
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+%%MAIL01=hans-rudolf.kuhn@rhein-kreis-neuss.de
+%%BETREFF_OK=FileTransfer Kataster-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer Kataster-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der Kataster-Daten %%GEM3. zum PTV-Server ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der Kataster-Daten %%GEM3. zum PTV-Server ist NOTOK.

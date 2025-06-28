@@ -1,0 +1,18 @@
+#***************************************************************************************
+# FileWatch  GBA.GEOAS
+#
+# Global Parameters
+
+INTERVAL 30
+FROM_TIME 0600
+STOP_TIME 2359
+
+# ON_FILEWATCH statement  
+ON_FILEWATCH           \\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\GeoAS\import_gb*.txt
+THEN  
+DO_CMD copy %FILENAME% \\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\GeoAS\GBA_Import_%jjjj%%mm%%tt%.txt
+DO_CMD copy %FILENAME% \\srv03.asp.rzne.de\qaspka$\Daten\Apps\grappa\GRAPPA_Daten\GeoAS\Versiegelung\GBA\Import\Import_GBA.txt
+DO_CMD del %FILENAME%
+ELSE
+DO_COND %FILENAME% %tt%%mm% -
+END_ON

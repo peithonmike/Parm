@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA-Angestellte-Elster-nicht-MSP-Move
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\Elster
+
+*   Neuss und DRK Neuss
+%%INCLUDE=KN_1800_*.pdf,*KN_1920_*.pdf
+
+%%OUTDIR=%%INDIR.\nicht-MSP-31\%%GEM3
+%%IGNORE_RIGHT_BLANKS=J
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    31.08.2021  15:00:19  zv173x2 neuer ordner KN\6021_anstatt_6025 
+*    30.04.2021 IGNORE_RIGHT_BLANKS 
+*    31.03.2021  12:02:53  zv173x2 *KN_1920_*.pdf
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

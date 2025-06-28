@@ -1,0 +1,45 @@
+* *******************************************************************************
+* LIBMEMSYM
+* O K . E W O  
+* S Y S T E M F I L E 
+* -------------------------------------------------------------------------------
+* ID und RUNNR werden als eindeutige Kennzeichnung im OK EWO Jobnamen aufgenommen
+*
+* *******************************************************************************
+%%ID              =%%ORDERID
+%%RUNNR           =%%RUNCOUNT
+
+* *******************************************************************************
+* sonstige Variablen 
+* *******************************************************************************
+%%GEM3            =%%SUBSTR %%JOBNAME 1 3
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%OKEWO_ROOT      =\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\OKEWO\okprg\okewo_%%GEM3
+*
+%%SYSOUT          =%%OKEWO_SYSOUT
+
+%%OKEWO_SYSOUTLIB =C:\okewo\ewoav\tmp\e01_%%GEM3
+
+* OPENFT
+%%TRANSFER_ADMISSION=ft#KD946Sa
+%%ANSCHLUSS=toBZRneu
+
+
+* Antwort EmpfangsDirectory des Mandanten 
+%%OKVISA_BZR_IMPORT=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\OKVisa\bzr\import
+
+* Antwort Empfangsdirectory auf dem OpenFT Server (dahin kommen die Daten vom BZR zurück)                   
+%%OKVISA_BZR_DIR_ANTWORT=\\msbmcbatch01\c$\CTM_AV\AntwortBZR
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.07.2012  13:17:11  zv173x2 ANSCHLUSS
+*    07.02.2011  11:40:42  ZV173X2 OKVISA_BZR_DIR_ANTWORT
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

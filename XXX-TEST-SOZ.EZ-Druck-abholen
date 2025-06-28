@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-TEST-SOZ.EZ-Druck-abholen
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-NEU
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+%%OUTDIR=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\%%$ODATE
+%%OUTDIR=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\TEST\
+
+
+%%REMOTE_INDIR=EZ/%%$ODATE
+%%INCLUDE=EZ-*%%$ODATE..pdf 
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%U.:%%P.@%%IP
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get %%INCLUDE  %%OUTDIR
+%%Z07=close
+%%Z08=exit 
+%%TEST=J
+

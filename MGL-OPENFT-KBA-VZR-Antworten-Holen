@@ -1,0 +1,57 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* MGL-OPENFT-KBA-VZR-Antworten-Holen
+* 
+* 
+*********************************************************** 
+
+*/opt/openFT/bin/ncopy -t -c -k -r=4000 KBA! /home/t32420x/Eingang_KBA/VAU10044 -lc=ISO88591 KGBP3WHD
+*                      -t -c -k -r=4000 KBA!\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL\VAU10044  KGBP3WHD
+
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job holt Antworten aktiv über OpenFT ab.
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+%%DESCRIPTION=VZR Antwortdateien der %%STADT %%ORT mit OpenFT beim KBA abholen
+
+* Eingabe Directory der Anfragen
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL
+
+* Datei Auswahl Maske
+%%INCLUDE=VAU%%KBA_NR
+
+* Anschluss\Partner  LZPD,BZR usw 
+%%ANSCHLUSS=KBA
+
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+%%TRANSFER_ADMISSION=KGBP3WHD
+%%OPTIONEN=-t -c -k -r=4000
+%%FILEOPTION=-lc=ISO88591
+
+
+%%ABHOL_EXE=%%NCOPY_EXE
+
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+ 
+*\\swvfileserver01\verfahren$\PMOWI\Produktion\Daten_vom_KBA
+*\\swvfileserver01\verfahren$\PMOWI\Produktion\Daten_zum_KBA
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     07.06.2017  08:47:04  zv173x2  neu
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+
+
+

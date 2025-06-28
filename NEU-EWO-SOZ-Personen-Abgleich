@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-EWO-SOZ-Personenabgleich
+* 
+* 
+*********************************************************** 
+ 
+
+
+******************************************************************************************** 
+* AKDB generelle Job Vorbereitung 
+******************************************************************************************** 
+
+
+
+* AKDB Jobname hier angeben
+* Reihenfolge vor den LIBMEMSYM sind wichtig
+%%EWOJOB_NAME=de.akdb.oesio.abgleich.jobs.AbgleichJob
+
+
+ 
+   
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\g%%GEM3
+
+
+* Mandantenspezifische Angaben CTM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_%%GEM3
+
+**********************************************
+* Verarbeitungs Variablen zentral erzeuen
+* und Dokumentation zum AKDB Job......  
+**********************************************
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\DOC\EWO\%%EWOJOB_NAME
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+

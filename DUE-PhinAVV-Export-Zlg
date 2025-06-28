@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-PhinAVV-Export-Zlg
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PHINAVV-MAIL
+
+
+* Parameter für Powershell Programm
+**PARAMETER=-ini prod.ini -export ZlgExport -dest_net elko -dest_pattern MT940_*.txt
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass \\msphinbatch02\c$\PhinAVV\usr\phinavv.ps1 %%PARAMETER
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass PhinAVV-Batch-Export.ps1 -Environment C:\PhinAVV\env\Produktion.xml -Type ZlgExport 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-KASSE-T-VOLLSTRECKUNG-EXPORT.pdf
+* ------------------------------------------------------------------

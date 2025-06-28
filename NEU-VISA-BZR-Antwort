@@ -1,0 +1,10 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-VISA-BZR-Antwort
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKVISA
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKVISA-OPENFT-BZR-ANTWORT
+%%TEST=N
+

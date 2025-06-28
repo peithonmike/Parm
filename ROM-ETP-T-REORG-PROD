@@ -1,0 +1,12 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-ETP-T-REORG-PROD
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND="C:\Program Files\Scripte\ROM-REORG.bat"
+
+%%MAIL=simone.thissen@itk-rheinland.de;tobias.redmann@itk-rheinland.de;Dieter.Assenmacher@itk-rheinland.de;Erich.Janke@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+

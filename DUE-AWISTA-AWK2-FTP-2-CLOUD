@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-AWISTA-AKW-FTP-2-CLOUD   /  zvaa405 17.12.2024
+* Auftraggeber: Daniel Mendoza
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%FTPSERVER=ftp://sapftpitk.sapitk.krzn.de/SST/IFP/400/EXPORT/
+%%FTPUSER=CTM_IFP
+
+
+%%NETWORKPATH=https://cloud.itk.local/remote.php/webdav
+%%DRIVELETTER=x:
+%%CLOUDUSER=s-zv-awklhd
+%%CLOUDOUTDIR=X:\AWK\AWK2\AWK2_Eingabe_LHD
+%%FTPTEMP=C:\CTM_AV\temp\FTP
+
+%%SMTPERVER=smtp
+%%FROM=Produktions-Steuerung@itk-rheinland.de
+%%TO=cristian.fuchs@itk-rheinland.de
+%%SUBJECT=Keine AWISTA-Dateien
+%%BODY=Es wurden keine AWISTA Dateien zum verarbeiten gefunden !
+
+
+***************************************
+
+
+
+%%TEST=N
+
+%%DEBUG=N
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. 
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\CF\Job\AWISTA-FTP-2-Cloud.ps1
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+************************************************************************************
+*
+*   JOB ist I N A K T I V
+*   Job ersetzt durch  DOR-SOZ-MZ-Sodatis-004-ZADA-Copy
+   
+*
+*
+************************************************************************************
+ 
+
+   ******************************************************************
+   * XX                                                          XX *  
+   *      XX                                                XX      *
+   *           XX                                      XX           * 
+   *                XX                            XX                *     
+   *                    XX                   XX                     *     
+   *                          XX        XX                          *
+   *                               XX                               *                                
+   *                          XX        XX                          *
+   *                     XX                  XX                     *
+   *                XX                            XX                *
+   *           XX                                      XX           *
+   *      XX                                                XX      *
+   * XX                                                          XX *  
+   ******************************************************************
+
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-SOZ-MZ-Sodatis-004-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-MZ-SODATIS
+ 
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+%%OUTDIR=\\n200d01l42.dormagen.int.de\AusdruckeITK\SODATIS\%%$OYEAR.\%%SOZ_DAT
+  
+*\%%$OYEAR.\SOZ-EZ\%%$ODATE
+%%STEPNAME=Kopieren-Sodatis-Dateien
+*%%INCLUDE=bere-2*0-NE-2*04_*.txt     
+%%INCLUDE=EZ-GS-NE_2*%%GKZ8_7_2._PFGS0700_SEI*_%%SOZ_DAT._Kalendermonat.txt
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden mehr Variablenwerte angezeigt
+%%DEBUG=N
+* ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

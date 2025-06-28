@@ -1,0 +1,26 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-DTA-MAMMO-Monat-Zettel-1
+* NEU, DOR, GRE, JUE, KAA, KOR, ROM, MEE
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###Mammographie-Screening
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+%%TEST=N
+
+*  Druckvorlage
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\NACH-DTA-MAMMO-Monat-1.skels
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\NACH-DTA-MAMMO-Monat-1.skels
+ 
+  
+
+d
+

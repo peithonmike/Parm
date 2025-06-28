@@ -1,0 +1,53 @@
+
+
+
+Vorlage für alle neuen 
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-MammographieScreening
+* 
+* 
+*********************************************************** 
+%%VON=01.01.1951
+%%BIS=01.01.1951
+
+* Job arbeitet mit festen Werten......
+%%EWOJOB_NAME=de.akdb.oesio.okewo.auswertung.job.MammographieScreeningJob
+*%%PARAM=gemeindeGs=S05111000;geschlecht=Sw;geburtstagVon=D01.01.1951;geburtstagBis=D11.01.1951;nichtMeldepflichtigePersonenBeruecksichtigen=Bfalse
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\g%%GEM3
+
+* Mandantenspezifische Angaben
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_DUE
+%%USER=ewoav_dueTest
+
+
+* SubDirName wird um -JobNr erweitert
+%%EWOSUBDIR_AUSWERTUNGEN_TYP_3=MammographieScreeningJob
+
+* Ausgabeordner für gefundene Datei
+%%OUTDIR_TYP_3=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta\MAMMO\Ewo-Typ-3
+
+* Ausgabedatei überschreiben, wenn vorhanden
+%%MOVE_OVERWRITE=J
+%%TEST=N
+%%DEBUG=N
+
+* OK
+%%PARAM=--run --job-name=de.akdb.oesio.okewo.auswertung.job.MammographieScreeningJob --joblog=\\msbmcc03\ctm_av\temp\mammografie_jobLog.log --syslog=\\msbmcc03\ctm_av\temp\mammografie_sysLog.log --param=gemeindeGs=S05111000;geschlecht=Sw;geburtstagVon=D01.01.1951;geburtstagBis=D02.01.1951;nichtMeldepflichtigePersonenBeruecksichtigen=Bfalse
+* Logs nach vorne
+%%PARAM=--joblog=%%JOBLOG --syslog=%%SYSLOG --run --job-name=de.akdb.oesio.okewo.auswertung.job.MammographieScreeningJob  --param=gemeindeGs=S05111000;geschlecht=Sw;geburtstagVon=D01.01.1951;geburtstagBis=D02.01.1951;nichtMeldepflichtigePersonenBeruecksichtigen=Bfalse
+
+* JOB Config
+*    
+*
+* System Config
+*   \\msbmcc03\CTM_AV\Bin\Java\EWO_BATCH\AKDB-Sourcen\job_mammografie\due_system_config.properties
+
+*\\msbmcc01\ctm_av\temp\mammografie_jobLog.txt 
+*\\msbmcc01\ctm_av\temp\mammografie_sysLog.txt 
+
+
+
+

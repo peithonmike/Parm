@@ -1,0 +1,24 @@
+*   LIBMEMSYM   für Copy PDF auf Drucker
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE
+
+
+* Drucker Freigabe
+%%PRINTER=\\msdhp4\DLD508113
+
+%%PROT=EZ-030-DF_PF*100_*_EZ-150302_%%$ODATE..pdf , EZ-030-DF_PF*100_*_EZ-150304_%%$ODATE..pdf , EZ-030-DF_PF*100_*_EZ-150307_%%$ODATE..pdf , EZ-030-DF_PF*100_*_EZ-150932_%%$ODATE..pdf , EZ-030-DF_PF*100_*_EZ-350932_%%$ODATE..pdf
+
+%%AUSZ=EZ-080-DF_PF*100_*_EZ-150302_%%$ODATE..pdf , EZ-080-DF_PF*100_*_EZ-150304_%%$ODATE..pdf , EZ-080-DF_PF*100_*_EZ-150307_%%$ODATE..pdf , EZ-080-DF_PF*100_*_EZ-150932_%%$ODATE..pdf , EZ-080-DF_PF*100_*_EZ-350932_%%$ODATE..pdf
+
+%%INCLUDE=%%PROT , %%AUSZ
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE.\gedruckt
+
+* Datei Auswahl
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%FORCE_OUTDIR=N
+

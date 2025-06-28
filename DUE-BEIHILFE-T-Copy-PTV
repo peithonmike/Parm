@@ -1,0 +1,41 @@
+* *************************************************************
+* Table Variablen          
+* DUE-BEIHILFE-T-Copy-PTV
+* alter Hostname Y10PBH03
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* Auftrag ist von Gudrun Ring
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\DUE-PTV
+
+*%%SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+**EINGABE_VZ=\\vfdusalt\16\amt16\Neu\423_PBH\Kassenverfahren\Prod
+%%EINGABE_VZ=\\vfdusalt\16\amt16\423_PBH\Kassenverfahren\Prod
+%%USERID=itk\controlm
+%%PW=@CMAgent
+
+**USERID=ZVDUEFTP
+**PW=sgbTabelle21
+%%EINDAT=BE-%%$ODATE.-04-VERW.dat
+
+%%AUSGABE_VZ=\\msptv02\ptvprojekte$\SAP_Export\Beihilf_EXXX\InDir
+
+
+**Hat funktioniert ist aber falsch
+**%%AUSGABE_VZ=\\msptv02\ptvprojekte$\SAP_Export 
+
+%%AUSDAT=DUE_BEI_T%%$ODATE..TXT
+
+%%COMMAND=\\msbmcc03\CTM_AV\Bin\BAT\DUE-PTV-OHNE.cmd
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.02.2017  11:19:29  zv173x2 %%SYSOUT Standard ist im SYSTEM Member
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

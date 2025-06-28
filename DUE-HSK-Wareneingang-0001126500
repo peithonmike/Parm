@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-HSK-Wareneingang-0001126500
+* 
+* \\msaip01.ITK.LOCAL\swablage$\FB2\Software\Remedy\HSK_Wareneingang
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\HSK
+%%AUFTRAGGEBER=S.Berli
+* Eingabe Directory der bereits vom Notes Server abgeholten Daten 
+*  
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\HSK\Wareneingang\
+
+
+*         \\msbmcc03\ctm_av\bin\Java\HSK_Wareneingang\Wareneingang
+* neuer %%JAVAPRG=\\msbmcc03\ctm_av\Bin\Java\HSK_Wareneingang\Wareneingang\ARS_CC_Wareneingang_20171220.jar
+*
+*%%JAVAPRG=\\msbmcc03\ctm_av\Bin\Java\HSK_Wareneingang\Wareneingang\ARS_CC2HASAR_Wareneingang.jar
+
+%%JAVAPRG=\\msbmcc03\ctm_av\bin\Java\HSK_Wareneingang\Wareneingang\alte Versionen\HSK_Wareneingang_TEST.jar
+%%KATEGORIEN_FILE=\\msbmcc03\ctm_av\Bin\Java\HSK_Wareneingang\LHDKategorien.csv
+
+* 
+%%SEARCH=*%%KUNDENNUMMER..csv
+
+
+%%DATUM=%%TTMMJJJJP_%%$ODATE
+
+%%LOGFILE=\\msbmcc03\ctm_av\Log\ErgebnisLog\HSK_WARENEINGANG_%%$OYEAR..txt
+
+
+
+%%TEST=N
+
+* \\msbmcc03\ctm_av\Bin\Java\HSK_Wareneingang\Wareneingang\LHDKategorien.csv
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.06.2020  09:55:25  zv173x2 %%AUFTRAGGEBER=S.Berli
+*    08.01.2018  14:10:43  zv173x2  ARS_CC_Wareneingang_20171220.jar
+*    19.07.2017  08:44:55  zv173x2 HSK_Wareneingang_20151102.jar in ARS_CC2HASAR_Wareneingang.jar
+*    03.11.2015  08:16:57  zv173x2 HSK_Wareneingang_20151102.jar
+*    17.02.2015  11:48:21  zv173x2 aus Jar-Name TEST entfernt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

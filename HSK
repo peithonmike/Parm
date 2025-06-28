@@ -1,0 +1,20 @@
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Kundennummer aus Jobnamen ermitteln
+%%KUNDENNUMMER=%%SUBSTR %%JOBNAME 22 10
+*%%REMEDY_SERVER=msremedyP.itk.local
+%%REMEDY_SERVER=msremedy02.itk.local
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.05.2021  11:05:58  zv173x2 msremedy02.itk.local
+*    09.09.2016  12:16:23  zv173x2 msremedy01.itk.local
+*    03.11.2015  08:09:23  zv173x2 msremedy04.itk.local  zu msremedyP.itk.local 
+*    28.09.2015  12:06:08  zv173x2 server von7t auf 04
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

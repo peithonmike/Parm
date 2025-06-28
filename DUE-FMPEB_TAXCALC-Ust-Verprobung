@@ -1,0 +1,35 @@
+* *************************************************************
+* Table Variablen          
+* DUE-FMPEB_TAXCALC
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+**SYSOUT=//sapftpitk.sapitk.krzn.de/SST/IFQ/SYSOUT_CTM/%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%MAIL_OK=ulrike.peyk@duesseldorf.de;maren.baltruschat@duesseldorf.de;kathrin.blokesch@duesseldorf.de
+%%MAIL_OK_CC=produktions-steuerung@itk-rheinland.de
+
+%%MAIL2_NOTOK=Steffen.Brandemann@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%MAIL_NOTOK=sap-basis@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+
+%%BETREFF_OK=%%JOBNAME ist erfolgreich gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT_OK=Die Umsatzsteuerverprobung ist OK gelaufen.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Returncode: %%COMPSTAT  Bitte ueberpruefen.
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-FMPEB_TAXCALC.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-FMPEB_TAXCALC_Teil2.pdf
+* ------------------------------------------------------------------

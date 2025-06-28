@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-PRODOP-Check-Saperion-Log
+* 
+* 
+*********************************************************** 
+ 
+%%TEST=N
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+ 
+* zu durchsuchende Datei 
+%%LOGDATEI=error.log
+
+* Orner für Saperion Logdateien
+%%ORDNER=\\srv03.asp.rzne.de\qaspdo$\daten\apps\hh\hkr\work\archiv-austausch\log
+
+* Vergleichsmeldungen
+%%FEHLERMELDUNGEN=\\msbmcc03\ctm_av\PARM\dor-SAPERION-PRODOP-MESSAGES.txt
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRODOP_MAIL
+
+*****************************************************************************
+*   Im Fehlerfall CC=8 werden die Ansprechpartner benachrichtigt  
+*   der Job endet trotzdem mit OK
+*****************************************************************************
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\srv03.asp.rzne.de\qaspdo$\daten\apps\hh\hkr\work\archiv-austausch\log\error.log
+* ------------------------------------------------------------------
+$$INCLUDE=\\msprogress01\c$\temp\DOR-PRODOP-Check-Saperion-Log.tmp
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.06.2012  20:17:35  zv173x2 PRODOP_MAIL
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

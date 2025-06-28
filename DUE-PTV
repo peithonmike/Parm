@@ -1,0 +1,18 @@
+* **********************************************************************
+* Table Variablen          
+* fuer alle Control\M-Jobs, welche Daten bisher auf die SY8 geholt haben,
+* jetzt aber die Daten an den PTV-Server weiterleiten. 13.10.14 B.Schr.
+* **********************************************************************
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de
+**MAILSB2=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de;daniel.mendoza@itk-rheinland.de
+%%MAILSB2=christopher.kober@itk-rheinland.de;uta.webler@itk-rheinland.de;daniel.mendoza@itk-rheinland.de;michael.gaida@itk-rheinland.de
+%%MAIL_NOTOK=Uta.Webler@itk-rheinland.de;Christopher.Kober@itk-rheinland.de;daniel.mendoza@itk-rheinland.de
+%%TEXT_NOTOK=Uebertragen Daten vom Fachamtsserver an PTV abgebrochen, bitte pruefen.
+%%MAIL_VIA=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de
+
+
+
+
+** 19.09.2023 zvaa241 MAILSB2 geaendert

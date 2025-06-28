@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-Batch-Druck-LPR
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+*   Test=j nur Anlist der gefundenen Dateien 
+
+%%DESCRIPTION=Druckdaten nach Düsseldorfer Druckerrei senden
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\GET-JJJJ-MM-TT
+%%SEARCH_DIR=\\srv03.asp.rzne.de\wow$ 
+%%SEARCH=%%JJJJ_MM_TT.-MNR_111*.prn
+%%TEST=N
+* MAIL nur für AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+

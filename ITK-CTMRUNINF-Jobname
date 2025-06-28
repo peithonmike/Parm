@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-CTMRUNINF-Jobname
+* 
+* 
+*********************************************************** 
+ 
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DATE1=20160101000000
+%%DATE2=20160504235959
+
+%%JOB=BORK_900-KSU.W.KASSE-Abgabe-Kassendaten
+
+
+%%COMMAND=ctmruninf -list %%DATE1 %%DATE2 -JOBNAME %%JOB

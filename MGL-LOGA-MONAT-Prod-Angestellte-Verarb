@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Angestellte-Verarb
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%COMMAND=powershell.exe Loga_MG.ps1 -ArbeitsGruppe Tarif -Jahr %%$OYEAR -Monat %%OMONTH
+
+%%MAIL_NOTOK=Daniel.Mendoza@itk-rheinland.de;Martina.Milka@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_NOTOK=Bitte pruefen!
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    19.06.2023  10:22:18  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

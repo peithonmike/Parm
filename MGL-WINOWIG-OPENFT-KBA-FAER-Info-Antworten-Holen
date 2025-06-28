@@ -1,0 +1,70 @@
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+* W I N O W I G 
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-OPENFT-KBA-FAER-Info-Antworten-Holen
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job holt Antworten aktiv über OpenFT ab.
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+
+%%DESCRIPTION=Antworten auf FAER Info Antworten   der %%STADT %%ORT beim KBA abholen
+%%AUFTRAGGEBER=W.Klerx 
+
+
+* Eingabe Directory der Anfragen
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL\%%$ODATE
+
+* Datei Auswahl Maske
+%%INCLUDE=*faermit*
+
+
+************************************
+* PROD 
+* Anschluss\Partner 
+%%ANSCHLUSS=KBA
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+%%TRANSFER_ADMISSION=XDs9nhSRYL
+
+************************************
+*  TEST 
+* Anschluss\Partner 
+* %%ANSCHLUSS=KBATEST
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+* %%TRANSFER_ADMISSION=19629FAA
+
+
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+ 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.03.2021  09:47:44  zv173x2 Abholen in ODATE Ordner
+*    26.02.2021  10:46:34  zv173x2 neu ab 01.03.2021 nimmt MGL an Winowig teil
+*                                      hier Anpassung der PMOWI Jobs an Winowig
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+**************************************************************** 
+
+
+
+

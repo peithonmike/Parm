@@ -1,0 +1,49 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-DZ-Copy-Filer
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-EZ
+
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-FileS.ps1
+
+
+'
+%%OUTDIR=\\vfka\20\Bereich 20\AustauschITK
+
+%%OUTDIR_PROCESSED=\\vfapps\apps\ITK\KMV\Produktion\5000\Drucklisten\gedruckt
+
+%%INDIR=\\vfapps\apps\ITK\KMV\Produktion\5000\Drucklisten
+%%INCLUDE=*.pdf
+%%EXCLUDE=KAA_GBA_-_DTA-MB_Stadt_Neuss_*.pdf
+  
+
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+

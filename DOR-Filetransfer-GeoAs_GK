@@ -1,0 +1,20 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Dormagen
+***********************************************************************************
+*  Jobname     : Filetransfer Dormagen GeoAs_GK
+*  APPLICATION : GEOAS
+***********************************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%COMMAND=D:\Programme\Batchprogramme\ASP\copy_do_alkis_UTM.BAT
+
+%%MAIL_NOTOK=ralf.dixneit@itk-rheinland.de;hendrik.possberg@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - NOTOK - Bitte überprüfen
+
+%%TEXT_NOTOK=Filetransfer Dormagen GeoAs_GK ist abgebrochen

@@ -1,0 +1,41 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : MEE-C22W0265-SQL_2
+* erstellt : 05.08.2013 14:27:51
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%TEST=N
+*
+* Config-Datei
+%%CONFIG= 
+* Input-Datei
+%%CSV=\\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\Gew\SAS_Ausgabe\C22W0265_Ausgabe-%%$ODATE..csv
+* Datenbank
+%%DB=jasperjob
+* SQL-File
+%%SQL=\\msbmcc03\ctm_av\Parm\C22W0265.sql
+*Tabelle
+%%TABLE=C22W0265
+* JAVA
+%%JAR=\\msbmcc03\ctm_av\Bin\Java\CsvToSql.jar
+ 
+ 
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\MEE-JASPER-SAS-GEW.pdf
+* ------------------------------------------------------------------

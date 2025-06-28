@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-OPENFT-VISA-BZR-Anfrage-Move
+* 
+* 
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-OpenFT-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* OpenFT Partner / Anschluss 
+* BAG, BZR,LZPD..... 
+%%ANSCHLUSS=BZR
+%%BFJ_ID=%%BFJ_ID_OKVISA
+
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\OKVisa\bzr
+
+* Datei Auswahl
+%%INCLUDE=UTF-8BQU0752R9236A*.txt
+%%EXCLUDE="_"
+
+%%RICHTUNG=AnfrageMove
+
+
+* Ausgabe Directory
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\BZR\OKVISA
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\OKVisa\bzr\erledigt
+%%TEST=N
+%%DEBUG=N
+
+$$INCLUDE=\\msbmcc03\ctm_av\log\ErgebnisLOG\OPENFT01-%%$OYEAR..csv 
+
+
+
+
+
+
+
+

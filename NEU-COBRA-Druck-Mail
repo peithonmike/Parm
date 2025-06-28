@@ -1,0 +1,49 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-Anzahl-Einwohner-Mail
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-COBRA
+
+
+
+*****************************************************************************
+*   M A I L 
+*  
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*****************************************************************************
+*   Mailadressen 
+*;Ralf.Lingel@ITK-Rheinland.de;
+*****************************************************************************
+%%EMAIL-T=frank.stiller@stadt.neuss.de;rettungswesen@stadt.neuss.de
+*%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de
+**SEARCH_DIR=%%PDF_SAMMELDIR_PROCESSED
+%%SEARCH_DIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\COBRA\BUENDEL\NEU\kopiert
+
+%%SEARCH01=NEU_COBRA_Buchungsprotokoll_*.pdf
+%%SEARCH02=NEU_COBRA_Sammelliste_*.pdf
+
+
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL-U=Cobra  %%STADT %%ORT %%ODATE_P :  Buchungsprotokoll und Sammelliste
+*%%EMAIL-U=Cobra  %%STADT %%ORT %%ODATE_P :  Sammelliste
+%%TEST=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.11.2016  15:06:48  zv173x2 raus nadine.flato@stadt.neuss.de 
+*    07.11.2016  15:06:29  zv173x2 rein rettungswesen@stadt.neuss.de
+*    13.10.2014  10:53:57  zv173x2 umgebaut auf neue DirStruktur auf Printserver
+*    18.08.2014  08:47:25  zv173x2 search_date
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

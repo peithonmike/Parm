@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-FIBU-Angestellte-Check-Datum
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\XXX-LOGA-CHECK-DATUM-AV-MAIL
+
+
+%%FORMAT=MM.JJJJ
+%%DATE=%%OMONTH..%%$OYEAR
+%%INCLUDE=*.txt,*.xml
+%%EXCLUDE="-"
+%%INDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\FIBU
+%%INDIR2=nicht-verwendet
+* manchmal gehts nicht anders.
+%%IGNORE_RIGHT_BLANKS=J
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.09.2021  07:35:17  zv173x2 NEU
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

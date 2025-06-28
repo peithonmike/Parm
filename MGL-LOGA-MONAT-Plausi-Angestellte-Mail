@@ -1,0 +1,47 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-EEL-Listen-Mail
+* 
+* 
+*********************************************************** 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VLK\MGL-LOGA-Monat-Plausi-MAIL-ADR.vlk
+
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Absender
+%%EMAIL-F=Produktions-Steuerung@ITK-Rheinland
+
+
+* Empfänger MG-Buchhaltung  (durch Semikolon getrennt)
+
+%%INIFILE_MAILADR=\\msbmcc03\ctm_av\Parm\VLK\MGL-LOGA-Monat-Plausi-MAIL-ADR.vlk
+          
+*%%EMAIL_T=Kevin.Mende@moenchengladbach.de;Vera.Berghausen@moenchengladbach.de;Rosa.Reisner@moenchengladbach.de;Ellen.Wellershaus@moenchengladbach.de;Kerstin.Joerissen@moenchengladbach.de;Claudia.Bolz@moenchengladbach.de;Thekla.Schmidt@moenchengladbach.de
+
+* Subject
+%%EMAIL_U=Job-Nachricht:   Plausi-Abrechnungslisten Angestellte fuer Monat %%MM.-%%JJJJ. stehen zur Verfuegung
+
+
+* Kopie
+%%EMAIL_CC=martina.milka@itk-rheinland.de
+
+
+* Blindkopie
+*%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+
+%%DEBUG=N
+%%TEST=N
+
+
+

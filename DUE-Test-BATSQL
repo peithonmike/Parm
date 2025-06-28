@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Test-BATSQL
+* 
+* CARE COST MANAGER
+* Erstellen KIRP Datei per SQL
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CCM
+
+%%DB=test_ccm_due
+%%SQL_COMMAND=exec p_export_nkf
+
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\CCM Verzeichnise.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\CCM  CARE COST MANAGER.txt
+* ------------------------------------------------------------------

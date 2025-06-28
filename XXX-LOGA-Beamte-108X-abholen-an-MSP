@@ -1,0 +1,84 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Beamte-108X-abholen-an-MSP
+* 
+* 
+*********************************************************** 
+
+***********************************************************************************************************************
+* Der Job holt die Dateien extra für die MSP Verarbeitung ab um den alten Ablauf nicht zu behindern.
+* und kopiert die Dateien direkt in den INDIR Ordner für die MSP Übernahme bzw. erstellen Druck für die, die kein MSP
+* haben oder wollen. 
+* Aktuell 26.01.2021 nur Mandant 1800
+***********************************************************************************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+*********************************************************** 
+
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NB E
+
+
+* Vor dem ersten Lauf muss der Ordner 
+* auf Richtigkeit überprüft werden             
+%%OUTDIR1=%%DRUCK_INDIR
+
+
+
+%%OUTDIR2=Nicht-verwendet
+
+
+%%INCLUDE=*.pdf
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=option failonnomatch off
+
+%%Z05=open %%SITE -hostkey=%%HOSTKEY
+
+*%%Z06=DIR
+
+%%Z07=CD BE\
+
+
+%%Z10=LCD %%OUTDIR1
+%%Z11=mget KN_1800_1800_*_108*_C1.pdf
+
+
+
+%%Z20=bye 
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   Listen Nummern :\\msbmcc03\ctm_av\doc\loga\Lemgo-ListenNummern.jpg
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.02.2021  10:36:56  zv173x2 jOB WIRD NICHT MEHR VERWENDET
+*    05.01.2021  16:12:35  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+* Mail vom 25.01.2021
+
+* WG: Kickoff Einführung MSP Stadt Neuss
+* Moin Bernd,
+* die Stadt Neuss möchte zunächst pilotweise am MSP teilnehmen.
+* Mögt ihr bitte für den Mandanten 1800 den Ladejob einrichten, analog zu 1860.
+* Bis etwa Juni läuft das Ganze in einer Testphase, 
+* d.h. der bisherige Papierausdruck läuft erstmal parallel unverändert weiter-
+*
+* Danke und viele Grüße
+* Stephan
+
+
+

@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-OK.EWO-Kassendaten
+* 
+* 
+*********************************************************** 
+ 
+%%TRENNER=";"
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO_DB
+
+ 
+%%LOGFILE_TO_SYSOUT=N
+%%TEST=N
+%%SENDMAIL=J
+%%EMAIL-T=Manfred.Linke@itk-Rheinland.de 
+%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de 
+
+%%EMAIL-U=aktuelle Kassendaten %%ORT  Stand %%START_DATE  %%START_TIME
+
+
+ 
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\MGL_Kassendaten.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\MGL_Kassendaten.sql
+
+

@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-BEHERBERGUNG-Test-AMP-Move-Formulare-Intern
+* Move Formulare intern damit AMP sie prüft
+*********************************************************** 
+%%AUFTRAGGEBER=David Mertens
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1
+
+%%INDIR=\\msampscan01\Beherbergung$\DUE\in
+
+* Datei Suchmaske
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory für die Solldaten
+%%OUTDIR=\\msampscan01\Beherbergung$\DUE\check
+
+%%USE_PREFIX=N
+
+%%TEST=N
+%%DEBUG=N
+
+

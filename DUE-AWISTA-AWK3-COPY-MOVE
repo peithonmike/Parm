@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-AWISTA-AKW3-COPY-MOVE   /  zvaa405 17.12.2024
+* Auftraggeber: Daniel Mendoza
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%NETWORKPATH=https://cloud.itk.local/remote.php/webdav
+%%DRIVELETTER=x:
+%%U=s-zv-awklhd
+%%INDIR=X:\AWK\AWK3\AWK3_Eingabe_AWK
+%%OUTDIR=\\msptv02\d$\Daten\AWK_EDUE\Cloud_XML
+%%OUTDIR_PROCESSED=\\msptv02\d$\Daten\AWK_EDUE\Cloud_Protokolle\Verarbeitet
+
+
+
+
+***************************************
+
+
+
+%%TEST=N
+
+%%DEBUG=N
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. 
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\CF\in_Arbeit\AWISTA-Copy-Move2.ps1
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+

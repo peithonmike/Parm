@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-EWO-Familienverband-Aufloesen-Move
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1 -INCLUDE %%INCLUDE
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%EWOJOB_NAME=de.akdb.oesio.okewo.melderegister.jobs.FamilienverbaendeAufloesenJob
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\gEWO_%%GEM3
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\DOC\EWO\%%EWOJOB_NAME
+
+* Eingabe Directory 
+%%INDIR=%%EWODIR_AUSWERTUNGEN.\Aufloesen_Familienverband
+
+
+* Datei Auswahl
+* Muster   05111000_AufloesenFamilienverband_210125100707.zip
+%%INCLUDE=%%GKZ8._Aufloesen*Familienverband_%%ODATE.*.zip
+
+
+
+* Ausgabe Directory
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\AufloesenFamilienverband\%%GEM3
+
+
+* Job Optionen 
+%%TEST=J
+%%DEBUG=N
+
+* Anlist Directory vor und nach der Verarbeitung
+%%LIST_DIRECTORY=N
+%%LIST_SERVER=N
+
+
+
+
+
+
+
+
+

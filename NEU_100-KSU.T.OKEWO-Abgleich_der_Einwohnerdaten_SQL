@@ -1,0 +1,11 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE_300-KSU.T.OKEWO-Abgleich_der_Einwohnerdaten
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\KSU2000

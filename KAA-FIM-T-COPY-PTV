@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-FIM-T-COPY-PTV
+* Mail an Klaus und Werner nicht mehr nötig - 10.2.2016/Schr.
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\srv03.asp.rzne.de\qaspka$\Daten\Apps\FIM\FIBU\Export\Export_%%ORDER..txt
+##ausdat2=\\msptv01.itk.local\ptv-projekte\SAP_FIM\inDir\%%GKZ._FIM_D%%$ODATE..txt
+%%ausdat2=\\msptv02\ptvprojekte$\SAP_EXPORT\FIM_EXXX\inDir\%%GKZ._FIM_D%%$ODATE..txt
+%%ausdat1=\\srv03.asp.rzne.de\qaspka$\Daten\Apps\FIM\FIBU\Export\Verarbeitet\%%GKZ._FIM_D%%$ODATE..txt
+
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+**MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer FIM-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer FIM-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der FIM-Daten %%GEM3. ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der FIM-Daten %%GEM3. ist NOTOK.

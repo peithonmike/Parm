@@ -1,0 +1,24 @@
+* *************************************************************
+* Table Variablen          
+* SZD-LECTOR-T-Copy-PTV
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+
+%%EINGABE_VZ=\\vfdusalt\16\Amt16\Verrechnungen_Lector
+**EINDAT=fibu.asc
+%%EINDAT=fibu_ascii_2.txt
+%%COPYDAT=fibu_ascii_2_D%%$ODATE..txt
+%%LOGDAT1=fibu_ascii_2.log
+%%LOGDAT2=fibu_ascii_2_D%%$ODATE..log
+%%AUSGABE_VZ=\\msptv01\d$\PTV\Projekte\SAP_Export\LECTOR_ESZD\inDir
+%%AUSDAT=%%GKZ._LECTOR_FIBU_D%%$ODATE..txt
+
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\SZD-LECTOR-T-Copy-PTV.cmd

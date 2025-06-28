@@ -1,0 +1,65 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOPKUBU-T-Amt40-Copy-Dozentenhonorare
+* 
+* 
+*********************************************************** 
+ 
+ 
+  
+* CTM Monitoring Dokumentation vorhanden
+%%DOCUMENTATION=J
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\KUBU-MAIL
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\DOC\BL\%%JOBNAME..txt
+
+
+
+
+* Eingabe Directory 
+
+%%INDIR=\\vfdusalt\40\Amt40\Ausgabe_Dozentenhonorare
+
+* Datei Auswahl
+
+*INCLUDE=ogs_jjjjmmdd.xml
+*%%INCLUDE=ogs_%%$ODATE..xml
+* Achtung ist gibt auch tmp Dateien
+%%INCLUDE=ogs_????????.xml
+
+
+
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfdussap\sap\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_Dozentenhonorare
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\Backup
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.07.2021  16:01:01  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

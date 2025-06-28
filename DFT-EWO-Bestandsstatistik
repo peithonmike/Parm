@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DFT-EWO-Bestandsstatistik
+* 
+* 
+*********************************************************** 
+ 
+
+********************
+* EWO Job Typ-3    *
+********************
+* nichts vorgefüllt*
+********************
+
+
+* AKDB Jobname und Parameter hier angeben
+* Reihenfolge vor den LIBMEMSYM sind wichtig
+
+* Jobname verwenden aus  \\MSBMCC03\CTM_AV\Bin\Java\EWO_BATCH\AKDB-Sourcen\kinderschutzprogramm_job_config.properties
+%%EWOJOB_NAME=de.akdb.oesio.okewo.auswertung.job.BestandsstatistikVorbereitenJob
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\g%%GEM3
+
+
+
+* Mandantenspezifische Angaben mit T E S T überschreiben !!!
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_DFT
+
+******************************************************************************************** 
+* ohne Parameter 
+* ohne Nachverarbeitung 
+******************************************************************************************** 
+* Dokumentation zum AKDB Job etc.  
+%%DOKU=\\MSBMCC01\CTM_AV\DOC\EWO\%%EWOJOB_NAME
+%%LIBMEMSYM=%%DOKU
+
+
+%%TEST=N
+%%DEBUG=N
+
+

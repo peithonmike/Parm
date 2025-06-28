@@ -1,0 +1,45 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-Kindergelstatistik-Copy-Rename
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MGL-LOGA-RENAME-INIDATEI
+
+
+
+%%INDIR=\\swvfileserver01.it-nr.de\verfahren$\Loga-Abrechnungen\Lohnkonten_Versorgung
+
+
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga-Abrechnungen
+
+
+%%INIFILE=\\msbmcc03\ctm_av\Parm\MGL-LOGA-Kindergeld-Inidatei
+
+
+
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.11.2017  10:33:31  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

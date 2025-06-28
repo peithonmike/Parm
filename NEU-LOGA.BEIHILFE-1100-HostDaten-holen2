@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA.BEIHILFE-1100-HostDaten-holen2
+* 
+* 
+*********************************************************** 
+ 
+* Test=J nur Anlist der gefunden Daten
+%%TEST=N
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Daten Bereich  
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspne$\daten\apps\Beihilfe\export_SEPA
+%%SEARCH_DIR=\\srv03\ftp$\av\Beihilfe\export_SEPA
+
+
+* S E P A  
+* Daten-Datei Suchmaske PAIN SEPA
+%%SEARCH_PAIN=%%GEM3.-%%$ODATE.-PAIN.XML
+* Ausgabe TravicLink Sende-Verzeichnis
+%%OUTDIR_PAIN=\\srv03.asp.rzne.de\ftp$\av\TravicLink\BEIHILFE\FREIGABE
+%%OUTFILE_PAIN=113.BEI.SRZ.%%GEM3.-BEIHILFE_CT_%%$ODATE  
+
+
+
+* erledigt Ordner,
+%%MOVE_ORDNER=erledigt
+
+* Logfile
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv

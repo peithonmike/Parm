@@ -1,0 +1,51 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : JUE                                                                  *
+***********************************************************************************
+*  Jobname     : JUE-OK.EWO-AUSW-TEST
+*  Description : TEST-TEST
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###VLK-MONAT_31
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%VON - %%BIS *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=8727-E01U0000
+*
+%%OKEWO_NR=P8727
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus aus
+%%TEST=N
+  
+*  Liste1 
+%%LISTE1=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..DBL 
+%%LISTE1_ACTION=N
+  
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=TEST-TEST
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U19605#A_VON_N.E01DUMMY#01.01.2014#A_BIS_N.E01DUMMY#31.03.2014#A_TRENNER_N.E01DUMMY#;#A_AUSWAHL_N.E01DUMMY#2#A_SPERREN_N#JNJJNJNNNN__NNNNN_NN0#A_GEBIETTYP_N.E01DUMMY#901#A_GEBIET1_N.E01DUMMY#1#A_GEBIET2_N.E01DUMMY#1#A_NWJN.E01DUMMY#N#A_IQDRUCK_N.E01DUMMY#N#A_BEGRIFF_N.E01DUMMY#AV-JE05#AUSG_FILE.E01DUMMY#e01awhoz.dbl#V_UZ331_LISTE.E01DUMMY#$$

@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ-EZ-Kassendateien-Copy-Kasse
+* 
+* 
+* Vorläufer ist der Job "DUE-SOZ-EZ-Kassendateien-Abholen"
+* alle abgerufenen Dateien werden zur Kasse übertragen
+*
+*********************************************************** 
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+*%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\EZ\Test
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\EZ\Kasse
+
+* Datei Auswahl
+%%INCLUDE=*.*
+%%EXCLUDE=*SEPA1500*
+
+* Ausgabe Directory
+*%%OUTDIR=\\vfdussap\sap\sap\Kasse_Zahlungstraeger_Test
+%%OUTDIR=\\vfdussap\sap\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_AKDN_SOZIAL\
+
+* erledigt Ordner
+*%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\zwischen\erledigt
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\EZ\Kasse\Erledigt
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+

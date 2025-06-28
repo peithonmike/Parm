@@ -1,0 +1,90 @@
+************************************************************ 
+* LIBMEMSYM 
+* MEE-MIGEWA-Auswertung-Betriebe
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\CHECK-ODATE-MONTAG_MEE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SQL\QueryBetriebe.sql
+
+
+%%AUFTRAGGEBER=A.Peltzer 02.2020
+
+%%TEST=N
+%%DEBUG=N
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+%%U=migewa_mee_read
+**P=secret-server
+%%P=NATTHM1p1nW(
+%%DB=migewa_mee
+%%SERVER=MSSQL01
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+**VON=%%JJJJMMTT_TT_M8_%%$ODATE
+**BIS=%%JJJJMMTT_%%$ODATE
+
+%%VON=%%$OYEAR.%%OMONTH.01
+%%BIS=%%$ODATE
+
+
+*  ******************************************** 
+*  sehr spezielles Datum für den Dateinamen :-)
+*  z.B.
+*  MigewaBetriebe2018-05-28-2018-06-03.csv
+*  MigewaInhaber2018-05-28-2018-06-03.csv
+*  ******************************************** 
+
+**JJJJ_V=%%SUBSTRING %%JJJJMMTT_TT_M8_%%$ODATE   1 4
+**MM_V=%%SUBSTRING %%JJJJMMTT_TT_M8_%%$ODATE   5 2
+**TT_V=%%SUBSTRING %%JJJJMMTT_TT_M8_%%$ODATE   7 2
+
+%%JJJJ_V=%%$OYEAR
+%%MM_V=%%OMONTH
+%%TT_V=01
+%%JJJJ=%%$OYEAR
+
+%%CSV_VON=%%JJJJ_V.-%%MM_V.-%%TT_V
+
+
+%%JJJJ_B =%%$OYEAR
+%%MM_B=%%OMONTH
+%%TT_B=%%ODAY
+
+%%CSV_BIS=%%JJJJ_B.-%%MM_B.-%%TT_B
+
+
+
+
+%%SQL_FILE=\\msbmcc03\CTM_AV\Parm\SQL\Migewa\MEE_QueryInhaber.sql
+%%FILENAME=%%GEM3._MigewaInhaber_%%CSV_VON.-%%CSV_BIS..csv
+
+
+* Prod Ausgabe
+
+**OUTDIR=\\vfmeerbusch\programme\Cobra\Cobra CRM 2021 ME\Monatlicher Export Migewa
+%%OUTDIR=\\vfmeerbusch\programme\Cobra\MigewaExport
+
+* Test Ausgabe
+**OUTDIR=\\msbmcc03\c$\temp
+
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe

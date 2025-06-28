@@ -1,0 +1,13 @@
+*  Lese Zugriff auf CC-SOZ Düsseldorf
+*  bei Winscp Powershell ist USERID usw. fest im Script verdrahtet
+%%IP=lxsftp.itk.local
+%%U=ccftpDf
+%%P=Secret-Server
+%%SITE=CC-SOZ-DUESSELDORF
+%%SERVER_TEXT=Server Zugriff auf CC-SOZ-DUESSELDORF
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.12.2019  12:31:06  zv173x2  password entfernt
+*    28.11.2019  14:00:39  zv171e1 Site
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

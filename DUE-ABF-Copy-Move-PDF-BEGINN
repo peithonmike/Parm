@@ -1,0 +1,49 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* DUE-ABF-Copy-Move-PDF-BEGINN
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske unter neuem Namen.
+* Der neue Name ergibt sich aus der Vorgabe der NAMES Varibalen, der in der Ursprungsdatei auch enthalten ist. 
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+%%INDIR=\\vfcache\kmsta\daten\IFP\400\pdf
+%%INCLUDE=51981*.pdf
+%%EXCLUDE=none
+%%OUTDIR=\\vfcache\kmsta\daten\IFP\400\pdf\archiv\%%$OYEAR
+%%OUTDIR_PROCESSED=\\vfd3dms\prodimport\sap\Bescheide\D3D\Strassenreinigung
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\bl\job\Job-Copy-Move-Files.ps1
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+

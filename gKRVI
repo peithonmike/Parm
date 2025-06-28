@@ -1,0 +1,27 @@
+* *************************************************************
+* Globale Variablen          
+* Kreis Viersen					
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%Kreis  =Kreis
+%%ORT    ="Kreis Viersen"
+%%KSU_NR.   =Kreis_Viersen
+
+%%GKZ8   =????????
+
+* Variablen für Wohnungswesen
+
+%%KSU_NR =200
+%%KSU_DIR=ksu2000_krzn 
+%%RZ=KRZNMO
+%%RZ2=krzn
+%%MD1=KRVI
+%%GEM4=KRVI
+%%MD2=Kreis Viersen
+%%MD3=krvi
+%%LAUF=prod
+%%FW_MesoDatei=\\srv03.asp.rzne.de\KSU2000krzn$\SicherungProd\%%KSU_NR.\ewobewegung_mo_*.txt
+**FW_ImportDatei=\\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR.\kasse\%%KSU_NR._*.txt
+%%CTMFW=ctmfw -input c:\CTM_AV\Parm\KSU2000_FW_MESO_%%MD1..txt
+%%DELMESO=del \\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR.\meso\ewobewegung_mo_*.txt

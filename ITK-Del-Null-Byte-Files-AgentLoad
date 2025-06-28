@@ -1,0 +1,21 @@
+* --------------------------------------------------------------------------------
+*      Job : ITK-Del-Null-Byte-Files-AgentLoad
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%TEST=N
+
+
+%%MAILNOTOK=michael.hurtz@itk-rheinland.de
+%%MAILSB13=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+%%BETREFF_OK=%%JOBNAME ist gelaufen
+%%TEXT_NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT_OK=%%JOBNAME ist gelaufen

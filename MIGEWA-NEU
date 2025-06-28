@@ -1,0 +1,8 @@
+*  M I G E W A 
+*  N E U S S   
+*  -----------------------------
+
+* die zu verschiebenden Files 
+* werden anhand des Suchbegriffes ermittelt
+* Mandanetnbereich und OpenFT Sendebreich
+%%SEARCH=BZR*.BZR

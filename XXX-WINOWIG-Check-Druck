@@ -1,0 +1,41 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-Check-Druck
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%JJJJMMTT=%%odate
+
+ 
+
+* ------------------------------------------------------------------
+%%AUFTRAGGEBER=A.Hillebrands
+%%DESCRIPTION=Überprüfen on Druck mit Tagesdatum nach 24 Uhr erstellt wurde.
+
+%%MAIL_T=Produktions-Steuerung@itk-rheinland.de
+%%MAIL_CC=andreas.hillebrands@itk-rheinland.de
+
+%%DEBUG=N
+%%TEST=N
+
+%%DIR_NE=\\srv03\qaspne$\Daten\Apps\winowig\ftp\ausgang\druckdateien\__msdrn01_ITKR_R18_PCL_D
+%%DIR_GR=\\srv03\qaspgr$\Daten\Apps\winowig\ftp\ausgang\druckdateien\__msdrn01_ITKR_R18_PCL_D
+%%DIR_JU=\\srv03\qaspju$\Daten\Apps\winowig\ftp\ausgang\druckdateien\__msdrn01_ITKR_R18_PCL_D
+%%DIR_KA=\\srv03\qaspka$\Daten\Apps\winowig\ftp\ausgang\druckdateien\__msdrn01_ITKR_R18_PCL_D
+%%DIR_KO=\\srv03\qaspko$\Daten\Apps\winowig\ftp\ausgang\druckdateien\__msdrn01_ITKR_R18_PCL_D
+%%DIR_ME=\\srv03\qaspme$\Daten\Apps\winowig\ftp\ausgang\druckdateien\__msdrn01_ITKR_R18_PCL_D
+%%DIR_KR=\\srv03\qaspkr$\Daten\Apps\winowig\ftp\ausgang\druckdateien\__msdrn01_ITKR_R18_PCL_D
+%%DIR_DF=\\srv03\qaspdf$\Daten\Apps\winowig\ftp\ausgang\druckdateien\DLD32OFFICEM
+
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\BL\job\XXX-WINOWIG-Check-Druck.ps1
+
+
+*     05.07.2018  15:00:45  zv173x2 AUFTRAGGEBER=A.Hillebrands

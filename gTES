@@ -1,0 +1,13 @@
+* *************************************************************
+* Globale Variablen          
+* ITK Rheinland
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+%%STADT=ITK Rheinland
+%%ORT=Neuss
+
+%%GEM=ITK
+
+* GEM wird momentan nur im SRV03 Aufruf verwendet
+%%GEM3=TES
+

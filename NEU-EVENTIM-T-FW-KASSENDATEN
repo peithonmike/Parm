@@ -1,0 +1,26 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-EVENTIM-T-FW-KASSENDATEN
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%TEST=N
+
+
+%%eindat=\\srv03\qaspkdvz$\daten\Apps\ftp\av\Eventim\CTS-*%%ORDER.-*.txt
+%%Schedtab=NEU-EVENTIM-T-JOBS
+%%Job1=NEU-EVENTIM-T-COPY-KASSENDATEN
+%%Job2=NEU-EVENTIM-T-LADEBESTAND
+%%Job3=NEU-EVENTIM-T-InputDB
+%%Job4=NEU-EVENTIM-T-JASPERREPORT
+%%JOB5=NEU-EVENTIM-T-COPY-PTV
+
+

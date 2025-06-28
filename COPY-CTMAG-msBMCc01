@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* COPY-CTMAG-msbmcc03
+* 
+* 
+*********************************************************** 
+%%SOURCE="\\msbmcc03\c$\Programme\BMC Software\CONTROL-M Agent\Default\SYSOUT\*.dat"
+
+ 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\BAT\COPY_CTMAG_SYSOUT.bat
+* ------------------------------------------------------------------

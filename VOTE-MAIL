@@ -1,0 +1,28 @@
+* *************************************************************
+* Globale Variablen          
+* VoteManager Stadt Düsseldorf 
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+**SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+**SYSOUT=//sapftpitk.sapitk.krzn.de/SST/IFQ/SYSOUT_CTM/%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+*%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+
+**MAILKASSE=swetlana.reimer@duesseldorf.dejennifer.jury@duesseldorf.de;axel.vonfuerstenberg@duesseldorf.de;daniel.heinrichs@duesseldorf.de;hotline_stadtkasse@duesseldorf.de
+*%%MAIL_KASSE=Produktions-Steuerung@itk-rheinland.de
+%%MAILKASSE=lhd.Verteiler_21-Ausgabe_XML@duesseldorf.de
+
+
+%%TEXTKASSE=Joblog: Es wurde eine neue VoteManager Datei kopiert
+ 
+
+%%MAILXML=daniel.mendoza@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+*%%MAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+*%%TEXT_XML=....TEST...TEST...TEST
+
+%%TEXTNOTOK=%%JOBNAME ist NOTOK. Returncode: %%COMPSTAT  Bitte ueberpruefen.
+
+
+
+

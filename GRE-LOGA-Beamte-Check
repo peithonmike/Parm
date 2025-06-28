@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-LOGA-Beamte-Check
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INIFILE=\\msbmcc03\ctm_av\Parm\LOGA_CHECK_BEAMTE_%%GEM3
+%%LIBMEMSYM=%%INIFILE
+
+
+%%CSV_FILE=\\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-%%ORT..csv
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE
+%%MSP_INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\MSP-EGM
+%%TEST=N
+%%DEBUG=N
+
+
+
+-
+
+
+
+
+
+
+

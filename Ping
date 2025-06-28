@@ -1,0 +1,9 @@
+%%OWNER=ITK\controlm
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\Ping_Server.cmd
+
+%%BETREFF_OK=PING des %%SERVER OK
+%%BETREFF_NOTOK=ACHTUNG!!! PING des %%SERVER NOTOK
+
+%%TEXT_OK=Joblog:     Ein PING nach Reboot des Server %%SERVER war erfolgreich.     Der Server ist nach Reboot wieder OK.     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+%%TEXT_NOTOK=Joblog:     Ein Ping auf den Server %%SERVER wurde nicht ausgeführt.     Returncode=%%COMPSTAT     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.

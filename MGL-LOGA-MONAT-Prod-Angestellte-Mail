@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Angestellte-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VLK\MGL-LOGA-Monat-Prod-MAIL-ADR.vlk
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+* Absender
+%%EMAIL-F=Produktions-Steuerung@ITK-Rheinland
+
+
+* Empfänger (durch Semikolon getrennt)
+
+%%INIFILE_MAILADR=\\msbmcc03\ctm_av\Parm\VLK\MGL-LOGA-Monat-Prod-MAIL-ADR.vlk
+          
+*%%EMAIL_T=Thekla.Schmidt@moenchengladbach.de;Rosa.Reisner@moenchengladbach.de;Kerstin.Joerissen@moenchengladbach.de;Ellen.Wellershaus@moenchengladbach.de;Kevin.Mende@moenchengladbach.de;Claudia.Bolz@moenchengladbach.de;Vera.Berghausen@moenchengladbach.de
+
+
+* Subject
+%%EMAIL_U=Job-Nachricht:   Prod-Abrechnungslisten Angestellte fuer Monat %%MM.-%%JJJJ. stehen zur Verfuegung
+
+* Kopie
+%%EMAIL_CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;
+
+* Blindkopie
+*%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.09.2021  13:11:10  zv171e1 Mail-Adressen aus Inidatei
+*    28.06.2017  11:09:16  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

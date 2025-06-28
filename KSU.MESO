@@ -1,0 +1,12 @@
+*********************************************************************************
+* LIBMEMSYM
+* KSU.MESO 
+* S Y S T E M F I L E 
+* -------------------------------------------------------------------------------
+*
+*********************************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\KSU_MAIL_MOERS
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\KSU_MAIL_ITKR
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM4

@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-IDATnachSAP-T
+* 
+* 02.05..2017 - Umstellung auf Powershell-FTP
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Meerbusch
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**CLIENT=IFP
+**MANDANT=800
+**SOURCE=\\mskmv02\Programme\kmv_mee\Batchdateien\meerbusch\divers\IDAT
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\MEE_IDAT_nach_SAP_T.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_800.cred"
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\IDATnachSAT-T-Erweiterung.pdf
+* ------------------------------------------------------------------

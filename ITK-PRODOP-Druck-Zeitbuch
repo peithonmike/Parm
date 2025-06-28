@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-PRODOP-Druck-Zeitbuch
+* 
+
+* 
+*********************************************************** 
+ 
+ 
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=INTERN
+%%VERF=Druck Zeitbuch 
+
+%%BJ=999999 
+
+
+*LOGDATEIEN Ordner
+%%ORDNER=ZEITBUCH
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_%%GEM3
+
+*! entfernt
+*! speziell ITK KD
+*!%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+ * Logdateien
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUH\PRODOP-%%$OYEAR.-%%OMONTH..csv
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+
+

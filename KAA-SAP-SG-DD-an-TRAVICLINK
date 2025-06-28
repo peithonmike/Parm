@@ -1,0 +1,35 @@
+Muster 
+
+Kopie muss komplett angepasst werdn
+
+* bei TEST J wird nur ein Anlist der Dateien erzeugt
+%%TEST=N
+
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+
+
+* Eingabe PTV-Server  
+%%SEARCH_DIR=\\msptv02\PTVProjekte$\SAP_WOWIG\outDir
+
+* Datei Suchmaske
+%%SEARCH=*IST_RUECK_VOM_*2619-%%WINOWIG_GKZ..TXT.csv
+
+* Ausgabe WinOWIG Import-Verzeichnis 
+%%OUTDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\zahlungen
+
+* Logfile
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+
+* erledigt Ordner,
+* dieser liegt immer in der search_dir  
+%%MOVE_ORDNER=erledigt
+
+
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv

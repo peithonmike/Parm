@@ -1,0 +1,13 @@
+*  Lese Zugriff auf Baumpflanungen RKN
+*  bei Winscp Powershell ist USERID usw. fest im Script verdrahtet
+%%IP=stadt-mg-web-01.web.stadt-mg.recast-it.net
+%%U=odptransfer-sftp
+%%P=Secret-Server
+%%SITE=Infektionsdaten für Opendata MG
+%%SERVER_TEXT=Infektionsdaten für Opendata MG
+******************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.12.2019  12:31:06  zv173x2  password entfernt
+*    28.11.2019  14:00:39  zv171e1 Site
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

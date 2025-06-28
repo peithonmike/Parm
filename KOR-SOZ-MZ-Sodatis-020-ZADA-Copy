@@ -1,0 +1,61 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* KOR-SOZ-MZ-Sodatis-016-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-MZ-SODATIS
+ 
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+%%OUTDIR=\\srv05.korschenbroich.ads.de\TransferNE\SOZ\SODATIS\%%$OYEAR.\%%SOZ_DAT
+%%STEPNAME=Kopieren-Sodatis-Dateien
+*%%INCLUDE=bere-2*0-NE-2*20_*.txt   
+%%INCLUDE=EZ-GS-NE_2*%%GKZ8_7_2._PFGS0700_SEI*_%%SOZ_DAT._Kalendermonat.txt
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden mehr Variablenwerte angezeigt
+%%DEBUG=N
+* ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.08.2014  08:51:10  zv173x2 %%INCLUDE=EZ-GS-NE_2*%%GKZ8_7_2._PFGS0700_SEI*_%%SOZ_DAT._Kalendermonat.txt  
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

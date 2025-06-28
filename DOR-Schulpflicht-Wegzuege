@@ -1,0 +1,62 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : DOR-Schulpflicht-Wegzuege
+* erstellt : 18.04.2016 06:46:16
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+ 
+* 
+* es wird eine zusätzliche LIBMEMSYM verwendet
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###-Schulpflicht-Wegzuege
+ 
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+%%bearb_von=%%TTMMJJJJP_TT_M7_%%$ODATE
+%%bearb_bis=%%TTMMJJJJP_TT_M1_%%$ODATE
+%%e01e200_ortnr=%%E01E200_ORTNR
+%%gebdat_bis=%%DATUM_BIS
+%%gebdat_von=%%DATUM_VON
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=Schulpflicht-Wegzuege.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/DOR-Schulpflicht-Wegzuege
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\DOR-Schulpflicht-Wegzuege-%%bearb_von.-%%bearb_bis..%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : DOR-Schulpflicht-Wegzuege-%%bearb_von.-%%bearb_bis.
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+%%EMAIL-T=schulverwaltung@stadt-dormagen.de;
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n  \n 

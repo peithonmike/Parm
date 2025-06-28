@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-Erfassungsprotokolle-holen
+* 
+* 
+*********************************************************** 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-PROT
+
+%%INDIR=\\10.50.34.68\loga\dl2001jobd\TDEP
+%%NETUSE_PATH=\\10.50.34.68\loga\dl2001jobd\TDEP
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LOGA\Protokolle
+%%INCLUDE=DTDEP-*-1010-0.pdf
+%%EXCLUDE="-"
+%%LAUFWERK=Y:
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    02.05.2016  12:57:32  neuer Job nach der Änderung 'Abholen aus der neuen Citrix-Farm' 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

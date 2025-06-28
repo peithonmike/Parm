@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ.EZ-an-TravicLink
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+* AN AUSCHALTEN 
+* BAT-Echo
+%%ECHO_ON=N
+*********************************************************** 
+
+%%SEARCH_DIR=\\srv03.asp.rzne.de\ftp$\av\TravicLink\SOZ\EZ\FREIGABE
+%%GESENDET_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+
+* Daten-Datei Suchmaske
+%%SEARCH=500.SOZ.SRZ.NEU-SEPAEZ.*_CT_%%$ODATE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\TRAVIC-LINK
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\TRAVICLINK-Dateinamen.pdf
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\TRAVIC-LINK-Dateinamen-Konventionen-für-Referenznummer-Mapping.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\TRAVIC-LINK-Testuser.pdf
+* ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+

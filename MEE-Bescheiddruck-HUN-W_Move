@@ -1,0 +1,18 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Meerbusch
+***********************************************************************************
+*  Jobname     : MEE-Bescheiddruck
+*  APPLICATION : SAP
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%FILTER1=*.pdf
+%%EINGABE="\\vfapps\apps\ITK\KMV\Produktion\8000\50102\Aktuell"
+%%MOVEZIEL="\\vfapps\apps\ITK\KMV\Produktion\8000\50102\Aktuell\Verarbeitet"
+**MOVEZIEL="\\vfd3dms\PRODIMPORT\SAP\Bescheide\D3F\Hundesteuer"

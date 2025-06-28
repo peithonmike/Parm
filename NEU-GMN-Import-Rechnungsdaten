@@ -1,0 +1,38 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-GMN-Import-Rechnungsdaten
+* 
+* 
+*********************************************************** 
+* HOST(KIRP) -> AV-Server ->OracleServer->Gebäudemanagement   
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+* hier IP-UP Member anpassen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\TIP-UP-KIRP-IMSWARE-NEU
+
+
+*Eingabedatei
+%%SYSUT1=\\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\AV\GMN\IMS-KIRP\IMPORT\NEU\NEU-GMN-IMP-RECH_%%$ODATE..TXT  
+
+%%PCDIR=KIRP/iefiles
+
+*    
+%%SYSUT2=RECH-KIRP.TXT
+
+%%TEST=N
+ 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\WinScp\WinnSCP-Install.txt
+
+
+
+
+
+

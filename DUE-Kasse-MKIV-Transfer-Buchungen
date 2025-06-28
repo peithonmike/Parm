@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Kasse-MKIV-Transfer-Buchungen
+* Auftrag ist fuer Klaus Kawig
+* neu mit PS1 - 29.01.2018/Schr.
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\Transfer_SAP_SST.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_400.cred" -Modes "buchungen"

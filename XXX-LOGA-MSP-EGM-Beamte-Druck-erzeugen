@@ -1,0 +1,56 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* XXX-LOGA-MSP-EGM-Beamte-Druck-erzeugen
+* 
+*********************************************************** 
+
+
+**************************************************************************** 
+* Dokumenten Update
+**************************************************************************** 
+* Job erzeugt Gehaltsmitteilungen oä. für die die am EGM nicht teilnehmen
+* Für die anderen Mitarbeiter werden die Mitteilungen in die DB geschrieben
+* Dieser Lauf kann wiederholt werden...
+**************************************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NBE
+
+
+
+* Zeitraum
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+* Loga PDF Druckdaten KN 
+* 
+%%INDIR=%%DRUCK_INDIR
+%%OUTDIR=%%DRUCK_OUTDIR
+
+
+* JAVA Variablen
+* Java Directories \\msbmcc03\ctm_av\Bin\Java\MSP
+
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\MSP_Gehaltsmitteilungen_DEV.jar
+
+%%JAR_START=de.itk.projekte.gehaltsmitteilungen.Start
+
+
+%%EMAIL_T=Sascha.Berktin@itk-Rheinland.de;
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;
+%%EMAIL_U=%%JOBNAME  %%OMONTH..%%$OYEAR
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;
+
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+

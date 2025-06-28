@@ -1,0 +1,59 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Beamte-Elster-MSP-Dokument-Update-und-Druck
+* 
+* 
+*********************************************************** 
+ 
+** 
+
+
+
+**************************************************************************** 
+* Dieser Lauf kann wiederholt werden...
+**************************************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NBE
+
+
+**INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\Elster\MSP-31\%%GEM3
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\Elster\MSP\ITK
+
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\Elster\MSP\ITK\BUENDEL
+
+%%USE_OUTDIR_PROCESSED=J
+%%OUTDIR_PROCESSED=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\Elster\MSP\ITK\verarbeitet
+
+* JAVA Variablen
+* Java Directories \\msbmcc03\ctm_av\Bin\Java\MSP\Lohnsteuerbescheinigung
+
+
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\Lohnsteuerbescheinigung\PdfLohnsteuerbescheinigungen-0.0.1-jar-with-dependencies.jar
+
+%%JAR_START=de.itk.projekte.pdf.lohnsteuerbescheinigung.Start
+
+
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    14.07.2020  12:43:58  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

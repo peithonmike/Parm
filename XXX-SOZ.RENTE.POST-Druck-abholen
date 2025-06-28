@@ -1,0 +1,80 @@
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-NEU
+
+
+%%SOZ_DAT=%%OYEAR.%%OMONTH 
+
+
+
+* Remote Verzeichnis im CC-SOZ
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+* SERVER_TEXT IP P und U kommen meist aus IP-UP Member 
+*%%SERVER_TEXT
+*%%IP
+*%%P
+*%%U
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen Druck Rente POST
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=RENTEN/%%SOZ_DAT./POST
+%%REMOTE_INDIR=RENTEN/%%SOZ_DAT.-post
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=POST*.pdf
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\Msprintff01\source$\SOZ-RENTEN\%%$OYEAR.\%%SOZ_DAT.\POST\
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get %%INCLUDE  %%OUTDIR
+%%Z07=close
+%%Z08=exit 
+*%%Z09=?
+*%%Z10=?
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.06.2017  07:58:27  zv173x2 RENTEN/%%SOZ_DAT./POST in RENTEN/%%SOZ_DAT.-POST jedes Jahr was neues:-(((
+
+
+*    16.06.2016  10:38:04  zv173x2 site
+*    26.06.2015  11:08:13  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,34 @@
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Files.ps1 -INCLUDE %%INCLUDE
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\eingang\kba\
+
+* Datei Auswahl
+%%INCLUDE=*%%KBA_NR.*
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_vom_KBA
+%%FORCE_OUTDIR=N
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N

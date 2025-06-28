@@ -1,0 +1,47 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant :    alle                                                              *
+***********************************************************************************
+*  APPLICATION : OK.EWO.OPENFT 
+*  Description : BZR-ANFRAGEN (EXPORT)
+***********************************************************************************
+***********************************************************************************
+
+*
+%%RICHTUNG=SENDEN
+%%BFJ_ID=%%BFJ_ID_OKEWO
+*
+*
+
+
+* Anfragedaten aus dem OKEWO Verfahren
+* zu sendende Files werden anhand der Suchbegriffes ermittelt
+
+%%SEARCH_ALT=%%GKZ8.AB-U0752.*
+%%SEARCH=AB-U0752_%%GKZ8.*
+%%INPUT_DIR=%%OKEWO_BZR_DIR_SEND
+
+
+
+* umlenken CTM-Sysout und Log auf den msBZRFT02
+* soll einmal alles auf dem msbmcc03 sein
+%%SYSOUT          =%%OPENFT_SYSOUT
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Ausfallzeiten\BZR-GZR Ausfallzeiten.txt
+
+
+*
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.04.2011  13:39:38  ZV173X2 SERACH_ALT für OPENFT_ALT.BAT 
+*    20.04.2011  13:10:35  ZV173X2 SEARCH  in AB-U0752_%%GKZ8.*
+*    23.02.2011  15:07:22  ZV173X2 leere Zeile wg BMC BUG entfernt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

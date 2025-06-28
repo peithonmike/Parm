@@ -1,0 +1,51 @@
+*
+* VLK Member zum senden der Mandanten Plausidaten an das IT-NRW (LDS) Postfach
+* im Dateinnamen befinden sich die letzten 6 Stellen des 8er GKZ 
+*
+%%DESCRIPTION=Senden Wohngeld-Daten an IT-NRW, 
+%%DESCRIPTION1=Plausi (PL...) 
+%%DESCRIPTION2=Verarbeitungsdaten (WG...) für den Rechenlauf
+
+
+
+
+%%OUTDIR=nicht-verwendet
+%%DATUM=%%JJMMTT_TT_M1_%%$ODATE
+%%GKZ6   =%%SUBSTRING  %%GKZ8 3 6
+
+%%LOGFILE=\\msbmcc03\ctm_av\Log\ErgebnisLog\%%GEM3.-WOHN-IT-NRW-%%$OYEAR..csv
+
+
+* Mandantenordner mit Plausi und Abrechnungsdateien, die an IT-NRW gesendet werden müssen
+%%INDIR=\\srv03\qasp%%GEM.$\Daten\Apps\Wohngeld\Ausgabe
+
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+*%%INDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\IT-NRW-Postfach\%%GEM3.\MandantenDuplicat
+*alt %%SEARCH_DIR2=\\srv03\qasp%%GEM.$\Daten\Apps\Wohngeld\Ausgabe
+        
+* Include aus Powershell entfernt 
+* wird über SENDE LIBMEMSYM vorgegeben
+* Namensmaske der Sendung an IT-NRW
+* %%INCLUDE=PL*,WG*
+
+
+* #########################################################################################################
+*  An IT-NRW gesendet 
+*  Erledigt Ordner der an IT-NRW gesendeten Dateien 
+* 
+* #########################################################################################################
+%%OUTDIR_PROCESSED=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\IT-NRW-Postfach\%%GEM3.\gesendet\IT-NRW
+
+%%AUFTRAGGEBER=R.Dressel
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\AV-Mail-ITNRW
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    14.12.2018  11:08:03  zv173x2 Umgestellt auf Prod
+*    11.03.2020  11:47:00  zvaa218 AV Mail hinzugefügt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

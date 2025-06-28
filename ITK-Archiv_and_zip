@@ -1,0 +1,35 @@
+* *************************************************************
+* Table Variablen          
+* ITK-ARCHIV-AND-ZIP
+* Upload in die Cloud
+* *************************************************************
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet\2017
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet\Archiv
+%%INCLUDE="*.*"
+
+
+
+
+
+
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+%%MAIL2_NOTOK=produktions-steuerung@itk-rheinland.de
+
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist durchgelaufen. 
+%%TEXT_NOTOK=Joblog: Kein Upload in die Cloud
+
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\powershell\CF\Job\Archiv_and_zip.ps1

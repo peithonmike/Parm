@@ -1,0 +1,41 @@
+*********************************************************** 
+*  
+* ITK-Fehlzeiten-FW
+*
+* zvaa405  / 30.08.2023
+*
+* Filewatcher
+* 
+* Auftraggeber: Laura Podschwadek
+*
+**********************************************************
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%DATE=%%$OYEAR.-%%OMONTH.-%%TT_M1_%%$ODATE
+
+%%FILE_LIST=LHD_%%DATE..xml;Fehlzeiten_%%DATE..csv;UAS_%%DATE..csv
+
+
+%%INDIR=\\Vfitk.itk.local\daten\Daten\ControlM\Scout
+
+
+**MAIL_OK=Produktions-Steuerung@itk-rheinland.de 
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%TEXT_OK=Joblog: %%JOBNAME war erfolgreich und alle Dateien wurden gefunden.
+
+
+
+%%MAIL_NOTOK=hr-support@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT_NOTOK=Joblog: Die Dateien wurden nicht gefunden
+
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\CF\JOB\Job-FileWatcher.ps1
+

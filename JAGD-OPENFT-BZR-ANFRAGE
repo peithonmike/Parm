@@ -1,0 +1,43 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant :    alle                                                              *
+***********************************************************************************
+*  APPLICATION : JAGD.OPENFT 
+*  Description : BZR-Anfragen
+***********************************************************************************
+***********************************************************************************
+* Verschieben Anfragen aus dem Mandantenverzeichnis in das Sendeverzeichnis 
+* auf dem OpenFT Server
+*
+
+
+* BFJ_ID des Mandanten übernehmen 
+* wird bei der Anfrage nur nachrichtlich verwendet
+%%BFJ_ID=%%BFJ_ID_JAGD
+
+
+%%RICHTUNG=AnfrageMove
+
+
+* die zu verschiebenden Files werden anhand des Suchbegriffes ermittelt
+%%SEARCH=AB-U0752-*.txt
+
+
+
+* Input_dir ist die Mandanten-Directory, in der die Anfrage liegt
+* wird im Member JAGD definiert
+%%INPUT_DIR=%%JAGD_BZR_EXPORT
+
+
+
+* Output_dir ist die Sendedirectory auf dem OpenFT Server  
+* wird im Member JAGD definiert
+%%OUTPUT_DIR=%%JAGD_BZR_DIR_ANFRAGE
+
+
+
+
+%%SYSOUT          =%%OPENFT_SYSOUT
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+*

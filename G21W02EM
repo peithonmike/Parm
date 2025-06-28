@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* G21W02EM
+* 
+* 
+*********************************************************** 
+%%TEST=N
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+%%EMAIL-T=Alexandra.Kahl@Juechen.de
+%%EMAIL-CC=Maria.Gallus@Juechen.de
+%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de
+
+%%EMAIL-U=AUSWERTUNG ABBUCHER MIT UEBERZAHLUNGEN %%ODATE_P
+%%EMAIL-A=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Kasse\PZH.ABBUEBER.G400.D%%ODATE
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.02.2011  08:34:22  ZV173X2 C_BMC in c$
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

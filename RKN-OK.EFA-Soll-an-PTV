@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-OK.EFA-Soll-an-PTV
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+
+%%DESCRIPTION=Solldaten an den PTV Server senden
+%%SEARCH_DIR=\\srv03.asp.rzne.de\ftp$\av\OK.EFA\SAP\%%GEM3
+%%SEARCH=RKN_OKEFA_SBZ_*.txt
+%%MOVE_ORDNER=verarbeitet
+%%MOVE_FILE=%%GEM3.-OKEFA_SBZ_%%$ODATE..txt
+
+
+
+
+
+%%OUTDIR=\\msptv02\PTVProjekte$\SAP_Export\OKEFA_EXXX\inDir 
+##OUTDIR=\\msptv01\PTV-Projekte\sap_efa\inDir 
+
+
+%%LOGFILE=\\msbmcbatch03\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+* TEST = J  =   Nur Anlist der gesuchtren Dateien
+%%TEST=N
+
+* TESTAUSGABE
+*%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\test\ptv-projekte\WOWIGSAP\inDir 
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.01.2014  13:06:09  zv173x2 movefile eingebaut
+*    21.01.2014  15:54:41  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

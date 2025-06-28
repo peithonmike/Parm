@@ -1,0 +1,32 @@
+﻿*********************************************************** 
+* LIBMEMSYM 
+* ITK-Agent-Update
+* Update eines Control/M-Agents
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%COMMAND="\\msaip01.ITK.LOCAL\swablage$\FB1\Software\BMC\ControlM_V8\LPAUW.8.0.00_282205_BMC_Control-M_Agent_for_UNIX_\402215_Control-M\Agent Version 8.0.00 for UNIX and Microsoft Windows\DRKAI.8.0.00_windows_x86_64\setup.exe" -silent "\\msaip01.ITK.LOCAL\swablage$\FB1\Software\BMC\ControlM_V8\LPAUW.8.0.00_282205_BMC_Control-M_Agent_for_UNIX_\402215_Control-M\Agent Version 8.0.00 for UNIX and Microsoft Windows\DRKAI.8.0.00_windows_x86_64\Agent_Silent_Install_V8.xml"
+
+%%NODEID=MSINPRO01
+
+%%OWNER=%%DOM.\controlm
+
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+%%MAIL02=itk.FB1_SB131@kdvzneuss
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Keine Weiteren Schritte nötig.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte ueberpruefen.
+
+
+%%TEST=N

@@ -1,0 +1,77 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-SOZ.MZ-Druck-abholen
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Mandantenspezifische Angaben CTM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-NEU
+
+
+%%SOZ_DAT=%%JJJJ_MM_P1_%%$ODATE..%%MM_P1_%%$ODATE 
+ 
+
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+* ist Grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+
+* SERVER_TEXT IP P und U kommen meist aus IP-UP Member 
+*%%SERVER_TEXT
+*%%IP
+*%%P
+*%%U
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen Druckdaten Sozialwesen Monatslauf (MZ)
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=MZ/%%SOZ_DAT/
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=EWO_Eingabeliste_NE_*_%%SOZ_DAT..csv
+
+* nur Neuss gesplittet 
+* noch nicht getestet
+*%%INCLUDE=bere*0245*_*%%SOZ_DAT..pdf
+
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+
+* EWO ORDNER
+%%OUTDIR_DOR=\\msnpado01\auswertungen$\personenabgleich
+
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get EWO_Eingabeliste_NE_Dormagen_%%SOZ_DAT..csv %%OUTDIR_DOR.\
+%%Z07=get EWO_Eingabeliste_NE_Juechen_%%SOZ_DAT..csv %%OUTDIR.\
+%%Z08=get EWO_Eingabeliste_NE_Neuss_%%SOZ_DAT..csv %%OUTDIR.\
+
+
+
+
+
+ 
+%%Z20=close
+%%Z21=exit 
+
+
+%%TEST=N
+%%DEBUG=N
+

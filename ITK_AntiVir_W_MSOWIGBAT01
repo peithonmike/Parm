@@ -1,0 +1,30 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK_AntiVir_W_MSOWIGBAT01
+* DUMMY
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+*%%SYSOUT=\\msbmcc03.itk.local\C$\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%COMMAND=C:\WINDOWS\system32\shutdown.exe -r -f
+
+%%NODEID=MSOWIGBAT01
+
+%%OWNER=ITK\controlm
+
+%%MAIL01=itk.FB1_SB111@kdvzneuss
+%%MAIL02=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Keine Weiteren Schritte nötig.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte ueberpruefen.
+
+
+%%TEST=N

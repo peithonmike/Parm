@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-DATUEV-Arbeiter-DELETE-Files
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\vfmgapps\apps\Verfahren\Loga\Personalwesen-Abrechnung\maruprod0aruzp\
+
+%%INCLUDE=MARUDATUEV*
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+|
+

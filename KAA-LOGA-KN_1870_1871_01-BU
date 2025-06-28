@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-LOGA-KN_1870_1871_01-BU
+* 
+* 
+*********************************************************** 
+ 
+
+
+ 
+ 
+%%ONLY_BUENDEL=N
+%%FORCE_PDF_SAMMELDIR_PROCESSED=J
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-BEAMTE-DRUCKEREI
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+
+
+%%DESCRIPTION=%%LOGA_MAN_%%MAN 
+
+%%FREEFLOW_HOTFOLDER=%%LOGA_KN_DRUCKER
+
+
+
+
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden alle Variablen angezeigt
+%%DEBUG=N
+
+* Bei Test =J werden nur die Variablen geprüft
+%%TEST=N
+
+
+
+
+
+
+
+
+
+
+
+
+

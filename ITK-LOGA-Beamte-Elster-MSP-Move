@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-LOGA-Beamte-Elster-MSP-Move
+* 
+* 
+*********************************************************** 
+
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+*********************************************************** 
+* Mitarbeiter Service Portal 
+* 
+*********************************************************** 
+%%INIFILE=\\msbmcc03\ctm_av\PARM\LOGA-MSP-%%GEM3.-INCLUDE-INIDATEI
+
+
+%%LIBMEMSYM=%%INIFILE
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\ELSTER
+
+**OUTDIR=%%INDIR.\MSP-31\%%GEM3
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\Elster\MSP\ITK
+
+%%OUTDIR2=\\srv03.asp.rzne.de\ftp$\av\MSP\LOGA_MSP_DAILY\Elster\%%$OYEAR.\%%OMONTH
+
+
+
+%%DESCRIPTION=MSP Daten werden in einen Eigenen Ordner verschoben.(Elster/MSP-?)
+
+%%DESCRIPTION1= ITK wird separat in den  Ordner verschoben.
+%%DESCRIPTION2= 1. er muss einen Hinweis für die Druckerei auf MSP haben
+%%DESCRIPTION3= 2. er soll nicht kuvertiert werden soll und direkt an das Personalamt geschickt werden 
+
+%%DESCRIPTION4= INDIR  beinhaltet die Loagadaten aus Lemgo
+%%DESCRIPTION5= OUTDIR hierin kommen die MSP-relevanten Dateien
+%%DESCRIPTION6= OUTDIR2 ist die Directory für die täglichen Dokument Updates wenn er dann mal wieder läuft:-)
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.02.2021  08:21:22  zv173x2 neues Konzept
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

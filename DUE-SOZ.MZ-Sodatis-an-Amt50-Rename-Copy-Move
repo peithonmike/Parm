@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-Sodatis-an-Amt50-Rename-Copy-Move
+* 
+* 
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske unter neuem Namen.
+* Der neue Name ergibt sich aus der Vorgabe der NAMES Varibalen, der in der Ursprungsdatei auch enthalten ist. 
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* CTM-Command Aufruf :
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\bl\job\Job-Rename-Copy-Move-Sodatis.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SODATIS
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOZ-DAT
+
+
+
+
+%%TEXT="C O P Y  and  R E N A M E Sodatis Dateien"
+
+%%NAMES=SA00K, SA00M, SA00T, SA00B,  SA00E, SA10P, SA10P2, SA11HB, SA11HZ, SA20U, SA30E, SA40Z, SA88R, SA95X, TDSA3, TDSA4, SEDF, SEDP, SEDT
+
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\SOZ-SODATIS\%%$OYEAR.\DUE\%%SOZ_DAT
+
+
+* Datei Auswahl
+%%INCLUDE=bere-2*0-NE-2*??_*.txt
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\vfduswba\51\Amt51\Themen\AKDN-Berechnungslauf
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+%%TEST=J
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.11.2015  13:34:22  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

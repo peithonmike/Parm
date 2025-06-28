@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-CAL-SA
+* 
+* erzeugen WochentageKalender Samstag 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\EMUSER
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\defcal\SA.xml
+* ------------------------------------------------------------------
+

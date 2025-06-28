@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Ablauf-in-3M_MJ-Mail
+* 
+* 
+*********************************************************** 
+ 
+
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Send-Mail-Attach.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%AUFTRAGGEBER=T.HEISTER
+
+* 
+ \\MSBMCBATCH01\ctm_av\Temp\aspDUE\%%GEM3.-Auskunftsperren-%%$ODATE..PDF
+
+* Eingabe Directory
+%%INDIR=\\MSBMCBATCH01\ctm_av\temp\DUE-EWO-Auskunftsperren
+
+
+%%INCLUDE=%%GEM3.-Ablauf-in-3Mon-MJ-%%TTMMJJJJP_%%$ODATE...XLSX
+%%EXCLUDE="-"
+
+%%EMAIL_T=melderegister@duesseldorf.de
+**EMAIL_T=Alexander.Schoenfeld@itk-rheinland.de
+%%EMAIL_CC=produktions-steuerung@itk-rheinland.de
+**EMAIL_BCC=Alexander.Schoenfeld@itk-rheinland.de
+
+* Subject
+**EMAIL_U=%%GEM3.-Ablauf-in-3Mon_MJ-%%TTMMJJJJP_%%$ODATE...XLSX
+%%EMAIL_U=Liste Minderjährige zum Serienbrief Ablauf in 3 Monaten ASP Ziffer 3
+
+
+
+
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+%%EMAIL_A_MOVE=N
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.03.2022  15:04:00  zvaa241 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

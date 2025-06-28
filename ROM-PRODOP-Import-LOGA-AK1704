@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-PRODOP-Import-LOGA-AK1704
+* Loga (Eigenbetriebe) AK1704
+* 
+*********************************************************** 
+ 
+
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=IMPORT
+%%VERF=Loga (Eigenbetriebe) AK1704
+
+%%DAT=AK1704
+%%BJ=43
+
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_ROM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUH\PRODOP-%%$OYEAR.-%%OMONTH..csv
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+
+* Auftragserteilung
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-ROM-01-Variablen.pdf
+
+
+
+
+

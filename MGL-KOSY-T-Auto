@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-KOSY-T-Auto
+* 
+* 
+*********************************************************** 
+ 
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%MAIL01=itk.FB1_SB131_Windows@kdvzneuss
+%%MAIL02=produktions-steuerung@itk-rheinland.de;simone.thissen@itk-rheinland.de;Benjamin.Elias@moenchengladbach.de;Michael.Meuser@moenchengladbach.de;Tobias.Redmann@itk-rheinland.de;erich.janke@itk-rheinland.de
+**MAIL02=produktions-steuerung@itk-rheinland.de;simone.thissen@itk-rheinland.de
+
+%%BETREFF-NOTOK=%%JOBNAME ist NOTOK
+
+%%TEXT_NOTOK=%%JOBNAME ist nicht gelaufen
+
+%%COMMAND="C:\Program Files\Scripte\Automatisierung_Kosy\MG_Start_Auto.cmd"

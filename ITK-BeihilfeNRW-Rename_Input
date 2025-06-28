@@ -1,0 +1,28 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* Rename Eingabedatei mit ODATE
+* DUMMY
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.09.2013  10:26:46  zv171e3 neu für BeihilfeNRW-Datei
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+
+%%SYSUT1=\\SRV03.ASP.RZNE.DE\qaspkdvz$\Daten\Apps\ftp\av\BeihilfeNRW\Erledigt\input_beihinrw.txt
+%%SYSUT2=input_beihinrw.txt.T%%$ODATE
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\ITK-BeihilfeNRW.pdf
+* ------------------------------------------------------------------

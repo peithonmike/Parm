@@ -1,0 +1,28 @@
+* *************************************************************
+* Table Variablen          
+* DUE-PVRATGRE-T-Copy-PTV
+* alter Hostjob Y10PVGRE
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+%%APPLICATION=PV_RAT
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%EINGABE_VZ=\\vfdusalt\b01\b01\01-13 Rat-HFA-VK-Stadtverfassung\Stadtverfassung\Ratsabrechnung
+%%USERID=ZVDUEFTP
+%%PW=sgbTabelle21
+%%EINDAT=Gremien_aktuell.xml
+
+%%AUSGABE_VZ=\\msptv01\d$\ptv\Projekte\SAP_Export\PVRat_EDUE\tempDir
+%%AUSDAT=DUE_PVR_GRE_T%%$ODATE..XML
+%%AUSDAT2=GREMIEN_%%$ODATE..XML
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\xxx-copyFile.ps1 -PfadVon "%%EINGABE_VZ" -PfadNach "%%AUSGABE_VZ" -Dateiname "%%EINDAT" -BackupDatei "%%AUSDAT2" -Backup "Yes"

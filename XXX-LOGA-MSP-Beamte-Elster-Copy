@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-Beamte-Elster-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+*********************************************************** 
+* Mitarbeiter Service Portal 
+* 
+*********************************************************** 
+%%INIFILE=\\msbmcc03\ctm_av\PARM\LOGA-MSP-INCLUDE-INIDATEI
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=%%INIFILE
+
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\Elster
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\MSP-ELSTER
+%%OUTDIR2=nicht-verwendet
+
+%%TEST=J
+%%DEBUG=N
+
+
+
+%%DESCRIPTION = INDIR  beinhaltet die Loagadaten aus Lemgo
+%%DESCRIPTION1= OUTDIR hierin kommen die MSP-relevanten Dateien
+%%DESCRIPTION2= OUTDIR2 ist die Directory für die täglichen Dokument Updates
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.04.2020  10:21:13  zv173x2 neu
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

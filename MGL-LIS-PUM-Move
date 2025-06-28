@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LIS-PUM-Move
+* 
+* 
+*********************************************************** 
+ 
+**LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%COMMAND=C:/CKS/LIS-PUM-Dateien.cmd
+
+%%MAIL-NOTOK=walter.klerx@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%BETREFF-NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT-NOTOK=move der CEUS-Dateien ist abgebrochen
+

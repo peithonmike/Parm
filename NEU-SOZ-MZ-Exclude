@@ -1,0 +1,67 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ-MZ-Exclude
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-SOZ-MZ
+ 
+
+* ---------------------------------------------------------------
+* Include Exclude
+* Include bedeutet hier : Dateien werden selektiert und 
+* nach nicht verwendet verschoben
+* ---------------------------------------------------------------
+
+%%RAUS_024= *BSCH*2024_*,*FEHL*2024_*,*AEND*2024_*,*ZAUS*2024_*,*ZKAS*2024_*,*ZKON*2024_*,*AUSB*2024_*
+%%RAUS_924= *FALL*2924_*,*FASU*2924_*,*AUSB*2924_*,*FEHL*2924_*,*AEND*2924_*
+%%RAUS_2024520=*AUSB*2024520_21*
+%%INCLUDE=%%RAUS_024.,%%RAUS_924.,%%RAUS_2024520
+%%EXCLUDE="-"
+%%INDIR=%%PDF_INDIR
+
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die Dateien gesammelt.
+* Leere Dateien werden nicht kopiert sondern (nur nach erledigt verschoben) 
+* ---------------------------------------------------------------
+*%%SAMMELDIR          =\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\%%SOZ_DAT.\nicht_verwendet
+%%SAMMELDIR          =\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\nicht_verwendet
+
+
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden  Variablenwerte angezeigt
+%%DEBUG=N
+
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+%%TEST=N
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avFILES-SAMMELN.ps1
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*     28.10.2016  12:00:14  zv173x2  raus *AUSB*2024520_21*
+*     07.09.2016  16:12:59  zv173x2 \\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\nicht_verwendet
+*     14.10.2014  08:53:36  zv173x2 neu Neuss hat jetzt eine eigene exclude Job
+*                                  Karte aus dem alten Job
+*                                  INCLUDE=*EIPR_LOE*,*_NE_%%SOZ_DAT..PDF,*_KBES-2702*,*_BSCH_2024_*,*_ZAUS_2024_*,*_ZKAS_2024_*,*_ZKON_2024_*
+
+*                                  neu *_AUSB_2024_*
+*                                  neu *_FALL_2924_*,*_FASU_2924_*,*_AUSB_2924_*,*_FEHL_2924_*,*_AEND_2924_*
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

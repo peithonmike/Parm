@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Ablauf-in-3M-XLSX
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%AUFTRAGGEBER=T.Heister
+
+
+%%GEM3.-Ablauf-in-3Mon-%%TTMMJJJJP_%%$ODATE...CSV
+
+
+
+
+%%CSV_FULLNAME =\\MSBMCBATCH01\ctm_av\temp\DUE-EWO-Auskunftsperren\%%GEM3.-Ablauf-in-3Mon-%%TTMMJJJJP_%%$ODATE...CSV
+%%XLSX_FULLNAME=\\MSBMCBATCH01\ctm_av\temp\DUE-EWO-Auskunftsperren\%%GEM3.-Ablauf-in-3Mon-%%TTMMJJJJP_%%$ODATE...XLSX
+
+
+
+
+%%DEBUG=N
+%%TEST=N 
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.03.2022  15:04:00  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

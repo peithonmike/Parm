@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-SOZ-MZ-Druckdaten-Copy
+* nur Buchungsliste
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-SOZ-MZ
+
+ 
+
+*%%INDIR=\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\xxx\%%SOZ_DAT
+%%INDIR=%%PDF_INDIR
+%%INCLUDE=nbere*-2012_%%SOZ_DAT..PDF,nbere*-2112_%%SOZ_DAT..PDF
+%%EXCLUDE=EXCLUDE=*PROT*,*KBES*,*AUSB*
+%%OUTDIR=\\vfju\ju\Daten\Sozialwesen\DRUCKDATEN\%%$OYEAR.\MZ\%%SOZ_DAT
+
+
+%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\kopiert
+
+* eigentlih sind keine da, deshalb in dem Fall IGNORE
+%%IGNORE_RIGHT_BLANKS=J
+
+%%STEPNAME=Kopieren-Listen nach Vorgabe 
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden mehr Variablenwerte angezeigt
+%%DEBUG=N
+* ------------------------------------------------------------------
+--------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+
+$$INCLUDE=\\msbmcc03\ctm_av\doc\bl\JUE-SOZ-MZ-Auftrag-Änderung-2012-BULI.pdf
+$$INCLUDE=\\msbmcc03\CTM_AV\Bin\Powershell\BL\avCopy-Move-Files.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\doc\bl\JUE-SOZ-MZ-Auftrag-Änderung-Copyjob-20.12.2021.pdf
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.01.2022  14:57:58  zv173x2 exclude ,*AUSZ*,*WARN*, raus
+*    24.01.2022  08:58:11  zv173x2 neu PS1
+*    21.12.2021  10:57:54  zv173x2 neu strukturiert Alte Version unter Parm\Alt\Jobname
+*                                  Mail vom 20.12.2021 Frau Boehm-Weyerstraß
+*                                 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

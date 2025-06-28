@@ -1,0 +1,73 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ-MZ-024-Kassenliste-BU
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-SOZ-MZ
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-SOZ-MZ-NEU-SACHG
+
+ 
+
+* ---------------------------------------------------------------
+* PDF_MASK Auswahl Maske 	Include Exclude
+* ---------------------------------------------------------------
+%%INCLUDE=nbere-420-NE_PFZZ0150_MAZE2024_%%SOZ_DAT..pdf
+%%EXCLUDE="-"
+
+
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+* ---------------------------------------------------------------
+%%OUTFILE=%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Kassenliste-%%SOZ_DAT.-BU.PDF
+
+
+
+* Die Cover müssen je nach Empfänger angegeben werden
+* alle anderen Angaben sollten aus dem Jobnamen lesbar sein.....   siehe Member: BUENDEL
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\AAA-%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Kassenliste.pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\ZZZ-%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Kassenliste.pdf
+
+
+* ---------------------------------------------------------------
+* ANZAHL
+* Anzahl der Ausdrucke 
+* Standard =1
+* ---------------------------------------------------------------
+%%ANZAHL=1
+%%COPYCOUNT=0
+
+
+* ---------------------------------------------------------------
+* Hotfolder FreeFlow
+* ---------------------------------------------------------------
+%%PRINTER_QUEUE=%%SOZ_MZ_LISTEN_DRUCKER
+
+
+
+
+
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden  Variablenwerte angezeigt
+%%DEBUG=N
+
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+%%TEST=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.01.2019  16:37:36  zv173x2 %%INCLUDE=nbere-420-NE_PFZZ0150_MAZE1_%%SOZ_DAT..pdf in 024
+*    28.07.2016  12:54:20  zv173x2 umgestellt auf Powershell
+*    18.06.2014  13:25:34  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

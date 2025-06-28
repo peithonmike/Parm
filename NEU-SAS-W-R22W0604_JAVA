@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-R22W0604_JAVA
+* 
+
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+* ST0030 Fehlerliste
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Eingabe\R22W0603_ST0030_Eingabe.txt
+
+* ST0040 Gesamtliste
+%%INFILE2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Eingabe\R22W0603_ST0040_Eingabe.txt
+
+
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Ausgabe\R22W0603_ST0030_Ausgabe-%%$ODATE..csv
+%%OUTFILE2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Ausgabe\R22W0603_ST0040_Ausgabe-%%$ODATE..csv
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\R22W0603_output.jar -in30 %%INFILE1 -in40 %%INFILE2 -out30 %%OUTFILE1 -out40 %%OUTFILE2
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.07.2013  11:17:21  zv173x2 odate in ausgabe
+*    10.07.2013  06:43:46  zv173x2 st0040
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

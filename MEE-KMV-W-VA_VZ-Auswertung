@@ -1,0 +1,64 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-KMV-W-VA_VZ-Auswertung
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%AUFTRAGGEBER=volker.ehmann@itk-rheinland.de
+
+
+* Eingabe Directory
+%%INDIR=\\vfcache\kmv\Daten\ControlM\KMVAuswertungen\Meerbusch\aktuelle_Auswertung
+*%%INDIR="\\srv03\qaspkdvz$\Daten\Apps\ftp\alex\test"
+
+**COPYPATH=\\vfdusalt\16\Amt16\Firmenticket-Monatsverarbeitung\Monatsabrechnung-Wv
+**%%COPYPATH="\\vfcache\kmv\Daten\ControlM\KMVAuswertungen\Meerbusch\aktuelle_Auswertung\Archiv"
+%%INCLUDE=*.xlsx
+%%EXCLUDE=*.bat
+
+
+
+* Empfänger der Dateien !! (durch Semikolon getrennt) 
+%%EMAIL_T=volker.ehmann@itk-rheinland.de;nadja.kutter@meerbusch.de
+
+**%%EMAIL_T=alexander.schoenfeld@itk-rheinland.de;
+**%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;
+
+%%EMAIL_A=
+%%OUTDIR_PROCESSED="\\vfcache\kmv\Daten\ControlM\KMVAuswertungen\Meerbusch\aktuelle_Auswertung\Archiv"
+
+**%%OUTDIR_PROCESSED="\\srv03\qaspkdvz$\Daten\Apps\ftp\alex\test\Archiv"
+
+* Subject
+%%EMAIL_U=Job-Nachricht:  %%JOBNAME
+
+* Kopie
+**EMAIL_CC=alexander.schoenfeld@itk-rheinland.de;
+
+
+* Blindkopie
+*%%EMAIL_BCC=
+
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+%%EMAIL_A_MOVE=J
+
+
+%%DEBUG=N
+%%TEST=N
+
+**%%COMMAND=powershell.exe -executionpolicy bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\AS\Job-Send-Mail-Attach.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE -OUTDIR_PROCESSED %%OUTDIR_PROCESSED -COPYPATH %%COPYPATH
+
+%%COMMAND=powershell.exe -executionpolicy bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\AS\Job-Send-Mail-Attach-Move-File.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE -OUTDIR_PROCESSED %%OUTDIR_PROCESSED
+%%MAIL_NOTOK=alexander.schoenfeld@itk-rheinland.de; volker.ehmann@itk-rheinland.de;
+
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Keine Weiteren Schritte n�tig.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte �berpr�fen!

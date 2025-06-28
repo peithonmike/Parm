@@ -1,0 +1,36 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Meerbusch
+***********************************************************************************
+*  Jobname     : HUN-PDF-Merge
+*  APPLICATION : SAP
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+
+
+
+%%INDIR=\\vfitkablage\dta\daten\NEU\DTA-GEW\out
+%%OUTDIR=\\vfitkablage\dta\daten\NEU\DTA-GEW\out
+%%OUTFILE=%%GEM3._GEWMB_Bescheide_%%ODATE..pdf
+
+%%TEST=N
+%%DEBUG=N
+
+%%python_exe=C:\Users\a-zvaa405\AppData\Local\Programs\Python\Python312\python.exe
+
+
+%%python_script=\\msbmcc03\CTM_AV\Bin\Python\CF\PDF-File-Merge.py
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\Script\Py-PDF-Merge.ps1
+
+
+
+**INDIR=\\vfapps\apps\ITK\KMV\Produktion\1000\50101\DTA-Messbescheide
+**OUTDIR=\\vfapps\apps\ITK\KMV\Produktion\1000\50101\DTA-Messbescheide

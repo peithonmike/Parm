@@ -1,0 +1,8 @@
+*
+* LIBMEMSYM für Ausgabe Jodtabletten diverse Gemeinden - 5.5.2017/Schr.
+* Ausrechnen einer Variablen ODATE - 18 Jahre) 
+* im Format JJJJMMTT  
+
+
+%%GEBDAT_VON=%%JJJJ_M18_%%$ODATE..%%OMONTH.%%ODAY
+%%GEBDAT_BIS=%%$ODATE 

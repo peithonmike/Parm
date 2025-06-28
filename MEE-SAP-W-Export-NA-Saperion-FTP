@@ -1,0 +1,29 @@
+ ********************************************************** 
+* LIBMEMSYM 
+* MEE-SAP-W-Export-NA-Saperion-FTP
+* 
+* Zuständig ist Ulrike Nohn
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Meerbusch
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+**SYSOUT=\\msbmcc03.itk.local\G$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%FTP-LPATH1=/SST/IFP/800/Saperion/AEN*.TXT
+
+%%FTP-RPATH1=/800ME/KSB_Belege/
+
+%%FTP-NEWNAME1=/SST/IFP/800/Saperion/Verarbeitet/
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+%%MAIL_NOTOK=ruth.weyermanns@itk-rheinland.de;betina.kobecke@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%BETREFF_OK=FileTransfer SAP-NA-Daten %%GEM3 nach SAPERION OK
+%%BETREFF_NOTOK=FileTransfer SAP-NA-Daten %%GEM3 nach SAPERION NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der SAP-NA-Daten %%GEM3 nach SAPERION ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der SAP-NA-Daten %%GEM3 nach SAPERION ist NOTOK.

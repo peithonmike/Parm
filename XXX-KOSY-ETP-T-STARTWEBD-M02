@@ -1,0 +1,12 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-KOSY-ETP-T-STARTWEBD-M02
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "C:\Program Files\Scripte\kosy-services-start.ps1"
+
+%%MAIL=simone.thissen@itk-rheinland.de;tobias.redmann@itk-rheinland.de;Dieter.Assenmacher@itk-rheinland.de;Erich.Janke@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+

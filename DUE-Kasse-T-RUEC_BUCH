@@ -1,0 +1,13 @@
+* *************************************************************
+* Table Variablen          
+* DUE-Kasse-T-RUEC_BUCH
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$oyear.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+**SYSOUT=//sapftpitk.sapitk.krzn.de/SST/IFQ/SYSOUT_CTM/%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt

@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Due-Beihilfe-Monat-Transfer-Sammeldatei
+* Auftrag ist von Gudrun Ring
+* 
+*********************************************************** 
+  
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-BEIHILFE-MGL
+
+**PBHPFAD="\\vfdusalt\16\amt16\PBH\Kassenverfahren\"
+
+* Vorübergehende Änderung der Pfadangabe wegen Umstellung in DUE - 03.06.2014 zvaa405
+
+%%PBHPFAD=\\vfdusalt\16\amt16\423_PBH\Kassenverfahren\
+
+%%SAMMELPFAD=\\vfitk\Daten\Daten\Alle\PBH\
+%%ADRESSAT=Doris.Huhn@itk-Rheinland.de;Harry.Lemke@itk-Rheinland.de
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\DUE-Beihilfe-Monat.ps1
+**-PBHPfad %%PBHPFAD -SammelPfad %%SAMMELPFAD -Adressat %%ADRESSAT

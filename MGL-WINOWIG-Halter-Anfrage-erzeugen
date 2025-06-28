@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-Halter-Anfrage-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+
+%%DESCRIPTION=Ermitteln Halteranfragen(Kennzeichen) 
+%%AKTION1=Halteranfrage
+%%AUSGABE=kan10044.txt
+
+
+* Düsseldorfer Host VVB Datei
+%%HOSTFILE_ERLEDIGT_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\KBAhalt\Haltsend\erledigt
+%%HOSTFILE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Kbahalt\Haltsend\HALT%%ODAY.%%OMONTH..SEND
+
+
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-MGL-WINOWIG-KBA-DTA-Erzeugen.BAT
+
+
+
+%%TEST=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    02.03.2021  08:29:13  zv173x2 copy von Düsseldorf
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

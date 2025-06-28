@@ -1,0 +1,39 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-Halter-Antworten-Move
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+
+*--------------------------------------------------------------------------------- 
+*      Variablen für die Bat
+* --------------------------------------------------------------------------------- 
+* EingabeDirectory in dem nach Dateien gesucht wird
+* und Unterordner in dem gesichert wird 
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\WINOWIG\Antworten
+%%MOVE_ORDNER=erledigt
+
+
+* Suchbegriff
+%%SEARCH=PBA.GEMAB.KBAAUSK.WINOWIG.D%%odateYY..txt
+%%TYP=KBAAUSK
+
+
+* ZielDirectory 
+%%OUTDIR= \\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\eingang\kba
+
+* Logfilename 
+%%LOGFILE= 
+%%LOGFILE_COUNTER=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\WINOWIG-KBA-DTA-%%$OYEAR..csv
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\WINOWIG-KBA-DTA-%%$OYEAR..csv
+
+
+
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    13.05.2013  13:53:04  zv173x2 TYP
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,32 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant :    aktuell nur Düsseldorf
+***********************************************************************************
+*  APPLICATION : ZSTV.OPENFT 
+*  Description : ZSTV-ANFRAGEN (EXPORT)
+***********************************************************************************
+* Senden geht im Moment nur mit ASP\ZV172W3 ist im CTM auch angelegt
+***********************************************************************************
+
+*
+%%RICHTUNG=SENDEN
+%%BFJ_ID=%%BFJ_ID_ZSTV
+*
+
+
+
+* Anfragedaten aus dem ZSTV Verfahren (OpenFT Server)
+* werden an das BfJ (ZSTV) gesendet
+%%INPUT_DIR=%%ZSTV_DIR_ANFRAGE
+
+
+* zu sendende Files werden anhand der Suchbegriffes ermittelt
+%%SEARCH=SR6128*.txt
+
+
+
+%%SYSOUT          =%%OPENFT_SYSOUT
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+
+

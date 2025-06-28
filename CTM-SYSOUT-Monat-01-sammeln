@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-SYSOUT-Monat-01-sammeln
+* 
+* 
+*********************************************************** 
+ 
+
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%JJJJ=%%JJJJ_M3_%%$ODATE
+%%MM=%%SUBSTR %%JOBNAME 18 2 
+
+
+ 
+* Eingabe Ordner
+* um einen Zip fähiger Ordner zu erstellt 
+%%INDIR=\\msbmcc03\G$\CTM\Sysout\%%JJJJ
+* von bis datum 
+%%DATE_VON=01.%%MM..%%JJJJ
+%%DATE_BIS=31.%%MM..%%JJJJ
+* nur  txt Dateien
+%%INCLUDE=*.txt
+
+
+* Ausgabeordner auf Monatsbasis 
+%%OUTDIR=\\msbmcc03\g$\CTM\Sysout\%%JJJJ.\%%MM
+
+%%DEBUG=N
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.03.2015  10:13:32  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+  
+
+
+

@@ -1,0 +1,90 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* NEU-MIGEWA-Auswertung-Betriebe-Test
+* 
+* 
+*********************************************************** 
+*********************************************************** 
+* SQL aus Testverzeichnis
+* Ausgabe auf temp Verzeichnis 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\CHECK-ODATE-MONTAG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SQL\Test\QueryBetriebeTest.sql
+
+
+%%AUFTRAGGEBER=A.Peltzer 
+
+
+%%TEST=N
+%%DEBUG=N
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+%%U=migewa_av_neu
+%%P=secret-server
+%%DB=migewa_neu
+%%SERVER=MSSQL01
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+%%VON=%%JJJJMMTT_TT_M8_%%$ODATE
+%%BIS=%%JJJJMMTT_%%$ODATE
+
+
+*  ******************************************** 
+*  sehr spezielles Datum für den Dateinamen :-)
+*  z.B.
+*  MigewaBetriebe2018-05-28-2018-06-03.csv
+*  MigewaInhaber2018-05-28-2018-06-03.csv
+*  ******************************************** 
+
+%%JJJJ_V=%%SUBSTRING %%JJJJMMTT_TT_M8_%%$ODATE   1 4
+%%MM_V=%%SUBSTRING %%JJJJMMTT_TT_M8_%%$ODATE   5 2
+%%TT_V=%%SUBSTRING %%JJJJMMTT_TT_M8_%%$ODATE   7 2
+
+%%CSV_VON=%%JJJJ_V.-%%MM_V.-%%TT_V
+
+
+%%JJJJ_B =%%$OYEAR
+%%MM_B=%%OMONTH
+%%TT_B=%%ODAY
+
+%%CSV_BIS=%%JJJJ_B.-%%MM_B.-%%TT_B
+
+
+
+
+%%SQL_FILE=\\msbmcc03\ctm_av\Parm\SQL\Test\QueryBetriebeTest.sql
+
+
+%%FILENAME=MigewaBetriebe_%%CSV_VON.-%%CSV_BIS..csv
+
+
+* Prod Ausgabe
+*%%OUTDIR=\\srv03\qaspne$\daten\apps\cobra\daten
+*%%OUTDIR=\\vfneapps\apps\Verfahren\Cobra_crm\Daten
+
+* Test Ausgabe
+%%OUTDIR=\\msbmcc01\ctm_av\temp
+
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+ 

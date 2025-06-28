@@ -1,0 +1,78 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : DUE-Schulen-Wegzug-prim
+* erstellt : 11.04.2016 08:38:12
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+ 
+* 
+* es wird eine zusätzliche LIBMEMSYM verwendet
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###-Duesseldorf_Geburtsjahrgaenge
+ 
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+%%bearb_von=%%TTMMJJJJP_TT_M7_%%$ODATE
+%%bearb_bis=%%TTMMJJJJP_TT_M1_%%$ODATE
+%%ela_gebdat_bis=%%ELA_GEBDAT_BIS
+%%ela_gebdat_von=%%ELA_GEBDAT_VON
+%%prim_gebdat_von=%%PRIM_GEBDAT_VON
+%%prim_gebdat_bis=%%PRIM_GEBDAT_BIS
+%%sek1_gebdat_bis=%%SEK1_GEBDAT_BIS
+%%sek1_gebdat_von=%%SEK1_GEBDAT_VON
+%%sek2_gebdat_von=%%SEK2_GEBDAT_VON
+%%sek2_gebdat_bis=%%SEK2_GEBDAT_BIS
+%%schueler_art=prim
+%%gebdat_von=%%GEBDAT_VON
+%%gebdat_bis=%%GEBDAT_BIS
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=DUE-Schulen-Wegzug-prim.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/DUE-Schulen-Wegzug-prim
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\DUE-Schulen-Wegzug-prim-%%bearb_von.-%%bearb_bis..%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : DUE-Schulen-Wegzug-prim-%%bearb_von.-%%bearb_bis..
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+%%EMAIL-T=einschulung@duesseldorf.de;
+**EMAIL-BCC=Burghard.Schramm@ITK-Rheinland.de;
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n  \n 
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-Schulveränderungen.pdf
+* ------------------------------------------------------------------

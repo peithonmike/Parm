@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-System-InstallFP-Agent-Update
+*
+* 
+***********************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\InstallFP
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE 
+
+%%SYSOUT=\\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%COMMAND=silent.bat -i %%SERVER
+%%TEST=N

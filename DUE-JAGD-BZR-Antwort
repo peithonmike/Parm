@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-JAGD-BZR-Antwort
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JAGD
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JAGD-OPENFT-BZR-ANTWORT
+%%TEST=N
+%%MAX=100
+%%SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt 
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\CTM_AV\Log\ErgebnisLog\FW_OPENFT.csv
+$$INCLUDE=\\msbmcbatch01\CTM_AV\Log\ErgebnisLog\OPENFT-2012.csv
+* ------------------------------------------------------------------

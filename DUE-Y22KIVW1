@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Y22KIVW1
+* Verbuchung auf MSPTV01
+* Wettbuerosteuer
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt 
+
+
+%%COMMAND=c:\KIViSoll\KIViSoll.bat WST

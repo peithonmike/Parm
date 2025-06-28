@@ -1,0 +1,9 @@
+* letzte Woche
+* Beispiel 
+* Job läuft Montag 
+* ausgewertet wird von letzter Woche Montag bis Sonntag
+
+%%VON=%%TTMMJJJJP_TT_M8_%%$ODATE
+%%BIS=%%TTMMJJJJP_TT_M1_%%$ODATE
+
+%%EIN-DAT=01.%%MM..%%JJJJ

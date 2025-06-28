@@ -1,0 +1,63 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-PRODOP-Export-WINOWIG-629-Ist
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+*********************************************************** 
+* Istzahlen für WinOwig exportieren
+*********************************************************** 
+ 
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=EXPORT
+%%VERF=WINOWIG Ist
+
+
+* zur Information
+* wird im Prodoppik festgelegt
+%%DAT=GREXPWINOWIG_629
+%%BJ=729
+
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-WINOWIIG-IMP-EXP.pdf
+
+* Logdateien
+*$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUH\PRODOP-%%$OYEAR.-%%OMONTH..csv
+*$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+
+* die normale Mail ausschalten 
+*%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+*;stefanie.drescher@itk-rheinland.de 
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    08.03.2016  11:13:21  zv173x2 ersetzt GRE-PRODOP-Export-WINOWIG-Ist
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-TOPCASH_AMT32-T-COPY-PTV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\srv03\qaspne$\Daten\Apps\Topcash\KIRP_EXPORT_AMT32\TCtoKIRP.%%$ODATE.*.txt
+%%ausdat2=\\msptv01\ptvprojekte$\SAP_Export\TOPCASH_EXXX\inDir\100_TopCash_32_D%%$ODATE..txt
+%%ausdat1=\\srv03\qaspne$\Daten\Apps\Topcash\KIRP_EXPORT_AMT32\KIRP_Verarbeitet\100_TopCash_32_D%%$ODATE..txt
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer TopCash_Amt32-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer TopCash_Amt32-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der TopCash_Amt32-Daten %%GEM3. zum PTV-Server ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der TopCash_Amt32-Daten %%GEM3. zum PTV-Server ist NOTOK.

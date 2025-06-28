@@ -1,0 +1,12 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-Kasse-T-ELKO_EPAY_EMAIL_SENDEN
+*
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_NEU
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Global\SST_Dateinamen_versenden.ps1" -Verzeichnis "/SST/IFP/900/ELKOS" -MailTo "sabine.wrede@rhein-kreis-neuss.de;kreiskasse@rhein-kreis-neuss.de;pmPayment@itk-rheinland.de"

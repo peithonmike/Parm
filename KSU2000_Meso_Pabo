@@ -1,0 +1,14 @@
+%%Eingabeordner=\\srv03\ftp$\ksu2000_regioit\prod\
+%%Eingabedatei=ewobewegung_mo_???.txt
+%%Ausgabeordner=\\srv03\ftp$\ksu2000_krzn\prod\%%KSU_NR.\meso\ewobewegung_mo_%%KSU_NR..txt
+%%Ausgabedatei=ewobewegung_mo_%%KSU_NR..txt
+%%Sicherungsordner=\\srv03\KSU2000krzn$\SicherungProd\%%KSU_NR.\
+%%Sicherungsdatei=ewobewegung_mo_%%KSU_NR._%%$ODATE..txt
+
+%%Exclude=*_%%KSU_NR..txt
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\KSU_MESO_Abgleich_V2.ps1 -Eingabeordner %%Eingabeordner -Eingabedatei %%Eingabedatei -Ausgabeordner %%Ausgabeordner -Ausgabedatei %%Ausgabedatei -Sicherungsordner %%Sicherungsordner -Sicherungsdatei %%Sicherungsdatei -Exclude %%Exclude
+
+%%DELMESOFILE=del %%Eingabeordner.%%Ausgabedatei
+
+%%UPDATE=\\msbatch02\c$\Programme\KSU2000Batch\krzn-meso-prod.cmd

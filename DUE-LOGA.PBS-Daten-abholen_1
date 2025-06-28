@@ -1,0 +1,38 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Düsseldorf
+***********************************************************************************
+*  Jobname     : DUE-LOGA.PBS-Daten-abholen
+*  APPLICATION : LOGA.PBS
+***********************************************************************************
+* Job holt Loga-PBS-Daten in Bochum ab.
+* Auftrag ist von Gudrun Ring
+*********************************************************************************** 
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-Bochum
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###LOGA-PBS-Daten-GET
+
+%%SYSIN_BAT=\\msbmcc03\ctm_av\BIN\BAT\LOGA-PBS-Daten-GET.BAT
+
+%%NACH_BAT =\\msbmcc03\ctm_av\BIN\BAT\LOGA-PBS-Daten-NACH.BAT
+
+%%File=%%JOBNAME..tmp
+%%FILE01=schnittstellen\persinf\stpl%%$OYEAR._besetzung.csv
+%%FILE02=schnittstellen\persinf\stpl%%$OYEAR._eignung_10.csv
+%%FILE03=schnittstellen\persinf\stpl%%$OYEAR._eignung_x10.csv
+%%FILE04=schnittstellen\persinf\stpl%%$OYEAR._sttaet.csv
+%%FILE05=schnittstellen\persinf\stpl%%$OYEAR._stellenplan.csv
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Log\Ergebnislog\%%GEM3.-LOGA-PBS-Daten-%%$OYEAR..csv
+* ------------------------------------------------------------------

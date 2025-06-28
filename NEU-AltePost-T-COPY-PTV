@@ -1,0 +1,41 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-AltePost-T-COPY-PTV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\SQLBasysAP\Transfer\host.dat
+##ausdat2=\\msptv02.itk.local\ptv-projekte\hizadrs_sap\inDir\%%GKZ._AltePost_D%%$ODATE.%%TIME..txt
+##ausdat3=\\msptv02.itk.local\ptv-projekte\hizpbuc_sap\inDir\%%GKZ._AltePost_D%%$ODATE.%%TIME..txt
+
+%%ausdat2=\\msptv02.itk.local\ptvprojekte$\SAP_Export\HIZADRS_EXXX\inDir\%%GKZ._AltePost_D%%$ODATE.%%TIME..txt
+%%ausdat3=\\msptv02.itk.local\ptvprojekte$\SAP_Export\HIZPBUC_EXXX\inDir\%%GKZ._AltePost_D%%$ODATE.%%TIME..txt
+%%ausdat1=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\SQLBasysAP\Transfer\Verarbeitet\%%GKZ._AltePost_D%%$ODATE.%%TIME..txt
+
+%%deldat=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\SQLBasysAP\Transfer\host.dat
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+**MAIL01=fadime.arslanmirza@stadt.neuss.de;martina.keil@itk-rheinland.de;Oliver.Giesler@itk-rheinland.de
+%%MAIL01=Yonca.Karaguezel@stadt.neuss.de;martina.keil@itk-rheinland.de;Oliver.Giesler@itk-rheinland.de
+NEU-AltePost-T-COPY-PTV
+%%BETREFF_OK=FileTransfer AltePost-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer AltePost-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der AltePost-Daten %%GEM3. zum PTV-Server ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der AltePost-Daten %%GEM3. zum PTV-Server ist NOTOK.
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.11.2021  10:48:27  zv173x2 Oliver.Giesler@itk-rheinland.de
+*    15.10.2021  08:27:14  zv173x2 zv.vhs in vhs@ITK-Rheinland.de
+*    26.07.2021  10:04:57  zv173x2 zv.vhs
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

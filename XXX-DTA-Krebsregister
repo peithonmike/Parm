@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-DTA-Krebsregister
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+
+
+%%TERMIN="1.Tag im Monat "  
+%%REPORT=Jobs\Auswertungen\Reportverwaltung\EWO Standardauswertungen\
+%%REPORT2=Veränderungslisten\D_KREBSTOD_NRW
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###VLK-MONAT_01
+
+%%VLK1=%%VON.-%%BIS
+%%VLK2=
+%%HINWEIS=
+
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+
+
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+*  Druckvorlage
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\OKEWO-AUFTRAG-ALLE.skels
+$$INCLUDE=%%PRT_SKELS
+
+*
+
+*
+

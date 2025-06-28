@@ -1,0 +1,81 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WEG-EDUE-T-Copy-PTV
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+* Eingabe Directory 
+
+%%INDIR=\\vfdusalt\40\Amt40\40-14-Bezirksfachklassen-Austausch\Schuljahr-23-24
+
+
+
+
+
+
+
+* Datei Auswahl
+
+%%INCLUDE=*.XLSX
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\msptv02\PTVProjekte$\SAP_Export\WEG_EDUE\inDir
+
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfdusalt\40\Amt40\40-14-Bezirksfachklassen-Austausch\Schuljahr-23-24\Erledigt
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.11.2021  12:45:59  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+

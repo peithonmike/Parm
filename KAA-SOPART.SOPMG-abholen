@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-SOPART.SOPMG-abholen
+* 
+* achtung test renamed die org Datein
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOPART-MAIL 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%VERFAHREN=SOPMG
+%%DESCRIPTION=Abholen Sopart Mündelgelder Zahldatei
+
+* Verfahrensbereich 
+* hier liegt die Eingabe
+* allerdings nicht TaviLink fähig 
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspka$\daten\apps\SopartKAA\SoPart\Avor\Export
+%%SEARCH=*XML
+
+%%SEARCH_TRAVI_PREFIX=000.SOP.SRZ.KAA-SOPMG_CT_
+
+
+
+
+* TravicLink Sendebereich
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\TravicLink\SOPART
+
+
+* Eingabedatei im Erledigt Ordner mit ODATE abspeichen 
+%%MOVE_ORDNER=erledigt
+
+* Log
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SOPART-SOPMG-Doppelte-Auszahlung.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+%%TEST=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.01.2014  08:57:16  zv173x2 500 in 000
+*    10.01.2014  16:20:45  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

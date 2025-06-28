@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Remove-Pages-from_PDF
+* Löscht die Statistik-Seiten aus PDF-Dateien
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+
+ 
+
+
+
+%%INDIR=\\msbmcc03\CTM_AV\Parm\Testordner
+%%OUTDIR=\\msbmcc03\CTM_AV\Parm\Testordner\Verarbeitet
+%%KEYWORD1=Kuvert-Nr.
+%%KEYWORD2=Statistik
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Job-Remove_Pages_from_PDF.ps1
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\in_Arbeit\Remove_Pages_from_PDF-20240418.ps1
+
+
+
+
+
+
+*    -- Änderungen ------------------------------------------------------------------- 
+*	 
+*    19.03.2024  12:30:00  zvaa405
+
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

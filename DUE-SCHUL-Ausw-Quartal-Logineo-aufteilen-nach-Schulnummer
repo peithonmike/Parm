@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SCHUL-Ausw-Quartal-Logineo-aufteilen-nach-Schulnummer
+* 
+* 
+*********************************************************** 
+
+
+
+
+
+%%AUFTRAGGEBER=H.Möller  
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\%%GEM3.-SCHULJAHR 
+
+
+
+%%DATUM=%%$OYEAR.-%%OMONTH
+%%SPLIT_BY=schulnr
+%%HEADER="Schulnr","Anrede","Vorname","Nachname","Straße","Internet-Adresse"
+
+*********************************************************** 
+* VORLÄUFER
+* PROD Name der Eingabe Directory 
+* DUE-SCHUL-Ausw-Quartal-Logineo-Email-Adressen-nach-Straßen 
+*********************************************************** 
+
+
+%%INDIR=\\vfdusalt\40\Amt40\Themen\Statistik\Schulen\Logineo-Email-Adressen-nach-Straßen\%%DATUM
+
+* TEST überschreibt PROD
+* %%INDIR=\\msbmcbatch01\c$\temp\Logineo-Email-Adressen-nach-Straßen\%%DATUM
+
+
+%%OUTDIR=%%INDIR
+* Eingabe aus Vorjob
+%%FILENAME=DUE-SCHUL-Ausw-Quartal-Logineo-Email-Adressen-nach-Strassen_%%DATUM..CSV
+
+*  Achtung Rerun löscht keine vorhandenen Dateien sonder schreibt sie fort!!!!!!
+*  mqacht also nur Sinn bei leeren Ausgabe-Dateien
+%%RERUN=N
+%%TEST=N
+%%DEBUG=N
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     24.04.2019  08:32:19  zv173x2  RERUN
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+

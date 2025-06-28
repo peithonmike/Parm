@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-SAP-REORG-SYSOUT-VFCACHE
+* Reorg des Sysout in VFCACHE nach Tagesdatum
+* 
+*********************************************************** 
+ 
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ITK
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass "\\vfcache\finanz\Daten\PS\Scripts\Global\MoveTimeStamp.ps1" -InDir "\\vfcache\finanz\Daten\Logs"

@@ -1,0 +1,64 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-Update-Stammdaten
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+
+
+
+* Zeitraum
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+* Loga Stammdaten vom KRZN 
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\MSP\STAMMDATEN
+
+* Ergebnis Passwordlisten und Fehlermeldungen für das jeweilige Fachamt
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\MSP\STAMMDATEN\Initialpasswörter
+
+
+* JAVA Variablen
+* Java Directories \\msbmcc03\ctm_av\Bin\Java\MSP
+
+*%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\TEST-Stammdatentabelle-0.0.1-jar-with-dependencies.jar
+* TEST DEV %%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\MSP_Stammdaten_DEV.jar
+
+
+***********    PROD *****************************
+
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\MSP_Stammdaten_20190208_PROD.jar
+%%JAR_START=de.itk.projekte.aktuallemitarbeiterinfo.Start
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     07.02.2020  10:36:20  zv173x2  MSP_Stammdaten_20190208_PROD.jar  anstatt   MSP_Stammdaten_20170725_PROD.jar
+ 
+*     04.07.2018  12:59:21  zv173x2  %%AUFTAGGEBER=S.Berktin
+
+
+*     15.05.2017  12:23:49  zv173x2  MSP_Stammdaten_20170515.jar
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+

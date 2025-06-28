@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* WOHN.LDS-Plausi-Senden-FW
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\VLK\WOHN.LDS-Plausi-Senden-FW-TIME.vlk
+
+
+%%WATCH_DESC=Überwachen LDS Plausiordner 
+%%WATCH_DIR=\\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\LdsPlausi
+%%WATCH=WOHN.BRIEF.B*.PL*
+%%WATCH_MAX=%%WATCH_MAX_%%W2DAY_%%$ODATE   
+*%%WATCH_WAIT=3600
+%%WATCH_WAIT=300
+
+%%WATCH_FORCE_SCHEDULE= 
+%%WATCH_FORCE_JOBNAME= 
+
+%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL-U=%%JOBNAME Filewatcher hat ausgelöst
+
+

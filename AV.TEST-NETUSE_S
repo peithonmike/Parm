@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* AV.TEST-NETUSE_S
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+
+* funktioniert NETUSE_S noch nicht
+* net use Z:  \\10.109.1.121\Input_ITK_WINOWIG$ /user:10.109.1.121\ITK-Datenimport ITK@rkn0815
+
+
+
+%%NETUSE_S=N
+%%NETUSE=J
+ 
+
+%%NETUSE_PATH=\\N900D01M63.n900d01.int.de\Input_ITK_WINOWIG$
+
+
+* Password für den ersten Test in Klarschrift
+* 
+%%P=secret-server
+%%P=ITK@rkn0815
+
+%%U=ITK-Datenimport@n900d01m63.n900d01.int.de
+
+
+%%LAUFWERK=Z:
+
+
+%%TEST=J

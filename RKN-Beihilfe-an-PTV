@@ -1,0 +1,61 @@
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-Beihilfe-RKN
+
+
+* Eingabe Directory 
+%%SEARCH_DIR=%%IP
+
+* Datei Auswahl
+%%SEARCH=BE-*-*-VERW.dat
+
+* Dateien nur verschieben
+%%SEARCH2=BE-*-*-UNI.dat
+
+* Ausgabe Directory
+%%OUTDIR=\\msptv01\d$\PTV\Projekte\SAP_Export\BEIHILF_EXXX\InDir
+%%NETUSE=J
+* erledigt Ordner =INDIR\verarbeitet
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ERW.DAT
+
+
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.07.2015  08:37:07  zv173x2 neu 1 Lauf 03.08.2015
+
+*    27.07.2015  10:20:30  zv173x2 ersetzt RKN-Beihilfe-T-Copy-PTV
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

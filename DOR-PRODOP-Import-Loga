@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-PRODOP-Import
+* ersetzt DOR_Import_04
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\HUH\%%GEM.\LOGA
+%%OUTDIR=\\N200D01S29.dormagen.int.de\HH-Prog\Schnittstellen\ITKR\LOGA
+%%LOGFILE_AV=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+%%TEST=J
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+
+* ------------------------------------------------------------------

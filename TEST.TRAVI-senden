@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* TEST.TRAVI-senden
+* 
+* 
+*********************************************************** 
+ 
+* Achtung im Moment noch als Testjob gedacht,
+* wenn dier richtige Name drin ist wir es ernst.
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\AVON
+
+
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink
+
+
+* einfach nur den Dateinamen eingeben
+* der Präfix T.000.in der Bat erzeugt und verwendet
+
+%%AVON_INFILE
+%%INFILE=%%AVON_INFILE
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\TRAVIC-LINK-TEST
+
+%%TEST=J
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\TRAVIC-LINK-Dateinamen-'Konventionen' für Referenznummer-Mapping.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\TRAVIC-LINK-Testuser.pdf
+$$INCLUDE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\TRAVIC-LINK-%%$OYEAR..csv
+
+* ------------------------------------------------------------------

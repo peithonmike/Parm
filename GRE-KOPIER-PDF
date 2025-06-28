@@ -1,0 +1,14 @@
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+*********************************************************** 
+* LIBMEMSYM 
+* Kopieren einer PDF-Datei fuer Grevenbroich
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%SYSUT1="\\msbmcc03.asp.rzne.de\c$\CTM_AV\Jasper-Output\GRE-Abstimmung-%%TTMMJJJJP_%%$ODATE...PDF"
+
+%%SYSUT2="\\srv03.asp.rzne.de\qaspgr$\Daten\Apps\OKEWO\okprg\okewo_gre\div\Bürgerentscheid Realschule\GRE-Abstimmung-%%TTMMJJJJP_%%$ODATE...PDF"

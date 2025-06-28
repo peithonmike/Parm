@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Druck-GBA-Messbescheide-FW
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\system
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+
+%%eindat=\\vfapps\apps\ITK\KMV\Produktion\1000\Drucklisten\*GBA_-_DTA-MB_Stadt_Neuss*.pdf
+
+
+%%Schedtab=NEU-Druck-GBA-Messbescheide
+**Job1=NEU-Druck-GBA-Messbescheide-Bescheiddruck
+%%Job1=NEU-Copy-GBA-Messbescheide-Filer
+**Job2=NEU-Bescheiddruck-Mail
+
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+
+
+%%BETREFF_OK=Druckdatei DZ-Batchportal gefunden OK
+%%BETREFF_NOTOK=Druckdatei NEU DZ-Batchportal nicht gefunden
+
+%%TEXT_OK=Joblog: Eine Druckdatei steht zur Verarbeitung an
+%%TEXT_NOTOK=Joblog: Es wurde keine Druckdatei gefunden
+ 

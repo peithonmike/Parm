@@ -1,0 +1,59 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* GRE-PRODOP-JPAX-Sollstellung-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+ 
+%%SITE=GRE-KRZN-JPAX
+%%IP=nicht-verwendet
+%%U=nicht-verwendet
+%%P=nicht-verwendet
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=
+
+* Anlist der empfangenen Datei
+%%INCLUDE=sollhkx_%%$ODATE..txt
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM
+
+*  ------------------------------------------------------------
+*   W i n S C P      S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+
+
+%%Z01=option batch abort
+*%%Z02=option confirm off
+%%Z02=option failonnomatch on
+%%Z03=option echo off
+%%Z04=open %%SITE
+#%%Z05=CD %%REMOTE_INDIR
+%%Z06=get GKZ300.JPX  %%OUTDIR.\sollhkx_%%$ODATE..txt
+%%Z07=mv   GKZ300.JPX  /verarbeitet/
+%%Z08=close
+%%Z09=exit 
+*%%Z09=?
+*%%Z10=?
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.11.2016  09:43:05  zv173x2 /verarbeitet/
+*    24.10.2016  12:10:56  zv173x2 move
+*    28.09.2016  07:46:41  zv173x2 %%$ODATE* damit  failonnomatch greift
+*    27.09.2016  10:39:29  zv173x2 failonnomatch on
+*    13.09.2016            zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

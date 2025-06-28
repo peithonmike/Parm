@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-NHCM-Angestellte-Move
+* 
+*********************************************************** 
+%%DESCRIPTION=Verschiebt alle 108*NHCM Dateien nach NHCM Verzeichnis
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\KN
+
+* Datei Auswahl
+%%INCLUDE=KN*108*NHCM*.PDF
+
+* Ausgabe Directory
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\NHCM
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-FileS.ps1 -INCLUDE %%INCLUDE
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.05.2024  14:17:37  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

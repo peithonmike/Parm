@@ -1,0 +1,17 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland
+***********************************************************************************
+*  Jobname     : GRE_DTA_Grundsteuer_Move
+*  APPLICATION : GBA
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%MAIL=steuern@grevenbroich.de
+
+%%COMMAND=move \\srv03\qaspkdvz$\Daten\Apps\ftp\av\Gba\DTALDS\DTA-GREVENBROICH.txt \\srv03\qaspgr$\Daten\Apps\HH\HKR\OFD\DTA_GREVENBROICH-D%%$ODATE..TXT

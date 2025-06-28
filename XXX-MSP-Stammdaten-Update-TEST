@@ -1,0 +1,68 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-MSP-Stammdaten-Update-TEST
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+**************************************************************************** 
+* Dokumenten Update
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+
+
+
+
+%%AUFTAGGEBER=Laura Podschwadek ab 03.2023
+
+
+
+ 
+%%INDIR=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\TEST\input
+%%OUTDIR=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\TEST\output
+%%OUTDIR_PROCESSED=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\TEST\verarbeitet
+%%USE_OUTDIR_PROCESSED=J
+
+
+
+
+* JAVA Variablen
+* Java Directories \\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\TEST
+
+
+
+
+* Java Directories \\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\TEST
+%%JAR_FILE=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\TEST\Stammdatentabelle-0.0.1-jar-with-dependencies.jar
+
+
+%%JAR_START=de.itk.projekte.aktuallemitarbeiterinfo.Start
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.03.2023  11:51:10  zvaa241 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,17 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Juechen
+***********************************************************************************
+*  Jobname     : JUE-Bescheiddruck
+*  APPLICATION : SAP
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File C:\CTM_AV\Bin\Powershell\CopyToFreeFlow.ps1 -SourcePfad "%%EINGABE" -SourceDatei "%%DRUCKDATEI" -DruckOrdner "%%HOTFOLDER" -NeuerDateiname "%%MANDANT" -Vorblatt "%%VORBLATT"
+ 
+

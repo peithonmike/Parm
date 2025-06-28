@@ -1,0 +1,39 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Geburtstagsliste-80-plus-Copy-To-ANSI
+* Auftrag ist von Gudrun Ring
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\srv03.asp.rzne.de\qaspDF$\Daten\Apps\OKEWO\okprg\okewo_DUE\div
+
+%%INCLUDE=ALTJ%%ODAY.%%OMONTH..DBL
+%%EXCLUDE="-"
+%%OUTDIR=\\srv03.asp.rzne.de\qaspDF$\Daten\Apps\OKEWO\okprg\okewo_DUE\div\daten_lhd
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspDF$\Daten\Apps\OKEWO\okprg\okewo_DUE\CTM\erledigt\%%$OYEAR
+%%TEST=N
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.01.2022  11:42:35  zv173x2 erledigt\->>> %%$OYEAR 
+*                          job schrieb immer inach erledigt.
+*                          Da muss jemand die alten Jahre immer im Jahreswechsel entferbnt haben!?
+*                          Mein job 01.2022 hatte Datei bereits in erledigt vorhanden!!!
+*                          JahresOrdner eingedbaut. Basta!                     
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

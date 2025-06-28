@@ -1,0 +1,63 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOPKUBU-T-Copy-XML
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\KUBU-MAIL
+
+
+
+* Eingabe Directory 
+
+%%INDIR=\\vfduswba\51\Amt51\Sopart_KuBu\Kasse
+
+* Datei Auswahl
+
+%%INCLUDE=DUSSDEDDXXX_*.xml
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfdussap\SAP\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_Sopart_KUBU
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfduswba\51\Amt51\Sopart_KuBu\Backup
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.09.2020  11:34:14  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

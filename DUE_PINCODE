@@ -1,0 +1,60 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : DUE_PINCODE
+* erstellt : 10.10.2017 12:06:33
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=DUE_PINCODE.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/DUE_PINCODE
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\DUE_PINCODE..%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : DUE_PINCODE
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+%%EMAIL-T=avaduesseldorf@berner-telecom.de;
+**EMAIL-BCC=Burghard.Schramm@ITK-Rheinland.de;
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=OK.Visa Pincode \n  \n Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n  \n 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\OK.VISA.JASPER-TAEGLICH-PINCODEDATEN.pdf
+* ------------------------------------------------------------------

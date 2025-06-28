@@ -1,0 +1,53 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  
+***********************************************************************************
+*  Jobname     : HUN-PDF-Merge
+*  
+***********************************************************************************
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+
+
+%%INDIR=\\srv03\qaspkdvz$\daten\apps\ftp\cf\PDF-Merge
+%%OUTDIR=\\srv03\qaspkdvz$\daten\apps\ftp\cf\PDF-Merge\out
+%%OUTDIR_PROCESSED=\\srv03\qaspkdvz$\daten\apps\ftp\cf\PDF-Merge\erledigt
+%%INFILE=*.pdf
+%%Outfile=Buendel_%%ODATE..pdf
+
+
+*******************************************************************************************
+*
+*                    Angaben für die PDF-Verarbeitung 
+*
+*   - debug            Ausgabe der Verarbeitung
+*   - bundle           nur emty Pages oder auch bündeln
+*   - bundle_option    Bündeln nach Timestamp der Datein oder Alphabetisch nach Dateiname
+*
+*******************************************************************************************
+
+%%DEBUG=False
+
+* Bündelung aktivieren oder deaktivieren  False / True
+%%BUNDLE=True
+
+* Art der Bündelung    timestamp oder alphabetical
+%%BUNDLE_OPTION=timestamp
+
+
+
+%%python_exe=C:\Users\a-zvaa405\AppData\Local\Programs\Python\Python312\python.exe
+
+%%python_script=\\msbmcc03\CTM_AV\Bin\Python\CF\Add_Empty_Pages_Merge.py
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Merge_PDF_Sort_Call_Python.ps1
+
+
+

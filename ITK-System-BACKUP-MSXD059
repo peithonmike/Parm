@@ -1,0 +1,16 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+*  ITK-System-BACKUP-MSXD059
+***********************************************************************************
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%COMMAND=\\msimg13\bu_msxd059$\_Skript\_vssbackup.bat
+
+
+%%MAIL_NOTOK=joerg.kampen@itk-rheinland.de;simon.arendt@itk-Rheinland.de
+%%BETRETT_NOTOK=%%JOBNAME ist abgebrochen. Bitte ueberpruefen.
+%%TEXT_NOTOK=robocopy MSXD059 ist abgebrochen

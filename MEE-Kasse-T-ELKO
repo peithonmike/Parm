@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-Kasse-T-ELKO
+* Stadt Meerbusch
+* neu - gültig ab 03.01.2014
+* erweitert um Commerzbank CB  - 21.12.2015
+* 20.04.2017 - Umstellung auf Powershell-FTP
+* 29.05.2017 - erweitert um ELKO_VB,ELKO_DB durch J.Huhn
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Meerbusch
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%client=IFP
+%%mandant=800
+%%source=\\srv03\qaspkdvz$\Daten\Apps\ftp\Travic-Link\MEE\
+%%pattern=ELKO_SK,ELKO_CB,ELKO_VB,ELKO_DB
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\copy_SAP_ELKO.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_800.cred" -sysid %client% -mandt %mandant% -source %source% -pattern %pattern% -jahr %elkoyear%
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\copy_SAP_ELKO_2.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_800.cred" -sysid %client% -mandt %mandant% -source %source% -pattern %pattern% -jahr %elkoyear%

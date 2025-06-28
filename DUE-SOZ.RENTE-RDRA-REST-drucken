@@ -1,0 +1,80 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.RENTE-RDRA-REST-drucken
+* 
+* 
+*********************************************************** 
+ 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR  alle Files mit vorgegebener Maske an beliebige Anzahl Printer.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Print-To-Printers.ps1 -INCLUDE %%INCLUDE -PRINTER %%PRINTER
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\RENT-DAT
+
+
+%%DAT1=%%OYEAR.%%OMONTH
+%%SOZ_DAT=%%$OYEAR.%%OMONTH
+
+* Eingabe Directory 
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-RENTEN\%%$OYEAR.\DUE\%%DAT1
+
+%%BEIBLATT=N
+
+* Drucker Freigabe
+%%PRINTER=\\msdhp7\DLD5081319
+
+%%PROT=PFDR0100-DF_RDRA-REST_%%SOZ_DAT..pdf 
+
+
+%%INCLUDE=%%PROT
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-RENTEN\%%$OYEAR.\DUE\%%DAT1.\gedruckt
+
+* Datei Auswahl
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%FORCE_OUTDIR=N
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.11.2015  08:24:27  zv171e1 neu
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+

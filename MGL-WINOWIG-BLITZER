@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-BLITZER   /  zvaa405 11.06.2024
+* Auftraggeber: Andreas Hillebrands
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\mstuff01\Vitronic$\RVCU-DATA\processing_chain\1_output_tuff_forwarder
+%%OUTDIR=\\vfdigitar02.itk.local\mgpmowi\robot\download_vitronic_falldaten 
+%%DAYS=1
+
+***    TEST  ***
+
+**INDIR =\\msbmcc03\CTM_AV\Parm\Testordner\Sortieren
+**OUTDIR =\\msbmcc03\CTM_AV\Parm\Testordner\OUT
+
+***************************************
+
+
+
+%%TEST=N
+
+%%DEBUG=N
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Returncode: %%COMPSTAT  Bitte ueberpruefen.
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\CF\JOB\Job-Sync-And-Delete.ps1
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+

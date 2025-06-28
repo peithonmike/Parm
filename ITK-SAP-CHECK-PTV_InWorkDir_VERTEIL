@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-SAP-CHECK-PTV_InWorkDir_VERTEIL
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\ITK-SAP-CHECK-PTV
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%SYSOUT=\\msbmcc03.itk.local\G$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%PROJEKT=VERTEIL
+%%PFAD=\\msptv\PTV-Projekte\%%PROJEKT.\InWorkDir\*.*

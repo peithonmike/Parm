@@ -1,0 +1,50 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Test_Free_Space
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job testet wieviel freier Speicher zur verfügung steht und sendet eine Warnung per Mail
+ ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+
+* Eingabe Directory 
+%%INDIR=\\vfdigitar02\Winowig
+%%DRIVELETTER=k:
+%%WarnSchwelleGB=40
+
+* Sendmail
+
+%%Empfaenger=Produktions-Steuerung@itk-rheinland.de,winowig@itk-rheinland.de
+%%Absender=Produktions-Steuerung@itk-rheinland.de
+%%SMTPServer=smtp
+
+
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+%%TEXT_NOTOK=
+
+* *********************************************************************
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\WINOWIG_Check_Free_Space.ps1
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

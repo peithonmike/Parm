@@ -1,0 +1,26 @@
+ 
+%%TRENNER=";" 
+%%DB=e01_due
+%%U=e01_jasper
+%%P=jasperav
+ 
+%%FILE=\\msbmcc03\c$\temp\OKEWO.csv
+
+ 
+%%TEST=N
+ 
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\ZJSJOB.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\ZJSJOB.sql
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\c$\temp\OKEWO.csv
+
+* ------------------------------------------------------------------

@@ -1,0 +1,11 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MAG-ETP-T-IMPORT-PROD
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND="C:\Program Files\Scripte\Automatisierung_Kosy\MAG_Auto_Kosy.bat"
+
+%%MAIL=moritz.hintzen@mags.de;Matthias.Otten@mags.de;simone.thissen@itk-rheinland.de;tobias.redmann@itk-rheinland.de;Dieter.Assenmacher@itk-rheinland.de;Erich.Janke@itk-rheinland.de;produktions-steuerung@itk-rheinland.de

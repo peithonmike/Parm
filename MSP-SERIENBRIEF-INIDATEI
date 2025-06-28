@@ -1,0 +1,44 @@
+* MSP INIFILE 
+* Abholen Serienbriefe   
+* Muster 
+* Mandanten-Nummer ; Mandanten Verzeichnis 
+
+
+
+
+
+* ITK 
+* alt 1050;\\srv03\qaspkdvz$\Daten\Orgaeinheit\MSP\
+*1860;\\vfitk\daten\Daten\MSP\MSP_Initialpasswort_Listen
+
+
+* Dormagen 
+*1820;\\n200d01n01.ad.stadt-dormagen.de\egm\1200\MSP_Initialpasswort_Listen
+*1821;\\n200d01n01.ad.stadt-dormagen.de\egm\1201\MSP_Initialpasswort_Listen
+*1822;\\n200d01n01.ad.stadt-dormagen.de\egm\1202\MSP_Initialpasswort_Listen
+*1823;\\n200d01n01.ad.stadt-dormagen.de\egm\1203\MSP_Initialpasswort_Listen
+*1824;\\n200d01n01.ad.stadt-dormagen.de\egm\1204\MSP_Initialpasswort_Listen
+*1825;\\n200d01n01.ad.stadt-dormagen.de\egm\1207\MSP_Initialpasswort_Listen
+*1826;\\n200d01n01.ad.stadt-dormagen.de\egm\1208\MSP_Initialpasswort_Listen
+*1827;\\n200d01n01.ad.stadt-dormagen.de\egm\1209\MSP_Initialpasswort_Listen
+*1828;\\n200d01n01.ad.stadt-dormagen.de\egm\1210\MSP_Initialpasswort_Listen
+*1829;\\n200d01n01.ad.stadt-dormagen.de\egm\1212\MSP_Initialpasswort_Listen
+*1830;\\n200d01n01.ad.stadt-dormagen.de\egm\1213\MSP_Initialpasswort_Listen
+
+* Grevenbroich 
+1840;\\vfgv1\voldaten1\Daten\FB 10\EGM\1300-1840\MSP_Serienbriefe
+1841;\\vfgv1\voldaten1\Daten\FB 10\EGM\1841-1303\MSP_Serienbriefe
+* Jüchen
+*1850;\\srv03.asp.rzne.de\qaspju$\daten\orgaeinheit\EGM\1400\MSP_Initialpasswort_Listen
+
+* Kaarst
+*1870;\\srv03\qaspka$\Daten\Orgaeinheit\EGM\MSP_Initialpasswort_Listen
+
+* Meerbusch
+1910;\\vfmeerbusch\daten\MSP_Serienbriefe
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.04.2021    zv173x2 neuer Job für Grevenbroich Update aber kein Druck
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

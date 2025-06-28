@@ -1,0 +1,44 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Landeshauptstadt Düsseldorf
+***********************************************************************************
+*  Jobname     : DUE-16-jaehrige-PAP
+*  APPLICATION : OK.EWO.JASPER
+***********************************************************************************
+*********************************************************************************** 
+*
+
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-16-JAEHRIGE-PAP
+*
+* Druckdatei über Papyrus-Server an Duesseldorfer 
+* Druckerei (Amt 16) senden
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-PAPYRUS
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+ 
+
+
+*Eingabedatei
+%%SYSUT1=\\msbmcc03\ctm_av\Jasper-Output\DUE-16-JAEHRIGE-%%TTMMJJJJP_%%$ODATE...CSV
+
+
+* Papyrus Document
+%%SYSUT2=#DOCE300#THISFILE#EW30B#DFZSDSE##1_DUE-16-JAEHRIGE-PAP
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-16-jaehrige-Aenderung.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-16-jaehrige.pdf
+* ------------------------------------------------------------------

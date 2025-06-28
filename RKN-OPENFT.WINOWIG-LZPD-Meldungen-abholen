@@ -1,0 +1,67 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-OPENFT.WINOWIG-LZPD-Meldungen-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+* Ersatz wegen neuer Struktur für : RKN-OPENFT.WINOWIG-Polizei-Meldungen
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-OpenFT-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* OpenFT Partner / Anschluss 
+* BAG, BZR,LZPD..... 
+%%ANSCHLUSS=LZPD
+
+* Emfangen oder Senden
+%%RICHTUNG=EMPFANGEN
+
+
+
+* Eingabe Directory 
+%%INDIR=\\msOpenft01\c$\CTM_AV\Openft\empfangen\LZPD\WINOWIG\RKN
+
+* Datei Auswahl
+%%INCLUDE=XMLMDE*.ZIP
+
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkr$\Daten\Apps\winowig\ftp\eingang\polizei
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\msOpenft01\c$\CTM_AV\Openft\empfangen\LZPD\WINOWIG\RKN\erledigt
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+* zu kopierende  Files werden anhand des Suchbegriffes ermittelt
+*SEARCH=XMLMDE*.ZIP
+* Input_dir ist die Directory, die auf dem OpenFT Server liegt
+* Dahinein schreibt das BfJ (BZR) die Antworten auf die Anfragen
+*INPUT_DIR=
+
+* Output_dir ist die Empfangsdirectory des Anwenders im Verfahren  
+*OUTPUT_DIR=
+
+

@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-Import
+* 
+* 
+***********************************************************
+%%DESCRIPTION=Importieren Eingabedaten ruhender-fließender Verkehr,Polizei,ePZA,Zahlungen usw. in DB 
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\WinOWIG\Import Arten je Mandant.csv
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+* ------------------------------------------------------------------
+%%TEST=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.10.2014  09:11:05  zv173x2 andreas.hillebrands@itk-rheinland.de
+*                                  benötigt den Logoutput täglich.
+*    02.05.2013  09:36:36  zv173x2 WINOWIG_LOG Var nach LIBMEMSYM WINOWIG verschoben 
+
+*    07.03.2013  09:17:51  zv173x2 eMail Adr SR
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

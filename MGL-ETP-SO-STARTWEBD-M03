@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MAG-ETP-T-STARTWEBD-M03
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**COMMAND=Powershell.exe -executionpolicy bypass -file "C:\Program Files\Scripte\kosy-services-start_MG.ps1"
+%%COMMAND=Powershell.exe -executionpolicy bypass -file "C:\Program Files\Scripte\kosy-services-start_STADTMG.ps1"
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%MAIL=tobias.redmann@itk-rheinland.de;simone.thissen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF-NOTOK=%%JOBNAME ist NOTOK
+
+%%TEXT-NOTOK=Starten der Dienste ist nicht gelaufen

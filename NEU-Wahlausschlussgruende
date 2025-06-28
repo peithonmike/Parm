@@ -1,0 +1,64 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : NEU-Wahlausschlussgruende
+* erstellt : 15.04.2016 06:54:20
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+ 
+* 
+* es wird eine zusätzliche LIBMEMSYM verwendet
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###Optionsdeutsche_MGL
+ 
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=NEU-Wahlausschlussgruende.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/NEU-Wahlausschlussgruende
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=XLSX
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\NEU-Wahlausschluss-%%TTMMJJJJP_%%$ODATE...%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=N
+%%EMAIL-U=Auftrag : NEU-Wahlausschluss-%%TTMMJJJJP_%%$ODATE..
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+**EMAIL-T=Burghard.Schramm@ITK-Rheinland.de;
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n ist die Datei verschoben auf: \n  \n \\srv03\qaspne$\Daten\Apps\OKEWO\okprg\okewo_neu\div\Auswertungen\wöchentliche \n Auswertungen \n  \n bitte überprüfen! \n  \n  \n  \n 
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-Wahlausschlussgründe.pdf
+* ------------------------------------------------------------------

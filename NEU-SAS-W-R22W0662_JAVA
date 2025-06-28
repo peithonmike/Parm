@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-R22W0660_JAVA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Eingabe\R22W0660_ST0080A_Eingabe.txt
+%%INFILE2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Eingabe\R22W0660_ST0080S_Eingabe.txt
+%%INFILE3=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Eingabe\R22W0660_ST0085A_Eingabe.txt
+%%INFILE4=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Eingabe\R22W0660_ST0085S_Eingabe.txt
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Ausgabe\R22W0660_ST0080_Ausgabe.txt
+%%OUTFILE2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Ausgabe\R22W0660_ST0085_Ausgabe.txt
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\R22W0660_ST0080_85.jar -in80a %%INFILE1 -in80s %%INFILE2 -out80 %%OUTFILE1 -in85a %%INFILE3 -in85s %%INFILE4 -out85 %%OUTFILE2

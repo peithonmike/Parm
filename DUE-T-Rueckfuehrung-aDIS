@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-T-Rueckfuehrung-aDIS
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MAIL_aDIS
+
+
+
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME - Ist-Rückführung_aDIS ist nicht gelaufen
+%%TEXT_NOTOK=Bitte ueberpruefen.
+
+
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\DUE_IST_SAP_Trennen.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_400.cred"
+
+

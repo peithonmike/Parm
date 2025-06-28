@@ -1,0 +1,39 @@
+ 
+   
+   
+   
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-CCM-Erstellen-Kassendaten
+* 
+*********************************************************** 
+* CARE COST MANAGER
+* Erstellen KIRP Datei per SQL
+*   
+* Ausgabeverzeichnis : \\srv03.asp.rzne.de\ftp$\df\CCM  
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\UP-CCM-SQL
+
+%%DB=ccm_due_amt50
+* %%SQL_COMMAND=exec p_export_nkf
+
+%%LOGFILE_TO_SYSOUT=J
+%%TEST=N
+ 
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\CCM_NKF_DATE.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\CCM_NKF_DATE.sql
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     16.09.2016  12:19:37  zv173x2  ODBC Verbindung auf mssql06 geändert
+*     --------------------------------------------------------------------------------- 
+*    **********************************************************************************

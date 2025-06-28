@@ -1,0 +1,55 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOPART.KTP-Export
+* KinderTagesPflege
+* 
+*********************************************************** 
+* Sopart-Verfahren -> Kasse Neuss Auszahlungsordner 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOPART-MAIL 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=Export Sopart KinderTagsePflege
+
+* Verfahrensbereich hier liegt die Eingabe
+%%SEARCH=*.XML
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\SopartNEU\Sokita\Ktp\Export
+
+* Kassenbereich
+*%%OUTDIR="\\ne1da03\1d03data\WIRT_FIN\FINANZEN\VOLLSTR\Auszahlung Sopart KTP"
+%%OUTDIR="\\vfne\20\Amt20\203 SFirm\51 SoPart KTP"
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+%%VERFAHREN=KTP
+ 
+%%MOVE_ORDNER=erledigt
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\SOPART-NEU-KTP-Schnittstelle.pdf
+
+*  Verzeichnisse
+*"\\ne1da03.nemarkt.rzne.de\1d03data\WIRT_FIN\FINANZEN\VOLLSTR\Auszahlung Sopart Mündelgelder"
+*"\\ne1da03.nemarkt.rzne.de\1d03data\WIRT_FIN\FINANZEN\VOLLSTR\Auszahlung Sopart UVG"
+*"\\ne1da03.nemarkt.rzne.de\1d03data\WIRT_FIN\FINANZEN\VOLLSTR\Auszahlung Sopart WIJU"
+* \\srv03.asp.rzne.de\qaspne$\Daten\Apps\SoKita\Ktp\Export
+
+
+* ------------------------------------------------------------------
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.11.2020  07:49:59  zv173x2 "\\vfne\20\Amt20\203 SFirm\51 SoPart KTP"
+
+*   \\msbmcc03\ctm_av\DOC\SOPART\Umstellung-Sopart-Neuss-User-IDS-und-Server.jpg 
+*    10.12.2013  10:46:18  zv173x2 neuer Pfad und Searchmaske (SEPA-Umstellung)
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

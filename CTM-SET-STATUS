@@ -1,0 +1,24 @@
+* LIBMEMSYM 
+* 
+* Eingabe ist die OrderID des Jobs in umgewandelter Form.
+* Diese muss voher auf dem CTM-Server erstellt werden
+*
+* 1. der Job der verändert werden soll, ins HOLD setzen
+* 2. START/ausführen auf dem Control/M-Server 
+* 3. CMD
+* 4. p_36 OrderID des Jobs auf dem Control/M-Server
+* 5. Ergebnis in ORDERID_10 eintragen
+* 6. dann erst CONFIRM !!!
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+%%ORDERID_10 =97809
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.02.2011  07:05:53  ZV173XC 
+*    19.01.2011  08:30:10  zv173xc 
+*    29.12.2010  08:25:15  ZV173XC 
+*    22.11.2010  10:28:08  ZV173XC 
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

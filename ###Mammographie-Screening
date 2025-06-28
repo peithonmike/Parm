@@ -1,0 +1,5 @@
+* LIBMEMSYM
+* Stichtag ist immer der vom 2 Tag im Monat vor 70 Jahren bis 1. Tag im Monat vor 50 Jahren 
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%VON=02.%%OMONTH..%%JJJJ_M70_%%$ODATE
+%%BIS=01.%%OMONTH..%%JJJJ_M50_%%$ODATE

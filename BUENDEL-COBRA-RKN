@@ -1,0 +1,155 @@
+
+* Pfad für die Deckblätter 
+* Original und PDF 
+
+%%PDF_COVERDIR=\\msbmcc03\ctm_av\PDF-COVER
+
+* Strandard Trenblatt 1-seitig
+%%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Trennblatt.pdf
+* wenn 2-seitig gefordert wird, dann  im Job-LIBMEMSYM 
+* %%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\2-seitig\ Trennblatt.pdf
+* angeben
+
+
+* allgemein Variablen
+
+* INDIR liegt auf dem APPL Server
+* ---------------------------------------------------------------
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* ---------------------------------------------------------------
+%%PDF_INDIR=\\mscobra01\DRUCKE$\%%GEM3.\AUSGABE
+
+*  gesichert wird auf dem Printserver S O U R C E   Ordner wird angelegt
+%%FORCE_PDF_SAMMELDIR_PROCESSED=J
+%%PDF_SAMMELDIR_PROCESSED=\\Msprintff01\source$\cobra\%%$OYEAR.\erledigt\%%GEM3.\%%$ODATE
+ 
+
+%%ONLY_BUENDEL=N
+* ---------------------------------------------------------------
+* Hotfolder FreeFlow
+* Neuss wird im 
+* ---------------------------------------------------------------
+%%USE_FREEFLOW=J
+
+
+* ---------------------------------------------------------------
+* PDF_OUTDIR
+* dahin kommt das erstellte Bündel
+* Printserver D R U C K D A T E N   Ordner wird angelegt
+
+* ---------------------------------------------------------------
+* alt %%PDF_OUTDIR=\\mscobra01\DRUCKE$\%%GEM3.\AUSGABE\BUENDEL
+%%PDF_OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\COBRA\BUENDEL\%%GEM3
+
+
+
+
+* die Dateien werden auf dem APPL Server in Sammelordner verschoben
+* dieser wird nach erfolgreicher Verarbeitung gelöscht.
+* Originaldaten stehen weiterhin im Druckordner zur Verfügung 
+* \\MSPRINTFF01\Druckdaten$\%%$OYEAR.\COBRA\%%GEM3.\erledigt
+%%PDF_SAMMELDIR1=\\mscobra01\DRUCKE$\%%GEM3.\AUSGABE\BESCHEIDE_%%$ODATE
+%%PDF_SAMMELDIR2=\\mscobra01\DRUCKE$\%%GEM3.\AUSGABE\SAMMELLISTE_%%$ODATE
+%%PDF_SAMMELDIR3=\\mscobra01\DRUCKE$\%%GEM3.\AUSGABE\PROTOKOLL_%%$ODATE
+%%PDF_DEL_SAMMELDIR=J
+
+
+
+%%PDF_FILENAME1=%%GEM3.-COBRA-BESCHEIDE-%%$ODATE..PDF
+%%PDF_FILENAME2=%%GEM3.-COBRA-Sammelliste-%%$ODATE..PDF
+%%PDF_FILENAME3=%%GEM3.-COBRA-Buchungsprotokoll-%%$ODATE..PDF
+
+%%PDF_MASK1=%%GEM3._COBRA_Druckausgabe*
+%%PDF_MASK2=%%GEM3._COBRA_Sammelliste*
+%%PDF_MASK3=%%GEM3._COBRA_Buchungsprotokoll*
+
+%%PDF_FRONTCOVER1=%%PDF_COVERDIR.\Cobra\AAA-%%GEM3.-Cobra-Bescheide.pdf
+%%PDF_FRONTCOVER2=%%PDF_COVERDIR.\Cobra\AAA-%%GEM3.-Cobra-SammelListe.pdf
+%%PDF_FRONTCOVER3=%%PDF_COVERDIR.\Cobra\AAA-%%GEM3.-Cobra-Buchungsprotokoll.pdf
+
+%%PDF_BACKCOVER1=%%PDF_COVERDIR.\Cobra\ZZZ-%%GEM3.-Cobra-Bescheide.pdf
+%%PDF_BACKCOVER2=%%PDF_COVERDIR.\Cobra\ZZZ-%%GEM3.-Cobra-SammelListe.pdf
+%%PDF_BACKCOVER3=%%PDF_COVERDIR.\Cobra\ZZZ-%%GEM3.-Cobra-Buchungsprotokoll.pdf
+
+
+
+
+
+
+
+
+
+
+* ---------------------------------------------------------------
+
+
+
+* Die Cover müssen je nach Empfänger angegeben werden
+* alle anderen Angaben sollten aus dem Jobnamen lesbar sein.....   siehe Member: BUENDEL
+* ---------------------------------------------------------------
+* PDF_SAMMELDIR
+* Hier stehen die PDF die zu einem Output gebündelt werden sollen.
+* Im Idealfall mit Front und Backcover
+* da wir Front und Backcover mitgeben, werden diese auch mitgebündelt
+*
+* Leere Dateien werden nicht kopiert sondern nur nach erledigt verschoben 
+* ---------------------------------------------------------------
+* ---------------------------------------------------------------
+* PDF_OUTDIR
+* dahin kommt das erstellte Bündel
+* ---------------------------------------------------------------
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+* ---------------------------------------------------------------
+
+
+
+* kann loga weg ???
+* LOGA
+* Sachgebiet aus Jobnamen ermitteln
+*           10------------- 
+* DOR-LOGA- DN_1200_1200_01 -BU
+%%LOGA_SACHG=%%SUBSTR %%JOBNAME 10 15
+
+
+
+
+* DOR-LOGA- KN_1990_1990_03_5060_C1
+*           10------------------ 
+%%LOGA_DEÜV=%%SUBSTR %%JOBNAME 10 20
+
+
+
+
+* DOR-LOGA- KN _1200_1210_5060_03-BU
+*           10   
+%%LOGA_ART=%%SUBSTR %%JOBNAME 10 2
+
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+* Datei Inhalt
+* beamte + 1 Monat
+* Angestellte aktuell
+* PDF Programm
+%%PDF_EXE=\\msbmcc03\ctm_av\Bin\sontiges\PDFtk\bin\pdftk.exe
+
+
+
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-FILES-SAMMELN_INCL_EXCL.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-PDFTK.ps1
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.11.2016  12:04:11  zv173x2 entfernt FREEFLOW_HOTFOLDER=\\msprintff01\d$\R18LP
+*    05.06.2014  10:49:14  zv173x2 soz in eigenes buendel member
+*    27.05.2014  14:04:57  zv173x2 Sozvariablen auf EZ geändert
+*    27.05.2014  13:56:55  zv173x2 EZ-Listen und Bescheide Anzahl=2
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

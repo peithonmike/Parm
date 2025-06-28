@@ -1,0 +1,45 @@
+***************************************************************** 
+* LIBMEMSYM 
+* KAA-SOPART.AV-Export
+* 
+******************************************************************
+* SoPart® AV - Amtsvormundschaft / Beistandschaft / Mündelgeld 
+* 
+****************************************************************** 
+* Abholen Daten aus dem Mandantenbereich in den Prodbereich.
+* Diese Daten werden dort vom 
+* Host abgeholt(?50t42) ,aufbereitet (?50a44) 
+* und über ONGUM (X17T56..) versendet 
+****************************************************************** 
+
+*************************************************************** 
+* Abholen Daten aus dem Mandantenbereich in den Prodbereich
+* ------------------------------------------------------------
+*
+* Eingabe aus Mandantenbereich
+* DIR  : \\srv03.asp.rzne.de\qasp%%GEM.$\daten\apps\sopart\avor\export
+* File : \\srv03.asp.rzne.de\qasp%%GEM.$\daten\apps\sopart\avor\export\Sopart_Export_an_Kasse.txt
+* Ausgabe im AV-Bereich 
+* DIR :\\srv03.asp.rzne.de\ftp$\%%GEM.\sopart\avor\export 
+* File:\\srv03.asp.rzne.de\ftp$\%%GEM.\sopart\avor\export\sopart_export_neu.txt
+*************************************************************** 
+%%INDIR=\\srv03.asp.rzne.de\qaspka$\daten\apps\sopart\avor\export
+
+
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\srv03.asp.rzne.de\ftp$\ka\Sopart\Avor\Export\roboexp.txt
+$$INCLUDE=\\srv03.asp.rzne.de\ftp$\ka\Sopart\Avor\Export\protokol.dat
+* ------------------------------------------------------------------
+
+
+
+
+
+ 

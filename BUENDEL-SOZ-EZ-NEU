@@ -1,0 +1,144 @@
+* ------------------------------------------------------------------------------
+* S O Z I A L W E S E N 
+* ------------------------------------------------------------------------------
+* E I N M A L Z A H L E R
+* ------------------------------------------------------------------------------
+* ---------------------------------------------------------------
+
+* PDF_INDIR
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* ---------------------------------------------------------------
+%%PDF_INDIR              =\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE
+* ---------------------------------------------------------------
+* PDF_SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* Im Idealfall mit Front und Backcover
+* da wir Front und Backcover mitgeben, werden diese auch mitgebündelt
+*
+* Leere Dateien werden nicht kopiert sondern (nur nach erledigt verschoben) 
+* ---------------------------------------------------------------
+%%PDF_SAMMELDIR          =\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\SOZ-EZ\%%JOBNAME.-%%$ODATE
+%%PDF_SAMMELDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\verarbeitet
+%%FORCE_PDF_SAMMELDIR_PROCESSED=J
+%%PDF_DEL_SAMMELDIR=J
+* ---------------------------------------------------------------
+* PDF_OUTDIR
+* dahin kommt das erstellte Bündel
+* ---------------------------------------------------------------
+%%PDF_OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\SOZ-EZ\BUENDEL\EZ-%%$ODATE
+
+
+
+
+%%USE_FREEFLOW=J
+
+
+%%DRUCK_LOG=\\msbmcc03\ctm_av\Log\ErgebnisLog\SOZ-DRUCK-%%$OYEAR..csv
+
+
+* Pfad für die Deckblätter 
+* Original und PDF 
+
+%%PDF_COVERDIR=\\msbmcc03\ctm_av\PDF-COVER
+
+
+* PDF Programm
+%%PDF_EXE=\\msbmcc03\ctm_av\Bin\sontiges\PDFtk\bin\pdftk.exe
+
+* Strandard Trenblatt 1-seitig
+%%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Trennblatt.pdf
+* wenn 2-seitig gefordert wird, dann  im Job-LIBMEMSYM 
+* %%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\2-seitig\ Trennblatt.pdf
+* angeben
+
+
+
+* Sachgebiet aus Jobnamen ermitteln
+%%SOZ_GKZ=%%SUBSTR %%JOBNAME 12 3
+
+
+
+* Protokolle auf Rosa 
+* Anzahl 1
+%%SOZ_EZ_PROT_INCLUDE=*EZ-*PROT*2%%SOZ_GKZ._%%$ODATE..PDF
+%%SOZ_EZ_PROT_EXCLUDE="-"
+%%SOZ_EZ_PROT_ANZAHL=1
+%%SOZ_EZ_PROT_DRUCKER=\\msprintff01\d$\R18Vorblatt
+
+
+* Bescheide 2-seitig
+* Anzahl 2
+%%SOZ_EZ_BESCH_INCLUDE=*EZ-*KBES*2%%SOZ_GKZ._%%$ODATE..PDF
+%%SOZ_EZ_BESCH_EXCLUDE="-"
+%%SOZ_EZ_BESCH_ANZAHL=2
+%%SOZ_EZ_BESCH_DRUCKER=\\msprintff01\d$\R18doppel
+
+
+* Listen einfach 
+* Anzahl 2
+%%SOZ_EZ_LISTEN_INCLUDE=*EZ-2%%SOZ_GKZ._%%$ODATE..PDF
+%%SOZ_EZ_LISTEN_EXCLUDE=*PROT*,*KBES*,*EIPR_LOE*,*MAZE*
+%%SOZ_EZ_LISTEN_ANZAHL=2
+%%SOZ_EZ_LISTEN_DRUCKER=\\msprintff01\d$\R18LP
+
+* Listen einfach 
+* Anzahl 2
+* EZ-080-NE_PFZV0100_AUSZ_EZ-2024_20140617.pdf
+%%SOZ_EZ_LISTEN2_INCLUDE=*AUSZ_EZ-2%%SOZ_GKZ._%%$ODATE..PDF,*BUHL_EZ-2%%SOZ_GKZ._%%$ODATE..PDF;*BULI_EZ-2%%SOZ_GKZ._%%$ODATE..PDF
+%%SOZ_EZ_LISTEN2_EXCLUDE="-"
+%%SOZ_EZ_LISTEN2_ANZAHL=2
+%%SOZ_EZ_LISTEN2_DRUCKER=\\msprintff01\d$\R18LP
+
+
+* Kassenlisten - Listen einfach 
+* Anzahl 2
+%%SOZ_EZ_KASSEN_LISTEN_INCLUDE=*ANOR_EZ-2%%SOZ_GKZ._%%$ODATE*,*BALI_EZ-2%%SOZ_GKZ._%%$ODATE*,*BUHL_EZ-2%%SOZ_GKZ._%%$ODATE*,*BULI_EZ-2%%SOZ_GKZ._%%$ODATE*,*VERL_EZ-2%%SOZ_GKZ._%%$ODATE*,EZ-115-NE_PFZZ0150_MAZE1_EZ_%%$ODATE..pdf
+
+%%SOZ_EZ_KASSEN_LISTEN_EXCLUDE=*PROT*,*KBES*,*EIPR_LOE*
+%%SOZ_EZ_KASSEN_LISTEN_ANZAHL=2
+%%SOZ_EZ_KASSEN_LISTEN_DRUCKER=\\msprintff01\d$\R18LP
+
+
+
+
+* Muster wenn kein Exclude vorhanden ist
+* %%SOZ_EZ_LISTEN_EXCLUDE="-"
+
+
+* Angaben aus B93 Host Stand 28.05.2014
+*************************************************************************** 
+* AUSZ  0030 Auszahlungsliste KO 2 Copies
+* BUHL  0031 Buchungshinweisliste 2 Copies bis auf DOR und NE ( nur einfach)
+*       0032 Ausz.Liste zur haushaltsmäßigen Verbuchung wie 0031
+*       0040 Giro Auszahlungsliste wie 0031
+* GESU  0041 Gesamtsummenliste wie 0031
+* BALI  0070 Bankliste GR,KA,KO,ME,RO 2 Copies.
+*       0090 Postliste wie 0031
+* AUSB  0140 HHST auflistung alle 2 Copies
+* ANOR  0141 Anordnungen Alle 2 Copies bis auf NE ( erinfach) 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SOZI\SOZ-PDF-Namen.csv
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-FILES-SAMMELN_INCL_EXCL.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-PDFTK.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Log\ErgebnisLog\SOZ-DRUCK-%%$OYEAR..csv
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragsbeschreibung\XXX-SOZ.EZ-BU.txt
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.01.2018  09:22:46  zv173x2 \\vfcache
+*    08.08.2014  09:01:43  zv173x2 LISTEN2_ von duplex auf einfach
+*    01.07.2014  07:26:43  zv173x2 Listen2 ist duplex
+*    03.06.2014  16:12:23  zv173x2 neu erstellt aus BUENDEL-TEST-SOZ-EZ
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

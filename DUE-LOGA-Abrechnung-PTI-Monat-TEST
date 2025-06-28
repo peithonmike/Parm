@@ -1,0 +1,50 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-Abrechnung-PTI-Monat-TEST
+* Läuft auf Test-DB
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\DUE-PTI-Mail
+%%DAT=%%MM_P1_%%$ODATE...%%JJJJ_MM_P1_%%$ODATE
+* PFAD nur wenn der Systempfad erweiter werden soll
+* %%PFAD=
+
+*%%PARAMETER=%%DAT test false
+%%PARAMETER=01.2022 test false
+
+
+%%HEADER_TEXT=TicketMonatsabrechnung %%PARAMETER Test-DB-Abrechnung
+
+
+* EXT_LOGFILE nur wenn das Programm eine externe Logdatei ausgibt
+* %%EXT_LOGFILE=
+
+
+* \\msbmcc03\CTM_AV\Bin\sontiges\PTI-Firmenticket\Test
+%%EXE=\\msbmcc03\CTM_AV\Bin\sontiges\PTI-Firmenticket\Test\TicketMonatsabrechnung.exe
+
+                                         
+
+
+
+%%AUFTRAGGEBER=E.Falkenberg
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.03.2021  16:47:13  ZV173X2 neu 
+*                                  Lauf wie Prod Update allerdings auf Test DB und Test EXE
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

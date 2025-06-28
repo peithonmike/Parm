@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MAG-ETP-T-PRELOAD-PROD
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND="C:\Program Files\HKS Informatik\Kosy Enterprise WebServer (MGMAGS)\kosy-service-worker-preload-job_wrapper.bat"
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%MAIL=tobias.redmann@itk-rheinland.de;simone.thissen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de;dieter.assenmacher@itk-rheinland.de;erich.janke@itk-rheinland.de

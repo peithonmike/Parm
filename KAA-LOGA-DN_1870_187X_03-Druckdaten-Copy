@@ -1,0 +1,87 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Copy Druckdaten DN Beamte nach J�chen
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung �ber Net Use m�glich default NETUSE=N
+* F�r Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-BEAMTE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+**INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\%%LOGA_ART\DN_1910_1910_01\erledigt
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\DN
+%%INCLUDE=DN_1870_187*_*3*.pdf
+
+
+* ---------------------------------------------------------------
+* OUTDIR
+* Hier werden die PdfDateien hineinkopiert .
+* ---------------------------------------------------------------
+%%USE_FREEFLOW=N
+
+%%OUTDIR=\\vfka\10\Bereich 10\AustauschITK\NAR\%%$ODATE
+
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\%%LOGA_ART.\kopiert
+
+
+
+
+%%STEPNAME=Kopieren-MZ-Druckdaten
+
+
+* abweichend vom Standard
+%%EXCLUDE="-"
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen gepr�ft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=NJ
+%%DEBUG=N
+
+
+* *********************************************************************
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-DATEN-DOR
+%%NETUSE=N
+* Path f�r den erweiterten Zugriff
+
+*%%NETUSE_PATH=\\vfgv1\voldaten1\Daten\DruckausgabeITK\LOGA\NBE
+             
+* Laufwerksbuchstabe in der Form Y:
+*%%LAUFWERK=Y:
+* *********************************************************************
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+%%BETREFF_OK=LOGA-Daten Personalabrechnung NAR
+%%TEXT_OK="F�r das Personalamt der Stadt Kaarst wurden NAR-Listen bereitgestellt"
+
+
+
+
+*   ********************************************************************************** 
+*    -- �nderungen ------------------------------------------------------------------- 
+
+*    15.09.2014  15:09:55  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

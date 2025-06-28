@@ -1,0 +1,59 @@
+***********************************************************************************
+* LIBMEMSYM                                                                   *
+* NEU-LOGA-KN_1920_1920_03-BU
+*
+*
+***********************************************************************************
+ 
+ 
+
+
+%%HMAN=%%SUBSTRING %%JOBNAME 13 4
+%%MAN=%%SUBSTRING %%JOBNAME 18 4
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-ANGESTELLTE-DRUCKEREI
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+* Mandantenbezeichnung
+%%DESCRIPTION=%%LOGA_MAN_%%MAN
+ 
+* ------------------------------------------------------------------
+* FreeFlow-Zuordnung  KN
+%%FREEFLOW_HOTFOLDER=%%LOGA_KN_DRUCKER
+* ------------------------------------------------------------------
+
+    
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* ------------------------------------------------------------------
+%%TEST=N
+
+%%INCLUDE=%%LOGA_SACHG.*108*NHCM*.pdf
+
+%%PDF_FILENAME=%%GEM3.-%%LOGA_SACHG.-%%LOGA_DAT.-BU.PDF
+
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NAR\NHCM
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\Workbench
+
+%%PDF_INDIR=%%INDIR
+%%PDF_OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\Workbench
+**PDF_FILENAME=%%GEM3.-%%LOGA_SACHG.-%%LOGA_DAT.-BU.PDF
+%%PDF_FILENAME=%%GEM3.-DRK-NHCM-KUVERT-NAR-%%LOGA_DAT.-BU.pdf
+
+%%PDF_SAMMELDIR=%%INDIR.\%%LOGA_SACHG
+%%PDF_SAMMELDIR_PROCESSED=%%INDIR.\verarbeitet
+
+
+
+*    ************************************************************************************ 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     16.05.2024  11:58:37  zvaa241 neu
+*     --------------------------------------------------------------------------------- 
+*    *********************************************************************************** 
+
+
+
+

@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-SOZ-MZ-Sodatis-002-ZADA-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-MZ-SODATIS
+ 
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+**OUTDIR=\\n900d01vf01.n900d01.int.de\aemter$\KR5000\Sodatis-ITK\%%$OYEAR.\%%SOZ_DAT
+**OUTDIR=\\10.109.1.194\aemter$\KR5000\Sodatis-ITK\
+%%OUTDIR=\\RKN-Data01.n900d01.int.de\aemter$\KR5000\Sodatis-ITK\
+%%STEPNAME=Kopieren-Sodatis-ZADA-Dateien
+%%INCLUDE=EZ-GS-NE_2*%%GKZ8_7_2._PFGS0700_SEI*_%%SOZ_DAT._Kalendermonat.txt
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden mehr Variablenwerte angezeigt
+%%DEBUG=N
+* ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

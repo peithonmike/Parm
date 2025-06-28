@@ -1,0 +1,20 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Korschenbroich
+***********************************************************************************
+*  Jobname     : NEU-ALKISP-T-STG-Datenaufbereitung
+*  APPLICATION : GEOAS
+***********************************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%COMMAND=D:\Programme\Batchprogramme\start_sgk.bat
+
+%%MAIL_NOTOK=ralf.dixneit@itk-rheinland.de;hendrik.possberg@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - NOTOK - Bitte überprüfen
+
+%%TEXT_NOTOK=Datenaufbereiitung STGK Neuss ist abgebrochen

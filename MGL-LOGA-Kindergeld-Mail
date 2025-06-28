@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-Kindergeld-Mail
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Empfänger MG-Buchhaltung  (durch Semikolon getrennt)
+          
+%%EMAIL_T=Astrid.Mueller@moenchengladbach.de;Birgit.Diederichs@moenchengladbach.de;Claudia.Esser@moenchengladbach.de;Daniel.Franken@moenchengladbach.de;Ellen.Wellershaus@moenchengladbach.de;Gisela.Hollendung@moenchengladbach.de;Maria.Krause@moenchengladbach.de;Roxane.Raszke@moenchengladbach.de
+
+* Subject
+%%EMAIL_U=Job-Nachricht:   Die Datei fuer Kindergeldstatistik steht zur Verfuegung
+
+* Kopie
+%%EMAIL_CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;Produktions-Steuerung@itk-rheinland.de
+
+* Blindkopie
+*%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+*Anhang (durch Semikolon getrennt) 
+*%%EMAIL_A=
+
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.07.2017  10:53:16  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+

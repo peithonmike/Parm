@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-ETP-T-PRELOAD-TEST
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND="c:\Program Files\HKS Informatik\Kosy Enterprise WebServer (NE)\kosy-service-worker-preload-job_wrapper.bat"
+
+%%MAIL02=produktions-steuerung@itk-rheinland.de;simone.thissen@itk-rheinland.de;tobias.redmann@itk-rheinland.de;Dieter.Assenmacher@itk-rheinland.de;Erich.Janke@itk-rheinland.de
+

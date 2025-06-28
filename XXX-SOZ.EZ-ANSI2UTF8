@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-SOZ.EZ-ANSI2UTF8
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+* Eingabe HOST-Daten Bereich  
+%%SEARCH_DIR=\\srv03.asp.rzne.de\ftp$\av\soz\EZ
+* Daten-Datei Suchmaske
+%%SEARCH=500.SOZ.SRZ.*-SEPAEZ.*_CT_%%$ODATE
+
+%%PROGRAMM=ANSI2UTF8.exe
+* Ausgabe als UTF8 
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\soz\EZ
+
+
+
+%%TEST=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.03.2014  08:46:17  ZV173X2 Programm variabel
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

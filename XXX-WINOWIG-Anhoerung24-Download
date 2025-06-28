@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-Anhoerung24-Download
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+%%PROGPATH  =\\srv03\sys_all$\Programme\winowig\prog\
+%%PROGPATHOA=\\srv03\sys_all$\Programme\winowig\prog\
+
+* %%LOGIN=-Wo2000Login;111;50
+
+
+
+%%AKTIONSTARTEN=aktionstarten.exe
+%%AKTIONENOA="-A430"
+
+%%WOSPOOL=WoSpool.exe
+%%PARAMETEROA="Batchstart Typ=Exe Aktion='Online Anhoerung: Export' SB=50"
+
+
+%%ONLINEANHOERUNGABGLEICH=OnlineAnhoerungAbgleich.exe
+%%PARAMETER=BATCHSTART
+
+
+%%IMPORTNT=ImportNT.exe
+    
+%%AUFTRAGGEBER=A.Hillebrands
+ 
+%%ISE=N
+%%DEBUG=N
+%%TEST=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\job\XXX-WINOWIG-Anhoerung24-Download.ps1
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.07.2018  14:59:39  zv173x2 AUFTRAGGEBER=A.Hillebrands
+*    18.09.2017  16:28:07  zv173x2  Dormagen wegen Fehler deaktiviert 
+*    10.07.2017  12:39:24  zv173x2 LOGIN in Powershell für mehrere Mandanten fest codiert
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-WINOWIG-Export-Mobil
+* 
+* 
+*********************************************************** 
+* Export aus Webanwendung nach WINOWIG
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%SEARCH=XMLMDE_%%$ODATE*
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\ruhenderverkehr
+
+%%TEST=N

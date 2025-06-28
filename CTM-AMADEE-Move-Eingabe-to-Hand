@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-AMADEE-Move-Eingabe-to-Hand
+* 
+* 
+*********************************************************** 
+* WinSCP ist seit dem 18.11.2019 nicht in der Lage nach AmadeeCloud zu senden
+* da aber bereits Prod Begin ist werden bis zur Lösung des Problems die Daten per Hand in die Clud gesetzt.   
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\vfmgapps\apps\Verfahren\Musikschule
+
+* Datei Auswahl
+%%INCLUDE=IST_musikschule_4499_20191119.TXT
+%%EXCLUDE="-"
+* Ausgabe Directory
+%%OUTDIR=\\msbmcc01\ctm_av\TEMP\AmadeeProd
+
+ 
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfmgapps\apps\Verfahren\Musikschule\erledigt\MGL
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+

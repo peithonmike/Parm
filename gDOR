@@ -1,0 +1,64 @@
+* *************************************************************
+* Globale Variablen          
+* Stadt Dormagen
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+
+%%STADT  =Stadt
+%%ORT    =Dormagen
+%%GKZ    =200
+%%GKZ8   =05162004
+%%GKZ8_7_2=%%SUBSTRING  %%GKZ8 7 2
+
+%%GKZ6   =%%SUBSTRING  %%GKZ8 3 6
+%%GEM    =DO
+%%GEM3   =DOR
+
+* OK.EWO Ortsnummer
+%%E01E200_ORTNR=22
+
+* FTP-Ordner
+%%ftp_lw = qaspdo$
+
+
+*
+* Behördennummer für den Datenaustausch über OpenFT mit dem Bundesamt für Justiz (BfJ)
+*
+* Dormagen 
+%%BFJ_ID_OKEWO=R8141
+
+* Dormagen -Ausländerbehörde - 
+%%BFJ_ID_OKVISA=R8141A
+
+*  -MIGEWA- 
+%%BFJ_ID_MIGEWA=wird-nicht-benutzt
+
+*  -WINOWIG - 
+%%WINOWIG_GKZ=200
+%%WINOWIG_AOWI_GKZ=201
+
+
+
+
+*
+* KSU2000 OKEWO-Abgleich
+*
+%%KSU_NR =200
+%%KSU_DIR =ksu2000_krzn
+
+%%MD1 =DOR
+
+%%MD2 =do
+%%MD3 =dor
+%%MD4 ="Stadt Dormagen"
+%%FW_MesoDatei=\\srv03.asp.rzne.de\qasp%%MD2.$\Daten\Apps\KSU\Wohnungswesen\EWO_ABGLEICH\EWO_Daten\ewo_%%MD2..txt
+%%FW_ImportDatei=\\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR\kasse\%%KSU_NR._*.txt
+%%CTMFW=ctmfw -input c:\CTM_AV\Parm\KSU2000_FW_OKEWO_%%MD3..txt
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.08.2014  08:45:38  zv173x2 %%GKZ8_7_2=%%SUBSTRING  %%GKZ8 7 2 
+*    16.06.2011  11:03:25  ZV173X2 GKZ6
+*    18.02.2011  10:32:35  ZV173X2 Blankzeilen entferntwg CTM BUG
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

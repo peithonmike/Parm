@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-P63-T-COPY-PTV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\system
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\srv03\qaspme$\Daten\Apps\ftp\av\P63\PROBAUG_Kasse\BAU_800%%$ODATE.*.csv
+
+%%ausdat1=\\srv03\qaspme$\Daten\Apps\ftp\av\P63\PROBAUG_Kasse\Verarbeitet\BAU_800%%$ODATE.*.csv
+%%ausdat2=\\msptv01\d$\BAU_EXXX\outDir\BAU800_%%$ODATE.*.csv
+
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer ProBau-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer ProBau-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der ProBau-Daten %%GEM3. zum PTV-Server ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der ProBau-Daten %%GEM3. zum PTV-Server ist NOTOK.

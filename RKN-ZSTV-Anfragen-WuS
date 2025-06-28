@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-ZSTV-Anfragen-WuS
+* Waffen und Sprengstoffverwaltungs Anfragen aus 
+* Sendebereich (OpenFT Server) an das BfJ (ZSTV) senden
+* 
+*********************************************************** 
+%%TEST=N
+
+
+%
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\ZSTV-RKN
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\ZSTV-OPENFT-SENDEN-RKN
+
+
+ 
+ 
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\CTM_AV\Log\ErgebnisLog\RKN-ZSTV-Anfragen-WuS.csv
+
+* ------------------------------------------------------------------
+
+

@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-WINOWIG-Export-Mobil
+* 
+* 
+*********************************************************** 
+ 
+ 
+* Export aus Webanwendung nach WINOWIG Mandant 200 und 201 (AOWI)
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+%%WINOWIG_GKZ=202
+
+
+* Search Dir wird nicht verwendet
+%%SEARCH=XMLMDE_%%$ODATE*
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\ruhenderverkehr
+
+%%TEST=N
+
+ 
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\WINOWIG-DOR-Export-Mobil-XML.pdf
+* ------------------------------------------------------------------

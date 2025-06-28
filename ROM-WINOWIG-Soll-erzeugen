@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-WINOWIG-Soll-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%ART="Batchstart Typ=Exe Aktion='Soll:*'  SB=50" 
+
+%%PARAMETER=%%ART
+%%LOGIN=%%WINOWIG_GKZ
+%%DESCRIPTION=Schnittstellen-Dateien Soll erzeugen 
+
+
+%%TEST=N
+%%DEBUG=N
+ 
+* ------------------------------------------------------------------
+
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\ausgang\soll
+%%SEARCH=WiNOWIG_SOLL_*.txt
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass  \\msbmcc01\c$\CTM_AV\Bin\Powershell\BL\JOB\Job-WINOWIG-WoSpool.ps1
+
+
+
+
+
+
+
+
+
+

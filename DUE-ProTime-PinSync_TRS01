@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-ProTime-PinSync
+* Pin-Syncronisation TimeRecord-Server
+* 
+***********************************************************
+%%SERVER=MSTRS01
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%COMMAND=\\mstrs01.itk.local\d$\materna\vsp\apps\Ddorf\distri_pin.cmd
+%%OWNER=itk\trssync
+
+%%mailNOTOK=itk.FB1_SB131_Windows@kdvzneuss
+
+
+**SYSOUT=\\msbmcc03\ctm_av\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+

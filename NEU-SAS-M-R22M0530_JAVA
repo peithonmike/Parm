@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-M-R22M0530_JAVA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Eingabe\R22M0530_EINGABEA.TXT
+%%INFILE2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Eingabe\R22M0530_EINGABEB.TXT
+
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Ausgabe\R22M0530_AUSGABE.txt
+
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\#220530.jar -ina %%INFILE1 -inb %%INFILE2  -out %%OUTFILE1 
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.08.2013  15:07:59  zv173x2 #220530.jar in 220530.jar jetzt mit ;
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

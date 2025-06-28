@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-Check-SOLL-Directory  
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%SMTPSERVER=smtp
+%%FROM=Produktions-Steuerung@itk-rheinland.de
+%%TO=Produktions-Steuerung@itk-rheinland.de
+%%SUBJECT=%%JOBNAME NOT_OK Bitte Prüfen !
+%%BODY=Es sind noch Dateien vorhanden Bitte Prüfen !
+
+
+***************************************
+
+
+
+%%TEST=N
+
+%%DEBUG=N
+
+**MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de;schnittstellen-finanzwesen@itk-rheinland.de
+**BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+**TEXT_NOTOK=Joblog: %%JOBNAME hat keie Protokoll-Datei gefunden. 
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\CF\JOB\Job-Check_4_Files_in_Dirs.ps1
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+

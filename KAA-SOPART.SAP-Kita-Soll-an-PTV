@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-SOPART.SAP-Kita-Soll-an-PTV
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SOPART-MAIL 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%DESCRIPTION=Export Sopart Kita
+
+
+* Indir
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspka$\Daten\Apps\Sopart%%GEM3.\sopart\Kita\Export
+* Infile 
+%%SEARCH=Sopart_Export_an_Kasse.txt
+
+
+
+##OUTDIR=\\msptv01.itk.local\ptv-projekte\SAP_SOPART\inDir
+%%OUTDIR=\\msptv02.itk.local\ptvprojekte$\SAP_Export\SOPKIT1_EXXX\inDir
+
+* TESTAUSGABE
+* %%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\test\ptv-projekte\sap_sopart\inDir
+
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+%%VERFAHREN=KITA
+%%MOVE_ORDNER=Verarbeitet
+%%MOVE_FILE=%%GEM3.-SopartKita_%%$ODATE..txt
+
+
+
+
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.01.2014  09:42:47  zv173x2 Eingabe Verzeichnis war noch alt 
+
+*    06.02.2013  15:22:36  zv173x2 In Verzeichnis war falsch 31.01. aus neuem Verzeichnis nachgeholt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,24 @@
+* *************************************************************
+* Table Variablen          
+* DUE-Y66VIA-T-Copy-PTV
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+
+%%EINGABE_VZ=\\vfdustvg\66\amt66\Themen\via_baustelle_kasse
+%%EINDAT=VIA*.csv
+%%AUSGABE_1=\\msptv01.itk.local\d$\VIABAU_EDUE\outDir
+%%AUSGABE_2=\\vfdustvg\66\amt66\Themen\via_baustelle_kasse\verarbeitet
+%%DATUM=%%$ODATE
+            
+++USERID=ZVDUEFTP
+++PW=sgbTabelle21
+++AUSGABE_1=\\vfdustvg\66\amt66\Themen\via_baustelle_kasse\test
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\MH\via.ps1 -eingabe_vz %%EINGABE_VZ -eindat %%EINDAT -ausgabe_1 %%AUSGABE_1 -ausgabe_2 %%AUSGABE_2 -datum %%DATUM

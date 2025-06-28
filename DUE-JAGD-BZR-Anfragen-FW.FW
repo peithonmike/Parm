@@ -1,0 +1,23 @@
+#******************************************************************
+# Filewatcher %JOBNAME%
+# wartet auf CREATE einer Anfragedatei durch den Mandanten
+# sobald eine Anfragedatei erzeugt ist, wird der Anfrage(Move) Auftrag
+# zum verschieben auf den OpenFT Server
+#******************************************************************
+#    DO_CMD ctmorder -schedtab JAGD.OPENFT-BZR-Anfragen  -odate %odate% -force y
+# AB-U0752-*.txt 
+
+
+INTERVAL 60 
+FROM_TIME  0600 
+STOP_TIME  1800
+
+  
+ 
+ON_FILEWATCH \\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LDS\LdsPlausiTest\*.* 
+THEN
+DO_CMD ctmorder -schedtab Write-EMail-FW-ZV173X2   -odate %odate% -force y
+ELSE
+END_ON
+
+

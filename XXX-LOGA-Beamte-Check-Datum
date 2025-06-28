@@ -1,0 +1,41 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Beamte-Check-Datum
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\XXX-LOGA-CHECK-DATUM-AV-MAIL
+
+
+
+
+%%INDIR=
+%%FORMAT=MM.JJJJ
+%%DATE=%%OMONTH..%%$OYEAR
+**DATE=01.2024
+%%INCLUDE=*.pdf
+%%INDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\KN\
+%%INDIR2=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\DN\
+%%EMAIL_U=Beamtenabrechnung %%DATE ist abgeholt. Folgeverarbeitung kann aktiviert werden.
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\XXX-LOGA-Check-Datum
+
+%%EMAIL_PROD=Produktions-Steuerung@itk-rheinland.de
+%%BETREFF_PROD=LOGA Daten Beamte  %%OMONTH..%%$OYEAR sind korrekt abgeholt worden
+
+%%MAIL_OK=Martina.Milka@ITK-Rheinland.de
+%%MAIL_CC=hr-support@itk-rheinland.de
+%%BETREFF_OK=Beamte Daten %%OMONTH..%%$OYEAR sind korrekt.   Sonderlisten können erstellt werden
+%%TEXT_OK=%%JOBNAME
+
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Check-FileS-LastWriteTime.ps1  -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+%%TEST=N
+%%DEBUG=N
+

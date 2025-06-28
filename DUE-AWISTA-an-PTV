@@ -1,0 +1,49 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-AWISTA-an-PTV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\DUE-AWISTA-PAKET-NR
+
+
+
+
+
+*   
+%%INDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\AWISTA
+
+%%INFILE=DUE_AWI_T%%$ODATE.%%AW..TXT
+**INFILE=DUE_AWI_T20240311007T03.txt
+
+* PTV Projekt
+%%OUTDIR=\\msptv01\d$\PTV\Projekte\SAP_Export\AWISTA_EDUE\INDIR
+
+%%OUTFILE=%%INFILE
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\AWISTA\verarbeitet
+
+%%OUTFILE_PROCESSED=%%INFILE
+
+
+
+%%TEST=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Move-File.ps1
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    13.08.2019  16:12:08  zv173x2 006
+*    13.07.2018  12:54:38  zv173x2 006
+*    01.06.2016  12:17:31  zv173x2 005
+*    14.07.2015  07:54:04  zv171e1 Job neu angelegt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

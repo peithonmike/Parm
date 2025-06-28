@@ -1,0 +1,34 @@
+* *************************************************************
+* LIBMEMSYM 
+* Globale Variablen          
+* Gemeinde Rommerskirchen
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%STADT  =Gemeinde
+%%ORT    =Rommerskirchen
+
+%%GEM3   =ROM
+%%GEM    =RO
+%%GKZ8   =05162028
+
+* OK.EWO Ortsnummer
+*  02.11.2015
+%%E01E200_ORTNR=19
+
+
+*
+* Behördennummer für den Datenaustausch über OpenFT mit dem Bundesamt für Justiz (BfJ)
+*
+* Rommerskirchen 
+%%BFJ_ID_OKEWO=R7986
+
+*  -MIGEWA- 
+%%BFJ_ID_MIGEWA=wird-nicht-benutzt
+%%WINOWIG_GKZ=700
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.11.2021  08:54:52  zv173x2 %%WINOWIG_GKZ=700
+*    18.02.2011  10:32:35  ZV173X2 Blankzeilen entferntwg CTM BUG
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

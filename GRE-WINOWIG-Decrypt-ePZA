@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-WINOWIG-Decrypt-ePZA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\srv03\qaspGR$\Daten\Apps\winowig\ftp\eingang\ePZA-GPG
+%%OUTDIR=\\srv03\qaspGR$\Daten\Apps\winowig\ftp\eingang\ePZA
+%%INCLUDE=*.gpg
+%%EXCLUDE="-"
+
+%%GPG_EXE=c:\Program Files (x86)\GNU\GnuPG\pub\gpg.exe
+
+%%HOMEDIR=C:/CTM_AV/Bin/Gpg4win/gnupg
+
+
+%%P=WeissistgrauundGruenist22
+
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+%%AUFTRAGGEBER=A.Hillebrands
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.07.2018  10:38:49  zv173x2 %%AUFTRAGGEBER=A.Hillebrands
+*    29.05.2018  16:09:56  zv173x2 exe aufruf mit c: WICHTIG!!
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

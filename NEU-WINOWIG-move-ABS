@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-WINOWIG-move-ABS
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* ABS-Fälle: 
+**INDIR=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\winowig\ftp\eingang\WinowigMobilExport
+%%INDIR=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\winowig\ftp\eingang\WinowigMobilExport
+%%INCLUDE=XMLMDE_ABS*.ZIP
+%%EXCLUDE="-"
+
+*fließender Verkehr
+**OUTDIR=\\srv03.asp.rzne.de\qaspdf$\daten\apps\winowig\ftp\eingang\ABS
+%%OUTDIR=\\srv03.asp.rzne.de\qaspne$\daten\apps\winowig\ftp\eingang\ABS
+
+* erledigt Ordner
+**OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\winowig\ftp\eingang\WinowigMobilExport\verarbeitet
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\winowig\ftp\eingang\WinowigMobilExport\verarbeitet
+
+%%TEST=N
+%%DEBUG=N
+%%AUFTRAGGEBER=A.Hillebrands
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.07.2019  10:55:29  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

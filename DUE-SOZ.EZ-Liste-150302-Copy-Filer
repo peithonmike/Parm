@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.EZ-Liste-150302-Copy-Filer
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE
+
+
+* Datei Auswahl
+
+%%INCLUDE=EZ-030-DF_PFTXN100_PROT_EZ-150302_%%$ODATE..pdf,EZ-080-DF_PFZV0100_AUSZ_EZ-150302_%%$ODATE..pdf
+%%EXCLUDE=*AUSB*
+
+* Ausgabe Directory
+
+**OUTDIR=\\vfduswba\51\Amt51\HilfenfuerBehinderte\0_NEUE Ordnerstruktur\Eingliederungshilfe\KDN-Belege\Einmalzahlungslisten
+**%OUTDIR=\\vfduswba\51\Amt51\HilfenfuerBehinderte\0_EGH\Eingliederungshilfe\KDN-Belege\Einmalzahlungslisten
+%%OUTDIR=\\vfduswba\51\Amt51\HilfenfuerBehinderte\0_EGH\Eingliederungshilfe\KDN-Belege\Einmalzahlungslisten
+
+* erledigt Ordner
+*%%OUTDIR_PROCESSED=%%INDIR.\gedruckt
+
+%%TEST=N
+%%DEBUG=N

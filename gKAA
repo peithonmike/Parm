@@ -1,0 +1,55 @@
+* *************************************************************
+* Globale Variablen          
+* Stadt Kaarst
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%STADT  =Stadt
+%%ORT    =Kaarst
+%%ORT2   =ka
+%%GKZ    =500
+%%GKZ8   =05162016
+%%GEM    =KA
+%%GEM3   =KAA
+
+
+* OK.EWO Ortsnummer
+*  02.11.2015
+%%E01E200_ORTNR=7
+
+* FTP-Ordner
+%%ftp_lw = qaspka$
+
+* WINOWIG 
+%%WINOWIG_GKZ=500
+*  
+
+*
+* Behördennummer für den Datenaustausch über OpenFT mit dem Bundesamt für Justiz (BfJ)
+*
+* Stadt Kaarst
+%%BFJ_ID_OKEWO=R6503
+
+*  -MIGEWA- 
+%%BFJ_ID_MIGEWA=wird-nicht-benutzt
+
+*
+* KSU2000 OKEWO-Abgleich
+*
+%%KSU_NR =500
+%%KSU_DIR=ksu2000_krzn
+
+%%MD1=KAA
+
+%%MD2=ka
+%%MD3=kaa
+%%MD4=Stadt Kaarst
+%%FW_MesoDatei=\\srv03.asp.rzne.de\qasp%%MD2.$\Daten\Apps\KSU\Wohnungswesen\EWO_ABGLEICH\EWO_Daten\ewo_%%MD2..txt
+%%FW_ImportDatei=\\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR\kasse\%%KSU_NR._*.txt
+%%CTMFW=ctmfw -input c:\CTM_AV\Parm\KSU2000_FW_OKEWO_%%MD3..txt
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.11.2012  14:48:27  zv173x2 winowig gkz
+*    18.02.2011  10:32:35  ZV173X2 Blankzeilen entferntwg CTM BUG
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

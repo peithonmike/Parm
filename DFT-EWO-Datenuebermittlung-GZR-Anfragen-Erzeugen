@@ -1,0 +1,68 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DFT-EWO-Datenuebermittlung-GZR-Anfragen-Erzeugen
+* 
+* 
+*********************************************************** 
+ 
+************************
+* EWO-Typ-2
+************************
+
+
+
+******************************************************************************************** 
+* AKDB generelle Job Vorbereitung 
+******************************************************************************************** 
+
+* AKDB Jobname und Parameter hier angeben
+* Reihenfolge vor den LIBMEMSYM sind wichtig
+%%EWOJOB_NAME=de.akdb.oesio.okewo.bzrauskuenfte.gzrantrag.job.GzrAntragVersendenJob
+
+
+
+ 
+   
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\g%%GEM3
+
+* Mandantenspezifische Angaben TESTUSER!!!!
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_DFT
+
+******************************************************************************************** 
+* Dateinerzeugung 
+******************************************************************************************** 
+
+* Ausgabe Directory bei der Datenerzeugung 
+%%AUSWERTE_OUTDIR=%%EWODIR_AUSWERTUNGEN.\%%MANDANT.\de.akdb.oesio.okewo.bzrauskuenfte.gzrantrag.job.GzrAntragVersendenJob
+
+******************************************************************************************** 
+* Nachverarbeitung 
+******************************************************************************************** 
+
+* Eingabe Directory der Nachverarbeitung  
+%%INDIR=%%AUSWERTE_OUTDIR
+
+* Datei Auswahl für die Nachverarbeitung 
+%%INCLUDE=*.*
+%%EXCLUDE="-"
+%%USE_MOVE=J
+* AusgabeDirectory der Nachverarbeitung  
+%%OUTDIR=\\msopenft01\c$\ctm_av\OpenFT\senden\BZR\GZR\OKEWO\%%GEM3
+*%%OUTDIR_PROCESSED=\\msokkomm01.itk.local\gzr$\Erledigt
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+

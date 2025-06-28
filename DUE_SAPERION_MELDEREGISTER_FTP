@@ -1,0 +1,42 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Landeshauptstadt Düsseldorf
+***********************************************************************************
+*  Jobname     : DUE_SAPERION_MELDEREGISTER_FTP
+*  APPLICATION : OK.EWO.JASPER.OK.EFA
+***********************************************************************************
+*********************************************************************************** 
+*
+
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Saperion-Bewegung-FTP
+*
+* CSV-Datei ans KRZN senden
+* \\m180d04ftp.archiv.krzn.de\ITKR$\OKEWO\D 
+* 
+***********************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-OKEWO-OKEFA-MOERS
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+ 
+
+
+*Eingabedatei
+%%SYSUT1=\\msbmcc03\ctm_av\Jasper-Output\DUE_SAPERION_MELDEREGISTER-%%TTMMJJJJP_%%$ODATE...CSV
+
+
+* KRZN Document
+%%SYSUT2=DUE-Saperion-Melderegister-%%TTMMJJJJP_%%$ODATE...CSV
+
+%%TEST=N
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-SAPERION-MELDEREGISTER.pdf
+* ------------------------------------------------------------------

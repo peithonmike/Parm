@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-EEL-Listen-Copy-Angestellte
+* 
+* 
+*********************************************************** 
+ 
+%%NETUSE_S=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+
+%%INDIR=\\10.50.34.68\loga\ml2001jobmg\manueelaanueel\output
+
+%%NETUSE_PATH=\\10.50.34.68\loga
+
+%%U=mgbatchitk@extad01
+
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga-Abrechnungen\EEL-Entgeldersatzleistung\Lauf_von_%%LOG-DAT.
+
+%%INCLUDE=*manuee*.pdf
+
+%%EXCLUDE="-"
+
+%%LAUFWERK=Y:
+
+%%FORCE_OUTDIR=J
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.05.2016  12:57:32  neuer Job nach der Änderung 'Abholen aus der neuen Citrix-Farm' 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Sonstige-Move-5010
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\KN
+
+* Datei Auswahl
+%%INCLUDE=*KN*5010*.PDF
+
+
+
+* Ausgabe Directory
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\KN\5010-anstatt-5014
+ 
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    13.09.2021  08:06:28  zv173x2 neu erster Lauf
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

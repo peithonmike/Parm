@@ -1,0 +1,21 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland
+***********************************************************************************
+*  Jobname     : GRE_300-KSU.W.KASSE-Copy-PTV
+*  APPLICATION : KSU.W.KASSE
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\KSU-ITK-KASSE
+
+
+%%eindat=\\srv03\qaspkr$\daten\Apps\KSU\Kasse\KasseProd\RKN_K2018W_UEBSOLL_*.csv
+%%ausdat1=\\srv03\qaspkr$\Daten\Apps\KSU\Kasse\KasseProd_Sicherung\RKN_K2018W_UEBSOLL_%%$OYEAR.%%OMONTH.%%ODAY.*-Sich.csv
+%%ausdat2=d:\Daten\K2014W_EXXX\outdir\RKN_K2018W_UEBSOLL_%%$OYEAR.%%OMONTH.%%ODAY.*.csv
+
+%%COMMAND=\\msbmcc03\CTM_AV\Bin\BAT\KSU-Wohn-T-COPY-PTV.cmd

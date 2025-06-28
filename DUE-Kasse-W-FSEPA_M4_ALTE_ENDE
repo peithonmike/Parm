@@ -1,0 +1,26 @@
+* *************************************************************
+* Table Variablen          
+* DUE-Kasse-W-FSEPA_M4_ALTE_ENDE
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**MAIL01=joerg.huhn@itk-rheinland.de;daniel.mendoza@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+**BETREFF_NOTOK=%%JOBNAME ist NOTOK
+
+**TEXT_NOTOK=DUE-Kasse-W-FSEPA_M4_ALTE_ENDE abgebrochen
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-Kasse-W-FSEPA_M4_ALTE_ENDE.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\2018-10-10_DUE-Kasse-W-FSEPA_M4_ALTE_ENDE.pdf
+* ------------------------------------------------------------------
+ 

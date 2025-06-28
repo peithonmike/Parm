@@ -1,0 +1,74 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-Fehlzeiten-Datei-Copy
+* 
+* 
+*********************************************************** 
+
+   
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc01\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+
+
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%AUFTRAGGEBER=M. Milka
+
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+%%SITE=MGL-Loga-Bochum
+**SITE=MGL-Loga-Bochum_2
+%%U =nicht-verwendet
+%%P =nicht-verwendet
+%%IP=nicht-verwendet
+
+%%MAIL_NOTOK=Martina.Milka@itk-rheinland.de; Vicky.Dworak@itk-rheinland.de; Alexandra.Lotholz@itk-rheinland.de
+
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga\Personalwesen-Abrechnung\Fehlzeiten\
+
+%%REMOTE_INDIR=
+
+%%INCLUDE=Time_Export_%%JJJJMMTT_TT_M1_%%$ODATE..vX928.csv
+
+
+%%WINSCP_AKTION=
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+*   Achtung Ausgabe-Directory muss mit \ enden
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z05=open %%SITE
+
+*%%Z07=dir
+%%Z08=get %%INCLUDE %%OUTDIR
+
+
+* close Session
+%%Z25=exit
+
+
+* Close Session and Programm 
+ 
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.12.2021  08:34:04  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

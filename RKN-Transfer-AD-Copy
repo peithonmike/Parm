@@ -1,0 +1,65 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-SOZ-EZ-Druckdaten-Copy
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-MZ
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-AD-DATEN-RKN
+
+%%INDIR=%%IP
+%%INCLUDE=*.csv
+%%EXCLUDE="-"
+%%NETUSE=J
+
+* *********************************************************************
+* Path für den erweiterten Zugriff
+* NETUSE_PATH wird als Einstieg vom Netuse benötigt
+* *********************************************************************
+*
+%%NETUSE_PATH=%%IP
+             
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+
+
+%%OUTDIR=\\vfdusintersync\Isync\Ressourcen\AdinfoDaten
+
+%%AUFTRAGGEBER=Herr Rafael Nic
+
+
+
+
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+
+

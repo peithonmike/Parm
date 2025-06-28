@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-R22W0603_FTPtoHOST
+* 
+* 
+*********************************************************** 
+ 
+* 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+* von PC
+%%FTP-LPATH1=\av\Gba\SAS_Ausgabe\R22W0603_ST0015_Ausgabe.csv
+
+* nach Host
+%%FTP-RPATH1=PZA.GEMAG.VONAWL.PROD.KOMP
+
+
+%%FTP-NEWNAME1=\av\Gba\SAS_Ausgabe\Erledigt\R22W0603_ST0015_Ausgabe.txt
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.07.2013  13:39:08  zv173x2 Variablen im FTP bereinigt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

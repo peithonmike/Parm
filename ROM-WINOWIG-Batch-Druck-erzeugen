@@ -1,0 +1,39 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-WINOWIG-Batch-Druck-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\DOC\WINOWIG\%%JOBNAME..TXT
+%%USE_INIFILE=J
+%%INIFILE=\\msbmcc03\ctm_av\PARM\WINOWIG-Batch-Druck-INIDATEI-%%GEM3
+%%LOGIN=%%WINOWIG_GKZ
+
+%%LIBMEMSYM=%%INIFILE
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+*%%WINOWIG_DRUCK_DIR= \\vfcitrix\citrix\Daten\MG\Winowig\ftp\ausgang\druckdateien\KONICA_MINOLTA_1250_1052PS 
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.06.2021  13:11:44  zv173x2 neu angelegt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

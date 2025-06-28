@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-PhinAVV-StatusExport
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PHINAVV-MAIL
+
+%%MAIL01=daniel.mendoza@itk-rheinland.de;steffen.brandemann@itk-rheinland.de;support-finanzen@itk-rheinland.de
+
+
+%%TEXT_OK=Joblog: Eine Überprüfng der PhinAVV-EXPORT-Dateien ist erforferlich!!!
+%%TEXT_NOTOK=Joblog: %%JOBNAME Es sind noch Export-Daten vorhanden. Bitte ueberpruefen.
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    14.08.2014  08:47:20  zv173x2 lieven Mail entfernt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

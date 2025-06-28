@@ -1,0 +1,22 @@
+* *************************************************************
+* Globale Variablen      
+* LAG-150-KSU-KRZ-T-OKEWO-FTP
+* 
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\KSU-KRZ-T-OKEWO
+
+
+%%TEXT_NOTOK=Abruch des Jobs %%JOBNAME für %%ORT
+
+%%ORDNER1=\\srv03\ftp$\ksu2000_krz\Prod\%%GKZ.\EWO
+%%ORDNER2=\\srv03\ftp$\ksu2000_krz\Prod\%%GKZ.\EWO-Sicherung
+
+%%CSV1=%%GKZ.-EWO-K2014W.csv
+%%CSV2=%%GKZ.-EWO-K2014W_D%%$ODATE..csv
+
+%%CLOUD=https://lxcloud01.itk.local/remote.php/webdav /USER:AVWebDAV conM27#AV
+
+%%COMMAND=\\msbmcc03\c$\CTMAV\bin\BAT\itkcloud_lemgo.cmd

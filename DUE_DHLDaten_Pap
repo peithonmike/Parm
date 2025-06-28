@@ -1,0 +1,30 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Duesseldorf
+***********************************************************************************
+*  Jobname     : DUE_DHLDaten_Pap
+*  APPLICATION : DUE-POST
+*  Auftrag ist von Gudrun Ring
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\DHLDaten\Doku Easylog - Erzeugen der PDFs für Amt 16-4 Postlogistik.doc
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\DHLDaten\DUE_DHLDaten_Pap.pdf
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.12.2013  10:32:12  zv171e3 neuer Pfad \\VFDUSALT\16\Amt16\T164-EasyLog
+*    22.07.2014  16:40:00  zv171e3 auf msbmcc03 geändert wegen Berechtigung beim FTP auf \\VFDUSALT16  
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

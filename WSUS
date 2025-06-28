@@ -1,0 +1,9 @@
+%%OWNER=ITK\controlm
+
+%%COMMAND=\\msbmcc03\ctm_av\bin\bat\WSUSMod3Inst1.vbs
+
+%%BETREFF_OK=WSUS-Update des %%SERVER OK
+%%BETREFF_NOTOK=ACHTUNG!!! WSUS-Update des %%SERVER NOTOK
+
+%%TEXT_OK=Joblog:   WSUS-Update des Server %%SERVER erfolgreich.    Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+%%TEXT_NOTOK=Joblog:     Ein WSUS-Update des Server %%SERVER wurde nicht ausgeführt.     Returncode=%%COMPSTAT     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.

@@ -1,0 +1,62 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : NEU-Familienbrief
+* erstellt : 31.08.2017 08:35:53
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+%%bearbdat_von=01.%%MM_M1_%%$ODATE...%%JJJJ_MM_M1_%%$ODATE
+%%bearbdat_bis=%%LD_MM_M1_%%$ODATE...%%MM_M1_%%$ODATE...%%JJJJ_MM_M1_%%$ODATE
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=Familienbrief.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/NEU-Familienbrief
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\NEU-Familienbrief_Etiketten_%%bearbdat_von.-%%bearbdat_bis..%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : NEU-Familienbrief_Etiketten_%%bearbdat_von.-%%bearbdat_bis.
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+%%EMAIL-T=Alexander.Schoenfeld@ITK-Rheinland.de;
+*%%EMAIL-BCC=Alexander.Schoenfeld@ITK-Rheinland.de;
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n Vorlage : \n \\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Auswertungen\Familienbrief\Neuss \n  \n bitte Daten auf Etiketten drucken, und an buergeramt@stadt.neuss.de \n weiterleiten. \n 
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-NEU-Familienbrief.pdf
+* ------------------------------------------------------------------

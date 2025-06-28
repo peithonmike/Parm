@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* LOGA-NHCM-NAR
+*********************************************************** 
+* Angestellte Arbeiter NAR
+*********************************************************** 
+ 
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+* MUSTER
+*                         HMAN alle 
+* DOR-LOGA-MSP-EGM-Angestellte-1200-XXXX-BU
+
+**%%HMAN =%%SUBSTR %%JOBNAME 30 4
+**%%MAN  =%%SUBSTR %%JOBNAME 36 4
+
+* Standard 
+%%INCLUDE =*KN_%%HMAN._*.pdf
+%%EXCLUDE="-"
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\NHCM
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NAR\NHCM\BUENDEL
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NHCM\verschoben
+
+* P&I verwenden
+%%USE_PI=N
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\PI-DRUCK-%%$OYEAR..csv
+%%OUTFILE =%%GEM3.-NHCM-KUVERT-NAR-%%LOGA_DAT.-BU.pdf
+
+* Sammeldir für mehr als eine PDF
+%%SAMMELDIR_DELETE=J
+  
+%%ADD_TRENNBLATT=N
+%%ADD_FRONTCOVER=N
+%%ADD_BACKCOVER=N
+%%ADD_KOPIE=N
+%%FORCE_OUTDIR_PROCESSED=J
+
+%%AUFTAGGEBER=S.Huennekes
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     15.05.2024  16:32:14  zvaa241 neu im TEST
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+
+
+
+

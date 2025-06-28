@@ -1,0 +1,13 @@
+*
+* LIBMEMSYM
+* Aufruf   ermittelten Gesamtes Jahr
+*
+*
+*
+
+* TYP 31   
+* Lauf soll am letzten Tag des Jahres nach Online stattfinden
+* 
+
+%%VON=01.01.%%$OYEAR
+%%BIS=31.12.%%$OYEAR

@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Backup-T-Interflex
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+
+
+**COMMAND=\\msaip01\ctm_av$\Bin\BAT\msiflexne01\backup-interflex.bat
+%%COMMAND=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File \\MSAIP01\ctm_av$\Bin\BAT\msiflexne01\backup-interflex.ps1
+
+
+%%MAILSB11=thomas.schueller@itk-rheinland.de;dietmar.bolten@itk-rheinland.de
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_OK=Backup Interflex-Daten OK
+%%BETREFF_NOTOK=Backup Interflex-Daten NOTOK
+
+%%TEXT_OK=Joblog: %%JOBNAME Backup Interflex-Daten OK.
+%%TEXT_NOTOK=Joblog: %%JOBNAME Backup Interflex-Daten ist NOTOK.
+

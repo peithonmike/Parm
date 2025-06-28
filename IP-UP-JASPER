@@ -1,0 +1,8 @@
+* *******************************************************************************
+* hier soll mal der CTM-User stehen
+*     
+*    http://vsrv48.asp.rzne.de:8080/jasperserver/services/repository (alter Server)
+* *******************************************************************************
+%%SERVER=http://msjasper01.itk.local:8080/jasperserver
+%%U=webservice
+%%P=@jasper123

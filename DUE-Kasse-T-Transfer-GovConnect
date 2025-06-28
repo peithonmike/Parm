@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Kasse-T-Transfer-GovConnect
+*
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\GovConnect.ps1"
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\GovConnect.ps1" -ErrDir "\\vfdusalt\21\amt21\Themen\Kontoauszuege" -TransDir "\\vfdussap\sap\sap\Kasse_Nachtverarbeitung\Auswertungen\E-Payment" -Verbindung "finanz.payment.govconnect.de"
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-Kasse-T-Transfer-GovConnect.pdf
+* ------------------------------------------------------------------

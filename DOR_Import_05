@@ -1,0 +1,29 @@
+
+******************************************************************************* 
+* 
+* 
+* D u m m y   J o b m e m b e r  , ohne Funktion
+* o h n e   A u f r u f   a u s   d e m   O r i g i n a l   S c h e d u l e
+******************************************************************************* 
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* DOR_Import_05
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+ 
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUH\LOG.txt
+
+* ------------------------------------------------------------------

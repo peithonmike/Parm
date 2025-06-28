@@ -1,0 +1,72 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-HSK-Wareneingang-abholen
+* 
+* 
+*********************************************************** 
+ 
+   
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc01\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+
+*stadtv_dwh
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-Computa-Center
+%%AUFTRAGGEBER=S.Berli
+
+
+%%OUTDIR=\\srv03\ftp$\av\HSK\Wareneingang\%%$ODATE.\
+%%REMOTE_INDIR=
+%%INCLUDE=0*.csv
+
+
+%%WINSCP_AKTION=HSK-Wareneingang
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+*   Achtung Ausgabe-Directory muss mit \ enden
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z05=open %%SITE
+
+%%Z08=mget %%INCLUDE %%OUTDIR
+%%Z09=mv %%INCLUDE erledigt/
+
+* close Session
+* %%Z10=close
+
+
+* Close Session and Programm 
+%%Z25=exit 
+%%TEST=N
+%%DEBUG=N
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+
+
+*   ********************************************************************************** 
+*    -- �nderungen ------------------------------------------------------------------- 
+*    28.05.2021  08:21:56  zv173x2 nur noch Exit Command. Close entfernt.
+*                                  Versuch weil Job teils wegen
+*                                  Zeit�berschreitung h�ngen bleibt und �ber killjob entfernt wird
+*                                  obwohl die Datei bereits abgeholt ist.
+*                                  siehe Lauf vom 28.05.2021 
+*                                  Flasher Ansicht/Notizen Jobname= *HSK*
+*    16.09.2020  14:24:08  zv173x2 get nach mget
+*    16.09.2020  14:23:07  zv173x2 verschieben in erledigt
+*    23.06.2020  09:53:30  zv173x2 %%AUFTRAGGEBER=S.Berli
+*    03.09.2015  14:06:02  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

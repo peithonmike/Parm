@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-SOZ-nach-DMS-abholen
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc01\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-MGL
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%REMOTE_INDIR=TMP_TAUSCH/DMS_Test
+
+%%INCLUDE=*.*
+
+
+%%OUTDIR=\\msd3dmsb01.itk.local\DCOLD-AKDN_Sozial_MGL\
+
+
+
+%%WINSCP_AKTION=Sozialwesen Druckdateien zu DMS übertragen
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+*   Achtung Ausgabe-Directory muss mit \ enden
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+*%%Z04=open %%U.:%%P.@%%IP
+%%Z05=open %%SITE
+*%%Z05=option failonnomatch off
+%%Z06=option EXCLUDE FABS*
+%%Z07=CD %%REMOTE_INDIR
+%%Z08=get %%INCLUDE %%OUTDIR
+%%Z09=close
+%%Z25=exit 
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.09.2015  14:06:02  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

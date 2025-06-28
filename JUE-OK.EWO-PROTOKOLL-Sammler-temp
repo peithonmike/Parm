@@ -1,0 +1,21 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Gemeinde Jüchen
+***********************************************************************************
+*  Jobname     : JUE-OK.EWO-PROTOKOLL-Sammler
+*  APPLICATION : CTM.SYS
+***********************************************************************************
+*********************************************************************************** 
+*
+%%READ_DIR="C:\Program Files\BMC Software\Control-M Agent\Default" 
+%%READ_DIR="\\msxa017\C$\Program Files\BMC Software\Control-M Agent\Default" 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO_DB
+
+
+e
+

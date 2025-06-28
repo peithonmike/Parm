@@ -1,0 +1,55 @@
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-SOZ-Rente.POST-Druckdaten-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-Rente
+
+%%SOZ_DAT=%%OYEAR.%%OMONTH
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1
+**INDIR=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%SOZ_DAT
+%%INDIR=\\Msprintff01\source$\SOZ-RENTEN\%%$OYEAR.\%%SOZ_DAT.\POST
+
+%%OUTDIR=\\vfju\ju\Daten\Sozialwesen\DRUCKDATEN\%%$OYEAR.\Rente\%%$ODATE
+
+**OUTDIR_PROCESSED=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%SOZ_DAT.\kopiert
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-RENTEN\%%$OYEAR.\%%SOZ_DAT.\POST\kopiert
+
+
+
+**INCLUDE=PFDR0100-NE_*2*12*.PDF
+%%INCLUDE=POST*_2*12_*.PDF
+
+  
+
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+

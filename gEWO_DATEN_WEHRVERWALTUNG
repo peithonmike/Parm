@@ -1,0 +1,11 @@
+
+* überschreibt den Standard Auswerte Ordner
+**EWODIR_AUSWERTUNGEN_TYP_3=\\%%JBOSS.\Auswertungen$\%%MANDANT.\de.akdb.oesio.okewo.melderegister.wehrverwaltungvolljaehrigkeit.WehrverwaltungVolljaehrigkeitJob
+%%EWODIR_AUSWERTUNGEN_TYP_3=\\%%JBOSS.\Auswertungen$\%%MANDANT.\de.akdb.oesio.okewo.wehrverwaltungvolljaehrigkeit.WehrverwaltungVolljaehrigkeitJob
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.02.2022  13:05:30  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

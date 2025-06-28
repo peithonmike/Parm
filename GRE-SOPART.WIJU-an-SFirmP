@@ -1,0 +1,51 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* GRE-SOPART.WIJU-an-SFirmP 
+* 
+*  WJH ist das neue WIJU  
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SOPART
+
+* überschreibt Empfänger
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+
+
+* Eingabe Directory 
+%%INDIR=\\srv03\qaspgr$\Daten\Apps\SopartGRE\SoPart\Export\FiBu\WJH
+
+* Datei Auswahl
+%%INCLUDE=*.XML
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\vfgv1\voldaten1\Daten\FB 20\FD 20.2 Finanzbuchhaltung\Zahlungsabwicklung\WJH-Auszahlungen
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\Archiv
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     08.12.2017  12:21:56  zv173x2  neu Aufrag M.Karbach
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+

@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-MIGEWA-GZR-Anfragen-Move
+* 
+* 
+*********************************************************** 
+* Verschieben Mandantenanfragen 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA-OPENFT-GZR-ANFRAGE
+
+%%TEST=N
+%%MAX=30
+ 

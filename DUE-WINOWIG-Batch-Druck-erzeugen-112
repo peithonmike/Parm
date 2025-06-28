@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-Batch-Druck-erzeugen-112
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+ %%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+%%WINOWIG_GKZ=112
+
+%%TEST=N
+%%WINOWIG_DRUCK_DIR=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\winowig\winowig_QS\ftp\ausgang\druckdateien\DLD32OFFICEM
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.10.2018  17:42:50  zv173x2 ZE: verspäteter Zahlungseingang
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

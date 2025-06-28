@@ -1,0 +1,67 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : MGL                                                                  *
+***********************************************************************************
+*  Jobname     : MGL-Familienverband-Aufloesen
+*  Description : Familienverband-Aufloesen
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+
+************************************************************************************
+* START
+* Manuell eingefügt
+* das ist der alles entscheidende Wert 
+
+%%JJ=18
+%%STICHTAG=%%ODAY..%%OMONTH..%%JJJJ_M%%JJ._%%$ODATE 
+%%VLK=%%STICHTAG
+* ENDE 
+************************************************************************************
+
+
+
+
+
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME Stichtag %%STICHTAG *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=7557-E01U0000
+*
+%%OKEWO_NR=P7557
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=Familienverband-Aufloesen
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U26701#GKB_N.E01DUMMY#1#JAHR_N.E01DUMMY#%%JJ#GEBDAT_N.E01DUMMY#%%STICHTAG#V_UZ331_LISTE.E01DUMMY#art=Job startid1=Auflösen Familienverbandid2=benutzer=Itkavom=bestand=begin=0000000010225500e01_pid=21523famname=vorname=gebdat=gebdat_srt=grund=adr1=adr2=adr3=adr4=adr5=adr6=adr7=adr8=om_bezpers=#$$
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\OKEWO-MGL Auflösen Familienverband.pdf
+* ------------------------------------------------------------------

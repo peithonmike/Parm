@@ -1,0 +1,25 @@
+* *************************************************************
+* Table Variablen          
+* DUE-BAUMSS-T-Copy-PTV
+* alter Hostjob Y6836FTP
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%EINGABE_VZ=\\vfdusalt\68\amt68\BSS_Bewegungsdaten\Prod\Fibu
+%%USERID=itk\D68FTP
+%%PW=FTPAmt68
+%%EINDAT=BUCHDAT_%%$ODATE..CSV
+
+%%AUSGABE_VZ=\\msptv01\d$\BSS_EDUE\outDir
+%%AUSDAT=DUE_BSS_T%%$ODATE..CSV
+%%AUSDAT2=BUCHDAT_T%%$ODATE..CSV
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\DUE-PTV-OHNE.cmd

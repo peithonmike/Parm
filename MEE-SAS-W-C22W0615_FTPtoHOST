@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SAS-W-C22W0615_FTPtoHOST
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%TEST=N
+
+%%FTP-LPATH1=\av\GBA\SAS_Ausgabe\C22W0615_Ausgabe_D%%$ODATE..csv
+%%FTP-RPATH1=PBA.GEMAG.LISTBUVD.JAVA
+*aus Schedule auch entfernt %%FTP-NEWNAME1=\av\GBA\SAS_Ausgabe\C22W0615_Ausgabe_D%%ODATE..csv
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.08.2013  09:40:32  zv173x2 rename aus Schedule entfernt, war anscheined doch nicht im Original geändert
+*    07.08.2013  09:37:20  zv173x2 Odate mit %%$
+*    31.07.2013  10:43:31  zv173x2 C22W0615_Ausgabe.csv nicht mehr verschieben,
+*                                  wird als Eingabe für Report mit ODATE  verwendet
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

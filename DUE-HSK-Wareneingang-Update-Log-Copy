@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-HSK-Wareneingang-Update-Log-Copy
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-File.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOZ-DAT
+
+
+* Eingabe Directory 
+%%INDIR=\\msbmcc03\c$\temp
+
+
+* Datei Auswahl
+%%INFILE=DUE-HSK-Wareneingang-Update-2.txt
+
+%%EXCLUDE=*_*
+
+* Ausgabe Directory
+
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\HSK\Wareneingang\%%$ODATE
+%%OUTFILE=DUE-HSK-Wareneingang-Update-2-%%TIME..TXT
+
+* erledigt Ordner
+
+*%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\DUE\%%SOZ_DAT.\Grundsicherung_bWf
+*%%OUTFILE_PROCESSED=%%INFILE
+
+%%TEST=J
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.11.2015  10:15:31  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

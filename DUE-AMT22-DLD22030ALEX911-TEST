@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-AMT22-DLD22030ALEX911-TEST 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Eingabe Directory 
+**%%INDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\Amt22
+%%INDIR=\\vfdusalt\22\amt22\themen\KiviProd\Grundsteuerbescheide\01 - Aktuell\Drucken
+
+* Drucker Freigabe
+%%PRINTER=\\msdre5\DLD22030ALEX911
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-FileS-To-Printer.ps1 -INCLUDE %%INCLUDE -INDIR %%INDIR -PRINTER %%PRINTER

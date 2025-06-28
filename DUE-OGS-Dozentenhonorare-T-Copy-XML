@@ -1,0 +1,69 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-OGS-Dozentenhonorare-T-Copy-XML
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OGS-MAIL
+
+
+
+* Eingabe Directory 
+
+%%INDIR=\\vfdusalt\40\Amt40\Ausgabe_Dozentenhonorare
+
+
+
+* Datei Auswahl
+
+%%INCLUDE=ogs*.xml
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfdussap\sap\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_Dozentenhonorare
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfdusalt\40\Amt40\Ausgabe_Dozentenhonorare\Backup
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.04.2021  08:36:22  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

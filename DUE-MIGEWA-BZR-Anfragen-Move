@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-MIGEWA-BZR-Anfragen-Move
+* Verschieben Mandantenanfragen 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA_%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA-OPENFT-BZR-ANFRAGE
+%%TEST=N

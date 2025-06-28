@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-PRODOP-Export
+* Ersatz für den DOR_Rename_06
+* 
+* 
+**********************************************************************************************************
+* DOEXPORTIST
+* DOEXPORTISTSOP
+*                                                         .D20t7830 -> KIRP WIJU --->  DO-Server WIJU                                   
+* IstDaten Do-Mandantenbereich -> ITK -> HOSTverabeitung -|
+*                                                         .D20t7831 -> Kirp VWBU --->  X39T0705 -> VWBU
+*     
+*                         
+*
+**********************************************************************************************************
+* ITK Bereich : \\srv03.asp.rzne.de\qaspkdvz$\daten\apps
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRODOP_MAIL
+
+%%INDIR=\\N200D01S29.dormagen.int.de\HH-Prog\Schnittstellen\ITKR 
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\HUH\DO
+%%WINOWIG_ZAHLUNGEN_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\zahlungen
+
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\WINOWIG-DOR-Datenbereitstellung.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\PRODOPPIK\Aufträge alle Mandanten Stand Dez 2012.doc
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Pläne\DOR-PRODOP-Export-Stand-28062012.jpg
+
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.06.2012  20:18:30  zv173x2 PRODOP_MAIL
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

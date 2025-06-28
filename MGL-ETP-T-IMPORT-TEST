@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-ETP-T-IMPORT-TEST
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND="C:\Program Files\Scripte\AutomatisierungKosy\MG_Auto_Kosy.bat"
+
+%%MAIL02=produktions-steuerung@itk-rheinland.de;simone.thissen@itk-rheinland.de;tobias.redmann@itk-rheinland.de;Dieter.Assenmacher@itk-rheinland.de;Erich.Janke@itk-rheinland.de
+

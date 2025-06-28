@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-X22U2215_JAVA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Eingabe\X22U2215_Eingabe.txt
+
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Ausgabe\X22U2215_Ausgabe.txt
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\X22U2215.jar -infile %%INFILE1 -outfile %%OUTFILE1
+

@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* SED-ELKO-T_RFEBKA00
+* Eigenbetriebe Duesseldorf (SED)
+* 09.08.2018 - neuer Job fuer J.Huhn/U.Webler
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+%%MAIL2_NOTOK=produktions-steuerung@itk-rheinland.de
+%%MAIL_NOTOK=sapbasis@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK
+
+%%TEXT_OK=Joblog: %%JOBNAME ist durchgelaufen. Juhu
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist NOTOK. Returncode: %%COMPSTAT  Bitte Ueberpruefen. 

@@ -1,0 +1,66 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.EZ-SAP-Liste-Drucken-AMT21
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach PRINTER alle Files mit vorgegebener Maske.
+* Die benötigten Variablen werden im PRINTER-DLD214-5-R107  Member definiert 
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Print.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRINTER-DLD214-5-R107
+
+
+* ************************************************************************
+*   LIBMEMSYM   für Copy PDF auf Drucker
+*   Name PRINTER-DLD214-5-R107 Drucker Konika-Minolta bei der Stadtkasse
+* ************************************************************************
+
+
+* Eingabe Directory 
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE
+
+
+* Drucker Freigabe
+**PRINTER=\\MSDKM6\DLD214-5-R107
+%%PRINTER=\\MSDKM6\DLD214-5-R107
+
+%%INCLUDE=EZ-030-DF-SAP_PFVBK2*E_*_EZ_%%$ODATE..pdf
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE.\gedruckt
+
+
+* Datei Auswahl
+%%EXCLUDE="-"
+
+
+* Ausgabe Directory
+%%FORCE_OUTDIR=N
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+

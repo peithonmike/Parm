@@ -1,0 +1,14 @@
+*
+* LIBMEMSYM für JASPER-Auftrag DUE-ablaufende-BPA
+* von 6 auf 8 Wochen geändert lt. M.Linke vom 25.6.2012
+*
+* Ausrechnen einer Variablen ODATE + 54 Tage
+
+%%datum_von=%%TTMMJJJJP_TT_P54_%%$ODATE
+*
+*
+*
+* Ausrechnen einer Variablen ODATE + 60 Tage
+*
+
+%%datum_bis=%%TTMMJJJJP_TT_P60_%%$ODATE

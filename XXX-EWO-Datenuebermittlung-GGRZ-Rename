@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-EWO-Datenuebermittlung-GGRZ-Rename
+* 
+* 
+*********************************************************** 
+ 
+
+* ------------------------------------------------------------------
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%AUFTRAGGEBER=M.Pixa
+
+
+* Eingabe Directory
+%%INDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta\GGRZ\EWO-Typ-3
+
+
+%%INCLUDE=*MEDA*.036
+%%EXCLUDE="-"
+
+
+%%DEBUG=N
+%%TEST=N
+ 
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\CF\JOB\JOB-Rename-MEDA.ps1
+
+

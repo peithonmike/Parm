@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-WINOWIG-Decrypt-ePZA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\srv03\qaspGR$\Daten\Apps\winowig\ftp\eingang\ePZA-GPG
+%%OUTDIR=\\srv03\qaspGR$\Daten\Apps\winowig\ftp\eingang\ePZA
+%%INCLUDE=*.gpg
+%%EXCLUDE="-"
+%%GPG_EXE=\\msbmcbatch01\c$\Program Files (x86)\GNU\GnuPG\pub\gpg.exe
+%%HOMEDIR=C:/CTM_AV/Bin/Gpg4win/gnupg
+
+
+%%P=WeissistgrauundGruenist22
+
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+*%%INFILE=\\msbmcc03\ctm_av\temp\epza\BG17772_20170608_10809.zip.gpg
+*%%OUTFILE=\\srv03\qaspGR$\Daten\Apps\winowig\ftp\eingang\ePZA-TEST/BatchTest.zip
+*%%GPG_PARAMETER=--batch --yes --homedir %%HOMEDIR --passphrase WeissistgrauundGruenist22 --decrypt "%%INFILE" -o "%%OUTFILE"
+
+
+* Erfolgreich mit Anmeldung a-zv173x2 auf msbmcc01 
+* --batch --yes --passphrase WeissistgrauundGruenist22  -o C:\CTM_AV\TEMP\ePZA\a1.zip   --decrypt C:\CTM_AV\TEMP\ePZA\BG17772_20170608_10809.zip.gpg 
+*OK !!! %%GPG_PARAMETER=--batch --yes --homedir %%HOMEDIR --passphrase WeissistgrauundGruenist22  -o C:\CTM_AV\TEMP\ePZA\a1.zip   --decrypt C:\CTM_AV\TEMP\ePZA\BG17772_20170608_10809.zip.gpg 
+*%%GPG_PARAMETER=--batch --yes  -o %%OUTFILE --homedir %%HOMEDIR --passphrase WeissistgrauundGruenist22  --decrypt %%INFILE
+
+

@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-SchalterAuswertung-Mail
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*****************************************************************************
+*   M A I L 
+*  
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*****************************************************************************
+*   Mailadressen 
+*;Reinhard.Baier@ITK-Rheinland.de;Produktions-Steuerung@itk-rheinland.de
+*****************************************************************************
+%%EMAIL-T=ok-hotline@duesseldorf.de
+%%EMAIL-A=\\msbmcc03\c$\temp\DUE-EWO-Schalterauswertung-%%TTMMJJJJP_%%$ODATE...csv
+
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL-U=%%JOBNAME %%TTMMJJJJP_%%$ODATE
+%%TEST=N

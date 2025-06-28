@@ -1,0 +1,74 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-SOPART.KTP-an-SFirm
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-SOPART.SFIRM-RKN
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SOPART
+
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qaspkr$\daten\apps\SopartRKN\Sopart\FiBuExport\KTP
+
+* Datei Auswahl
+%%INCLUDE=*.XML
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=%%IP.\Tagespflege
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+%%NETUSE_PATH=%%IP
+*
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* ***************************************************************************
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+*----------------------------------------------------------------------------------
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.03.2018  14:50:15  zv171e1 IP-Adresse gegen Server-Name getauscht
+*    28.03.2018  14:48:11  zv171e1 Ansprechpartner bei Verbindungsproblemen ist beim Kreis
+                           Herr Frank Meger Tel. 02181-601 1105
+*    08.07.2016  10:49:26  zv173x2 neu ab 11.07.2016
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

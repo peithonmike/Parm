@@ -1,0 +1,52 @@
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+*********************************************************** 
+ 
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+             
+%%OUTDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\Elster
+%%OUTDIR2=nicht-verwendet
+
+
+
+%%INCLUDE=*.pdf
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=option failonnomatch on
+
+%%Z05=open %%SITE -hostkey=%%HOSTKEY 
+%%Z06=CD ELSTER_15L
+
+%%Z07=LCD %%OUTDIR1
+%%Z08=mget KN*.pdf 
+
+*%%Z09=LCD %%OUTDIR2
+*%%Z10=mget DN*.pdf 
+
+
+
+
+%%Z20=bye 
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.01.2019  10:05:43  zv173x2 neu Lemgo
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-Auftrag
+* erzeugen AV Tabelle
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\EMUSER
+%%INFILE=\\msbmcc03\ctm_av\Sicherung\deftable\ExportDefTable-All_%%$ODATE..xml
+%%OUTFILE=\\msbmcc03\ctm_av\BIN\C\Online\CTM-Auftrag.csv
+*
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.10.2012  12:17:23  zv173x2 Namen geändert
+*    15.09.2011  17:22:06  ZV173X2 Ausgabe von BIN\C nach Bin\c\Online
+*    --------------------------------------------------------------------------------- 
+
+*   ********************************************************************************** h
+
+*
+

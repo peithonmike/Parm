@@ -1,0 +1,40 @@
+
+
+%%AUFTRAGGEBER=H.Möller  
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\%%GEM3.-SCHULJAHR 
+
+
+
+********************************************************************
+* Der Rest des Namens ist in der PS1 fest verdrahtet
+*       \\msbmcc03\ctm_av\temp\Amt53-40_Coronameldeliste\Ausgabe
+********************************************************************
+%%INDIR=\\msbmcc03\ctm_av\temp
+%%OUTDIR=\\vfdusschvw
+
+%%INCLUDE=*.csv
+%%EXCLUDE=NULL.csv
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.03.2021  09:03:35  zv173x2 Bemerkung erweitert
+*    29.10.2020  08:42:15  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

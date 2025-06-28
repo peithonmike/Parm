@@ -1,0 +1,73 @@
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt nach OUTDIR alle Files mit vorgegebener Maske.
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Move-Files.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-WOHN-DOR
+
+
+
+
+
+
+
+
+
+* Eingabe Directory 
+%%INDIR=\\n200d01n01.ad.stadt-dormagen.de\wg-ausgabe
+
+* Datei Auswahl
+%%INCLUDE=WOHN.BRIEF.B%%GKZ6*
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\Wohngeld\Ausgabe
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+* ***************************************************************************
+%%NETUSE=J
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+%%NETUSE_PATH=%%IP
+*
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* ***************************************************************************
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.07.2018  16:26:35  zv173x2 AUFTRAGGEBER=R.Dressel
+*    19.07.2016  09:52:05  zv173x2 Umstellung auf Powershell
+*    19.07.2016  09:36:28  zv173x2 \\n200d01n01.ad.stadt-dormagen.de\wg-ausgabe
+*    13.02.2012  10:34:01  zv173x2 SERACH von Plausi auf allg. geändert
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\WG_ WGplus --_ Umstellung Dormagen.pdf
+* ------------------------------------------------------------------
+%%AUFTRAGGEBER=R.Dressel

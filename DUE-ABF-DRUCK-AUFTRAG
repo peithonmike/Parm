@@ -1,0 +1,38 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-ABF-DRUCK-AUFTRAG
+* DUE-Abfallgebuer_woche
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR  alle Files mit vorgegebener Maske an beliebige Anzahl Printer.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Print-To-Printers.ps1 -INCLUDE %%INCLUDE -PRINTER %%PRINTER
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%BLATT=DUE-ABF-Druck-Bescheide
+%%BEIBLATT_DIR=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\Papyrus
+%%BEIBLATT_PRINTER=DFP16AH1
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\Msbmcc03\ctm_av\Bin\Powershell\CF\JOB\Job-Copy-Beiblatt-To_Printer.ps1
+
+%%TEST=N
+%%DEBUG=N
+%%BEIBLATT=J
+

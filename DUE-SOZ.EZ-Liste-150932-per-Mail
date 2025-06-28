@@ -1,0 +1,69 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.EZ-Liste-150932-per-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE
+
+
+
+%%INCLUDE=EZ-030-DF_PFTXN100_PROT_EZ-150932_%%$ODATE..pdf,EZ-080-DF_PFZV0100_AUSZ_EZ-150932_%%$ODATE..pdf
+%%EXCLUDE=*AUSB*
+
+
+%%EMAIL_T=uschi.beier@duesseldorf.de
+
+* Info
+*%%EMAIL_O=\\msbmcc03\ctm_av\Parm\Mail-Messages\DUE-SOZ-EZ-Sendung-Druckdateien.txt
+
+* Subject
+%%EMAIL_U=Sendung vom Job:      %%JOBNAME
+
+* Kopie
+*%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+%%IGNORE_RIGHT_BLANKS=J  
+
+
+%%EMAIL_A_MOVE=N
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.06.2020  12:48:32  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+

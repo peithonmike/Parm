@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-SOPART.AV-Export
+* 
+* 
+*********************************************************** 
+* SoPart® AV - Amtsvormundschaft / Beistandschaft / Mündelgeld 
+* 
+*************************************************************** 
+* Abholen Daten aus dem Mandantenbereich in den Prodbereich
+* ------------------------------------------------------------
+*
+* Eingabe aus Mandantenbereich
+* \\srv03.asp.rzne.de\qasp%%GEM.$\daten\apps\sopart\avor\export
+* \\srv03.asp.rzne.de\qasp%%GEM.$\daten\apps\sopart\avor\export\Sopart_Export_an_Kasse.txt
+*
+* Ausgabe im AV-Bereich
+* \\srv03.asp.rzne.de\ftp$\%%GEM.\sopart\avor\export
+* \\srv03.asp.rzne.de\ftp$\%%GEM.\sopart\avor\export\sopart_export_neu.txt
+*************************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\g%%GEM3
+ 
+%%INDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\daten\apps\sopart\avor\export
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\%%GEM.\sopart\avor\export
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\srv03.asp.rzne.de\ftp$\kr\Sopart\Avor\Export\roboexp.txt
+$$INCLUDE=\\srv03.asp.rzne.de\ftp$\kr\Sopart\Avor\Export\protokol.dat
+* ------------------------------------------------------------------
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    02.05.2012  15:59:48  zv173x2 Verzeichnisse in Kommentar übernommen
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

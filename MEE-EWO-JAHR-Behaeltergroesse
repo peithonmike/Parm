@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-EWO-JAHR-Behaeltergroesse
+*
+* Auftraggeber:   Frank Schau 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+* ------------------------------------------------------------------
+
+%%REPLACE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO_DB
+
+%%TRENNER=";"
+
+%%COPYLIST=J
+%%LISTE1=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Auswertungen\Reportergebnis\MEE_Behaeltergroesse_%%$ODATE..csv
+
+
+%%TEST=N
+ 
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\MEE_Behaeltergrossse.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\MEE_Behaeltergrossse.sql
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+*$$INCLUDE=\\msbmcc03\ctm_av\DOC\SQL.BAT.csv
+*$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\OK.EWO.STATI
+* ------------------------------------------------------------------
+
+

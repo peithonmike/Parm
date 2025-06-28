@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-R22W0230_JAVA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Eingabe\R22W0230_HIZKOPIE_Eingabe.txt
+
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Ausgabe\R22W0230_Ausgabe.txt
+
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\220230_test.jar -eingabe %%INFILE1 -ausgabe %%OUTFILE1
+

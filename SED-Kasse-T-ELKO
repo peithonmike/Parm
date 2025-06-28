@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* SED-Kasse-T-ELKO
+* Eigenbetriebe Duesseldorf (SED)
+* 09.08.2018 - neuer Job fuer J.Huhn/U.Webler
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%client=IFP
+%%mandant=420
+%%source=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\Travic-Link\SED
+%%pattern=ELKO_SK3200,ELKO_SK
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\copy_SAP_ELKO.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_420.cred" -sysid %client% -mandt %mandant% -source %source% -pattern %pattern%
+

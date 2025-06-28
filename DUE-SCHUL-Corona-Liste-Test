@@ -1,0 +1,76 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SCHUL-Corona-Liste-Test
+* 
+* 
+*********************************************************** 
+ 
+
+%%AUFTRAGGEBER=H.Möller  
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\%%GEM3.-SCHULJAHR 
+* ------------------------------------------------------------------
+*  SQL-Script
+*  Änderung %%JJJJ
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\CTM_AV\Parm\SQL\Amt 53 Corona Liste 20210318.sql
+%%SQL_FILE=\\msbmcc03\CTM_AV\Parm\SQL\Amt 53 Corona Liste 20210318.sql
+* ------------------------------------------------------------------
+
+%%DB=schild_due
+%%SERVER=mssql01
+
+%%U=Schulen_AV
+
+%%P=secret-server
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS ,%%JJJJ
+*  ******************************************** 
+
+*%%VON=??
+*%%BIS=??
+
+
+%%JJJJ=%%SCHULJAHR_%%OMONTH
+
+
+* Name der Ausgabe Directory und Datei
+%%OUTDIR=\\msbmcc03\ctm_av\temp\Amt53-40_Coronameldeliste\TEST
+
+%%FILENAME=%%JOBNAME._%%JJJJ..CSV
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.03.2021  13:21:59  ZV173X2  Amt 53 Corona Liste 20210318.sql
+*    12.11.2020  14:10:04  zv173x2 "Amt 53 Corona Liste_Telefon in Bemerkungen.sql"
+
+*    12.11.2020  08:11:43  zv173x2 neu "Amt 53 Corona Liste_Telefon in Bemerkungen.sql"
+
+*    03.11.2020  14:25:48  zv173x2  neue sql
+*    27.10.2020  13:25:43  zv173x2  SQL ist von UTF-8 nach Ansi geändert 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

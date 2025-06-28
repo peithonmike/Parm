@@ -1,0 +1,29 @@
+* INACTIV
+* INACTIV
+* INACTIV
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-R22W0604_FTPtoHOST
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%FTP-RPATH1=PZA.GEMAG.PROD.KOMP.JAVA
+%%FTP-RPATH2=PZA.GEMAG.VONAWL.FEHLER.JAVA
+
+%%FTP-LPATH1=\av\Gba\SAS_Ausgabe\R22W0603_ST0030_Ausgabe.csv
+%%FTP-LPATH2=\av\Gba\SAS_Ausgabe\R22W0603_ST0040_Ausgabe.csv
+
+%%FTP-NEWNAME1=\av\Gba\SAS_Ausgabe\Erledigt\R22W0603_ST0030_Ausgabe.D%%ODATE..csv
+%%FTP-NEWNAME2=\av\Gba\SAS_Ausgabe\Erledigt\R22W0603_ST0040_Ausgabe.D%%ODATE..csv
+

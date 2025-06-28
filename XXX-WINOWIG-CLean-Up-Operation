@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-CLean-Up-Operation
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\XXX-WINOWIG-CLean-Up-Operation.ps1
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+

@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-BS-Daten-erzeugen
+* CSV Datei erzeugen
+* zvaa405   / 10.08.2023
+*
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+%%AUFTRAGGEBER=T.Heister
+ 
+%%SERVER=mssql09.itk.local
+%%DB=tevis_neu
+%%U=tevis_read
+%%P=SQ!*xe)q9SeE
+
+*%%P=siehe-Secret-Server
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+**INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\MGL_Altersjubilare.sql
+%%SQL_FILE=\\msbmcc03\CTM_AV\Parm\NeussBS_Auslastung\Vorlagen\TerminauslastungZeitraum.sql
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+*%%VON=nicht-verwendet
+*%%BIS=nicht-verwendet
+
+
+
+* Name der Ausgabe Directory und Datei
+%%OUTDIR=\\msbmcc03\CTM_AV\Parm\NeussBS_Auslastung\Ausgabe
+%%FILENAME=Auslastung_Neuss_%%$ODATE..CSV
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+ 
+%%TEST=N
+%%DEBUG=N
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc01\c$\CTM_AV\Bin\Powershell\BL\JOB\Job-SqlCmd-exe.ps1
+
+

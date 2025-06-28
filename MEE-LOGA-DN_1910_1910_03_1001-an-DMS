@@ -1,0 +1,94 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-LOGA-DN_1910_1910_03_1001-an-DMS
+* 
+* 
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Zwischenspeicher für alle DN's des Mandanten
+%%INDIR=\\MSbmcc01\ctm_av\temp\dms\%%$ODATE.\%%GEM3.\03
+
+
+%%EMAIL_U=
+
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+
+%%DESCRIPTION1=EMail-CC an %%EMAIL_CC 
+%%IGNORE_RIGHT_BLANKS=J
+
+* Datei Auswahl
+
+* Listen Nummer aus Jobname ermitteln
+*%%LISTE=%%SUBSTRING %%JOBNAME 26 4
+
+%%INCLUDE=DN_1910_1910_3_1001_C1.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+*%%OUTDIR=%%INDIR.\Test
+*DN_1910_1910_03_1001_C1.pdf	 \\MSD3DMSB02\DN_1910_1910_0X_1001_C1$
+
+
+%%OUTDIR=\\MSD3DMSB02\DN_1910_1910_0X_1001_C1$
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\kopiert
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Datei	
+* Beamte				nach Freigabeordner
+*DN_1910_1910_01_1001*_C1.pdf \\MSD3DMSB02\DN_1910_1910_0X_1001_C1$
+*DN_1910_1910_01_3101_C1.pdf	 \\MSD3DMSB02\DN_1910_1910_0X_3101_C1$
+
+*Angestellte
+*DN_1910_1910_03_1001_C1.pdf	 \\MSD3DMSB02\DN_1910_1910_0X_1001_C1$
+*DN_1910_1910_03_3101_C1.pdf	 \\MSD3DMSB02\DN_1910_1910_0X_3101_C1$
+
+*Angestellte
+*DN_1910_1910_03_2805_C1.pdf	 \\MSD3DMSB02\DN_1910_1910_03_2805_C1$
+*DN_1910_1910_03_3601_C1.pdf	 \\MSD3DMSB02\DN_1910_1910_03_3601_C1$
+*DN_1910_1910_03_5001_C1.pdf	 \\MSD3DMSB02\DN_1910_1910_03_5001_C1$
+*DN_1910_1910_03_5700_C1.pdf	 \\MSD3DMSB02\DN_1910_1910_03_5700_C1$
+
+* alle anderen Dateien
+*DN_1910_1910_*******_C1.pdf	 \\MSD3DMSB02\DN_1910_1910_0X_DPLIS_C1$
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.05.2021  16:50:20  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

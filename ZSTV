@@ -1,0 +1,64 @@
+* *******************************************************************************
+* LIBMEMSYM
+* ZSTV
+*
+* S Y S T E M F I L E 
+* USER : WAFAV
+* -------------------------------------------------------------------------------
+* Die Abkürzung ZStV steht für:
+* Zentrales Staatsanwaltschaftliches Verfahrensregister
+* -------------------------------------------------------------------------------
+
+* *******************************************************************************
+* sonstige Variablen 
+* *******************************************************************************
+%%GEM3            =%%SUBSTR %%JOBNAME 1 3
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+* Sysout 
+%%SYSOUT=%%OPENFT_SYSOUT
+
+* OPENFT
+%%TRANSFER_ADMISSION=Ra99FxY6
+%%ANSCHLUSS=toBZRneu
+%%BFJ_ID_ZSTV=R6086B
+
+
+* *******************************************************************************
+* Variablen zum Verfahren ZSTV
+* *******************************************************************************
+
+* Anfrage Directory des Mandanten 
+*%%ZSTV_EXPORT=\ \nwc2daten6.stv-ddorf.de\DATEN6\AMT32\User\FTP36\BZREX
+%%ZSTV_EXPORT=\\vfduswba\32\Amt32\FTP32\BZREX
+
+
+
+
+* Antwort EmpfangsDirectory des Mandanten 
+*%%ZSTV_IMPORT=\ \nwc2daten6.stv-ddorf.de\DATEN6\AMT32\User\FTP36\BZRIM
+%%ZSTV_IMPORT=\\vfduswba\32\Amt32\FTP32\BZRIM
+         
+
+
+* Antwort Empfangsdirectory auf dem OpenFT Server (dahin kommen die Daten vom BZR zurück)                   
+%%ZSTV_DIR_ANTWORT=\\msbmcbatch01\c$\CTM_AV\AntwortZSTV
+
+
+* Anfrage Directory auf dem OpenFT Server (von da aus wird zum BZR gesendet)                   
+%%ZSTV_DIR_ANFRAGE=\\msbmcbatch01\c$\CTM_AV\OpenFT-Prod-Dateien\ZSTV
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.01.2014  11:30:28  zv173x2 import export verzeichnis war nach serverwechsel falsch
+*    05.09.2012  10:38:25  zv173x2 BFJ_ID_ZSTV stand auf wird nicht benutzt
+*    09.07.2012  13:17:50  zv173x2 ANSCHLUSS
+*    23.08.2011  12:44:10  ZV173X2 Anwender möchte Daten auch im BZR Ordner verwalten
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

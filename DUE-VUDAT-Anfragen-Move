@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-VUDAT-Anfragen-Move
+* MANDANT-Anfragen -> OpenFT Sendebereich
+*********************************************************** 
+* Verschieben Mandantenanfragen 
+* 
+*********************************************************** 
+*ALT %%GEM_BAG_DIR_ANFRAGE=\\nwc2daten1\DATEN1\AMT33\T3300\STV\ALVA9\ALVA\vdatimport
+
+%%GEM_BAG_DIR_ANFRAGE=\\vfdusprog\33prog\programme\STV\ALVA9\ALVA\vdatexport
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VUDAT
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VUDAT-OPENFT-ANFRAGE
+
+%%MAX=200
+
+%%SEARCH=*.XML
+%%INPUT_DIR=%%GEM_BAG_DIR_ANFRAGE
+%%OUTPUT_DIR=%%BAG_DIR_ANFRAGE
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\VUDTA-DUE-Verzeichnisse.pdf
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\OPENFT-%%$OYEAR..csv
+
+* ------------------------------------------------------------------
+
+
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.04.2014  10:16:29  zv173x2 neu
+*    19.12.2013  10:45:15  zv173x2 prod
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,40 @@
+* ------------------------------------------------------------------------------
+* S O Z I A L W E S E N 
+* ------------------------------------------------------------------------------
+* H A U P T L A U F
+*
+* ------------------------------------------------------------------------------
+* Hier werden Standard Vorgaben gemach, die für die meisten Mandanten zutreffen
+* Abweichungen könne. bzw werden im Job-LIBMEMSYM gemacht 
+
+
+
+%%INCLUDE=RKN-COBRA-BESCHEIDE-%%$ODATE..PDF
+
+* --------------------------------------------------------------------------------------------
+* PDF_INDIR
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* --------------------------------------------------------------------------------------------
+
+**INDIR=\\mscobra01\DRUCKE$\RKN\AUSGABE
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\COBRA\BUENDEL\RKN\
+**INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\COBRA\BUENDEL\RKN
+**OUTDIR=\\10.109.1.121\Input_ITK_Rettungsdienst$
+%%OUTDIR=\\N900D01M63.n900d01.int.de\Input_ITK_Rettungsdienst$
+
+
+%%EXCLUDE="-"
+
+
+
+* --------------------------------------------------------------------------------------------
+* PDF_SAMMELDIR_PROCESSED
+* Erledigt Ordner.
+* --------------------------------------------------------------------------------------------
+*%%PDF_SAMMELDIR_PROCESSED=\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\%%SOZ_DAT.\verarbeitet
+%%PDF_SAMMELDIR_PROCESSED=\\Msprintff01\source$\cobra\%%$OYEAR.\erledigt\RKN\%%$ODATE
+
+
+
+%%DRUCK_LOG=\\msbmcc03\ctm_av\Log\ErgebnisLog\COBRA-COPY-%%$OYEAR..csv

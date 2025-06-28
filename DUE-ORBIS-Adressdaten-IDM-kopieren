@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-ORBIS-Adressdaten-IDM-kopieren
+* 
+* 
+*********************************************************** 
+ 
+%%AUFTRAGGEBER=G.Ring
+
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Auftrag von Gudrun Ring
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Files_2.ps1 -INCLUDE %%INCLUDE
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+* spezieles Format erzeugen
+%%DATE=%%$OYEAR.-%%OMONTH.-%%ODAY
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\vfdusintersync\Isync\IDMExport
+
+* Ausgabe Directory
+%%OUTDIR=\\srv03\ftp$\av\LOGA\ORBIS
+
+* Datei Auswahl
+%%INCLUDE=%%DATE._UserExport.csv
+**INCLUDE=UserExport.csv
+%%EXCLUDE="-"
+
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    14.08.2019  13:29:43  zv173x2 %%AUFTRAGGEBER=G.Ring
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

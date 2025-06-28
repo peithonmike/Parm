@@ -1,0 +1,6 @@
+*  Lese Zugriff auf EPOST
+%%IP=ezu-transfer.dp-ds.de
+%%U=BG17772@ezu-transfer.dp-ds.de
+%%P=siehe-secret-server
+%%SITE=POST-EPZA-GRE
+%%SERVER_TEXT=Lese Zugriff auf %%SITE

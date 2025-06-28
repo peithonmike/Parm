@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-AMADEE-T-FW
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\amadee.ps1
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+
+%%BETREFF_OK=Kopieren Amadee-Daten %%GEM3. nach PTV OK
+%%BETREFF_NOTOK=Kopieren Amadee-Daten %%GEM3. nach PTV NOTOK
+
+%%TEXT_OK=Joblog: Der Kopieren der Amadee-Daten %%GEM3. ist OK.
+%%TEXT_NOTOK=Joblog: Der Kopieren der Amadee-Daten %%GEM3. ist NOTOK.

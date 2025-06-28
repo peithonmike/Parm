@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Kasse-T-FDK_BUDX_BE2015
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+
+
+%%CLIENT=IFP
+%%MANDANT=400
+
+
+**MAIL_NOTOK=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%MAIL_NOTOK=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT_NOTOK=Transfer BZA-Listen abgebrochen

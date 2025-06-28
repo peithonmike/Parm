@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM DUE-OK.EWO-DelFiles-Scans
+%%APPLICATION=OK.EWO
+%%SUBAPPLICATION=OK.EWO-DelFiles
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+*Variabeln werden als Umgebungsvariabeln definiert und im Script ausgelesen.
+%%PFAD=\\vfduswba\33\Amt33\Themen\FOTOFIX-Fotos
+%%Tage=7
+%%Endung1=*.jpg
+%%Endung2=*.bmp
+*%%Endung3=
+*%%Endung4=
+%%Test="NEIN"
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\DUE-OK.EWO-DelFiles-Passbilder.ps1 
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de;
+
+%%BETREFF_OK=Löschen alter Passbild-Dateien OK
+%%BETREFF_NOTOK=Löschen alter Passbild-Dateien NOTOK
+
+%%TEXT_OK=Joblog: Löschen alter Passbild-Dateien OK.
+%%TEXT_NOTOK=Joblog: Löschen alter Passbild-Dateien ist NOTOK.
+
+* ------------------------------------------------------------------
+* Dokumentation zur Verarbeitung
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\DUE-OK.EWO-DelFiles-Passbilder#Auftrag.pdf
+* ------------------------------------------------------------------

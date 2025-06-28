@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-PRODOP-Ist-an-WINOWIG
+* kopieren Istzahlungen aus 
+* GRE-PRODOP-Export-WINOWIG-110-Ist 
+* GRE-PRODOP-Export-WINOWIG-629-Ist 
+* Prowin32 Verarbeitung 
+* 
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\Apps\ftp\av\HuH\%%GEM
+*%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+* Datei Auswahl
+*Exportverzeichnis N:\ftp\av\HUH\GR\		
+*Dateiname	GREXPWINOWIG	
+*Erweiterung des Dateinamen	Nutzernummer + Zeitstempel + ".bak"	
+
+
+
+%%INCLUDE=GREXPWINOWIG_*%%odate..TXT
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\zahlungen
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+%%TEST=N
+%%DEBUG=N
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     07.03.2016  11:18:50  zv173x2  umgestellt auf Powershell incl. mehr Dateien copy
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+

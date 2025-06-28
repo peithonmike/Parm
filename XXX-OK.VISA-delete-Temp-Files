@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-OK.VISA-delete-Temp-Files
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+* Script  Author : M.Ufer
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\OK.VISA- Script zum Löschen temporärer OKVisa-Dateien.pdf
+* ------------------------------------------------------------------
+%%TEST=N
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\BIN\BAT\clear-okvisa.cmd
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*    02.11.2021  13:50:49  zv173x2  Script  Author : M.Ufer
+*     24.10.2017  09:31:32  zv173x2  XML entfernt
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+

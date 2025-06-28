@@ -1,0 +1,22 @@
+ 
+%%TRENNER=";"
+%%DB=CONTROL_M
+*CTRLM640
+%%U=control_m
+%%P=ctmuser
+ 
+%%FILE=\\msbmcc03\ctm_av\Log\History\AJF.csv
+
+ 
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\CMS_AJF.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\CMS_AJF.sql
+*$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\CMR_RUNINFO.sql
+*%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\CMR_RUNINFO.sql
+*
+

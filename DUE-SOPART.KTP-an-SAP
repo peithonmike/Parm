@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOPART.KTP-an-SAP
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SOPART
+
+* überschreibt Empfänger
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+
+
+* Muster!! %%INDIR=\\srv03\qaspgr$\Daten\Apps\SopartGRE\SoPart\Export\FiBu\WJH
+%%INDIR=\\vfduswba\51\amt51\Sopart\KTP\Kasse
+
+
+* Datei Auswahl
+%%INCLUDE=*.XML
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfdussap\sap\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_SOPART_KTP
+
+%%FORCE_OUTDIR=N
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfduswba\51\amt51\Sopart\KTP\Backup
+
+%%AUFTRAGGEBER=D.Mendoza 07.2020
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.07.2020  09:09:29  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

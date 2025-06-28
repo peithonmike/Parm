@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-AltePost-T-FW
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+
+%%Eingabeordner=\\srv03\qaspne$\Daten\Apps\SQLBasysAP\Transfer\
+
+
+***************************************************************
+* Eingabedatei IMMER in Hochkommata !!!!
+* Es können mehrere Eingabedateien durch Komma ohne Leerzeichen getrennt angegeben werden
+%%Eingabedatei="host.dat"
+***************************************************************
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\CheckForPTV.ps1 -Eingabeordner %%Eingabeordner -Eingabedatei %%Eingabedatei
+
+%%BETREFF_OK=FileTransfer VHS-Daten %%GEM3. nach PTV OK
+%%BETREFF_NOTOK=FileTransfer VHS-Daten %%GEM3. nach PTV NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der VHS-Daten %%GEM3. ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der VHS-Daten %%GEM3. ist NOTOK.
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\VHS\NEU-AltePost-T-FW_20171122.pdf

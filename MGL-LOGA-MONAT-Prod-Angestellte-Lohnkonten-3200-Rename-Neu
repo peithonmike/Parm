@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Angestellte-Lohnkonten-3200-Rename-Neu
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MGL-LOGA-RENAME-INIDATEI-Neu
+
+
+*%%LOESCH_DAT="Konten Angestellte*.pdf"
+
+
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LOGA\Test
+*%%EINGABE_VZ=\\swvfileserver01.it-nr.de\verfahren$\Loga-Abrechnungen\Lohnkonten_Angestellte
+
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LOGA\Test_Test
+*%%AUSGABE_VZ=\\swvfileserver01.it-nr.de\verfahren$\Loga-Abrechnungen
+
+
+%%INIFILE=\\msbmcc03\ctm_av\Parm\MGL-LOGA-RENAME-INIDATEI-NEU
+
+
+
+
+
+
+*%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\MGL-LOGA-Angestellte-Rename-Konto-3200.cmd
+
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.02.2017  11:19:29  zv173x2 %%SYSOUT Standard ist im SYSTEM Member
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

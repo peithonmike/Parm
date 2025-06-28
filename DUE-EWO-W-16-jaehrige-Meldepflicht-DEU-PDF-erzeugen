@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-W-16-jaehrige-Meldepflicht-DEU-PDF-erzeugen
+* PDF Datei erzeugen
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+%%AUFTRAGGEBER=T.Heister
+ 
+
+**CSV_FULLNAME=\\msbmcc03\CTM_AV\OK.EWO\16-jaehrige-Meldepflicht\Deutsch\SQLCMD.csv
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Check4File.ps1
+
+ 
+
+
+%%docx_template=\\Msbmcc03\ctm_av\ok.ewo\16-jaehrige-Meldepflicht\Deutsch\Vorlagen\16JaehrigeMeldepflichtAusweispflicht.docx
+%%csv_datei=\\MSBMCC03\ctm_av\OK.EWO\16-jaehrige-Meldepflicht\Deutsch\Vorlagen\SQLCMD.csv
+%%temp_folder=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\DUE-EWO-W-16-jaehrige-Meldepflicht-DEU\tmp
+%%combined_file=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\DUE-EWO-W-16-jaehrige-Meldepflicht-DEU\Serienbrief_16JDeutsch.docx
+%%pdf_file=\\MSBMCC03\ctm_av\OK.EWO\16-jaehrige-Meldepflicht\Deutsch\Vorlagen\Serienbrief_16JDeutsch.pdf
+
+
+
+
+
+%%python_exe=C:\Users\a-zvaa405\AppData\Local\Programs\Python\Python312\python.exe
+
+%%python_script=\\msbmcc03\CTM_AV\Bin\Python\CF\Mailmerger.py
+
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Mailmerge_Call_Python.ps1
+
+
+
+
+ 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.12.2022  12:30:00  zvaa241 neu
+*	 29.01.2024  12:00:00  zvaa405 Umstellung auf Python
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

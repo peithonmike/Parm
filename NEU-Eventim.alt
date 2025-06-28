@@ -1,0 +1,54 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : NEU-EVENTIM
+* erstellt : 08.12.2016 09:12:58
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=NEU-EVENTIM.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/NEU-EVENTIM
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=PDF
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\NEU-EVENTIM-%%TTMMJJJJP_%%$ODATE...%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : NEU-EVENTIM-%%TTMMJJJJP_%%$ODATE..
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+%%EMAIL-T=simone.lenk@stadt.neuss.de;melanie.braunschweig@stadt.neuss.de;
+%%EMAIL-CC=guido.coenen@itk-rheinland.de;Michael.Hurtz@ITK-Rheinland.de;
+%%EMAIL-BCC=Burghard.Schramm@ITK-Rheinland.de;
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n  \n  \n  \n 

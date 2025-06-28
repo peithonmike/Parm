@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-LOGA-KN-Angestellte-an-Druckerei-Nachlieferung
+* 
+* 
+*********************************************************** 
+ 
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-USE-DRUCKEREI-NEUSS
+
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+*Indir
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\MSP-EGM\%%GEM3.\Buendel\nachlieferung
+
+*Outdir
+%%OUTDIR=%%DRUCKEREI_DIR
+%%OUTDIR_PROCESSED=%%INDIR.\kopiert
+
+
+%%EMAIL_U=Nachlieferung  MSP Angestellte %%ORT stehen bereit  %%OMONTH..%%$OYEAR 
+
+%%DESCRIPTION=%%EMAIL_U
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+

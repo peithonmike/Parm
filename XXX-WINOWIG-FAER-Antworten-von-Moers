@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-FAER-Antworten-von-Moers
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+%%SITE=%%GEM3.-WINOWIG-KRZN
+%%INCLUDE=faerausk_%%KBA_NR._*
+
+%%OUTDIR=\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\eingang\kba\
+
+%%WINSCP_AKTION=Auskünfte aus dem Fahreignungsregister abholen ( %%INCLUDE )
+
+
+
+%%TEST=N
+%%WINSCP_TEST=N
+%%DEBUG=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    13.05.2019  13:04:00  zv173x2 neu jetzt Winscp mit delete
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

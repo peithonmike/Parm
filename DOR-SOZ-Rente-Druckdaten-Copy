@@ -1,0 +1,78 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-SOZ-EZ-Druckdaten-Copy
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-EZ
+
+
+* Eingabe Directory 
+* %%INDIR=Definition in ...PARM\COPY-SOZ-EZ
+ 
+
+* Datei Auswahl
+%%INCLUDE=*EZ-*2*04_%%$ODATE..PDF
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\n200d01n01.ad.stadt-dormagen.de\AusdruckeITK\DRUCKDATEN\%%$OYEAR.\EZ\%%$ODATE
+
+* erledigt Ordner
+*%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\kopiert
+%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\kopiert
+
+
+
+* *********************************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-SOZ-DATEN-DOR
+%%NETUSE=J
+* Path für den erweiterten Zugriff
+%%NETUSE_PATH=\\n200d01n01.ad.stadt-dormagen.de\AusdruckeITK
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+ 
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    12.01.2018  08:17:47  zv173x2 vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\kopiert
+*    04.05.2016  08:12:03  zv173x2 umgestellt auf neu Powershell mit NETUSE
+*    alt \\n200d01l42.dormagen.int.de\AusdruckeITK\DRUCKDATEN\2016\EZ
+*    03.09.2015  14:30:28  zv173x2 xxx eingebaut
+*    31.07.2014  13:28:59  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

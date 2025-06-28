@@ -1,0 +1,72 @@
+************************************************************************************
+*
+*   JOB ist I N A K T I V
+*   Job ersetzt durch  JUE-SOZ-MZ-Sodatis-012-ZADA-Copy   
+*
+*
+************************************************************************************
+ 
+
+   ******************************************************************
+   * XX                                                          XX *  
+   *      XX                                                XX      *
+   *           XX                                      XX           * 
+   *                XX                            XX                *     
+   *                    XX                   XX                     *     
+   *                          XX        XX                          *
+   *                               XX                               *                                
+   *                          XX        XX                          *
+   *                     XX                  XX                     *
+   *                XX                            XX                *
+   *           XX                                      XX           *
+   *      XX                                                XX      *
+   * XX                                                          XX *  
+   ******************************************************************
+
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-SOZ-MZ-Sodatis-012-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-MZ-SODATIS
+ 
+
+%%OUTDIR=\\srv03.asp.rzne.de\qaspju$\daten\orgaeinheit\Sozialwesen\SODATIS\%%$OYEAR.\%%SOZ_DAT
+
+%%STEPNAME=Kopieren-Sodatis-Dateien
+
+%%INCLUDE=EZ-GS-NE_2*%%GKZ8_7_2._PFGS0700_SEI*_%%SOZ_DAT._Kalendermonat.txt
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+

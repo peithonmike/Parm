@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-SAP.TRAVI-senden-DTAUS
+* 
+* 
+*********************************************************** 
+ 
+ 
+*********************************************************** 
+* AN AUSCHALTEN 
+* BAT-Echo
+* ECHO_ON=N
+*********************************************************** 
+
+
+**SEARCH_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\SAP\RKN\DTAUS
+**GESENDET_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+
+**SEARCH=000.SAP.SRZ.RKN-SEPA_*_*
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\TRAVIC-LINK
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\TRAVICLINK-Dateinamen.pdf
+
+* ------------------------------------------------------------------
+
+*  FTP Powershell Script mit MD5 Hash
+
+%%FTPSERVER=m180ongum.rz.krzn.de
+%%FTPUSERNAME=tr01itk
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\SAP\RKN\DTAUS
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+%%INCLUDE=000.SAP.SRZ.RKN-SEPA_*_*
+%%PREFIX=T.
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\CF\JOB\Job-FTP-Transfer-CRC-Check.ps1
+
+  
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.04.2024  Umstellung auf Powershell
+*    10.01.2014  11:26:09  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,11 @@
+* Odate muss immer Montags sein!!!
+* wird nur bei Standard Powershellverarbeitung berücksichtigt
+* die die Funktion Check-ODATE-Wochentag verwenden
+
+**WEEKDAY=Mittwoch
+**WEEKDAY=Mittwoch
+%%WDAY=%%WDAY_%%$ODATE
+%%WEEKDAY=%%WDAY
+
+
+ 

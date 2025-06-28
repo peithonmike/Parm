@@ -1,0 +1,13 @@
+*********************************************************** 
+* 
+* 
+* D u m m y   J o b m e m b e r  , ohne Funktion
+* wird aus Schedule nicht verwendet
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\KSU_MAIL_MOERS
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\KSU_MAIL_ITKR
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\g%%GEM4
+%%LIBMEMSYM=\\msbatch01\c$\CTM_AV\Parm\KSU2000_FW_MESO_%%GEM4..txt
+

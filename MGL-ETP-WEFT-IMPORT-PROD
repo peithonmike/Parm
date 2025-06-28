@@ -1,0 +1,12 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-ETP-WEFT-IMPORT-PROD
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**%%COMMAND="C:\Program Files\Scripte\Automatisierung_Kosy\MGL_Auto_Kosy.bat"
+%%COMMAND="C:\Program Files\Scripte\Automatisierung_Kosy\MGL_Auto_kosy.bat"
+
+%%MAIL=Tobias.Redmann@itk-rheinland.de;Simone.Thissen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de;Michael.Meuser@moenchengladbach.de;Jennifer.Grzeschik@moenchengladbach.de;Benjamin.Elias@moenchengladbach.de;Lars.Mackenbach@moenchengladbach.de

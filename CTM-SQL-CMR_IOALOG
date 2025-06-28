@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-SQL-CMR_IOALOG
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%DATUM=%%JJJJMMTT_TT_M1_%%$ODATE
+
+%%SQL_SYSOUT_CSV=\\msbmcc03\ctm_av\Log\IOALOG\2013\IOALOG_%%DATUM..csv
+
+
+ 
+ 
+ 
+%%TEST=N
+ 
+

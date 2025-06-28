@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAP-Ist-SOPMG-an-SOPART  (ehemals NEU-SOPART.AV-Import) 
+* Übernahme SOPART.AV Mündelgeld "SOPARTMUEE" vom PTV Server an Sopart
+* 
+* zweiter Lauf wg nur eine Datei am Tag
+*********************************************************** 
+ 
+
+* bei TEST J wird nur ein Anlist der Dateien erzeugt
+%%TEST=N
+
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+
+
+* Eingabe PTV-Server  
+**SEARCH_DIR=\\msptv01\PTV-Projekte\sap_sopmg-ir\outdir
+%%SEARCH_DIR=\\msptv02\PTVProjekte$\SAP_IMPORT\SOPMG_IXXX\outdir
+
+* Daten-Datei Suchmaske
+%%SEARCH=*-%%GKZ..TXT-Type-TABELLE1.Gebucht.txt
+
+* Buchungsprotokolle sollen nur verschoben werden 
+%%MOVE_FILE=*SOPA-%%GKZ..TXT.buchungen-2.txt
+
+* Ausgabe SOPART -Import-Verzeichnis 
+%%OUTDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\daten\apps\sopartNEU\SoAv\avor\import 
+* PTV Langnamen in SOPART Kurznamen ausgeben 
+%%OUTFILE=SOPIM_%%ODATE.-2.TXT
+
+* Logfile
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+
+* erledigt Ordner,
+* dieser liegt immer in der search_dir  
+%%MOVE_ORDNER=erledigt
+
+
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+ 
+

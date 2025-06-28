@@ -1,0 +1,39 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Düsseldorf
+***********************************************************************************
+*  Jobname     : DUE-LOGA.PBS-Daten-abholen
+*  Auftrag ist von Gudrun Ring
+   %%APPLICATION=LOGA.PBS
+***********************************************************************************
+* Job holt Loga-PBS-Daten in Bochum ab.
+*********************************************************************************** 
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-Bochum
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###LOGA-PBS-Daten-GET
+
+%%SYSIN_BAT=\\msbmcc03\ctm_av\BIN\BAT\LOGA-PBS-Daten-GET.BAT
+
+%%NACH_BAT =\\msbmcc03\ctm_av\BIN\BAT\LOGA-PBS-Daten-NACH.BAT
+
+%%File=%%JOBNAME..tmp
+
+%%TEST=N
+
+%%PFADVON=\\srv03.asp.rzne.de\qaspkdvz$\Daten\apps\ftp\av\loga\
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\DUE_Stellenplan.ps1
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Log\Ergebnislog\%%GEM3.-LOGA-PBS-Daten-%%$OYEAR..csv
+* ------------------------------------------------------------------

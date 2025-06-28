@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-OK.EWO-Datenübermittlung-Staatsangehörigkeit
+* 
+* 
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : DUE                                                                  *
+***********************************************************************************
+*  Jobname     : DUE-Datenu an Staatsangehoerigkeitbehoerde
+*  Description : DUE-Datenuebermittl. Staatsangehoerigkeitbehoerde
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%JOBTEXT=CTM-DUE Staatsangehörigkeit am %%EIN-DAT *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=28960-E01U0000
+*
+%%OKEWO_NR=P28960
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+
+*  Liste1 
+%%LISTE1=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON..PDF
+%%LISTE1_ACTION=N
+
+
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=N
+
+
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=DUE-Datenuebermittl. Staatsangehoerigkeitbehoerde
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U296#DUE_DAT_N.E01E300#%%EIN-DAT.#V_UZ331_LISTE.E01DUMMY#$$
+
+

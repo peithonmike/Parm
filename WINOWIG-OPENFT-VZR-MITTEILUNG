@@ -1,0 +1,42 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant :    alle                                                              *
+***********************************************************************************
+*  APPLICATION : WINOWIG.OPENFT 
+*  Description : KBA VZR Mitteilungen
+***********************************************************************************
+* Die WINOWIG Variablen werdenim LIBMEMSYM WINOWIG definiert
+***********************************************************************************
+* Verschieben Anfragen aus dem Mandantenverzeichnis 
+* in das Sendeverzeichnis auf dem OpenFT Server
+***********************************************************************************
+
+* BFJ_ID des Mandanten übernehmen 
+* wird bei der Anfrage nur nachrichtlich verwendet
+%%BFJ_ID=%%BFJ_ID_WINOWIG
+
+
+%%RICHTUNG=MitteilungMove
+
+
+* die zu verschiebenden Files werden anhand des Suchbegriffes ermittelt
+%%SEARCH=%%VZR_MITTEILUNGEN
+
+
+
+
+* Input_dir ist die Mandanten-Directory, in der die Anfrage liegt
+%%INPUT_DIR=%%WINOWIG_KBA_EXPORT
+
+
+
+* Output_dir ist die Sendedirectory auf dem OpenFT Server  
+%%OUTPUT_DIR=%%WINOWIG_KBA_DIR_ANFRAGE
+ 
+
+%%SYSOUT          =%%OPENFT_SYSOUT
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+
+
+

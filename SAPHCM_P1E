@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Test-Job
+* SAPHCM_P1E
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC03\CTM_AV\PARM\g%%GEM3
+
+
+*%%COMMAND=powershell.exe -executionpolicy bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\AS\SAPHCM_P1E.ps1
+
+%%COMMAND=powershell.exe -executionpolicy bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\AS\Park-Ticket-Zugriff-TEST.ps1

@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-WOHN-IT-NRW-Postfach-Mail
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IT-NRW-POSTFACH-abholen
+*Testüberschreibung
+*%%INCLUDE=D181210*
+
+%%DESCRIPTION3=  FORCED_BY %%GEM3.-WOHN-IT-NRW-Postfach-abholen
+
+
+
+
+
+%%TEST=J
+%%DEBUG=N

@@ -1,0 +1,77 @@
+*********************************************************** 
+* LIBMEMSYM 
+%%APPLICATION=SEMAN
+* DUE-SEMAN-T-COPY-PTV-WinSCP
+* Copy SEPA-Mandate zum PTV-Server
+* Auftrag durch D.Mendoza - 25.10.2021/Schoenfeld.
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\system
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+********************************************************
+%%DESCRIPTION= 
+********************************************************
+
+%%TEST=N
+
+%%SITE=DUE-SEPA-Mandate
+%%AUFRAGGEBER=D.Mendoza
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Bereitstellung Daten in PTV
+*---------------------------------------------------------------
+
+**%%ORDER=%%ODAY._%%OMONTH._%%$OYEAR._
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+**%%eindat=\\vfdussap\sap\sap\Kasse_Nachtverarbeitung\Seman\BDAT_SEPA-Mandate_*.csv
+**%%REMOTE_INDIR=\\vfdussap\sap\sap\Kasse_Nachtverarbeitung\Seman\
+
+%%REMOTE_INDIR=/
+%%DONE_DIR=/Verarbeitet
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=BDAT_SEPA-Mandate_*.csv
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+
+**%%OUTDIR=\\srv03\ftp$\av\Alex
+
+%%OUTDIR=\\msptv02.itk.local\ptvprojekte$\SAP_Export\BDAT_EDUE\inDir
+%%SHOW_ERGEBNISLISTE=N
+
+**%%ausdat1=\\vfdussap\sap\sap\Kasse_Nachtverarbeitung\Seman\Verarbeitet\BDAT_SEPA-Mandate_*.csv
+**%%ausdat2=\\msptv01.itk.local\ptv-projekte\SAP_Export\BDAT_EDUE\inDir\BDAT_SEPA-Mandate_*.csv
+**%%ausdat1=\\vfdussap\sap\sap\Kasse_Nachtverarbeitung\Seman\Verarbeitet\
+**%%ausdat2=\\msptv02.itk.local\ptvprojekte$\SAP_Export\BDAT_EDUE\inDir\
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\AS\JOB-WinSCP-Get.ps1
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+
+%%Z08=get %%INCLUDE  %%OUTDIR.\*
+%%Z09=mv %%INCLUDE %%DONE_DIR./*
+%%Z10=bye
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer SEPA-Mandate %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer SEPA-Mandate %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der SEPA-Mandate %%GEM3. zum PTV-Server ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der SEPA-Mandate %%GEM3. zum PTV-Server ist NOTOK.

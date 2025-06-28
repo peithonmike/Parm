@@ -1,0 +1,81 @@
+* ------------------------------------------------------------------------------
+* S O Z I A L W E S E N 
+* ------------------------------------------------------------------------------
+* RENTE POST
+*
+* ------------------------------------------------------------------------------
+* Hier werden Standard Vorgaben gemach, die für die meisten Mandanten zutreffen
+* Abweichungen könne. bzw werden im Job-LIBMEMSYM gemacht 
+
+* Pfad für die Deckblätter 
+* Original und PDF 
+%%USE_DRUCKEREI=N
+* Abrechnungsmonat 
+%%SOZ_DAT=%%OYEAR.%%OMONTH
+
+%%PDF_COVERDIR=\\msbmcc03\ctm_av\PDF-COVER
+
+
+* PDF Programm
+%%PDF_EXE=\\msbmcc03\ctm_av\Bin\sontiges\PDFtk\bin\pdftk.exe
+
+* Strandard Trenblatt 1-seitig
+%%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Trennblatt.pdf
+* wenn 2-seitig gefordert wird, dann  im Job-LIBMEMSYM 
+* %%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\2-seitig\ Trennblatt.pdf
+* angeben
+
+
+
+* Sachgebiet aus Jobnamen ermitteln
+%%SOZ_GKZ=%%SUBSTR %%JOBNAME 20 3
+
+%%USE_FREEFLOW=J
+
+* ---------------------------------------------------------------------
+* Listen  POST
+* weiß
+* einseitig
+* Anzahl 1
+* POST-PFDR0010-NE_REPR_2604_20140613.pdf
+* ---------------------------------------------------------------------
+%%SOZ_RENTE_POST_LISTEN_INCLUDE=POST*_2%%SOZ_GKZ._*.PDF
+%%SOZ_RENTE_POST_LISTEN_EXCLUDE="-"
+%%SOZ_RENTE_POST_LISTEN_ANZAHL=1
+%%SOZ_RENTE_POST_LISTEN_DRUCKER=\\msprintff01\d$\R18LP
+
+
+* Muster wenn kein Exclude vorhanden ist
+* %%SOZ_EZ_LISTEN_EXCLUDE="-"
+
+
+ ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-FILES-SAMMELN_INCL_EXCL.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-PDFTK.ps1
+
+%%DRUCK_LOG=\\msbmcc03\ctm_av\Log\ErgebnisLog\SOZ-DRUCK-%%$OYEAR..csv
+*  FreeFlow Drucker  
+* --------------------------------
+
+*  R17doppel, 
+*  R17LP, 
+
+*  R18doppel
+*  R18DoppgelochtH
+*  R18DoppgelochtQ
+*  R18gelocht 
+*  R18LP
+*  R18personal
+*  R18Vorblatt 
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.06.2021  08:46:06  zv173x2 %%USE_DRUCKEREI
+*    16.06.2014  09:09:18  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

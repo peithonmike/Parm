@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-Vzr-Anfrage-Senden
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG-OPENFT-SENDEN-KBA
+
+
+%%SEARCH=%%VZR_ANFRAGEN
+
+

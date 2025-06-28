@@ -1,0 +1,55 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-EGM-Angestellte-Move
+* 
+* 
+*********************************************************** 
+ 
+
+
+*********************************************************** 
+* Mitarbeiter Service Portal 
+* 
+*********************************************************** 
+%%INIFILE=\\msbmcc03\ctm_av\PARM\LOGA-NHCM-INCLUDE-INIDATEI
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-NHCM-NAR
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NAR
+%%LIBMEMSYM=%%INIFILE
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+%%DESCRIPTION = INDIR  beinhaltet die NHCM Loagadaten aus Lemgo
+%%DESCRIPTION1= OUTDIR hierin kommen die Dateien zum buendeln
+%%DESCRIPTION2= OUTDIR2 ist die Directory für die täglichen Dokument Updates
+
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\NHCM
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NAR\NHCM
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\NHCM\verschoben
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.05.2024  14:59:09  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

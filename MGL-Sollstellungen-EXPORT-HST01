@@ -1,0 +1,21 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland
+***********************************************************************************
+*  Jobname     : MGL-Sollstellungen-EXPORT-HST01
+*  APPLICATION : SAP/KMSTA
+*  
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+**MAIL-NOTOK=david.mertens@itk-rheinland;produktions-steuerung@itk-rheinland.de
+
+%%MAIL_NOTOK=david.mertens@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen bitte überprüfem!!!
+%%TEXT_NOTOK=%%JOBNAME abgebrochen

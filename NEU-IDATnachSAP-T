@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-IDATnachSAP-T
+* 
+* 02.05..2017 - Umstellung auf Powershell-FTP
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Neuss
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**CLIENT=IFP
+**MANDANT=100
+**SOURCE=\\mskmv02\Programme\kmv_neu\Batchdateien\neuss\divers\IDAT
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\NEU_IDAT_nach_SAP_T.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_100.cred"

@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-Batch-Druck-Protokoll
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+ 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msowigbat01\c$\CTM_AV\bin\Powershell\BL\avWINOWIG-DRUCK-PROTOKOLL.ps1
+* ------------------------------------------------------------------
+**EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+
+* Eingabe für die Powershell
+%%WINOWIG_LOGFILE =\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\winowig\ftp\ausgang\druckdateien\%%WINOWIG_TREIBER.\PrintLog%%RDATUM..log
+*%%WINOWIG_LOGFILE =\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\winowig\ftp\ausgang\druckdateien\%%WINOWIG_TREIBER.\PrintLog2014-04-23.log
+
+* Ausgabe der Powershell
+%%WINOWIG_BEGLEITZETTEL_OUTFILE=\\srv03.asp.rzne.de\wow$\Begleitzettel.txt
+%%TEST=N
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-PS-WINOWIG-DRUCK-PROTOKOLL.BAT
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.11.2017  10:44:35  zv173x2 Treiber variabel gemachz kommt aus gDUE
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

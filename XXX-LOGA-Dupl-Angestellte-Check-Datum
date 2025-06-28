@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Dupl-Angestellte-Check-Datum
+* 
+* 
+*********************************************************** 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\XXX-LOGA-CHECK-DATUM-AV-MAIL
+
+%%INDIR=
+%%FORMAT=MM.JJJJ
+%%DATE=%%OMONTH..%%$OYEAR
+%%INCLUDE=*.pdf
+%%INDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NAR\Dupl
+%%INDIR2=nicht-verwendet
+
+%%TEST=N
+%%DEBUG=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.09.2021  08:09:40  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

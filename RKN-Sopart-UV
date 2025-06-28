@@ -1,0 +1,81 @@
+*********************************************************** 
+*
+* zvaa405   21.08.2023
+*
+* LIBMEMSYM 
+* RKN_Sopart_UV
+* 
+* Auftraggeber:  Frau Anke Classen
+* anke.classen@rhein-kreis-neuss.de
+*
+*********************************************************** 
+ 
+
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UPS-SOPART-FIBU-RKN
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SOPART
+
+
+
+
+
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qaspkr$\daten\apps\SopartRKN\Sopart\FiBuExport\UV
+
+* Datei Auswahl
+%%INCLUDE=*.XML
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=%%IP.\UVG
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\Archiv
+
+
+
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+%%NETUSE_PATH=%%IP
+*
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* ***************************************************************************
+
+
+%%TEST=N
+%%DEBUG=N
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Job-Copy-Move-Files-neu.ps1
+
+
+
+
+
+
+
+*----------------------------------------------------------------------------------
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    16.08.2023  10:49:26  zvaa405 neu ab 16.08.2023
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

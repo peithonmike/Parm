@@ -1,0 +1,49 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-TEST-holen-Beamte
+* 
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-MOERS
+*********************************************************** 
+ 
+%%DATE=0315
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%OUTDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NBE\KN
+%%OUTDIR2=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NBE\DN
+%%OUTDIR3=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NZI\KN
+%%OUTDIR4=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NZI\DN
+
+
+
+
+
+%%INCLUDE=*.pdf
+%%Z01=open %%IP
+%%Z02=%%U
+%%Z03=%%P
+%%Z04=ascii
+%%Z05=cd /Prod/NBE/%%DATE./KN
+%%Z06=LCD %%OUTDIR1
+%%Z07=mget %%INCLUDE 
+%%Z08=cd /Prod/NBE/%%DATE./DN
+%%Z09=LCD %%OUTDIR2
+%%Z10=mget %%INCLUDE 
+%%Z11=cd /Prod/NZI/%%DATE./KN
+%%Z12=LCD %%OUTDIR3
+%%Z13=mget %%INCLUDE 
+%%Z14=cd /Prod/NZI/%%DATE./DN
+%%Z15=LCD %%OUTDIR4
+%%Z16=mget %%INCLUDE 
+
+
+%%Z20=bye 
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.04.2015  14:22:34  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

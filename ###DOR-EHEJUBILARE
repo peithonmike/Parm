@@ -1,0 +1,14 @@
+*
+*Dormagen
+*
+*Tabelle muss im OK.EWO angelegt sein
+%%TABELLE=JE05
+
+* Auswertezeitraum komplettes nächste Jahr
+%%VON=01.01.%%JJJJ_P1_%%$ODATE
+%%BIS=31.12.%%JJJJ_P1_%%$ODATE
+
+* 
+%%COPY_STS_DBL=J
+%%LISTE2=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..sts
+%%LISTE_CSV=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..CSV

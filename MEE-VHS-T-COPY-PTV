@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-VHS-T-COPY-PTV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%DATUM=%%ODAY..%%OMONTH..%%$OYEAR
+
+%%eindat=\\srv03.asp.rzne.de\qaspme$\Daten\Apps\SQLBasys\Transfer\host.dat
+%%deldat=\\srv03.asp.rzne.de\qaspme$\Daten\Apps\SQLBasys\Transfer\host.dat
+%%ausdat1=\\srv03.asp.rzne.de\qaspme$\Daten\Apps\SQLBasys\Transfer\Verarbeitet\%%GKZ._VHS_D%%$ODATE.%%TIME..txt
+##ausdat2=\\msptv02.itk.local\ptv-projekte\hizadrs_sap\inDir\%%GKZ._VHS_D%%$ODATE.%%TIME..txt
+##ausdat3=\\msptv02.itk.local\ptv-projekte\hizpbuc_sap\inDir\%%GKZ._VHS_D%%$ODATE.%%TIME..txt
+
+%%ausdat2=\\msptv02.itk.local\ptvprojekte$\SAP_Export\HIZADRS_EXXX\inDir\%%GKZ._VHS_D%%$ODATE.%%TIME..txt
+%%ausdat3=\\msptv02.itk.local\ptvprojekte$\SAP_Export\HIZPBUC_EXXX\inDir\%%GKZ._VHS_D%%$ODATE.%%TIME..txt
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+%%MAIL01=volkshochschule@meerbusch.de
+%%BETREFF_OK=FileTransfer Kassendaten VHS %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer Kassendaten VHS %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der Kassendaten VHS %%GEM3. zum PTV-Server ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der Kassendaten VHS %%GEM3. zum PTV-Server ist NOTOK.

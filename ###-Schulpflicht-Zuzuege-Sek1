@@ -1,0 +1,10 @@
+*
+* LIBMEMSYM f?r Schulpflicht Zuzuege-Sek1 alle Gemeinden au?er D?sseldorf
+* Datum setzen
+*
+* im Format JJJJMMTT  jeweils zu ?ndern vor dem 1.August des Jahres
+
+
+%%DATUM_VON=20080701 alt = 20080701 ab 01.08.2025 neu = 20090701
+
+%%DATUM_BIS=20140801 alt = 20140801 ab 01.08.2025 neu = 20150801

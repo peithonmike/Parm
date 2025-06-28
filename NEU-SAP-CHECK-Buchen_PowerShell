@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAP-CHECK-Buchen_PowerShell
+* Prüfung ob Dateien in 100\Fachverfahren\Buchen vorhanden sind
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Neuss
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%EINGABE=\\msbmcc03\ctm_av\Parm\Buchungen_NEU.txt
+%%AUSGABE=\\msbmcc03\c$\Temp\Buchungen_Neu.txt
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass "%PSScripts%\Global\Check_Projekte.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_100.cred" -ProjektTyp "BUC"
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de;%%SAP_MAIL
+%%MAILSB22=%%SAP_MAIL
+
+%%MAILSB22_2=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de;Daniel.Mendoza@itk-rheinland.de
+
+%%BETREFF=Bitte Daten in 100\Fachverfahren\Buchen ueberpruefen
+%%TEXT=In 100\Fachverfahren\Buchen sind Daten vorhanden. Bitte ueberpruefen.
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAO-DOKU\NEU-SAP-CHECK-Buchen_PowerShell.pdf

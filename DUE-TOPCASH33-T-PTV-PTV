@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-TOPCASH33-T-PTV-PTV
+* 
+* 08.01.2020 - neuer Job fuer Daniel Mendoza /Schr.
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\TC_33_Ersetzen.ps1"

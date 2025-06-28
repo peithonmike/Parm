@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-INTEGRATION-WAHL-Druck
+* 
+* 
+*********************************************************** 
+ 
+
+
+*********************************************************** 
+* Output wird manuell über OKEWO als PDF erzeugt
+* und mit diesem Job auf den Prinserver nach Freigabe 
+* übertragen.
+* möglich Wahlarten und deren Prefix
+*                   (I)ntegrationswahl   %%GEM.__
+* BW KW EW          (W)ahl               %%GEM3._
+* B.Lieven
+*********************************************************** 
+* E.Hamers
+* I.Franz
+* M.Smits
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO-INEGRATIONS-WAHL
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\IntegrationsWahl_erledigt
+
+* Outdir mit Düsseldorf überschreiben
+%%OUTDIR=\\msdpiom01\D$\DFZSDPF_PDF
+
+
+%%WAHLART=I
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.09.2020  19:13:19  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

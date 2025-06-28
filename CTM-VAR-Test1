@@ -1,0 +1,11 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-VAR-Test1
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+
+%%TEST=01.%%MM_M1_%%$ODATE...%%JJJJ_M1_%%$ODATE
+%%TEST2=%%LD_MM_M1_%%$ODATE...%%MM_M1_%%$ODATE...%%JJJJ_M1_%%$ODATE

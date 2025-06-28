@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-SYSTEM-M-CleanDir-OldFiles
+* 
+* 
+*********************************************************** 
+ 
+**LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_ITK
+
+
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Global\DirCleanWithCSV.ps1" -DirList "%PSScripts%\CleanDir-OldFiles.csv" -recurse 
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\ITK-SYSTEM-M-CleanDir-OldFiles.pdf

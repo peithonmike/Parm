@@ -1,0 +1,50 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-BEHERBERGUNG-Test-Cloud-Formulare-AMP
+* Copy Formulare Beherbungssteuer für Prüfung an AMP
+*********************************************************** 
+%%AUFTRAGGEBER=Guido Müller
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=Move Formulare nach Prüfung an D3
+%%RICHTUNG=Copy-from-Cloud
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-Cloud-Copy-Move-Files-3.ps1
+
+%%U=s-zv-Behst
+
+
+*---------------------------------------------------------------------------------
+#  Der Begriff secret-server wird im Job durch das verschlüsselte Passwort ersetzt 
+%%P=secret-server
+*---------------------------------------------------------------------------------
+* Eingabe Directory 
+* Directory in der Cloud
+* immer mit Laufwerksbezeichnung
+
+
+
+%%INDIR=X:\Beherbergungssteuer\DUE\beherbergungtest
+
+* Datei Suchmaske
+%%INCLUDE=*_Zusammenfassung_*.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory für die Solldaten
+%%OUTDIR=\\msampscan01\Beherbergung$\DUE\in
+
+* Cloud Laufwerk
+%%LAUFWERK=X:
+ 
+* Dateien die in die Cloud geschrieben wurden 
+* nach erledigt verschieben
+%%OUTDIR_PROCESSED=%%INDIR.\Erledigt
+
+%%USE_PREFIX=N
+
+%%TEST=N
+%%DEBUG=N
+

@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Kasse-T-Rückführung_Vollkomm
+* 
+* 09.05.2017 - Umstellung auf neue Powershell-FTP 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%CLIENT=IFP
+%%MANDANT=400
+**DEST=\\ne1da03\1d03data\WIRT_FIN\FINANZEN\VOLLSTR\Vollkomm_Schnittstellenübernahmen\Vollkomm_Istdatei
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\DUE_Kasse_T_Rueckfuehrung_Vollkomm.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_400.cred"

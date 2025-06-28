@@ -1,0 +1,41 @@
+
+*%%IP=10.50.34.21
+*%%U=l2001jobdn
+*%%P=ftpdues
+
+
+%%IP=nicht-verwendet
+%%U=extad01\mgbatchitk
+
+%%P=Fastenzeit2017
+
+
+%%LOG-DAT=%%$OYEAR.-%%OMONTH.-%%ODAY
+
+%%MONAT-DAT=%%$OYEAR.-%%OMONTH.
+
+%%KINDER-DAT=%%$OYEAR._%%OMONTH.
+
+%%VOR-DAT=%%$OYEAR.-%%OMONTH.-%%TT_M1_%%$ODATE.
+
+%%VOR-MON=%%MM_M1_%%$ODATE
+
+%%JAHR=%%JJJJ_MM_P1_%%$ODATE.
+
+%%MONAT=%%MM_P1_%%$ODATE
+
+**%%Zielpfad=\\vfdusalt\10\Amt10\Loga_PBS-Sachbearbeitung\TDEP_Protokolle /user:ZVDUEFTP sgbTabelle21 /persistent:no
+*
+*
+*   *****************************  
+*   Ansprechpartner:
+*   *****************************  
+*
+*
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    02.05.2016  
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

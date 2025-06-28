@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-SOPART.AV-Import
+* HOST -> PC -> Mandant
+* 
+*********************************************************** 
+* 
+* SoPart® AV - Amtsvormundschaft / Beistandschaft / Mündelgeld 
+* Kopieren  SOPART.AV Dateien (aus der Host Abendverarbeitung)
+*           aus FTP.Prodbereich in den Mandanten-Bereich
+* 
+************************************************************************** 
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\g%%GEM3
+
+
+*----------------------------------------------------------------------------------
+*     Variablen setzen  
+*----------------------------------------------------------------------------------
+%%INDIR=\\srv03.asp.rzne.de\ftp$\%%GEM.\sopart\avor\import
+%%OUTDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\daten\apps\sopart\avor\import
+
+
+ 
+
+ 
+

@@ -1,0 +1,32 @@
+*  Muster
+*  123456789012345678901234567890    
+*  NEU-SOZ-MZ-024-05-Bescheide-BU
+
+*  bere-090_PFBM0100_PROT_NE-2024505_6_201608.pdf  
+
+
+
+*  T E S T  
+%%PDF_INDIR    =\\Msprintff01\source$\soz-test\2016\neu-split
+
+
+* GKZ aus Jobnamen ermitteln
+%%SOZ_GKZ=%%SUBSTR %%JOBNAME 12 3
+
+* Sachgebiet aus Jobname ermitteln
+%%SOZ_SACHG=%%SUBSTR %%JOBNAME 16 3
+
+
+* Include für Bescheide
+*                      bere-241-NE_PFVX0328_KBES-2024505_6_201608
+%%SOZ_MZ_BESCH_INCLUDE=bere*KBES*2%%SOZ_GKZ.%%SOZ_SACHG.*_%%SOZ_DAT..PDF
+
+* Include für Protokolle
+%%SOZ_MZ_PROT_INCLUDE=bere*PROT*2%%SOZ_GKZ.%%SOZ_SACHG.*_%%SOZ_DAT..PDF
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    19.07.2016  15:24:39  zv173x2 
+*    19.07.2016  15:23:25  zv173x2 neu Druck nach 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

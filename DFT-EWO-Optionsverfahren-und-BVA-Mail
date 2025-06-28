@@ -1,0 +1,46 @@
+
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Send-Mail-Attach.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%AUFTRAGGEBER=
+
+
+* Eingabe Directory
+%%INDIR=
+
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+
+
+* Empfänger der Dateien !! (durch Semikolon getrennt) 
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+* Subject
+%%EMAIL_U=Job-Nachricht:  %%JOBNAME  CC:%%COMPSTAT
+
+* Kopie
+%%EMAIL_CC=
+
+
+* Blindkopie
+*%%EMAIL_BCC=
+
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+%%EMAIL_A_MOVE=N
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=J
+
+
+
+

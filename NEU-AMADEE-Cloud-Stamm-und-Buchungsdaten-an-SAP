@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-AMADEE-Cloud-Stamm-und-Buchungsdaten-an-SAP
+* Verfahrenbetreung: Dagmar Sauer 02131 750-1537
+*********************************************************** 
+%%AUFTRAGGEBER=M.Keil 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=Amadee Stamm und Buchungsdaten (Soll) nach SAP kopieren
+%%RICHTUNG=Copy-from-Cloud
+
+
+
+%%U=AmadeeAV
+
+
+*---------------------------------------------------------------------------------
+#  Der Begriff secret-server wird im Job durch das verschlüsselte Passwort ersetzt 
+%%P=secret-server
+*---------------------------------------------------------------------------------
+* Eingabe Directory 
+* Directory in der Cloud
+* immer mit Laufwerksbezeichnung
+
+%%INDIR=X:\Musikschule\FromAmadee\%%GEM3
+**INDIR=X:\Musikschule\_test\FromAmadee\%%GEM3
+
+* Datei Suchmaske
+%%INCLUDE=AMA_100*
+%%EXCLUDE="-"
+
+* Ausgabe Directory für die Solldaten
+%%OUTDIR=\\MSPTV02\d$\AMADEE_EXXX\outdir
+
+* Cloud Laufwerk
+%%LAUFWERK=X:
+ 
+* Dateien die in die Cloud geschrieben wurden 
+* nach erledigt verschieben
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+%%USE_PREFIX=N
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.03.2020  09:12:47  zv173x2 auf AMA_800* 
+*    13.01.2020  15:02:26  zv173x2 USE_PREFIX default (N) 
+*    13.01.2020  15:01:33  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

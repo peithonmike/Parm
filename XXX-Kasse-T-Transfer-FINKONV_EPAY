@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-Kasse-T-Transfer-FINKONV_EPAY
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -Command "& { Set-Location 'D:\Program Files\FinKonv\' ; Invoke-FinKonv -Client IFP -Exit -Project EPAY_EXXX }"
+
+%%CLIENT=IFP
+%%PROJECT=D:\PTV\Projekte\SAP_Export\EPAY_EXXX
+

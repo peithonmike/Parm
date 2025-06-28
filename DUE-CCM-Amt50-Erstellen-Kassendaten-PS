@@ -1,0 +1,112 @@
+**************************************************************** 
+* CARE COST MANAGER
+* Erstellen KIRP Datei per SQL
+*   
+* Ausgabeverzeichnis : alt \\srv03.asp.rzne.de\ftp$\df\CCM
+*                      neu \\srv03.asp.rzne.de\ftp$\df\CCM\Amt50   
+**************************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\UP-CCM-SQL
+
+
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+%%SERVER=mssql06.itk.local
+**************************************************************** 
+*  Datenbank ****************************************************
+*  alt DB=ccm_due
+**************************************************************** 
+%%DB=ccm_due_Amt50
+
+//%%U=??
+*%%P=siehe-Secret-Server
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+*%%VON=??
+*%%BIS=??
+
+
+
+
+%%SQL_FILE=\\msbmcc03\ctm_av\Parm\SQL\CCM_NKF_DATE.sql
+
+**************************************************************** 
+*  SQL-Script
+**************************************************************** 
+$$INCLUDE=%%SQL_FILE
+
+
+* Name der Ausgabe Directory und Datei
+%%OUTDIR=nicht-verwendet
+%%FILENAME=nicht-verwendet
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+ 
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

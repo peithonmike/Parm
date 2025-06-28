@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SAP-LOGA-FIBU-Angestellte-holen
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA_NAR
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-PROT
+
+**INDIR=\\10.50.34.68\loga\dl2001jobd\Tarifbeschaeftigte\Produktion\output
+%%INDIR=\\10.50.34.68\loga\IP-Output\ITK-Rheinland\Scout
+
+%%NETUSE_PATH=\\10.50.34.68\loga\dl2001jobd\Tarifbeschaeftigte\Produktion\output
+
+%%OUTDIR=\\srv03\ftp$\av\Personal\%%LOGA_NAR_DIR.\fibukirpneuss\DUE\
+%%FORCE_OUTDIR=J
+%%INCLUDE=*_03_*.txt, *_43_*.txt
+%%EXCLUDE="-"
+%%LAUFWERK=Y:
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.05.2016  11:18:52  neuer Job nach der Änderung 'Abholen aus der neuen Citrix-Farm'
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

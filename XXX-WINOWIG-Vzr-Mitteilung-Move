@@ -1,0 +1,22 @@
+
+
+* festen Namen zum sichern nach senden in ....Odate ändern
+%%RENAME_TO_ODATEFILE=J
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG-OPENFT-VZR-MITTEILUNG 
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\WINOWIG-KBA-DTA-%%$OYEAR..csv
+
+
+
+ 
+
+%%FIND=" "
+%%TEST=N
+
+
+* Logfilename 
+
+%%LOGFILE_COUNTER=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\WINOWIG-KBA-DTA-%%$OYEAR..csv
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\WINOWIG-KBA-DTA-%%$OYEAR..csv
+

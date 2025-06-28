@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-FW-Protime
+*
+* Filewatcher auf erwartete Dateien für DUE_Protime 
+* 
+*********************************************************** 
+%%AUFTRAGGEBER=J.Huhn
+
+
+
+
+%%DATE=%%$OYEAR.-%%OMONTH.-%%ODAY
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+**INDIR=
+%%INDIR=\\vfapps\apps\ITK\Protime
+
+
+
+
+**File01=DZ_ATZ_%%$ODATE..csv
+**File02=DZ_Fehlzeiten_%%$ODATE..csv
+**File03=DZ_Salden_%%$ODATE..csv
+**File04=DZ_Schwerbehinderte_%%$ODATE..csv
+**File05=DZ_Vertragszeiten_%%$ODATE..csv
+**File06=DZ_Vertragszeiten_Azubis_%%$ODATE..csv
+**File07=10002_PX01_PGRDAT.csv
+**File08=10002_PX02_VERTRAGSDATEN.csv
+**File09=10002_PX03_STEUER.csv
+**File10=10002_PX05_TARIFVER.csv
+**File11=10002_PX06_FBA.csv
+**File12=10002_PX11_MAKST.csv
+**File13=10002_PX17_ANHANG.csv
+**File14=10002_PX20_MITARBEITERDATEN.csv
+
+
+
+%%FILE_LIST=LDH_%%$ODATE..xml;Fehlzeiten_%%JJJJMMMTT_TT_M1_%%ODATE_csv       
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\CF\JOB\DUE_FW_Protime.ps1
+

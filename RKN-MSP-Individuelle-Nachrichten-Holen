@@ -1,0 +1,42 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* RKN-MSP-Individuelle-Nachrichten-Holen
+* 
+* 
+*********************************************************** 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP-INDIVIDUELLE-INIDATEI-RKN
+
+
+%%DESCRIPTION  = Überprüfen ob individuelle Nachrichten zur Abholung bereitliegen
+
+
+%%JJJJMMTT=%%$ODATE
+%%INIFILE=\\msbmcc03\ctm_av\PARM\MSP-INDIVIDUELLE-INIDATEI-RKN
+
+
+* *********************************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-EGM-DATEN-RKN
+%%NETUSE_S=J
+* Path für den erweiterten Zugriff
+**NETUSE_PATH=\\10.109.1.194\msp$
+%%NETUSE_PATH=\\RKN-Data01.n900d01.int.de\msp$
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+
+
+
+%%INCLUDE =*.pdf
+%%EXCLUDE="-"
+%%OUTDIR =\\srv03\ftp$\av\MSP\Individuelle-Nachrichten
+
+%%DEBUG=N
+%%TEST=J
+

@@ -1,0 +1,76 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* DUE-Import-T-PAYPAL
+* 
+* 
+*********************************************************** 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get-2.ps1
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get-2.ps1 
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+%%WINSCP_EXE=C:\Program Files (x86)\WinSCP\WinSCP.exe
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+* SERVER_TEXT IP P , U  und SITE kommen meist aus IP-UP Member 
+*%%SERVER_TEXT
+*%%IP=
+'%%P=
+'%%U=
+%%SITE=GOVCONNECT
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Test Import PAYPAL-Daten
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=/data/settlement
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=STL_05111000_*.csv
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+*%%OUTDIR=C:\temp\GOVCONNECT\
+%%OUTDIR=\\srv03\qaspdf$\Daten\Apps\ftp\GOVCONNECT\
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open GOVCONNECT
+*%%Z04=sftp://05111000:***@finanz.payment.govconnect.de/ -hostkey="ecdsa-sha2-nistp256 256 D0jRcUI0dOteRcO3PEYyEKiecbmA/TtSp6JnsYWlfTs=" -rawsettings ProxyMethod=2 ProxyHost="proxyad.itk.local" ProxyPort=8010
+
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=mget STL_05111000_*.csv %%OUTDIR
+*%%Z06=dir
+%%Z07=close
+%%Z08=exit 
+*%%Z09=?
+*%%Z10=?
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+

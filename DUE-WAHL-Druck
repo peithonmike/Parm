@@ -1,0 +1,45 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WAHL-Druck
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* DUE-WAHL-Druck
+* 
+* 
+*********************************************************** 
+*********************************************************** 
+* Output wird manuell über OKEWO als PDF erzeugt
+* im Ewo Rootverzeichnids abgelegt.
+* M.Smits
+* B.Lieven
+* N.Hamers
+*********************************************************** 
+* Dieser Job sendet soweit vorhanden, 
+* den Output an die Druckerei Düsseldorf und verschiebt 
+* nach erledigt.  
+*********************************************************** 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO-WAHL
+%%DESCRIPTION= OKEWO Wahl Unterlagen an Düsseldorfer Druckerei senden
+
+
+%%WAHLART=W
+
+
+* Drucker Freigabe Liste
+* Outdir mit Düsseldorf überschreiben
+%%OUTDIR=\\msdpiom01\D$\DFZSDPF_PDF
+%%TEST=N
+%%DEBUG=N
+
+
+
+* Bartholome Andreas  0211  89 96 944
+* Fey 

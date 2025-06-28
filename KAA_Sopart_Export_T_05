@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA_Sopart_Export_T_05
+* SoPart® AV - Amtsvormundschaft / Beistandschaft / Mündelgeld 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* 
+* 
+* D u m m y   J o b m e m b e r  , ohne Funktion
+* 
+*********************************************************** 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\srv03.asp.rzne.de\ftp$\ka\Sopart\Avor\Export\transpid.bat
+* ------------------------------------------------------------------

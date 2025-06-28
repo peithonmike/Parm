@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-KMSTA-Saperion-GRDS
+* Umstellung von HOST-Job Y22SAPGS
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt 
+ 
+%%COMMAND=\\MSAIP01.ITK.LOCAL\SWAblage$\FB2\Software\KIVi\ControlM\saperion\grundsteuer.bat 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\KIVI-Doku\DUE-KIVI-Saperion-GRDS.pdf
+* ------------------------------------------------------------------

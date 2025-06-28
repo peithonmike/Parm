@@ -1,0 +1,69 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-Wahlen-Tagessicherung-Copy
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-EWO-DATEN-DOR
+
+
+
+
+* Eingabe Directory 
+%%INDIR=\\vfitk\daten\daten\Verfahrensdaten\Wahlen\Tagessicherungen\dormagen
+ 
+
+* Datei Auswahl
+%%INCLUDE=05162004_Ausgabe_STEWE_BT_%%$OYEAR._%%OMONTH._%%ODAY._*.csv,05162004_Ausgabe_STEWE_IR_%%$OYEAR._%%OMONTH._%%ODAY._*.csv,05162004_Ausgabe_STEWE_KW_%%$OYEAR._%%OMONTH._%%ODAY._*.csv
+**INCLUDE=05162004_Ausgabe_STEWE_*.csv
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\mc-01-cifs-01.ad.stadt-dormagen.de\itk-meldedaten
+
+* Erledigt Ordner
+%%USE_OUTDIR_PROCESSED=N
+**OUTDIR_PROCESSED=\\vfitk\daten\daten\Verfahrensdaten\Wahlen\Tagessicherungen\dormagen\Verarbeitet
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+%%TEXT_NOTOK=
+
+* *********************************************************************
+%%NETUSE=J
+* Path für den erweiterten Zugriff
+%%NETUSE_PATH=\\mc-01-cifs-01.ad.stadt-dormagen.de\itk-meldedaten
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

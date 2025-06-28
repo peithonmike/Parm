@@ -1,0 +1,68 @@
+%%USE_PI=J
+%%USE_COPY=N
+
+%%SOZ_DAT=%%$ODATE
+
+*  Muster
+*  123456789012345678901234567890    
+*  NEU-SOZ-MZ-024-05-Bescheide-BU
+
+
+* --------------------------------------------------------------------------------------------
+* PDF_INDIR
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* --------------------------------------------------------------------------------------------
+%%INDIR               =\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\xxx\%%SOZ_DAT
+
+
+
+
+
+
+
+%%USE_OUTDIR_PROCESSED=J
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+* --------------------------------------------------------------------------------------------
+* PDF_OUTDIR
+* dahin kommt das erstellte Bündel
+* --------------------------------------------------------------------------------------------
+%%OUTDIR    =\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\SOZ-EZ\BUENDEL\EZ-%%SOZ_DAT
+
+* Trennblätter einfügen
+%%ADD_TRENNBLATT=J
+
+
+* Standard Trenblatt 1-seitig
+* wenn 2-seitig gefordert wird, dann  im Job-LIBMEMSYM 
+* ....PDF-COVER\sonstiges\2-seitig\.....
+%%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Trennblatt.pdf
+%%KOPIE01=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie01.pdf
+%%KOPIE02=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie02.pdf
+
+
+* GKZ aus Jobnamen ermitteln
+%%SOZ_GKZ=%%SUBSTR %%JOBNAME 12 3
+
+* Sachgebiet aus Jobname ermitteln
+*%%SOZ_SACHG=%%SUBSTR %%JOBNAME 16 3
+
+* Sammeldirectory wird nach verwendung gelöscht
+%%SAMMELDIR_DELETE=J
+
+* Include für Bescheide
+*                      bere-241-NE_PFVX0328_KBES-2024505_6_201608
+*%%SOZ_MZ_BESCH_INCLUDE=bere*KBES*2%%SOZ_GKZ.%%SOZ_SACHG.*_%%SOZ_DAT..PDF
+
+* Include für Protokolle
+*%%SOZ_MZ_PROT_INCLUDE=bere*PROT*2%%SOZ_GKZ.%%SOZ_SACHG.*_%%SOZ_DAT..PDF
+
+* Include für Listen
+*%%SOZ_MZ_LISTEN_INCLUDE=bere*%%SOZ_GKZ.%%SOZ_SACHG.*_%%SOZ_DAT..PDF
+
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\PI-DRUCK-%%$OYEAR..csv
+
+
+

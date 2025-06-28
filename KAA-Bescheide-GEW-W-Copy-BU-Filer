@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-Bescheide-GEW-W-Copy-Filer
+* Copy GEW-Bescheide fùr Finanzen zur Druckerei Stadt Kaarst
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebùndelt werden sollen.
+* ---------------------------------------------------------------
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Move-FileS.ps1
+
+%%OUTDIR=\\vfka\20\Bereich 20\AustauschITK\Gewerbe
+
+%%OUTDIR_PROCESSED=\\vfapps\apps\ITK\KMV\Produktion\5000\50101\Druck\gedruckt
+
+%%INDIR=\\vfapps\apps\ITK\KMV\Produktion\5000\50101\Aktuell
+
+%%INCLUDE=KAA_GEW-Bescheide_*.pdf
+%%EXCLUDE=*_EW__ZINS_*
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprùft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=N
+%%DEBUG=N
+

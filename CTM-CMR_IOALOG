@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-CMR_IOALOG
+* 
+* 
+*********************************************************** 
+ 
+%%TRENNER="|"
+%%HEADER=N
+
+%%DB=ctm800_Server
+%%U=em800
+%%P=Starten1
+**P=ctmuser
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%DATUM=%%JJJJMMTT_TT_M1_%%$ODATE
+
+%%LOG_FILENAME=IOALOG_%%DATUM..csv
+%%ZIP_ARCHIV=IOALOG_%%DATUM..zip
+%%LOG_DIR=\\msbmcc03\ctm_av\Log\IOALOG\%%$OYEAR.\
+%%ZIP_INPUT_DIR=c:\CTM_AV\Log\IOALOG\%%$OYEAR.
+%%FILE=\\msbmcc03\ctm_av\Log\IOALOG\%%$OYEAR.\IOALOG_%%DATUM..csv
+
+ 
+ 
+ 
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\CMR_IOALOG.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\CMR_IOALOG.sql
+
+
+
+$ $INCLUDE=\\msbmcc03\ctm_av\Log\History\CMR_IOALOG.csv
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.04.2015  07:39:04  zv173x2 Jareszahl 2013 getauscht gegen OYEAR
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

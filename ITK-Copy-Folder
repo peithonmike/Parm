@@ -1,0 +1,18 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland
+***********************************************************************************
+*  Jobname     : ITK-Copy-Folder
+*  APPLICATION : ITK-System
+***********************************************************************************
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+
+%%INDIR=\\msbmcc03\CTM_AV
+%%OUTDIR=\\msbmcc031\CTM_AV
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\Script\Copy_Folder.ps1

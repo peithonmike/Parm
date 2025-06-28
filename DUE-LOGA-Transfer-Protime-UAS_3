@@ -1,0 +1,29 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-Transfer-ProTime-UAS
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;hr-support@itk-rheinland.de;
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen!!
+%%TEXT_NOTOK=Bitte überprüfen
+
+%%MAIL_OK=zeitwirtschaft@itk-rheinland.de
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%TEXT_OK=Joblog: %%JOBNAME ist durchgelaufen.
+
+%%COMMAND=powershell.exe Loga_Protime.ps1
+
+**INDIR=\\vfitk\daten\Daten\ControlM\Scout
+**OUTDIR=\\vfapps\apps\ITK\Protime
+**INFILE=UAS_%%$OYEAR.-%%OMONTH.-%%ODAY..csv
+**OUTFILE=%%$ODATE._loga_protime_uasp.txt
+**FORCE_OUTDIR=N
+**TEST=N
+**DEBUG=N

@@ -1,0 +1,47 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : MEE                                                                  *
+***********************************************************************************
+*  Jobname     : MEE-STATI-Erweiterte-BewegungStat Jahr
+*  Description : STATI-Erweiterte-BewegungStat Jahr. 
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###VLK-Jahr_31
+%%CHECK1=%%LD_TTMMJJJJP_%%$ODATE
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%OMONTH..%%$OYEAR *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=5733-E01U0000
+*
+%%OKEWO_NR=P5733
+*
+*  eine Check....bat wird eingesetzt
+*  diese prüft zB ob der Lauftag, dem geplanten Lauf entspricht
+%%USE_CHECKBAT=J
+%%CHECKBAT=\\msbmcc03\ctm_av\bin\BAT\Check-MONAT_31.bat
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=STATI-Erweiterte-BewegungStat Jahr. 
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U28101#GKB.E01E300#1#B_VON_N.E01DUMMY#%%VON#B_BIS_N.E01DUMMY#%%BIS#E_VON_N.E01DUMMY##E_BIS_N.E01DUMMY##V_UZ331_LISTE.E01DUMMY#$$

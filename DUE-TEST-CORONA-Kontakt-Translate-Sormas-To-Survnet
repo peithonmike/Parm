@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-TEST-CORONA-Kontakt-Translate-Sormas-To-Survnet
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+    
+
+%%INDIR=\\vfduswba\53\amt53\Survnet-User\survnet\Corona_IRIS_Export
+
+%%INCLUDE=*.csv
+%%EXCLUDE="-"
+%%OUTDIR =\\vfduswba\53\amt53\Survnet-User\survnet\Corona_IRIS_SurvNet
+
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+%%CREATE_EXCELFILE=J
+
+
+ 
+%%TEST=N
+%%DEBUG=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.06.2021  15:25:41  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

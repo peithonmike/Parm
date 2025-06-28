@@ -1,0 +1,50 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Angestellte-Listen-FIBU-Copy
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+
+
+%%INDIR=\\vfmgapps\apps\Verfahren\Loga\Personalwesen-Abrechnung\manuprodanup\FIBU
+
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga-Abrechnungen\Dateien aus Buchungsliste 2000 nach Produktion\Abr. %%MONAT-DAT.\Angestellte\FIBU
+
+
+
+
+
+%%FORCE_OUTDIR=J
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.06.2017  07:17:40  zv171e1 neu    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

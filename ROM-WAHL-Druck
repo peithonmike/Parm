@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-WAHL-Druck
+* 
+* 
+*********************************************************** 
+ 
+%%DESCRIPTION= OKEWO Wahl Unterlagen %%STADT %%ORT an Printserver ITK senden
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO-WAHL
+
+
+%%WAHLART=W
+
+%%TEST=J
+%%DEBUG=N

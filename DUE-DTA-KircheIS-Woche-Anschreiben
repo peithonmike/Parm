@@ -1,0 +1,21 @@
+ * LIBMEMSYSM 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+
+%%PRT_SKELS_FORMAT=TXT
+
+%%TEST=N
+%%VON           =%%TTMMJJJJP_TT_M8_%%$ODATE
+%%BIS           =%%TTMMJJJJP_TT_M2_%%$ODATE
+
+
+ 
+ 
+* ------------------------------------------------------------------
+*  Druckvorlage
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\Anschreiben-KircheIS-Woche.txt
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\Anschreiben-KircheIS-Woche.txt

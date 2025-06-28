@@ -1,0 +1,25 @@
+
+* D O R M A G E N  
+* SOPART 
+* SOPMG 
+* Hostanmeldedaten
+
+*%%IP=N200D01S37.DORMAGEN.INT.DE
+*%%IP=N200D01S37.ad.stadt-dormagen.de
+**IP=\\n200d01s37.ad.stadt-dormagen.de\sopart_ftp\export
+%%IP=\\mc-01-cifs-01.ad.stadt-dormagen.de\sopart_ftp\export
+*%%U=DOSOPAFTPAUTOAV
+*%%P=DOSOPAAV
+
+%%U=SOPARTAV@ad.stadt-dormagen.de
+%%P=Td9HMnL2
+    
+               
+                      
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.07.2016  14:36:12  zv173x2 user und passw
+*    21.07.2016  14:27:35  zv173x2 ad.stadt-dormagen.de
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

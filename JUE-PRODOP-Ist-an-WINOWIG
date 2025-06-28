@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-PRODOP-Ist-an-WINOWIG
+*    kopieren Istzahlungen aus JUE-PRODOP-Export-WINOWIG-Ist 
+*    Prowin32 Verarbeitung 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%FILE=JUEXPORTIST_%%odate..TXT 
+
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\Apps\ftp\av\HuH\%%GEM
+%%OUTDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\zahlungen
+
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+
+
+
+
+
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+* ------------------------------------------------------------------

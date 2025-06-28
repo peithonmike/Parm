@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-DTA-Bundeswehr-Woche-Zettel
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\OKEWO
+
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\OK.EWO-DTA-MONTAG
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+%%TEST=N
+
+*  Druckvorlage
+%%PRT_SKELS=\\msbmcc03\c_bmc\CTM_AV\Parm\Druck-Vorlagen\NACH-DTA-Bundeswehr-Woche.skels
+ 
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\Druck-Vorlagen\NACH-DTA-Bundeswehr-Woche.skels
+
+

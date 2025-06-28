@@ -1,0 +1,11 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-System-Adhoc-Script
+* Script für dies und das
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=dir \\%%SERVER.\c$\CTM_AV\Parm

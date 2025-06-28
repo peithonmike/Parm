@@ -1,0 +1,26 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-P63-T-COPY-PTV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\vfapps\apps\ITK\ControlM\Parm\D%%$ODATE
+%%LIBMEMSYM=\\vfapps\apps\ITK\ControlM\Parm\SYSTEM
+%%LIBMEMSYM=\\vfapps\apps\ITK\ControlM\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\srv03.itk.local\qaspka$\Daten\Apps\P63\
+##ausdat2=\\msptv01.itk.local\ptv-projekte\SAP_TC\inDir
+%%ausdat2=\\msptv02.itk.local\ptvprojekte$\SAP_Export\HIZADRS_EXXX\inDir\%%GKZ._Baugenehmigung_D%%$ODATE..txt
+%%ausdat1=\\srv03.itk.local\qaspka$\Daten\Apps\P63\
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer P63-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer P63-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der P63-Daten %%GEM3. zum PTV-Server ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der P63-Daten %%GEM3. zum PTV-Server ist NOTOK.

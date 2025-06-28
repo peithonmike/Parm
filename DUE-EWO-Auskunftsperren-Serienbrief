@@ -1,0 +1,70 @@
+*********************************************************** 
+* LIBMEMSYM 
+*
+* DUE-EWO-Auskunftsperren-Serienbrief
+* aus CSV Datei in Verbindung mit einer -DOTX Datei 
+* eine PDF Datei erzeugen
+*
+* Geäntert auf Verarbeitung durch Python am 29.01.2024 -- zvaa405  
+*
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+******************************************************************************************************
+* Angaben durch Auftraggeber : \\msbmcc03\CTM_AV\DOC\BL\LHD-ASPs 3 Serienbrief
+* Serienbrief Druckvorlagen    \\Msbmcc03\ctm_av\Parm\Druck-Vorlagen
+******************************************************************************************************
+
+%%docx_template=\\Msbmcc03\ctm_av\Parm\Druck-Vorlagen\due_asp_Serienbriefvorlage.docx
+%%csv_datei=\\MSBMCBATCH01\ctm_av\Temp\aspDUE\%%GEM3.-Auskunftsperren-%%$ODATE..csv
+%%temp_folder=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\DUE-EWO-W-Auskunftsperren\tmp
+%%combined_file=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\DUE-EWO-W-Auskunftsperren\%%GEM3.-Auskunftsperren-%%$ODATE..docx
+%%pdf_file=\\MSBMCBATCH01\ctm_av\Temp\aspDUE\%%GEM3.-Auskunftsperren-%%$ODATE..pdf
+
+
+
+
+
+%%python_exe=C:\Users\a-zvaa405\AppData\Local\Programs\Python\Python312\python.exe
+
+%%python_script=\\msbmcc03\CTM_AV\Bin\Python\CF\Mailmerger.py
+
+
+
+%%MAIL=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Bitte schauen ob \\MSBMCBATCH01\ctm_av\Temp\aspDUE\%%GEM3.-Auskunftsperren-%%$ODATE..pdf erzeugt wurde.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Ein Reboot des Servers %%NODEID konnte nicht durchgefuehrt werden. Bitte überprüfen.
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Mailmerge_Call_Python.ps1
+
+
+
+
+*****************   alte Version   ********************
+
+* Vorlage
+**DOTX_FULLNAME=\\Msbmcc03\ctm_av\Parm\Druck-Vorlagen\due_asp_Serienbriefvorlage.dotx
+
+* Datendatei
+**CSV_FULLNAME=\\MSBMCBATCH01\ctm_av\Temp\aspDUE\%%GEM3.-Auskunftsperren-%%$ODATE..csv
+
+* Ergebnis
+**PDF_FULLNAME=\\MSBMCBATCH01\ctm_av\Temp\aspDUE\%%GEM3.-Auskunftsperren-%%$ODATE..pdf
+
+**DEBUG=N
+**TEST=N
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-EWO-Serienbrief.ps1
+
+
+
+
+

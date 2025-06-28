@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-Ist-Deadline-Mail
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+
+
+
+%%INDIR=%%WINOWIG_ZAHLUNGEN_DIR
+%%INCLUDE=START__________*.csv
+%%TEST=J
+%%DEBUG=J
+* Mail an Sachbearbeiter
+%%EMAIL_T=andreas.hillebrands@itk-rheinland.de
+

@@ -1,0 +1,30 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Test-ORACLE-LOADER
+* 
+* 
+*********************************************************** 
+ 
+* Anweisungen für den Loader 
+%%CONTROL=\\msbmcc03\ctm_av\Parm\CTL\load_tubrmess.ctl
+
+* Eingabedaten
+%%DATA=\\msbmcc03\ctm_av\Parm\CTL\tubrmesstest.txt
+
+* Logdatei
+%%LOG=\\msbmcc03\ctm_av\Parm\CTL\load_tubrmess.log 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-UMWELT
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\CTL\load_tubrmess.log
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\CTL\TUBRMESSTEST.txt
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\CTL\load_tubrmess.ctl
+* ------------------------------------------------------------------

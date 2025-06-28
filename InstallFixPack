@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-Install-CTM-FixPack
+* Installation FixPack
+* 
+***********************************************************
+%%OWNER=ITK\controlm
+*%%SERVER=msokkomm01
+
+
+%%COMMAND_JOB1=ecaqrtab UPDATE %%SERVER 0
+%%COMMAND_JOB2=\\msbmcc03\ctm_av\Bin\BAT\update.bat
+%%COMMAND_JOB3=ecaqrtab UPDATE %%SERVER 50
+
+%%SYSOUT=\\msbmcc03\ctm_av\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+

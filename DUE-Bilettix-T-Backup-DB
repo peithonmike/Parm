@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Bilettix-T-Backup-DB
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%COMMAND=
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAIL01=
+%%BETREFF_OK=Backup der Bilettix-MySQL-DB ist OK.
+%%BETREFF_NOTOK=Backup der Bilettix-MySQL-DB ist NOTOK
+
+%%TEXT_OK=Joblog: Das Backup der Bilettix-MySQL-DB ist OK.
+%%TEXT_NOTOK=Joblog: Das Backup der Bilettix-MySQL-DB ist NOTOK. Sysout im Mail-Anhang.

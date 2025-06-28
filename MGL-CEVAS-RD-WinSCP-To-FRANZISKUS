@@ -1,0 +1,84 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-CEVAS-RD-WinSCP-To-FRANZISKUS
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\CEVAS-KLINIKEN-MAIL 
+
+* SITE
+%%SITE=MGL-CEVAS-RD-FRANZISKUS
+
+%%PROTOCOL=[WinSCP.Protocol]::Sftp
+%%HOSTNAME=10.98.112.132
+%%USERNAME=SFTP-ITK
+%%PASSWORD=ritk74NK0jA8
+%%SshHostKeyFingerprint=ssh-ed25519 256 y7yzDB94PIf+Kq4ZgJ8lXUzui5PrH705TUcGxCemt4s=
+
+
+
+
+
+* INDIR Local
+%%INDIR=\\MSCEVAS01\c$\cks\dta_Krankenhaeuser\CEUS_VPN_Krhs-Franziskus\
+
+%%INCLUDE=*.xml , *.pdf
+%%EXCLUDE="-"
+
+
+* OUTDIR_PROCESSED Local
+%%OUTDIR_PROCESSED=%%INDIR.gesendet-franziskus\
+
+ 
+
+* REMOTE_OUTDIR  Remote:-)
+%%REMOTE_OUTDIR=/
+
+*********************************************************************************
+%%DESCRIPTION3=Datenaustausch mit Tunnel 
+%%HOSTKEY=
+%%IGNORE_HOSTKEY=J
+*********************************************************************************
+
+* DIRECTORYLIST_REMOTE J/N noch nicht implementiert
+%%DIRECTORYLIST_REMOTE=N
+
+* Logfile muss im C: Laufwerkliegen
+%%LOGFILE=c:\temp\%%JOBNAME._winscp.log
+
+* UPLOAD J/N 
+%%UPLOAD=J
+
+* Dateien die nach erledigt verschoben werden, 
+* bekommen einen TimeStamp J/N
+%%USE_MOVE_WITH_TIMESTAMP=J
+
+**ANSPRECH_PARTNER_EMAIL
+**               
+
+* T E S T     J/N  
+* bei T E S T =J 
+* werden die gefundenen Dateien angezeigt
+* Open auf den Server gemacht
+* Upload simuliert
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-WinSCP-Copy-To-Remote-SEM_intern.ps1
+
+* IP 10.98.112.132 Stand 14.05.2021
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    19.01.2022  12:55:34  zv173x2 Andreas.Trojahn@mariahilf.de
+
+*    Email    dariusz.komajda@mariahilf.de 
+*    01.09.2020  15:49:44  zv173x2 USE_MOVE_WITH_TIMESTAMP
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

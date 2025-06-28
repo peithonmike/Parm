@@ -1,0 +1,27 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Neuss
+***********************************************************************************
+*  Jobname     : NEU-Bescheiddruck
+*  APPLICATION : SAP
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%EINGABE="\\vfapps\apps\ITK\KMV\Produktion\1000\Drucklisten"
+%%FILTER=*
+%%DRUCKDATEI=GEW-Bescheide_%%ODATE
+%%ZIEL="\\vfapps\apps\ITK\KMV\Produktion\1000\50101\Druck"
+%%MOVEZIEL="\\vfapps\apps\ITK\KMV\Produktion\1000\50101\Aktuell\Verarbeitet"
+%%LOG="\\msbmcc03\ctm_av\bin\Log\%%JOBNAME..txt"
+%%DRUCKDATEI_FF=*.pdf
+%%MANDANT=NEU
+%%VORBLATT=NEU-GEW-Druck_Vorblatt.pdf
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File C:\CTM_AV\Bin\Powershell\CopyToFreeFlow.ps1 -SourcePfad "%%EINGABE" -SourceDatei "%%DRUCKDATEI_FF" -DruckOrdner "%%HOTFOLDER" -NeuerDateiname "%%MANDANT" -Vorblatt "%%VORBLATT"
+ 
+

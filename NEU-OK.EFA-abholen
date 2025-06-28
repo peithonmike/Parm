@@ -1,0 +1,20 @@
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEFA
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-OKEFA-MOERS
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###OKEFA-SAPERION-GET
+
+%%SYSIN_BAT=\\msbmcc03\ctm_av\BIN\BAT\OKEFA-SAPERION-GET.BAT
+*%%POST_BAT =\\msbmcc03\ctm_av\BIN\BAT\WOHN-POSTFACH-POST.BAT
+
+
+%%TEST=n
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\OK.EFA.SAPERION.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\Log\%%GEM3.-OKEFA-SAPERION-%%$OYEAR..csv
+* ------------------------------------------------------------------
+

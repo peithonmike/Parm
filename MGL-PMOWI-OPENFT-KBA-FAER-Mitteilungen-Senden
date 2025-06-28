@@ -1,0 +1,83 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-PMOWI-OPENFT-KBA-FAER-Mitteilungen-Senden
+* 
+* 
+*********************************************************** 
+ 
+
+
+--------------------------------------------------------------------------------------------------
+* Job versendet Anfragen usw per OpenFT.
+* Nach erfolgreichem senden werden die Einagbedateien nach OUTDIR_PROCESSED verschoben (wird angelegt falls nicht vorhanden)
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+%%DESCRIPTION=FAER Mittteilungen der %%STADT %%ORT mit OpenFT an das KBA   senden
+%%DESCRIPTION1=Job wird normaler Weise geforced wenn Daten zum Senden vorhanden sind
+%%DESCRIPTION2=cc 108 und cc 213 lösen einmalig einen RERUN aus
+
+%%AUFTRAGGEBER=W.Klerx
+
+
+* Eingabe Directory der Anfragen
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\%%GEM3.\PMOWI
+
+*  Speicherort für gesendete Anfragen
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\gesendet\%%GEM3.\%%$OYEAR.\PMOWI\%%ODATE
+
+
+
+%%OPTIONEN=-b -n -c -k
+
+
+
+
+**************************************************************
+* P R O D
+%%ANSCHLUSS=KBA
+%%TRANSFER_ADMISSION=jTALnWXuHJ
+%%INCLUDE=faermit_%%KBA_NR.*
+***************************************************************
+
+
+
+***************************************************************
+* T e s t überschreibt PROD 
+*%%ANSCHLUSS=KBATEST
+*%%TRANSFER_ADMISSION=19629FMI
+*%%INCLUDE=faermit_19629_*
+***************************************************************
+
+
+
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+ 
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*    07.06.2021  08:52:20  zv173x2 DESCRIPTION2
+*    02.05.2019  13:34:37  zv173x2 KBA nimmt ab dem 13.05.2019 FAER Mitteilungen an 
+*    02.05.2019  12:34:36  zv173x2  scharf ab 03.05.2019
+*    18.03.2019  14:02:35  zv173x2 neu geplant ab 05.2019
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+

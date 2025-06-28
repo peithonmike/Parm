@@ -1,0 +1,33 @@
+%%LAUF=Prod
+%%eindat=\\srv03\qasp%%MD2.$\Daten\Apps\KSU\Wohnungswesen\EWO_ABGLEICH\EWO-Daten\ewo_%%MD2..txt
+%%eindat_wgplus=\\srv03\ftp$\ewoabgl_mg\Wohngeld\ewo_%%MD2..txt
+%%eindat_due=\\srv03\qasp%%MD2.$\Daten\Apps\KSU\Wohnungswesen\EWO_ABGLEICH\EWO-Daten\ewo_%%GEM3..txt
+%%eindat2=\\srv03\qasp%%MD2.$\Daten\Apps\KSU\Wohnungswesen\EWO_ABGLEICH\EWO-WGPlus\ewo_%%MD2..txt
+
+%%mailSB21=rudolf.dressel@itk-rheinland.de;oliver.emmel@itk-rheinland.de
+%%mailSB13=produktions-steuerung@itk-rheinland.de
+
+%%von=%%TTMMJJJJP_TT_M6_%%$ODATE
+**von=17.09.2019
+
+%%bis=%%ODAY..%%OMONTH..%%$OYEAR
+**bis=23.09.2019
+%%COMMAND_FW=\\msbmcc03\ctm_av\Bin\BAT\KSU.T.OKEWO-Abgleich_der_Einwohnerdaten_FW.cmd
+%%COMMAND_FW_DUE=\\msbmcc03\ctm_av\Bin\BAT\KSU.T.OKEWO-Abgleich_der_Einwohnerdaten_DUE_FW.cmd
+%%COMMAND_WGPlus_FW=\\msbmcc03\ctm_av\Bin\BAT\KSU.T.OKEWO-Abgleich_der_Einwohnerdaten_WGPLus_FW.cmd
+
+%%COMMAND_CONVERT=\\msbmcc03\ctm_av\Bin\BAT\Convert_KSU_EWO.bat
+%%COMMAND_CONVERT_WGPLUS=\\msbmcc03\ctm_av\Bin\BAT\Convert_KSU_EWO_WGPlus.bat
+%%COMMAND_CONVERT_DUE=\\msbmcc03\ctm_av\Bin\BAT\Convert_DUE_KSU_EWO.bat
+%%COMMAND_OKEWO=\\msbatch02\c$\Programme\KSU2000Batch\okewo.cmd
+%%COMMAND_GR_OKEWO=\\msbatch02\c$\Programme\KSU2000Batch\okewo_gr.cmd
+%%COMMAND_DUE_OKEWO=\\msbatch02\c$\Programme\KSU2000Batch\due-okewo.cmd
+%%COMMAND_MG_OKEWO=\\msbatch02\c$\Programme\KSU2000Batch\mg-okewo.cmd
+
+*Wenn eine komplette Datenübernahme gewünscht wird =j
+%%Komplettabgleich=n
+*   **********************************************************************************
+*    -- Änderungen -------------------------------------------------------------------
+*    22.09.2015  15:49:04  zv173x2 email adressen angepasst
+*    ---------------------------------------------------------------------------------
+*   ********************************************************************************** 

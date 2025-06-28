@@ -1,0 +1,76 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-Abrechnung-PTI-Prueflauf
+* 
+* Firmenticket
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\DUE-PTI-Mail
+
+%%DAT=%%MM_P1_%%$ODATE...%%JJJJ_MM_P1_%%$ODATE
+* PFAD nur wenn der Systempfad erweiter werden soll
+* %%PFAD=
+
+%%HEADER_TEXT=TicketMonatsabrechnung %%DAT Prüflauf
+%%AUFTRAGGEBER=S.Hünnekes 08.2020
+
+
+* EXT_LOGFILE nur wenn das Programm eine externe Logdatei ausgibt
+* %%EXT_LOGFILE=
+
+*  Pfadangaben -----  Muss auch in der .ini geändert werden !!!  \\msbmcc03\ctm_av\Bin\sontiges\PTI-Firmenticket\TicketMonatsabrechnung.ini
+
+
+**C1=\\vfdusalt\16\Amt16\Neu\131_Mobilitaet\Firmenticket\Firmenticket-Monatsverarbeitung\Protokolle
+**C2=\\vfdusalt\16\Amt16\Neu\131_Mobilitaet\Firmenticket\Firmenticket-Monatsverarbeitung\Rheinbahndaten
+**C3=\\vfdusalt\10\amt10\Loga_PBS\VariableDaten
+**C4=\\vfdusalt\16\amt16\Neu\131_Mobilitaet\Firmenticket\Firmenticket-Monatsverarbeitung\Parkausweise
+
+%%C1=\\vfdusalt\16\Amt16\131_Mobilitaet\Firmenticket\Firmenticket-Monatsverarbeitung\Protokolle
+%%C2=\\vfdusalt\16\Amt16\131_Mobilitaet\Firmenticket\Firmenticket-Monatsverarbeitung\Rheinbahndaten
+%%C3=\\vfdusalt\10\amt10\Loga_PBS\VariableDaten
+%%C4=\\vfdusalt\16\amt16\131_Mobilitaet\Firmenticket\Firmenticket-Monatsverarbeitung\Parkausweise
+
+
+
+
+* Exe incl. Pfad 
+%%EXE=\\msbmcc03\ctm_av\Bin\sontiges\PTI-Firmenticket\TicketMonatsabrechnung.exe
+
+* Programm Parameter 
+* Zum Einrichten/Testen der "Automatik" kann z.B.
+* TicketMonatsabrechnung 05.2016 test true
+* beliebig oft aufrufen werden , da (wg. Prüflauf = true) keine Updates passieren.
+*                                                     
+%%PARAMETER=%%DAT prod true
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-DUE-LOGA-PTI-Firmenticket-Abrechnung.ps1
+
+
+
+
+*******************************************************************************************
+* Test überschreibeung 12.2020
+*                 TestDB
+*                      Update (false kein Prüflauf) 
+*%%PARAMETER=%%DAT TEST false
+*%%HEADER_TEXT=TEST TicketMonatsabrechnung %%DAT mit Update auf Test DB
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.03.2021  11:38:17  ZV173X2 Version vom 01.02.2021 aktiv
+*    09.12.2020  10:00:48  zv173x2 neue EXE
+*    10.08.2020  11:08:44  zv173x2 Email Libmemsym
+*    10.08.2020  10:38:55  zv173x2 AUFTRAGGEBER S.Hünnekes 08.2020   vormals Lemke
+*    06.04.2016  08:34:03  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

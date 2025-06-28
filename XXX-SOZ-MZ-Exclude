@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-SOZ-MZ-Exclude
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-SOZ-MZ
+ 
+
+* ---------------------------------------------------------------
+* PDF_MASK Auswahl Maske 	Include Exclude
+* mask trifft noch nicht alles
+* ---------------------------------------------------------------
+%%INCLUDE=*EIPR_LOE*,*_NE_%%SOZ_DAT..PDF
+
+%%EXCLUDE=*MAZE1*
+%%INDIR=%%PDF_INDIR
+
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die Dateien gesammelt.
+* Leere Dateien werden nicht kopiert sondern (nur nach erledigt verschoben) 
+* ---------------------------------------------------------------
+*%%SAMMELDIR          =\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\%%SOZ_DAT.\nicht_verwendet
+%%SAMMELDIR          =\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\nicht_verwendet
+
+
+
+*%%SAMMELDIR_PROCESSED=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\%%$ODATE.\nicht_verwendet
+
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden  Variablenwerte angezeigt
+%%DEBUG=N
+
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+%%TEST=N
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avFILES-SAMMELN.ps1
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.09.2016  16:06:22  zv173x2 \\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\nicht_verwendet
+*    15.12.2014  22:26:09  zv173x2 entfernt ,*_KBES-2702*
+*    22.10.2014  09:05:40  zv173x2 entfernt *_BSCH_2024_*,*_ZAUS_2024_*,*_ZKAS_2024_*,*_ZKON_2024_*
+*    26.08.2014  11:42:39  zv173x2 rein include *_KBES-2702* 
+*    26.08.2014  11:42:39  zv173x2 rein include *_BSCH_2024_*,*_ZAUS_2024_*,*_ZKAS_2024_*,*_ZKON_2024_*
+*    18.06.2014  09:26:19  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

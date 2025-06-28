@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-KOSY-ETP-T-STOPWEBD-M03
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "C:\Program Files\Scripte\kosy-services-stop.ps1"
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "C:\Program Files\Scripte\kosy-services-stop_MG.ps1"
+
+%%MAIL=tobias.redmann@itk-rheinland.de;simone.thissen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+

@@ -1,0 +1,75 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Familienverband-senden
+* NEU
+* 
+*********************************************************** 
+ 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job senden Daten per FTP
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-FTP-Put.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-KDVZ-FRECHEN
+
+
+
+
+*  Eingabe Directory
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\AufloesenFamilienverband\NEU
+
+%%INCLUDE=*.zip
+
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+* SERVERname oder IP Adresse kommt meist mit User und Password aus IP-UP Member
+
+%%Z01=open %%IP
+%%Z02=%%U
+%%Z03=%%P
+
+
+* auf ascii oder binar einstellen
+%%Z04=ascii
+%%Z05=cd aufl_itk
+%%Z06=put \\srv03.asp.rzne.de\qaspne$\Daten\Apps\OKEWO\okprg\okewo_neu\div\OM_%%GKZ8..csv
+%%Z07=mkdir NEU_%%RDATE
+%%Z08=cd NEU_%%RDATE
+%%Z09=mput \\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\AufloesenFamilienverband\NEU\%%GKZ8._AufloesenFamilienverband_%%RDATE.*.zip
+
+%%Z10=dir
+* FTP beenden
+%%Z20=bye 
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.03.2021  12:40:37  ZV173X2 Umbau wegen neues EWO /Vorgänger unter Parm\alt
+*    21.06.2016  10:46:02  zv171e1 neu
+*  
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

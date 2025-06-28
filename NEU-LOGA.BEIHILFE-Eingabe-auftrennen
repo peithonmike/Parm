@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA.BEIHILFE-Eingabe-auftrennen
+* 
+* 
+*********************************************************** 
+ 
+
+*gesucht wird immer BE-*VERW.dat 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%SEARCH_DIR=\\msbmcc01\c$\temp\test-beihilfe
+%%INDIR     =\\msbmcc01\c$\temp\test-beihilfe
+%%PROP      =\\msbmcbatch01\c$\CTM_AV\Bin\Java\Beihilfe\mandant.properties
+%%TEST=N
+%%MOVE_ORDNER=erledigt
+
+* J A S P E R 
+* Daten-Datei Suchmaske VERW Eingabe für JasperReport
+%%SEARCH_VERW=BE-20160718-01-VERW.dat
+%%OUTFILE_VERW=BE-20160718-01-VERW-2.dat  
+%%OUTDIR_VERW= \\msbmcc01\c$\temp\test-beihilfe
+
+

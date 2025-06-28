@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-BS-XLSX
+* zvaa405   / 10.08.2023
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%AUFTRAGGEBER=T.Heister
+
+
+**%%GEM3.-Altersjubilare-%%TTMMJJJJP_%%$ODATE..CSV
+
+
+
+
+%%CSV_FULLNAME=\\msbmcc03\CTM_AV\Parm\NeussBS_Auslastung\Ausgabe\Auslastung_Neuss_%%$ODATE..CSV
+%%XLSX_FULLNAME=\\msbmcc03\CTM_AV\Parm\NeussBS_Auslastung\Ausgabe\Auslastung_Neuss_%%$ODATE..XLSX
+
+
+%%DEBUG=N
+%%TEST=N 
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Job-NEU-BS-XLSX.ps1
+

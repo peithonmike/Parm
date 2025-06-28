@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Kasse-T-Rueckfuehrung_0523
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe Ist_RF_All.ps1 -Mandant "100" -ftpBenutzer "CTM_IFP_100" -KopyZiel "\\srv03\qaspne$\Daten\Apps\SoPartNEU\SoUVG\Import" -DateiPatern "^.+0523.TXT$"
+
+*%%MAIL_NOTOK=marius.sicha@itk-rheinland.de;daniel.mendoza@itk-rheinland.de;uta.webler@itk-rheinland.de
+%%MAIL_NOTOK=daniel.mendoza@itk-rheinland.de;
+%%MAIL_NOTOK_2=produktions-steuerung@itk-rheinland.de;
+
+
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK
+
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist NOTOK. Returncode: %%COMPSTAT  Bitte ueberpruefen. 
+

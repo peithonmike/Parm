@@ -1,0 +1,83 @@
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-NEU
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-SEDA-SODATIS
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+
+
+
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+* SERVER_TEXT IP P und U kommen meist aus IP-UP Member 
+*%%SERVER_TEXT
+*%%IP
+*%%P
+*%%U
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen Sozialwesen SEDA Daten für SODATIS Auswertungen der Anwender
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=MZ/%%SOZ_DAT
+
+* Auswahl Maske Anzeige der gefundenen Dateien
+%%INCLUDE=*.*
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+* 
+%%OUTDIR=\\Msprintff01\source$\SOZ-SODATIS\%%$OYEAR.\SEDA\%%SOZ_DAT.\
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get nbere-600-NE*.txt nbere-610-NE*.txt nbere-620-NE*.txt nbere-630-NE*.txt nbere-640-NE*.txt nbere-650-NE*.txt nbere-660-NE*.txt sodatis_2.zip %%OUTDIR
+
+
+
+%%Z19=close
+%%Z20=exit 
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.10.2015  15:05:28  zv173x2 site
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

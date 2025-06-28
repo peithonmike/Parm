@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SAS-W-C22W0230_JAVA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Eingabe\C22W0230_HIZKOPIE_Eingabe.txt
+
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Ausgabe\C22W0230_Ausgabe.txt
+
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\C22W0230.jar -eingabe %%INFILE1 -ausgabe %%OUTFILE1
+

@@ -1,0 +1,45 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-Batch-Druck-Sammler-TEST-1
+* 
+* 
+*********************************************************** 
+ 
+
+*   Test=j nur Anlist der gefundenen Dateien 
+
+%%DESCRIPTION=Druckdaten aus Verfahrensordner in AV Druck-Queue kopieren
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+*Treiber kommt aus dem gDUE Member
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\winowig\ftp\ausgang\druckdateien\%%WINOWIG_TREIBER.\P%%$ODATE
+%%SEARCH=*.prn
+*%%OUTDIR=\\srv03.asp.rzne.de\wow$\Test
+
+%%OUTDIR=\\Msdpiom01\vipsvr\DFZSDST
+
+%%NEWNAME=__SRV03.ASP.RZNE.DE_WOW$
+
+%%TEST=N
+* MAIL nur für AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+%%S=MSDPIOM01
+%%P=DFZSDST
+
+**  Adhoc Überschreibung
+*%%DESCRIPTION=S O N D E R V E R A R B E I T U N G       Druckdaten aus Verfahrensordner in AV Druck-Queue kopieren
+*%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\winowig\ftp\ausgang\druckdateien\%%WINOWIG_TREIBER.\P%%$ODATE
+*%%P=%%WINOWIG_TREIBER
+ 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.02.2018  11:10:52  zv171e1 Treiber auf DLD32OFFICEM gesetzt und Server von MSDRE4 auf MSDPIOM01 geändert
+*    21.11.2017  09:04:24  zv173x2 serachdir Treiber Var eingebaut
+*    15.11.2017  09:08:05          DLD32OFFICEM
+*    26.10.2016  09:26:34  zv173x2 Server und Printer variabel
+*    29.07.2014  15:28:24  ZV173X2 check_date in WINOWIG LIBMEMSYM
+*    13.02.2014  15:32:38  zv173x2 düsseldorf hat einen eigenen treiber
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

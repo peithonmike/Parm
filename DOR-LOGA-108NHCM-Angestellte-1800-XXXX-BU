@@ -1,0 +1,47 @@
+***********************************************************
+* LIBMEMSYM 
+* DOR-LOGA-108NHCM-Angestellte-1800-XXXX-BU
+*
+*
+***********************************************************
+ 
+ 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NAR
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-USE-DRUCKEREI-NEUSS
+
+%%DESCRIPTION=%%LOGA_MAN_%%HMAN
+
+
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NAR\NHCM
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\Workbench
+
+%%INCLUDE =*KN_%%HMAN._*NHCM*.pdf
+%%OUTFILE=%%GEM3.-NHCM-KUVERT-NAR-%%LOGA_DAT.-BU.pdf
+
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+%%USE_OUTDIR_PROCESSED=J
+
+%%TEST=N
+%%DEBUG=N 
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-LOGA-PDF-BUENDEL-2.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.05.2024  11:58:37  zv241 neu
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

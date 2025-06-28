@@ -1,0 +1,67 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-CORONA-Ordnungsverfuegungen-CLean-Up
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job löscht alle Daten nach INCLUDE Vorgabe im INDIR
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-CleanUp-By-nDays.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\DOC\corona\DUE\Ansprechpartner
+
+
+
+
+* Eingabe Directory 
+* hier wird gelöscht
+%%INDIR=\\vfduswba\53\Amt53\Survnet-User\survnet\Corona Druckausgabe\erledigt
+
+
+* Datei Auswahl
+%%INCLUDE=*.docx
+
+
+* älter als
+* (in Tagen)
+%%N_DAYS=3
+%%DESCRIPTION=Löschen Corona Ordnungsverfuegungen erledigt älter als %%N_DAYS Tage
+
+
+
+* ***************************************************************************
+* %%NETUSE=J oder N
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+* %%NETUSE_PATH=nicht-verwendet 
+*
+* Laufwerksbuchstabe in der Form Y:
+* %%LAUFWERK=nicht-verwendet
+* ***************************************************************************
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.07.2021  09:25:34  zv173x2 Ansprechpartner
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

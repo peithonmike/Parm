@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-C22J5805_AUSGABE_JAHR-DRUCKSAMMLER
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+%%GESAMT_IN=\\msbmcc03\ctm_av\Jasper-Output\MEE-C22J5805_AUSGABE_JAHR-%%TTMMJJJJP_%%$ODATE...PDF
+
+%%GESAMT_OUT=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\Druckoutput\Druck\MEE-C22J5805_AUSGABE_JAHR-%%TTMMJJJJP_%%$ODATE...PDF
+

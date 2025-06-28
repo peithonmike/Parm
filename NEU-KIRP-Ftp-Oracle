@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-KIRP-Ftp-Oracle
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+* hier IP-UP Member anpassen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-KIRP-IMSWARE-NEU
+
+
+*Eingabedatei
+%%SYSUT1=?
+
+
+* Papyrus Document   
+%%SYSUT2=?
+
+%%TEST=J
+ 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\WinScp\WinnSCP-Install.txt
+
+* ------------------------------------------------------------------

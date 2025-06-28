@@ -1,0 +1,25 @@
+* *******************************************************************************
+* Variablen zum Verfahren Datenaustausch mit dem BfJ (BZR)
+* *******************************************************************************
+*  OK.EWO  und OPENFT 
+* *******************************************************************************
+* Mandanten : alle bis auf Grevenbroich 
+*                  dortliegen die Daten im Unterverzeichnis STAPEL
+* *******************************************************************************
+
+* Mandanten Anfrage Directory  
+%%OKEWO_BZR_EXPORT=%%OKEWO_ROOT.\div
+
+* Mandanten Antwort EmpfangsDirectory  
+%%OKEWO_BZR_IMPORT=wird-nicht-verwendet
+
+
+* OpenFT Server Antwort Empfangsdirectory   (dahin kommen die Daten vom BZR zurück)                   
+%%OKEWO_BZR_DIR_ANTWORT=\\msbmcbatch01\c$\CTM_AV\AntwortBZR
+
+
+* OpenFT Server Anfrage Directory   (von da aus wird zum BZR gesendet)                   
+%%OKEWO_BZR_DIR_ANFRAGE=\\msbmcbatch01\c$\CTM_AV\OpenFT-Prod-Dateien\OKEWO
+
+*
+*

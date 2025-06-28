@@ -1,0 +1,66 @@
+
+
+%%AUFTRAGGEBER=H.Möller  
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\%%GEM3.-SCHULJAHR 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\Logineo Email Adressen nach Straße.sql
+
+%%SQL_FILE=\\msbmcc03\ctm_av\Parm\SQL\Logineo Email Adressen nach Straße.sql
+%%SERVER=mssql01
+%%DB=schild_due
+
+
+%%U=Schulen_AV
+
+%%P=secret-server
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS ,%%JJJJ
+*  ******************************************** 
+
+*%%VON=??
+*%%BIS=??
+
+
+%%DATUM=%%$OYEAR.-%%OMONTH
+
+
+* Name der Ausgabe Directory und Datei
+
+%%OUTDIR=\\vfdusalt\40\Amt40\Themen\Statistik\Schulen\Logineo Email Adressen nach Straßen\%%DATUM
+
+%%OUTDIR=c:\temp\Logineo-Email-Adressen-nach-Straßen\%%DATUM
+
+
+%%FILENAME=%%JOBNAME._%%DATUM..CSV
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    31.10.2018  08:30:55  zv173x2 neu geplant  erster Lauf 21.01.2019
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

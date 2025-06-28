@@ -1,0 +1,47 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* XXX-LOGA-Angestellte-FW
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+
+
+%%REMOTE_INDIR=AN
+%%MAIL_U=I N F O     LOGA-Abrechnung - Angestellte - wird abgeholt !!    
+
+
+
+
+%%INCLUDE=nicht-verwendet
+%%OUTDIR=nicht-verwendet
+
+%%WINSCP_AKTION=Filewatcher Abfrage  PDF Dateien vorhanden?
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm on
+%%Z03=option echo off
+%%Z04=option failonnomatch on
+%%Z05=open %%SITE -hostkey=%%HOSTKEY 
+%%z06=	
+%%Z07=CD %%REMOTE_INDIR
+%%Z28=dir
+%%z29=close
+%%z30=exit 
+
+%%TEST=N
+*
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.12.2018  09:16:26  zv173x2 neu Lemgo
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+

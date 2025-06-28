@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-P63-T-FW
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\baugenehmigung_MEE.ps1
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=dieter.assenmacher@itk-rheinland.de;Christopher.Kober@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer Baugenehmigung-Daten %%GEM3. nach PTV OK
+%%BETREFF_NOTOK=FileTransfer Baugenehmigung-Daten %%GEM3. nach PTV NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der Baugenehmigung-Daten %%GEM3. ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der Baugenehmigung-Daten %%GEM3. ist NOTOK.

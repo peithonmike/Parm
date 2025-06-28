@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-SCHULAV-Copy-Files
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Files.ps1 -INCLUDE %%INCLUDE
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\vfdusalt\B01\B01\01-14 Protokoll\Alters_und_Ehejubiläen\Hilden\Ehrungen\Altersjubiläen\Einzelfälle
+
+* Datei Auswahl
+%%INCLUDE=DUE-80-plus-Liste-2020-04.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\msbmcc03\ctm_av\temp
+%%FORCE_OUTDIR=N
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+
+

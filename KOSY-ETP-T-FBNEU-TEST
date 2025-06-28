@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KOSY-ETP-T-FBNEU-TEST
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "\\mskosy04\c$\Program Files\Scripte\firebird-service-restart.ps1"
+
+%%MAIL02=produktions-steuerung@itk-rheinland.de;simone.thissen@itk-rheinland.de;tobias.redmann@itk-rheinland.de;Dieter.Assenmacher@itk-rheinland.de;Erich.Janke@itk-rheinland.de
+

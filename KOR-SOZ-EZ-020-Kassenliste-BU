@@ -1,0 +1,92 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KOR-SOZ-EZ-020-Kassenliste-BU
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-SOZ-EZ
+ 
+
+* ---------------------------------------------------------------
+* PDF_MASK Auswahl Maske 	Include Exclude
+* ausz gesu ver bali anor    laut Mail 07.07.2014
+* includes müssen bei Listen Exlude sein 
+* ---------------------------------------------------------------
+%%INCLUDE=*AUSZ_EZ-2%%SOZ_GKZ.*,*GESU_EZ-2%%SOZ_GKZ.*,*VERL_EZ-2%%SOZ_GKZ.*,*BALI_EZ-2%%SOZ_GKZ.*,*ANOR_EZ-2%%SOZ_GKZ.*
+%%EXCLUDE="-"
+
+
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+* ---------------------------------------------------------------
+%%PDF_FILENAME=%%GEM3.-SOZ-EZ-%%SOZ_GKZ.-Kassenliste-%%$ODATE.-BU.PDF
+
+* Die Cover müssen je nach Empfänger angegeben werden
+* alle anderen Angaben sollten aus dem Jobnamen lesbar sein.....   siehe Member: BUENDEL
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\AAA-%%GEM3.-SOZ-EZ-%%SOZ_GKZ.-Kassenliste.pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\ZZZ-%%GEM3.-SOZ-EZ-%%SOZ_GKZ.-Kassenliste.pdf
+
+
+* ---------------------------------------------------------------
+* ANZAHL
+* Anzahl der Ausdrucke 
+* Standard =1
+* ---------------------------------------------------------------
+%%ANZAHL=2
+
+
+* ---------------------------------------------------------------
+* Hotfolder FreeFlow
+* ---------------------------------------------------------------
+**FREEFLOW_HOTFOLDER=%%SOZ_EZ_LISTEN_DRUCKER
+%%FREEFLOW_HOTFOLDER=\\MSPRINTFF01\Druckdaten$\GEBUENDELT
+**USE_FREEFLOW=N
+
+
+
+
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden  Variablenwerte angezeigt
+%%DEBUG=N
+
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+%%TEST=N
+
+%%ONLY_BUENDEL=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.07.2014  09:08:44  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SOZI\SOZ-KOR-Kassenliste-Ausdruck Unterlagen aus EZ_MZ für Korschenbroich - 2 020.pdf
+* ------------------------------------------------------------------

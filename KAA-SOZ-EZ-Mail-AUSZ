@@ -1,0 +1,50 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* KAA-SOZ-MZ-Mail-POLI
+* 
+* 
+*********************************************************** 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\COPY-SOZ-EZ
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Empfänger (durch Semikolon getrennt)          
+%%EMAIL_T=Andrea.Dziomba@kaarst.de;Ralf.Schaefer@Kaarst.de
+
+
+* Subject
+%%EMAIL_U=Job %%JOBNAME  AUSZAHLUNGSLISTE FUER STADTKASSE %%ORT %%$ODATE
+
+
+* Kopie
+%%EMAIL_CC=
+
+* Blindkopie
+%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+*Anhang (durch Semikolon getrennt) 
+                   
+         
+%%EMAIL_A=%%INDIR.\EZ-080-NE_PFZV0100_AUSZ_EZ-2016_%%$ODATE..PDF
+
+%%EMAIL_A_MOVE=J
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    14.04.2016  16:31:47  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

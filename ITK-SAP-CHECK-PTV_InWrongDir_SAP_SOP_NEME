@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-SAP-CHECK-PTV_InWrongDir_SAP_SOP_NEME
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\ITK-SAP-CHECK-PTV
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%SYSOUT=\\msbmcc03.itk.local\G$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%PROJEKT=SAP_SOP_NEME
+%%PFAD=\\msptv01\d$\PTV\Projekte\%%PROJEKT.\inWrongDir\*.*

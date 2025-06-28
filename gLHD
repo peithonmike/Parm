@@ -1,0 +1,35 @@
+* *************************************************************
+* Globale Variablen          
+* Landeshauptstadt Düsseldorf
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%STADT  =Landeshauptstadt
+%%ORT    =Düsseldorf
+%%GEM    =DF
+%%GEM3   =DUE
+
+
+%%GKZ8   =05111000
+
+* OK.EWO Ortsnummer
+%%e01e200_ortnr=41
+
+*
+* Behördennummer für den Datenaustausch über OpenFT mit dem Bundesamt für Justiz (BfJ)
+*
+
+* Stadt Düsseldorf -Einwohnerwesen-
+%%BFJ_ID_OKEWO=R6371
+
+* Stadt Düsseldorf -Ausländerbehörde- 
+%%BFJ_ID_OKVISA=R6086A
+
+
+*  -JAGD- 
+*  wird für die Antwortabholung verwendet
+%%BFJ_ID_JAGD=R9144J
+
+*  -ZSTV 
+*  wird für die Antwortabholung verwendet
+%%BFJ_ID_ZSTV=R6086B

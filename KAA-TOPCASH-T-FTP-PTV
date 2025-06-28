@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-TOPCASH-T-FTP-PTV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%SYSOUT=\\msbmcc03.itk.local\G$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%FTP-LPATH1=\TC-KA\TCtoKIRP*.txt
+
+%%FTP-RPATH1=\ptv-sap\sap_tc\inDir\%%GEM3._P63_Export_%%ODATE..txt
+
+%%FTP-NEWNAME1=\TC-KA\Verarbeitet\kassprod_D%%ODATE.%%TIME..dat
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer P63-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer P63-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der P63-Daten %%GEM3. ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der P63-Daten %%GEM3. ist NOTOK.

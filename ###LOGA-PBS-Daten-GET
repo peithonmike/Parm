@@ -1,0 +1,16 @@
+*
+* VLK Member zur Abholung der LOGA-PBS-Daten für die Stadt Düsseldorf
+* DATUM der Abholung ist immer aktueller Tag 
+* im Dateinamen befinden sich die letzten 6 Stellen des 8er GKZ 
+*
+
+%%DATUM=%%JJJJMMTT_%%$ODATE
+%%GKZ6   =%%SUBSTRING  %%GKZ8 3 6
+
+* Namensmaske der Abholung
+%%SEARCH=stplaktjahr*.csv
+
+* Empfangs Directory für den Mandanten
+
+%%IN_DIR=\\nwc1isis\Isis\isis.formulare.test\data\Gudrun\
+%%OUT_DIR=E:\LOGA_PBS

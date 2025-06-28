@@ -1,0 +1,77 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : GRE                                                                  *
+***********************************************************************************
+*  Jobname     : GRE-Geburtstagsliste-Monat
+*  Description : Geburtstagsliste-Monat
+*  Ausgabe     : per EMail an Anwender
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+
+%%VON           =01.%%MM_P1_%%$ODATE...%%JJJJ_MM_P1_%%$ODATE
+%%BIS           =%%LD_MM_P1_%%$ODATE...%%MM_P1_%%$ODATE...%%JJJJ_MM_P1_%%$ODATE
+
+
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%VON - %%BIS *** %%ID.-%%RUNNR
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=6828-E01U0000
+*
+%%OKEWO_NR=P6828
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+
+%%TEST=N
+
+%%OVERWRITE=J
+
+%%LISTE1_ACTION=N
+%%LISTE1=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..DBL
+
+%%LISTE2_ACTION=N
+%%LISTE2=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..STS
+
+%%COPY_STS_DBL=J
+%%LISTE_CSV=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..CSV
+  
+%%SENDMAIL       =J
+
+%%EMAIL-T        =Sonja.Oberbach@grevenbroich.de Silke.Becker@grevenbroich.de
+%%EMAIL-CC       =Produktions-Steuerung@itk-rheinland.de
+%%EMAIL-BCC      =Produktions-Steuerung@itk-rheinland.de
+
+%%EMAIL-U        =%%JOBNAME %%VON - %%BIS
+%%EMAIL-A        =%%LISTE_CSV
+
+* Message
+%%EMAIL-M        =Anbei die Geburtstagsdatei für den Monat %%MM_P1_%%$ODATE...%%JJJJ_MM_P1_%%$ODATE \n  \n
+
+  
+* 
+*  Beschreibung   
+%%DESC=Geburtstagsliste-Monat
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U19603#A_VON_N.E01DUMMY#%%VON#A_BIS_N.E01DUMMY#%%BIS#A_TRENNER_N.E01DUMMY#;#A_AUSWAHL_N.E01DUMMY#1#A_SPERREN_N#NNNNNNNNNN__NNNNN_NN2#A_GEBIETSTYP_N.E01DUMMY#901#A_GEBIET1_N.E01DUMMY#1#A_GEBIET2_N.E01DUMMY#1#A_NWJN.E01DUMMY#N#A_IQDRUCK_N.E01DUMMY#N#A_BEGRIFF_N.E01DUMMY#AV-M25#AUSG_FILE.E01DUMMY#%%LISTE1#V_UZ331_LISTE.E01DUMMY#$$
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.07.2013  07:54:24  zv171e1 neue Mail-Adresse K.Fabry eingefügt
+*    02.02.2011  09:07:42  zv171e1 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

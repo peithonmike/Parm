@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-SOZ.EZ-Druck-abholen-cmd
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avWINSCP_GET.ps1
+* ------------------------------------------------------------------
+%%TEST=J

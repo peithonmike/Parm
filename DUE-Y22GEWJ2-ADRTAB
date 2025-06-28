@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-NKIVSOLLST
+* DUE-Y22GEWJ2-ADRTAB
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+**LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt 
+
+%%MAIL02=volker.ehmann@itk-rheinland.de;david.mertens@itk-rheinland.de
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=Verarbeitung Gewerbesteuer JSS NOTOK
+%%TEXT_NOTOK=Der %%JOBNAME ist abgebrochen. Bitte pruefen und Info an die AV geben 
+%%COMMAND=./Shell-Scripte/AdrTabFuellen/tkadk005.sh

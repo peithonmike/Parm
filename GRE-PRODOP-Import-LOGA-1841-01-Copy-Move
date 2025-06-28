@@ -1,0 +1,57 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* GRE-PRODOP-Import-LOGA-1841-03-Copy-Move
+*  
+*********************************************************** 
+ 
+
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske unter neuem Namen.
+* Der neue Name ergibt sich aus der Vorgabe der NAMES Varibalen, der in der Ursprungsdatei auch enthalten ist. 
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\FIBU
+
+* Datei Auswahl
+%%INCLUDE=fibu1841_01*
+%%EXCLUDE=fibu1841_03*
+
+* Ausgabe Directory
+%%FORCE_OUTDIR=N
+%%OUTDIR=\\vfgv1.itk.local\voldaten1\Daten\SBG\Team Finanzen\DruckausgabeITK\LOGA
+
+* erledigt Ordner
+%%FORCE_OUTDIR_PROCESSED=N
+%%OUTDIR_PROCESSED=\\msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\FIBU\verarbeitet
+
+* User
+%%USERNAME=ITK\controlm
+
+
+* Path für den erweiterten Zugriff
+%%NETUSE_PATH=\\vfgv1.itk.local\voldaten1\Daten\SBG\Team Finanzen\DruckausgabeITK\LOGA
+* Laufwerksbuchstabe in der Form X:
+%%LAUFWERK=X:
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\bin\powershell\AS\JOB\JOB-COPY-MOVE-NETUSE-SECURE.ps1
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.02.2025  09:24:16  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,18 @@
+* LIBMEMSYM 
+*
+* Server  MSOPENFT01
+*
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%NCOPY_EXE=\\MSopenFT01\C$\Program Files (x86)\openFT\bin\ncopy.exe
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\OPENFT01-%%$OYEAR..csv
+
+* RICHTUNG 
+* Batch war immer SENDEN bis kba dazukam
+%%RICHTUNG=SENDEN
+
+

@@ -1,0 +1,37 @@
+﻿***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  APPLICATION : Migewa (Druck)
+***********************************************************************************
+
+++EINGABE="\\srv03.itk.local\qasp%%GEM.$\Daten\Apps\migewa\DRUCKABLAGE"
+%%EINGABE="\\msiris01\Mandanten$\%%GEM.\gewerbe\pdf"
+
+%%AUSGABE="\\srv03.itk.local\qasp%%GEM.$\Daten\Apps\migewa\DRUCKABLAGE"
+
+++EXT="*%%$OYEAR.%%OMONTH.%%ODAY*.pdf"
+%%EXT="*.pdf"
+
+%%DRUCKDATEI=*.pdf
+++DRUCKDATEI="*.pdf*
+%%DRUCKDATEI_FF=*.pdf
+
+%%HOTFOLDER=R18doppel
+%%MANDANT=%%GEM3.
+%%VORBLATT_PFAD=\\srv03\qaspkdvz$\Daten\Apps\Druckoutput\Vorblatt
+%%VORBLATT=%%GEM3.-Migewa-Druck_Vorblatt.pdf
+%%VORBLATT_HOTFOLDER=R18Vorblatt
+++MOVEZIEL="\\msiris01\Mandanten$\%%GEM.\gedruckt"
+%%MOVEZIEL="\\msiris01\Mandanten$\%%GEM.\gewerbe\pdf\gedruckt"
+
+%%VORBLATT=%%GEM3.-MIGEWA-Druck_Vorblatt.pdf
+%%FILTER1=*
+%%EINGABE_FF=\\srv03\qasp%%GEM.$\Daten\Apps\migewa\DRUCKABLAGE
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;andreas.hillebrands@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME ist nicht gelaufen
+
+%%TEXT_NOTOK=Die Bereitstellung der Daten für Migewa- %%GEM3 ist nicht gelaufen
+
+%%DRUCK_COMMAND=powershell.exe -ExecutionPolicy Bypass -File "\\msbmcc03\ctm_av\Bin\Powershell\CopyToFreeFlow.ps1" -SourcePfad "%%EINGABE_FF" -SourceDatei "%%DRUCKDATEI" -DruckOrdner %%HOTFOLDER -NeuerDateiname %%MANDANT -Vorblatt %%VORBLATT

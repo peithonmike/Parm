@@ -1,0 +1,46 @@
+ 
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Arbeiter-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Empfänger (durch Semikolon getrennt)          
+%%EMAIL_T=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de
+
+* Subject
+%%EMAIL_U=Job-Nachricht:   Daten fuer Buchungslisten Produktion Arbeiter stehen bereit
+
+* Kopie
+*%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+* Blindkopie
+*%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.06.2017  11:19:50  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

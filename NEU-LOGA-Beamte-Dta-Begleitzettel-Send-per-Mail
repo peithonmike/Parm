@@ -1,0 +1,69 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA-Beamte-Dta-Begleitzettel-Send-per-Mail
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+*********************************************************** 
+ 
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+             
+%%AUFTRAGGEBER=S.Hünnekes 03.2020
+
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Send-Mail-Attach.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+* Eingabe Directory
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NBE\DTA
+
+
+
+%%INCLUDE=18*_*BE_*_%%$OYEAR.%%OMONTH*_*.pdf
+%%EXCLUDE="-"
+%%BLANK="           "
+
+* Empfänger der Dateien!!  (durch Semikolon getrennt) 
+%%EMAIL_T=dennis.haupt@stadt.neuss.de;Anne.Seeburger@stadt.neuss.de;Julie.Schaefer@stadt.neuss.de
+
+*%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+* Subject
+%%EMAIL_U=Datenträger Begleitzettel %%STADT %%ORT %%BLANK Abrechnung : %%$OYEAR..%%OMONTH Beamte
+
+* Kopie
+%%EMAIL_CC=
+
+* Blindkopie
+%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+%%EMAIL_A_MOVE=N
+*%%OUTDIR_PROCESSED=%%INDIR.\Mail
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.02.2022  15:16:31  zv173x2 raus Helga.stammen @stadt.neuss.de;
+*    17.01.2022  11:01:14  zv173x2 raus Susanne.meuter @stadt.neuss.de;
+*    23.07.2021  08:37:45  zv173x2 ;dennis.haupt@stadt.neuss.de
+*    19.03.2020  09:45:08  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

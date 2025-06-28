@@ -1,0 +1,59 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-PRODOP.KOSY-Copy
+* 
+* 
+*********************************************************** 
+%%TEST=N
+
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-PRODOP-DOR
+
+%%IP=\\N200D01S29.ad.stadt-dormagen.de\HH-Prog\Schnittstellen_roki\itkr_roki\kosy
+%%IP=\\N200D01S29.ad.stadt-dormagen.de\itkr_roki\kosy 
+
+
+%%SEARCH_DIR=\\N200D01S29.ad.stadt-dormagen.de\HH-Prog\Schnittstellen_roki\itkr_roki\kosy
+%%SEARCH_DIR=%%IP
+
+
+
+%%SEARCH=*.txt
+%%MOVE_ORDNER=erledigt
+%%IGNORE_DUP_INPUT=J
+%%IGNORE_DUP_OUTPUT=J
+
+%%OUTDIR=\\mskosy03\qaspro$\daten\apps\kosy\transfer
+
+
+%%EMAIL_T=simone.thissen@itk-rheinland.de;tobias.redmann@itk-rheinland.de;Dieter.Assenmacher@itk-rheinland.de;Erich.Janke@itk-rheinland.de
+
+%%EMAIL_CC=produktions-steuerung@itk-rheinland.de
+
+
+
+%%EMAIL_U=Job-Nachricht CC:%%COMPSTAT   %%JOBNAME
+
+%%TEXT_NOTOK=Das Kopieren der Prodoppik-Datten für KOSY (Rommerskirchen) ist abgebrochen!!
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\KOSY\Antwort_ [Ticket#2396255] Gemeinde Rommerskirchen _ Export ProD.pdf
+* ------------------------------------------------------------------
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.07.2016  12:09:55  a-zv173x2 NETUSE
+*    27.01.2016  08:33:23  zv173x2  @rommer s kirchen.de
+*    26.11.2013  22:17:24  ZV173X2 DUP INPUT und OUTPUT
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

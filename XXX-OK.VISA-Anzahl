@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-OK.VISA-Anzahl
+* 
+* 
+*********************************************************** 
+%%TRENNER=";"
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKVISA_DB
+%%DB=okvisa_due
+ 
+%%LOGFILE_TO_SYSOUT=N
+%%TEST=N
+%%SENDMAIL=J
+%%EMAIL-T=Ralf.Lingel@itk-Rheinland.de 
+%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de 
+
+%%EMAIL-U=aktuelle Ausländerzahlen Stand %%START_DATE 
+
+
+ 
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\Visa_aktuelle_Personen.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\Visa_aktuelle_Personen.sql

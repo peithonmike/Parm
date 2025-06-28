@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-PRODOP-Export-VWBU-Protokoll
+* neuer Jobname ab 22.06.2012
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* LIBMEMSYM 
+* alter Jobname GRE-PRODOP-Ist-Protokoll-VWBU
+* 
+* Job verschiebt das IstProtokoll aus der HOSTübernahme
+***********************************************************
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%FILE=GRPROTIST_%%odate..TXT 
+
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\Apps\ftp\av\HuH\GR\
+
+%%OUTDIR=\\srv03.asp.rzne.de\qaspgr$\Daten\Apps\HH\Protokolle\Export
+
+
+

@@ -1,0 +1,30 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-WINOWIG-Batch-Soll
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+ 
+*********************************************************** 
+* alle Mandanten laufen mit der gleichen ART 
+* Stand 18.12.2012
+*********************************************************** 
+ 
+* VLK 
+%%ART=-A11,12,13,15,16,18,14
+%%PARAMETER=%%ART
+%%LOGIN=%%WINOWIG_GKZ
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+**COMMAND=Powershell.exe -executionpolicy bypass  \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-WINOWIG-AktionStarten.ps1
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-AKTIONSTARTEN.BAT
+

@@ -1,0 +1,59 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : JUE_STRASSENZUORDNUNG
+* erstellt : 10.05.2016 11:47:59
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* Report steht unter Global/Evakuierungsradien
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+%%gebiettyp=101
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=JUE-STRASSENZUORDNUNG.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/JUE_STRASSENZUORDNUNG
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\JUE-STRASSENZUORDNUNG-%%TTMMJJJJP_%%$ODATE...%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=N
+%%EMAIL-U=Auftrag : JUE-STRASSENZUORDNUNG-%%TTMMJJJJP_%%$ODATE..
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n ist die Datei verschoben auf: \n  \n \\msgeomap01.itk.local\geoas_daten$\Evakuierung\Input \n  \n bitte überprüfen! \n  \n  \n  \n 
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\OK.EWO.JASPER-Monat-Strassenzuordnung-Folgeauftrag.pdf
+* ------------------------------------------------------------------

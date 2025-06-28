@@ -1,0 +1,26 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-ENERGIE-FTP
+* STW-Daten für AMT 23
+* 
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%IP=proxyad.itk.local
+%%U=ftp22201@ftp.swd-ag.de
+%%P=f6e421lk
+%%SYSUT1="*.CSV"
+**SYSUT2="\\vfdustvg\Klima$\104001_Duesseldorf-Uni-10 Minuten_Lieferung_Messwerte_%%$ODATE..csv"
+%%SYSUT2="\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Amt23\TK"
+
+
+*%%betreff_NOTOK=%%JOBNAME NOTOK
+
+
+
+%%TEST=N
+
+

@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-IDATnachSAP-T
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%CLIENT=IFP
+%%MANDANT=800
+%%SOURCE=\\mskmv02\Programme\kmv_mee\Batchdateien\meerbusch\divers\IDAT
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msptv01\c$\CTM_AV\Bin\ps\copyToSap.ps1 -sysid IFP -mandt 800 -dest_path "Fachverfahren/Freigabe" -pattern "IDAT*.TXT" -done "gebucht" -src "\\mskmv02\Programme\kmv_mee\Batchdateien\meerbusch\divers\IDAT"
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;SAP_SB22@itk-rheinland.de;volker-ehmann@itk-rheinland.de;david.mertens@itk-rheinland.de
+%%BETREFF_NOTOK=Kopieren IDAT nach SAP für %%GEM ist nicht gelaufen 
+%%TEXT_NOTOK=%%JOBNAME ist abgebrochen. Siehe SYSOUT im Anhang
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\IDATnachSAT-T-Erweiterung.pdf
+* ------------------------------------------------------------------

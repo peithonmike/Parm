@@ -1,0 +1,41 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Bescheiddruck-GEWMB-COPY-FILER
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%Schedtab=KAA-Druck-GBA-Messbescheide
+%%Job1=KAA-Copy-GBA-Messbescheide-Filer
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-FileS.ps1
+
+%%OUTDIR=\\vfka\20\Bereich 20\AustauschITK
+
+%%OUTDIR_PROCESSED=\\vfapps\apps\ITK\KMV\Produktion\5000\50100\Druck\gedruckt
+
+%%INDIR=\\vfapps\apps\ITK\KMV\Produktion\5000\Drucklisten
+
+*GBA_-_DTA-Messbescheide_Stadt_Kaarst_27.10.2022.pdf
+%%INCLUDE=GBA_-_DTA-Messbescheide_Stadt_Kaarst_*.pdf
+%%EXCLUDE="-"
+  
+
+
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=J
+%%DEBUG=N
+

@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-CCM-AMT50-Copy-XLM-an-Kasse
+* 
+* 
+*********************************************************** 
+ 
+  
+* CTM Monitoring Dokumentation vorhanden
+%%DOCUMENTATION=J
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\CCM-MAIL
+
+$$INCLUDE=\\msbmcc03\CTM_AV\DOC\CCM\DUE-CCM-an-Kasse.pdf
+
+
+
+
+* Eingabe Directory 
+
+%%INDIR=\\vfduswba.itk.local\51\Amt51\Themen\CCM\Kasse\Sepa
+
+
+* Datei Auswahl
+
+%%INCLUDE=*.xml
+
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfdussap\sap\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_CCM50
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\Backup
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    12.08.2021  11:02:22  zv171e1 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-Kasse-T-FTC-MOVE_FILES_BUC
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_Neuss
+
+%%CLIENT=IFP
+%%MANDANT=100
+
+%%MAIL_NOTOK=SAPSYSTEM@ITK-RHEINLAND.DE;PRODUKTIONS-STEUERUNG@ITK-RHEINLAND.DE
+%%BETREFF_NOTOK=%%JOBNAME IST ABGEBROCHEN
+%%TEXT_NOTOK=BITTE ÜBERPRÜFEN

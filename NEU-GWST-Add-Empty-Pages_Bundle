@@ -1,0 +1,53 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  
+***********************************************************************************
+*  Jobname     : NEU-GWST-Add-Empty-Pages_Bundle
+*  
+***********************************************************************************
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+
+
+%%INDIR=\\vfapps\apps\itk\kmv\Produktion\1000\50101\Aktuell
+%%OUTDIR=\\vfapps\apps\ITK\KMV\Produktion\1000\50101\Aktuell\buendel
+%%OUTDIR_PROCESSED=\\vfapps\apps\ITK\KMV\Produktion\1000\50101\Aktuell\archiv
+%%INFILE=*.pdf
+%%Outfile=%%GEM3._GEW-Bescheide_%%ODATE..pdf
+
+
+*******************************************************************************************
+*
+*                    Angaben für die PDF-Verarbeitung 
+*
+*   - debug            Ausgabe der Verarbeitung
+*   - bundle           nur emty Pages oder auch bündeln
+*   - bundle_option    Bündeln nach Timestamp der Datein oder Alphabetisch nach Dateiname
+*
+*******************************************************************************************
+
+%%DEBUG=False
+
+* Bündelung aktivieren oder deaktivieren  False / True
+%%BUNDLE=True
+
+* Art der Bündelung    timestamp oder alphabetical oder BZ_Number
+%%BUNDLE_OPTION=BZ_Number
+
+
+
+%%python_exe=C:\Users\a-zvaa405\AppData\Local\Programs\Python\Python312\python.exe
+
+%%python_script=\\msbmcc03\CTM_AV\Bin\Python\CF\Add_Empty_Pages_Merge.py
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Merge_PDF_Sort_Call_Python.ps1
+
+
+

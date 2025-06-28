@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-WINOWIG-Soll-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+%%ART='Soll:*' 
+%%DESCRIPTION=Schnittstellen-Dateien Soll erzeugen 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%TEST=N
+
+
+
+
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\ausgang\soll
+%%SEARCH=WiNOWIG_SOLL_*.txt
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-WOSPOOL-STARTEXE.BAT
+
+
+ 
+* ------------------------------------------------------------------
+
+
+

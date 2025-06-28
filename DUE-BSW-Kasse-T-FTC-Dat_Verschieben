@@ -1,0 +1,24 @@
+***********************************************************************************
+*  JOB-LIBMEMSYM                                                                   *
+***********************************************************************************
+*  Jobname     : DUE-BSW-Kasse-T-FTC-Dat_Verschieben
+***********************************************************************************
+
+
+
+
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;
+
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT_NOTOK=Bitte überprüfen
+
+%%CLIENT=IFP
+%%MANDANT=400
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\moveSapFTC.bat %%CLIENT %%MANDANT

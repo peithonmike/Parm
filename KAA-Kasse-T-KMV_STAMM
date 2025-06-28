@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-Kasse-T-KMV_STAMM
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_Kaarst
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;steffen.brandemann@itk-rheinland.de
+%%BETREFF_NOTOK= %%JOBNAME - ist nicht gelaufen
+%%TEXT_NOTOK=Bitte überpruefen.
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\KAA-KASSE-T-STAMM.pdf
+* ------------------------------------------------------------------

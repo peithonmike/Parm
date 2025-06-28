@@ -1,0 +1,40 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Meerbusch
+***********************************************************************************
+*  Jobname     : MEE-Bescheiddruck
+*  APPLICATION : SAP
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%DESCRIPTION3=Übertragung der GBA-Bescheide nach Saperion
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\XXX-MoveFile.ps1 -PfadVon %%EINGABE -PfadNach %%MOVEZIEL -Dateiname %%FILTER1
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1
+
+%%INDIR=\\vfapps\apps\ITK\KMV\Produktion\8000\50100\Aktuell
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+%%OUTDIR=\\vfapps\apps\ITK\KMV\Produktion\8000\50100\Aktuell\Verarbeitet\Einzel
+
+
+%%TEST=N
+%%DEBUG=N
+
+**DRUCKER=\\MSDRN01\ITKR-R18_PCL_D
+**EINGABE="\\vfapps\apps\ITK\KMV\Produktion\8000\50100\Aktuell"
+**ILTER1=*.pdf
+**DRUCKDATEI=_GBA-Bescheide_%%ODATE..pdf
+**ZIEL="\\vfapps\apps\ITK\KMV\Produktion\8000\50100\Druck"
+**MOVEZIEL="\\vfapps\apps\ITK\KMV\Produktion\8000\50100\Aktuell\Verarbeitet"
+**LOG="\\msbmcc03\ctm_av\bin\Log\%%JOBNAME..txt"
+**DRUCKDATEI_FF=*.pdf
+**MANDANT=MEE
+**EINGABE_FF="\\vfapps\apps\ITK\KMV\Produktion\8000\50100\Druck"
+**HOTFOLDER=R18GBAKUVERT

@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-Sodatis-Delete-TEST
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%EINGABE_VZ=\\vfduswba\51\Amt51\Themen\AKDN_Monatsdateien
+
+%%EINDAT=*.txt
+

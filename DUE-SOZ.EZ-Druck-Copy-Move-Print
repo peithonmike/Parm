@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.EZ-Druck-Copy-Move-Print
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach PRINTER alle Files mit vorgegebener Maske.
+* Die benötigten Variablen werden im PRINTER-??? Member definiert 
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Print.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRINTER-DLD5081309
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+* ************************************************************************
+*   LIBMEMSYM   für Copy PDF auf Drucker
+*   Name PRINTER-?????
+* ************************************************************************
+
+* Eingabe Directory 
+*%%INDIR=
+
+
+* Drucker Freigabe
+*%%PRINTER = 
+*%%INCLUDE =
+
+
+* erledigt Ordner
+*%%OUTDIR_PROCESSED =
+
+* Datei Auswahl
+*%%EXCLUDE="-"
+
+
+
+
+

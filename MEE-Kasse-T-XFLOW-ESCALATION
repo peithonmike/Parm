@@ -1,0 +1,25 @@
+*********************************************************** 
+* Jobname MEE-Kasse-T-XFLOW-ESCALATION
+* 
+* zustaendig im SB 2.2 Martin Gehring und Renate Hintzen
+*********************************************************** 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_NEU
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%MAIL_NOTOK=martin.gehring@itk-rheinland.de;Renate.Hintzen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME im SAP ist NOTOK!
+
+%%TEXT_NOTOK=Bitte pruefen!
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\MEE-Kasse-T-XFLOW.pdf
+* ------------------------------------------------------------------
+

@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-VADM-Vorpruef
+*
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+
+
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\VADM_Sort_UebStr.ps1" -InDirU \\vfdussap\SAPHCM_P1P\Daten\VADM\Uebersteuerung -InDir \\vfdussap\SAPHCM_P1P\Daten\VADM\Eingabe\ -OutDirU \\vfdussap\SAPHCM_P1P\Daten\VADM\Uebersteuerung -DatumParam %ODATE%
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\VADM_Sort_UebStr.ps1" -InDirU \\vfdussap\SAPHCM_P1P\Daten\VADM\Uebersteuerung\ -OutDirU \\vfdussap\SAPHCM_P1P\Daten\VADM\Uebersteuerung\ -DatumParam %ODATE%

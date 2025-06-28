@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Kopieren einer CSV-Datei fuer Mönchengladbach
+* MGL-PLZ-CSV
+*  
+***********************************************************
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-File.ps1
+
+* Eingabe Directory 
+%%INDIR=\\msbmcc03\ctm_av\Jasper-Output
+
+* Datei Auswahl
+%%INFILE=MGL-PLZ_%%OMONTH.%%$OYEAR..CSV
+* Ausgabe Directory
+
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Kosis\Bestand
+%%OUTFILE=PLZ_%%OMONTH.%%$OYEAR..CSV
+%%FORCE_OUTDIR=N
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    06.12.2018  08:56:36  zv171e3 auf powershell geändert
+*    ---------------------------------------------------------------------------------
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-MGL-PLZ.pdf
+* ------------------------------------------------------------------

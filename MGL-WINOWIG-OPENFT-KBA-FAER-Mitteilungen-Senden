@@ -1,0 +1,77 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-OPENFT-KBA-FAER-Mitteilungen-Senden
+* 
+* 
+*********************************************************** 
+ 
+
+--------------------------------------------------------------------------------------------------
+* Job versendet Anfragen usw per OpenFT.
+* Nach erfolgreichem senden werden die Einagbedateien nach OUTDIR_PROCESSED verschoben (wird angelegt falls nicht vorhanden)
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+%%DESCRIPTION=FAER Mittteilungen der %%STADT %%ORT mit OpenFT an das KBA   senden
+%%DESCRIPTION1=Job wird normaler Weise geforced wenn Daten zum Senden vorhanden sind
+%%AUFTRAGGEBER=W.Klerx
+
+
+* Eingabe Directory der Anfragen
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\%%GEM3.\%%$ODATE.\WINOWIG
+
+*  Speicherort für gesendete Anfragen
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\gesendet\%%GEM3.\%%$OYEAR.\WINOWIG\%%ODATE
+
+%%OPTIONEN=-b -n -c -k
+
+
+
+
+**************************************************************
+* P R O D
+%%ANSCHLUSS=KBA
+%%TRANSFER_ADMISSION=jTALnWXuHJ
+%%INCLUDE=faermit_%%KBA_NR.*
+***************************************************************
+
+
+
+***************************************************************
+* T e s t überschreibt PROD 
+*%%ANSCHLUSS=KBATEST
+*%%TRANSFER_ADMISSION=19629FMI
+*%%INCLUDE=faermit_19629_*
+***************************************************************
+
+
+
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+ 
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-OpenFT-KBA-FAER-Senden.ps1
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.02.2021  10:46:34  zv173x2 neu ab 01.03.2021 nimmt MGL an Winowig teil
+*                                      hier Anpassung der PMOWI Jobs an Winowig
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+

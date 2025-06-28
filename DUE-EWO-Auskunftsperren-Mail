@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Auskunftsperren-Mail
+* 
+* 
+*********************************************************** 
+ 
+
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Send-Mail-Attach.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%AUFTRAGGEBER=T.HEISTER
+
+* 
+ \\MSBMCBATCH01\ctm_av\Temp\aspDUE\%%GEM3.-Auskunftsperren-%%$ODATE..PDF
+
+* Eingabe Directory
+%%INDIR=\\MSBMCBATCH01\ctm_av\Temp\aspDUE\
+
+
+%%INCLUDE=%%GEM3.-Auskunftsperren-%%$ODATE..PDF
+%%EXCLUDE="-"
+
+%%EMAIL_T=melderegister@duesseldorf.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+* Subject
+**EMAIL_U=%%GEM3.-Auskunftsperren-%%$ODATE..PDF
+%%EMAIL_U=Liste zum Serienbrief Ablauf in 3 Monaten ASP Ziffer 3
+
+
+*%%EMAIL_CC=
+
+* Blindkopie
+*%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+%%EMAIL_A_MOVE=N
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.01.2022  08:55:55  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

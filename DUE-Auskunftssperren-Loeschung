@@ -1,0 +1,61 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : DUE-Auskunftssperren-Loeschung
+* erstellt : 12.11.2012 15:15:16
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+ 
+* 
+* es wird eine zusätzliche LIBMEMSYM verwendet
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###VLK-18JAHRE
+ 
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+%%Volljährig=%%JJJJ_M18_%%$ODATE..%%MM_M1_%%$ODATE..01
+%%Datum_von=01.%%MM_M1_%%$ODATE..%%JJJJ_MM_M1_%%$ODATE
+%%Datum_bis=%%LD_MM_M1_%%$ODATE..%%MM_M1_%%$ODATE..%%JJJJ_MM_M1_%%$ODATE
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=DUE-Auskunftssperren-Loeschung.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/DUE-Auskunftssperren-Loeschung
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\DUE-Auskunftssperren-Loeschung-%%TTMMJJJJP_%%$ODATE...%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : DUE-Auskunftssperren-Loeschung-%%TTMMJJJJP_%%$ODATE..
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+%%EMAIL-T=Burghard.Schramm@ITK-Rheinland.de;
+%%EMAIL-BCC=Burghard.Schramm@ITK-Rheinland.de;
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M= \n  \n Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n Diese Datei sollte per FTP anschließend an die Druckerei geschickt werden. \n FTP-Jobs bitte ueberpruefen. \n DUE-Auskunftssperren-Loeschung-PAP und DUE-Auskunftssperren-Loeschung-ZETTEL \n  \n 

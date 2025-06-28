@@ -1,0 +1,100 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-EWO-Familienverband-Aufloesen
+* 
+* 
+*********************************************************** 
+ 
+
+
+******************************************************************************************** 
+* AKDB generelle Job Vorbereitung 
+******************************************************************************************** 
+
+* AKDB Jobname und Parameter hier angeben
+* Reihenfolge vor den LIBMEMSYM sind wichtig
+%%EWOJOB_NAME=de.akdb.oesio.okewo.melderegister.jobs.FamilienverbaendeAufloesenJob
+%%PARAM=gvVaterMutterAbVolljaehrigkeitLoeschen=Btrue;abgelaufeneGvAusserVaterMutterLoeschen=Btrue;
+
+ 
+   
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\g%%GEM3
+
+* Mandantenspezifische Angaben
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-KDVZ-FRECHEN
+
+* Dokumentation zum AKDB Job etc.  
+%%DOKU=\\MSBMCC01\CTM_AV\DOC\EWO\%%EWOJOB_NAME
+%%LIBMEMSYM=%%DOKU
+
+
+******************************************************************************************** 
+* Nachverarbeitung 
+******************************************************************************************** 
+
+* Eingabe Directory der Nachverarbeitung  
+%%INDIR=%%EWODIR_AUSWERTUNGEN.\Aufloesen_Familienverband
+
+
+* Datei Auswahl für die Nachverarbeitung 
+* Muster   05111000_AufloesenFamilienverband_210125100707.zip
+%%INCLUDE=%%GKZ8._AufloesenFamilienverband_%%RDATE.*.zip
+
+
+
+* Ausgabe Directory der Nachverarbeitung 
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\AufloesenFamilienverband\%%GEM3
+
+* Auswahl der Verarbeitungen
+%%ARCHIVIEREN=J
+%%SENDEN=N
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+***************************************************************************************************
+* Ab hier wird nur verwendet, wenn die Daten nach Frechen übertragen werden
+* aktuell 03.2021  nur Neuss und Düsseldorf
+***************************************************************************************************
+
+* nur SITE Info
+* Aufruf erfolgt über IP U P  
+* %%SITE=KDVZ-Frechen-EWO-Archiv
+
+*Unser Remote Ausgabeverzeichnis
+* %%DIRECTORY=aufl_itk
+
+* Unterverzeichnis wird angelegt
+* jeweils für Mandant mit Datum
+* normalerweise RDATE
+* %%NEW_DIRECTORY=%%GEM3._%%RDATE
+
+*Auswahl nach senden in gesendet Ordner verschieben
+* %%USE_OUTDIR_PROCESSED=J
+* %%OUTDIR_PROCESSED=%%OUTDIR.\gesendet
+***************************************************************************************************
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.03.2021  10:43:51  ZV173X2 neu PS1 Version
+*    25.01.2021  12:20:17  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+

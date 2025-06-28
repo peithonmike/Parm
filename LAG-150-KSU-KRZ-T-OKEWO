@@ -1,0 +1,20 @@
+* *************************************************************
+* Globale Variablen      
+* LAG-150-KSU-KRZ-T-OKEWO
+* 
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\KSU-KRZ-T-OKEWO
+
+
+%%TEXT_NOTOK=Abruch des Jobs %%JOBNAME für %%ORT
+
+%%ORDNER1=\\srv03\ftp$\ksu2000_krz\Prod\%%GKZ.\EWO
+%%ORDNER2=\\srv03\ftp$\ksu2000_krz\Prod\%%GKZ.\EWO-Sicherung
+
+%%CSV1=%%GKZ.-EWO-K2014W.csv
+%%CSV2=%%GKZ.-EWO-K2014W_D%%$ODATE..csv
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\KSU_KRZ_T_OKEWO.ps1 -ordner1 %%ORDNER1 -ordner2 %%ORDNER2 -csv1 %%CSV1 -csv2 %%CSV2

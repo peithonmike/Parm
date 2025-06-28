@@ -1,0 +1,33 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Gemeinde Jüchen
+***********************************************************************************
+*  Jobname     : JUE-WOHN.LDS-Postfach-abholen
+*  APPLICATION : WOHN.LDS
+***********************************************************************************
+* Job holt Daten IT-NRW ab.
+* wenn Daten vorhanden sind, wird über Job FORCE, ein Job aktiviert,der die 
+* Daten per EMail an den Anwender sendet 
+*********************************************************************************** 
+*********************************************************************************** 
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LDS-POSTFACH
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###WOHN-POSTFACH-GET
+
+%%SYSIN_BAT=\\msbmcc03\ctm_av\BIN\BAT\WOHN-POSTFACH-GET.BAT
+%%NACH_BAT =\\msbmcc03\ctm_av\BIN\BAT\WOHN-POSTFACH-NACH.BAT
+
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\log\ErgebnisLog\%%GEM3.-WOHN-LDS-POSTFACH-%%$OYEAR..csv
+* ------------------------------------------------------------------

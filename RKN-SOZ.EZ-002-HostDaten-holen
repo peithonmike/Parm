@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-SOZ.EZ-002-HostDaten-holen
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%SOZ_GKZ=002
+
+ 
+
+* Eingabe HOST-Daten Bereich  
+%%SEARCH_DIR=\\srv03.asp.rzne.de\ftp$\av\soz\EZ\UTF8
+
+* erledigt Ordner,
+%%MOVE_ORDNER=verarbeitet
+
+* Daten-Datei Suchmaske
+%%SEARCH=500.SOZ.SRZ.%%GEM3.-SEPAEZ.%%SOZ_GKZ._CT_%%$ODATE
+
+
+* Ausgabe TravicLink Sende-Verzeichnis
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\TravicLink\SOZ\EZ
+
+* Logfile
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+%%TEST=N
+

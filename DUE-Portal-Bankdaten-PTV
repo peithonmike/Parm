@@ -1,0 +1,25 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Portal-Bankdaten-PTV
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;daniel.mendoza@itk-rheinland.de;
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen!!
+%%TEXT_NOTOK=Bitte überprüfen
+
+%%COMMAND=powershell.exe LHD_Portal-BDAT.ps1
+
+**INDIR=\\vfitk\daten\Daten\ControlM\Scout
+**OUTDIR=\\vfapps\apps\ITK\Protime
+**INFILE=UAS_%%$OYEAR.-%%OMONTH.-%%ODAY..csv
+**OUTFILE=%%$ODATE._loga_protime_uasp.txt

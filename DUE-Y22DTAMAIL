@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Y22DTAMAIL
+* 
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%MAIL_AMT22=adelheid.fraedrich@duesseldorf.de;alexander.lausecker@duesseldorf.de
+%%MAIL_AMT22Z=peter.goll@duesseldorf.de;michael.heusgen@duesseldorf.de;susanne.neumann@duesseldorf.de
+
+%%BETREFF=Ein RZF-Band ist eingetroffen
+%%TEXT=Die Verarbeitung wird erfolgen.

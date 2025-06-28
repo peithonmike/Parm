@@ -1,0 +1,20 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Kaarst
+***********************************************************************************
+*  Jobname     : GRE-Filetransfer-GeoAs
+*  APPLICATION : GEOAS
+***********************************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%COMMAND=D:\Programme\Batchprogramme\ASP\copy_ka_srv03_gk_alkis_UTM.BAT
+
+%%MAIL_NOTOK=ralf.dixneit@itk-rheinland.de;hendrik.possberg@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - NOTOK - Bitte überprüfen
+
+%%TEXT_NOTOK=FileTransfer Kaarst UTM ist abgebrochen

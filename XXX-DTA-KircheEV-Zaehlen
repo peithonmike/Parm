@@ -1,0 +1,19 @@
+*
+* LIBMEMSYM
+* Aufruf   #-Member ermittelten Anzahl Fälle DTA KircheEV
+*
+*
+*
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\parm\###-DTA-KircheEV-Zaehlen
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\c_bmc\ctm_av\log\ErgebnisLog\OK.EWO-KircheEV-Satz.csv
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\OK.EWO-DTA-KircheEV-Woche.vlk
+
+* ------------------------------------------------------------------

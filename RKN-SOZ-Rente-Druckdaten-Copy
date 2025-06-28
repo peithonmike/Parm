@@ -1,0 +1,76 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-SOZ-Rente-Copy
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-RENTE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-SOZ-PROTOKOLLE-RKN
+
+**SOZ_DAT=%%JJJJ_MM_P1_%%$ODATE
+%%SOZ_DAT=%%OYEAR.%%OMONTH
+
+
+%%PDF_INDIR=\\Msprintff01\source$\SOZ-RENTEN\%%$OYEAR.\%%OYEAR.%%OMONTH
+**INDIR=\\Msprintff01\source$\SOZ-RENTEN\%%$OYEAR.\%%SOZ_DAT.
+%%INDIR=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%OYEAR.%%OMONTH
+
+%%INCLUDE=*_2*02_%%$OYEAR.%%OMONTH..PDF
+%%EXCLUDE="-"
+* *********************************************************************
+* NETUSE_S ecurity
+%%NETUSE=J
+
+* *********************************************************************
+* Path für den erweiterten Zugriff
+* NETUSE_PATH wird als Einstieg vom Netuse benötigt
+* *********************************************************************
+%%NETUSE_PATH=\\RKN-Data01.n900d01.int.de\KR5000_aKDn-Protokolle$
+
+%%NETUSE_PATH=%%IP
+             
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+
+ 
+
+* ---------------------------------------------------------------
+* OUTDIR wird vom CopyProgramm benötigt
+* Hier werden die PdfDateien hineinkopiert .
+* ---------------------------------------------------------------
+**OUTDIR=\\10.109.1.194\KR5000_aKDn-Protokolle$\%%$OYEAR.\Rente\%%$ODATE
+%%OUTDIR=\\RKN-Data01.n900d01.int.de\KR5000_aKDn-Protokolle$
+
+
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-RENTEN\%%$OYEAR.\%%OYEAR.%%OMONTH.\kopiert
+
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+

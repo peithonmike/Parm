@@ -1,0 +1,9 @@
+%%OWNER=ITK\controlm
+
+%%COMMAND=\\msbmcc03\ctm_av\bin\bat\
+
+%%BETREFF_OK=CBMR-Sicherung des %%SERVER OK
+%%BETREFF_NOTOK=ACHTUNG!!! CBMR-Sicherung des %%SERVER NOTOK
+
+%%TEXT_OK=Joblog:     Eine CBMR-Sicherung des Server %%SERVER ist ohne Fehler geendet.     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+%%TEXT_NOTOK=Joblog:     Eine CBMR-Sicherung des Server %%SERVER ist mit Fehler geendet.     Returncode=%%COMPSTAT     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.

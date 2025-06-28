@@ -1,0 +1,52 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-Usage-Report-to-XLSX   /  zvaa405 16.07.2024
+* Auftraggeber: 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%INDIR=\\msbmcc03.itk.local\sysout$\Usage_Report
+%%INFILE=%%$OYEAR.-%%OMONTH.-USAGE-REPORT.CSV
+%%OUTDIR=\\msaip01\swablage$\FB1\ControlM\Usage-Report
+%%OUTDIR2=\\msbmcc03.itk.local\sysout$\Usage_Report\Erledigt
+
+
+***************************************
+
+
+
+%%TEST=N
+
+%%DEBUG=N
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Returncode: %%COMPSTAT  Bitte ueberpruefen.
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\CF\JOB\ITK-Usage-Report-to-XLSX.ps1
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+

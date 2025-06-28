@@ -1,0 +1,69 @@
+*********************************************************************************
+*  LIBMEMSYM
+*  H H - P R O D O P P I K 
+*  S Y S T E M F I L E 
+*********************************************************************************
+
+
+
+*********************************************************************************
+*   M A I L 
+*   Im Fehlerfall werden die Ansprechpartner benachrichtigt   
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*   möglich nur Empfänger %%EMAIL_T
+*           und Kopie     %%EMAIL_CC 
+*****************************************************************************
+*   Mailadressen 
+*  Produktions-Steuerung@itk-rheinland.de
+*****************************************************************************
+%%EMAIL_T=Joerg.Huhn@itk-rheinland.de;Stefanie.Buitink@itk-rheinland.de
+
+**EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL_U=Job-Nachricht CC:%%COMPSTAT  %%JOBNAME
+
+
+*****************************************************************************
+*   Mandanten-Bereich
+*****************************************************************************
+
+* INI Directory 
+%%INI_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\HH\HKR\Script
+
+* PF Directory 
+%%PF_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\HH\HKR\Script
+
+
+
+*****************************************************************************
+*   AV-Bereich
+*****************************************************************************
+
+
+* Daten Directory für Import und Export
+%%INPUT_DIR=\\srv03\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM
+%%OUTPUT_DIR=%%INPUT_DIR
+
+
+%%PRODOP_PROTOKOLLE=\\srv03\qasp%%GEM.$\daten\apps\HH\Protokolle\
+
+*****************************************************************************
+*   Logfile 
+*****************************************************************************
+%%LOGFILE=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\PRODOP-%%$OYEAR.-%%OMONTH..csv
+%%LOGFILE_AV=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.11.2019  09:41:40  zv173x2  Stefanie.Buitink@itk-rheinland.de
+
+*    31.01.2019  08:55:21  zv173x2 mSchultz entfernt
+*    30.07.2013  22:37:19  ZV173X2 m.Schultz mail
+*    24.11.2011  08:34:58  zv173x2 Mail nur > CC 4 erwünscht
+*    23.11.2011  12:49:01  zv173x2 EMAIL Empfänger scharf gemacht
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

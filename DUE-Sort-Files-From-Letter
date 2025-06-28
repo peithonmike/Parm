@@ -1,0 +1,66 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Sort-Files-From-Letter
+* Sortiert PDF-Dateien anhand der Anfangsbuchstaben in Unterordner A - Z 
+*
+* Auftraggeber: Carsten Hahn / carsten.hahn@duesseldorf.de / +49 211 89 20510
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+
+
+%%Date=%%ODAY..%%OMONTH..%%$OYEAR
+
+
+%%INDIR=\\vfdusfw01\fw01\archiv\05-52-BMA-Technik\06-BMA-Hausakten\Z
+%%OUTDIR=\\vfdusfw01\fw01\archiv\05-52-BMA-Technik\Aufraeumen
+
+** Pfade, die recursiv eingeschlossen werden sollen  // getrennt durch , 
+
+**INCLUDEPATH=0 Scan Registratur Lieferung %%Date\Auslieferung10
+
+** Dateiendung  // bei bedarf trennen durch  , 
+
+**INCLUDE=*.pdf
+
+** Löschen der leeren verarbeiteten Ordner
+
+**Remove_Old_Dirs=N
+
+
+*********************************************************************
+*
+*    TESTUMGEBUNG
+*
+*********************************************************************
+
+
+**INDIR=\\msbmcc03\CTM_AV\Parm\Testordner\Sortieren\Indir
+**OUTDIR=\\msbmcc03\CTM_AV\Parm\Testordner\Sortieren\Outdir
+
+** Pfade, die recursiv eingeschlossen werden sollen  // getrennt durch , 
+
+**INCLUDEPATH=0*,1*
+
+** Dateiendung  // bei bedarf trennen durch  , 
+**INCLUDE=*.pdf,*.txt
+
+
+**Combination_Sort_1=N
+**Combination_Sort_2=J
+
+** Löschen der leeren verarbeiteten Ordner
+
+**Remove_Old_Dirs=J
+
+
+%%test=N
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Job-Sort-Files-from-Letter.ps1
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\in_Arbeit\Back-Move.ps1
+
+
+

@@ -1,0 +1,81 @@
+
+
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  
+*  Umstellung von PMOWI nach WINOWIG
+*
+*  muss auf Anforderung angepasst werden
+*
+* 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  
+*  %%INDIR=\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\ausgang\kba
+*  %%OUTDIR_PROCESSED=%%INDIR.\erledigt\%%GEM3
+
+
+
+
+
+
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* MGL-OPENFT-KBA-Halter-Anfragen-Move
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%DESCRIPTION=Halter Anfragedateien 
+%%DESCRIPTION=Halter Anfragedateien der %%STADT %%ORT aus Anwender-Verzeichnis nach OpenFT kopieren 
+
+
+
+* Anwender Eingabe Verzeichnis POWI
+%%INDIR=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_zum_KBA
+
+%%OUTDIR_PROCESSED=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_zum_KBA\erledigt
+
+
+ 
+%%INCLUDE=anfrage*%%KBA_NR.*
+%%EXCLUDE="-"
+%%ANSCHLUSS=KBA
+%%RICHTUNG=SENDEN
+
+
+%%MOVE_OVERWRITE=J
+
+
+*OpenFT Sendeverzeichnis
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\%%GEM3.\PMOWI
+
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\OPENFT01-%%$OYEAR..csv
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*    16.12.2020  08:23:12  zv173x2 %%MOVE_OVERWRITE=J
+*    04.12.2018  11:06:09  zv173x2 swvfileserver01.it-nr.de\verfahren$ in \\vfmgapps\apps\Verfahren
+*     07.06.2017  14:19:55  zv173x2  neu
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+

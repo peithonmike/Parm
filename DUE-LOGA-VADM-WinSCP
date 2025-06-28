@@ -1,0 +1,103 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-VADM-WinSCP
+*
+* Auftrag ist von SAP-Gruppe
+* 
+*********************************************************** 
+%%AUFTRAGGEBER=J.Huhn
+
+
+
+* spezieles Format erzeugen
+%%DATE=%%$OYEAR.-%%OMONTH.-%%ODAY
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+%%SITE=DUE-Bochum
+%%U =nicht-verwendet
+%%P =nicht-verwendet
+%%IP=nicht-verwendet
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=aktuelle VADM-Daten  abholen
+%%WINSCP_EXE=C:\Program Files (x86)\WinSCP\WinSCP.exe
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=DTSCOUTSAP
+
+* Datei Ergebnis Anzeige-Maske
+%%INCLUDE=*.*
+
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\vfdussap\SAPHCM_P1P\Daten\Inbox\
+
+
+
+*für Testphase
+*%%OUTDIR=\\vftest\SAPHCM_P1T\Daten\Inbox\
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=ascii
+%%Z07=get 10002_PX*.csv   %%OUTDIR
+%%Z08=get DZ_*_%%$ODATE..csv \\vfdussap\SAPHCM_P1P\Daten\VADM\Eingabe\
+*%%Z08=ls
+%%Z09=close
+%%Z10=exit 
+*%%Z11=?
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+ 
+*    18.06.2021  07:40:14  zv171e1 neu 
+*    18.06.2021  13:30:03  zv171e1 %%AUFTRAGGEBER=J.Huhn
+*    18.06.2021  10:31:05  zv171e1 MSBMCC03     
+*    18.06.2021  10:30:40  zv171e1 C:\Program Files (x86)\WinSCP\WinSCP.exe
+
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+
+
+
+
+

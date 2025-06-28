@@ -1,0 +1,12 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-OK.EWO-BZR-Anfragen-Move
+* Verschieben Mandantenanfragen 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO_OPENFT
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO-OPENFT-BZR-ANFRAGE
+
+
+%%TEST=N

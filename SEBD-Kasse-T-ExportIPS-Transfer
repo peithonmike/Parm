@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* SEBD-Kasse-T-Export-IPS-Transfer
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass "%PSScripts%\DTAUS\SEBD-IPS-Transfer.ps1 -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_420.cred"

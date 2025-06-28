@@ -1,0 +1,53 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : DUE                                                                  *
+***********************************************************************************
+*  Jobname     : DUE-OK.EWO-BZST-ID-Ehegatten-Anfrage
+*  Description : OK.EWO-BZST-ID-Ehegatten-Anfrage
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME  *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=23469-E01U0000
+*
+%%OKEWO_NR=P23469
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=OK.EWO-BZST-ID-Ehegatten-Anfrage
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01UBZSTEGAUS#GKB.E01DUMMY##V_UZ331_LISTE.E01DUMMY#$$
+ 
+*   ********************************************************************************** 
+*    -- Änderungen -------------------------------------------------------------------
+*
+*  Abgeschaltet 20.05.2021 lt.Smits
+*  1.05.2021  können nicht mehr laufen n, da es sich um ein altes Schema handelt.
+*  Zudem wird es den Job in der Form in Synergo auch nicht mehr geben.
+*  Kurz gesagt: Du kannst den Job im Control-M einfach abschalten, den brauchen wir nicht mehr * 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

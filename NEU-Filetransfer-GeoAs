@@ -1,0 +1,20 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Neuss
+***********************************************************************************
+*  Jobname     : NEU-Filetransfer-GeoAs
+*  APPLICATION : GEOAS
+***********************************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%COMMAND=D:\Programme\Batchprogramme\ASP\copy_ne1da03_gk_alkis_lieka_UTM.BAT
+
+%%MAIL_NOTOK=ralf.dixneit@itk-rheinland.de;hendrik.possberg@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - NOTOK - Bitte überprüfen
+
+%%TEXT_NOTOK=FileTransfer Neuss UTM ist abgebrochen

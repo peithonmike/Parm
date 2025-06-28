@@ -1,0 +1,17 @@
+
+ 
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\OKEWO
+
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\###Mammographie-Screening
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+%%TEST=N
+
+*  Druckvorlage
+%%PRT_SKELS=\\msbmcc03\c_bmc\CTM_AV\Parm\Druck-Vorlagen\NACH-DTA-MAMMO-Monat.skels
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\Druck-Vorlagen\NACH-DTA-MAMMO-Monat.skels
+ 
+  
+

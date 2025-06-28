@@ -1,0 +1,22 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Meerbusch
+***********************************************************************************
+*  Jobname     : MEE-Krebsregister-Move
+*  APPLICATION : OK.EWO.DTA
+***********************************************************************************
+*********************************************************************************** 
+*
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%INDIR=%%OKEWO_ROOT.\div
+%%FILE=D_KREBSTOD_NRW%%GKZ8..csv
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta\Krebsreg
+%%OUTFILE=ITKR_%%ODATE._%%GKZ8._D_KREBSTOD_NRW%%GKZ8..csv
+%%COUNT=N
+
+
+
+
+

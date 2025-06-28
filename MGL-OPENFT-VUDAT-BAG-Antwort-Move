@@ -1,0 +1,62 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* MGL-OPENFT-VUDAT-BAG-Antwort-Move
+* 
+* 
+*********************************************************** 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* INDIR ist der Ordner in den das BAG die Antworten schreibt.
+* OUTDIR ist der entsprechende Mandantenordner. 
+* RKN greift auf diesen Ordner mit dem System ALVA über eine FTP Freigabe zu 
+*     und holt die Daten selbsständig ab. 
+*
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-OpenFT-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* OpenFT Partner / Anschluss 
+* BAG, BZR,LZPD..... 
+%%ANSCHLUSS=BAG
+
+* Emfangen oder Senden
+%%RICHTUNG=EMPFANGEN
+
+* Mandanten 
+* Eingabe Directory 
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\empfangen\BAG
+
+* Datei Auswahl
+%%INCLUDE=05-030_*.xml
+%%EXCLUDE="-"
+
+* Mandanten
+* Ausgabe Directory 
+%%OUTDIR=\\vfmgapps\apps\Verfahren\ALVA\openFT\Eingang
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\empfangen\BAG\%%GEM3
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.04.2015  13:33:04  zv173x2 BAG hat eine FTP Zugang 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

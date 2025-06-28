@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-SOZ.MZ-ANSI2UTF8
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+* Eingabe HOST-Daten Bereich  
+%%SEARCH_DIR=\\srv03.asp.rzne.de\ftp$\av\soz\MZ
+* Daten-Datei Suchmaske
+%%SEARCH=500.SOZ.SRZ.*-SEPAMZ.*_CT_%%$ODATE
+
+
+* Ausgabe als UTF8 
+*  UTF wird in der Bat angehängt
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\soz\MZ
+
+* Hier ist noch nicht entschieden,
+* welches Programm zum Einsatz kommen soll
+**%%PROGRAMM=ANSI2UTF8.exe
+%%PROGRAMM=ASC2UTF8.exe
+**%%PROGRAMM=Programm-nicht-eingetragen-Webler-Kammann?
+%%TEST=N
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragsbeschreibung\XXX-SOZ.MZ-TravicLink.txt
+* ------------------------------------------------------------------

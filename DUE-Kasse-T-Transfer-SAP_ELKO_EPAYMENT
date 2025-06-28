@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Kasse-T-Transfer-SAP_ELKO_EPAYMENT
+*
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\Transfer_SAP_ELKO_EPAY.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_400.cred" -InDir "SST/IFP/400/ELKOS" -InFile "ELKO_EPAY_*.TXT" -OutDir \\vfdusalt\21\amt21\Themen\Kontoauszuege -DoneDir "Verarbeitet"
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "\\vfcache\finanz\Daten\PS\Scripts\Transfer\Transfer_SAP_ELKO_EPAY.ps1" -Credentials "\\vfcache\finanz\Daten\PS\Credentials\sapftpitk_sapitk_krzn_de_CTM_IFP_400.cred" -InDir "SST/IFP/400/ELKOS" -InFile "ELKO_EPAY_*.TXT" -OutDir \\vfdusalt\21\amt21\Themen\Kontoauszuege -DoneDir "Verarbeitet" 

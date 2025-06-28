@@ -1,0 +1,21 @@
+* *************************************************************
+* Table Variablen          
+* ITK-Change-Year-5-Files
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%FILE=\\msbmcc03\ctm_av\Parm\###-Duesseldorf_Geburtsjahrgaenge
+%%FILE2=\\msbmcc03\ctm_av\Parm\###-Schulpflicht-Wegzuege
+%%FILE3=\\msbmcc03\ctm_av\Parm\###-Schulpflicht-Zuzuege-Primarstufe
+%%FILE4=\\msbmcc03\ctm_av\Parm\###-Schulpflicht-Zuzuege-Sek1
+%%FILE5=\\msbmcc03\ctm_av\Parm\###-Schulpflicht-Zuzuege-Sek2
+
+%%COMMAND=powershell.exe -executionpolicy bypass -File \\msbmcc03\ctm_av\Bin\PowerShell\AS\Change-YEAR.ps1 -Files %%FILE,%%FILE2,%%FILE3,%%FILE4,%%FILE5
+
+%%MAIL01=produktions-steuerung@itk-rheinland.de; alexander.schoenfeld@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte unbedingt heute beheben, Member wird morgen benoetigt!!!

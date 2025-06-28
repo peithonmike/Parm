@@ -1,0 +1,25 @@
+* --------------------------------------------------------------------------------
+*      Job : NEU-EVENTIM-InputDB
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+*
+* Config-Datei
+%%CONFIG= 
+* Input-Datei
+%%INPUT=
+* SQLSTATEMENT
+%%SQLSTATE=-e "source \\srv03.asp.rzne.de\qaspkdvz$\daten\Apps\ftp\av\Eventim\eventim_data.sql"
+
+* OUTFILE
+%%OUTFILE=
+* JAVA
+%%JAR=

@@ -1,0 +1,87 @@
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  
+*
+* muss auf Anforderung an Prod angepasst werden
+*
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-SAP-Stammdaten-SapVendor-abholen
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+*---------------------------------------------------------------
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=nicht-verwendet
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=nicht-verwendet
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=nicht-verwendet
+%%INCLUDE=nicht-verwendet
+
+
+* PROD    Eingabe
+%%IN_SITE=ISN-SAP-KRZN-CTM_IFP_120
+
+
+* Test    Eingabe
+%%IN_SITE=ISN-SAP-KRZN-CTM_IFQ_124
+
+* Datei
+%%INFILE=UL__ITKR_ZBF_LFBI_V_ULTIMO.csv
+
+
+%%REMOTE_OUTDIR=SapVendor
+
+
+* Ausgabe
+%%OUT_SITE=ISN-ULTIMO-PUT
+%%FILE=UL__ITKR_ZBF_LFBI_V_ULTIMO.csv
+
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Kopieren   von %%IN_SITE %%INFILE nach %%OUT_SITE %%REMOTE_OUTDIR 
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%IN_SITE
+%%Z05=dir
+%%Z06=get %%FILE  C:\TEMP\
+*%%Z07=?
+*%%Z08=? 
+*%%Z09=close
+*%%Z10=exit
+
+
+%%Z11=option batch abort
+%%Z12=option confirm off
+%%Z13=option echo off
+%%Z14=open %%OUT_SITE
+%%Z15=CD %%REMOTE_OUTDIR
+%%z16=dir
+%%Z18=put  C:\TEMP\%%FILE 
+%%z19=dir
+
+%%Z20=close
+%%Z21=exit
+
+
+%%TEST=N
+%%DEBUG=N
+
+

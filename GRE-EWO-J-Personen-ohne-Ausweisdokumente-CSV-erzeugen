@@ -1,0 +1,65 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-EWO-J-Personen-ohne-Ausweisdokumente-CSV-erzeugen
+* CSV Dateien erzeugen
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+%%AUFTRAGGEBER=Michael Peiffer, 02181 / 608 - 3399, Michael.Peiffer@Grevenbroich.de
+
+
+
+%%Server=mssql04.itk.local
+%%DB=e01_gre
+%%U=e01_jasper
+%%P=jasperav
+
+*%%P=siehe-Secret-Server
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+
+%%SQL_FILE=\\msbmcc03\CTM_AV\OK.EWO\GRE\Personen-ohne-Ausweisdokumente-jaehrlich\qry_person_kein_Dokument.sql
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+*%%VON=nicht-verwendet
+*%%BIS=nicht-verwendet
+
+
+
+* Name der Ausgabe Directory und Datei
+
+%%OUTDIR=\\msbmcc03\CTM_AV\OK.EWO\GRE\Personen-ohne-Ausweisdokumente-jaehrlich
+%%FILENAME=SQLCMD.csv
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+**%%DOCVORLAGE=\\msbmcc03\CTM_AV\OK.EWO\GRE\Hinweis-PA-in-6-Wochen\05162008_Serienbrief_16_Jahre_dokumenthinweis.dotx
+
+**%%PDFOUT=\msbmcc03\CTM_AV\OK.EWO\GRE\Hinweis-PA-in-6-Wochen\05162008_Serienbrief_16_Jahre_dokumenthinweis.pdf
+ 
+%%TEST=N
+%%DEBUG=N 
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-SqlCmd-exe.ps1
+ 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    19.05.2023  12:00:00  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

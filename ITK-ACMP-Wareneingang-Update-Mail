@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-ACMP-Wareneingang-Update-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%AUFTRAGGEBER=Olaf Barke
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Absender
+%%EMAIL-F=Produktions-Steuerung@ITK-Rheinland
+
+*%%EMAIL-M=Bitte die LOG-Datei beachten
+
+
+* Message File
+%%EMAIL_A=\\msbmcc01\c$\temp\ITK-ACMP-Wareneingang-Update-2.txt
+
+
+
+
+* Empfänger (durch Semikolon getrennt)  
+        
+%%EMAIL_T=Sascha.Berktin@itk-rheinland.de;Martina.Keil@itk-rheinland.de;Daniela.Polarz@itk-rheinland.de
+
+* Subject
+%%EMAIL_U=Job-Nachricht: Der Job  "ITK-ACMP-Wareneingang-Update" vom %%$ODATE ist fehlerhaft!!
+
+
+* Kopie
+*%%EMAIL-CC=
+
+
+
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.11.2021  09:50:43  zv173x2 neu Daniela.Polarz@itk-rheinland.de
+*    23.06.2020  09:54:57  zv173x2 %%AUFTRAGGEBER=S.Berli
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,26 @@
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Kaarst
+
+%%MAIL_NOTOK=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=Übergabe Kassensätze vom SAP nach PTV-Server abgebrochen
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte ueberpruefen.
+
+*%%SYSOUT=\\msbmcc03\ctm_av\Sysout\%%$OYEAR\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%CLIENT=IFP
+%%MANDANT=500
+%%irFilePattern=SOPA
+**ptvProject=SAP_SOPMG-IR
+%%ptvProject=SAP_IMPORT\SOPMG_IXXX
+
+
+%%COMMAND=C:\FinKonv\PtvWorker-IR.bat %%CLIENT %%MANDANT %%irFilePattern %%ptvProject
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\KAA-SAPnachPTV-T.pdf
+* ------------------------------------------------------------------

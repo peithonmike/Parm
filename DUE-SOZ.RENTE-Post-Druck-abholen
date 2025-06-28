@@ -1,0 +1,75 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.RENTE-Post-Druck-abholen
+* 
+* 
+*********************************************************** 
+ 
+ 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SOZ-DAT
+
+%%SOZ_DAT_YYMM=%%OYEAR.%%OMONTH
+%%SOZ_DAT=%%JJJJ_MM_P1_%%$ODATE
+%%SOZ_DAT=%%SOZ_DAT.%%MM_P1_%%$ODATE
+
+* ist Grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+
+* SERVER_TEXT IP P und U kommen meist aus IP-UP Member
+*%%SERVER_TEXT
+*%%IP
+*%%P
+*%%U
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung
+%%WINSCP_AKTION=R E N T E N A U S K U N F T S - V E R F A H R E N
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+*%%REMOTE_INDIR=RENTEN/%%SOZ_DAT_YYMM./POST
+%%REMOTE_INDIR=RENTEN/%%SOZ_DAT_YYMM.-post
+
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=POST-*20%%SOZ_DAT_YYMM.*.pdf
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\vfcache\av\Daten\SOZ\SOZ-RENTEN\%%$OYEAR.\DUE\%%SOZ_DAT_YYMM.\POST
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get %%INCLUDE %%OUTDIR.\
+%%Z07=close
+%%Z08=exit 
+*%%Z09=?
+*%%Z10=?
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.06.2017  08:59:07  zv173x2 auch hier jedes Jahr einen anderen Ordner (achtung leinschrift)
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

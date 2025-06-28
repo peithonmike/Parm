@@ -1,0 +1,12 @@
+* JASPER Report 
+* LIBMEMSYM
+* Eingabe f\'fcr Familienbrief Neuss
+* 
+*
+%%VON=01.%%MM_M1_%%$ODATE...%%JJJJ_MM_M1_%%$ODATE
+%%BIS=%%LD_MM_M1_%%$ODATE...%%MM_M1_%%$ODATE...%%JJJJ_MM_M1_%%$ODATE
+%%BATFILE=Familienbrief.bat
+%%REPORT=/Reports/CTM/NEU-Familienbrief
+%%EXT=XLS 
+%%OUTFILE=C:\\CTM_AV\\Jasper-Output\\NEU-Familienbrief_Etiketten_%%VON-%%BIS..%%EXT
+*

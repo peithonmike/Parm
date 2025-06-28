@@ -1,0 +1,46 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : NEU                                                                  *
+***********************************************************************************
+*  Jobname     : NEU-Abgleich-§90b-AufenthG
+*  Description : Abgleich-§90b-AufenthG
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\AVON
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%AVON_STICHTAG *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=8101-E01U0000
+*
+%%OKEWO_NR=P8101
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird eine Mail versendet(nur wenn der Job OK ist)
+%%SENDMAIL=J
+%%EMAIL-U=Abgleich-§90b-AufenthG %%STADT %%ORT Stichtag %%AVON_STICHTAG  ist gelaufen
+%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+  
+* 
+*  Beschreibung   
+%%DESC=Abgleich-§90b-AufenthG
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U048#PARAM_LISTE.TMP#GKB=1ARCHIV_DATUM=%%AVON_STICHTAG.RICHTUNG=AORDNER=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\OKEWO\okprg\okewo_neu\divFELD_DELIM=;#V_UZ331_LISTE.E01DUMMY#$$

@@ -1,0 +1,14 @@
+*
+* LIBMEMSYM für JASPER-Auftrag NEU-Vermerke
+* 
+*
+* Ausrechnen einer Variablen ODATE - 14 Tage
+
+%%datum_von=%%TTMMJJJJP_TT_M14_%%$ODATE
+*
+*
+*
+* Ausrechnen einer Variablen ODATE - 1 Tag
+*
+
+%%datum_bis=%%TTMMJJJJP_TT_M1_%%$ODATE

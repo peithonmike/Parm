@@ -1,0 +1,41 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* MGL-OPENFT-KBA-Anfragen-Move
+* 
+* 
+*********************************************************** 
+%%DESCRIPTION=Anfragedateien aus Anwender-Verzeichnis nach OpenFT kopieren
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Anwender Eingabe Verzeichnis
+%%INDIR=\\swvfilesever01.it-nr.de\verfahren$\PMOWI\Produktion\Daten_zum_KBA
+%%OUTDIR_PROCESSED=\\swvfilesever01.it-nr.de\verfahren$\PMOWI\Produktion\Daten_zum_KBA\erledigt
+
+ 
+%%INCLUDE=???
+
+*OpenFT Sendeverzeichnis
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\BAG\%%GEM
+
+%%TEST=J
+%%DEBUG=J
+
+
+
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     08.05.2017  13:37:36  zv173x2  neu erster Lauf??
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+

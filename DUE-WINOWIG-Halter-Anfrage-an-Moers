@@ -1,0 +1,44 @@
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-FAER-Anfrage-an-Moers
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Halter-Anfrage-an-Moers
+
+
+%%AUFTRAGGEBER=A.Hillebrands
+
+
+*---------------------------------------------------------------
+* Local Eingabe Directory der WinSCP Aktion
+* Test 
+%%INDIR=\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\ausgang\kba
+%%INCLUDE=anfrage_%%KBA_NR.*
+
+
+%%SITE=%%GEM3.-WINOWIG-KRZN
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt\%%GEM3
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\c$\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Put-Filelist.ps1
+
+
+%%TEST=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.05.2019  10:37:33  zv173x2 neu unter winscp
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

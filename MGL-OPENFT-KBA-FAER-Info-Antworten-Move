@@ -1,0 +1,67 @@
+
+
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  
+*  Umstellung von PMOWI nach WINOWIG
+*
+*  muss auf Anforderung angepasst werden
+*
+* 
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  
+*  %%OUTDIR=\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\eingang\kba\
+
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-OPENFT-KBA-FAER-Info-Antworten-Move
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%DESCRIPTION=Antworten auf FAER Anfrage und Antworten auf FAER Mitteilungen 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* OpenFT Partner / Anschluss 
+* BAG, BZR,LZPD..... 
+%%ANSCHLUSS=KBA
+
+* SENDEN oder EMPFANGEN 
+%%RICHTUNG=HOLEN
+
+* Eingabe Directory 
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL
+%%INCLUDE=*faerm*
+%%EXCLUDE="-"
+* Ausgabe Directory
+%%OUTDIR=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_vom_KBA
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL\erledigt
+%%OUTFILE_PROCESSED=%%OUTFILE
+
+%%DEBUG=N
+%%TEST=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.07.2019  12:47:38  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,16 @@
+***********************************************************************************
+* Musterjob zum abholen von Daten per FTP
+*********************************************************************************** 
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-?????
+
+
+%%SYSIN_BAT=\\msbmcc03\ctm_av\BIN\BAT\?????-GET.BAT
+%%NACH_BAT =\\msbmcc03\ctm_av\BIN\BAT\?????-NACH.BAT
+
+
+%%TEST=J
+ 

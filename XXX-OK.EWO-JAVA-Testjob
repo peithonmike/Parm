@@ -1,0 +1,11 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-OK.EWO-JAVA-Testjob
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\grom

@@ -1,0 +1,13 @@
+*
+* LIBMEMSYM
+* Aufruf   ermittelten kompletten Monataszeitraum 6 Monate zurück
+*
+*
+*
+* TYP 07   
+* Lauf findet Mitte des Monats statt und wertet den 6.Monat zurück aus
+* 
+
+
+%%datum_von           =01.%%MM_M7_%%$ODATE...%%JJJJ_MM_M7_%%$ODATE
+%%datum_bis           =%%LD_MM_M7_%%$ODATE...%%MM_M7_%%$ODATE...%%JJJJ_MM_M7_%%$ODATE 

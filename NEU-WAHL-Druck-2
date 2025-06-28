@@ -1,0 +1,45 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* NEU-WAHL-Druck-2
+* 
+* 
+*********************************************************** 
+*********************************************************** 
+* Dieser Job sendet nach Confirm, 
+* den Output an den Printserver und verschiebt 
+* nach !!!!   printed2   !!!!  
+*********************************************************** 
+
+
+
+ 
+*********************************************************** 
+* Output wurde manuell über OKEWO als PDF erzeugt
+* und auf dem Printserver abgelegt.
+* da Neuss eine copy benötigt wird der Output aus dem printed Ordner
+* nochmals an den Printserver gesendet 
+* I.Franz
+* M.Smits
+* B.Lieven
+* N.N.
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO-WAHL
+
+%%INDIR=%%OUTDIR_PROCESSED
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\printed2
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+

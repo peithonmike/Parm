@@ -1,0 +1,11 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-UMWELT-SICH-mapinfoP
+* 
+* Actung Job sichert nach dem neu alt uralt Prinzip.
+* kein Restart ohne Absprache !!
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\UMWELT
+%%SYSOUT=\\msbmcc03\ctm_av\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%EMAIL_CC=%%EMAIL_CC;volker.koenig@itk-rheinland.de

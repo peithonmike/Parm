@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-WINOWIG-Soll-an-PTV
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\WINOWIG
+%%DESCRIPTION=Solldaten an den PTV Server senden
+
+
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\ausgang\soll
+%%SEARCH=WiNOWIG_Uebsoll_XML_%%$ODATE._*.xml
+%%SEARCH=WiNOWIG_Uebsoll_XML_*.xml
+
+%%MOVE_ORDNER=verarbeitet
+
+
+
+%%OUTDIR=\\msptv\PTV-Projekte\WOWIGHNK\inDir
+
+
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+* Nur Anlist der gesuchtren Dateien
+%%TEST=N
+
+* TESTAUSGABE
+*%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\test\ptv-projekte\WOWIGSAP\inDir 
+* Diese Mail benötigt nur die AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    08.04.2014  10:18:42  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

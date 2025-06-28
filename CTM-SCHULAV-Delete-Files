@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-SCHULAV-Delete-Files
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\vfdusalt\40\Amt40\Themen\Statistik\Schulen\Logineo-Email-Adressen-nach-Straﬂen\2019-04
+  
+%%INCLUDE=??????.csv
+%%EXCLUDE=DUE-SCHUL-Ausw-Quartal-Logineo-Email-Adressen-nach-Strassen_2019-04.CSV
+%%TEST=N

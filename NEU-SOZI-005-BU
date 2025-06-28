@@ -1,0 +1,63 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZI-005-BU
+* 
+* 
+*********************************************************** 
+ 
+%%ONLY_BUENDEL=N
+%%FORCE_PDF_SAMMELDIR_PROCESSED=J
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL
+ 
+
+* Die Cover müssen je nach Empfänger angegeben werden
+* alle anderen Angaben sollten aus dem Jobnamen lesbar sein.....   siehe Member: BUENDEL
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\AAA-NEU-EZ-%%SOZ_SACHG.-H.Kallen.pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\ZZZ-NEU-EZ-%%SOZ_SACHG.-H.Kallen.pdf
+
+
+* ---------------------------------------------------------------
+* PDF_INDIR
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* ---------------------------------------------------------------
+%%PDF_INDIR=\\srv03.asp.rzne.de\ftp$\av\Sozitest
+%%PDF_MASK=*ez-%%SOZ_SACHG.*.pdf
+* ---------------------------------------------------------------
+* PDF_SAMMELDIR
+* Hier stehen die PDF die zu einem Output gebündelt werden sollen.
+* Im Idealfall mit Front und Backcover
+* da wir Front und Backcover mitgeben, werden diese auch mitgebündelt
+*
+* Leere Dateien werden nicht kopiert sondern nur nach erledigt verschoben 
+* ---------------------------------------------------------------
+%%PDF_SAMMELDIR          =\\srv03.asp.rzne.de\ftp$\av\Sozitest\Druckdaten\%%$OYEAR.\EZ\%%GEM3.-%%$ODATE.\%%SOZ_SACHG
+%%PDF_SAMMELDIR_PROCESSED=\\srv03.asp.rzne.de\ftp$\av\Sozitest\Druckdaten\%%$OYEAR.\erledigt\EZ\%%$ODATE
+* ---------------------------------------------------------------
+* PDF_OUTDIR
+* dahin kommt das erstellte Bündel
+* ---------------------------------------------------------------
+%%PDF_OUTDIR=\\srv03.asp.rzne.de\ftp$\av\Sozitest\Druckdaten\%%$OYEAR.\BUENDEL\EZ-%%$ODATE
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+* ---------------------------------------------------------------
+%%PDF_FILENAME=%%GEM3.-EZ-%%SOZ_SACHG.-%%$ODATE.-BU.PDF
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden alle Variablen angezeigt
+%%DEBUG=J
+
+* Bei Test =J werden nur die Variablen geprüft
+%%TEST=J
+
+
+
+
+

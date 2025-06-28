@@ -1,0 +1,51 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : KOR                                                                  *
+***********************************************************************************
+*  Jobname     : KOR-DTA-WuS-PDF
+*  Description : DTA-WuS-PDF
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###VLK-MONAT_01
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%VON - %%BIS *** %%ID.-%%RUNNR
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=6092-E01U0000
+*
+%%OKEWO_NR=P6092
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  Liste1 
+%%LISTE1=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..DBL
+%%LISTE1_ACTION=N
+  
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=DTA-WuS-PDF
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U22803#UEB_N.E01DUMMY#RES5-#DATUM1_N.E01DUMMY#%%VON#DATUM2_N.E01DUMMY#%%BIS#MEDIUM_N.E01DUMMY#PAPIER#GKB.E01E300#1#B_LAND.E01DUMMY#NW#V_UZ331_LISTE.E01DUMMY#$$

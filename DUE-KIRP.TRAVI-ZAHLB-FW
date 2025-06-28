@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-KIRP.TRAVI-ZAHLB-FW
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+$$INCLUDE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\TRAVIC-LINK-%%$OYEAR..csv
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\KIRP-TRAVI-ZAHLB.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\TRAVICLINK-Dateinamen.pdf
+
+
+* wird im FW Script direkt angegeben  
+*%%FW_DIR=\\srv03.asp.rzne.de\ftp$\av\TravicLink\KIRP-CONVERT
+*%%FW_SEARCH=000.IRP.SRZ.LHD-XML21.ZAHLB_*_*
+
+ 
+* ------------------------------------------------------------------

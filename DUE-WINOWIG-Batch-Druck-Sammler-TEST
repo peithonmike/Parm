@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-Batch-Druck-Sammler-TEST
+* 
+* 
+*********************************************************** 
+ 
+*%%SERVER=MSDPIOM01
+*%%DRUCKER=DFZSDST
+
+*MSDPIOM01 ( IP: 10.100.119.190 ).
+
+
+%%DESCRIPTION=Test Druckdaten 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\winowig\ftp\ausgang\druckdateien\%%WINOWIG_TREIBER.\P%%$ODATE
+
+%%NEWNAME=__SRV03.ASP.RZNE.DE_WOW$
+
+%%SEARCH=*.prn
+
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\WINOWIG\Test
+
+%%TEST=N
+* MAIL nur für AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.09.2016  12:09:37  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

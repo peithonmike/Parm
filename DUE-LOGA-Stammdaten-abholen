@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-Stammdaten-abholen
+* 
+* 
+*********************************************************** 
+ 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-PROT
+
+**INDIR=\\10.50.34.68\loga\logad\dtscoutb
+%%INDIR=\\10.50.34.68\loga\IP-Output\ITK-Rheinland\Scout
+**NETUSE_PATH=\\10.50.34.68\loga\logad\dtscoutb
+%%NETUSE_PATH=\\10.50.34.68\loga\IP-Output\ITK-Rheinland\Scout
+%%OUTDIR=\\srv03\qaspkdvz$\daten\apps\ftp\av\LOGA\DUE\Stammdaten\
+%%INCLUDE=*Personalschnittstelle*.csv
+%%EXCLUDE="-"
+%%LAUFWERK=Y:
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.05.2016  12:57:32  neuer Job nach der Änderung 'Abholen aus der neuen Citrix-Farm' 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

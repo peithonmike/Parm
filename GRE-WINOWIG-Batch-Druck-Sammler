@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-WINOWIG-Batch-Druck-Sammler
+* 
+* 
+*********************************************************** 
+
+
+
+%%DESCRIPTION=Druckdaten aus Verfahrensordner in AV Druck-Queue kopieren
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+%%SEARCH_DIR=%%WINOWIG_DRUCK_DIR.\P%%$ODATE
+%%SEARCH=*.PRN
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\WINOWIG\druckdateien
+%%TEST=N
+
+* Diese Mail benötigt nur die AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de

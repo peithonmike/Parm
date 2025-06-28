@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-LOGA-MSP-EGM-Beamte-1860-6025-BU
+* Nur Versorgungsempfänger 02 
+* 01 wird nicht gedruckt aber in MSP eingespielt 
+*********************************************************** 
+
+
+ 
+%%ART=NBE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-LOGA-ELSTER-%%ART
+
+%%DESCRIPTION= ITK Beamte 02 werden gedruckt 01 werden nicht mehr gedruckt
+
+
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\Elster\MSP\ITK\BUENDEL
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\Elster\MSP\GEM\an-Druckerei-Neuss
+
+%%OUTDIR_PROCESSED=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\Elster\MSP\ITK\BUENDEL\kopiert
+* Muster  KN_1840_1840_03_6025_C1.pdf
+
+%%INCLUDE=KN_*%%HMAN.*02_6025*.pdf
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.02.2021  11:37:21  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

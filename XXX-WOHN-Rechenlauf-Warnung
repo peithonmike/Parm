@@ -1,0 +1,44 @@
+
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* XXX-WOHN-Rechenlauf-Warnung
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+*LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WOHN-WARNING-MAILADR
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Empfänger (durch Semikolon getrennt)  
+%%EMAIL_T=marita.dressel@stadt.neuss.de;roswitha.wypukol@juechen.de;Produktions-Steuerung@itk-rheinland.de;frank.huesselmann@juechen.de;Kornelia.Kallienke@Meerbusch.DE;Michael.Hurtz@itk-Rheinland.de;susanne.garding-maak@rommerskirchen.de;dominik.clemens@stadt-dormagen.de;Uwe.Schultz@grevenbroich.de;christine.lenz@stadt-dormagen.de;Heike.Boese@Kaarst.de;Bettina.Gjeli@stadt-dormagen.de;Petra.Bischof@grevenbroich.de;Annerose.Boehm-Weyerstrass@juechen.de;Angela.Otto@Stadt.Neuss.de;Oliver.Emmel@itk-rheinland.de;Martina.Bruysten@Meerbusch.DE;Marina.Thiele@juechen.de;Svenja.Loth@stadt-dormagen.de;Doris.Mils@stadt-dormagen.de;Nicole.Thelen@grevenbroich.de;jennifer.schmitz@korschenbroich.de;petra.koehnen@korschenbroich.de;Melanie.winter@kaarst.de;Dieter.Guderley@itk-rheinland.de;Oliver.Emmel@itk-rheinland.de;Rudolf.Dressel@itk-rheinland.de;Christine.Baude@stadt-dormagen.DE;Rasim.Dzihanovic@grevenbroich.de
+
+* %%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+*Absender %%EMAIL_F=Produktions-Steuerung@itk-rheinland.de
+
+%%EMAIL_U=Terminwarnung Wohngeld WGPlus %%ODATE_P
+%%EMAIL_O=\\msbmcc03\ctm_av\Parm\Mail-Messages\WOHN-WARNMELDUNG.txt
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+*   ********************************************************************************** 
+*   -- Änderungen ------------------------------------------------------------------- 
+*    11.11.2021  10:49:06  zv173x2 raus Petra.Frangen@Meerbusch.DE;
+*   30.08.2021                          Stephanie.Aschert@grevenbroich.de/;Hartmut.Deussen@grevenbroich.de /Stefan.Holzum@itk-Rheinland.de  entfernt
+*   27.03.2020  07:28:27	zv173x2 hela feuster roki entfernt
+*   24.07.2017  08:54:02	zv173x2 Fabian Brüster Dagmar Reitz Marion Schroeter entfernt
+*   20.07.2017  09:04:54	zv173x2 Prod
+*   11.05.2017  18:04:31	zv173x2 Schippers Gabriele entfern nicht mehr im Verzeichnis
+*	08.07.2020	10:26:00	zvaa241	roswitha.lockingen@juechen.de auf roswitha.wypukol@juechen.de geändert
+*   --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-UMWELT-Pegel-Online
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+ 
+
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\DUE-Online-aktuelle-Messstellen.sql
+%%SQL_FILE=\\msbmcc03\ctm_av\Parm\SQL\DUE-Online-aktuelle-Messstellen.sql
+%%SERVER=MSSQLTEST01.itk.local
+
+%%DB=grundwasser_due_test
+
+
+%%U=grundwasser_due_test
+
+*%%P=siehe-Secret-Server
+%%P=E8N05thR#4QL
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+* Name der Ausgabe Directory und Datei
+
+%%OUTDIR=\\msbmcc01\ctm_av\temp
+%%FILENAME=%%JOBNAME..csv
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+ 
+%%TEST=N
+%%DEBUG=N
+
+
+*Server: MSSQLTEST01.itk.local
+*Port:1433
+*Datenbankname: grundwasser_due_test
+*Username: grundwasser_due_test
+*Passwort: E8N05thR#4QL
+
+
+
+

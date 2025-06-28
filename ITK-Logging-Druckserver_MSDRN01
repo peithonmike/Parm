@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+%%APPLICATION=ITK-System
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+%%TEST=nein
+%%LogPfad=\\vfitk\Daten\Daten\FB1\SB1-3\SB1-3-3\Outputmanagement\Druckserver\EventLogs\
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -file \\msbmcc03\CTM_AV\Bin\Powershell\ITK-Logging-Druckserver.ps1

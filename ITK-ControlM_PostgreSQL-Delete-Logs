@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-ControlM_PostgreSQL-Delete-Logs
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%date=%%CALCDATE %%ODATE -7
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - NOTOK
+%%TEXT_NOTOK=Das Bereinigen der ControlM-DB-Logs ist abgebrochen.

@@ -1,0 +1,39 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Kaarst
+***********************************************************************************
+*  Jobname     : KAA-WOHN.LDS-Postfach-Mail
+*  APPLICATION : WOHN.LDS
+***********************************************************************************
+*********************************************************************************** 
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###WOHN-POSTFACH-GET
+
+%%TEST=N
+*  Konrolle als Blindkopie 
+%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Log\ErgebnisLog\%%GEM3.-WOHN-LDS-POSTFACH-%%$OYEAR..csv
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\VLK\%%GEM3.-WOHN-POSTFACH-MAIL-ADR.vlk
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\EMail-Parameter.txt
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\StandardMessageWOHN-POSTFACH.txt
+
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.12.2014  09:18:16  zv173x2 raus melanie.winter@kaarst.de
+*    24.08.2011  14:14:25  ZV173X2 rein Renate.Hackenberg@kaarst.de
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

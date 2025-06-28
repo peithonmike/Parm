@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Auslesen-AD_TYPO3
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+* Parameter für Powershell Programm
+%%COMMAND=powershell.exe -file \\msbmcc03\ctm_av\bin\powershell\DUE-Auslesen-AD_TYPO3.ps1 -GroupName "GG-LD-TYPO3-ALLE"
+
+ 
+%%MAIL_NOTOK=Henning.Henze@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen.
+%%TEXT_NOTOK=Bitte SYSOUT überprüfen.
+
+%%MAIL_OK=redaktion@duesseldorf.de;typo3@itk-rheinland.de;Henning.Henze@itk-rheinland.de
+%%BETREFF_OK=Auswertung der Gruppen GG-LD-TYPO3
+%%TEXT_OK=In der Anlage erhalten Sie die Benutzer von allen TYPO3-Gruppen.

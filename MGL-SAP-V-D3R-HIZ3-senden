@@ -1,0 +1,36 @@
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Upload nach KRZN SAP
+
+
+%%AUFTRAGGEBER=M.Sicha
+
+
+*---------------------------------------------------------------
+* Local Eingabe Directory der WinSCP Aktion
+* Test 
+%%INDIR=\\vfmgapps\apps\Verfahren\SAP-V-D3R\PRS710\HIZ3\
+
+%%INCLUDE=*.HIZ3
+
+
+%%SITE=MGL-SAP-V-D3R-HIZ3
+%%OUTDIR_PROCESSED=%%INDIR.\Archiv
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+

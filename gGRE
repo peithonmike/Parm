@@ -1,0 +1,57 @@
+* *************************************************************
+* Globale Variablen          
+* Stadt Grevenbroich
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%STADT  =Stadt
+%%ORT    =Grevenbroich
+%%GEM    =GR
+%%GEM3   =GRE
+%%GKZ    =300
+%%GKZ8   =05162008
+%%GKZ8_7_2=%%SUBSTRING  %%GKZ8 7 2
+
+* OK.EWO Ortsnummer
+*  02.11.2015
+%%E01E200_ORTNR=33
+
+* FTP-Ordner
+%%ftp_lw = qaspgr$
+
+
+*
+* Behördennummer für den Datenaustausch über OpenFT mit dem Bundesamt für Justiz (BfJ)
+*
+* Stadt Grevenbroich
+%%BFJ_ID_OKEWO=R8033
+
+* Stadt Grevenbroich-Ausländerbehörde -
+%%BFJ_ID_OKVISA=R8033A
+
+*  -MIGEWA- 
+%%BFJ_ID_MIGEWA=wird-nicht-benutzt
+
+*
+* KSU2000 OKEWO-Abgleich
+*
+%%KSU_NR=300
+%%KSU_DIR=ksu2000_krzn
+
+
+%%WINOWIG_GKZ=300
+%%MD1=GRE
+
+%%MD2=gr
+%%MD3=gre
+%%MD4="Stadt Grevenbroich"
+%%MD5="Stadt Grevenbroich Test"
+%%FW_MesoDatei=\\srv03.asp.rzne.de\qasp%%MD2.$\Daten\Apps\KSU\Wohnungswesen\EWO_ABGLEICH\EWO_Daten\ewo_%%MD2..txt
+%%FW_ImportDatei=\\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR\kasse\%%KSU_NR._*.txt
+%%CTMFW=ctmfw -input c:\CTM_AV\Parm\KSU2000_FW_OKEWO_%%MD3..txt
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.03.2013  22:40:25  zv173x2 winowig gkz
+*    18.02.2011  10:45:00  ZV173X2 Blankzeilen entferntwg CTM BUG
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

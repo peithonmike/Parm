@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA-DN-Sonderlisten_3-To-Printer
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory in der Form T:\Tausch ITK\Milka\Druck 2021-09
+*%%INDIR=\\msaip01\swablage$\Tausch ITK\Milka\Druck %%$OYEAR.-%%OMONTH Angestellte
+*%%INDIR=\\msaip01\swablage$\Tausch ITK\Milka\Druck %%$OYEAR.-%%OMONTH Beschäftigte
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NAR\DN\Sonderlisten
+
+* Datei Auswahl
+%%INCLUDE=*_18*_3*.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\msprintff01\d$\R18gelocht
+%%PREFIX=%%GEM3.-
+ 
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+%%TEST=N
+%%DEBUG=N
+*   ********************************************************************************** 
+*    -- Änderungen -------------------------------------------------------------------
+*    17.11.2021  11:16:09  zv173x2 Daten werden ab Monat 12.2021 auf den Printserver verschoben
+*                                  und von da aus zum DruckSErver P&I zum drucken kopiert  
+*    22.09.2021  14:26:50  zv173x2 neu läuft ab Abrechnung 10.2021 regelmässig
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

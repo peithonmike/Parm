@@ -1,0 +1,42 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant :    alle                                                              *
+***********************************************************************************
+*  APPLICATION : VUDAT.OPENFT 
+*  Description : BAG-Anfragen
+***********************************************************************************
+
+***********************************************************************************
+* Verschieben Anfragen aus dem Mandantenverzeichnis #
+* in das Sendeverzeichnis auf dem OpenFT Server
+***********************************************************************************
+
+
+* BFJ_ID des Mandanten übernehmen 
+* wird bei der Anfrage nur nachrichtlich verwendet
+%%BFJ_ID=%%BFJ_ID_BAG
+
+
+%%RICHTUNG=AnfrageMove
+
+
+* Input_dir ist die Mandanten-Directory, in der die Anfrage liegt
+* wird im Member MIGEWA_%%GEM3 definiert
+%%INPUT_DIR=%%GEM_BAG_DIR_ANFRAGE
+
+
+
+* Output_dir ist die Sendedirectory auf dem OpenFT Server  
+* wird im Member VUDAT definiert
+%%OUTPUT_DIR=%%BAG_DIR_ANFRAGE
+ 
+
+
+
+
+%%SYSOUT          =%%OPENFT_SYSOUT
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+*
+
+

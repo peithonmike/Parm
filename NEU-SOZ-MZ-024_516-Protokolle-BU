@@ -1,0 +1,95 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ-MZ-024_516-Protokolle-BU
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************************************
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-SOZ-MZ
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-SOZ-MZ-%%GEM3.-SACHG
+
+
+
+* ---------------------------------------------------------------
+* PDF_MASK Auswahl Maske 	Include Exclude
+* ---------------------------------------------------------------
+%%INCLUDE=%%SOZ_MZ_PROT_INCLUDE
+%%EXCLUDE=%%SOZ_MZ_PROT_EXCLUDE
+
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+* ---------------------------------------------------------------
+%%OUTFILE=%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-%%SOZ_SACHG.-Protokolle-%%SOZ_DAT.-BU.PDF
+
+
+
+
+* Die Cover müssen je nach Empfänger angegeben werden
+* alle anderen Angaben sollten aus dem Jobnamen lesbar sein.....   siehe Member: BUENDEL
+%%PDF_FRONTCOVER =\\msbmcc03\ctm_av\PDF-COVER\SOZ\2-seitig\AAA-%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-%%SOZ_SACHG.-Protokolle.pdf
+%%PDF_BACKCOVER  =\\msbmcc03\ctm_av\PDF-COVER\SOZ\2-seitig\ZZZ-%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-%%SOZ_SACHG.-Protokolle.pdf
+
+
+** Trennblatt duplex 
+%%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\2-seitig\Trennblatt.pdf
+%%KOPIE01=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\2-seitig\Kopie01.pdf 
+%%KOPIE02=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\2-seitig\Kopie02.pdf 
+
+
+* ---------------------------------------------------------------
+* ANZAHL
+* Anzahl der Ausdrucke 
+* ---------------------------------------------------------------
+%%ANZAHL=%%SOZ_MZ_PROT_ANZAHL
+%%COPYCOUNT=0
+
+* ---------------------------------------------------------------
+* Hotfolder P&I
+* ---------------------------------------------------------------
+%%PRINTER_QUEUE=%%SOZ_MZ_PROT_DRUCKER
+
+
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden  zusätzliche Variablenwerte angezeigt
+* ------------------------------------------------------------------
+%%DEBUG=N
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft,
+* und die Dateien angezeigt die beim original Lauf
+* verwendet würden
+* Es erfolgt keine echte Verarbeitung !
+* ------------------------------------------------------------------
+%%TEST=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.12.2019  12:48:58  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

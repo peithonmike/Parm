@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-WINOWIG-Fristablauf-Rechtskraft
+* 
+* 
+*********************************************************** 
+ 
+ 
+* VLK 
+
+%%ART=-F6140
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-AKTIONSTARTEN.BAT
+
+
+
+%%TEST=N
+
+
+

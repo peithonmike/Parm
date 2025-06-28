@@ -1,0 +1,20 @@
+*
+* LIBMEMSYM
+* Aufruf   ermittelten Anzahl Fälle DTA-Bundeswehr
+* DTAERFBW
+* läuft noch nicht, es muss nach dem Begriff 0801ERF gesucht werden
+*
+* 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\parm\OKEWO
+
+
+* variablen für das Zählprogramm
+*
+%%VON=-/-
+%%BIS=-/-
+%%VERFAHREN=OK.EWO.DTA-DTAERFBW
+%%DATUM =%%$ODATE
+%%LOGOUT=\\msbmcc03\c_bmc\ctm_av\log\OK.EWO-Bundeswehr-Satz.csv
+%%OFFSET=-1
+%%FILES=\\msbmcc03\ctm_av\Parm\OK.EWO-DTA-Bundeswehr-DTAERFBW.vlk
+

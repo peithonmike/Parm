@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Beamte-Zahlungsverkehr-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VLK\MGL-LOGA-ZAHLUNGSVERKEHR-Beamte-Arbeiter-MAIL-ADR.vlk
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Absender
+%%EMAIL-F=Produktions-Steuerung@ITK-Rheinland
+
+
+* Empfänger MG-Buchhaltung  (durch Semikolon getrennt)
+
+%%INIFILE_MAILADR=\\msbmcc03\ctm_av\Parm\VLK\MGL-LOGA-ZAHLUNGSVERKEHR-Beamte-Arbeiter-MAIL-ADR.vlk
+        
+* Subject
+%%EMAIL_U=Job-Nachricht:   Listen 2303, 2310, 2320 fuer Beamte stehen auf dem Laufwerk V zur Verfuegung
+
+* Kopie
+%%EMAIL_CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;
+
+* Blindkopie
+*%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.09.2021  11:03:56  zv171e1 Mail-Adressen aus Inidatei
+*    28.06.2017  11:31:13  zv171e1 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

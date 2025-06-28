@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-W-Auskunftsperren-Daten-erzeugen
+* 
+* 
+*********************************************************** 
+* CSV Datei erzeugen
+* sql ermittelt Datum aus Tages .
+* dieser job läuft aber trotzdem mit ODATE(Abhängikeiten) 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+
+ 
+%%SERVER=mssql04.itk.local
+%%DB=e01_due
+%%U=e01_jasper
+%%P=jasperav
+
+*%%P=siehe-Secret-Server
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\qry_ASP3_LHD.sql
+%%SQL_FILE=\\msbmcc03\ctm_av\Parm\SQL\qry_ASP3_LHD.sql
+
+*  Angaben durch Auftraggeber : \\msbmcc03\CTM_AV\DOC\BL\LHD-ASPs 3 Serienbrief
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+*%%VON=nicht-verwendet
+*%%BIS=nicht-verwendet
+
+* \\MSBMCBATCH01\ctm_av\Temp\aspDUE\%%GEM3.-Auskunftsperren-%%$ODATE..csv
+* Name der Ausgabe Directory und Datei
+%%OUTDIR=\\MSBMCBATCH01\ctm_av\Temp\aspDUE
+%%FILENAME=%%GEM3.-Auskunftsperren-%%$ODATE..csv
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+ 
+%%TEST=N
+%%DEBUG=N
+
+

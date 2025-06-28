@@ -1,0 +1,12 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-ETP-T-IMPORT-PROD
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND="C:\Program Files\Scripte\Automatisierung_Kosy\NEU_Auto_Kosy.bat"
+
+%%MAIL=tobias.redmann@itk-rheinland.de;simone.thissen@itk-rheinland.de;mike.philipsen@stadt.neuss.de;produktions-steuerung@itk-rheinland.de;dieter.assenmacher@itk-rheinland.de;erich.janke@itk-rheinland.de
+

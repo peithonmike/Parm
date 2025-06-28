@@ -1,0 +1,21 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  
+***********************************************************************************
+*  Jobname     : ITK-EVK_Dateienaufbereitung-ACCESS
+*  APPLICATION : EVK
+***********************************************************************************
+*
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+##COMMAND=\\msgeomap03.itk.local\d_goja$\Daten\Evakuierung\Datenaufbereitung\EVK_Datenaufber_Access.bat
+%%COMMAND=\\msgeomap03.itk.local\d$\Daten\Evakuierung\Datenaufbereitung\EVK_Datenaufber_Access.bat
+
+%%MAIL_NOTOK=hendrik.possberg@itk-rheinland.de;volker.rath@itk-rheinland.de;ralf.dixneit@itk-rheinland.de
+%%BETREFF_NOTOK=Datenaufbereitung EVK abgebrochen
+%%TEXT_NOTOK=%%JOBNAME - Datenaufbereitung ACCESS fehlerhaft

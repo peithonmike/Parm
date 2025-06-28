@@ -1,0 +1,13 @@
+*
+* LIBMEMSYM
+* Aufruf   ermittelten kompletten Monataszeitraum
+*
+*
+*
+* TYP 01   
+* Lauf findet am Anfang des Monats statt und wertet den vergangenen Monat aus
+* 
+
+
+%%VON           =01.%%MM_M1_%%$ODATE...%%JJJJ_MM_M1_%%$ODATE
+%%BIS           =%%LD_MM_M1_%%$ODATE...%%MM_M1_%%$ODATE...%%JJJJ_MM_M1_%%$ODATE

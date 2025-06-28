@@ -1,0 +1,83 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-SOZ-MZ-Druckdaten-Copy
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung ùber Net Use mùglich default NETUSE=N
+* Fùr Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-MZ
+
+ 
+
+* ---------------------------------------------------------------
+* OUTDIR
+* Hier werden die PdfDateien hineinkopiert .
+* ---------------------------------------------------------------
+%%OUTDIR=\\vfgv1\voldaten1\Daten\DruckausgabeITK\Sozial\MZ\%%SOZ_DAT
+*%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\xxx\%%SOZ_DAT.\kopiert
+%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\kopiert
+
+
+
+%%STEPNAME=Kopieren-MZ-Druckdaten
+
+
+* abweichend vom Standard
+**EXCLUDE=*FALL*,*FASU*,*AUSB*,*LKTP*
+%%EXCLUDE=*BULI*,*POLI*
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprùft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+* *********************************************************************
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-SOZ-DATEN-GRE
+%%NETUSE=N
+* Path fùr den erweiterten Zugriff
+**NETUSE_PATH=\\n200d01n01.dormagen.int.de\AusdruckeITK
+**NETUSE_PATH=\\n200d01n01.ad.stadt-dormagen.de\AusdruckeITK
+             
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+%%MAIL_OK=Catharina.floeck@grevenbroich.de;Rebecca.ende@grevenbroich.de;Poststelle.Druckerei@grevenbroich.de
+%%BETREFF_OK=Neue Daten aus SOZ-Monatslauf bereitgestellt
+%%TEXT_OK=Es stehen neue Daten in \\vfgv1\voldaten1\Daten\DruckausgabeITK\Sozial\MZ\%%SOZ_DAT bereit
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1
+
+*   ********************************************************************************** 
+*    -- ùnderungen ------------------------------------------------------------------- 
+*    05.06.2018  10:34:39  zv173x2 ohne LKTP lt Frau Dudek
+*    16.12.2016  12:16:44  zv173x2 \\n200d01n01.ad.stadt-dormagen.de\AusdruckeITK
+*    07.09.2016  16:09:21  zv173x2 \\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\kopiert
+*     12.05.2016  13:47:41  zv173x2  umgestellt auf Netuse alt 
+*                           \\n200d01l42 in  n200d01n01
+*    07.09.2015  08:17:17  zv173x2 %%EXCLUDE=*FALL*,*FASU*,*AUSB*
+*    15.09.2014  15:09:55  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

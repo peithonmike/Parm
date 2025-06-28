@@ -1,0 +1,81 @@
+*********************************************************** 
+* LIBMEMSYM 
+* LOGA-MSP-EGM
+* Mitarbeitenden Service Portal
+*********************************************************** 
+* Angestellte Arbeiter NAR
+*********************************************************** 
+ 
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+* MUSTER
+*                         HMAN alle 
+* DOR-LOGA-MSP-EGM-Angestellte-1200-XXXX-BU
+
+%%HMAN =%%SUBSTR %%JOBNAME 30 4
+%%MAN  =%%SUBSTR %%JOBNAME 36 4
+
+
+
+
+%%EXCLUDE="-"
+
+
+*** Abholen der Daten             : XXX-LOGA-MSP-Stammdaten-abholen-Winscp
+*
+
+
+
+
+*** werden kopiert nach            : Source  Loga Jahr Monat Art MSP
+*** und sind dann die Eingabe 
+*** für die Druckaufbereitung      : XXX-LOGA-MSP-EGM-Angestellte-Druck-erzeugen
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\MSP-EGM\%%GEM3
+
+
+*** EGM Druck erzeugen             : XXX-LOGA-MSP-EGM-Angestellte-Druck-erzeugen
+%%DRUCK_INDIR=%%OUTDIR
+%%DRUCK_OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\MSP-EGM\%%GEM3
+%%DRUCK_OUTDIR_PROCESSED=%%DRUCK_OUTDIR.\erledigt
+%%DRUCK_USE_OUTDIR_PROCESSED=J
+
+
+%%KOPIE01=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie01.pdf
+%%KOPIE02=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie02.pdf
+%%COPYCOUNT=0
+
+
+* P&I verwenden
+%%USE_PI=J
+
+* P&I Druck Queue
+%%PRINTER_QUEUE=\\msprintff01\d$\R18personal
+
+
+* Standard 
+%%INCLUDE =*KN_%%HMAN._**.pdf
+%%EXCLUDE=*_5060_*
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\PI-DRUCK-%%$OYEAR..csv
+
+* Sammeldir für mehr als eine PDF
+%%SAMMELDIR_DELETE=J
+  
+%%ADD_TRENNBLATT=N
+%%ADD_FRONTCOVER=N
+%%ADD_BACKCOVER=N
+%%ADD_KOPIE=N
+%%FORCE_OUTDIR_PROCESSED=J
+
+
+
+%%AUFTAGGEBER=S.Huennekes ab 02.2020
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.05.2020  07:55:15  zv173x2 erstellt aus LOGA-MSP-EGM-NAR
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,43 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Landeshauptstadt Düsseldorf
+***********************************************************************************
+*  Jobname     : DUE-Erinnerung-RP-12Mon-Zettel
+*  APPLICATION : OK.EWO.JASPER
+***********************************************************************************
+*********************************************************************************** 
+*
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Erinnerung-RP-12Mon-ZETTEL
+*
+* Druckdatei über Papyrus-Server an Duesseldorfer 
+* Druckerei (Amt 16) senden
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-PAPYRUS
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+
+
+ 
+
+
+*Eingabedatei
+%%SYSUT1=\\msbmcc03\C_BMC\CTM_AV\JASPER-BEGLEIT\Begleit_EW32B.txt 
+
+
+* Papyrus Document  
+%%SYSUT2=#DOCE300#THISFILE#LG211N#DFP16AH1##1_DUE-Erinnerung-RP-12Mon-ZETTEL
+
+%%TEST=N
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-ERINNERUNG-BPA-RP.pdf
+* ------------------------------------------------------------------

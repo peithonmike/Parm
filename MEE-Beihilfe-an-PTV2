@@ -1,0 +1,52 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-Beihilfe-an-PTV2
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-Beihilfe-MEE
+
+
+* Eingabe Directory 
+%%INDIR=%%IP
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+%%PREFIX=%%GEM3.-
+* Datei Auswahl
+%%INCLUDE=BE-*-*-VERW.dat
+%%EXCLUDE="-"
+* Dateien nur verschieben
+*%%SEARCH2=BE-*-*-UNI.dat
+
+* Ausgabe Directory
+%%OUTDIR=\\msptv01\d$\PTV\Projekte\SAP_Export\BEIHILF_EXXX\InDir
+%%OUTDIR=\\msptv02\ptvprojekte$\SAP_Export\BEIHILF_EXXX\InDir
+
+
+%%FORCE_OUTDIR=N
+
+
+%%NETUSE=J
+
+* erledigt Ordner =INDIR\verarbeitet
+%%TEST=N
+%%DEBUG=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.08.2016  13:18:36  zv173x2 prefix und neue Powershell Job-Prefix-Copy-Move-Files.ps1
+*    22.07.2016            zv173x2 powershell
+*    18.07.2016  12:38:59  zv173x2 1.Lauf Freighabe Klaus Kawig
+*    05.04.2016  15:16:56  zv173x2 neu wird vom RKN erzeugt und wie RKN an PTV geschickt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

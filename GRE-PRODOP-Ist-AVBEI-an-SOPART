@@ -1,0 +1,84 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-PRODOP-Ist-AVBEI-an-SOPART
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+*********************************************************** 
+* 1. Sopart Datei an PTV senden
+* 2. Pause, damit PTV umwandeln kann 
+* 3. nach Umwandlung vom PTV Server abholen 
+*    und für Sopart Import bereitstellen 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+
+
+
+
+* Eingaben aus dem Prodopik Export GRE-PRODOP-Export-AVBEI-Ist
+%%TO_PTV_INDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\GR
+%%TO_PTV_INFILE=GRE_SOPMG_EXPORT_IST_%%$ODATE..txt
+*%%TO_PTV_INFILE=20150504_2_GRE_SOPMG_EXPORT_IST.txt
+
+
+
+* zum PTV Server senden
+%%TO_PTV_OUTDIR=\\msptv02\PTVProjekte$\proDoppik_Import\SOPMG_IPROD\inDir
+%%TO_PTV_OUTFILE=%%TO_PTV_INFILE
+%%TO_PTV_OUTDIR_PROCESSED=%%TO_PTV_INDIR.\verarbeitet
+%%TO_PTV_OUTFILE_PROCESSED=%%TO_PTV_INFILE
+%%TO_PTV_OUTFILE_RENAMED=
+
+
+
+* vom PTV Server wieder abholen
+* ACHTUNG die Buchungsliste wird nicht abgeholt
+*FROM_PTV_INDIR=\\msptv01\d$\PTV\Projekte\proDoppik_Import\SOPMG_IPROD\outDir
+%%FROM_PTV_INDIR=\\msptv02\PTVProjekte$\proDoppik_Import\SOPMG_IPROD\outDir
+%%FROM_PTV_INFILE=*%%TO_PTV_INFILE*TABELLE1*
+
+%%FROM_PTV_OUTDIR=\\srv03.asp.rzne.de\qaspgr$\daten\apps\SopartGRE\SoPart\Import\FiBu\AVBEI
+%%FROM_PTV_OUTFILE=SOPIM_%%$ODATE..TXT
+%%FROM_PTV_OUTFILE_RENAMED=
+
+
+*FROM_PTV_OUTDIR_PROCESSED=\\msptv01\d$\PTV\Projekte\proDoppik_Import\SOPMG_IPROD\outDir\verarbeitet
+%%FROM_PTV_OUTDIR_PROCESSED=\\msptv02\PTVProjekte$\proDoppik_Import\SOPMG_IPROD\outDir\verarbeitet
+%%FROM_PTV_OUTFILE_PROCESSED=*%%TO_PTV_INFILE*
+%%MAX_SEC=600
+
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avCopy-Move-Rename-File.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avFILE-WATCH-LOOP.ps1
+* ------------------------------------------------------------------
+
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL_U=%%JOBNAME ODATE:%%TTMMJJJJP_%%$ODATE  CC:%%COMPSTAT
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.03.2021  07:12:08  zv173x2 User Control M da der Prodopav ab 05.03.2021 nicht mehr berechtigt war
+*    11.11.2015  22:39:30  zv173x2 blank entfernt
+*    05.05.2015  07:18:19  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

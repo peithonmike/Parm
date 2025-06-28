@@ -1,0 +1,64 @@
+
+************************************************************************************************************
+*
+* wird in Verbindung mit LIBMEMSYM BUENDEL-LOGA-ANGESTELLTE verwendet
+*
+* zuerst werne die Standard Variabeln erzeugt LIBMEMSYM BUENDEL-LOGA-ANGESTELLTE
+* danach werden einzelene Variablen an 5060 Listenformat angepasst
+************************************************************************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-ANGESTELLTE
+
+
+
+
+
+
+
+
+
+
+
+
+
+************************************************************************************************************
+*
+* ab hier werden die Standards aus dem  LIBMEMSYM BUENDEL-LOGA-ANGESTELLTE überschrieben
+* 
+*
+************************************************************************************************************
+
+
+* LOGA_SACHG
+*
+*  DOR-LOGA-KN_1200_1200_5060_03-BU
+*           10------------------ 
+%%LOGA_SACHG=%%SUBSTR %%JOBNAME 10 20
+
+* PDF_FRONTCOVER
+* PDF_BACKCOVER
+* AAA-DOR-KN_1200_1200_03_5060.pdf
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\LOGA\1-seitig\AAA-%%GEM3.-%%LOGA_SACHG..Pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\LOGA\1-seitig\ZZZ-%%GEM3.-%%LOGA_SACHG..Pdf
+
+* INCLUDE/EXCLUDE
+%%INCLUDE=%%LOGA_SACHG.*
+%%EXCLUDE="-"
+
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+%%PDF_FILENAME=%%GEM3.-%%LOGA_SACHG.-%%LOGA_DAT.-BU.PDF
+* ---------------------------------------------------------------
+
+
+* -------------------------------------------------------------------------------------
+%%PDF_SAMMELDIR          =%%PDF_INDIR.\%%LOGA_SACHG.
+%%PDF_SAMMELDIR_PROCESSED=%%PDF_SAMMELDIR.\erledigt
+* -------------------------------------------------------------------------------------
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*     27.10.2016  08:43:09  zv173x2 Komentare am Anfang eingefügt 
+*     20.10.2015  14:59:12  zv173x2 PDF_SAMMELDIR\erledigt 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

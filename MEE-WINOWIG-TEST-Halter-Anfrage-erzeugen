@@ -1,0 +1,26 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-WINOWIG-TEST-Halter-Anfrage-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+
+%%DESCRIPTION=TEST Ermitteln Halteranfragen(Kennzeichen) 
+%%AKTION=Halteranfrage
+%%AUSGABE=%%HALTER_ANFRAGEN
+
+
+
+
+
+
+
+
+
+%%TEST=N
+

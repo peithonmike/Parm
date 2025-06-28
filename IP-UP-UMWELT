@@ -1,0 +1,11 @@
+%%DB=umweltP
+%%U=umwelt
+%%P=Geelong1
+*
+*%%oracle_home =C:\oracle\product\10.2.0\client_32
+*%%tns_admin   =C:\oracle\product\10.2.0\client_32\network\admin
+
+%%oracle_home =C:\oracle\product\11.2.0\client_32
+%%tns_admin   =C:\oracle\product\11.2.0\client_32\network\admin
+
+%%UMGEBUNG    =PROD

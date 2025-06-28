@@ -1,0 +1,69 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-LOGA-Angestellte-Elster-MSP-Move
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+*********************************************************** 
+* Mitarbeiter Service Portal 
+* spezielle INIFILE nur für einen Mandanten!!! muss hier da es Elster ist wie alle anderen Mandanten kopiert werden
+*  MSP-31\GEM  anstatt MSP-31\%%GEM
+
+*********************************************************** 
+%%INIFILE=\\msbmcc03\ctm_av\PARM\LOGA-MSP-%%GEM3.-INCLUDE-INIDATEI
+
+
+%%LIBMEMSYM=%%INIFILE
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\Elster
+
+
+**OUTDIR=%%INDIR.\MSP-31\GEM
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NAR\Elster\GEM
+
+
+%%OUTDIR2=\\srv03.asp.rzne.de\ftp$\av\MSP\LOGA_MSP_DAILY\Elster\%%$OYEAR.\%%OMONTH
+
+
+
+%%DESCRIPTION=MSP Daten werden in einen Eigenen Ordner verschoben.(Elster/MSP-?)
+
+%%DESCRIPTION1= GRE wird separat in den  Ordner verschoben.
+%%DESCRIPTION4= INDIR  beinhaltet die Logadaten aus Lemgo
+%%DESCRIPTION5= OUTDIR hierin kommen die MSP-relevanten Dateien
+%%DESCRIPTION6= OUTDIR2 ist die Directory für die täglichen Dokument Updates wenn er dann mal wieder läuft:-)
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.03.2022  10:24:10  zv173x2  fehlte noch... 
+
+ 
+*    04.02.2021  08:21:22  zv173x2 neues Konzept
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

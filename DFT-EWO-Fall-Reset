@@ -1,0 +1,63 @@
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+
+ 
+%%SERVER=mssqltest02.itk.local
+%%DB=e01_duetest
+%%U=synergo_duetest_read
+%%P=cPnlo3(pnmyQ
+
+*synergo_mgltest_read
+*synergo_neutest_read
+
+
+*%%P=siehe-Secret-Server
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\EWO-FALL-RESET-GGRZ.sql
+%%SQL_FILE=\\msbmcc03\ctm_av\Parm\SQL\EWO-FALL-RESET-GGRZ.sql
+
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+*%%VON=nicht-verwendet
+*%%BIS=nicht-verwendet
+
+
+
+
+
+
+* Name der Ausgabe Directory und Datei
+
+
+%%OUTDIR=nicht-verwendet
+%%FILENAME=nicht-verwendet
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+ 
+%%TEST=N
+%%DEBUG=N
+
+*$SQLSricpt = "C:\Temp\JubisMG\Vorlagen\MGL_Altersjubilare.sql"
+*$CSVOut = "C:\Temp\JubisMG\Vorlagen\SQLCMD.csv"
+*$Server = "mssql04.itk.local"
+*$DB = "e01_mgl" 
+

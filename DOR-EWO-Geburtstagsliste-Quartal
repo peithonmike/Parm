@@ -1,0 +1,167 @@
+
+********************
+* EWO Job Typ-3    *
+********************
+
+
+* Geburtstagsliste Standard mit Word Doc öffnen
+*\\Msbmcc03\ctm_av\DOC\BL\EWO-Typ-3_Geburtstagslisten_Vorgaben.docx
+
+%%DESCRIPTION=Geburtstagsliste Quartal erzeugen und mit Mail versenden.
+* DESC2+3 siehe unten
+%%DESCRIPTION1=Job kann wiederholt werden
+%%AUFTRAGGEBER=M.Pixa
+
+
+
+**********************************************************************************
+* Name aus Datei der EWO Truppe  *_*_config.properties :     --job-name=
+*                                                      
+*             Ausgabeordner Parm-Member gEWO                            
+*             |                              EWOSUBDIR_AUSWERTUNGEN_TYP_3
+*             |                              |                                       
+%%EWOJOB_NAME=de.akdb.oesio.okewo.auswertung.job.JubilareJob
+***********************************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\DOR_VLK-Geb-Quartal
+
+
+* Mandantenspezifische JBOSS Angaben
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_%%GEM3
+
+* -------------------------------------------------------------
+* bei Geburtstagslisten und Jubilare nicht benötigt
+* kann auch entfernt werden
+* -------------------------------------------------------------
+* überschreibt den Standard Auswerte Ordner 
+* es gibt mehrere aktive Überschreibungen
+* hier auswählen wenn nicht Standard \\%%JBOSS.\Auswertungen$
+* %%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_DATEN_UEBERMITTLUNG
+* %%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_OPTIONSVERFAHREN
+* -------------------------------------------------------------
+
+
+
+
+* SubDirName wird zur Laufzeit um -JobNr erweitert
+* Name ist der letzte Teil von: %%EWOJOB_NAME
+%%EWOSUBDIR_AUSWERTUNGEN_TYP_3=JubilareJob
+
+
+
+
+%%USE_VON_BIS=J
+* Zeitraum VON - BIS verwenden (J\(N) aus altem Job übernommen 
+* wird über LIBMEMSYM DOR_VLK-Geb-Quartal ermittelt
+*%%VON
+*%%BIS
+
+* Ausgabeordner 
+* für die gefundene Datei zur Weiterverarbeitung
+*  
+%%OUTDIR_TYP_3=%%OKEWO_ROOT.\CTM\
+
+
+* Ausgabe Dateiname selber festlegen (J)/N
+* wird hier nicht benötigt, da man bei dieser Auswertung direkt eine Namen angeben kann
+* Das ist bei Typ 3 nicht immer so!!
+%%USE_OUTFILE_TYP_3=N
+
+* Ausgabe Dateiname 
+* für die gefundene Datei wenn USE_OUTFILE_TYP_3=J
+*%%OUTFILE_TYP_3=
+
+
+
+* Leere Ausgabe Directory nach verschieben löschen (J)/N 
+%%DELETE_EMPTY_DIR_TYP_3=J
+
+* Ausgabedatei Überschreiben, wenn vorhanden J/(N)
+* Jobs mit zB Zeitraumangaben %%VON %%BIS oder ähnlich können meist wiederholt werden
+* dann MOVE_OVERWRITE=J verwenden
+%%MOVE_OVERWRITE=J
+
+*---------------------------------------------------------------------------------------------------------
+*-    Spezial Variablen für Geburtstagslisten und Jubilare
+*-    ohne CSV Extension wird von der AKDB angehängt 
+*-    Muss an %%AUSGABEDATEI Mail senden angehängt werden
+*---------------------------------------------------------------------------------------------------------
+%%AUSGABEDATEI=%%JOBNAME.-%%VON.-%%BIS
+
+%%EMPFAENGER_DES_JUBILARS=05162004_av_geb_M25
+
+* Standard nicht verändern ------------------
+%%ART_DES_JUBILARS=2
+%%NEBENWOHNUNGEN_BEACHTEN=0
+**%%SPERRENTYPEN=2,5,7,10,13
+%%SPERRENTYPEN=2,5,7,10,13,98
+* -------------------------------------------
+
+
+
+
+*  M A I L  --  M A I L  --  M A I L  --  M A I L   
+* Ergebnis als Mail versenden
+*
+%%SEND_MAIL=J
+* Empfänger   Pflichvariable 
+%%EMAIL_T=ewo-auswertungen@stadt-dormagen.de
+
+* Subject     Pflichvariable #
+%%EMAIL_U=%%AUSGABEDATEI..CSV
+* Anhang             
+%%EMAIL_A=%%OUTDIR_TYP_3.\%%AUSGABEDATEI..CSV
+* Kopie       
+%%EMAIL_CC=
+%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+*
+
+
+
+*  M A I L  --  M A I L  --  M A I L  --  M A I L   
+
+
+%%DESCRIPTION2=Empfänger: %%EMAIL_T
+%%DESCRIPTION3=Datei    : %%EMAIL_A
+
+
+%%PARAM=--joblog=%%JOBLOG --syslog=%%SYSLOG --run --job-name=de.akdb.oesio.okewo.auswertung.job.JubilareJob --param=artDesJubilars=S%%ART_DES_JUBILARS;empfaengerDesJubilars=S%%EMPFAENGER_DES_JUBILARS;nebenwohnungenBeachten=B%%NEBENWOHNUNGEN_BEACHTEN;auswertungszeitraumVon=D%%VON;auswertungszeitraumBis=D%%BIS;sperrentypen=S%%SPERRENTYPEN;dateiausgabeFormatOption=SCSV;ausgabeDateiFeldTrenner=S\;;ausgabeDatei=S%%AUSGABEDATEI
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+*******************************************************************************************************************
+* Parameter erstellt aus Job Config  Vorlage
+* \\MSBMCC03\CTM_AV\DOC\BL\EWO-Typ-3-Arbeitsanweisung-Vorbereiten-VariablenÜbergabe.docx
+*******************************************************************************************************************
+*  Job Config  
+*  \\msbmcc03\CTM_AV\Bin\Java\EWO_BATCH\AKDB-Sourcen\Geburtstagslisten
+*
+*******************************************************************************************************************
+*  \\MSBMCC03\CTM_AV\DOC\BL\EWO-Typ-3-Arbeitsanweisung-Vorbereiten-Variablenübergabe.docx
+*****************************************************************************************
+* EWO-Synergo-Verzeichnisse
+*  \\Msbmcc03\ctm_av\DOC\BL\EWO-Synergo-Verzeichnisse-etc.txt
+*  
+*******************************************************************************************************************
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.01.2022  10:25:56  zv173x2 1. Lauf 01.02.2022 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

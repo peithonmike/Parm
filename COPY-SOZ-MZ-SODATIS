@@ -1,0 +1,49 @@
+* ------------------------------------------------------------------------------
+* S O Z I A L W E S E N 
+* ------------------------------------------------------------------------------
+* H A U P T L A U F
+* Kopieren Sodatis Dateien 
+* ------------------------------------------------------------------------------
+* Hier werden Standard Vorgaben gemacht, die für die meisten Mandanten zutreffen
+* Abweichungen können  bzw werden im Job-LIBMEMSYM gemacht 
+
+
+* Zeitraum aktueller Monat
+%%SOZ_DAT=%%$OYEAR.%%OMONTH 
+
+* Sachgebiet aus Jobnamen ermitteln
+%%SOZ_GKZ=%%SUBSTR %%JOBNAME 22 3
+
+%%EXCLUDE="-"
+
+* --------------------------------------------------------------------------------------------
+* INDIR
+* Hier stehen die Dateien die über Mask ermittelt und kopiert werden
+* --------------------------------------------------------------------------------------------
+%%INDIR           =\\Msprintff01\source$\SOZ-SODATIS\%%$OYEAR.\%%SOZ_DAT.
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-SODATIS\%%$OYEAR.\%%SOZ_DAT.\erledigt
+* ---------------------------------------------------------------
+* FORCE_SAMMELDIR_PROCESSED
+* Erledigt Ordner werden bei Bedarf angelegt
+* ---------------------------------------------------------------
+%%FORCE_SAMMELDIR_PROCESSED=J
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avCopy-Move-Files.ps1
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SOZI\SODATIS-ZADA-und-SEDA.pdf
+* ------------------------------------------------------------------
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.09.2014  10:38:38  zv173x2 umgestellt auf ZADA 
+*    11.08.2014  15:48:50  zv173x2 Abrechnungsmonat sodatis liegt ab sofort im gleichen Monat
+*    17.07.2014  15:38:41  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

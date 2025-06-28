@@ -1,0 +1,75 @@
+* *************************************************************
+* Globale Variablen          
+* Gemeinde Jüchen
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+
+*********************************************************************************
+* Jüchen ab 01.01.2019 Stadt
+*********************************************************************************
+%%STADT   =Stadt
+
+%%ORT     =Juechen
+
+%%GKZ8    =05162012
+%%GKZ8_7_2=%%SUBSTRING  %%GKZ8 7 2
+%%GKZ6    =%%SUBSTRING  %%GKZ8 3 6
+%%GEM=JU
+%%GEM3    =JUE
+%%GKZ     =400
+* OK.EWO Ortsnummer
+*  02.11.2015
+**E01E200_ORTNR=35
+%%E01E200_ORTNR=17
+
+* FTP-Ordner
+%%ftp_lw = qaspju$
+
+* 
+*
+* Behördennummer für den Datenaustausch über OpenFT mit dem Bundesamt für Justiz (BfJ)
+*
+
+*  Gemeinde Jüchen
+%%BFJ_ID_OKEWO=R8924
+
+*  -MIGEWA- 
+%%BFJ_ID_MIGEWA=wird-nicht-benutzt
+
+
+*  -WINOWIG- 
+%%BFJ_ID_WINOWIG=??noch nicht geklärt??
+%%WINOWIG_GKZ=400
+
+
+*
+* KSU2000 OKEWO-Abgleich
+*
+%%KSU_NR =400
+%%KSU_DIR=ksu2000_krzn
+
+%%MD1=JUE
+
+%%MD2=ju
+%%MD3=jue
+%%MD4="Stadt Jüchen"
+%%FW_MesoDatei=\\srv03\qasp%%MD2.$\Daten\Apps\KSU\Wohnungswesen\EWO_ABGLEICH\EWO_Daten\ewo_%%MD2..txt
+%%FW_ImportDatei=\\srv03\ftp$\ksu2000_krzn\prod\%%KSU_NR\kasse\%%KSU_NR._*.txt
+*%%CTMFW=ctmfw -input c:\CTM_AV\Parm\KSU2000_FW_OKEWO_%%MD3..txt
+
+*
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.12.2021  08:02:45  zv173x2 Stadt Gross Kleinschrift
+*    11.08.2014  08:45:47  zv173x2 %%GKZ8_7_2=%%SUBSTRING  %%GKZ8 7 2 
+*    28.02.2014  20:44:37  ZV173X2 gkz
+*    18.12.2012  11:27:56  zv173x2 Winowig_gkz
+*    03.04.2012  11:02:38  zv173x2 GKZ6
+*    18.02.2011  10:32:35  ZV173X2 Blankzeilen entferntwg CTM BUG
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+*

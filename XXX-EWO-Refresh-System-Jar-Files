@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-EWO-Refresh-System-Jar-Files
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%DESCRIPTION1= CC:0  alle Jarfiles sind auf dem neusten Stand 
+%%DESCRIPTION2= CC:7  mindestens eine File musste aktualisiert werden 
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.11.2021  10:56:31  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

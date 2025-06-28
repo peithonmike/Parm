@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-SAP-T-UPD_DOC_REP007
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_ITK
+
+
+%%CLIENT=IFP
+%%MANDANT=610
+
+%%MAIL-NOTOK=Hans-georg.robertz@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%BETREFF-NOTOK=Report-Job ITK-SAP-T-UPD_DOC_REP007 ist abgebrochen
+%%TEXT-NOTOK=Der Report ITK-SAP-T-UPD_DOC_REP007 ist nicht erstellt worden
+

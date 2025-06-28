@@ -1,0 +1,39 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-GMN-Export-Bestelldaten
+* 
+* 
+*********************************************************** 
+* Gebäudemanagement -> OracleServer-> AV-Server -> HOST    
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+* hier IP-UP Member anpassen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\TIP-UP-KIRP-IMSWARE-NEU
+
+*Eingabedatei Directory auf dem Oracle Server
+%%PCDIR=KIRP/iefiles
+
+
+*Eingabedatei 
+* CASE Sensitiv 
+%%SYSUT1=BEST.TXT
+%%SYSUT1_RENAME=BEST_%%$ODATE._%%TIME..TXT
+
+* Ausgabe auf dem AV-Server 
+%%SYSUT2=\\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\AV\GMN\IMS-KIRP\EXPORT\NEU\NEU-GMN-BEST_%%$ODATE..txt
+
+
+
+%%TEST=N
+ 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\WinScp\WinnSCP-Install.txt

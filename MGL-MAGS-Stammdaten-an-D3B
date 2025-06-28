@@ -1,0 +1,38 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-MAGS-Stammdaten-an-D3_2
+* 
+* 
+*********************************************************** 
+ 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MGL_2
+
+
+
+**INDIR=\\10.50.34.68\loga\logamg\export\Stammdaten_fuer_d3
+**INDIR=\\10.50.34.68\IP-Output\ITK-Rheinland\Mönchengladbach\Schnittstellen\export\Stammdaten_fuer_d3
+%%INDIR=\\10.50.34.68\loga\IP-Output\ITK-Rheinland\Mönchengladbach\Schnittstellen\export\Stammdaten_fuer_d3
+
+
+**NETUSE_PATH=\\10.50.34.68\loga\logamg\export\Stammdaten_fuer_d3
+%%NETUSE_PATH=\\10.50.34.68\loga\IP-Output\ITK-Rheinland\Mönchengladbach\Schnittstellen\export\Stammdaten_fuer_d3
+
+%%OUTDIR=\\vfd3dms\ProdImport\LOGA\D3B
+
+%%OUTFILE=Mags_Stammdaten_fuer_d3.csv
+%%INCLUDE=ITK-Stammdaten_d3_MG-Batchlauf_Mandant_11060.csv
+
+
+%%EXCLUDE="-"
+%%LAUFWERK=Y:
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Files_4.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+
+%%TEST=N
+%%DEBUG=N

@@ -1,0 +1,34 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *           
+*                                                                                 *
+*  DTA Kirche EV   Rommerskirchen     
+*  die NR ist schon Produktion Stzamd 10.06.2010                                  *
+***********************************************************************************
+* * * * * * * * * * * * * * * * * * * *
+* Mitteilungsdienst Kirche EV
+* * * * * * * * * * * * * * * * * * * *
+
+
+* 
+* 
+* ITKR_SUBDIR=Dta/KircheEV
+* TEXT=Kirche EV
+* GROUP=Kirche EV
+* ermittelte Datei-Rename : OKEWONAME ORT DATUM
+
+%%OKEWO_FILENAME =STEAK01.*
+%%OKEWO_SUBDIR   =stapel
+%%ITKR_SUBDIR    =Dta/KircheEV
+
+
+* Name der Original OK.EWO Datei ohne Endung 
+%%OKEWO_FILE=4294-E01U0000
+%%OKEWO_NR=P4294
+
+* Inhalt der OKEWO-VLK Datei mit Variablen
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=CTM-%%OKEWO_NR ROM-Kirche EV %%VON - %%BIS $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U22803#UEB_N.E01DUMMY#REL_01-#DATUM1_N.E01DUMMY#%%VON#DATUM2_N.E01DUMMY#%%BIS#MEDIUM_N.E01DUMMY#DATENTRAEGER#GKB.E01E300#1#B_LAND.E01DUMMY#NW#V_UZ331_LISTE.E01DUMMY#$$
+
+

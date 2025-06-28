@@ -1,0 +1,30 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAP-W-Export-NA-Saperion
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Neuss
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%SYSOUT=\\msbmcc03.itk.local\G$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+%%MAIL_NOTOK=ruth.weyermanns@itk-rheinland.de;betina.kobecke@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%BETREFF_OK=Erstellen SAP-NA-Daten %%GEM3 für SAPERION OK
+%%BETREFF_NOTOK=Erstellen SAP-NA-Daten %%GEM3 für SAPERION NOTOK
+
+%%TEXT_OK=Joblog: Erstellen SAP-NA-Daten %%GEM3 für SAPERION ist OK.
+%%TEXT_NOTOK=Joblog: Erstellen SAP-NA-Daten %%GEM3 für SAPERION NOTOK.
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\Msbmcc03\C_BMC\CTM_AV\DOC\SAP-Doku\NEU-SAP-W-Namensaenderungen.pdf
+* ------------------------------------------------------------------

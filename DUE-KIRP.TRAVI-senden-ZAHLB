@@ -1,0 +1,65 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-KIRP.TRAVI-senden-ZAHLB
+* 
+* 
+*********************************************************** 
+ 
+ 
+*********************************************************** 
+* AN AUSCHALTEN 
+* BAT-Echo
+* ECHO_ON=N
+*********************************************************** 
+
+
+**SEARCH_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\ADHOC
+**GESENDET_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+
+**SEARCH=000.IRP.SRZ.LHD-XML21.ZAHLB_*_*
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\TRAVIC-LINK
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\KIRP-TRAVI-ZAHLB.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\TRAVICLINK-Dateinamen.pdf
+
+$$INCLUDE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\TRAVIC-LINK-%%$OYEAR..csv
+
+* ------------------------------------------------------------------
+
+%%EMAIL_T=Webler.Uta@ITK-Rheinland.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+*;Produktions-Steuerung@itk-rheinland.de;Reinhard.Baier@itk-Rheinland.de
+%%EMAIL_U=Job-Nachricht CC:%%COMPSTAT  %%JOBNAME
+
+
+*  FTP Powershell Script mit MD5 Hash
+
+%%FTPSERVER=m180ongum.rz.krzn.de
+%%FTPUSERNAME=tr01itk
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\ADHOC
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+%%INCLUDE=000.IRP.SRZ.LHD-XML21.ZAHLB_*_*
+%%PREFIX=T.
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\CF\JOB\Job-FTP-Transfer-CRC-Check.ps1
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.04.2024  Umstellung auf Powershell   zvaa405
+*    12.11.2013  06:40:11  zv173x2 CT in * DD auch zugelassen
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

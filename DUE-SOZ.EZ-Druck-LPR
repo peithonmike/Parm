@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.EZ-Druck-LPR
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-LPR-Print.ps1
+
+
+
+* LPR EXE ist im System Member
+* %%LPR_EXE=
+
+* Drucker Freigabe
+%%DRUCKERNAME=ITKR-4206
+
+* Druckserver ohne \\ 
+
+%%DRUCKSERVER=msdsa02
+
+
+* Eingabe Directory
+%%INDIR=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE
+
+* Datei Auswahlmaske
+%%INCLUDE=EZ-030-DF-SAP_PFVBK2*E_*_DF_EZ_%%$ODATE..pdf
+                       
+* Überschriftzeilen
+%%TEXT1=D ü s s e l d o r f   T e s t
+%%TEXT2=Einmalzahler
+
+
+
+%%TEST=N
+%%DEBUG=N
+

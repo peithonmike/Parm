@@ -1,0 +1,54 @@
+* *******************************************************************************
+* LIBMEMSYM
+* BAG
+*
+* S Y S T E M F I L E 
+* USER :  
+* -------------------------------------------------------------------------------
+* Die Abkürzung BAG steht für:
+* 
+* -------------------------------------------------------------------------------
+
+* *******************************************************************************
+* sonstige Variablen 
+* *******************************************************************************
+%%GEM3            =%%SUBSTR %%JOBNAME 1 3
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+* OPENFT
+%%ANSCHLUSS=ftam://192.168.45.131:102
+%%TRANSFER_ADMISSION=FtDpzPf7 
+
+* Anfrage Directory auf dem OpenFT Server (von da aus wird zum BAG gesendet)                   
+%%BAG_DIR_ANFRAGE=\\msbmcbatch01\c$\CTM_AV\OpenFT-ftp\bag\Anfrage
+
+* Anntwort Directory auf dem OpenFT Server (dahin sendet BAG die Antworten, für alle Mandanten !!)                   
+* %%BAG_DIR_ANTWORT=\\msbmcbatch01\c$\CTM_AV\OpenFT-FTP\BAG\AntwortBAG
+
+* Die Berechtigung für das BAG wurde zuerst für die Kreis Antworten vergeben.
+* nachher stellte sich heraus, das das BAG nur in einen Ordner zurücksenden kann, egal wer bei
+* uns der Empfänger ist.
+* Deshalb landen noch alle Antworten im RKN Ordner
+* von da aus werden die Antworten dann, nach Düsseldorf und denm Kreis weitergeleitet
+
+%%BAG_DIR_ANTWORT=\\msbmcbatch01\c$\CTM_AV\OpenFT-FTP\BAG\RKN\Antwort
+
+%%BFJ_ID_BAG=wird-nicht-benutzt
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.09.2013  14:41:14  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

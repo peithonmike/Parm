@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-TEST-BZR-Anfragen-FW
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+
+
+%%WATCH_DESC=Überwachen Export Verzeichnis nach BZR Anfragen
+%%WATCH_DIR=\\msbmcc03\ctm_av\Test\Export
+%%WATCH=*.*
+%%WATCH_MAX=1800
+%%WATCH_WAIT=60
+%%WATCH_FORCE_SCHEDULE=
+%%WATCH_FORCE_JOBNAME=*
+
+%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL-U=%%JOBNAME Filewatcher hat ausgelöst
+
+
+ 

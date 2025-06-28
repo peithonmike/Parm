@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-R22W0661_FTPtoHOST
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%TEST=N
+
+*Neue Hostdateien per FTP zum HOST
+%%FTP-RPATH1=PZA.NEUAG.AWL.D%%ODATE..KOMP.ZWI
+
+
+%%FTP-LPATH1=\av\Gba\SAS_Ausgabe\R22W0660_ST0030_Ausgabe.txt
+
+
+*Dateien nach erledigt verschieben
+%%FTP-NEWNAME1=\av\Gba\SAS_Ausgabe\Erledigt\R22W0660_ST0030_Ausgabe_D%%ODATE..txt

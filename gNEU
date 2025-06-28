@@ -1,0 +1,75 @@
+****************************************
+* *************************************************************
+* Globale Variablen          
+* Stadt Neuss
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+%%STADT  =Stadt
+%%ORT    =Neuss
+
+%%GKZ8   =05162024
+%%GEM    =NE
+%%GEM3   =NEU
+%%GKZ    =100
+%%GKZ8_7_2=%%SUBSTRING  %%GKZ8 7 2 
+
+%%BEIHILFE_MANDANT=1100
+
+* OK.EWO Ortsnummer
+*%%e01e200_ortnr=36
+%%E01E200_ORTNR=36
+
+
+* FTP-Ordner
+%%ftp_lw = qaspne$
+
+*
+* Behördennummer für den Datenaustausch über OpenFT mit dem Bundesamt für Justiz (BfJ)
+*
+* Stadt Neuss
+%%BFJ_ID_OKEWO=R6100
+
+* Stadt Neuss-Ausländerbehörde - 
+%%BFJ_ID_OKVISA=R6100A
+
+*  -MIGEWA- 
+%%BFJ_ID_MIGEWA=wird-nicht-benutzt
+
+*  -WINOWIG- 
+%%BFJ_ID_WINOWIG=??noch nicht geklärt??
+%%WINOWIG_GKZ=100
+%%WINOWIG_TREIBER=Pro_8300_EB_35_v1.0_PS
+
+
+*
+* KSU2000 OKEWO-Abgleich
+*
+%%KSU_NR =100
+%%KSU_DIR=ksu2000_krzn
+
+%%MD1=NEU
+
+%%MD2=ne
+%%MD3=neu
+%%MD4=Stadt Neuss
+%%FW_MesoDatei=\\srv03.asp.rzne.de\qasp%%MD2.$\Daten\Apps\KSU\Wohnungswesen\EWO_ABGLEICH\EWO_Daten\ewo_%%MD2..txt
+%%FW_ImportDatei=\\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR\kasse\%%KSU_NR._*.txt
+*%%CTMFW=ctmfw -input c:\CTM_AV\Parm\KSU2000_FW_OKEWO_%%MD3..txt
+
+*
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.05.2015  11:17:22  zv173x2 %%GKZ8_7_2=%%SUBSTRING  %%GKZ8 7 2 
+*    06.11.2012  14:52:18  zv173x2 Winowig_gkz
+*    16.10.2012  11:58:32  zv173x2 BFJ_ID_WINOWIG=?
+*    21.03.2011  14:20:33  ZV173X2 %%e01e200_ortnr in gross und klein
+*    18.02.2011  10:32:35  ZV173X2 Blankzeilen entferntwg CTM BUG
+*    12.12.2001  14:53:00  ZV173XC OKEWO-Abgleich mit KSU20000 hinzugefügt  
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************
+
+
+
+
+

@@ -1,0 +1,27 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : MEE-C22W0265-InputDB_2
+* erstellt : 05.08.2013 14:27:51
+*    durch : ZV171E3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%TEST=N
+*
+* Config-Datei
+%%CONFIG= 
+* Input-Datei
+%%INPUT=jasperjob
+* OUTFILE
+%%OUTFILE=\\msbmcc03\ctm_av\Parm\C22W0265.sql
+* JAVA
+%%JAR=

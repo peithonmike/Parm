@@ -1,0 +1,59 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-OPENFT-VISA-BZR-Anfragen-Senden
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job versendet Anfragen usw per OpenFT.
+* Nach erfolgreichem senden werden die Einagbedateien nach OUTDIR_PROCESSED verschoben (wird angelegt falls nicht vorhanden)
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-OpenFT-Senden.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* Eingabe Directory der Anfragen
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\BZR\OKVISA
+
+* Datei Auswahl Maske
+%%INCLUDE=UTF-8BQU0752R6100A*.txt
+
+* Anschluss\Partner  LZPD,BZR usw 
+%%ANSCHLUSS=BZR
+
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+%%TRANSFER_ADMISSION=ft#KD946Sa
+%%CRYPT=J
+
+*  Speicherort für gesendete Anfragen
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\senden\BZR\OKVISA\gesendet\%%GEM3
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=J
+%%ISE=N
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    12.07.2018  13:14:26  zv173x2 CRYPT
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

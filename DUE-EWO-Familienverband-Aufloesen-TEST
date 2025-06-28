@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Familienverband-Aufloesen-TEST
+* 
+* 
+*********************************************************** 
+
+
+%%EWOJOB_NAME=de.akdb.oesio.okewo.melderegister.jobs.FamilienverbaendeAufloesenJob
+%%PARAM=gvVaterMutterAbVolljaehrigkeitLoeschen=Btrue;abgelaufeneGvAusserVaterMutterLoeschen=Btrue;
+
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\g%%GEM3
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWOTEST_%%GEM3
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\DOC\EWO\%%EWOJOB_NAME
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.12.2020  07:50:57  zv173x2 NEU erster Test neues OKEWO
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************
+%%TEST=N
+%%DEBUG=N
+
+

@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA-MSP-EGM-Beamte-1820-XXXX-BU
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NBE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-USE-DRUCKEREI-NEUSS
+
+
+
+
+* Eingabe
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\NHCM
+
+*Directory der fertigen Bündel
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\Workbench
+
+* Ausgabe Datei
+%%OUTFILE=%%GEM3.-NHCM-KUVERT-PENSION-%%LOGA_DAT.-BU.pdf
+
+* Archiv
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+
+%%DESCRIPTION=Bündel Versorgungsempfänger %%LOGA_MAN_%%HMAN
+
+* Beispiel KN_1800_1800_02_1082NHCM
+%%INCLUDE =*KN_1800*_02_*NHCM*.pdf
+%%EXCLUDE=*_5060_*
+
+%%TEST=N
+%%DEBUG=N 
+
+%%USE_OUTDIR_PROCESSED=J
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-LOGA-PDF-BUENDEL-2.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.05.2024  11:58:37  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

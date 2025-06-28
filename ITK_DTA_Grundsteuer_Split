@@ -1,0 +1,16 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland	
+***********************************************************************************
+*  Jobname     : ITK_DTA_Grundsteuer_Split
+*  APPLICATION : GBA
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**COMMAND=java -jar \\msbmcc03\ctm_av\bin\java\GBADTA\gbadtasplit.jar \\msbmcc03\ctm_av\Bin\Java\GBADTA\config \\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\dta-gba\GBA_DTA_D%%$ODATE..txt \\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\gba\dtalds\
+%%COMMAND=java -jar \\msbmcc03\ctm_av\bin\java\GBADTA\gbadtasplit.jar \\msbmcc03\ctm_av\Bin\Java\GBADTA\config \\srv03\qaspkdvz$\Daten\Apps\ftp\av\dta-gba\GBA_DTA_D%%$ODATE..txt \\srv03\qaspkdvz$\Daten\Apps\ftp\av\gba\dtalds\

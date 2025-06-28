@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-P32-T-COPY-PTV
+* Mail an SB22 nicht mehr notwendig lt. Klaus Kawig 17.2.16/Schr.
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\srv03\qaspka$\Daten\Apps\migewa\kassexp\%%ORDER..txt
+%%logdat=\\srv03\qaspka$\Daten\Apps\migewa\kassexp\%%ORDER..log
+##ausdat2=\\msptv01.itk.local\ptv-projekte\HIZADRS_SAP\inDir\%%ORDER..txt
+##ausdat1=\\msptv01.itk.local\ptv-projekte\HIZPBUC_SAP\inDir\%%ORDER..txt
+
+%%ausdat2=\\msptv02\ptvprojekte$\SAP_Export\HIZADRS_EXXX\inDir\%%ORDER..txt
+%%ausdat1=\\msptv02\ptvprojekte$\SAP_Export\HIZPBUC_EXXX\inDir\%%ORDER..txt
+
+%%ausdat3=\\srv03\qaspka$\Daten\Apps\migewa\kassexp\erledigt\%%ORDER..txt
+%%ausdat4=\\srv03\qaspka$\Daten\Apps\migewa\kassexp\erledigt\%%ORDER..log
+
+
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+**MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer Migewa-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer Migewa-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der Migewa-Daten %%GEM3. zum PTV-Server ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der Migewa-Daten %%GEM3. zum PTV-Server ist NOTOK.
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\KAA-P32-T-COPY-PTV.pdf
+* ------------------------------------------------------------------

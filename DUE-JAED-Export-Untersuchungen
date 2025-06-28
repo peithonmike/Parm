@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-JAED-Export-Untersuchungen
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**COMMAND=dir
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\jaed_csv.ps1
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+

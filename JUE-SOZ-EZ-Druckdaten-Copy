@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-SOZ-EZ-Druckdaten-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-EZ
+ 
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+*%%OUTDIR=\\srv03.asp.rzne.de\qaspju$\daten\orgaeinheit\Sozialwesen\DRUCKDATEN\%%$OYEAR.\EZ\%%$ODATE
+%%OUTDIR=\\vfju\ju\Daten\Sozialwesen\DRUCKDATEN\%%$OYEAR.\EZ\%%$ODATE
+
+%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\kopiert
+
+
+*%%STEPNAME=Kopieren-EZ-Druckdaten
+%%INCLUDE=*EZ-*2*12_%%$ODATE..PDF
+%%EXCLUDE="-"
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.04.2020  08:45:28  zv173x2 \\srv03.asp.rzne.de\qaspju$\daten\orgaeinheit\Sozialwesen\DRUCKDATEN\
+*                                  in \\vfju\ju\Daten\Sozialwesen\DRUCKDATEN
+*    09.01.2018  09:03:50  zv173x2 \\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE
+*    04.05.2016  08:30:47  zv173x2 neue Powershell Version
+*    03.09.2015  14:32:30  zv173x2 xxx dir
+*    28.07.2014  07:47:09  zv173x2 neu
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+

@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* X50U03OK
+* Sozi-EZ Dortmund
+* 
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\Mail
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\Mail050
+
+%%TO1=%%MAIL_BAIER           
+%%TO2=%%MAIL_MCIESIOL        
+%%TO3=%%MAIL_SEXTERNBRINK    
+%%TO4=%%MAIL_G10AV           
+%%TO5=%%MAIL_WERMINGHAUS     
+%%TO6=%%MAIL_CBUND           
+%%TO7=%%MAIL_BSELENT         
+%%TO8=%%MAIL_DAVARCI         
+%%TO9=%%MAIL_KUNZ            
+%%T10=%%MAIL_WESTON          
+%%T11=%%MAIL_G50FACHVERFAHREN
+
+
+
+                                                          
+%%ZEILE1=DIE_BEARBEITUNG_IST_UNTER_BEACHTUNG_DER_BEDIENUNGSVOR- 
+%%ZEILE2=SCHRIFTEN_MIT_DEN_DAFüR_GüLTIGEN_UND_FREIGEGEBENEN     
+%%ZEILE3=PROGRAMMEN_DURCHGEFüHRT_WORDEN._ENTSPRECHEND_DEM_VER-  
+%%ZEILE4=FAHRENSABLAUF_IST_DIE_DATENAUSGABE_RICHTIG_UND_VOLL-   
+%%ZEILE5=STäNDIG                                                
+
+%%TEST=N

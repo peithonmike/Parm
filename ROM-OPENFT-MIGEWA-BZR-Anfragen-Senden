@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-OPENFT-MIGEWA-BZR-Anfragen-Senden
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job versendet Anfragen usw per OpenFT.
+* Nach erfolgreichem senden werden die Einagbedateien nach OUTDIR_PROCESSED verschoben (wird angelegt falls nicht vorhanden)
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-OpenFT-Senden.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* Eingabe Directory der Anfragen
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\BZR\MIGEWA\%%GEM3
+
+* Datei Auswahl Maske
+%%INCLUDE=BZR*.BZR
+*%%INCLUDE=AB-U0752*.BZR
+
+* Anschluss\Partner  LZPD,BZR usw 
+%%ANSCHLUSS=BZR
+
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+%%TRANSFER_ADMISSION=ft#KD946Sa
+
+
+
+*  Speicherort für gesendete Anfragen
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\senden\BZR\MIGEWA\gesendet\%%GEM3
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.07.2015  10:36:39  zv171e1 Datei-Name von AB-U0752*.BZR in BZR*.BZR geändert
+*    18.05.2015  15:57:21  zv173x2 BZR\MIGEWA\gesendet\%%GEM3
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

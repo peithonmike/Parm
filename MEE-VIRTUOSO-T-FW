@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-VIRTUOSO-T-FW
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%FILE=\\msxd092.itk.local\Virtuoso_meerbusch_TSM$\transfer\host.dat
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=dieter.assenmacher@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer TopCash-Daten %%GEM3. nach SAP OK
+%%BETREFF_NOTOK=FileTransfer TopCash-Daten %%GEM3. nach SAP NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der TopCash-Daten %%GEM3. ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der TopCash-Daten %%GEM3. ist NOTOK.

@@ -1,0 +1,104 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Abgelöst durch 
+ 
+ Job ISN-ULTIMO-MB-vom-Server-abholen
+ 
+ und
+ 
+ ISN-ULTIMO-FR-vom-Server-abholen
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-MB-FR-vom-Server-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get-2.ps1 
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen Ultimo-Daten per WinSCP und an PTV weiterleiten
+%%AUFTRAGGEBER=H-G.Robertz
+
+*---------------------------------------------------------------
+%%U=nicht-verwendet
+%%P=nicht-verwendet
+%%IP=nicht-verwendet
+
+
+
+
+* Remote Datei Auswahl Maske
+%%INCLUDE="-"
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\Ultimo\ISN\ 
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open ISN-ULTIMO-GET
+
+%%Z05=CD SapPurchase
+%%z06=dir
+* Mittelbindungen
+%%Z07=mget MB%%$ODATE._*.csv  %%OUTDIR
+
+* home
+%%Z08=CD
+%%z09=dir
+*Rechnungen
+%%Z10=CD SapInvoice
+%%Z11=mget FR%%$ODATE._*.csv  %%OUTDIR
+
+%%Z12=close
+%%Z13=exit 
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+

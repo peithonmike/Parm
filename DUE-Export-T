@@ -1,0 +1,9 @@
+* *************************************************************
+* Table Variablen          
+* DUE-Export-T
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+

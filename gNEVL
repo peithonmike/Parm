@@ -1,0 +1,27 @@
+* *************************************************************
+* Globale Variablen          
+* Stadt Neukirchen-Vluyn					
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%STADT  =Stadt
+%%ORT    ="Neukirchen - Vluyn"
+%%ORT2   =Stadt_Neukirchen-Vluyn
+
+%%GKZ8   =????????
+
+* Variablen für Wohnungswesen
+
+%%KSU_NR =100
+%%KSU_DIR=ksu2000_krzn 
+%%RZ=KRZNMO
+%%RZ2=krzn
+%%MD1=NEVL
+%%GEM4=NEVL
+%%MD2=Stadt Neukirchen-Vluyn
+%%MD3=nevl
+%%LAUF=prod
+%%FW_MesoDatei=\\srv03.asp.rzne.de\KSU2000krzn$\SicherungProd\%%KSU_NR.\ewobewegung_mo_*.txt
+**FW_ImportDatei=\\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR.\kasse\%%KSU_NR._*.dat
+%%CTMFW=ctmfw -input c:\CTM_AV\Parm\KSU2000_FW_MESO_%%MD1..txt
+%%DELMESO=del \\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR.\meso\ewobewegung_mo_%%KSU_NR..txt

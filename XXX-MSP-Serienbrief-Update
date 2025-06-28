@@ -1,0 +1,75 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-MSP-Serienbrief-Update
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+**************************************************************************** 
+* Dokumenten Update
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+
+
+
+
+%%AUFTAGGEBER=S.Huennekes ab 04.2021
+
+
+* Anwender Serienbriefe nach MSP einspielen
+* Druck kann immer erzeugt werden.
+* wird aber nur auf Anforderung gebündelt.
+ 
+%%INDIR=\\srv03\ftp$\av\MSP\Serienbriefe\%%$ODATE
+%%OUTDIR=\\srv03\ftp$\av\MSP\Serienbriefe\%%$ODATE.\Druckdaten
+%%OUTDIR_PROCESSED=%OUTDIR.\printed
+%%USE_OUTDIR_PROCESSED=J
+
+
+
+
+* JAVA Variablen
+* Java Directories \\msbmcc03\CTM_AV\Bin\Java\MSP
+
+
+
+
+* Java Directories \\msbmcc03\CTM_AV\Bin\Java\MSP\Serienbrief
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\Serienbrief\PdfBrief-0.0.1-jar-with-dependencies.jar
+
+
+%%JAR_START=de.itk.projekte.pdf.brief.Start
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.05.2021  10:14:32  zv173x2 OYEAR.\%%OMONTH. in OYEAR.\%%OMONTH.
+
+
+*    25.05.2021  10:55:38  zv173x2 neue Jar übernommen
+*    03.05.2021  10:51:11  zv173x2 neue Jar File
+*    27.04.2021  11:51:10  zv173x2 neu aktuell nur Grevenbroich ohne Druck
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

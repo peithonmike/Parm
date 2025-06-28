@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Arbeiter-Lohnkonten-3200-Rename
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MGL-LOGA-RENAME-INIDATEI
+
+
+
+
+%%INDIR=\\vfmgapps\apps\Verfahren\Loga-Abrechnungen\Lohnkonten_Arbeiter
+
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga-Abrechnungen
+
+
+%%INIFILE=\\msbmcc03\ctm_av\Parm\MGL-LOGA-RENAME-INIDATEI-Arbeiter
+
+
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    13.12.2017  07:30:34  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

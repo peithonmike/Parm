@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-PRODOP-Import-Loga-AK04-1207
+* 
+* 
+*********************************************************** 
+ 
+* ersetzt DOR_Import_04
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\HUH\%%GEM.\LOGA
+%%OUTDIR=\\N200D01S29.dormagen.int.de\HH-Prog\Schnittstellen\ITKR\LOGA
+%%LOGFILE_AV=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+%%TEST=N
+%%DAT=AK04-1207
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Pläne\LOGA-Stand-20.06.2112.JPG 
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+* ------------------------------------------------------------------ 
+
+
+
+ 
+
+ 
+

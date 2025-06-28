@@ -1,0 +1,19 @@
+*****************************************************************************
+*   M A I L 
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*   möglich nur Empfänger %%EMAIL_T
+*           und Kopie     %%EMAIL_CC 
+*****************************************************************************
+*   Mailadressen 
+*   support-finanzen@itk-rheinland.de
+*****************************************************************************
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL_CC=
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL_U=Job-Nachricht CC:%%COMPSTAT  %%JOBNAME
+
+
+

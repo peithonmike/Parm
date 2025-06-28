@@ -1,0 +1,33 @@
+﻿*********************************************************** 
+* LIBMEMSYM 
+* ITK_Ping_W_MSWSUS02
+* Ist Server MSWSUS02 nach Reboot wieder aktiv ?
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+*%%SYSOUT=\\msbmcc03.itk.local\C$\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%SERVER=MSWSUS02
+%%COMMAND=C:\CTM_AV\Bin\Ping_Server.cmd
+%%NODEID=MSBMCC03
+
+%%OWNER=%%DOM.\controlm
+
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+%%MAIL02=itk.FB1_SB131_Windows
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Keine Weiteren Schritte nötig.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Ein Ping auf den Server %%SERVER nach einem Restart kam nicht durch.\r\n Bitte den Control/M-Agent-Dienst überprüfen!!!
+
+
+%%TEST=N
+

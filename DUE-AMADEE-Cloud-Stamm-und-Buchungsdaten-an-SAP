@@ -1,0 +1,64 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-AMADEE-Cloud-Stamm-und-Buchungsdaten-an-SAP
+* 
+* Verfahrenbetreung: Dagmar Sauer 02131 750-1537
+*********************************************************** 
+ 
+ 
+%%AUFTRAGGEBER=M.Keil 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=Amadee Stamm und Buchungsdaten (Soll) nach SAP kopieren
+%%RICHTUNG=Copy-from-Cloud
+
+
+
+%%U=AmadeeAV
+
+
+*---------------------------------------------------------------------------------
+#  Der Begriff secret-server wird im Job durch das verschlüsselte Passwort ersetzt 
+%%P=secret-server
+*---------------------------------------------------------------------------------
+* Eingabe Directory 
+* Directory in der Cloud
+* immer mit Laufwerksbezeichnung
+
+%%INDIR=X:\Musikschule\FromAmadee\%%GEM3
+
+* Datei Suchmaske
+%%INCLUDE=AMA_DUE*
+%%EXCLUDE="-"
+
+* Ausgabe Directory für die Solldaten
+**OUTDIR=\\msptv02\d$\PTV\Projekte\SAP_Export\Amadee_EDUE\InDir
+%%OUTDIR=\\msptv02\d$\Daten\AMADEE_EXXX\OutDir
+
+* Cloud Laufwerk
+%%LAUFWERK=X:
+ 
+* Dateien die in die Cloud geschrieben wurden 
+* nach erledigt verschieben
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+%%USE_PREFIX=N
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.05.2021  19:02:26  zv173x2 OUTDIR=\\msptv02\d$\PTV\Projekte\SAP_Export\Amadee_EDUE\InDir
+*    27.04.2021  11:59:10  zv173x2 1. Lauf geplant am 03.05.2021
+*    18.03.2021  07:35:19  ZV173X2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

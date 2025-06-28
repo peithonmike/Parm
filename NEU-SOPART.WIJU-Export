@@ -1,0 +1,40 @@
+Abgelöst durch  NEU-SOPART.WIJU-an-SFirm
+27.01.2014  12:13:22
+
+
+
+
+
+
+
+
+*************************************************************** 
+* LIBMEMSYM 
+* NEU-SOPART.WIJU-Export
+* 
+* SoPart® WiJu - Wirtschaftliche Jugendhilfe 
+* 
+* \\srv03.asp.rzne.de\qaspne$\daten\apps\sopart\avor\export-wiju
+* 
+*************************************************************** 
+* Abholen Daten aus dem Mandantenbereich in den Prodbereich
+* ------------------------------------------------------------
+*
+* Eingabe aus Mandantenbereich
+* Dateiname \\srv03.asp.rzne.de\qaspne$\daten\apps\sopart\avor\export-wiju\Sopart_Export_an_Kasse.txt
+*
+* Ausgabe im AV-Bereich
+* \\srv03.asp.rzne.de\ftp$\ne\sopart\wiju\export \sopart_export_neu.txt
+*************************************************************** 
+%%INDIR=\\srv03.asp.rzne.de\qaspne$\daten\apps\sopart\avor\export-wiju
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Pläne\SOPART\Sopart.jpg
+$$INCLUDE=\\srv03.asp.rzne.de\ftp$\ne\Sopart\Wiju\Export\protokol.dat
+$$INCLUDE=\\srv03.asp.rzne.de\ftp$\ne\Sopart\Wiju\Export\roboexp.txt
+* ------------------------------------------------------------------

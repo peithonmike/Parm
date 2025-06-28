@@ -1,0 +1,72 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-OPENFT-VUDAT-BAG-Anfragen-Senden
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job versendet Anfragen usw per OpenFT.
+* Nach erfolgreichem senden werden die Einagbedateien nach OUTDIR_PROCESSED verschoben (wird angelegt falls nicht vorhanden)
+* 
+* INDIR ist der Sendeordner
+* RKN greift auf diesen Ordner mit dem System ALVA über eine FTP Freigabe zu 
+*     und stellt die Daten selbstständig über FTP bereit 
+*
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-OpenFT-Senden.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+* 
+* Fehlermeldungen:
+* 
+* 169 Request <Request id>. Remote system: Transfer admission invalid Meaning:
+*     The command was not executed because the specifications in one of the transfer
+*     admission operands are incorrect or the request was rejected by FTAC because of
+*     insufficient authorization.
+*
+*     Measure: 
+
+*     Define the requisite transfer admission or correct it or check the authorization
+*     entered in FTAC. Repeat the command if necessary.
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* Eingabe Directory der Anfragen
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\BAG-FTP-RKN\senden
+
+* Datei Auswahl Maske
+%%INCLUDE=*.xml
+
+* Anschluss\Partner  LZPD,BZR usw 
+%%ANSCHLUSS=ftam://192.168.45.131:102
+
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+%%TRANSFER_ADMISSION=FtDpzPf7
+
+%%CRYPT=N
+ 
+
+*  Speicherort für gesendete Anfragen
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\BAG-FTP-RKN\senden\gesendet
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    06.12.2018  13:02:22  zv173x2 CRYPT=N
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

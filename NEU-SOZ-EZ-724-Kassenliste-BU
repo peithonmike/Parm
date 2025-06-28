@@ -1,0 +1,84 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ-EZ-724-Kassenliste-BU
+* 
+* 
+*********************************************************** 
+ 
+
+
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-SOZ-EZ
+ 
+
+* ---------------------------------------------------------------
+* PDF_MASK Auswahl Maske 	Include Exclude
+* ---------------------------------------------------------------
+%%INCLUDE=*ANOR_EZ-2%%SOZ_GKZ.*,*BALI_EZ-2%%SOZ_GKZ.*,*BUHL_EZ-2%%SOZ_GKZ.*,*BULI_EZ-2%%SOZ_GKZ.*,*VERL_EZ-2%%SOZ_GKZ.*,*MAZE_EZ-2%%SOZ_GKZ.*
+**INCLUDE=*ANOR_EZ-2%%SOZ_GKZ.*,*BALI_EZ-2%%SOZ_GKZ.*,*BUHL_EZ-2%%SOZ_GKZ.*,*BULI_EZ-2%%SOZ_GKZ.*
+%%EXCLUDE="-"
+
+
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+* ---------------------------------------------------------------
+%%PDF_FILENAME=%%GEM3.-SOZ-EZ-%%SOZ_GKZ.-Kassenliste-%%$ODATE.-BU.PDF
+
+* Die Cover müssen je nach Empfänger angegeben werden
+* alle anderen Angaben sollten aus dem Jobnamen lesbar sein.....   siehe Member: BUENDEL
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\AAA-%%GEM3.-SOZ-EZ-%%SOZ_GKZ.-Kassenliste.pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\ZZZ-%%GEM3.-SOZ-EZ-%%SOZ_GKZ.-Kassenliste.pdf
+
+
+* ---------------------------------------------------------------
+* ANZAHL
+* Anzahl der Ausdrucke 
+* Standard =1
+* ---------------------------------------------------------------
+%%ANZAHL=1
+
+
+* ---------------------------------------------------------------
+* Hotfolder FreeFlow
+* ---------------------------------------------------------------
+%%FREEFLOW_HOTFOLDER=%%SOZ_EZ_LISTEN_DRUCKER
+
+
+
+
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden  Variablenwerte angezeigt
+%%DEBUG=N
+
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+%%TEST=N
+
+%%ONLY_BUENDEL=N
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.01.2019  16:13:48  zv173x2 maze1 in maze 024  
+*    03.07.2014  11:44:18  zv173x2 kassenliste erweitert vorher nur maze1
+*    10.06.2014  11:22:19  zv171e1 Anzahl auf schriftlichen Wunsch Kaummanns von 2 auf 1  
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-AUTISTA-T-COPY-SRV03
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\msautista01.itk.local\import$\*.xml
+%%ausdat1=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\TC_Import\
+%%ausdat2=\\msautista01.itk.local\import$\verarbeitet\
+
+%%COMMAND=ctmfw -input \\msbmcc03\ctm_av\PARM\AUTISTA_FW.txt
+
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de;
+%%MAILSB22=m.hurtz@outlook.com
+%%BETREFF_OK=FileTransfer Autista-Daten %%GEM3. OK
+%%BETREFF_NOTOK=FileTransfer Autista-Daten %%GEM3. NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der Autista-Daten %%GEM3. nach \\srv03.asp.rzne.de\qaspdf$\Daten\Apps\TC_Import\ ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der Autista-Daten %%GEM3. nach \\srv03.asp.rzne.de\qaspdf$\Daten\Apps\TC_Import\ ist NOTOK.
+

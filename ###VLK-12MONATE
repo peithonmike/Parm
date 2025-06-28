@@ -1,0 +1,13 @@
+*
+* LIBMEMSYM
+* Aufruf   ermittelten kompletten Monataszeitraum 12 Monate zurück
+*
+*
+*
+* TYP 13   
+* Lauf findet Mitte des Monats statt und wertet den 12.Monat zurück aus
+* 
+
+
+%%datum_von           =01.%%MM_M13_%%$ODATE...%%JJJJ_MM_M13_%%$ODATE
+%%datum_bis           =%%LD_MM_M13_%%$ODATE...%%MM_M13_%%$ODATE...%%JJJJ_MM_M13_%%$ODATE 

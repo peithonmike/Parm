@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-OK.EWO-DelFiles-ErwBewegungsstatistik
+* 
+%%APPLICATION=OK.EWO
+%%SUBAPPLICATION=OK.EWO-DelFiles
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+*Variabeln werden als Umgebungsvariabeln definiert und im Script ausgelesen.
+%%PFAD=\\srv03\QASPKDVZ$\Daten\Apps\ftp\av\OK.EWO\Statistik
+%%UV="Ja"
+%%Tage=400
+%%Test="NEIN"
+%%Time="LastWriteTime" 
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\XXX-DeleteFiles.ps1 -Pfad %%PFAD -Tage %%Tage -UV %%UV  -Test %%Test -Time %%Time
+
+
+*%%MAILSB13=produktions-steuerung@itk-rheinland.de;
+
+*%%BETREFF_OK=
+*%%BETREFF_NOTOK=
+
+*%%TEXT_OK=
+*%%TEXT_NOTOK=
+
+* ------------------------------------------------------------------
+* Dokumentation zur Verarbeitung
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\DUE-OK.EWO-DelFiles-Statistik.pdf
+* ------------------------------------------------------------------
+

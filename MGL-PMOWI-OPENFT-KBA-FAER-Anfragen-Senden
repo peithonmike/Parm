@@ -1,0 +1,82 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-PMOWI-OPENFT-KBA-FAER-Anfragen-Senden
+* 
+* 
+*********************************************************** 
+ 
+
+*\\msbmcc03\ctm_av\doc\Auftragsbeschreibung\KBA-Dateinamen-FAER.jpg
+--------------------------------------------------------------------------------------------------
+* Job versendet Anfragen usw per OpenFT.
+* Nach erfolgreichem senden werden die Einagbedateien nach OUTDIR_PROCESSED verschoben (wird angelegt falls nicht vorhanden)
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+%%DESCRIPTION=FAER Anfragedateien der %%STADT %%ORT mit OpenFT an das KBA   senden
+%%DESCRIPTION1=Job wird normaler Weise geforced wenn Daten zum Senden vorhanden sind
+%%DESCRIPTION2=cc 108 und cc 213 lösen einmalig einen RERUN aus
+
+
+%%AUFTRAGGEBER=W.Klerx
+
+
+* Eingabe Directory der Anfragen
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\%%GEM3.\PMOWI
+*  Speicherort für gesendete Anfragen
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\gesendet\%%GEM3.\%%$OYEAR.\PMOWI\%%ODATE
+
+%%OPTIONEN=-b -n -c -k
+
+
+
+
+***********************************************************************
+* P R O D  ************************************************************
+***********************************************************************
+* Anschlus Partnere
+* Zugriff Berechtigung
+* Datei Maske 
+%%ANSCHLUSS=KBA
+%%TRANSFER_ADMISSION=RZJu84pTPN
+%%INCLUDE=faeranf_%%KBA_NR.*
+***********************************************************************
+
+
+
+***********************************************************************
+* T E S T  Überschreibt Prod  *****************************************
+***********************************************************************
+* Anschlus Partnere    Test 
+* Zugriff Berechtigung Test
+* Datei Maske          Test    
+*%%ANSCHLUSS=KBATEST
+*%%TRANSFER_ADMISSION=19629FAN
+*%%INCLUDE=faeranf_19629_*
+***********************************************************************
+
+
+
+
+
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+ 
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.03.2021  00:07:50  zv173x2 neu als PMOWI
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

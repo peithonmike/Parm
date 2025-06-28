@@ -1,0 +1,16 @@
+﻿*********************************************************** 
+* LIBMEMSYM 
+* ITK-System-CTMRUNINF
+* Statistik über gelaufene Jobs des Vortages
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%CSV=\\vfcache\av\Daten\ControlM\SYSTEM\Job_Tagesstatitistik_D%%JJJJMMTT_TT_M1_%%$ODATE...csv
+
+%%COMMAND=ctmruninf -list %%JJJJMMTT_TT_M1_%%$ODATE..000000 %%JJJJMMTT_TT_M1_%%$ODATE..235959

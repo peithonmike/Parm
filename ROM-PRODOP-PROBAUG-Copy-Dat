@@ -1,0 +1,73 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-PRODOP.FIM-Copy-Buchungen
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRODOP 
+
+
+
+
+
+
+%%INDIR=\\vfapps\apps\%%GEM.\ProBauG\Kasse
+**INFILE=Rom%%$ODATE.*.dat
+%%INFILE=Rom%%ODAY..%%OMONTH..%%$OYEAR..*.dat
+
+* %%INPUT_DIR wird im Member Prodop definiert
+* \\srv03\qasp%%GEM.$\Daten\Apps\HH\Protokolle\Import\Fim
+
+%%OUTDIR=%%INPUT_DIR
+%%OUTFILE=Probaug_%%$ODATE..txt
+
+%%OUTDIR_PROCESSED=\\srv03\qasp%%GEM.$\Daten\Apps\FIM\FIBU\Export\erledigt
+**OUTDIR_PROCESSED=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\HUH\ROM\temp_outdir
+**OUTFILE_PROCESSED=%%INFILE
+%%OUTFILE_PROCESSED=Rommerskirchen_%%$ODATE..dat 
+
+%%STEPNAME=Kopieren-PROBAUG-Daten
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden mehr Variablenwerte angezeigt
+%%DEBUG=N
+* ------------------------------------------------------------------
+
+
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avCopy-Move-File.ps1
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

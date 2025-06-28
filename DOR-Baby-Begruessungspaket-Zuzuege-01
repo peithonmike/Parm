@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-Zuzuege-01
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+
+
+%%TERMIN="1.Tag im Monat "  
+%%REPORT=Jobs\Auswertungen\Reportverwaltung\EWO Standardauswertungen\
+%%REPORT2=Standard\Einwohner\D_ZUGEZOGENE 
+
+%%VON1=01.%%MM_M1_%%$ODATE...%%JJJJ_MM_M1_%%$ODATE   
+%%BIS1=%%LD_MM_M1_%%$ODATE...%%MM_M1_%%$ODATE...%%JJJJ_MM_M1_%%$ODATE 
+%%VLK1=Zuzugsdatum    %%VON1.-%%BIS1
+
+%%VON2=01.10.2006   
+%%BIS2=%%LD_MM_M1_%%$ODATE...%%MM_M1_%%$ODATE...%%JJJJ_MM_M1_%%$ODATE  
+%%VLK2=Gebutszeitraum %%VON2.-%%BIS2
+
+
+%%HINWEIS="Sort nach Name und auch nichtdeutsche "
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+
+
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+*  Druckvorlage
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\OKEWO-AUFTRAG.skels
+$$INCLUDE=%%PRT_SKELS
+
+*
+

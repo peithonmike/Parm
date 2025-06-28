@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SCHUL-Ausw-Delete-File
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+*%%INFILE=\\vfdusalt\40\Amt40\Themen\Statistik\Schulen\Logineo-Email-Adressen-nach-Straﬂen\2019-02\.csv
+
+%%INFILE=\\vfdusalt\40\Amt40\Themen\Statistik\Schulen\DUE-SCHUL-Ausw-Woche-Schuelerzahlen-pro-Schule-und-Jahrgang_2019-20190211.CSV
+%%TEST=N
+%%DEBUG=N

@@ -1,0 +1,44 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : KOR                                                                  *
+***********************************************************************************
+*  Jobname     : KOR-DTA-Bundeswehr-DTAERFBW
+*  Description : DTA-Bundeswehr-DTAERFBW
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###-DTA-Bundeswehr-DTAERFBW
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%STICHTAG *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=4793-E01U0000
+*
+%%OKEWO_NR=P4793
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=DTA-Bundeswehr-DTAERFBW
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U27511#A1_N.E01DUMMY#F#A2_N.E01DUMMY#T#A3_N.E01DUMMY#F#A4_N.E01DUMMY#F#GKB.E01E300#1#DATUM_N.E01DUMMY#%%STICHTAG#V_UZ331_LISTE.E01DUMMY#$$

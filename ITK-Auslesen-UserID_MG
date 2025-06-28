@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-Auslesen-UserID_MG
+
+* 
+*********************************************************** 
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DruckerPfad=\\msbmcc03\ctm_av\Drucker\
+
+%%COMMAND=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "\\Msaip01\ctm_av$\Bin\PS\GG-XX-P-Basic\groups_gg-mg-p-basic.ps1"
+
+
+
+*\\vfitk\daten\Daten\FB1\SB1-3\SB1-3-4\a_sqlserver\SQL\accounting_itk\Internet_MG
+*A69ANwbM$ZhL
+*f-zv-vadmhcm

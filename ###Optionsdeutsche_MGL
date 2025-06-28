@@ -1,0 +1,11 @@
+*
+* LIBMEMSYM
+* Ausrechnen einer Variablen ODATE - 252 Monate (laufender Monat - 21 Jahre) geändert 2.12.2011/BS
+*
+* für alle anderen Gemeinden wird das Member ###Optionsdeutsche herangezogen (nächster Monat - 21 Jahre) 
+* im Format JJJJMMTT  
+
+
+%%GEBDAT_VON=%%JJJJ_MM_M252_%%$ODATE..%%MM_MM_M252_%%$ODATE..01
+
+%%GEBDAT_BIS=%%JJJJ_MM_M252_%%$ODATE..%%MM_MM_M252_%%$ODATE..%%LD_MM_M252_%%$ODATE.

@@ -1,0 +1,46 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : DUE                                                                  *
+***********************************************************************************
+*  Jobname     : DUE-DTA-Kiwo
+*  Description : DTA-Änderungsabzug Abholer KIWO
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+
+
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME  *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=19405-E01U0000
+*
+%%OKEWO_NR=P19405
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=DTA-Änderungsabzug Abholer KIWO
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01ULMGJOBAE#PARAM_LISTE.TMP#GKB=1GS=05111000ABHOLER_ID=11AUFRUFENDER=DIALOGOKKOMM_VERSAND=FABZUGSTYP=Änderungen#V_UZ331_LISTE.E01DUMMY#$$
+*

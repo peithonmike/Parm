@@ -1,0 +1,51 @@
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+* W I N O W I G 
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-OPENFT-KBA-Halter-Antworten-Move
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* OpenFT Partner / Anschluss 
+* BAG, BZR,LZPD..... 
+%%ANSCHLUSS=KBA
+
+* SENDEN oder EMPFANGEN 
+%%RICHTUNG=HOLEN
+
+* Eingabe Directory 
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL\%%$ODATE
+
+
+* Datei Auswahl
+%%INCLUDE=%auskunft_*_*10044*
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\eingang\kba\
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+%%TEST=N
+%%DEBUG=N
+
+
+*PMOWI %%OUTDIR=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_vom_KBA
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.02.2021  10:46:34  zv173x2 neu ab 01.03.2021 nimmt MGL an Winowig teil
+*                                      hier anpassung der PMOWI Jobs an Winowig
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

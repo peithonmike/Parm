@@ -1,0 +1,44 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-JAGD-BZR-Anfragen-FW
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JAGD
+%%WATCH_DESC=Überwachen JagdregisterVerzeichnis nach BZR Anfragen
+%%WATCH_DIR=%%JAGD_BZR_EXPORT
+%%WATCH=AB-U0752-*.txt
+
+
+%%WATCH_MAX=1800
+%%WATCH_WAIT=3600
+%%WATCH_FORCE_SCHEDULE=JAGD.OPENFT-BZR-Anfragen
+%%WATCH_FORCE_JOBNAME=*
+
+%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL-U=%%JOBNAME Filewatcher hat ausgelöst
+
+
+ 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    12.12.2013  13:13:12  zv173x2 komplett auf CTM Filewatcher umgestellt
+*    
+*    
+*    01.03.2012  11:37:31  zv171e1 
+*    26.08.2011  17:41:49  zv173x2 Watch von *.* in AB-U0752-*.txt
+*                                  da Jagd und ZSTV im BZR Ordner liegen sollen.
+*    18.02.2011  12:30:42  ZV173X2 Leerzeilen am Ende entfernt CTM BUG
+*    16.02.2011  09:27:01  ZV173X2 EMAIL
+*    16.02.2011  08:46:45  ZV173X2 WAIT 3600
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\FW_OPENFT.csv
+* ------------------------------------------------------------------

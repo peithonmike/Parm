@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-Check-Import-Directory
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%TEST=N
+%%DEBUG=N 
+%%AUFTRAGGEBER=A.Hillebrands
+
+*     05.07.2018  15:00:45  zv173x2 AUFTRAGGEBER=A.Hillebrands
+
+%%MAIL_T=produktions-steuerung@itk-rheinland.de
+%%MAIL_CC=andreas.hillebrands@itk-rheinland.de
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.03.2021            ZV173X2 Ab sofort ist MGL dabei
+*    17.03.2021  08:30:38  ZV173X2 job muss wegen MGL mit User WINOWIGAV laufen
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

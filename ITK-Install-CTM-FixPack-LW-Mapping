@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-System-InstallFP-Agent-Update
+* Installation FixPack
+* 
+***********************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\InstallFixPack
+
+%%BETREFF_OK=LW-Mapping auf %%SERVER OK
+%%BETREFF_NOTOK=ACHTUNG!!! LW-Mapping auf %%SERVER NOTOK
+
+%%TEXT_OK=Joblog:     Das LW-Mapping auf %%SERVER war erfolgreich.     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+%%TEXT_NOTOK=Joblog:     Das LW-Mapping auf %%SERVER wurde nicht ausgeführt.     Returncode=%%OSCOMPSTAT     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+
+%%TEST=N

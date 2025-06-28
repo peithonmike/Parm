@@ -1,0 +1,52 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-PRODOP-Check-Saperion-Log
+* 
+* 
+*********************************************************** 
+%%TEST=N
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+ 
+* zu durchsuchende Datei 
+%%LOGDATEI=error.log
+
+* Orner für Saperion Logdateien
+%%ORDNER=\\srv03.asp.rzne.de\qaspgr$\daten\apps\hh\hkr\work\archiv-austausch\log
+
+* Vergleichsmeldungen
+%%FEHLERMELDUNGEN=\\msbmcc03\ctm_av\PARM\GRE-SAPERION-PRODOP-MESSAGES.txt
+
+*****************************************************************************
+*   Im Fehlerfall CC=8 werden die Ansprechpartner benachrichtigt  
+*   der Job endet trotzdem mit OK
+*****************************************************************************
+*   M A I L 
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*   möglich nur Empfänger %%EMAIL_T
+*           und Kopie     %%EMAIL_CC 
+*****************************************************************************
+*   Mailadressen 
+*   support-finanzen@itk-rheinland.de
+*****************************************************************************
+%%EMAIL_T=support-finanzen@itk-rheinland.de
+
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL_U=Job-Nachricht CC:%%COMPSTAT  %%JOBNAME
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\Vsrv27\c$\temp\GRE-PRODOP-Check-Saperion-Log.tmp
+$$INCLUDE=\\srv03.asp.rzne.de\qaspgr$\daten\apps\hh\hkr\work\archiv-austausch\log\error.log
+* ------------------------------------------------------------------

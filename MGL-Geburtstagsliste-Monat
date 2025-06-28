@@ -1,0 +1,74 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : MGL                                                                  *
+***********************************************************************************
+*  Jobname     : MGL-Geburtstagsliste-Monat
+*  Description : MGL-Geburtstagsliste Gebietstyp 503!! 
+*  Ausgabe     : Copy in Mandantenbereich  
+*                \\srv03.asp.rzne.de\qaspMG$\Daten\Apps\OKEWO\okprg\okewo_MGL\div\Daten_MG
+***********************************************************************************
+*  Achtung !!                                                                     *
+*  %%JOBTEXT=%%OKEWO_NR CTM-%%ID.-%%RUNNR ist Standard, kann aber erweitert werden *
+***********************************************************************************
+*
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\OKEWO
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE    =6287-E01U0000
+*
+%%OKEWO_NR      =P6287
+*
+
+%%VON           =01.%%MM_P2_%%$ODATE...%%JJJJ_MM_P2_%%$ODATE
+%%BIS           =%%LD_MM_P2_%%$ODATE...%%MM_P2_%%$ODATE...%%JJJJ_MM_P2_%%$ODATE
+
+%%VON2          =01.%%MM_P2_%%$ODATE..%%JJJJ_MM_P2_%%$ODATE
+%%BIS2          =%%LD_MM_P2_%%$ODATE..%%MM_P2_%%$ODATE..%%JJJJ_MM_P2_%%$ODATE
+
+
+%%ODATE_P       =%%TTMMJJJJP_%%$ODATE
+%%ODATE_WDAY    =%%WDAY_%%$ODATE
+
+
+%%JOBTEXT        =%%OKEWO_NR CTM-%%ID.-%%RUNNR Geburtstagsliste %%VON - %%BIS
+%%LISTE1_ACTION =C
+%%LISTE1         =%%OKEWO_ROOT.\CTM\ALTERSJUBILARE_%%VON2.-%%BIS2..dbl
+%%LISTE1_TARGET  =%%OKEWO_ROOT.\div\Daten_MG\Geburtstagslisten\Altersjubilare_%%VON2.-%%BIS2..dbl
+%%LISTE2_ACTION  =C
+%%LISTE2         =%%OKEWO_ROOT.\CTM\ALTERSJUBILARE_%%VON2.-%%BIS2..sts
+%%LISTE2_TARGET  =%%OKEWO_ROOT.\div\Daten_MG\Geburtstagslisten\Altersjubilare_%%VON2.-%%BIS2..sts
+%
+
+%
+%%OVERWRITE      =N
+*
+%%USE_CHECKBAT=N
+
+
+
+%%SENDMAIL       =N
+
+%%EMAIL-T        =Walter.Klerx@Moenchengladbach.de
+%%EMAIL-BCC      =Produktions-Steuerung@itk-rheinland.de;okewo@moenchengladbach.de
+
+%%EMAIL-U        =%%JOBNAME %%VON - %%BIS ist erstellt
+*%%EMAIL-A       =%%LISTE1
+
+* Message
+%%EMAIL-M        =Speicherort:  \n %%LISTE1_TARGET \n
+
+
+* Inhalt der OKEWO-VLK Datei (6287-E01U0000.txt) mit Variablen 
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U19603#A_VON_N.E01DUMMY#%%VON#A_BIS_N.E01DUMMY#%%BIS#A_TRENNER_N.E01DUMMY#;#A_AUSWAHL_N.E01DUMMY#1#A_SPERREN_N#JNJJNJNNNN__NNNNN_NN1#A_GEBIETSTYP_N.E01DUMMY#503#A_GEBIET1_N.E01DUMMY#1011#A_GEBIET2_N.E01DUMMY#4097#A_NWJN.E01DUMMY#N#A_IQDRUCK_N.E01DUMMY#N#A_BEGRIFF_N.E01DUMMY#Vorzimmer OB#AUSG_FILE.E01DUMMY#%%LISTE1#V_UZ331_LISTE.E01DUMMY#$$
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.10.2011  15:42:45  zv171e1 Gebiet von 1 bis 10 in 1011 bis 4097
+*    04.10.2011  15:20:08  ZV173X2 Bezirk 511 in 503
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+%%TEST=N

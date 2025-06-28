@@ -1,0 +1,38 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : ITK-BeihilfeNRW-SQL_2
+* erstellt : 23.11.2011 14:27:51
+*    durch : zv173xc
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%TEST=N
+*
+* Config-Datei
+%%CONFIG= 
+* Input-Datei
+%%CSV=\\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\BeihilfeNRW\csv_temp_1.csv
+* Datenbank
+%%DB=jasperjob
+* SQL-File
+%%SQL=\\msbmcc03\ctm_av\Parm\sql_temp_1.sql
+*Tabelle
+%%TABLE=beihinrw_tmp_1
+* JAVA
+%%JAR=\\msbmcc03\ctm_av\Bin\Java\CsvToSql.jar
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\ITK-BeihilfeNRW.pdf
+* ------------------------------------------------------------------

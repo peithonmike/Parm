@@ -1,0 +1,26 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-AltePost-T-ASC2ANSI
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\SQLBasysAP\Transfer\host.dat
+
+%%ausdat=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\SQLBasysAP\Transfer\host_ansi.dat
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+%%MAIL01=guido.coenen@itk-rheinland.de
+%%BETREFF_OK=ASC2ANSI für AltePost %%GEM3.  OK
+%%BETREFF_NOTOK=ASC2ANSI für AltePost %%GEM3. NOTOK
+
+%%TEXT_OK=Joblog: ASC2ANSI für AltePost %%GEM3.  OK
+%%TEXT_NOTOK=Joblog: ASC2ANSI für AltePost %%GEM3. NOTOK.

@@ -1,0 +1,41 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant :    alle                                                              *
+***********************************************************************************
+*  APPLICATION : WAF.OPENFT 
+*  Description : BZR-ANTWORTEN(IMPORT?)
+***********************************************************************************
+***********************************************************************************
+* Antworten vom ZSTV für die Waffen und Sprenstoffverwaltung
+*
+
+
+* BFJ_ID des Mandanten übernehmen 
+%%BFJ_ID=%%BFJ_ID_WAF
+
+
+%%RICHTUNG=Antwort
+
+
+* zu kopierende  Files werden anhand des Suchbegriffes ermittelt
+%%SEARCH=U0752.A*%%BFJ_ID
+
+
+
+* Input_dir ist die Directory, die auf dem OpenFT Server liegt
+* Dahinein schreibt das BfJ (BZR) die Antworten auf die Anfragen
+%%INPUT_DIR=%%JAGD_BZR_DIR_ANTWORT
+
+
+
+* Output_dir ist die Empfangsdirectory des Anwenders im Verfahren  
+%%OUTPUT_DIR=%%JAGD_BZR_IMPORT
+
+
+
+
+%%SYSOUT          =%%OPENFT_SYSOUT
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+*
+

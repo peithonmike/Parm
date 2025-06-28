@@ -1,0 +1,39 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-move-AOWI
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG_MOBIL-INFO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* AOWI-Fälle: 
+%%INDIR=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\eingang\winowigmobilexport
+
+
+%%INCLUDE=XMLMDE_AOWI*.ZIP
+%%EXCLUDE="-"
+
+* 
+          
+
+%%OUTDIR=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\eingang\AOWi 
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+%%TEST=N
+%%DEBUG=N
+%%AUFTRAGGEBER=A.Hillebrands
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    02.03.2021  09:22:16  zv173x2 neu ob der Job je gebraucht wird ist noch nicht klar
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

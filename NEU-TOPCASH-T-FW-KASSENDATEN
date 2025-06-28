@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-TOPCASH-T-FW-KASSENDATEN
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\Topcash\KIRP_EXPORT\TCtoKIRP*.txt
+%%ausdat1=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\Topcash\KIRP_EXPORT\KIRP_Verarbeitet\
+%%ausdat2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TopCash\%%GEM3._TCtoKIRP%%OYEAR.%%OMONTH.%%ODAY..txt
+
+
+%%Schedtab=NEU-TOPCASH
+%%Job1=NEU-TOPCASH-T-FTP-HOST
+%%Job2=NEU-TOPCASH-T-DEL-KASSENDATEN
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=dieter.assenmacher@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer TopCash-Daten %%GEM3. nach KIRP OK
+%%BETREFF_NOTOK=FileTransfer TopCash-Daten %%GEM3. nach KIRP NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der TopCash-Daten %%GEM3. ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der TopCash-Daten %%GEM3. ist NOTOK.

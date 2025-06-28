@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-P63-T-FW-KASSENDATEN
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\srv03.asp.rzne.de\qaspka$\Daten\Apps\P63-Baugenehmigung\KIRP_EXPORT\TCtoKIRP*.txt
+**ausdat2=\\msptv01.itk.local\ptv-projekte\hizadrs_sap\indir
+%%ausdat2=\\msptv02.itk.local\ptvprojekte$\SAP_Export\HIZADRS_EXXX\indir
+%%ausdat1=\\srv03.asp.rzne.de\qaspka$\Daten\Apps\P63-Baugenehmigung\KIRP_EXPORT\KIRP_Verarbeitet\TCtoKIRP*.txt
+
+rem Schedtab=KAA-P63
+rem Job1=KAA-P63-T-FTP-PTV
+rem Job2=KAA-P63-T-DEL-KASSENDATEN
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer P63-Baugenehmigung-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer P63-Baugenehmigung-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der P63-Baugenehmigung-Daten %%GEM3. zum PTV-Server ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der P63-Baugenehmigung-Daten %%GEM3. zum PTV-Server ist NOTOK.

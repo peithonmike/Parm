@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-Check-Ist
+* 
+* 
+*********************************************************** 
+ 
+%%DEBUG=N
+%%TEST=N
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+%%MAIL_T=Andreas.Hillebrands@itk-Rheinland.de
+*%%MAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+%%MAIL_CC=Produktions-Steuerung@itk-rheinland.de
+%%MAIL_CC=
+
+%%MAIL_U=%%JOBNAME  %%ODATE_P  Fehlerliste Ist-Zahlungen
+
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avWINOWIG-Check-IstZahlungen.ps1
+$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\MODULE\LoadModule.ps1
+$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\Module\Module-Global-V0.psm1         
+$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\Module\Module-Info-V0.psm1            
+$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\Module\Module-Job-V20141023.psm1            
+$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\Module\Module-Check-Server-V0.psm1    
+$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\Module\Module-Check-Variable-V0.psm1
+$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\Module\Module-Files-V20141023.psm1          
+$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\Module\Module-Spezial-V0.psm1        
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.05.2015  07:43:16  zv173x2 powershell ohne bat
+*    17.11.2014  07:23:43  zv173x2 lieven mail_CC RAUS
+*    23.10.2014  16:29:07  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

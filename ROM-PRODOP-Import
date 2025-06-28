@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-PRODOP-Import
+* 
+* Kopieren 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\HUH\RO
+%%OUTDIR=\\N200D01S29.dormagen.int.de\HH-Prog\Schnittstellen_Roki\ITKR_Roki
+
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\WINOWIG-DOR-Datenbereitstellung.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Winowig\DOR-PRODOP-Import.jpg
+* ------------------------------------------------------------------
+

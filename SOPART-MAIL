@@ -1,0 +1,25 @@
+*****************************************************************************
+*   S O P A R T - M A I L 
+*   Im Fehlerfall werden die Ansprechpartner benachrichtigt   
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*   möglich nur Empfänger %%EMAIL_T
+*           und Kopie     %%EMAIL_CC 
+*****************************************************************************
+*   Mailadressen 
+*;Reinhard.Baier@ITK-Rheinland.de;Produktions-Steuerung@itk-rheinland.de
+*****************************************************************************
+%%EMAIL_T=Daniel.Mendoza@itk-rheinland.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL_U=Job-Nachricht CC:%%COMPSTAT  %%JOBNAME
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.07.2020  13:39:32  zv171e1 mendoza
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

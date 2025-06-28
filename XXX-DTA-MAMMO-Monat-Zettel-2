@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-DTA-MAMMO-Monat-Zettel-2
+* DUE, MGL
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###Mammographie-Screening
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+%%TEST=N
+
+*  Druckvorlage
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\NACH-DTA-MAMMO-Monat-2.skels
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\NACH-DTA-MAMMO-Monat-2.skels
+d
+

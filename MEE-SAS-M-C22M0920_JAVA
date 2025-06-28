@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SAS-M-C22M0920_JAVA
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%TEST=N
+
+%%einA=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUND\SAS_Eingabe\C22M0920_EingabeA.txt
+%%einB=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUND\SAS_Eingabe\C22M0920_EingabeB.txt
+
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUND\SAS_Ausgabe\C22M0920_Ausgabe.txt
+
+
+
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\SAPHD4.jar -EingabeA %%einA -EingabeB %%einB -Ausgabe %%OUTFILE1
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.07.2013  12:45:36  zv173x2 neu angelegt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

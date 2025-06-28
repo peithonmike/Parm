@@ -1,0 +1,45 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-MZ-BESCHEIDE-Copy
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+ 
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+%%INDIR=\\Msprintff01\source$\SOZ-DUE
+
+%%OUTDIR=\\vfdusalt\10\amt10\Loga_PBS-Druck\Sozialwesen
+
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-DUE\kopiert
+
+
+%%STEPNAME=Kopieren-EZ-Druckdaten
+%%INCLUDE=TEST.PDF
+%%EXCLUDE="-"  
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=J
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    31.07.2014  13:28:59  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

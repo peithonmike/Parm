@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-TEST-NetUse
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+* NetUse Security aktivieren immer J 
+%%NETUSE_S=J
+* NetUse Security User
+* siehe Schreibweise bei Domäne
+*
+*Servername :    lxsftp.itk.local
+*User:                tiduebahn
+
+%%U=tiduebahn@lxsftp.itk.local
+* NetUse Pfad 
+%%NETUSE_PATH=\\lxsftp.itk.local\Daten
+* NetUse Laufwerk X: Y: oder wie auch immer 
+%%LAUFWERK=Y:
+       
+
+%%TEST=J
+%%DEBUG=J

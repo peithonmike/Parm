@@ -1,0 +1,9 @@
+%%OWNER=ITK\controlm
+
+%%COMMAND=\\msbmcc03\ctm_av\bin\bat\
+
+%%BETREFF_OK=Stoppen der Dienste auf dem Server %%SERVER OK
+%%BETREFF_NOTOK=ACHTUNG!!! Stoppen der Dienste auf dem Server %%SERVER NOTOK
+
+%%TEXT_OK=Joblog:     Das Stoppen der Dienste auf dem Server %%SERVER ist ohne Fehler geendet.     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+%%TEXT_NOTOK=Joblog:     Dass Stoppen der Dienste auf dem Server %%SERVER ist mit einem Fehler geendet.     Returncode=%%COMPSTAT     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.

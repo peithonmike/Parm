@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-EWO-J-Personen-ohne-Ausweisdokumente-PDF-erzeugen-und-COPY
+* PDF Datei erzeugen und beim Kunde speichern
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+%%AUFTRAGGEBER=Michael Peiffer, 02181 / 608 - 3399, Michael.Peiffer@Grevenbroich.de
+ 
+
+*   neue Version mit Verarbeitug durch Python -- 30.01.2024  zvaa405
+
+%%docx_template=\\msbmcc03\CTM_AV\OK.EWO\GRE\Personen-ohne-Ausweisdokumente-jaehrlich\05162008_Serienbrief_Person_kein_Dokument.docx
+%%csv_datei=\\msbmcc03\CTM_AV\OK.EWO\GRE\Personen-ohne-Ausweisdokumente-jaehrlich\SQLCMD.csv
+%%temp_folder=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\GRE-EWO-J-Personen-ohne-Ausweisdokumente\tmp
+%%combined_file=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\GRE-EWO-J-Personen-ohne-Ausweisdokumente\05162008_Serienbrief_Person_kein_Dokument.docx
+%%pdf_file=\\srv03\qaspgr$\Daten\Apps\OKEWO\ITK-Rheinland-Output\05162008_Serienbrief_Person_kein_Dokument.pdf
+
+
+
+
+
+%%python_exe=C:\Users\a-zvaa405\AppData\Local\Programs\Python\Python312\python.exe
+
+%%python_script=\\msbmcc03\CTM_AV\Bin\Python\CF\Mailmerger.py
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Mailmerge_Call_Python.ps1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\OK.EWO\GRE\Personen-ohne-Ausweisdokumente-jaehrlich\05162028_person_kein_Dokument.ps1
+
+
+%%MAIL_OK=buergerbuero@grevenbroich.de;okewo@itk-rheinland.de
+
+
+%%BETREFF_OK="Personen ohne Dokumente - jaehrlich"
+%%TEXT_OK="Die Datei ist fertig und liegt unter \\srv03\qaspgr$\Daten\Apps\OKEWO\ITK-Rheinland-Output "
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT_NOTOK=Bitte ueberpruefen
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    02.01.2023  12:00:00  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

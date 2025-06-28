@@ -1,0 +1,32 @@
+* LIBMEMSYM 
+*
+* Server  MSOPENFT01
+*
+*ITK
+%%UEBERTRAGENDESTELLE=K05-08
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%NCOPY_EXE=\\MSopenFT01\C$\Program Files (x86)\openFT\bin\ncopy.exe
+
+* NCOPY-Befehl für mehrere Dateien abholen 
+%%FTMGET_EXE=\\MSopenFT01\C$\Program Files (x86)\openFT\bin\ft_mget.exe
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\OPENFT01-%%$OYEAR..csv
+
+
+* RICHTUNG 
+* SENDEN und HOLEN ist aktiv von der ITK
+* EMPFANGEN ist aktiv der Parner 
+* 
+%%RICHTUNG=SENDEN
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*     11.05.2017  11:39:00  zv173x2  Beschreibung senden empf.......
+*     08.05.2017  12:58:43  zv173x2  FTMGET_EXE
+*     30.03.2017  09:16:54  zv173x2  UEBERTRAGENDESTELLE=K05-08
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

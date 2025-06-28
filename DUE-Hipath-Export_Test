@@ -1,0 +1,28 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* Export Hipath-Daten in eine ORACLE-DB auf dem lxora02	
+* --------------------------------------------------------------------------------
+*      Job : DUE-Hipath-Export_Test
+*      erstellt : 07.12.2011 08:06:06
+*      durch : M. Hurtz
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+%%TEST=N
+*
+
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+
+* Mail Empfänger
+**mail01=ralf.lingel@itk-rheinland.de;
+%%mail01=katharina.koeppe@itk-rheinland.de;
+%%mailav=produktions-steuerung@itk-rheinland.de;
+ 
+

@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-VGNST-Move-Kassendaten
+* 
+* 
+*********************************************************** 
+ 
+* 
+* Copy der VGNST Kirpdaten in Mandanten Directory
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\d%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+*Suchverzeichnis, in dem der Mandant seine Daten ablegt,
+* dort holen wir ab
+ 
+%%SEARCH_DIR=\\ne1da03\1d03data\WIRT_FIN\FINANZEN\STEUERN\VGNST
+*%%SEARCH_DIR=\\ne1da03\1d03data\WIRT_FIN\FINANZEN\VGNST
+
+
+
+* Dateinamensmaske die wir suchen
+%%SEARCH=SAE*.TXT
+
+
+* Speicherort der abgeholten Date,von da holen wird die daten per ftp auf den Host 
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\VGNST\%%ORT.\
+
+
+%%LOGFILE=\\msbmcc03\ctm_av\Log\ErgebnisLog\%%GEM3.-VGNST.KIRP-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\CTM_AV\DOC\VGNST NEU Übernahme SBZ VGNST Neuss  nach HIZ.pdf
+
+* Logfile im Projekt anzeigen
+$$INCLUDE=%%LOGFILE
+
+
+* ------------------------------------------------------------------
+*
+
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.07.2011  13:00:25  ZV173X2 Suchmaske %%SEARCH=SAE%%$ODATE..TXT in %%SEARCH=SAE*.TXT
+*    21.06.2011  13:59:14  ZV173XC SEARCH_DIR nach Absprache mit Hr. Bininger geändert
+*                          sowie den Turnus auf wöchentlich, dienstag, 19.00 Uhr geändert
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

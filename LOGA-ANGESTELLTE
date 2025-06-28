@@ -1,0 +1,17 @@
+* Bündel Angestellte.....
+* Grunddaten zum Bündeln
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\KN
+* Sammelbereich der fertigen Bündel für den Druckerei Copy-Job
+%%BUENDEL_DIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NAR\KN\BUENDEL
+%%OUTDIR_PROCESSED=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\Druckerei-Neuss\gesendet
+%%USE_OUTDIR_PROCESSED=J
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.08.2020  14:31:54  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-CONTROL
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+
+ 
+%%TRENNER="," 
+%%DB=CONTROL_M
+%%U=control_m
+%%P=ctmuser
+%%SHOW_HEADER=J 
+
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\CTM-CONTROL.sql
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\CTM-CONTROL.sql
+
+* Ausgabe
+%%FILE=\\msbmcc03\ctm_av\bin\c\online\CTM-SQL-CONTROL.csv
+
+
+%%OUTFILE=\\msbmcc03\ctm_av\bin\c\online\CTM-CONTROL.csv
+
+%%TEST=N
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\CTM\BMC_ControlM_SVR_v6.4.01_DB_Poster.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\CTM\BMC_CONTROL-M-Desktop.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\CTM\BMC_ControlM_Ports_Diagram_6.4.01.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\CTM\BMC_ControlM-Server-700.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avCTM-FLASHER-CONTROL.ps1
+* ------------------------------------------------------------------
+
+
+
+

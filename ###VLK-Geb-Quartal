@@ -1,0 +1,17 @@
+*Job läuft zwei Monate vor Quartal-Anfang
+*Variablen beziehen sich auf das kommende Quartal
+
+*Tabelle muss im OK.EWO angelegt sein
+%%TABELLE=M25
+
+
+%%VON=01.%%MM_P2_%%$ODATE...%%JJJJ_MM_P2_%%$ODATE
+%%BIS=%%LD_MM_P4_%%$ODATE...%%MM_P4_%%$ODATE...%%JJJJ_MM_P4_%%$ODATE
+
+
+%%COPY_STS_DBL=J
+%%LISTE2=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..sts
+%%LISTE_CSV=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..CSV
+
+%%LISTE_AUS=%%JOBNAME.-%%VON.-%%BIS
+

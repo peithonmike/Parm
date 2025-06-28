@@ -1,0 +1,45 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland	
+***********************************************************************************
+*  Jobname     : ITK_DTA_Grundsteuer_DTA2_DUE_FW1
+*  APPLICATION : GBA (Y22DTAGR)
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt
+
+%%TT=%%ODAY
+%%MM=%%OMONTH
+%%JJ=%%OYEAR
+
+%%SERVER=m180kiviitkp3.rz.krzn.de
+%%USER=kivibat
+%%PW=kivibat
+%%DATEI=errorLog_dta2_%%TT..%%MM..%%JJ..txt
+
+%%VERZEICHNIS=/BatchEingangsdatenGBA/Protokolle/
+
+
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME NOTOK	
+%%TEXT_NOTOK=Das Pruefen des DTA fuer Duesseldorf ist abgebrochen
+
+%%COMMAND=\\msbmcc03\ctm_av\bin\Bat\checkFile.bat
+
+
+***OMMAND=ls -al BatchEingangsdatenGBA/Protokolle/errorLog_dta2_%%TT..%%MM..%%JJ..txt | awk '{print $1}'
+***OMMAND=du -b BatchEingangsdatenGBA/Protokolle/logDebug_dta1_%%TT..%%MM..%%JJ..txt
+***OMMAND=ctmfw Ba\tchEingangsdatenGBA\Protokolle\errorLog_dta2_%%TT..%%MM..%%JJ..txt CREATE 0B 10 10 3 2
+***OMMAND=ctmfw /BatchEingangsdatenGBA/Protokolle/errorLog_dta2_%%TT..%%MM..%%JJ..txt CREATE
+***OMMAND=ls -l BatchEingangsdatenGBA/Protokolle/errorLog_dta2_08.01.15.txt | tr -s " " | cut -d " " -f 5 && echo 99
+
+rem #-1 = datei nicht da 
+rem # 0 = leer
+rem # 1 = inhalt vorhanden
+rem # parameter:
+rem # server user pw verzeichnis datei

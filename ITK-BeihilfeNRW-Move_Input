@@ -1,0 +1,28 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : ITK-BeihilfeNRW-Move_Input
+* erstellt : 30.07.2013 14:27:51
+*    durch : ZV171E3
+* --------------------------------------------------------------------------------
+* Job verschiebt Eingabedatei in den Ordner Erledigt
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%MAIL1=burghard.schramm@itk-rheinland.de
+
+%%IN_DIR=\\SRV03.ASP.RZNE.DE\qaspkdvz$\Daten\Apps\ftp\av\BeihilfeNRW
+%%SYSUT1=\\SRV03.ASP.RZNE.DE\qaspkdvz$\Daten\Apps\ftp\av\BeihilfeNRW\input_beihinrw.txt
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\ITK-BeihilfeNRW.pdf
+* ------------------------------------------------------------------

@@ -1,0 +1,31 @@
+*
+* LIBMEMSYM
+* Ausrechnen einer Variablen ODATE + 42Tage(6Wochen) minus 16 Jahre
+* von 8 auf 6 Wochen geändert lt. M.Pixa vom 21.03.2017
+*
+
+%%JJJJ=%%SUBSTR %%JJJJMMTT_TT_P42_%%$ODATE 1 4
+%%MMTT=%%SUBSTR %%JJJJMMTT_TT_P42_%%$ODATE 5 4
+
+
+%%JJJJ16=%%JJJJ %%MINUS 16
+%%VON=%%JJJJ16.%%MMTT
+*
+* Ausrechnen einer Variablen ODATE + 48Tage(6Wochen+6Tage) minus 16 Jahre
+*
+*
+
+%%JJJJ=%%SUBSTR %%JJJJMMTT_TT_P48_%%$ODATE 1 4
+%%MMTT=%%SUBSTR %%JJJJMMTT_TT_P48_%%$ODATE 5 4
+
+
+%%JJJJ16=%%JJJJ %%MINUS 16
+%%BIS=%%JJJJ16.%%MMTT
+
+
+*
+* Ausrechnen einer Variablen ODATE + 48Tage(6Wochen+6Tage)
+*
+*
+
+%%GUELTIG=%%TTMMJJJJP_TT_P48_%%$ODATE

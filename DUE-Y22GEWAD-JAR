@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Y22GEWAD-JAR
+* Auswertung GEW Adressen
+* nach SAP-Job DUE-Y22GEWAD
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt 
+
+
+%%COMMAND=\\MSAIP01.ITK.LOCAL\SWAblage$\FB2\Software\KIVi\ControlM\Adressen\GEW_Adressen.bat
+
+%%MAIL_NOTOK=volker.ehmann@itk-rheinland.de;david.mertens@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - Adressdaten GEW-JAR NOTOK
+%%TEXT_NOTOK=Bitte pruefen! Kann ich den completen?

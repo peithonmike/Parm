@@ -1,0 +1,41 @@
+*
+* VLK Member zur Abholung der Mandantendaten aus dem LDS Postfach
+* DATUM der Abholung ist  aktueller Tag, nicht wie bei den norlalen Abholungen -1 
+* im Dateinamen befinden sich die letzten 6 Stellen des 8er GKZ 
+*
+
+%%DATUM=%%ODATE
+%%GKZ6   =%%SUBSTRING  %%GKZ8 3 6
+
+* Namensmaske der Abholung in der Nachverarbeitung (für den Mailversand)
+* Die Abholung selber wird in der  WOHN-POSTFACH-GET.BAT fest verdrahtet
+%%SEARCH=B%%GKZ6..D%%DATUM.*.*
+
+* Empfangs Directory für den Mandanten
+%%POSTFACH=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LdsPostfach\%%ORT
+%%POSTFACH_SENDE_ORDNER=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LdsPostfach\SENDE-Ordner
+
+%%POSTFACH=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LdsPostfach\%%ORT
+
+
+
+* WOHN Sachbearbeiter Empfängerliste 
+* WOHN_MAIL_ADR_FILE : wird der BAT übergeben
+
+%%WOHN_MAIL_ADR_FILE=\\msbmcc03\ctm_av\Parm\VLK\%%GEM3.-WOHN-POSTFACH-MAIL-ADR.vlk
+ 
+%%EMAIL-O=\\msbmcc03\ctm_av\Parm\StandardMessageWOHN-POSTFACH.txt
+%%EMAIL-U=Elektronisches Postfach - Wohngeld %%STADT %%ORT
+
+*  Konrolle als Blindkopie 
+%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de
+
+%%LOGFILE=\\msbmcc03\ctm_av\Log\ErgebnisLog\%%GEM3.-WOHN-LDS-POSTFACH-%%$OYEAR..csv
+*
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.09.2012  09:03:58  zv173x2 Postfächer uin Postfach geändert, da das ä im Notes nicht ankommt
+*    21.11.2011  14:45:06  zv173x2 \\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LdsPostfach ohne 
+*                                   3.asp.rzne.de\q
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

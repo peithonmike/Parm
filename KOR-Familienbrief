@@ -1,0 +1,66 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : KOR-Familienbrief
+* erstellt : 29.01.2020 07:31:15
+*    durch : zv171e3
+*
+* 21.06.2021 zvaa241: 
+* Franziska.Mones@rhein-kreis-neuss.de ist in Elternzeit und somit aus dem Verteiler raus
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+ 
+* 
+* es wird eine zusätzliche LIBMEMSYM verwendet
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###Optionsdeutsche
+ 
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+%%datum_bis=%%TTMMJJJJP_TT_M1_%%$ODATE
+%%datum_von=%%TTMMJJJJP_TT_M7_%%$ODATE
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=KOR-Familienbrief.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/KOR-Familienbrief
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=PDF
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\KOR-Familienbrief-%%TTMMJJJJP_%%$ODATE...%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : KOR-Familienbrief-%%TTMMJJJJP_%%$ODATE..
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+**%%EMAIL-T=Hildegard.Otten@rhein-kreis-neuss.de;Franziska.Mones@rhein-kreis-neuss.de;
+
+**%%EMAIL-T=Alexander.Schoenfeld@itk-rheinland.de
+%%EMAIL-T=Hildegard.Otten@rhein-kreis-neuss.de;
+%%EMAIL-CC=sabine.moebius@korschenbroich.de;sabine.abels@rhein-kreis-neuss.de
+
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n  \n 

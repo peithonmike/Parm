@@ -1,0 +1,78 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KOR--Copy-GBA-Messbescheide
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-GBA-KOR
+
+%%INDIR=\\vfapps\apps\ITK\KMV\Produktion\6000\Drucklisten
+%%INCLUDE=*DTA-Messbescheide*.pdf
+%%EXCLUDE="-"
+* *********************************************************************
+* NETUSE_S ecurity
+%%NETUSE=J
+
+* *********************************************************************
+* Path für den erweiterten Zugriff
+* NETUSE_PATH wird als Einstieg vom Netuse benötigt
+* *********************************************************************
+**NETUSE_PATH=\\10.109.1.194\KR5000_aKDn-Protokolle$
+%%NETUSE_PATH=\\srv06.korschenbroich.ads.de\Transfer-GBA
+*%%NETUSE_PATH=\\N900D01VF01.n900d01.int.de\KR5000_aKDn-Protokolle$
+
+%%NETUSE_PATH=%%IP
+             
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+
+ 
+
+* ---------------------------------------------------------------
+* OUTDIR wird vom CopyProgramm benötigt
+* Hier werden die PdfDateien hineinkopiert .
+* ---------------------------------------------------------------
+
+%%OUTDIR=\\srv06.korschenbroich.ads.de\Transfer-GBA\GBA
+
+
+%%OUTDIR_PROCESSED=\\vfapps\apps\ITK\KMV\Produktion\6000\Drucklisten\gedruckt
+
+%%AUFTRAGGEBER=Herr Ganter-Bödecker KOR
+
+
+
+
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+

@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SCHUL-Fahrkosten-Schueler
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\DOC\SCHUL\DOKU_DUE-SCHUL-Fahrkosten
+%%DESCRIPTION=Start einer Fremd EXE und erzeugen einer CSV-Datei.Wo und wie? Keine Ahnung! 
+%%Auftraggeber=Erich Sadlowski
+
+
+%%EXE=\\Srv03\qaspdf$\Daten\Apps\ITAS_TEST\Schubidu\SchuBiDu\SFK2020FTP.exe
+%%PARAMETER=Mode=auto
+
+%%FILENAME_1=nicht-verwendet
+%%FILENAME_2=nicht-verwendet
+%%FILENAME_3=nicht-verwendet
+%%FILENAME_4=nicht-verwendet
+%%FILENAME_5=nicht-verwendet
+%%EXT_LOGFILE=C:\Temp\%%JOBNAME..log
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N

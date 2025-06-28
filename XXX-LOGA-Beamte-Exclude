@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Beamte-Exclude
+* 
+*  $OUTDIR= $INDIR1+"\exclude" 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%INDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\DN
+%%INDIR2=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\KN
+%%OUTDIR1=%%INDIR1.\EXCLUDE
+%%OUTDIR2=%%INDIR2.\EXCLUDE
+
+*********************************************************** 
+* EXCLUDE-Steuerung über Listensteuerung
+*
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Neuss.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Dormagen.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Grevenbroich.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Juechen.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Kaarst.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Korschenbroich.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Rommerskirchen.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Neuss.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Meerbusch.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Rhein-Kreis-Neuss.csv
+*
+*********************************************************** 
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Loga-Exclude-List.ps1
+
+%%TEST=N
+%%DEBUG=N
+
+* Tabelle noch anpassen Mail v.24.07 an Stammen und Hünnekes
+* EXCLUDE 1800 01 03   Liste 7541
+*   ********************************************************************************** 
+*    -- Beschreibung siehe ----------------------------------------------------------- 
+     \\msbmcc03\ctm_av\DOC\Auftragsbeschreibung\Loga-Exclude.txt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

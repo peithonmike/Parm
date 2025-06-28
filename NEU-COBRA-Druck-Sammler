@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-COBRA-Druck-Sammler
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-COBRA
+
+*Bescheide
+%%ANZAHL1=1
+*SammelListe
+%%ANZAHL2=1
+*Buchungsprotokoll
+%%ANZAHL3=1
+
+**FREEFLOW_LISTEN_FOLDER=\\Msprintff01\d$\R18LP
+**FREEFLOW_BESCHEID_FOLDER=\\Msprintff01\d$\R18PROZENT99
+%%FREEFLOW_LISTEN_FOLDER=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\COBRA\BUENDEL\NEU\
+%%FREEFLOW_BESCHEID_FOLDER=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\COBRA\BUENDEL\NEU\
+
+
+
+*    
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\COBRA-SYSOUT-COPY.pdf
+* ------------------------------------------------------------------
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.06.2019  07:16:46  zv173x2 Pfad PS1 ohne c$
+*    29.03.2017  17:09:59  zv173x2 sammel und buchungsliste nur noch einmal ( Petra Pauken Stadt Neuss
+*    07.11.2016  12:05:43  zv173x2 HOTFOLDER variabel
+*    10.10.2014  10:54:29  zv173x2 neu über Powershell  wie RKN seit dem 09.10.2014
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+%%TEST=N

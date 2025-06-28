@@ -1,0 +1,65 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-WINOWIG-Soll-an-PRODOP
+* 
+*********************************************************** 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR eine Datei mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-File.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\doc\WINOWIG\WINOWIG-ROM-2021
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-PRODOP-DOR
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\ausgang\soll
+
+* Eingabe Datei
+%%INFILE=WiNOWIG_SOLL_%%$ODATE._01.txt
+ 
+
+* Ausgabe Directory
+%%OUTDIR=\\n200d01s29.ad.stadt-dormagen.de\HH-Prog\Schnittstellen_Roki\ITKR_Roki\WinOWIG\Import
+ 
+
+* Ausgabe Datei
+%%OUTFILE=WiNOWIG_SOLL_%%$ODATE..txt
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+%%OUTFILE_PROCESSED=%%INFILE
+
+* ***************************************************************************
+%%NETUSE=J
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+%%NETUSE_PATH=\\n200d01s29.ad.stadt-dormagen.de\HH-Prog\Schnittstellen_Roki\ITKR_Roki\WinOWIG\Import
+
+*
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* ***************************************************************************
+
+%%TEST=N
+%%DEBUG=N
+%%AUFTRAGGEBER=A.Hillebrands / Roki L.Bärwinkel
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\c$\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Move-File.ps1
+
+
+
+

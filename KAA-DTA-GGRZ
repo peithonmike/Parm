@@ -1,0 +1,53 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : KAA                                                                  *
+***********************************************************************************
+*  Jobname     : KAA-DTA-GGRZ
+*  Description : DTA-GGRZ
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%CHECK1=01
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VLK\%%JOBNAME._LAST-RUN.vlk
+%%USE_LAST_RUN=J
+%%STICHTAG=%%LAST_RUN
+%%VLK-LOGTEXT=%%STICHTAG  
+
+
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME Stichtag %%STICHTAG *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=5473-E01U0000
+*
+%%OKEWO_NR=P5473
+*
+*  eine Check....bat wird eingesetzt
+*  diese prüft zB ob der Lauftag, dem geplanten Lauf entspricht
+%%USE_CHECKBAT=J
+%%CHECKBAT=\\msbmcc03\ctm_av\bin\BAT\Check-MONAT_01.bat
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=DTA-GGRZ
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U340#WERT.E01E901#036#DATUM.e01e901#%%STICHTAG#V_UZ331_LISTE.E01DUMMY#$$

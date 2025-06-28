@@ -1,0 +1,20 @@
+* *************************************************************
+* Globale Variablen          
+* SAP Stadt Neuss
+* gleicher Inhalt auch im Member SAP_NEU!!!
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+%%MAIL2_NOTOK=Simone.Thissen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de;claudia.pierschel@Neuss.de
+%%MAIL_NOTOK=SAP_SB22@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%MAIL_NOTOK_2=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de
+%%MAIL01=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de
+%%MAIL3_NOTOK=volker.ehmann@itk-rheinland.de;david.mertens@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK
+
+%%TEXT_OK=Joblog: %%JOBNAME ist durchgelaufen. Juhu
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist NOTOK. Returncode: %%COMPSTAT  Bitte ueberpruefen. 

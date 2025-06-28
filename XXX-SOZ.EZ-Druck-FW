@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-SOZ.EZ-Druck-FW
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-NEU
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+*%%OUTDIR=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE
+%%OUTDIR=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE
+*%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE
+
+%%REMOTE_INDIR=EZ/%%$ODATE
+%%INCLUDE=EZ-Bestaetigung-NE_*.txt
+
+%%WINSCP_AKTION=ermitteln ob Bestätigungstext  %%INCLUDE vorliegt
+%%WINSCP_EXE=C:\Program Files (x86)\WinSCP\WinSCP.exe
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+*   Achtung Ausgabe-Directory muss mit \ enden
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get %%INCLUDE  %%OUTDIR.\
+%%Z07=close
+%%Z08=exit 
+%%TEST=N
+%%DEBUG=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    12.01.2018  08:19:35  zv173x2 vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE
+*    20.10.2015  16:12:47  zv173x2 %%Z04=open CC-SOZ-NEUSS@%%IP
+*    20.10.2015  12:25:00  zv173x2 %%Z04=open CC-SOZ@%%IP
+*    20.10.2015  12:20:57  zv173x2 %%Z04=open %%U.@%%IP
+
+*    03.09.2015  14:22:49  zv173x2 outdir mit xxx
+*    11.03.2015  12:13:16  zv173x2  von  J-PS-EZ-WINSCP_GET_FW.BAT umgestellt auf Powershell
+*                                   alte Version unter Parm\alt   
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+* ------------------------------------------------------------------

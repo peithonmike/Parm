@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SAPnachPTV-T-3280
+* 
+* 28.04.2017 - Umstellung auf neue Powershell-FTP 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%CLIENT=IFP
+%%MANDANT=400
+%%irFilePattern=3280
+
+%%ptvProject=SAP_Import\WINOWIG_IXXX
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\PTV_Worker_IR.ps1" -Src_Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_%MANDANT%.cred" -System "%CLIENT%" -Mandant "%MANDANT%" -IRFilePattern "%irFilePattern%" -PTVProjekt "\\msptv01\PTV-Projekte\%ptvProject%" 

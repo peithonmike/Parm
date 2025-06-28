@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-VOLLKOMM-PTV-T-01
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_Neuss
+
+%%MANDANT=100
+%%SOURCE=\\ne1da03\1d03data\WIRT_FIN\FINANZEN\VOLLSTR\SAP_Schnittstellenübernahme Vollkomm
+
+%%COMMAND=c:\CTM_AV\Bin\BAT\copyVollkommPtv.bat %%MANDANT %%SOURCE
+
+**%%MAIL_NOTOK=vollstreckung@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=Übergabe Kassensätze von Vollkomm zum PTV-Server ist abgebrochen
+%%TEXT_NOTOK=Joblog:%%JOBNAME ist abgebrochen. Bitte ueberpruefen.
+
+**SYSOUT=\\msbmcc03\g$\CTM_AV\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+ 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\Msbmcc03\C_BMC\CTM_AV\DOC\SAP-Doku\NEU-VOLLKOMM-PTV-T-01.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\VOLLKOMM_PTV.pdf
+* ------------------------------------------------------------------

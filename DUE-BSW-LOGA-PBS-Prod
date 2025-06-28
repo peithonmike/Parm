@@ -1,0 +1,41 @@
+***********************************************************************************
+*  JOB-LIBMEMSYM                                                                  *
+***********************************************************************************
+*  Jobname     : DUE-BSW-LOGA-PBS-Prod
+*  
+***********************************************************************************
+
+%%TEST=NEIN
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+**MAIL_LHD=oliver.mueller@duesseldorf.de;andreas.korten@duesseldorf.de;charline.huth@duesseldorf.de;daniela.geier@duesseldorf.de;Stephan.Huennekes@itk-rheinland.de;laura.podschwadek@itk-rheinland.de;martina.milka@itk-rheinland.de
+%%MAIL_LHD=andreas.korten@duesseldorf.de;charline.huth@duesseldorf.de;daniela.geier@duesseldorf.de;Stephan.Huennekes@itk-rheinland.de;laura.podschwadek@itk-rheinland.de;martina.milka@itk-rheinland.de
+
+
+
+%%BETREFF_NOTOK=%%JOBNAME - FTP Personaldaten Brandsicherheitswachen aus Bochum - ist abgebrochen
+%%TEXT_NOTOK=Bitte überpruefen
+
+%%EingabePfad=\\vfdusalt\10\Amt10\Loga_PBS-Amt37\Eingaben\
+%%Kundenpfad=\\vfdussap\sap\sap\37_BSW\
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\DUE_BSW.ps1 -EingabePfad %%EingabePfad -Kundenpfad %%Kundenpfad -Adressat %%MAIL_LHD -Test %%TEST
+
+
+* ------------------------------------------------------------------
+* Wenn die Frage aufkommt, warum die Daten nicht verarbeitet werden, obwohl sie auf dem SST-Laufwerk liegen,
+* kontrollieren, ob der Job DUE-BSW-Kasse-T-Wert-Schnittstelle ordnungsgemäß gelaufen ist.
+* ------------------------------------------------------------------
+* Dokumentation zur Verarbeitung
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\DUE-BSW-PAPYRUS-Prod#RCMail.pdf
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.01.2021  08:26:27  zv173x2 email lhd
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

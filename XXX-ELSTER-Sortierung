@@ -1,0 +1,37 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Jobname     : XXX-ELSTER-Sortierung
+***********************************************************************************
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%elstrans_GMX=\\mselstrans01\elstrans$\ELSTER-Transfer\INDIR\GMBX
+%%elstrans_GWB=\\mselstrans01\elstrans$\ELSTER-Transfer\INDIR\GEWMB
+%%elster_indir=\\srv03\qaspkdvz$\daten\apps\ftp\av\elster\sammel
+%%outdir=\\srv03\qaspkdvz$\daten\apps\ftp\av\elster
+
+
+****  Grundsteuer   Grevenbroich
+
+
+
+%%INDIR_GMX_GRE=\\srv03\qaspkdvz$\daten\apps\ftp\av\elster\GRE
+%%OUTDIR_GMX_GRE=\\srv03\qaspgr$\Daten\Apps\HH\HKR\OFD_GrdSt-Reform
+
+
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\Job\ELSTER_Sammel_Sortierung.ps1
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+%%BETREFF_OK=Dateien fuer ELSTER gefunden
+%%TEXT_OK=Es wurden ELSTER - Dateien gefunden und verschoben. Bitte einmal ueberpruefen.
+
+%%ISE=N
+%%TEST=N
+%%DEBUG=N

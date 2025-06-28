@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Auskunftsperren-in-3M-Daten-erzeugen
+* CSV Datei erzeugen
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+%%AUFTRAGGEBER=T.Heister
+ 
+%%SERVER=mssql04.itk.local
+%%DB=e01_due
+%%U=e01_jasper
+%%P=jasperav
+
+*%%P=siehe-Secret-Server
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+%%SQL_FILE=\\msbmcc03\ctm_av\Parm\SQL\DUE-EWO-Auskunftsperren-in-3M-Daten-erzeugen.sql
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+*%%VON=nicht-verwendet
+*%%BIS=nicht-verwendet
+
+
+
+* Name der Ausgabe Directory und Datei
+%%OUTDIR=\\MSBMCBATCH01\ctm_av\temp\DUE-EWO-Auskunftsperren
+%%FILENAME=%%GEM3.-AblaufendeASP3Mon-%%TTMMJJJJP_%%$ODATE...CSV
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+ 
+%%TEST=N
+%%DEBUG=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.02.2022  08:52:35  zv173x2 1. Lauf Ersatz fürMGL_Altersjubilare
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

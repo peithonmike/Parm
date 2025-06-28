@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-Lohnkonto-Ang-Test
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%LOESCH_VZ="\\swvfileserver01.it-nr.de\verfahren$\Loga-Abrechnungen\Lohnkonten Angestellte
+
+*%%EINGABE_VZ=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\LOGA\Test
+
+%%LOESCH_DAT=MANUPRODRE*.pdf
+
+*%%AUSGABE_VZ=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\LOGA\CHECK
+
+
+
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\MGL-LOGA-Ang-Del-Dat.cmd
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.02.2017  11:19:29  zv173x2 %%SYSOUT Standard ist im SYSTEM Member
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

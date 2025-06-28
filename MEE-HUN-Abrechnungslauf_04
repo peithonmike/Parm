@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-HUN-Abrechnungslauf_04
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC03\CTM_AV\PARM\g%%GEM3
+
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de; David.Mertens@itk-rheinland.de; Volker.Ehmann@itk-rheinland.de;
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Keine Weiteren Schritte nötig.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte überprüfen!

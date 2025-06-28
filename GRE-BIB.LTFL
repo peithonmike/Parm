@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-BIB.LTFL.FTP
+* ISBN-Daten per FTP nach librarything.com
+* 
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%IP=ww11.int.de
+%%IP2=fileupload.librathing.com
+*%%U=ltfl_sbgreven
+%%U=LTFL_test
+*%%P=sbgrev
+%%P=61P5XmX64NWE
+
+%%mailSB13=produktions-steuerung@itk-rheinland.de	
+%%mailNOTOK=ulrike.hille@itk-rheinland.de;hermann.falkenberg@itk-rheinland.de
+
+
+%%betreff_NOTOK=%%JOBNAME NOTOK
+
+%%TEXT_NOTOK=Joblog: %%JOBNAME NOTOK. Der FTP für die Bibliothek %%ORT nach librarything.com ist nicht gelaufen!!
+
+%%SYSOUT=\\msbmcc03\ctm_av\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%TEST=N

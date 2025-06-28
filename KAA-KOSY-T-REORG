@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-KOSY-T-REORG
+* 
+* Auftrag ist fuer Thomas Schueller/07.09.2018
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+

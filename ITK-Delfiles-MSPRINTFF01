@@ -1,0 +1,17 @@
+* --------------------------------------------------------------------------------
+*      ITK-Delfiles-MSPRINTFF01
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%MAIL-NOTOK=produktions-steuerung@itk-rheinland
+%%BETREFF-NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT-NOTOK=Löschen alter PDF abgebrochen
+
+%%COMMAND=powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\remove_older_than_3D.ps1

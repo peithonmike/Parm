@@ -1,0 +1,24 @@
+* *************************************************************
+* Table Variablen          
+* DUE-LIS-T-Copy-PTV
+* alter Hostjob Y62LBKIR
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%EINGABE_VZ=\\msadhklhd01\Transfer$
+%%USERID=itk\liskas-av
+%%PW=Ariyevj8
+%%EINDAT=liskas.csv
+
+%%AUSGABE_VZ=\\msptv01\d$\LIS_EDUE\OutDir
+%%AUSDAT=due_lis_T%%$ODATE..csv
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\DUE-PTV-DEL.cmd

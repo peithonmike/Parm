@@ -1,0 +1,11 @@
+* LIBMEMSYSM 
+* Testdruck
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###VLK-MONAT_01
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\nach-KircheRK-Monat.skels
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\nach-KircheRK-Monat.skels
+%%TEST=N
+

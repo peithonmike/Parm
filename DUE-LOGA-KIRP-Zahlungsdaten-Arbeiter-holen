@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-KIRP-Zahlungsdaten-holen
+* 
+* 
+*********************************************************** 
+%%SLEEP=10
+%%ART=Arbeiter
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-Bochum-Zahlungen
+*%%SYSIN_BAT=\\msbmcc03\ctm_av\BIN\BAT\DUE-LOGA-KIRP-GET.BAT
+*%%NACH_BAT =\\msbmcc03\ctm_av\BIN\BAT\?????-NACH.BAT
+
+
+* wird bei jedem Start temp. erzeugt 
+%%SFTP_SCRIPT=\\msbmcc03\ctm_av\Parm\SFTP\DUE-LOGA-BOCHUM-Arbeiter-abholen-Script.txt
+%%SFTP_INDIR=Arbeiter\Produktion\dta
+%%SFTP_MASK="*.*"
+
+%%SFTP_LOG=\\msbmcc03\c$\TEMP\%%JOBNAME..log
+
+* Lokales Empfangsverzeichnis aufgetrennt nach EZ MZ mit ODATE 
+%%SFTP_OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LOGA\Arbeiter
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SFTP\DUE-LOGA-BOCHUM-Arbeiter-abholen-Script.txt
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avWINSCP_GET.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avLIST-FILES.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\gGET-CONTENT.ps1
+%%TEST=N

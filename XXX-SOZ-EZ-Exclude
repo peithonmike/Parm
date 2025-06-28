@@ -1,0 +1,72 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-SOZ-EZ-Exclude
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+ 
+
+* ---------------------------------------------------------------
+* PDF_INDIR
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* ---------------------------------------------------------------
+*%%INDIR=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE
+*        \\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\nicht_verwendet
+
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE
+
+* ---------------------------------------------------------------
+* PDF_MASK Auswahl Maske 	Include Exclude
+* ---------------------------------------------------------------
+
+%%INCLUDE=*EIPR_LOE*,*_EZ_%%$ODATE..PDF,*AUSB_EZ-2024*
+%%EXCLUDE=*MAZE1*,*EZ-*2*12*,*EZ-*2*04_*
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die Dateien gesammelt.
+* Leere Dateien werden nicht kopiert sondern (nur nach erledigt verschoben) 
+* ---------------------------------------------------------------
+*%%SAMMELDIR          =\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\nicht_verwendet
+%%SAMMELDIR          =%%INDIR.\nicht_verwendet
+
+
+
+
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden  Variablenwerte angezeigt
+%%DEBUG=N
+
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+%%TEST=N
+
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avFILES-SAMMELN.ps1
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.01.2018  08:07:21  zv173x2 \\vfcache
+*    03.09.2015  14:44:47  zv173x2 XXX
+*    19.09.2014  08:52:30  zv173x2 keine Dateien aus Dormagen verschieben *EZ-*2*04_
+*    19.09.2014  08:50:35  zv173x2 keine Dateien aus Jüchen verschieben *EZ-*2*12*
+*    11.07.2014  12:52:41  zv173x2 ausb neuss blieb liegen um *AUSB_EZ-2024* erweitert
+*    13.06.2014  07:59:00  zv173x2 maske um _EZ_20140612 erweitert
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

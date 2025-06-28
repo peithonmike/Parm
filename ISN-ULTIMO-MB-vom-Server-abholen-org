@@ -1,0 +1,102 @@
+\\*PROD_Änderungen_!!!_erledigt
+
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-MB-vom-Server-abholen
+* 
+* für Test und Prod geeignet
+* entsprechende SITE auswählen
+*********************************************************** 
+*    Die Daten sollen zwischen 6:00 Uhr und 18:00 Uhr , Montag bis Freitag, 
+*          alle 10 Minuten abgeholt werden. 
+
+
+
+*********************************************************** 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\ISN-ULTIMO-MAILADR
+%%CHECK_MOVERENAME=J
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-LOGA-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-LOGA-WinSCP-Get.ps1
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen Ultimo-Daten per WinSCP und an PTV weiterleiten
+%%AUFTRAGGEBER=H-G.Robertz
+%%DESCRIPTION=
+*---------------------------------------------------------------
+%%U=nicht-verwendet
+%%P=nicht-verwendet
+%%IP=nicht-verwendet
+
+* Remote Datei Auswahl Maske
+%%INCLUDE="-"
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\Ultimo\ISN\ 
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+
+*\\*TEST 
+*%%Z04=open ISN-ultimo2sapTEST
+
+\\*PROD Zielmandant im SAP ist IFP 120
+%%Z04=open ISN-ultimo2sap
+
+%%Z05=CD SapPurchase
+
+* Anlist vorher 
+%%z06=dir MB*.CSV
+
+* Mittelbindungen  abholen
+%%Z07=mget MB*.csv  %%OUTDIR
+
+* Rename nach OLD
+%%Z09=mv MB*.csv MB*.old
+
+* Anlist nachher 
+%%z12=dir MB*
+
+
+%%Z29=close
+%%Z30=exit 
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.02.2022  21:22:52  zv173x2 PROD
+*    26.04.2021  13:20:28  zv173x2 auf Test geändert ISN-ultimo2sapTEST
+*    01.09.2020  09:49:36  zv173x2 alle MB*csv abholen 
+*    05.06.2019  12:33:41  zv173x2 open ISN-SAP-ULTIMO
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,45 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-STICH-WAHL-Druck
+* 
+* 
+*********************************************************** 
+ 
+
+
+* Output wird manuell über OKEWO als PDF erzeugt
+* und mit diesem Job auf den Prinserver nach Freigabe 
+* übertragen.
+* möglich Wahlarten und deren Prefix
+*                       (I)ntegrationswahl   %%GEM.__
+* BW KW EW  Stichwahl   (W)ahl               %%GEM3._
+* B.Lieven
+*********************************************************** 
+* E.Hamers
+* I.Franz
+* M.Smits
+*********************************************************** 
+%%DESCRIPTION= OKEWO Stichwahl Unterlagen %%STADT %%ORT an Printserver ITK senden
+%%WAHLART=W
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO-STICH-WAHL
+
+* TEST %%INDIR=\\srv03.asp.rzne.de\qaspNE$\Daten\Apps\OKEWO\okprg\okewo_neuTest\pdf
+* % %INCLUDE=00*Wahllokal*Waehlerverzeichnis.pdf
+* erledigt Ordner
+* TEST %%OUTDIR_PROCESSED=%%INDIR.\StichWahl_erledigt
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+

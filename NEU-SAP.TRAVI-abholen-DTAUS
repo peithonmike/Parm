@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* LVN-SAP.TRAVI-abholen-DTAUS
+* 
+* 30.03.2017 - Umstellung FTP per Powershell
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Neuss
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass "%PSScripts%\DTAUS\NEU-100-DTAUS.ps1 -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_100.cred"

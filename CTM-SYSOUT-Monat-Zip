@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-SYSOUT-Monat-07-Zip
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%JJJJ=%%JJJJ_M2_%%$ODATE
+%%MM=%%MM_M1_%%$ODATE
+
+* Eingabe Ordner, der gezipped werden soll 
+%%INDIR=\\msbmcc03\G$\CTM\Sysout\%%JJJJ.\%%MM
+
+* Eingabe Ordner, nach zippen löschen, wenn leer!! 
+%%DELETE_EMPTY_ZIP_INDIR=J
+
+%%INCLUDE=*.txt
+
+
+* Zip Ausgabeordner 
+%%OUTDIR=\\msbmcc03\g$\CTM\Sysout\%%JJJJ
+
+* gezippte Datein löschen  
+%%INFILE_DELETE=J
+
+
+
+* Zip Archiv Name
+%%OUTFILE=CTM-Sysout-%%JJJJ.-%%MM..zip
+
+%%DEBUG=N
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.03.2015  10:13:32  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+  
+

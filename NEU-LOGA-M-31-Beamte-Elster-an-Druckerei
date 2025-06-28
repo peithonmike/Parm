@@ -1,0 +1,82 @@
+
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-USE-DRUCKEREI-NEUSS
+
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\Elster\druck
+
+
+
+%%EMAIL_U=Druck NICHT KUVERTIERT direkt an Personalamt Neuss - Elster Beamte Neuss stehen bereit %%OMONTH..%%$OYEAR 
+
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;Stephan.Huennekes@itk-rheinland.de
+
+%%DESCRIPTION=Arbeitsanweisung:%%EMAIL_U
+%%DESCRIPTION1=EMail-CC an %%EMAIL_CC 
+
+
+* Datei Auswahl
+%%INCLUDE=NEU*.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=%%DRUCKEREI_DIR
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\kopiert
+
+
+* ***************************************************************************
+* %%NETUSE=J oder N
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+* %%NETUSE_PATH=nicht-verwendet 
+*
+* Laufwerksbuchstabe in der Form Y:
+* %%LAUFWERK=nicht-verwendet
+* ***************************************************************************
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.11.2020  11:44:21  zv173x2 indir
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

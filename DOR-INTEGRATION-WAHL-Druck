@@ -1,0 +1,52 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-INTEGRATION-WAHL-Druck
+* 
+* 
+*********************************************************** 
+ 
+
+
+*********************************************************** 
+* Output wird manuell über OKEWO als PDF erzeugt
+* und mit diesem Job auf den Prinserver nach Freigabe 
+* übertragen.
+* möglich Wahlarten und deren Prefix
+*                   (I)ntegrationswahl   %%GEM.__
+* BW KW EW          (W)ahl               %%GEM3._
+* B.Lieven
+*********************************************************** 
+* E.Hamers
+* M.Smits
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO-INEGRATIONS-WAHL
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\IntegrationsWahl_erledigt
+%%WAHLART=I
+
+*% %INCLUDE=02*Wahllokal*Waehlerverzeichnis.pdf
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    08.09.2020  11:44:52  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

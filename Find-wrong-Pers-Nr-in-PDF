@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Find-wrong-Pers-Nr-in-PDF
+* Findet falsche Personalnummern im PDF
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+
+ 
+
+
+
+
+%%INDIR=\\msbmcc03\CTM_AV\Parm\Testordner\Elster
+%%WRONG_NR=\\msbmcc03\CTM_AV\Parm\Testordner\Elster\falsche_Personalnummern
+%%BACKUP=\\msbmcc03\CTM_AV\Parm\Testordner\Elster\old
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Find-wrong-Pers-Nr-in-PDF.ps1
+
+
+
+
+
+
+
+*    -- Änderungen ------------------------------------------------------------------- 
+*	 
+*    22.03.2024  12:30:00  zvaa405
+
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

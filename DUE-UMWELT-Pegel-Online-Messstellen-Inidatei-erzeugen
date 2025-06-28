@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-UMWELT-Pegel-Online-Messstellen-Inidatei-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+%%INDIR=\\msbmcc01\ctm_av\temp\Pegel-Online
+%%INFILE=DUE-UMWELT-Pegel-Online-Messstellen-Nummern-ermitteln.csv
+
+%%OUTDIR=\\msbmcc01\ctm_av\temp
+%%OUTFILE=DUE-UMWELT-Pegel-Online-Messstellen-Nummern-ermitteln.vlk
+
+%%AUFTRAGGEBER=B.Nilkes
+
+%%TEST=N
+%%DEBUG=N

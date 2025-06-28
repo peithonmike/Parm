@@ -1,0 +1,8 @@
+*********************************************************** 
+* LIBMEMSYM 
+* COPY-CTMAG-WTS87
+* 
+* 
+*********************************************************** 
+ 
+%%SOURCE="\\wts87\c$\Programme\BMC Software\CONTROL-M Agent\Default\SYSOUT\*.dat"

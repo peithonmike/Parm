@@ -1,0 +1,41 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* Kopieren einer CSV-Datei fuer Mgl
+* Moenchengladbach
+* MGL-Strassenzuordnung-Copy
+*********************************************************** 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-File.ps1
+
+* Eingabe Directory 
+%%INDIR=\\msbmcc03\CTM_AV\Jasper-Output
+
+* Datei Auswahl
+%%INFILE=MGL-STRASSENZUORDNUNG-%%TTMMJJJJP_%%$ODATE...CSV
+* Ausgabe Directory
+
+%%OUTDIR=\\vfmgapps.itk.local\apps\verfahren\FachGIS_EVK\Evakuierungsradien
+%%OUTFILE=MGL-Strassenzuordnung_Evakuierung.CSV
+%%FORCE_OUTDIR=N
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    06.12.2018  08:56:36  zv171e3 auf powershell geändert
+*	 04.05.2020  12:08.00  zvaa241 c$ entfernt, da CTM_AV sowieso eine Freigabe ist und PS Script braucht somit keine Admin-Rechte
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-OK.EWO.SAP-Barcode
+* 
+* 
+*********************************************************** 
+*
+*
+%%TEST=N
+%%READ_LINE=
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO_DB
+%%OUTFILE=C:\temp\%%JOBNAME..csv
+
+
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\DUE-OK.EWO.SAP-Barcode.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\DUE-OK.EWO.SAP-Barcode.sql
+
+*
+

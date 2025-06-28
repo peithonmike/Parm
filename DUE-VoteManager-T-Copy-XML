@@ -1,0 +1,69 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-VoteManager-T-Copy-XML
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\VOTE-MAIL
+
+
+
+* Eingabe Directory 
+
+%%INDIR=\\vfdustvg\12\Amt12\Datenaustausch_1_mit_Amt_21
+
+
+
+
+* Datei Auswahl
+
+%%INCLUDE=SEPA_*.xml
+**INCLUDE=20240312_TEST*.xml
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfdussap\SAP\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_VoteManager
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfdustvg\12\Amt12\Datenaustausch_1_mit_Amt_21\Backup
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    14.04.2021  08:03:52  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

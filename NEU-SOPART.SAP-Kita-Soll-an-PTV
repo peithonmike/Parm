@@ -1,0 +1,55 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOPART.SAP-Kita-Soll-an-PTV
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SOPART-MAIL 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%DESCRIPTION=Export Sopart Kita
+
+
+* Indir
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\Sopart%%GEM3.\SoKita\Kita\Export
+* Infile 
+%%SEARCH=Sopart_Export_an_Kasse.txt
+
+
+
+##OUTDIR=\\msptv01.itk.local\ptv-projekte\SAP_SOP_NEME\inDir
+%%OUTDIR=\\msptv02\PtvProjekte$\SAP_Export\SOPKIT2_EXXX\inDir
+
+* TESTAUSGABE
+* %%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\test\ptv-projekte\sap_sopart\inDir
+
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+%%VERFAHREN=KITA
+%%MOVE_ORDNER=Verarbeitet
+%%MOVE_FILE=%%GEM3.-SopartKita_%%$ODATE..txt
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\SOPART-KITA-NEU-MEE-RKN.pdf
+
+
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.03.2021  08:35:11  zv173x2 Verzeichnis berichtigt
+*    30.01.2014  14:23:53  zv173x2 SAP_SOP_NEME
+
+*    29.01.2014  13:04:39  zv173x2 movefile mit gem3
+*    21.01.2014  12:04:03  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

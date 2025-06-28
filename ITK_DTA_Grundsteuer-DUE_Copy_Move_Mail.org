@@ -1,0 +1,69 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland
+***********************************************************************************
+*  Jobname     : DUE_DTA_Grundsteuer_Copy_Move_Mail
+*  APPLICATION : GBA
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%TEST=N
+%%DEBUG=N
+%%EXCLUDE="-"
+%%INCLUDE=*KD09I*
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA-DTA
+%%$OUTDIR_PROCESSED =\\msbmcc03\CTM_AV\Bin\Powershell\CF\Grundsteuer\Mail
+
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME abgebrochen
+%%TEXT-NOTOK=Bitte ueberpruefen
+
+
+
+%%INDIR_DUE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA-DTA
+%%INDIR_Archiv=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA-DTA\Archiv
+%%OUTDIR_DUE_GBA=\\vfcache\kmsta\daten\IFP\DTA\GBA
+%%OUTDIR_DUE_DTA=\\srv03\dtalds$\DTA-DUESSELDORF
+%%OUTDIR_DUE_DTA_Archiv=\\srv03\dtalds$\DTA-DUESSELDORF\Archiv
+
+*****************************************************************************************
+****           TEST                                                                  ****
+*****************************************************************************************
+
+**INDIR_DUE=\\msbmcc03\CTM_AV\Bin\Powershell\CF\Grundsteuer\Data\INDIR
+**INDIR_Archiv=\\msbmcc03\CTM_AV\Bin\Powershell\CF\Grundsteuer\Data\INDIR\Archiv
+**OUTDIR_DUE_GBA=\\msbmcc03\CTM_AV\Bin\Powershell\CF\Grundsteuer\Data\OUTDIR-DUE_GBA
+**OUTDIR_DUE_DTA=\\msbmcc03\CTM_AV\Bin\Powershell\CF\Grundsteuer\Data\OUTDIR-DUE_DTA
+**OUTDIR_DUE_DTA_Archiv=\\msbmcc03\CTM_AV\Bin\Powershell\CF\Grundsteuer\Data\OUTDIR-DUE_DTA\Archiv
+
+
+
+
+
+
+
+
+%%EMAIL_A_MOVE="N"
+**EMAIL_T=cristian.fuchs@itk-rheinland.de
+%%EMAIL_F=produktions-steuerung@itk-rheinland.de
+%%EMAIL_T=produktions-steuerung@itk-rheinland.de;nicole.schmeling@duesseldorf.de;Claudia.Thiel@duesseldorf.de;David.Mertens@itk-rheinland.de;Volker.Ehmann@itk-rheinland.de
+%%EMAIL_U=GBA-Band
+%%EMAIL_CC=""
+%%EMAIL_O=\\msbmcc03\CTM_AV\Bin\Powershell\CF\Grundsteuer\Mail\DUE_Grundsteuerbenachrichtigung.txt
+%%EMAIL_L=\\msbmcc03\CTM_AV\Bin\Powershell\CF\Grundsteuer\Mail\mail.log
+%%EMAIL_BCC=""
+%%MAILSERVER=smtp.itk.local
+%%MAIL_EXE=\\msbmcc03\CTM_AV\Bin\sontiges\EMail\SendEMail.exe
+
+
+
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\ITK_DTA_Grundsteuer-DUE_Copy_Move_Mail.ps1

@@ -1,0 +1,59 @@
+\\*PROD_Änderungen_!!!_erledigt
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-MB-rename
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\ULTIMO_MAIL
+
+
+
+
+******************************************************************
+* Mail Variablen
+******************************************************************
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland
+
+* Message File
+*%%EMAIL_O= 
+
+* Empfänger (durch Semikolon getrennt)  
+%%EMAIL_T=achim.kohlmetz@neuss.de;Daniel.Mendoza@itk-rheinland.de
+
+* Subject
+%%EMAIL_U=Job-Nachricht: Mittelbindungs-Daten wurden auf dem SST-Laufwerk zur Verfügung gestellt
+
+* Kopie
+%%EMAIL_CC=
+
+
+
+
+
+\\*PROD Mittelbindung PROD 
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\PTV_to_Server_Rename.ps1"   -PTV "\\msptv02\d$\PTV\Projekte" -Projekt  "\SAP_Export\ULTMB_EISN"  -File_Sufix  "MB" -SERVER_Dir  "SST/IFP/120/Fachverfahren/Buchen" -Filename "MIBIULTM" -Filter "*csv-Type-MITTELBINDUNG.Gebucht.txt"
+  
+
+
+*\\*TEST Mittelbindung TEST  überschreibt Prod
+*%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\PTV_to_Server_Rename.ps1"   -PTV "\\msptv04\d$\PTV\Projekte" -Projekt  "\SAP_Export\ULTMB_EISN"  -File_Sufix  "MB" -SERVER_Dir   "SST/IFQ/125/Fachverfahren/Buchen" -Filename "MIBIULTM" -Filter "*csv-Type-MITTELBINDUNG.Gebucht.txt"
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.02.2022  21:21:03  zv173x2 PROD
+*    22.02.2022  11:12:03  zv173x2 Prod PTV Server MSPTV02
+*    23.11.2020  11:01:52  zv173x2  Mail Variablen dadurch entfällt der separate MailJob
+*    31.08.2020  08:37:30  zv173x2 msptv 03 in 04
+*    23.01.2020  14:09:36  zv173x2 -Filter "MIBI"
+
+*    20.11.2019  09:27:51  zv173x2 neues Programm
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

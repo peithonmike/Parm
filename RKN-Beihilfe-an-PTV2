@@ -1,0 +1,86 @@
+0*********************************************************** 
+* JOB-LIBMEMSYM 
+* RKN-Beihilfe-an-PTV2
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-Beihilfe-RKN
+
+
+
+* Eingabe Directory 
+%%INDIR=%%IP
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+%%PREFIX=%%GEM3.-
+
+* Datei Auswahl
+%%INCLUDE=BE-*-*-VERW.dat
+%%EXCLUDE="-"
+
+
+* Ausgabe Directory
+%%OUTDIR=\\msptv02\PTVProjekte$\SAP_Export\BEIHILF_EXXX\InDir
+
+%%FORCE_OUTDIR=N
+
+* ######################################################################################################
+* NetUse Security aktivieren 
+%%NETUSE_S=J
+
+* NetUse Security User
+* andere Schreibweise als im IP UP Member ( n900d01.int.de\KR01Beihilfe )
+%%U=KR01Beihilfe@n900d01.int.de
+
+* NetUse Pfad 
+%%NETUSE_PATH=\\n900d01vf01.n900d01.int.de\Beihilfe_Export$
+
+* NetUse Laufwerk 
+%%LAUFWERK=Y:
+* ######################################################################################################
+
+
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+* Eingabe Directory 
+*%%SEARCH_DIR=%%IP
+
+* Datei Auswahl
+*%%SEARCH=BE-*-*-VERW.dat
+
+* Dateien nur verschieben
+*%%SEARCH2=BE-*-*-UNI.dat
+
+* Ausgabe Directory
+*%%OUTDIR=\\msptv01\d$\PTV\Projekte\SAP_Export\BEIHILF_EXXX\InDir
+*%%NETUSE_S=J
+* erledigt Ordner =INDIR\verarbeitet
+*%%TEST=N
+*%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+
+*     06.09.2017  14:04:03  zv173x2  1.Lauf
+*     30.08.2017  15:46:31  zv173x2  Netuse_S mit ITK-AV-Security
+*     28.07.2015  08:37:07  zv173x2  neu 1 Lauf 03.08.2015
+*     27.07.2015  10:20:30  zv173x2  ersetzt RKN-Beihilfe-T-Copy-PTV
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+

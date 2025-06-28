@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Beihilfe-neu
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\c$\bin\powershell\Due-BeihilfeFormulare.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%EingabePfad=\\vfdusalt\16\amt16\423_PBH\Kassenverfahren\
+%%SammelPfad=\\vfitk\daten\Daten\Alle\PBH\
+%%IgnorePre=Nein
+%%Test=Nein
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\Due-BeihilfeFormulare.ps1
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+\\msbmcc03\ctm_av\DOC\Auftragsbeschreibung\DUE-NPBH0003.txt
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.11.2015  15:06:17  zv171e1 neu
+*    25.06.2018  jetzt     zv171e3 Sammelpfad aktualisiert
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+*   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*        \\msbmcc03\ctm_av\DOC\Auftragsbeschreibung\DUE-NPBH0003.txt
+*   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : GRE-Zweitwohnungssteuer-Bestand-HWI+NWI
+* erstellt : 09.02.2012 10:12:10
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+%%TEST=N
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+%%Jahr=%%$OYEAR
+%%Monat=%%OMONTH
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=GRE-Zweitwohnungssteuer-Bestand-HWI+NWI.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/GRE-Zweitwohnungssteuer-Bestand-HWI+NWI
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=\\msbmcc03\ctm_av\Jasper-Output\GRE-Zweitwohnungssteuer-Bestand-HWI+NWI-%%MONTH-%%$OYEAR..%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : GRE-Zweitwohnungssteuer-Bestand-HWI+NWI-%%MONTH-%%$OYEAR.
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+**EMAIL-T=Juergen.Preckel@Grevenbroich.de;Andrea.Henicke@Grevenbroich.de;steuern@grevenbroich.de;
+%%EMAIL-T=markus.pixa@itk-rheinland.de;
+%%EMAIL-BCC=Burghard.Schramm@ITK-Rheinland.de;
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n  \n 
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\JASPER-GRE-Mailänderung.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\JASPER-GRE-Zweitwohnung.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\JASPER-GRE-Zweitwohnung-Teil2.pdf
+* ------------------------------------------------------------------

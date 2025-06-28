@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-KN-Druckdaten-Beamte-Rename
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-BEAMTE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+
+%%DESCRIPTION=Rename Beschäftigungsart 2-stellig  %%LOGA_ART
+
+%%INDIR=%%PDF_INDIR
+*\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\%%LOGA_ART
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+    
+%%PDF_SAMMELDIR_PROCESSED=%%INDIR	
+	
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc01\c$\CTM_AV\Bin\Powershell\BL\JOB\JOB-LOGA-Lemgo-Rename.ps1
+	
+* ------------------------------------------------------------------
+* Bei Test 
+* J / N
+* ------------------------------------------------------------------
+%%TEST=N
+
+

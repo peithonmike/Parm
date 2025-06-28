@@ -1,0 +1,31 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Portal-Bankdaten-PTV-NEU
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+%%INDIR=\\vfsap01\saptrans\Daten\LHD\Stadtkasse\SEPA-Mandate\Prod\CSV
+%%OUTDIR=\\msptv02\d$\Daten\BDAT_B_EDUE_NEU\outDir
+%%OUTDIR_PROCESSED=\\vfsap01\saptrans\Daten\LHD\Stadtkasse\SEPA-Mandate\Prod\CSV\Erledigt
+
+%%INCLUDE=*.csv
+%%EXCLUDE="-"
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;daniel.mendoza@itk-rheinland.de;schnittstellen-finanzwesen@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen!!
+%%TEXT_NOTOK=Bitte überprüfen
+
+%%TEST=N
+%%DEBUG=N
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1

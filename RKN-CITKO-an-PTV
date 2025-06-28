@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-CITKO-an-PTV
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+%%INDIR=\\msopenft01\c$\ctm_av\OpenFT\empfangen\LZPD\CITKO
+%%INCLUDE=*hiz.txt
+%%OUTDIR=
+%%OUTDIR_PROCESSED=\\msopenft01\c$\ctm_av\OpenFT\empfangen\LZPD\CITKO\verarbeitet
+%%TEST=J

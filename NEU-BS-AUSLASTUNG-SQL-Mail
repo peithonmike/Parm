@@ -1,0 +1,64 @@
+* *************************************************************
+* zvaa405     10.08.2023          
+* NEU-BS-SQL-Mail
+* Erzeugt eine CSV Datei
+* Auftraggeber: Torsten.Heister@itk-rheinland.de
+* 
+
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+**  Verbidungsdaten
+
+%%SERVER=mssql09.itk.local
+%%DB=tevis_neu
+%%USER=tevis_read
+%%PASSWD=SQ!*xe)q9SeE
+
+%%SQLFILEPATH=\\msbmcc03\CTM_AV\Parm\NeussBS_Auslastung\Vorlagen\TerminauslastungZeitraum.sql
+
+
+
+
+**  Arbeitsverzeichnisse der Dateien für die XLSX Konvertierung und die Archivierung
+
+%%CSVIN=\\msbmcc03\CTM_AV\Parm\NeussBS_Auslastung\Ausgabe\Auslastung_Neuss_%%$ODATE..csv
+%%XLSOUT=\\msbmcc03\CTM_AV\Parm\NeussBS_Auslastung\Ausgabe\Auslastung_Neuss_%%$ODATE..xlsx
+%%CSVPATH=\\msbmcc03\CTM_AV\Parm\NeussBS_Auslastung\Ausgabe\Auslastung_Neuss_%%$ODATE..csv
+%%CSVPATH_TMP=\\msbmcc03\CTM_AV\Parm\NeussBS_Auslastung\Ausgabe\tmp\Auslastung_Neuss_%%$ODATE..csv
+%%AUSGABE=\\msbmcc03\CTM_AV\PARM\NeussBS_Auslastung\Ausgabe
+%%ARCHIV=%%$OYEAR
+
+
+**  Mail 
+
+%%SMTPSERVER=SMTP
+%%FROM=Produktions-Steuerung@itk-rheinland.de
+**TO=cristian.fuchs@itk-rheinland.de
+%%TO=ewoauswertungen@stadt.neuss.de
+%%SUBJECT=BS Auswertung
+%%BODYFILE=\\msbmcc03\CTM_AV\Parm\NeussBS_Auslastung\Vorlagen\email_body.txt
+%%ATTACHMENTPATH=\\msbmcc03\CTM_AV\PARM\NeussBS_Auslastung\Ausgabe\Auslastung_Neuss_%%$ODATE..xlsx
+**ATTACHMENTPATH=\\msbmcc03\CTM_AV\PARM\NeussBS_Auslastung\Ausgabe\Auslastung_Neuss_%%$ODATE..csv
+
+
+
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;Torsten.Heister@itk-rheinland.de
+
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist durchgelaufen. 
+%%TEXT_NOTOK=Joblog: Kein Upload in die Cloud
+
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\NEU_BS-SQL2CSV.ps1

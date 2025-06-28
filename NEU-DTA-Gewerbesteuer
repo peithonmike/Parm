@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DTA-Gewerbesteuer-Neuss   /  zvaa405 02.01.2025
+* Auftraggeber: Volker Ehmann
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+
+%%COMMAND=\\msaip01\swablage$\FB2\Software\KIVi\ControlM\DTABelegeGEW\NEU_dtaBelegeGEW.bat
+
+***************************************
+
+
+
+%%TEST=N
+
+%%DEBUG=N
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Returncode: %%COMPSTAT  Bitte ueberpruefen.
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+

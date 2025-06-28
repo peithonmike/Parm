@@ -1,0 +1,26 @@
+* *************************************************************
+* Table Variablen          
+* DUE-MISTRAL001-T-Copy-PTV
+* alter Hostjob Y660MIST
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%EINGABE_VZ=\\vfdustvg\66\Amt66\Themen\Mistral\Produktion\NKF
+
+%%USERID=ZVDUEFTP
+%%PW=sgbTabelle21
+%%EINDAT=MISNKF66.TXT
+
+%%AUSGABE_VZ=\\msptv01\d$\PTV\Projekte\SAP_Export\Mistral_EDUE\InDir
+%%AUSDAT=DUE_MIS001_T%%$ODATE..TXT
+%%AUSDAT2=MISNKF66_%%$ODATE..TXT
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\DUE-PTV.cmd

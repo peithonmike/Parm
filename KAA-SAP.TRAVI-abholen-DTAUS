@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-SAP.TRAVI-abholen-DTAUS
+* 
+* 30.03.2017 - Umstellung FTP per Powershell
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Kaarst
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass "%PSScripts%\DTAUS\KAA-500-DTAUS.ps1 -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_500.cred"
+
+
+
+* für AV
+* bei Wiederholung eine Fehlerhaften Datei.
+* 1. Original im gesendet Ordner Renamen
+* Sende-Job per Hand Ordern * KAA-SAP.TRAVI-senden-DTAUS
+* INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\SAP\KAA\DTAUS

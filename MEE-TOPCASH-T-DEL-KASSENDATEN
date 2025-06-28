@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-TOPCASH-T-FW-KASSENDATEN
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+*srv03\qaspme$\daten\Topcash\KIRP_EXPORT
+
+
+%%eindat=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TopCash\%%GEM3._TCtoKIRP%%$ODATE..txt
+%%ausdat=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TopCash\Verarbeitet\%%GEM3._TCtoKIRP%%$ODATE..txt
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=dieter.assenmacher@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer TopCash-Daten %%GEM3. nach KIRP OK
+%%BETREFF_NOTOK=FileTransfer TopCash-Daten %%GEM3. nach KIRP NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der TopCash-Daten %%GEM3. ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der TopCash-Daten %%GEM3. ist NOTOK.
+
+%%COMMAND=move %%eindat %%ausdat

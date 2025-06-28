@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-Fehlzeiten-Datei-Copy_2
+* 
+* 
+*********************************************************** 
+ 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MGL_2
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;martina.milka@itk-rheinland.de;
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen!!
+%%TEXT_NOTOK=TEST!! \n   Test!! \n Bitte überprüfen
+
+%%INDIR=\\10.50.34.68\loga\logamg\Import_variable_Daten\Fehlzeiten
+**NDIR\\10.50.34.68\loga
+
+%%NETUSE_PATH=\\10.50.34.68\loga\logamg\Import_variable_Daten\Fehlzeiten
+%%NETUSE_PATH=\\10.50.34.68\loga
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga\Personalwesen-Abrechnung\Fehlzeiten
+**INCLUDE=Time_Export_%%JJJJMMTT_TT_M1_%%$ODATE..vX928.csv
+%%INCLUDE=Time_%%JJJJMMTT_TT_M1_%%$ODATE.._eAUvX928.csv
+**INCLUDE=Time_Export_%%$ODATE.vX928.csv
+
+%%EXCLUDE="-"
+%%LAUFWERK=Y:
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Files.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+
+%%TEST=n
+%%DEBUG=N

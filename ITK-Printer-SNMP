@@ -1,0 +1,22 @@
+* --------------------------------------------------------------------------------
+*      Job : ITK-Del-Files-Except-Youngest
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%TEST=N
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de;
+%%MAILNOTOK=doris.huhn@itk-rheinland.de
+
+%%BETREFF_OK=Löschen der Sicherungsdateien auf dem ITK-Printer-SNMP OK
+%%BETREFF_NOTOK=Löschen der Sicherungsdateien auf dem ITK-Printer-SNMP NOTOK
+
+%%TEXT_OK=Joblog: Das Löschen der alten sicherungsdateien ist gelaufen.
+%%TEXT_NOTOK=Joblog: Das Löschen der alten sicherungsdateien ist nicht gelaufen.

@@ -1,0 +1,83 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Energie-Tarifkunden-holen
+* 
+* 
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job holt Dateien über FTP ab
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-FTP-Get.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-SW-DUE
+
+ 
+*  Remote Eingabe Directory
+%%REMOTE_DIR=DTAUS_SLP_ALT
+
+
+* Local Empfangs Directory
+%%OUTDIR1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Amt23\TK\%%ODATE
+
+
+%%OUTDIR2=\\vfdustvg\23\amt23\23-23-Abrechnungs-Archiv-STAG\STAGDaten_Amt10\Produktion\TK\%%ODATE
+
+
+%%OUTDIR3=\\msaip01\FB2\Projekte\Daten\T1800\BHA
+
+
+%%OUTDIR4=nicht-verwendet
+
+
+* SERVERname oder IP Adresse kommt meist mit User und Password aus IP-UP Member
+%%Z01=open %%IP
+%%Z02=%%U
+%%Z03=%%P
+
+
+
+* auf ascii oder binar einstellen
+%%Z04=ascii
+*  Remote Eingabe Directory
+%%Z05=cd %%REMOTE_DIR
+
+* Local Empfangs Directory
+%%Z06=LCD %%OUTDIR1
+
+* Datei Auswahlmaske
+%%Z07=mget *.*
+
+* Local Empfangs Directory
+%%Z08=LCD %%OUTDIR2
+
+* Datei Auswahlmaske
+%%Z09=mget *.*
+
+* Local Empfangs Directory
+%%Z10=LCD %%OUTDIR3
+
+* Datei Auswahlmaske
+%%Z11=mget *.*
+
+* FTP beenden
+%%Z20=bye 
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+

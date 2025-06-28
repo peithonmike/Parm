@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-Fristablauf-Rechtskraft
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+ 
+***********************************************************
+* Variablenname aus Bat-Zeiten
+* %%ART=-F6140 
+***********************************************************
+
+%%PARAMETER=-F6140
+%%LOGIN=%%WINOWIG_GKZ
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass  \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-WINOWIG-AktionStarten.ps1
+
+
+
+
+
+
+
+

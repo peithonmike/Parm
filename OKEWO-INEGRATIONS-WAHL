@@ -1,0 +1,41 @@
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+* Eingabe Directory 
+*%%INDIR=\\Msprintff01\source$\WAHL\KW-2020\%%GEM3
+*%%INDIR=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_%%GEM3.test.\pdf
+%%INDIR=%%OKEWO_ROOT.\pdf
+%%EXCLUDE="-"
+* Datei Auswahl
+%%INCLUDE=*Wahllokal*Waehlerverzeichnis.pdf
+
+
+
+* TEST
+*%%INDIR=\\Msprintff01\source$\WAHL\TEST\%%GEM3
+*%%INCLUDE=Adobe Sign White Paper.pdf
+
+
+* Duck Library Ausgabe Directory ITK alle ausser Düsseldorf
+%%OUTDIR=\\msprintff01\d$\R18gelocht
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\IntegrationsWahl_erledigt
+
+
+*MAIL melden, dass der Job Output gefunden hat
+%%MAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+
+%%MAIL_CC=Irmgard.Franz@itk-rheinland.de;Melanie.Smits@itk-rheinland.de;Erica.Hamers@ITK-Rheinland.de
+*%%MAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+
+%%DESCRIPTION  =  OKEWO Integrations-Wahl Unterlagen an Drucker senden
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.09.2020  13:38:47  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

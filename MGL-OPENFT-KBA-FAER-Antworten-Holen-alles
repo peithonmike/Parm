@@ -1,0 +1,68 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-OPENFT-KBA-FAER-Antworten-Holen-alles
+* Sonderlauf alles abholen W.Klerx
+* 
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job holt Antworten aktiv über OpenFT ab.
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+
+%%DESCRIPTION=Antworten auf FAER Anfrage und Antworten auf FAER Mitteilungen  der %%STADT %%ORT beim KBA abholen
+%%AUFTRAGGEBER=W.Klerx 
+
+
+* Eingabe Directory der Anfragen
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL
+
+* Datei Auswahl Maske
+%%INCLUDE=*10044*
+
+
+************************************
+* PROD 
+* Anschluss\Partner 
+%%ANSCHLUSS=KBA
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+%%TRANSFER_ADMISSION=AL6VaEWM5Q
+
+
+************************************
+*  TEST 
+* Anschluss\Partner 
+* %%ANSCHLUSS=KBATEST
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+* %%TRANSFER_ADMISSION=19629FAA
+
+
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+ 
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.06.2019  10:25:18  zv173x2 %%INCLUDE=%faer*%%KBA_NR.*
+*    05.06.2019  10:12:06  zv173x2 %%INCLUDE=*faerausk*%%KBA_NR.* ohne Odate
+*    20.05.2019  15:06:35  zv173x2 %%INCLUDE=*faerausk*%%KBA_NR._%%$ODATE.*
+*    10.05.2019  08:59:26  zv173x2 include angepasst
+*     02.05.2019  12:37:54  zv173x2  scharf ab 03.05.2019
+*    09.04.2019  09:14:43  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

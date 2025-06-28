@@ -1,0 +1,26 @@
+* Eingabe-Dateien
+
+%%EINDAT1=MANUPROD%%MM.-11001-03-3200-0011-0.pdf
+%%EINDAT2=MANUPROD%%MM.-11001-23-3200-0011-0.pdf
+%%EINDAT3=MANUPROD%%MM.-11001-33-3200-0011-0.pdf
+%%EINDAT4=MANUPROD%%MM.-11004-03-3200-0011-0.pdf
+%%EINDAT5=MANUPROD%%MM.-11007-03-3200-0011-0.pdf
+%%EINDAT6=MANUPROD%%MM.-11011-03-3200-0011-0.pdf
+%%EINDAT7=MANUPROD%%MM.-11015-03-3200-0011-0.pdf
+%%EINDAT8=MANUPROD%%MM.-11019-03-3200-0011-0.pdf
+%%EINDAT9=MANUPRODRE%%MM.-11060-03-3200-0011-0.pdf
+
+
+
+
+* Ausgabe-Dateien
+
+%%AUSDAT1=Konten Angestellte - Mandant 11001 AK03.pdf
+%%AUSDAT2=Konten Angestellte - Mandant 11001 AK23.pdf
+%%AUSDAT3=Konten Angestellte - Mandant 11001 AK33.pdf
+%%AUSDAT4=Konten Angestellte - Mandant 11004 AK03.pdf
+%%AUSDAT5=Konten Angestellte - Mandant 11007 AK03.pdf
+%%AUSDAT6=Konten Angestellte - Mandant 11011 AK03.pdf
+%%AUSDAT7=Konten Angestellte - Mandant 11015 AK03.pdf
+%%AUSDAT8=Konten Angestellte - Mandant 11019 AK03.pdf
+%%AUSDAT9=Konten Angestellte - Mandant 11060 AK03.pdf

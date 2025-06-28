@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ-TEST-INCLUDE-PRINTERS
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+%%INDIR=\\Msprintff01\source$\SOZ-EZ\2015\DUE\20151103
+
+%%INCLUDE=EZ-030-DF_PFTXN100_PROT_EZ-150801_20151103.pdf , EZ-030-DF_PFTXN100_PROT_EZ-150901_20151103.pdf 
+    
+%%EXCLUDE="-"
+%%PRINTER=\\msdhp7\DLD5081309,\\abc
+
+%%OUTDIR_PROCESSED="\\Msprintff01\source$\SOZ-EZ\2015\DUE\20151103\gedruckt"
+ 
+%%TEST=N
+%%DEBUG=J

@@ -1,0 +1,64 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOPART.SOPMG-an-SFirm
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* Sopart-Verfahren AV.SOPMG -> Kasse Neuss Auszahlungsordner 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOPART-MAIL 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%VERFAHREN=SOPMG
+%%DESCRIPTION=Export Sopart Mündelgelder
+
+
+* Verfahrensbereich hier liegt die Eingabe
+
+* alt: SEARCH_DIR=\\srv03.asp.rzne.de\qaspne$\daten\apps\sopav\avor\export
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspne$\daten\apps\SopartNEU\SoAV\Avor\Export
+
+%%SEARCH=*.XML
+
+* Kassenbereich
+*%%OUTDIR="\\ne1da03.nemarkt.rzne.de\1d03data\WIRT_FIN\FINANZEN\VOLLSTR\Auszahlung Sopart Mündelgelder"
+*%%OUTDIR="\\ne1da03\1d03data\WIRT_FIN\FINANZEN\VOLLSTR\Auszahlung Sopart Mündelgelder"
+%%OUTDIR="\\vfne\20\Amt20\203 SFirm\51 SoPart Mündelgelder"
+
+
+
+* Eingabedatei im Erledigt Ordner mit ODATE abspeichen 
+%%MOVE_ORDNER=erledigt
+
+* Log
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SOPART-SOPMG-Doppelte-Auszahlung.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.11.2020          zv173x2  %OUTDIR="\\vfne\20\Amt20\203 SFirm\51 SoPart Mündelgelder"
+*                        \\msbmcc03\ctm_av\DOC\SOPART\Umstellung-Sopart-Neuss-User-IDS-und-Server.jpg  
+*    23.01.2014  15:32:39  zv173x2 .nemarkt.rzne.de musste raus
+*    10.01.2014  15:40:41  zv173x2 SEPA Abfrage XML
+*    10.01.2014  12:08:02  zv173x2 neuer Pfad
+*    20.12.2013  14:23:21  zv173x2 neu ersetzt NEU-SOPART.AV-Export
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

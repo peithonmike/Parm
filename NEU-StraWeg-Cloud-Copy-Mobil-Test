@@ -1,0 +1,84 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-StraWeg-Cloud-Copy-UpdateDaten
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-StraWeg-Cloud-Copy-UpdateDaten
+* 
+* 
+*********************************************************** 
+ 
+******************************** 
+%%AUFTRAGGEBER=K.Köppe
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=Verfahren-Update aus Cloud abholen
+%%RICHTUNG=Copy-from-Cloud
+
+%%EMAIL_0=stephan.schaedel@itk-rheinland.de ;Antonio.Dibsi@itk-rheinland.de
+%%EMAIL_T=stephan.schaedel@itk-rheinland.de ;Antonio.Dibsi@itk-rheinland.de
+
+%%EMAIL_CC=
+Edmund.Peters@stadt.neuss.de;Produktions-Steuerung@itk-rheinland.de
+
+
+
+
+*---------------------------------------------------------------------------------
+*  Der Begriff secret-server wird im Job durch das verschlüsselte Passwort ersetzt 
+*  %%P=secret-server
+*  somit kann man bei Bedarf mit User Password testen
+*---------------------------------------------------------------------------------
+
+
+
+* PROD AV Clout Batch User
+%%U=s-zv-cloudav
+%%P=SB131Arbeit#
+
+
+
+
+-
+*---------------------------------------------------------------------------------
+* Eingabe Directory 
+* Directory in der Cloud
+* immer mit Laufwerksbezeichnung
+
+%%INDIR=X:\StraWeg\%%GEM3.\Test
+
+* Datei Suchmaske
+%%INCLUDE=*.apk
+%%EXCLUDE="-"
+
+* Ausgabe Directory 
+
+%%OUTDIR=\\vftestn3\TestNE\Daten\StraWeg\mobilprg
+
+
+* Cloud Laufwerk
+%%LAUFWERK=X:
+ 
+* Dateien die in die Cloud geschrieben wurden 
+* nach erledigt verschieben
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+%%USE_PREFIX=N
+
+%%TEST=N
+%%DEBUG=N
+*                        stephan.schaedel@itk-rheinland.de  ;    antonio.dibsi@itk-rheinland.de ;   andreas.koerschenhausen@stadt.neuss.de;  Guido.vanBoven@Stadt.Neuss.DE ;     Markus.Moeske@stadt.neuss.de 
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.02.2022  09:02:13  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-EWO-Datenuebermittlung-GGRZ-Mail
+* 
+* 
+*********************************************************** 
+ 
+
+* ------------------------------------------------------------------
+
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Send-Mail-Attach.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%AUFTRAGGEBER=M.Pixa
+
+
+* Eingabe Directory
+%%INDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta\GGRZ\EWO-Typ-3
+
+
+%%INCLUDE=*MEDA*.036
+%%EXCLUDE="-"
+
+
+
+%%EMAIL_T=meldedaten@it.nrw.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL_BCC=
+
+
+
+
+%%EMAIL_U=ITK Rheinland DTA GGRZ MEDA %%$ODATE
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+%%EMAIL_A_MOVE=J
+
+* Unterverzeichnis "%%$OYEAR.%%OMONTH" wird NICHT automatisch erstellt! - zvaa241
+%%OUTDIR_PROCESSED=%%INDIR.\Mail\%%$OYEAR.%%OMONTH
+
+%%DEBUG=N
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\OK.EWO-GGRZ-MEDA-Übertragung.pdf
+
+
+
+

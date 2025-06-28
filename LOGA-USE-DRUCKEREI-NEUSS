@@ -1,0 +1,20 @@
+* P&I nicht verwenden 
+* zB bei Druck in der Druckerei Neuss
+* LIBMEMSYM überschreibt Default Wert J
+%%USE_PI=N
+%%USE_FREEFLOW=N
+%%USE_DRUCKEREI=J
+%%FORCE_OUTDIR=N
+
+%%DRUCKEREI_DIR=\\vfne\11\Amt11\03 Verwaltungsservice\04 Druckdienstleistungen\09 Druckaufträge ITK
+
+
+**%%DRUCKEREI_DIR=\\ne1da03\1d03data\ZENTRALE\ZDIENSTE\ZSTEIT\03 Verwaltungsservice\04 Druckdienstleistungen\09 Gehälter
+%%EMAIL_T=vervielfaeltigungsstelle@stadt.neuss.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;Stephan.Huennekes@itk-rheinland.de
+
+
+
+%%PRINTER_QUEUE=\\Msprintff01\source$\LOGA\Druckerei-Neuss\%%$OYEAR.\%%OMONTH
+%%OUTDIR=%%INDIR.\Buendel
+%%LOGA_KN_DRUCKER=%%PRINTER_QUEUE

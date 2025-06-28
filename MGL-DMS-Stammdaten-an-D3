@@ -1,0 +1,95 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-DMS-Stammdaten-an-D3
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+********************************************************
+%%DESCRIPTION=CTM-Documentation im Monitoring Right Pane Synopsys vorhanden. 
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\BL\%%JOBNAME..txt
+*******************************************************
+
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1 
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+* SERVER_TEXT IP, P , U  und SITE kommen meist aus IP-UP Member 
+*%%SERVER_TEXT
+*%%IP
+*%%P
+*%%U=Secret-Server
+%%SITE=MGL-BOCHUM
+%%AUFRAGGEBER=M.Milka
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Bereitstellung Daten für D3
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=/netware/Loga/logamg/export/Stammdaten_fuer_d3/
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=ITK_Stammdaten_fur_d_3_Personalaktenarchiv_MG.csv
+
+
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+*%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta
+*%%OUTDIR=\\vfapps01\d3dms\Konfiguration\Import\D3P\LOGA\Stammdaten
+*%%OUTDIR=\\vfd3dms\ProdImport\Import\D3P\LOGA\Stammdaten
+%%OUTDIR=\\vfd3dms\ProdImport\LOGA\D3P
+
+
+
+%%SHOW_ERGEBNISLISTE=N 
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+
+%%Z08=get %%INCLUDE  %%OUTDIR.\StadtMG-d3.csv
+
+ 
+*%%Z09=?
+*%%Z10=?
+
+
+
+* WinSCP
+%%Z30=exit 
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.07.2021  10:49:44  zv173x2 neu 1. Lauf
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

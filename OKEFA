@@ -1,0 +1,11 @@
+*********************************************************************************
+* LIBMEMSYM
+* O K . E F A  
+* S Y S T E M F I L E 
+*
+*********************************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEFA_%%GEM3

@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-OPENFT-MIGEWA-GZR-Anfrage-Move
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-OpenFT-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* OpenFT Partner / Anschluss 
+* BAG, BZR,LZPD..... 
+%%ANSCHLUSS=BZR
+
+* SENDEN oder EMPFANGEN 
+%%RICHTUNG=SENDEN
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\migewa\GZRONLINE
+
+
+* Datei Auswahl
+%%INCLUDE=GZR*.GZR
+
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\BZR\GZR\MIGEWA\%%GEM3
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\migewa\GZRONLINE\erledigt
+%%MOVE_OVERWRITE=J
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.12.2020  15:35:47  zv173x2 MOVE_OVERWRITE=J
+*    13.06.2017            zv173x2 Migewauser 
+*    09.07.2015  11:29:00  zv171e1 Änderung INDIR  BZRONLINE ind GZRONLINE
+*    06.05.2015  12:33:15  zv173x2 neu für NEU-MIGEWA-GZR-Anfragen-Move.txt
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

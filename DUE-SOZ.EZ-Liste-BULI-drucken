@@ -1,0 +1,76 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.EZ-Liste-BULI-drucken
+* 
+* 
+*********************************************************** 
+ 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR  alle Files mit vorgegebener Maske an beliebige Anzahl Printer.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Print-To-Printers.ps1 -INCLUDE %%INCLUDE -PRINTER %%PRINTER
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%BEIBLATT=N
+
+
+
+* ************************************************************************
+*   LIBMEMSYM   für Copy PDF auf Drucker
+*   Name PRINTER-DLD508759
+* ************************************************************************
+
+* Eingabe Directory 
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE
+
+* Drucker Freigabe
+%%PRINTER=\\msdhp5\DLD508759
+
+%%BULI=EZ-090-DF_PFZV0200_BULI_EZ_%%$ODATE..pdf 
+
+
+%%INCLUDE=%%BULI
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE.\gedruckt
+
+* Datei Auswahl
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%FORCE_OUTDIR=N
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SOZI\Drucker-DUE\DUE-SOZ.EZ-Liste-BULI-drucken-neu-DLD508759.pdf 
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.11.2018  09:35:44  zv171e1  alt:  DLD508759   neu: DLD508757
+
+*    12.02.2016  11:04:50  zv173x2  alt \\msdhp5\DLD508757
+*                                    neu \\msdhp5\DLD508759
+
+*    24.11.2015  08:24:27  zv171e1 neu
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

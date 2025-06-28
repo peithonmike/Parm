@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-X22U2215_JAVA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%FTP-LPATH1=\av\Gba\SAS_Ausgabe\X22U2215_Ausgabe.txt
+%%FTP-RPATH1=PBA.GEMAG.ZAGX.DTA1.ALT
+
+%%FTP-NEWNAME1=\av\Gba\SAS_Ausgabe\Erledigt\X22U2215_Ausgabe_D%%ODATE..txt

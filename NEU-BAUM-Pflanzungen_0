@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-BAUM-Pflanzungen
+* Stadt Neuss
+* neu - gültig ab 03.01.2014
+* erweitert um Commerzbank CB  - 21.12.2015
+* 20.04.2017 - Umstellung auf Powershell-FTP
+* 29.05.2017 - erweitert um ELKO_VB,ELKO_DB durch J.Huhn
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-WinSCP-Put-4.ps1
+
+%%INDIR=\\vfne\10\Themen\Open Data Amt 19\Baumpflanzungen Herbst 2023
+%%OUTDIR=Baumpflanzungen Herbst 2023
+%%SERVER_TEXT=Baumpflanzungen_Stadt_Neuss
+%%INCLUDE=*.*
+%%SERVER=\\vfne\10\Themen\Open Data Amt 19
+
+%%TEST=J
+%%DEBUG=N
+%%OUTDIR_PROCESSED='\\vfne\10\Themen\Open Data Amt 19\Baumpflanzungen Herbst 2023\gesendet'

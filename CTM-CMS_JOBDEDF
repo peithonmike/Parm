@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-CMS_JOBDEDF
+* 
+* 
+*********************************************************** 
+ 
+%%TRENNER="|" 
+%%DB=CONTROL_M
+*CTRLM640
+%%U=control_m
+%%P=ctmuser
+%%SHOW_HEADER=J 
+%%FILE=\\msbmcc03\ctm_av\bin\c\online\ctm_cond.csv
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\CTM_COND.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\Ctm_cond.sql
+%%TEST=N
+
+ 
+
+ 
+

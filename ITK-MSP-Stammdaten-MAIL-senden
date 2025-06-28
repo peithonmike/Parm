@@ -1,0 +1,55 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-MSP-Stammdaten-MAIL-senden
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%AUFTRAGGEBER=A.LOTHOLZ
+
+
+* Eingabe Directory
+%%INDIR=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\%%GEM3.\kundenpfad
+
+
+%%INCLUDE=*%%$ODATE.*.CSV
+
+
+%%EXCLUDE="-"
+
+%%EMAIL_T=Sabine.Betz@itk-rheinland.de;birgit.gottschalk@itk-rheinland.de;Heike.Arendt@itk-rheinland.de
+**EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+**EMAIL_BCC=
+
+* Subject
+%%EMAIL_U=%%JOBNAME
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+%%EMAIL_A_MOVE=J
+%%OUTDIR_PROCESSED=%%INDIR.\versendet
+
+%%DEBUG=N
+%%TEST=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Send-Mail-Attach.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.12.2022  15:04:00  zvaa241 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

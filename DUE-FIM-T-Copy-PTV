@@ -1,0 +1,28 @@
+* *************************************************************
+* Table Variablen          
+* DUE-FIM-T-Copy-PTV
+* alter Hostjob Y68F0500
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\DUE-PTV
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%EINGABE_VZ=\\srv03\qaspdf$\Daten\Apps\FIM\FIBU\EXPORT
+%%USERID=itk\ftpfimlhd
+%%PW=ptF01+miF
+%%EINDAT=Export_%%$ODATE..txt
+
+%%AUSGABE_VZ=\\msptv02\PTVProjekte$\SAP_Export\FIM_EXXX\InDir
+%%AUSDAT=DUE_FIM_T%%$ODATE..TXT
+
+%%MAIL_NOTOK=toni.willibald@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist nicht OK gelaufen
+%%TEXT_NOTOK=Es gab keine FIM-Eingabedatei fuer Duesseldorf.
+
+%%COMMAND=\\msbmcc03\CTM_AV\Bin\BAT\DUE-PTV-OHNE.cmd

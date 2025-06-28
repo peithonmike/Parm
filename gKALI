@@ -1,0 +1,29 @@
+* *************************************************************
+* Globale Variablen          
+* Kamp Lintfort
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%STADT=Stadt
+%%ORT="Stadt Kamp-Lintfort"
+%%ORT2=Kamp-Lintfort
+
+%%GKZ8=????????
+
+* Variablen für Wohnungswesen
+
+%%KSU_NR=060
+%%KSU_DIR=ksu2000_krzn 
+%%RZ=KRZNMO
+%%RZ2=krzn
+%%MD1=KALI
+%%GEM4=KALI
+%%MD2=Stadt Kamp-Lintfort 
+%%MD3=kali
+%%LAUF=prod
+%%FW_MesoDatei=\\srv03.asp.rzne.de\KSU2000krzn$\prod\%%KSU_NR.\meso\ewobewegung_mo_%%KSU_NR.*.txt
+%%FW_ImportDatei=\\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR.\kasse\%%KSU_NR._*.txt
+%%DELMESO=DEL \\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR.\meso\ewobewegung_mo_%%KSU_NR..txt
+%%CTMFW=ctmfw -input c:\CTM_AV\Parm\KSU2000_FW_MESO_%%MD1..txt
+
+

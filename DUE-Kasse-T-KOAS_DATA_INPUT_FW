@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Kasse-T-KOAS_DATA_INPUT_FW
+* 
+* 30.03.2017 - Umstellung FTP per Powershell
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+**CLIENT=IFP
+**MANDANT=400
+**DATEI=koas*.txt
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass "%PSScripts%\Global\ExistsRemoteFile.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_400.cred" -RemoteFile "\SST\IFP\400\Fachverfahren\Freigabe\BZA\koas*.txt"

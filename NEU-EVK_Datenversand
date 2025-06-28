@@ -1,0 +1,22 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  
+***********************************************************************************
+*  Jobname     : NEU-EVK_Datenversand
+*  APPLICATION : EVK
+***********************************************************************************
+*
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+**COMMAND=\\msgeomap03.itk.local\D$\Programme\Batchprogramme\ASP\copy_%%GEM._evk.BAT
+%%COMMAND=\\msgeomap03.itk.local\d$\Programme\Batchprogramme\ASP\copy_ne_evk.BAT
+
+
+%%MAIL_NOTOK=hendrik.possberg@itk-rheinland.de;
+%%BETREFF_NOTOK=Datenversand nach %%ORT  abgebrochen
+%%TEXT_NOTOK=%%JOBNAME - Datenversand nach %%ORT fehlerhaft

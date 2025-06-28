@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-FR-rename-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Absender
+%%EMAIL-F=Produktions-Steuerung@ITK-Rheinland
+
+* Message File
+*%%EMAIL_O=\\msbmcc03\ctm_av\Parm\EEL_LISTEN_MAIL.TXT
+
+*%%EMAIL-O= 
+
+
+* Empfänger (durch Semikolon getrennt)  
+
+        
+%%EMAIL_T=achim.kohlmetz@neuss.de;Hans-Georg.Robertz@itk-rheinland.de;Daniel.Mendoza@itk-rheinland.de
+
+
+
+
+
+
+
+* Subject
+%%EMAIL_U=Job-Nachricht: Rechnungs-Daten wurden auf dem SST-Laufwerk zur Verfügung gestellt
+
+* Kopie
+%%EMAIL-CC=;Produktions-Steuerung@itk-rheinland.de
+
+
+
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.06.2020  11:14:42  zv173x2 raus mareike.schneider@neuss.de;christoph.bartels@neuss.de;
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

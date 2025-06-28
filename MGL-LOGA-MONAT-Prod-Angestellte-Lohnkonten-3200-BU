@@ -1,0 +1,79 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Angestellte-Lohnkonten-3200-BU
+* 
+* 
+*********************************************************** 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3 
+
+
+
+* Eingabeverzeichnis
+%%INDIR =\\vfmgapps\apps\Verfahren\Loga-Abrechnungen\Lohnkonten_Angestellte
+
+* Ausgabeverzeichnis
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga-Abrechnungen
+
+
+* Auswahl  
+%%INCLUDE=MANUPRODRE%%MM.-11001-03*.pdf
+%%EXCLUDE="-"
+
+
+* Bündelname 
+%%OUTFILE=Konten Angestellte - Mandant 11001 AK03.pdf
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+* Sammeldir für mehr als eine PDF
+* halten oder löschen nach Verarbeitung
+%%SAMMELDIR_DELETE=J
+
+%%USE_PAGECOUNTER=N
+
+%%USE_OUTDIR_PROCESSED=N
+%%FORCE_OUTDIR_PROCESSED=N
+
+  
+%%ADD_TRENNBLATT=N
+
+%%ADD_FRONTCOVER=N
+%%ADD_BACKCOVER=N
+
+
+* Standard Kopieblätter
+%%KOPIE01=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie01.pdf
+%%KOPIE02=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie02.pdf
+
+* Kopie Zwischenblatt einfügen J/N
+%%ADD_KOPIE=N
+
+* Anzahl Kopien 
+%%COPYCOUNT=0
+
+* P&I verwenden  J/N
+%%USE_PI=N
+
+* P&I Druck Queue
+%%PRINTER_QUEUE=\\msprintff01\d$\R18personal
+
+
+
+
+
+
+
+
+

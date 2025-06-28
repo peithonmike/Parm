@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-Jagdwesen-T-FW
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\bin\Powershell\jagdwesen.ps1
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer Jagdwesen-Daten %%GEM3. nach KIRP OK
+%%BETREFF_NOTOK=FileTransfer Jagdwesen-Daten %%GEM3. nach KIRP NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der Jagdwesen-Daten %%GEM3. ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der Jagdwesen-Daten %%GEM3. ist NOTOK.

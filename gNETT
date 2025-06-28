@@ -1,0 +1,27 @@
+* *************************************************************
+* Globale Variablen          
+* Stadt Nettetal					
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%Stadt  =Stadt
+%%ORT    ="Nettetal"
+%%ORT2   =Stadt_Nettetal
+
+%%GKZ8   =????????
+
+* Variablen für Wohnungswesen
+
+%%KSU_NR =240
+%%KSU_DIR=ksu2000_krzn 
+%%RZ=KRZNMO
+%%RZ2=krzn
+%%MD1=NETT
+%%GEM4=NETT
+%%MD2=Stadt Nettetal
+%%MD3=nett
+%%LAUF=prod
+%%FW_MesoDatei=\\srv03.asp.rzne.de\KSU2000krzn$\SicherungProd\%%KSU_NR.\ewobewegung_mo_*.txt
+**FW_ImportDatei=\\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR.\kasse\%%KSU_NR._*.txt
+%%CTMFW=ctmfw -input c:\CTM_AV\Parm\KSU2000_FW_MESO_%%MD1..txt
+%%DELMESO=del \\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR.\meso\ewobewegung_mo_%%KSU_NR..txt

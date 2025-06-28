@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-CCM-Amt50-Move-Kassendaten-XML
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\d%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+* hierhin schreibt der Vorläufer Job  DUE-CCM-Erstellen-Kassendaten per SQL die Kassendaten  
+%%SEARCH_DIR=\\srv03.asp.rzne.de\ftp$\df\CCM\Amt50\SEPA
+
+* die Kassendatei entspricht dieser Suchmaske 
+%%SEARCH=*.XML
+
+* Mandatenverzeichnis und Datei , in die die erstellten Kassendaten kopiert werden sollen
+**OUTDIR=\\vfduswba\51\Amt51\Themen\CCM\KASSE\SEPA
+%%OUTDIR=\\vfduswba\51\Amt51\Themen\CCM\KASSE\SEPA
+%%OUTFILE=CCM_Export_an_Kasse_%%$ODATE._%%TIME..xml
+
+
+
+
+
+* nach erfolgreichem kopieren, sollen die Daten in den erledigt Ordner verschoben werden
+* Search_dir\move_ordner
+%%MOVE_ORDNER=SEPA_erledigt
+
+%%LOGFILE=\\msbmcc03\ctm_av\Log\ErgebnisLog\%%GEM3.-CCM.KIRP-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+
+* Logfile im Projekt anzeigen
+$$INCLUDE=%%LOGFILE
+
+
+* ------------------------------------------------------------------
+*
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.11.2021  14:38:50  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+

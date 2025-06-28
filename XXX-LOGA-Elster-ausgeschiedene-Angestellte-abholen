@@ -1,0 +1,106 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Elster-ausgeschiedene-abholen
+* 
+* 
+*********************************************************** 
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-MOERS
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+             
+%%JAHR=%%JJJJ_M1_%%$ODATE
+
+
+
+%%OUTDIR1=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\01
+%%OUTDIR2=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\02
+%%OUTDIR3=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\03
+%%OUTDIR4=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\04
+%%OUTDIR5=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\05
+%%OUTDIR6=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\06
+%%OUTDIR7=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\07
+%%OUTDIR8=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\08
+%%OUTDIR9=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\09
+%%OUTDIR10=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\10
+%%OUTDIR11=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\11
+%%OUTDIR12=\\Msprintff01\source$\LOGA\Elster\%%JAHR.\NAR\12
+
+
+
+
+
+%%INCLUDE=*.pdf
+
+%%Z01=open %%SITE
+
+%%Z02=cd /Prod/NAR/elster_%%JAHR./Elster_Januar_%%JAHR._AR/DN
+%%Z03=LCD %%OUTDIR1
+%%Z04=mget %%INCLUDE 
+
+
+%%Z05=cd /Prod/NAR/elster_%%JAHR./Elster_Februar_%%JAHR._AR/DN
+%%Z06=LCD %%OUTDIR2
+%%Z07=mget %%INCLUDE 
+
+
+%%Z08=cd /Prod/NAR/elster_%%JAHR./Elster_Maerz_%%JAHR._AR/DN
+%%Z09=LCD %%OUTDIR3
+%%Z10=mget %%INCLUDE 
+
+
+%%Z11=cd /Prod/NAR/elster_%%JAHR./Elster_April_%%JAHR._AR/DN
+%%Z12=LCD %%OUTDIR4
+%%Z13=mget %%INCLUDE 
+
+
+%%Z14=cd /Prod/NAR/elster_%%JAHR./Elster_Mai_%%JAHR._AR/DN
+%%Z15=LCD %%OUTDIR5
+%%Z16=mget %%INCLUDE 
+
+
+%%Z17=cd /Prod/NAR/elster_%%JAHR./Elster_Juni_%%JAHR._AR/DN
+%%Z18=LCD %%OUTDIR6
+%%Z19=mget %%INCLUDE 
+
+
+%%Z20=cd /Prod/NAR/elster_%%JAHR./Elster_Juli_%%JAHR._AR/DN
+%%Z21=LCD %%OUTDIR7
+%%Z22=mget %%INCLUDE 
+
+
+%%Z23=cd /Prod/NAR/elster_%%JAHR./Elster_August_%%JAHR._AR/DN
+%%Z24=LCD %%OUTDIR8
+%%Z25=mget %%INCLUDE 
+
+
+%%Z26=cd /Prod/NAR/elster_%%JAHR./Elster_September_%%JAHR._AR/DN
+%%Z27=LCD %%OUTDIR9
+%%Z28=mget %%INCLUDE 
+
+%%Z29=cd /Prod/NAR/elster_%%JAHR./Elster_Oktober_%%JAHR._AR/DN
+%%Z30=LCD %%OUTDIR10
+%%Z31=mget %%INCLUDE 
+
+%%Z32=cd /Prod/NAR/elster_%%JAHR./Elster_November_%%JAHR._AR/DN
+%%Z33=LCD %%OUTDIR11
+%%Z34=mget %%INCLUDE 
+
+%%Z35=cd /Prod/NAR/elster_%%JAHR./Elster_Dezember_%%JAHR._AR/DN
+%%Z36=LCD %%OUTDIR12
+%%Z37=mget %%INCLUDE
+
+
+
+%%Z40=bye 
+%%TEST=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.02.2017  09:39:40  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

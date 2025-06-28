@@ -1,0 +1,18 @@
+* *************************************************************
+* Table Variablen          
+* DUE-PTV-KANIO-T-COPY
+* KANIO Lohn (SEBD) - Splitten und Kopieren der PTV-Ausgabedateien auf das Kunden-Laufwerk
+* *************************************************************
+
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+%%SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%MAIL-OK=petra.huenewinckell@duesseldorf.de;patrick.mailath@duesseldorf.de;ulrich.broeskamp@duesseldorf.de
+%%MAIL_OK_2=norbert.doutrelepont@duesseldorf.de;daniel.mendoza@itk-rheinland.de;martin.gehring@itk-rheinland.de
+%%BETREFF-OK=KANIO Lohn (SEBD) - Splitten und Kopieren der PTV-Ausgabedateien auf das Kunden-Laufwerk
+%%TEXT-OK=%%JOBNAME  Das Splitten und Kopieren der PTV-Ausgabedateien ist erfolgreich gelaufen

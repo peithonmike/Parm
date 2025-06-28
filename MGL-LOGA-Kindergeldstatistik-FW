@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-Kindergeldstatistik-FW
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+
+%%NETUSE_PATH=\\10.50.34.68\loga
+%%LAUFWERK=Y:
+
+%%INDIR=\\10.50.34.68\loga\ml2001jobmg\Kindergeldstatistik
+
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga-Abrechnungen\Lohnkonten_Versorgung
+
+%%INCLUDE=7100_%%KINDER-DAT..PDF
+
+%%EXCLUDE="-"
+
+
+%%FORCE_OUTDIR=J
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.11.2017  10:30:38  zv171e1 neu
+*     
+ 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

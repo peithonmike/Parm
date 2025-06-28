@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-J-R22J5805_JAVA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%TEST=N
+
+%%INFILE_VD=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Eingabe\R22J5805_EINGABE_VD.TXT
+%%INFILE_JAHR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Eingabe\R22J5805_EINGABE_JAHR.TXT
+
+%%OUTFILE_VD=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Ausgabe\R22J5805_AUSGABE_VD-%%$ODATE..CSV
+%%OUTFILE_JAHR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GEW\SAS_Ausgabe\R22J5805_AUSGABE_JAHR-%%$ODATE..CSV
+
+
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\#225805.jar -in40 %%INFILE_VD -in50 %%INFILE_JAHR -out40 %%OUTFILE_VD -out50 %%OUTFILE_JAHR 
+
+
+
+
+

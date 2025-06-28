@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-Test-PS1
+* Sleeptest per PS1
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Global\Sleep.ps1" 5
+
+%%COMMAND2=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Global\Sleep.ps1" -Sekunden 10
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Global\Sleep.ps1" 
+
+Echo Hallo Burghard
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Global\Sleep.ps1" 3
+Echo Weiter arbeiten

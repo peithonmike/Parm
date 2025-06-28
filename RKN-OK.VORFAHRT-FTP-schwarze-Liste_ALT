@@ -1,0 +1,53 @@
+   
+   
+   
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-OK.VORFAHRT-FTP-schwarze-Liste
+* 
+* 
+*********************************************************** 
+*   %%TEST=N = ohne kopieren
+%%TEST=N
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-OK.VORFAHRT-MOERS
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+%%SEARCH_DIR=\\sapftpitk.sapitk.krzn.de\sapmntitk\SST\IFP\%%GKZ.\export
+%%SYSUT1=%%SEARCH_DIR.\okvsl.csv
+
+%%SYSUT2=%%GEM3.-okvsl.csv
+%%SYSUT3=\\msbmcc03\ctm_av\TEMP\%%GEM3.-okvsl_%%$ODATE..csv
+
+
+
+
+%%EMAIL_T=Uta.Webler@ITK-Rheinland.de
+*;Ralf.Geuer@KRZN.DE 
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+*;Produktions-Steuerung@itk-rheinland.de
+%%EMAIL_U=Job-Nachricht CC:%%COMPSTAT  %%JOBNAME 
+
+
+
+* Umwandlungsvariablen
+%%INDIR=%%SEARCH_DIR
+%%INFILE=okvsl.csv
+%%OUTDIR=%%SEARCH_DIR
+%%OUTFILE=ANSI_okvsl.csv
+%%ANSIFILE=%%OUTDIR.\ANSI_okvsl.csv
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     06.04.2016  11:55:20  zv173x2  Umwandeln UTF8 nach Ansi
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+

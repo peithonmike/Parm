@@ -1,0 +1,64 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-Grundsicherung-Dateien-Copy-Amt50
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOZ-DAT
+
+
+* Eingabe Directory 
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\DUE\%%SOZ_DAT.\Grundsicherung_bWf
+
+
+* Datei Auswahl
+%%INCLUDE=*.*
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfduswba\51\Amt51\grundsicherung_bWf\Statistiken\Druckdateien_Berechnungslauf
+
+
+* erledigt Ordner
+
+%%OUTDIR_PROCESSED=%%INDIR.\gesendet
+
+
+*  J oder N
+%%FORCE_OUTDIR=J
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.11.2015  10:15:31  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

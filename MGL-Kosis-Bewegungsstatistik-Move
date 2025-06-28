@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-Kosis-Bewegungsstatistik-Move
+* 
+* 
+*********************************************************** 
+ 
+
+  
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%INDIR=%%OKEWO_ROOT.\ffd
+%%FILE=KOSIS_BEW_1_%%TTMMJJJJP_%%$ODATE...txt
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Kosis\Bewegungen
+
+%%OUTFILE=ITKR_%%ODATE._%%GKZ8._KOSIS_BEW_1_%%TTMMJJJJP_%%$ODATE...txt
+%%FIND="%%GKZ8."
+%%COUNT=J
+
+
+* LGKZ=99999999
+* OKEWO_FILENAME=KOSIS_1*.*.*.*.txt
+* OKEWO_SUBDIR=ffd
+* ITKR_SUBDIR=Kosis/Bewegungen 
+* TEXT=KOSIS-Bewegungsstatistik KOSIS_1*.*.*.*.txt
+* 
+* NEWRENAME=ITKR_DATUM_GKZ8_OKEWONAME
+
+
+%%TEST=N
+

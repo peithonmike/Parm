@@ -1,0 +1,30 @@
+*
+* VLK Member zum senden der Mandanten Plausidaten an das IT-NRW (LDS) Postfach
+* im Dateinnamen befinden sich die letzten 6 Stellen des 8er GKZ 
+*
+
+%%DATUM=%%JJMMTT_TT_M1_%%$ODATE
+%%GKZ6   =%%SUBSTRING  %%GKZ8 3 6
+
+%%LOGFILE=\\msbmcc03\ctm_av\Log\ErgebnisLog\%%GEM3.-WOHN-LDS-POSTFACH-%%$OYEAR..csv
+
+
+* Mandantenordner mit Plausi und Abrechnungsdateien, die an IT-NRW gesendet werden müssen
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\Wohngeld\Ausgabe
+%%SEARCH_DIR2=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\Wohngeld\Ausgabe
+        
+* Namensmaske der Sendung an IT-NRW
+* %%SEARCH=WOHN.BRIEF.B%%GKZ6..PL*
+%%SEARCH=WOHN.BRIEF.B%%GKZ6*
+* Ordner,in den die Mandantendateien nach dem erfolgreichen Versenden an IT-NRW verschoben werden
+%%MOVE_ORDNER=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LdsPostfach\%%ORT.\gesendet\IT-NRW
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.11.2015  09:18:09  zv173x2 \\srv03.asp.rzne.de\
+*    13.02.2012  10:32:44  zv173x2 SERACH von Plausi auf allg. geändert
+*    28.12.2011  10:15:54  zv173x2 SEARCH_DIR2 vorbereitet
+*                          TODO : echter Name muss noch rein 
+*                          TODO : SEARCH muss noch angepasst werden 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

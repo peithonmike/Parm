@@ -1,0 +1,75 @@
+
+%%OVERWRITE=J
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : DUE                                                                  *
+***********************************************************************************
+*  Jobname     : DUE-Geburtstagsliste-100-plus
+*  Description : Geburtstagsliste-100-plus
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%VON=01.01.%%$OYEAR
+%%BIS=31.12.%%$OYEAR
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%VON.-%%BIS *** %%ID.-%%RUNNR
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=19157-E01U0000
+*
+%%OKEWO_NR=P19157
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  Liste1 wird an einen anderen Ort unter neuem Namen kopiert
+%%LISTE1_ACTION=N
+%%LISTE1=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%ODATE..DBL
+
+*%%LISTE1_TARGET=%%OKEWO_ROOT.\div\e01awgeb.DBL
+  
+*  Liste2 wird an einen anderen Ort unter neuem Namen kopiert
+%%LISTE2_ACTION=N
+%%LISTE2=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%ODATE..STS
+
+%%COPY_STS_DBL=J
+%%LISTE_CSV=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..CSV
+
+*%%COPY_LISTE_CSV=J
+*%%LISTE_CSV_TARGET=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Auswertungen\Geburtstagsliste\LHD
+
+*%%LISTE2_TARGET=%%OKEWO_ROOT.\div\e01awgeb.sts
+  
+*  es wird eine Mail mit Anhang versendet(nur wenn der Job OK ist)
+%%SENDMAIL=J
+%%EMAIL-U=%%JOBNAME
+%%EMAIL-T=andrea.hilden@duesseldorf.de
+%%EMAIL-A=%%LISTE_CSV
+  
+* 
+*  Beschreibung   
+%%DESC=Geburtstagsliste-100-plus
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U19603#A_VON_N.E01DUMMY#%%VON#A_BIS_N.E01DUMMY#%%BIS#A_TRENNER_N.E01DUMMY#;#A_AUSWAHL_N.E01DUMMY#1#A_SPERREN_N#JNJJNJNNNN__NNNNN_NN2#A_GEBIETSTYP_N.E01DUMMY#102#A_GEBIET1_N.E01DUMMY#11#A_GEBIET2_N.E01DUMMY#198#A_NWJN.E01DUMMY#N#A_IQDRUCK_N.E01DUMMY#N#A_BEGRIFF_N.E01DUMMY#Liste 100 plus#AUSG_FILE.E01DUMMY#%%LISTE1#V_UZ331_LISTE.E01DUMMY#$$
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*   
+*    15.06.2011  10:58:15  ZV173X2 schon wieder geänder in altj rday.....
+*    15.06.2011  10:15:59  ZV173X2 Dateiname geändert in ODATE
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

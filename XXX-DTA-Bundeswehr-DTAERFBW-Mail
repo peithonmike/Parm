@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-DTA-Bundeswehr-DTAERFBW-Mail
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\SYSTEM
+
+*  MAIL 
+* Bundeswehr möchte keine zusätzlichen Text in der Mail, nur Daten
+%%EMAIL-O=\\msbmcc03\ctm_av\Parm\StandardMessageBLANK.TXT  
+%%EMAIL-U=ITK-Rheinland, DTAWUEBW,   Änderungsdaten Stand: %%ODATE_P
+%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+
+
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta\Kreiswehrersatzamt\Senden
+%%SEARCH=DTAWUEBW*.xia
+
+* 
+%%WORKBAT=\\msbmcc03\ctm_av\bin\bat\WORK-OKEWO-DTAERFBW-SendMail.BAT
+%%LOGFILE=\\msbmcc03\ctm_av\LOG\ErgebnisLog\OKEWO-DTA-BW-%%$OYEAR..csv
+%%MOVE_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta\Kreiswehrersatzamt\erledigt
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Log\ErgebnisLog\OKEWO-DTA-BW-%%$OYEAR..csv
+$$INCLUDE=\\msbmcc03\c_bmc\CTM_AV\Parm\StandardMessageBLANK.TXT
+
+* ------------------------------------------------------------------

@@ -1,0 +1,34 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant :    aktuell nur Düsseldorf
+*  Stand 05.08.2010                                                               *
+***********************************************************************************
+*  APPLICATION : MIGEWA.OPENFT 
+*  Description : GZR-ANFRAGEN (EXPORT)
+***********************************************************************************
+* Senden geht im Moment nur mit ASP\ZV172W3 ist im CTM auch angelegt
+***********************************************************************************
+
+*
+%%RICHTUNG=SENDEN
+%%BFJ_ID=BFJ_ID_MIGEWA?
+*
+*
+
+
+* Anfragedaten aus dem MIGEWA Verfahren
+%%INPUT_DIR=%%MIGEWA_GZR_DIR_ANFRAGE
+
+* zu sendende Files werden anhand der Suchbegriffes ermittelt
+%%SEARCH=*.GZR
+
+
+
+%%SYSOUT          =%%OPENFT_SYSOUT
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+*
+***********************************************************************************
+
+
+

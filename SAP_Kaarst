@@ -1,0 +1,19 @@
+* *************************************************************
+* Globale Variablen          
+* SAP Stadt Kaarst
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+**SYSOUT=//sapftpitk.sapitk.krzn.de/SST/IFQ/SYSOUT_CTM/%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+%%MAIL2_NOTOK=Hans-Georg.Robertz@itk-rheinland.de;Simone.Thissen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de;olaf.kretzschmar@kaarst.de;nicole.bogatz@kaarst.de
+%%MAIL_NOTOK=SAP_SB22@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK
+
+%%TEXT_OK=Joblog: %%JOBNAME ist durchgelaufen. Juhu
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist NOTOK. Returncode: %%COMPSTAT  Bitte ueberpruefen. 

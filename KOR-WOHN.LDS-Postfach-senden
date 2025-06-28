@@ -1,0 +1,46 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Korschenbroich
+***********************************************************************************
+*  Jobname     : KOR-WOHN.LDS-Postfach-senden
+*  APPLICATION : WOHN.LDS
+***********************************************************************************
+*********************************************************************************** 
+*
+
+
+%%CHECK_DUP=N
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\d%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\g%%GEM3
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LDS-POSTFACH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\###WOHN-POSTFACH-PUT
+
+
+%%SYSIN_BAT=\\msbmcc03\ctm_av\BIN\BAT\WOHN-POSTFACH-PUT.BAT
+
+%%VOR_BAT  =
+%%NACH_BAT =\\msbmcc03\ctm_av\BIN\BAT\WOHN-POSTFACH-SENDEN-NACH.BAT
+ 
+%%TEST=N
+
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE="\\msbmcc03\ctm_av\DOC\Auftragserteilung\WOHN-POSTFACH Verzeichnis.pdf"
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\WOHN-POSTFACH-Datenversand-Sitzung-1.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\Log\ErgebnisLog\%%GEM3.-WOHN-LDS-POSTFACH-%%$OYEAR..csv
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    14.12.2012  11:08:31  zv173x2 %%CHECK_DUP=N
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

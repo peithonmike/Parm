@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM
+* DUE-ablaufende-BPA-Zettel
+* 
+* \\msbmcc03\C_BMC\CTM_AV\JASPER-BEGLEIT\Ablaufende-BPA.TXT
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-PAPYRUS
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+
+
+ 
+
+
+*Eingabedatei
+%%SYSUT1=\\msbmcc03\ctm_av\JASPER-BEGLEIT\Ablaufende-BPA.TXT
+
+
+* Papyrus Document
+%%SYSUT2=#DOCE300#THISFILE#LG211N#DFP16AH1##1_DUE-ablaufende-BPA-Zettel
+
+
+%%TEST=N
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-ablaufende-BPA-Aenderung.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-ablaufende-BPA.pdf
+* ------------------------------------------------------------------

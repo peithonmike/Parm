@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-PRODOP-Import-LOGA-1860-01
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=IMPORT
+%%VERF=Loga (Besoldung für Beamte) AK01
+
+*AK01DAT
+%%DAT=AK01
+%%BJ=11
+
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_ITK
+
+
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+* Auftragserteilung
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-01-neue-Scripte.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-02-Variablen.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-03-Änderung-ini-pf.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-04-Variablen-incl-INTERN.pdf
+* ------------------------------------------------------------------
+
+
+
+

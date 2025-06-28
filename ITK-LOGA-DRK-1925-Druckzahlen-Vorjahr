@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-LOGA-DRK-1925-Druckzahlen-Vorjahr
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+
+%%AUFTRAGGEBER S.Huennekes 
+
+%%HMAN=%%SUBSTR %%JOBNAME 14 4
+%%JJJJ=%%JJJJ_M1_%%$ODATE
+%%INCLUDE=*%%HMAN.*BU.PDF
+
+
+
+%%MANDANTENTEXT=%%LOGA_MAN_%%HMAN
+
+* Indir wird zur Laufzeit erzeugt
+* Auswerte Dateien des gesamten Jahres werden in diesen Ordbner kopiert
+%%TEMPDIR=\\msbmcbatch01\ctm_av\temp\DRK\%%JJJJ.\%%HMAN
+
+%%INDIR1=\\Msprintff01\source$\LOGA\%%JJJJ
+%%INDIR2=\\MSPRINTFF01\Druckdaten$\%%JJJJ
+
+%%OUTFILE=\\Msbmcc03\ctm_av\DOC\BL\DRK\%%JJJJ. %%MANDANTENTEXT %%HMAN..txt
+
+
+%%DESCRIPTION1=  Es werden alle gedruckten Listen des Mandanten  %%HMAN ermittelt.
+%%DESCRIPTION2=  und die  Seiten gezählt, Das Endergebnis, Anzahhl aller Druckzeilen,
+%%DESCRIPTION3=  wird in der Datei %%OUTFILE gespeichert. 
+%%DESCRIPTION4=  Ergebnisdatei muss per Hand an  Anke.Baues@itk-rheinland.de weitergeleitet werden
+
+%%TEST=N
+%%DEBUG=N
+
+
+

@@ -1,0 +1,105 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-Sodatis-Amt50-abholen
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SOZ-DAT
+
+
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+
+
+
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+* SERVER_TEXT IP P und U kommen meist aus IP-UP Member 
+*%%SERVER_TEXT
+*%%IP
+*%%P
+*%%U
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen SODATIS Daten 
+ 
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=/
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=*.*
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\vfcache\av\Daten\SOZ\SOZ-SODATIS\%%$OYEAR.\DUE\%%SOZ_DAT
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+%%Z01=option batch continue
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+**%%Z05=cd /MZ/%%SOZ_DAT
+%%Z05=cd /SODATIS
+*%%
+%%Z07=get nbere-600-DF_PFGS0700_ZADA*_MZ_EZ_*_%%SOZ_DAT..txt %%OUTDIR.\
+%%Z08=get nbere-610-DF_PFGS0750_*_%%SOZ_DAT..txt %%OUTDIR.\
+%%Z09=get nbere-620-DF_*_%%SOZ_DAT..txt %%OUTDIR.\
+%%Z10=get nbere-630-DF_SED*_%%SOZ_DAT..txt %%OUTDIR.\
+%%Z11=cd /MZ/%%SOZ_DAT
+%%Z12=get nbere-500-DF_PFVBKZWE_KZWEDAT_%%SOZ_DAT..txt %%OUTDIR.\
+%%Z13=get nbere-500-DF_PFGSEINM_SEIN_SAEINM_%%SOZ_DAT..txt %%OUTDIR.\
+%%Z15=get nbere-HADA-DF_%%SOZ_DAT..txt %%OUTDIR.\
+%%Z16=get nbere-640-DF_PFGS0790_HAST_%%SOZ_DAT..txt %%OUTDIR.\
+%%Z17=get nbere-650-DF_PFGS0795_WTAB_%%SOZ_DAT..txt %%OUTDIR.\
+%%Z18=get nbere-660-DF_PFGS0797_EIST_%%SOZ_DAT..txt %%OUTDIR.\
+%%Z19=get nbere-pruefsumm-DF_%%SOZ_DAT..txt %%OUTDIR.\
+%%Z20=get nbere-329-DF_%%SOZ_DAT._pruefhinweise.csv %%OUTDIR.\
+%%Z22=get warnliste-%%SOZ_DAT..csv %%OUTDIR.\
+%%Z23=get heimstamm-df.txt %%OUTDIR.\
+%%Z24=close
+%%Z25=exit 
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+ 
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    03.08.2023  15:11:00  zvaa405 Z20 hinzugefügt 
+*    22.10.2015  10:39:28  zv173x2 \ an Outdir
+*    22.10.2015  10:34:41  zv173x2 site
+*    16.10.2015  10:12:04  zv171e1 neu
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

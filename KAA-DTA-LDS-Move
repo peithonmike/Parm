@@ -1,0 +1,56 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Kaarst
+***********************************************************************************
+*  Jobname     : KAA-DTA-LDS-Move
+*  APPLICATION : OK.EWO.DTA
+***********************************************************************************
+*********************************************************************************** 
+*
+*
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\OKEWO\okprg\okewo_%%GEM3.\div
+%%SEARCH=WD*.dat
+
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta\LDS
+
+
+
+
+
+* * * * * * * * * * * * * * * * * * * *
+* Mitteilungsdienst LDS
+* * * * * * * * * * * * * * * * * * * *
+
+* LGKZ=99999999
+* OKEWO_FILENAME=WD*.dat
+* OKEWO_SUBDIR=Stapel
+* ITKR_SUBDIR=Dta/LDS
+* TEXT=Lds Wanderungen
+* NEWRENAME=ITKR
+* NEWRENAME=OKEWONAME
+* GROUP=LDS
+
+* LGKZ=99999999
+* OKEWO_FILENAME=WD*.dat
+* OKEWO_SUBDIR=div
+* ITKR_SUBDIR=Dta/LDS
+* TEXT=Lds Wanderungen
+* NEWRENAME=ITKR
+* NEWRENAME=OKEWONAME
+* GROUP=LDS
+
+* LGKZ=99999999
+* OKEWO_FILENAME=WD*.dat
+* OKEWO_SUBDIR=
+* ITKR_SUBDIR=Dta/LDS
+* TEXT=Lds Wanderungen
+* NEWRENAME=ITKR
+* NEWRENAME=OKEWONAME
+* GROUP=LDS
+
+
+
+%%TEST=N

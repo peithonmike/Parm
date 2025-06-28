@@ -1,0 +1,49 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ-Sodatis-SEDA-024-Rename-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske unter neuem Namen.
+* Der neue Name ergibt sich aus der Vorgabe der NAMES Varibalen, der in der Ursprungsdatei auch enthalten ist. 
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* CTM-Command Aufruf :
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\bl\job\Job-Rename-Copy-Move-Sodatis.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SODATIS-SEDA
+
+%%INCLUDE=nbere-*NE*%%SOZ_GKZ._*.txt
+
+* Ausgabe Directory
+%%OUTDIR=\\ne1da03\1d02sons\INFO\fb05\seda50\%%$OYEAR.\SEDA\%%SOZ_DAT
+
+%%USE_OUDIR2=N
+%%OUTDIR2=\\ne1da03\1d03data\recht_o\ordnung\integration
+
+%%AUFTRAGGEBER=Frau Dudek
+* erledigt Ordner
+*%%OUTDIR_PROCESSED=aus Member SODATIS-SEDA
+
+%%TEST=N
+%%DEBUG=N
+
+**%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Rename-Copy-Move-Sodatis.ps1
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc01\c$\CTM_AV\Bin\Powershell\BL\JOB\Job-Rename-Copy-Move-Sodatis.ps1
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*     13.11.2018  07:36:49  zv173x2  Integration hat eigenen Job 724
+*    03.09.2018  10:20:24  zv173x2 USE_OUTDIR2 für Neuss Amt50
+*    03.08.2018  12:59:05  zv173x2 OUTDIR2
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

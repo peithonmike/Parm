@@ -1,0 +1,17 @@
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\SYSTEM
+* LIBMEMSYSM 
+* Testdruck
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV-QUER
+
+%%TEST=N
+
+
+ 
+* ------------------------------------------------------------------
+*  Druckvorlage
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\c_bmc\CTM_AV\Parm\Druck-Vorlagen\Testseite.skels
+%%PRT_SKELS=\\msbmcc03\c_bmc\CTM_AV\Parm\Druck-Vorlagen\Testseite.skels

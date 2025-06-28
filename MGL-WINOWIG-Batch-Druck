@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-Batch-Druck
+* 
+* 
+*********************************************************** 
+ 
+
+*********************************************************** 
+* Job ist auch entscheidend für die Sollerstellung
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+
+* VLK  
+%%ART=-A128,7,216,2,3,4,5,9,10,310,1203,215,102,21,141,63
+
+%%PARAMETER=%%ART
+%%LOGIN=%%WINOWIG_GKZ
+*    -A128   Änderung SB-Zuordnung
+*    -----   ---------------------------
+*       7   Wandeln Fall in BG
+*     216   Wandeln Fall in KB
+*       2   Anhörung Betroffener
+*       3   Anhörung Zeugenbefragung
+*       4   VG: Verwarngeld Anhörung
+*       5   VG: Verwarngeld Erinnerung
+*       9   BGB
+*      10   KB
+*     310   Kostenfestsetzungsbescheid
+*    1203   ABS: Erinnerung Aufforder. Abholung
+*     215   Anh. Zeugen Erinnerung
+*     102   EMA Passbild anfordern 
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass  \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-WINOWIG-AktionStarten.ps1
+
+
+
+
+
+ 

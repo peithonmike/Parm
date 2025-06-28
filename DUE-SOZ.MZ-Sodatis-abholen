@@ -1,0 +1,66 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-Sodatis-abholen
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-DUE
+
+%%SOZ_DAT=%%JJJJ_MM_P1_%%$ODATE..%%MM_P1_%%$ODATE 
+%%SOZ_DAT=%%$OYEAR.%%OMONTH
+
+
+
+
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen Düsseldorf Sozialwesen ZADA  
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=SODATIS
+
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=EZ-GS-NE_2*_PFGS0700_SEI*_%%SOZ_DAT._Kalendermonat.txt
+
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\Msprintff01\source$\SOZ-SODATIS\%%$OYEAR.\%%SOZ_DAT
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+*%%Z04=open %%U.:%%P.@%%IP
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get %%INCLUDE  %%OUTDIR
+%%Z07=close
+%%Z08=exit 
+*%%Z09=?
+*%%Z10=?
+
+
+
+%%TEST=N
+%%DEBUG=N
+

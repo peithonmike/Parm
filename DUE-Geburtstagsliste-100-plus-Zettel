@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Geburtstagsliste-100-plus-Zettel
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV-QUER
+
+*  Druckvorlage
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\DUE-Geburtstagsliste-100-plus.skels
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\DUE-Geburtstagsliste-100-plus.skels
+
+%%TEST=N
+
+ 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.07.2014  09:34:33  zv173x2 print quer
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

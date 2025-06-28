@@ -1,0 +1,12 @@
+%%GEM3 =%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM =\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM =\\msbmcc03\ctm_av\PARM\KSU_MAIL_ITKR
+
+%%tt =%%ODAY
+%%mm =%%OMONTH
+%%jjjj =%%$OYEAR
+*
+* KSU2000 OKEWO-Abgleich
+*
+
+

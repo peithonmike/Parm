@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-Kasse-T-Vollkomm
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%CLIENT=IFP
+%%MANDANT=900
+%%DEST=\\n900d01m53.n900d01.int.de\TRANSFER_VOLLKOMM$\SollInfo_Vollkomm
+%%DEST_USER=n900d01m53\transfervollkomm
+%%DEST_PASS=vollkomm#RKN-itk
+
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;steffen.brandemann@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist nicht gelaufen
+%%TEXT_NOTOK=Bitte überprüfen
+
+

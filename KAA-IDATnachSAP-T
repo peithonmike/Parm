@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-IDATnachSAP-T
+* 
+* 02.05..2017 - Umstellung auf Powershell-FTP
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Kaarst
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**CLIENT=IFP
+**MANDANT=500
+**SOURCE=\\mskmv02\Programme$\kmv\Batchdateien\kaarst\divers\IDAT
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\KAA_IDAT_nach_SAP_T.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_500.cred"
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\IDATnachSAT-T-Erweiterung.pdf
+* ------------------------------------------------------------------

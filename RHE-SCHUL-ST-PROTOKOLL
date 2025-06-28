@@ -1,0 +1,69 @@
+* *************************************************************
+* zvaa405     28.09.2023          
+* RHE-SCHUL-ST-PROTOKOLL
+* Erzeugt eine CSV Datei
+* Auftraggeber: Hendrick.Moeller@itk-rheinland.de
+* 
+
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+**  Verbidungsdaten
+
+%%SERVER=mssql01.itk.local
+%%DB=schild_rhe
+%%USER=Schulen_AV
+%%PASSWD=VzNPzsN8&8rU
+
+%%SQLFILEPATH=\\msbmcc03\CTM_AV\Parm\RHE_SCHUL_ST_PROTOKOLL\Vorlagen\ST_Protokollierung_Auswertung.sql
+
+
+
+**  Arbeitsverzeichnisse der Dateien für die XLSX Konvertierung und die Archivierung
+
+
+%%CSVPATH=\\msbmcc03\CTM_AV\Parm\RHE_SCHUL_ST_PROTOKOLL\Ausgabe\ST_Auswertung_%%$ODATE..csv
+%%CSVPATH_TMP=\\msbmcc03\CTM_AV\Parm\RHE_SCHUL_ST_PROTOKOLL\Ausgabe\tmp\ST_Auswertung_%%ODATE..csv
+%%AUSGABE=\\msbmcc03\CTM_AV\Parm\RHE_SCHUL_ST_PROTOKOLL\Ausgabe
+%%ARCHIV=\\msbmcc03\CTM_AV\Parm\RHE_SCHUL_ST_PROTOKOLL\Ausgabe\verarbeitet
+
+
+**%%JJJJMMTT_TT_M1_%%$ODATE...csv
+
+
+
+
+
+**  Mail 
+
+%%SMTPSERVER=SMTP
+%%FROM=Produktions-Steuerung@itk-rheinland.de
+**TO=Hendrik.Moeller@itk-rheinland.de
+**TO=cristian.fuchs@itk-rheinland.de
+%%TO=schulleitung@dionysianum.de  
+%%SUBJECT=ST_Protokollierung Auswertung
+%%BODYFILE=\\msbmcc03\CTM_AV\Parm\RHE_SCHUL_ST_PROTOKOLL\Vorlagen\email_body.txt
+%%ATTACHMENTPATH=\\msbmcc03\CTM_AV\Parm\RHE_SCHUL_ST_PROTOKOLL\Ausgabe\ST_Auswertung_%%$ODATE..csv
+
+
+
+
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist durchgelaufen. 
+%%TEXT_NOTOK=Joblog: Fehler bei der Verarbeitung
+
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Job-RHE-SCHUL-ST-PROTOKOLL.ps1

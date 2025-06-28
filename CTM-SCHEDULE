@@ -1,0 +1,49 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-SCHEDULE
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+
+ 
+%%TRENNER=","
+%%DB=CONTROL_M
+%%U=control_m
+%%P=ctmuser
+%%SHOW_HEADER=J
+
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\CTM-SCHEDULE.sql
+* Ausgabe
+%%FILE=\\msbmcc03\ctm_av\bin\c\online\CTM-SQL-SCHEDULE.csv
+
+* Ausgabe Powershell Script
+%%OUTFILE=\\msbmcc03\ctm_av\bin\c\online\CTM-SCHEDULE.csv
+
+%%TEST=N
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avCTM-FLASHER-SCHEDULE.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\CTM-SCHEDULE.sql
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\CTM\BMC_ControlM_SVR_v6.4.01_DB_Poster.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\CTM\BMC_CONTROL-M-Desktop.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\CTM\BMC_ControlM_Ports_Diagram_6.4.01.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\CTM\BMC_ControlM-Server-700.pdf
+* ------------------------------------------------------------------
+
+

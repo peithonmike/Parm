@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-WINOWIG-Import
+* 
+* 
+*********************************************************** 
+%%DESCRIPTION=Importieren Eingabedaten ruhender Verkehr in DB
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%WINOWIG_GKZ=500
+
+* Dormagen AOWI = 201
+* Düsseldorf=112
+
+**WINOWIG_GKZ=500
+
+
+%%TEST=N
+

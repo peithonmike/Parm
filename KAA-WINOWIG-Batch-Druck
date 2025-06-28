@@ -1,0 +1,50 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-WINOWIG-Batch-Druck
+* 
+* 
+*********************************************************** 
+ 
+* Job ist auch entscheidend für die Sollerstellung
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+
+* VLK 
+%%ART=-A128,7,216,2,3,4,5,9,10,215,102,21,141
+
+*    -A128   Änderung SB-Zuordnung
+*    -----   ---------------------------
+*       7   Wandeln Fall in BG
+*     216   Wandeln Fall in KB
+*       2   Anhörung Betroffener
+*       3   Anhörung Zeugenbefragung
+*       4   VG: Verwarngeld Anhörung
+*       5   VG: Verwarngeld Erinnerung
+*       9   BGB
+*      10   KB
+*     215   Anh. Zeugen Erinnerung
+*     102   EMA Passbild anfordern 
+
+%%TEST=N
+
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-AKTIONSTARTEN.BAT
+
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\WINOWIG-KAA-erweitern-Druckauswahl.pdf
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.02.2013  09:06:41  zv173x2 21,141 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

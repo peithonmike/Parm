@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* LHD-SOZ-EZ-Zahlungen-SFIRM
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-MSFTPINT01
+
+
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\EZ\SFIRM
+%%INFILE=EZ-115-DF_PFZZ0150_SEPA1400_EZ_20141031-TEST.TEST
+
+%%OUTDIR=FTP21\2142akdnDTAsUebergang_SAP
+*%%OUTDIR=FTP21\DTA_POSTBANK
+
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG
+
+
+
+* Diese Mail benötigt nur die AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+
+%%TEST=N
+*$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+ 
+
+
+

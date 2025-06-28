@@ -1,0 +1,73 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-Personen-Abgleichdaten-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Mandantenspezifische Angaben CTM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-DUE
+
+
+%%SOZ_DAT=%%JJJJ_MM_P1_%%$ODATE..%%MM_P1_%%$ODATE 
+
+ 
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Daten für Abgleich mit EWO %%STADT %%ORT Abholen Personenabgleichsdaten  (MZ)
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=MZ/%%SOZ_DAT
+
+* Remote Datei Auswahl Maske - ist die Variable INCLUDE richtig?
+%%INCLUDE=EWO_Eingabeliste_NE_%%ORT._%%SOZ_DAT..csv
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+* EWO ORDNER Abgleich Ordner
+*---------------------------------------------------------------
+
+%%OUTDIR=\\%%JBOSS.\auswertungen$\personenabgleich
+
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get EWO_Eingabeliste_DF_%%SOZ_DAT..csv %%OUTDIR.\%%INCLUDE
+
+
+ 
+%%Z20=close
+%%Z21=exit 
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.05.2021  23:21:07  zv173x2 %%ORT in DF
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

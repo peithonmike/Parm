@@ -1,0 +1,58 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* XXX-MSP-Individuelle-Nachrichten-Insert
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*  Eingabe 
+%%INDIR=\\srv03\ftp$\av\MSP\Individuelle-Nachrichten
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+
+
+* Ergebnis PDF Dateien 
+%%OUTDIR=\\srv03\ftp$\av\MSP\Individuelle-Nachrichten\Ergebnis
+%%OUTDIR_PROCESSED=\\srv03\ftp$\av\MSP\Individuelle-Nachrichten\erledigt
+
+
+
+
+* JAVA Variablen
+* Java Directories \\msbmcc03\ctm_av\Bin\Java\MSP
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\MSP_Brief_20171012_PROD.jar
+%%JAR_START=de.itk.projekte.pdf.brief.Start
+
+
+%%EMAIL_T=Sascha.Berktin@itk-Rheinland.de;
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;
+%%EMAIL_U=%%JOBNAME  %%OMONTH..%%$OYEAR
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;
+
+%%AUFTAGGEBER=S.Berktin
+
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*     04.07.2018  13:00:00  zv173x2  %%AUFTAGGEBER=S.Berktin
+
+
+*    16.10.2017  10:46:52  zv173x2 MSP_Brief_20171012_PROD
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

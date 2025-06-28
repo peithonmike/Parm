@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Jahreslohnkonten-Angestellte-FW
+* 
+* 
+*********************************************************** 
+ 
+
+%%MAIL_T=Michael.Hurtz@itk-Rheinland.de;Produktions-Steuerung@itk-rheinland.de;Stefan.Holzum@itk-Rheinland.de;Burghard.Schramm@itk-Rheinland.de
+
+%%MAIL_T=Produktions-Steuerung@itk-rheinland.de 
+%%MAIL_CC=Produktions-Steuerung@itk-rheinland.de 
+
+%%MAIL_U=I N F O     LOGAJahreslohnkonten -Angestellte - wird abgeholt!!    
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-LOGA-ANGESTELLTE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-MOERS
+
+%%DESCRIPTION=Jahreslohnkonten (JEL) werden am Anfang des Jahres vom KRZN erzeugt.
+%%DESCRIPTION1=Der FileWatcher prüft einmal pro Tag bis die Daten vorhanden sind (MAX 60 Tage!)
+
+
+%%OUTDIR=nicht-verwendet
+
+*     * im include ist wichtig für option failonnomatch on
+%%INCLUDE=*6011*.PDF*
+
+%%WINSCP_AKTION=ermitteln ob Jahreslohnkonten abholbereit sind
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+*   Achtung Ausgabe-Directory muss mit \ enden
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=option failonnomatch on
+%%Z04=open %%SITE
+*%%Z05=cd /Prod/NAR/JEL_%%$OYEAR./DN
+%%Z05=cd /Prod/NAR/JEL_2018/DN
+
+*%%Z06=get %%INCLUDE %%OUTDIR.\%%INCLUDE
+%%Z07=close
+%%Z08=exit 
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+ 
+
+

@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-Check-Soll
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\job\avWINOWIG-Check-Soll.ps1
+* ------------------------------------------------------------------
+%%DEBUG=N
+%%TEST=N
+%%AUFTRAGGEBER=A.Hillebrands
+
+%%MAIL_T=Produktions-Steuerung@itk-rheinland.de
+%%MAIL_CC=andreas.hillebrands@itk-rheinland.de
+
+
+
+*     05.07.2018  15:00:45  zv173x2 AUFTRAGGEBER=A.Hillebrands

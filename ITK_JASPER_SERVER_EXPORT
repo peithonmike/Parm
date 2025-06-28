@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK_JASPER_SERVER_EXPORT
+* 
+* 
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+
+%%COMMAND=\\msjasper01\c$\CTM_AV\Bin\BAT\JasperServerDataExport.bat
+
+%%SYSOUT=\\msbmcc03.itk.local\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt
+
+
+

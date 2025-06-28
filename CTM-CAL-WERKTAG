@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-CAL-WERKTAG
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\EMUSER
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\defcal\WERKTAG.xml
+* ------------------------------------------------------------------

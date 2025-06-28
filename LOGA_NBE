@@ -1,0 +1,41 @@
+* VARIABLEN 
+* L O G A   B e a m t e und NZI ehemals Zivildienstleistende 
+* F I B U
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+* Beamte Monat +1 (ODATE)
+%%LOGA_NBE_DAT=%%JJJJ_MM_P1_%%$ODATE
+%%LOGA_NBE_DAT=%%LOGA_NBE_DAT.%%MM_P1_%%$ODATE
+
+
+* Eingabe Speicherort immer aktueller Monat (ODATE)
+%%LOGA_NBE_DIR=NBE%%OMONTH.%%OYEAR
+
+*  ab 11.2016
+%%LOGA_FIBU_NBE_DIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\FIBU
+%%LOGA_KN_NBE_DIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\KN
+%%LOGA_DN_NBE_DIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\DN
+
+%%LOGA_FIBU_NZI_DIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\FIBU
+%%LOGA_KN_NZI_DIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\KN
+%%LOGA_DN_NZI_DIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\DN
+
+
+
+
+%%DECKBLATT_DIR=\\msbmcbatch01\c$\ctm_av\Personal-DruckTest\DECKBLATT
+
+
+*%%LOGA_STRING =%%SUBSTR %%JOBNAME 10 15
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.11.2016  12:11:03  zv173x2 neu INDIR 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

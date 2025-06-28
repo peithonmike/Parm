@@ -1,0 +1,27 @@
+
+%%ART=NAR
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-LOGA-ELSTER-%%ART
+
+* Druckdatenserver
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\%%ART.\ELSTER\GEM\BUENDEL
+
+* Druckdatenserver Bereich von wo aus in einem anderen Job 
+* die entsprechenden Dateien an Neusser Druckerei gesendet werden
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\%%ART.\ELSTER\GEM\an-Druckerei-Neuss
+
+
+* OUTDIR gesendet 
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+

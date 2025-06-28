@@ -1,0 +1,72 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-SOZ-MZ-002-Kassenliste-BU
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-SOZ-MZ
+ 
+
+* ---------------------------------------------------------------
+* PDF_MASK Auswahl Maske 	Include Exclude
+* includes müssen bei Listen Exlude sein 
+* ---------------------------------------------------------------
+*bere-130-NE_PFZV0100_AUSB-2024_201408.pdf
+
+%%INCLUDE=*AUSZ-2%%SOZ_GKZ.*.pdf,*BALI-2%%SOZ_GKZ.*.pdf
+%%EXCLUDE="-"
+
+%%PDF_INDIR=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\kopiert
+
+
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+* ---------------------------------------------------------------
+%%PDF_FILENAME=%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Kassenliste-%%$ODATE.-BU.PDF
+
+* Die Cover müssen je nach Empfänger angegeben werden
+* alle anderen Angaben sollten aus dem Jobnamen lesbar sein.....   siehe Member: BUENDEL
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\AAA-%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Kassenliste.pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\ZZZ-%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Kassenliste.pdf
+
+
+* ---------------------------------------------------------------
+* ANZAHL
+* Anzahl der Ausdrucke 
+* Standard =1
+* ---------------------------------------------------------------
+%%ANZAHL=2
+
+
+* ---------------------------------------------------------------
+* Hotfolder FreeFlow
+* ---------------------------------------------------------------
+%%FREEFLOW_HOTFOLDER=%%SOZ_MZ_LISTEN_DRUCKER
+
+
+
+
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden  Variablenwerte angezeigt
+%%DEBUG=N
+
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+%%TEST=N
+
+%%ONLY_BUENDEL=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.02.2021  11:05:48  zv173x2 include um PDF erweitert
+*    30.07.2014  11:10:04  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

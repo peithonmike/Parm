@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-EGM-Sonstige-Dokument-Update-und-Druck-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+
+
+**************************************************************************** 
+* Dokumenten Update
+**************************************************************************** 
+* Job erzeugt Gehaltsmitteilungen oä. für die die am EGM nicht teilnehmen
+* Für die anderen Mitarbeiter werden die Mitteilungen in die DB geschrieben
+* Dieser Lauf kann wiederholt werden...
+**************************************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NZI
+
+
+
+* Zeitraum
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+* Loga PDF Druckdaten KN aus msp Ordner
+* 
+%%INDIR=%%DRUCK_INDIR
+%%OUTDIR=%%DRUCK_OUTDIR
+
+
+* JAVA Variablen
+* Java Directories \\msbmcc03\ctm_av\Bin\Java\MSP
+
+*%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\MSP_Gehaltsabrechnungen_20170718_DEV.jar
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\MSP_Gehaltsmitteilungen_20190729_PROD.jar
+
+
+%%JAR_START=de.itk.projekte.gehaltsmitteilungen.Start
+
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.07.2019  10:00:50  zv171e1 Umgestellt auf "MSP_Gehaltsmitteilungen_20190729_PROD.jar"
+*    12.02.2019  14:49:21  zv173x2 Umgestellt auf Lemgo MSP_Gehaltsmitteilungen_20190212_PROD.jar
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

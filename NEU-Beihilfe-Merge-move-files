@@ -1,0 +1,76 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Beihilfe-Merge-move-files
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job hängt alle Eingabe Dateien mit vorgegebener Maske aneinander.
+* Das Ergebnis ist eine Gesamtdatei
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Merge-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+
+* Eingabe Directory 
+*%%INDIR=\\srv03.asp.rzne.de/qaspne$/Daten/Apps/Beihilfe/export_SEPA
+%%INDIR=\\srv03\ftp$\av\Beihilfe\export_SEPA
+
+* Datei Auswahl
+%%INCLUDE=*NEU-BE-%%$ODATE.-*-VERW.dat
+%%EXCLUDE=*-00-*
+
+* Ausgabe Directory
+*%%OUTDIR=\\srv03.asp.rzne.de/qaspne$/Daten/Apps/Beihilfe/export_SEPA/
+%%OUTDIR=\\srv03\ftp$\av\Beihilfe\export_SEPA
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR./erledigt
+
+* Name der Ergebnis Datei
+%%OUTFILE=NEU-BE-%%$ODATE.-00-VERW.dat
+
+
+
+* ***************************************************************************
+* %%NETUSE=J oder N
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+* %%NETUSE_PATH=nicht-verwendet 
+*
+* Laufwerksbuchstabe in der Form Y:
+* %%LAUFWERK=nicht-verwendet
+* ***************************************************************************
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.08.2019  06:58:52  zv173x2 \\srv03.asp.rzne.de/qaspne$/Daten/Apps/Beihilfe/export_SEPA/
+*                                  in \\srv03\ftp$\av\Beihilfe\export_SEPA
+*    13.03.2017  09:07:02  zv173x2 *NEU-BE-%%$ODATE.-*-VERW.dat erweitert
+*    08.11.2016  14:17:52  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

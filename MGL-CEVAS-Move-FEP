@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-CEVAS-Move-FEP
+* 
+* 
+*********************************************************** 
+ 
+**LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=C:\cks\cevas-fep-Einsatzdateien.cmd
+
+
+%%MAIL-NOTOK=datenpflege.cks@moenchengladbach.de ;produktions-steuerung@itk-rheinland.de
+%%BETREFF-NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT-NOTOK=move der FW-Dateien ist abgebrochen
+

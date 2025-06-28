@@ -1,0 +1,89 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGODATA_HON-T-Copy-XML
+* 
+* 
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske und TimeStamp
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+%%NAME=HON
+%%AUFTRAGGEBER=D.Mendoza
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGODATA-MAIL
+
+
+
+
+* Eingabe Directory 
+%%INDIR=\\mslogodata03\transfer
+
+* Datei Auswahl
+%%INCLUDE=%%NAME..xml
+%%EXCLUDE="-"
+
+
+
+* Start Dateiname ändern------------------------
+* PREFIX wird nicht verwendet
+%%PREFIX=IGNORE
+
+* ADD ODATE_JJJJMMTT
+%%ADD_TYP=ODATE_JJJJMMTT
+* Ende  Dateiname ändern -----------------------
+
+
+
+* Ausgabe Directory
+%%OUTDIR=\\vfdussap\SAP\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_LOGODATA_%%NAME
+%%FORCE_OUTDIR=N
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\Backup\%%$ODATE
+
+
+* ***************************************************************************
+%%NETUSE_S=J 
+%%NETUSE=J
+%%U=ZVLOGODATAFTP
+%%P=Starten2014
+
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+%%NETUSE_PATH=\\mslogodata03\transfer
+%%IP=\\mslogodata03\transfer
+ 
+*
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=X:
+* ***************************************************************************
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.12.2021  10:23:19  zv173x2 Ps1 mit Timestamps
+*    06.10.2021  12:40:10  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

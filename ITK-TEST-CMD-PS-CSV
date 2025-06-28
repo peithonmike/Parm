@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-TEST-CMD-PS-CSV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\gNEU
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+
+
+*INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\InVorbereitung\Import-Module.ps1

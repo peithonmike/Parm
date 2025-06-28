@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Y22DTAFTP
+* Uebertragung RZF-Band
+* im RPATH unbedingt das txt in Kleinbuchstaben/10.11.15 Schr.
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt
+ 
+
+%%LPATH1=\av\GWST\GWB%%ODAY.%%OMONTH.%%OYEAR..TXT
+%%RPATH1=/BatchEingangsdaten/dta.txt
+
+%%MAIL_NOTOK=volker.ehmann@itk-rheinland.de;david.mertens@itk-rheinland.de;
+%%MAIL_NOTOK_2=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - Uebertragung RZF-Band an Amt22 fehlerhaft

@@ -1,0 +1,13 @@
+*********************************************************** 
+* Jobname SEBD-Kasse-M-FTC-MOVE_FILES_BUC_SK
+* 
+* 6.7.2017 - zustaendig im SB 2.2 fuer diesen Job sind J.Huhn/D.Mendoza
+*********************************************************** 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%MAIL_NOTOK=%%MAIL_NOTOK=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME im SAP ist NOTOK!
+%%TEXT_NOTOK=Bitte pruefen!
+

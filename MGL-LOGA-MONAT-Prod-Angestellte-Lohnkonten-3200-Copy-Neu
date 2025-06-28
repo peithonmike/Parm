@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Angestellte-Lohnkonten-3200-Copy-Neu
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+%%NETUSE=N
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+
+
+**INDIR=\\10.50.34.68\loga\ml2001jobmg\manuprodreanure\output
+%%INDIR=\\10.50.34.68\Loga\IP-Output\ITK-Rheinland\Mönchengladbach\Tarifbeschäftigte\Produktion
+
+
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LOGA\Test
+
+
+
+
+%%INCLUDE=MANUPRODRE10*.pdf
+%%EXCLUDE="-"
+
+
+%%FORCE_OUTDIR=J
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.06.2017  07:17:40  zv171e1 neu    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-VUDAT-BAG-Anfragen
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+*  Testroutine nur Anlisten
+%%TEST=N
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VUDAT
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VUDAT-OPENFT-SENDEN-BAG
+ 
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\OpenFT\dp-openft-connection-to-customs-atlas-em-de.pdf
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\OPENFT-%%$OYEAR..csv
+
+* ------------------------------------------------------------------
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    12.11.2013  13:58:56  zv173x2 neuer Name ohne Openft
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

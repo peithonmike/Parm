@@ -1,0 +1,91 @@
+*
+* VLK Member zur Abholung der Mandantendaten aus dem IT-NRW Postfach
+* DATUM der Abholung ist immer aktueller Tag -1 
+* im Dateinamen befinden sich die letzten 6 Stellen des 8er GKZ 
+* Dateien werden an Mandanten aus der Mailliste gesendet
+
+* ---------------------------------------------------------------------------------------------------------------------
+*  K O N T A K T  
+* ---------------------------------------------------------------------------------------------------------------------
+*  IT-NRW
+*  Hotline    : Leitstelle Wohngeld ist nur unter der Sammelnummer (0211) 9449-6282 zu erreichen.
+*  MailAdresse: Wohngeld-Service@IT.NRW.de 
+
+
+
+* ---------------------------------------------------------------------------------------------------------------------
+* P A R A M E T E R 
+* 
+* ---------------------------------------------------------------------------------------------------------------------
+
+%%DATUM=%%JJMMTT_TT_M1_%%$ODATE
+%%GKZ6   =%%SUBSTRING  %%GKZ8 3 6
+
+%%DESCRIPTION=  Abholen der Daten für die Wohngeldstellen, 
+%%DESCRIPTION1=  die von der IT.NRW zur Verfügung gestellt werden
+%%DESCRIPTION2=  Abholdatum Odate-1   %%DATUM
+
+
+
+* Namensmaske der Abholung und in der Nachverarbeitung (Mailversand)
+%%INCLUDE=D%%DATUM.*.*
+**EXCLUDE=*.tar
+
+* Empfangs Directory für den Mandanten
+%%POSTFACH=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\IT-NRW-Postfach\%%GEM3.\
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\IT-NRW-Postfach\%%GEM3.\gesendet\Mandant
+
+* ---------------------------------------------------------------------------------------------------------------------
+* M A I L   P A R A M E T E R 
+* WOHN Sachbearbeiter Empfängerliste 
+* 
+* ---------------------------------------------------------------------------------------------------------------------
+
+* Eingabedirectory für den Mailversand
+%%INDIR=%%POSTFACH
+
+* Adressen der Empfänger
+%%INIFILE_MAILADR=\\msbmcc03\ctm_av\Parm\VLK\%%GEM3.-WOHN-POSTFACH-MAIL-ADR.vlk
+
+* Message Datei
+%%EMAIL_O=\\msbmcc03\ctm_av\Parm\StandardMessageIT-NRW-WOHN-POSTFACH.txt
+*%%EMAIL_U=Elektronisches Postfach IT-NRW Wohngeld %%STADT %%ORT
+%%EMAIL_U=Elektronisches Postfach IT-NRW Wohngeld  %%DATUM   %%STADT %%ORT
+
+*  Konrolle als Blindkopie 
+%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+*;Rudolf.Dressel@itk-rheinland.de
+
+* intern nur für Anzeige
+$$INCLUDE=%%INIFILE_MAILADR
+
+* ---------------------------------------------------------------------------------------------------------------------
+* L O G
+* ---------------------------------------------------------------------------------------------------------------------
+%%LOGFILE=\\msbmcc03\CTM_AV\Log\ErgebnisLog\%%GEM3.-WOHN-IT-NRW-%%$OYEAR..csv
+%%AUFTRAGGEBER=R.Dressel
+
+
+
+
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*Av Test Überschreibungen Start
+* Mails gehen nur an av
+* nur AV!!!!
+*%%INIFILE_MAILADR=\\msbmcc03\ctm_av\Parm\VLK\AV-WOHN-POSTFACH-MAIL-ADR.vlk
+*%%INCLUDE=*.*
+
+*Av Test Überschreibungen Ende
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+--------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.01.2021  11:00:36  zv173x2 Kontakte eingefügt
+*    24.05.2018  10:49:43  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

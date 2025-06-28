@@ -1,0 +1,66 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-COBRA-COPY-PDF-FILER
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\NEU-COPY-COBRA
+
+%%MAIL-OK=vervielfaeltigungsstelle@stadt.neuss.de
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-FileS.ps1
+* *********************************************************************
+* NETUSE_S ecurity
+%%NETUSE=N
+
+* *********************************************************************
+* Path für den erweiterten Zugriff
+* NETUSE_PATH wird als Einstieg vom Netuse benötigt
+* *********************************************************************
+
+%%NETUSE_PATH=%%IP
+             
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+
+ 
+
+
+
+%%OUTDIR_PROCESSED=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\COBRA\BUENDEL\NEU\kopiert
+
+%%AUFTRAGGEBER=Herr Gertges (NEU) 
+
+
+
+
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+

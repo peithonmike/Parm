@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-SOZ.MZ-Druck-FW
+* 
+* 
+*********************************************************** 
+ 
+
+
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-NEU
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-SOZ-MZ
+* wird bei jedem Start temp. erzeugt 
+%%SFTP_SCRIPT=\\msbmcc03\ctm_av\Parm\SFTP\CC-SOZ-DRUCK-MZ-NE-FW.txt
+
+
+%%SFTP_LOG=\\msbmcc03\c$\TEMP\%%JOBNAME..log
+
+* Remote Verzeichnis im CC-SOZ
+* EZ MZ
+%%SLEEP=10
+%%SFTP_INDIR=MZ/%%SOZ_DAT
+%%DATE=%%$OYEAR.%%OMONTH.*
+* EZ-Bestaetigung-NE${DATUM}.txt.
+%%SFTP_MASK=MZ-Bestaetigung-NE_%%DATE..txt
+* Lokales Empfangsverzeichnis aufgetrennt nach EZ MZ mit ODATE 
+*%%SFTP_OUTDIR=\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT
+%%SFTP_OUTDIR=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT
+             
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SFTP\CC-SOZ-DRUCK-MZ-NE-FW.txt
+
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\gGET-CONTENT.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\SOZ-SCRIPT-CCSOZ-Daten-abholen.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avWINSCP_GET.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avLIST-FILES.ps1 
+
+* ------------------------------------------------------------------
+
+e
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.09.2016  08:22:04  zv173x2 \\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT
+*    22.07.2015  14:41:55  zv173x2 ODATE in RDATE
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-BEHERBUNG-P-AMP-Move-Anlagen-Intern
+* Move Anlagen intern damit AMP sie prüft
+*********************************************************** 
+%%AUFTRAGGEBER=David Mertens
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=Move Formulare nach Rüfung an D3
+%%RICHTUNG=Copy-from-Cloud
+
+
+* Eingabe Directory 
+* Directory in der Cloud
+* immer mit Laufwerksbezeichnung
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1
+
+%%INDIR=\\MSAMPSCAN01\beherbergung$\DUE\in
+
+* Datei Suchmaske
+%%INCLUDE=*.pdf, *.jpg, *.jpeg. *.png
+%%EXCLUDE="-"
+
+* Ausgabe Directory für die Anlagen
+%%OUTDIR=\\MSAMPSCAN01\beherbergung$\DUE\check
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.03.2020  09:12:47  zv173x2 auf AMA_800* 
+*    13.01.2020  15:02:26  zv173x2 USE_PREFIX default (N) 
+*    13.01.2020  15:01:33  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

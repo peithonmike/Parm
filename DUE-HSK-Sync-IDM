@@ -1,0 +1,25 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  
+***********************************************************************************
+*  Jobname     : DUE-HSK-Sync-IDM
+*  APPLICATION : HSK
+***********************************************************************************
+*
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**PFADVON=\\msidm03\C$\itkr-driver\lb-userExport\output\
+%%PFADVON=\\msidm04\C$\itkr-driver\lb-userExport\output\
+%%DATEINAME=*.*
+%%PFADNACH=\\vfdusintersync\Isync\IDMExport\
+**FADNACH=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\XXX-CopyFile.ps1 -PfadVon %%PFADVON -Dateiname %%DATEINAME -PfadNach %%PFADNACH
+
+%%MAIL_NOTOK=henning.henze@itk-rheinland.de;christian.hillmann@itk-rheinland.de
+%%BETREFF_NOTOK=Sync Daten IDM <-> HSK
+%%TEXT_NOTOK=%%JOBNAME - Sync Daten IDM <-> HSK

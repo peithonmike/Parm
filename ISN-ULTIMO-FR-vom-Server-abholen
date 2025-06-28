@@ -1,0 +1,108 @@
+*    Interval bei Prod soll 2 Stunden sein
+*    Zeitraum von 08:00  ?   bis ?  
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-FR-vom-Server-abholen
+* 
+* für Test und Prod geeignet
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\ISN-ULTIMO-MAILADR
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-LOGA-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+%%CHECK_MOVERENAME=J
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen Ultimo-Rechnungsdaten per WinSCP
+%%AUFTRAGGEBER=H-G.Robertz
+%%DESCRIPTION=SAP Daten vom externen ISN Ultomo-Server
+*---------------------------------------------------------------
+%%U=nicht-verwendet
+%%P=nicht-verwendet
+%%IP=nicht-verwendet
+
+* Remote Datei Auswahl Maske
+%%INCLUDE="-"
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\Ultimo\ISN\ 
+
+%%SITE=ISN-SAP-ULTIMO
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+
+
+%%Z05=CD SapInvoice
+
+
+* Anlist vorher  nur CSV
+%%z06=dir FR*.CSV
+
+
+* Rechnungen  abholen
+*%%Z07=mget FR%%$ODATE._*.csv  %%OUTDIR
+* Rename nach OLD
+*%%Z09=mv FR%%$ODATE._*.csv FR%%$ODATE._*.old
+
+* Überschreibung !!!!
+* alle Rechnungen  abholen 
+%%Z07=mget FR*.csv  %%OUTDIR
+* Rename nach OLD
+%%Z09=mv FR*.csv FR*.old
+
+
+
+
+*_*.csv
+* Anlist nachher alle
+%%z10=dir FR*
+
+
+%%Z29=close
+%%Z30=exit 
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    31.08.2020  16:27:23  zv173x2 ohne Odate ales was noch nicht verarbeitet wurde
+*    15.06.2020  11:51:59  zv173x2 wieder zurück
+*    15.06.2020  11:05:56  zv173x2 FR%%$ODATE._*.csv in FR*.csv
+*    03.07.2019  10:52:11  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

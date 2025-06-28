@@ -1,0 +1,25 @@
+* *************************************************************
+* Table Variablen          
+* DUE-Y5011001-T-Copy-PTV
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-DUE
+
+%%SOZ_DAT=%%JJJJ_MM_P1_%%$ODATE.%%MM_P1_%%$ODATE 
+
+%%SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%EINGABE_VZ=MZ/%%SOZ_DAT
+%%USERID=ccftpDF
+%%PW=Nn0OD7Y4iV;
+%%EINDAT=ZADA_DF_%%SOZ_DAT._LS
+
+%%AUSGABE_VZ=\\msptv01\d$\PTV\Projekte\SAP_Export\AKDN_EDUE\InDir
+%%AUSDAT=DUE_SOZL_T%%$ODATE..TXT
+

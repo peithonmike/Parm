@@ -1,0 +1,81 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-REMEDY.IDM-Import
+* 
+* \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-DUE-REMEDY.IDM-Import.ps1
+*********************************************************** 
+%%DATUM=%%$OYEAR.-%%OMONTH.-%%ODAY
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IDM
+
+* Vorverabeitung 
+%%EXE=\\msbmcc03\ctm_av\Bin\Java/IDM/IDMvorlauf.exe
+*%%INDIR=\\msidm01\OutputIDM
+%%INDIR=\\vfdusintersync\Isync\IDMExport
+
+*%%INFILE=\\msidm01\OutputIDM\%%DATUM._UserExport.csv
+%%INFILE=\\vfdusintersync\Isync\IDMExport\%%DATUM._UserExport.csv
+
+%%TEMPFILE=\\msbmcc03\ctm_av\Bin\Java\IDM\csvs\IDMimport_temp.csv
+
+%%AMT_FILE=\\msbmcc03\ctm_av\Bin\Java\IDM/IDMVorlaufVorgabenAmt.csv
+%%NACHNAME_FILE =\\msbmcc03\ctm_av\Bin\Java/IDM/IdmVorlaufVorgabenIntNachname.csv
+
+
+
+* Hauptverarbeitung dahin kommen die neuen Versionen
+* Javapfad \\msbmcc03\ctm_av\Bin\Java\IDM\ 
+%%JAVA_EXE=\\msbmcc03\ctm_av\Bin\Java\jre1.8.0_66\bin\java.exe
+%%JAVA_PRG=\\msbmcc03\ctm_av\Bin\Java\IDM\ARS2IDM_JV8_20161209.jar
+ 
+* Send-Mail
+
+%%EMAIL_U=%%JOBNAME  Protokoll %%TTMMJJJJP_%%$ODATE
+
+%%EMAIL_T=Tanja.Trabant@duesseldorf.de
+%%EMAIL_CC=Martina.Keil@itk-rheinland.de;Sascha.Berktin@itk-rheinland.de;Daniela.Polarz@itk-rheinland.de
+*%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+ 
+*
+* ------------------------------------------------------------------
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+*$$*INCLUDE=\\msbmcc03\ctm_av\DOC\REMEDY\IDM\Einzelheiten IDM.pdf
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.11.2021  07:41:09  zv173x2  neu Daniela.Polarz@itk-rheinland.de
+*    25.05.2021  11:22:21  zv173x2  ib PS1 msremedy01.itk.local in msremedy02.itk.local   
+
+*    10.12.2020  09:40:00  zv173x2 erich.sadlowski@itk-rheinland.de rein 
+*    10.12.2020  09:40:00  zv173x2 Saafa raus
+*    14.12.2016  08:42:56  zv173x2 ARS2IDM_JV8_20161209
+*    18.11.2016  11:13:56  zv173x2 \\vfdusintersync\Isync\IDMExport
+*    26.08.2016  09:00:07  zv173x2 ARS2IDM_JV8_20160826.jar
+*    05.07.2016  08:43:54  zv173x2 ARS2IDM_JV8_20160704.jar
+
+*    22.03.2016  -------------------------------------------- 
+*                          alles neu
+*                          zv173x2 Java 8
+*                          zv173x2 ARS2IDM_JV8_20160321
+*    22.03.2016  -------------------------------------------- 
+
+*    04.02.2016  08:44:20  zv173x2 Idm2Ars_20160202.jar 
+*    18.11.2015  16:02:21  zv173x2 idmvorlauf neue version
+*    30.09.2015  09:51:01  zv173x2 neue Version IdmVorlaufVorgabenIntNachname.csv
+*    30.09.2015  09:50:26  zv173x2 neue Version Idm2Ars_20150929.jar
+*    29.09.2015  10:55:58  zv173x2 neue Version Idm2Ars_20150928.jar
+*    28.09.2015  12:00:08  zv173x2 neuer remedy server und eingabe pfad
+*    26.06.2015  08:59:30  zv173x2 Email_t Tanja.Trabant@duesseldorf.de
+*    19.06.2015  09:54:34  zv173x2 neue Java Version und 1.Lauf
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

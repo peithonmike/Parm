@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Jahreslohnkonten-sonstige-Druck
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\LOGA\Jahreslohnkonten\%%$OYEAR.\NZI
+%%PREFIX=KUVERT-JEL-LOGA
+* Datei Auswahl
+%%INCLUDE=*6011*.PDF
+%%EXCLUDE="-"
+
+* Duck Library Ausgabe Directory
+%%OUTDIR=\\msprintff01\d$\R18personal
+ 
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\LOGA\Jahreslohnkonten\%%$OYEAR.\NZI\erledigt
+
+
+* ***************************************************************************
+* %%NETUSE=J oder N
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+* %%NETUSE_PATH=nicht-verwendet 
+*
+* Laufwerksbuchstabe in der Form Y:
+* %%LAUFWERK=nicht-verwendet
+* ***************************************************************************
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.02.2017  13:38:27  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

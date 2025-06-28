@@ -1,0 +1,29 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : ITK-BeihilfeNRW-Split2
+* erstellt : 23.11.2011 14:27:51
+*    durch : zv173xc
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%TEST=N
+*
+* Config-Datei
+%%CONFIG=\\msbmcc03\ctm_av\Parm\config_VDMSTAT2.txt 
+* Input-Datei
+%%INPUT=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\VVBHI2B\out_Y321HI2B_betrag.txt
+* Alternative Eingabe
+%%EA=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\VVBHI2B\input_DOXP.VMDSTAT2.txt
+* OUTFILE
+%%OUTFILE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\VVBHI2B\splitted_VDMSTAT2.csv
+* JAVA
+%%JAR=C:\CTM_AV\Bin\Java\split_alt.jar

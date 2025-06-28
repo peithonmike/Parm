@@ -1,0 +1,23 @@
+* LIBMEMSYSM 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV-QUER
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\nach-GWN.skels
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\nach-GWN.skels
+%%TEST=N
+
+*GWN1  1-jährige
+%%VON1=01.%%MM_MM_M13_%%$ODATE...%%JJJJ_MM_M13_%%$ODATE
+%%BIS1=%%LD_MM_M13_%%$ODATE...%%MM_MM_M13_%%$ODATE...%%JJJJ_MM_M13_%%$ODATE
+
+*GWN2  2-jährige 
+%%VON2=01.%%MM_MM_M25_%%$ODATE...%%JJJJ_MM_M25_%%$ODATE
+%%BIS2=%%LD_MM_M25_%%$ODATE...%%MM_MM_M25_%%$ODATE...%%JJJJ_MM_M25_%%$ODATE
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.07.2014  09:23:14  zv173x2 print quer
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

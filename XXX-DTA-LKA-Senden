@@ -1,0 +1,75 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-DTA-LKA-Senden
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-POLIZEI-NRW.txt
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Put.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+* SERVER_TEXT IP P , U  und SITE kommen meist aus IP-UP Member 
+*%%SERVER_TEXT
+*%%IP
+*%%P
+*%%U
+%%SITE=POLIZEI-NRW
+%%OUTDIR_PROCCESED=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta\LKA\verarbeitet
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Senden Ewo Änderungsdaten an LZPD
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+*%%REMOTE_OUTDIR=
+
+* Local Datei Auswahl Maske
+%%INCLUDE=EMA-*-%%$ODATE.-01
+*---------------------------------------------------------------
+* Local Eingabe Directory der WinSCP Aktion
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta\LKA
+
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+*%%Z04=open %%U.:%%P.@%%IP
+%%Z04=open %%SITE -hostkey=dd:ec:0c:de:a4:93:d0:0b:48:09:3b:c3:b1:2e:f3:80:c2:91:58:f6
+%%Z05=put %%INDIR.\%%INCLUDE  
+*%%Z06=ls  
+%%Z10=close
+%%Z11=exit 
+*%%Z09=?
+*%%Z10=?
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.12.2019  14:46:05  zv173x2 outdir_processed
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

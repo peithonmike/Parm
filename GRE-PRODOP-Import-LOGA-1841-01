@@ -1,0 +1,48 @@
+
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=IMPORT
+%%VERF=Loga (Besoldung für Beamte) 1840 AK01
+
+*1841AK01DAT ohne Dat und txt!!
+%%DAT=1841AK01
+%%BJ=32
+
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_GRE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+* Auftragserteilung
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-01-neue-Scripte.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-02-Variablen.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-03-Änderung-ini-pf.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-04-Variablen-incl-INTERN.pdf
+* ------------------------------------------------------------------
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.09.2021  13:37:19  zv173x2 wir haben für die 1841AK01DAT den Batchjob 32 in ProDoppik eingerichtet.
+*                                  Im Auftrag    Erich Janke
+*    22.09.2021  11:51:48  zv173x2 neu erster Lauf
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,96 @@
+
+* LIBMEMSYM
+* M I G E W A
+* S Y S T E M F I L E 
+* -------------------------------------------------------------------------------
+* *******************************************************************************
+
+* *******************************************************************************
+* generelle Variablen 
+* *******************************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+* Sysout 
+%%SYSOUT=%%OPENFT_SYSOUT
+
+
+
+
+
+* *******************************************************************************
+* Variablen zum Verfahren
+* *******************************************************************************
+%%TRANSFER_ADMISSION=ft#KD946Sa
+
+%%ANSCHLUSS=toBZRneu
+
+* *******************************************************************************
+*  -MIGEWA- 
+* *******************************************************************************
+%%BFJ_ID_MIGEWA=wird-nicht-benutzt
+
+
+
+* *******************************************************************************
+*  A N F R A G E N
+* *******************************************************************************
+
+* -------------------------------------------------------------------------------
+* B Z R   BundesZentralregister 
+* -------------------------------------------------------------------------------
+* BZR Anfrage Directory des Mandanten 
+%%MIGEWA_BZR_EXPORT=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\migewa\BZRONLINE
+
+* BZR Anfrage Directory auf dem OpenFT Server (von da aus wird zum BZR gesendet)                   
+%%MIGEWA_BZR_DIR_ANFRAGE=\\msbmcbatch01\c$\CTM_AV\OpenFT-Prod-Dateien\migewa\BZR
+
+
+
+
+
+
+* -------------------------------------------------------------------------------
+* G Z R GewerbezentralRegister
+* -------------------------------------------------------------------------------
+* GZR Anfrage Directory des Mandanten 
+%%MIGEWA_GZR_EXPORT=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\migewa\GZRONLINE
+
+* GZR Anfrage Directory auf dem OpenFT Server (von da aus wird zum BZR gesendet)                   
+%%MIGEWA_GZR_DIR_ANFRAGE=\\msbmcbatch01\c$\CTM_AV\OpenFT-Prod-Dateien\migewa\GZR
+
+
+
+* *******************************************************************************
+*  A N T W O R T E N
+*  wird noch nicht verwendet  Stand 05.2012  
+* *******************************************************************************
+
+
+* BZR Antwort EmpfangsDirectory des Mandanten 
+%%MIGEWA_BZR_IMPORT=wird-nicht-benutzt
+
+
+* BZR Antwort Empfangsdirectory auf dem OpenFT Server (dahin kommen die Daten vom BZR zurück)                   
+%%MIGEWA_BZR_DIR_ANTWORT=\\msbmcbatch01\c$\CTM_AV\AntwortBZR
+
+
+
+* GZR Antwort EmpfangsDirectory des Mandanten 
+%%MIGEWA_GZR_IMPORT=wird-nicht-benutzt
+
+* GZR Antwort Empfangsdirectory auf dem OpenFT Server (dahin kommen die Daten vom BZR zurück)                   
+%%MIGEWA_GZR_DIR_ANTWORT=\\msbmcbatch01\c$\CTM_AV\AntwortGZR 
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.07.2012  13:16:28  zv173x2 ANSCHLUSS
+*    10.05.2012  11:11:03  zv173x2 Dateiangaben für Standard Gemeinden eingefügt
+*    09.05.2012  10:56:20  zv173x2 LIBMEMSYM \\msbmcc03\ctm_av\Parm\MIGEWA_%%GEM3 entfernt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

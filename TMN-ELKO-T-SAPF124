@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* TMN-ELKO-T-SAPF124
+* 
+* 
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+%%MAIL2_NOTOK=manfred.dressen@itk-rheinland.de;hans-georg.robertz@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%MAIL_NOTOK=sapbasis@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK
+
+%%TEXT_OK=Joblog: %%JOBNAME ist durchgelaufen. Juhu
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist NOTOK. Returncode: %%COMPSTAT  Bitte ueberpruefen. 

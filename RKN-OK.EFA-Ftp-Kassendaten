@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-OK.EFA-Ftp-Hiz
+* 
+* 
+* abholen OK.EFA SBZ aus von Moerser Server 
+* in AV Bereich  ....AV\OK.EFA\KIRO\RKN
+*********************************************************** 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEFA
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-OKEFA.KIRP-%%GEM3
+
+
+* RKN wird in Moers unter Neuss (NE) geführt!!
+*%%SYSUT1=kassene.txt
+%%SYSUT1=kassene.txt_%%TTMMJJJJP_%%$ODATE
+
+
+
+%%SYSUT2=RKN_OKEFA_SBZ_%%$ODATE..txt
+* SYSUT1 Remote umbenennen 
+%%NEWNAME=%%SYSUT2
+
+%%LOCAL_FTP_DIR=\\srv03\ftp$\av\OK.EFA\SAP\%%GEM3
+
+%%TEST=N
+%%BAT_TEST=N
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\OK.EFA RKN  Kassendatei Kreis Teil 2.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\OK.EFA RKN  Kassendatei Kreis Teil 1.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\OK.EFA RKN  Kassendatei Kreis Teil 3.pdf
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.07.2014  13:40:26  zv173x2 kassene.txt in kassene.txt_%%TTMMJJJJP_%%$ODATE und tägliche Verabeitung
+
+*    21.01.2014  15:51:52  zv173x2 auf SAP umgestellt OK.EFA\SAP\
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

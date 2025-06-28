@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-RESY-Plausi-Arbeiter-Mail
+* 
+* 
+*********************************************************** 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\COPY-SOZ-MZ
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Empfänger (durch Semikolon getrennt)          
+%%EMAIL_T=Petra.Backus@moenchengladbach.de;Susanne.Baum-II@moenchengladbach.de;Claudia.Blaeser@moenchengladbach.de;
+
+* Subject
+%%EMAIL_U=Job-Nachricht:   Plausi-Reisekosten-ARU-Abr-%%JJJJ.-%%MM  ist bereitgestellt!
+
+* Kopie
+%%EMAIL_CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;Produktions-Steuerung@itk-rheinland.de
+
+* Blindkopie
+*%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+*Anhang (durch Semikolon getrennt) 
+*%%EMAIL_A=%%INDIR.\bere-220-NE_PFZZ0200_POLI-2008_%%SOZ_DAT..pdf
+*%%EMAIL_A_MOVE=J
+*%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+

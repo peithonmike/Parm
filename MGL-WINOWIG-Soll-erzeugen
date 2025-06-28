@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-Soll-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%ART="Batchstart Typ=Exe Aktion='Soll:*'  SB=50" 
+
+%%PARAMETER=%%ART
+%%LOGIN=%%WINOWIG_GKZ
+%%DESCRIPTION=Schnittstellen-Dateien Soll erzeugen 
+
+
+%%TEST=N
+%%DEBUG=N
+ 
+* ------------------------------------------------------------------
+
+%%SEARCH_DIR=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\ausgang\soll
+%%SEARCH=WiNOWIG_Uebsoll_XML_*.xml
+
+%%COMMAND=Powershell.exe -executionpolicy bypass  \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-WINOWIG-WoSpool.ps1
+
+
+
+
+
+
+
+
+
+***************************************************** 
+
+

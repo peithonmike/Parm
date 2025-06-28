@@ -1,0 +1,38 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland	
+***********************************************************************************
+*  Jobname     : DUE-Y22DTA02PR1
+*  APPLICATION : GWST RZF-Daten
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt
+
+%%TT=%%ODAY
+%%MM=%%OMONTH
+%%JJJJ=%%$OYEAR
+
+%%SERVER=m180kiviitkp2.rz.krzn.de
+%%USER=kivibat
+%%PW=kivibat
+%%DATEI=fatal_log_%%TT..%%MM..%%JJJJ..txt
+
+%%VERZEICHNIS=/BatchEingangsdaten/Protokolle
+
+%%MAIL02=volker.ehmann@itk-rheinland.de;david.mertens@itk-rheinland.de;alexander.lausecker@duesseldorf.de;adelheid.fraedrich@duesseldorf.de
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=Verarbeitung RZF-Daten abgebrochen
+%%TEXT_NOTOK=Es sind gravierende Fehler in der Verarbeitung aufgetreten. Bitte ueberpruefen Sie die Datei %%Datei
+
+%%COMMAND=\\msbmcc03\ctm_av\bin\Bat\checkFile.bat
+
+rem #-1 = datei nicht da 
+rem # 0 = leer
+rem # 1 = inhalt vorhanden
+rem # parameter:
+rem # server user pw verzeichnis datei

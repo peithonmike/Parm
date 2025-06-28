@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-PRODOP-Export-VWBU
+* Istzahlen für WVBU exportieren
+* MANDANT -> AV-SERVER -> HOST B20t7825
+*********************************************************** 
+ 
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=EXPORT
+%%VERF=Verwarn- und Bußgeld (VWG/ABU)
+
+* nur zur Information
+%%DAT=GREXPORTIST
+%%BJ=19
+
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_GRE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+
+*$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUH\GR\'GRPROTIST_20111114.TXT
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-Standard-Export.txt
+* Logdateien
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUH\PRODOP-%%$OYEAR.-%%OMONTH..csv
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+
+* Auftragserteilung
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-01-neue-Scripte.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-02-Variablen.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-03-Änderung-ini-pf.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-04-Variablen-incl-INTERN.pdf
+* ------------------------------------------------------------------

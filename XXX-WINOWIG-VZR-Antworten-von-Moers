@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-VZR-Antworten-von-Moers
+* 
+* 
+*********************************************************** 
+ 
+* TEST = J   macht nur einen Anlist 
+
+
+%%TEST=N
+%%SEARCH=nevau
+
+* ZielDirectory 
+%%OUTDIR=\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\eingang\kba
+%%OUTFILE=KBA_AUSK_nevau_%%$ODATE
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-WINOWIG-KBA-DTA-MOERS
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG-OPENFT-KBA-HALTER-ANFRAGE
+
+* Logfilename 
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\WINOWIG-KBA-DTA-%%$OYEAR..csv
+%%LOGFILE_COUNTER=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\WINOWIG-KBA-DTA-%%$OYEAR..csv
+
+
+
+%%FIND=" "
+
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\WINOWIG-KBA-DTA-%%$OYEAR..csv
+
+* ------------------------------------------------------------------
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.01.2014  13:34:14  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

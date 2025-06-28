@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-SOZ-Rente-Druckdaten-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-Rente
+ 
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1
+**INDIR=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%SOZ_DAT
+%%INDIR=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%OYEAR.%%OMONTH
+
+%%OUTDIR=\\vfju\ju\Daten\Sozialwesen\DRUCKDATEN\%%$OYEAR.\Rente\%%$ODATE
+
+**OUTDIR_PROCESSED=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%SOZ_DAT.\kopiert
+%%OUTDIR_PROCESSED=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%OYEAR.%%OMONTH\kopiert
+
+
+
+**INCLUDE=PFDR0100-NE_*2*12*.PDF
+%%INCLUDE=*_2*12_%%$OYEAR.%%OMONTH..PDF
+
+  
+%%MAIL_OK=Catharina.floeck@grevenbroich.de;Rebecca.ende@grevenbroich.de;Poststelle.Druckerei@grevenbroich.de
+%%BETREFF_OK=Neue Daten aus SOZ-Einmalzahlung bereitgestellt
+%%TEXT_OK=Es stehen neue Daten in \\vfgv1\voldaten1\Daten\DruckausgabeITK\Sozial\Rente\%%$ODATE bereit
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+

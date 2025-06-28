@@ -1,0 +1,20 @@
+***********************************************************************************
+*  JOB-LIBMEMSYM                                                                   *
+***********************************************************************************
+*  Jobname     : DUE-Belegstatistik_Amt204
+***********************************************************************************
+
+%%TEST=NEIN
+
+
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%COMMAND=powershell.exe -File \\msbmcc03\ctm_av\Bin\Powershell\DUE-Belegstatistik_Amt204.ps1
+
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\20180109_DUE-Belegstatistik_Amt201.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\20190114_DUE-Belegstatistik_Amt204_.pdf
+* ------------------------------------------------------------------

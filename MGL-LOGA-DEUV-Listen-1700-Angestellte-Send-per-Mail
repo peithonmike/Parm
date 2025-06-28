@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-DEUV-Listen-1700-Angestellte-Send-per-Mail 
+* 
+*********************************************************** 
+ 
+
+%%NETUSE=J
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+%%NETUSE_PATH=\\10.50.34.68\loga
+
+%%LAUFWERK=Y:
+
+%%INDIR=\\10.50.34.68\loga\ml2001jobmg\manuwdeuevanuwpdeuev\output
+
+
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+
+
+
+
+* Empfänger MG-Buchhaltung (durch Semikolon getrennt) 
+         
+%%EMAIL_T=Claudia.Esser@moenchengladbach.de;Ellen.Wellershaus@moenchengladbach.de;Miodrag.Subasic@moenchengladbach.de;Rosa.Reisner@moenchengladbach.de;Kerstin.Joerissen@moenchengladbach.de;Claudia.Bolz@moenchengladbach.de;Kevin.Mende@moenchengladbach.de;jessica.Naegler@moenchengladbach.de;Verena.Marto@moenchengladbach.de;Vera.Berghausen@moenchengladbach.de;Thekla.Schmidt@moenchengladbach.de;Svenja.Vath@moenchengladbach.de;Jessica.Naegler@moenchengladbach.de;Vera.Berghausen@moenchengladbach.de;Verena.Marto@moenchengladbach.de;Thekla.Schmidt@moenchengladbach.de
+
+
+* Subject
+%%EMAIL_U=Job-Nachricht:  DEUV-Listen 1700 fuer Angestellte vom %%LOG-DAT.
+
+* Kopie
+%%EMAIL_CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;
+
+
+* Blindkopie
+*%%EMAIL_BCC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;
+
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+%%EMAIL_A_MOVE=N
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+

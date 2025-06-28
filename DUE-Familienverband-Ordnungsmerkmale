@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Familienverband-Ordnungsmerkmale
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%SQL_SYSOUT_CSV=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div\OM_%%GKZ8..csv
+
+

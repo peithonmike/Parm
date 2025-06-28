@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-EWO-JAHR-Behaeltergroesse-Mail
+*
+*Auftraggeber:   Frank Schau 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*****************************************************************************
+*   M A I L 
+*  
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*****************************************************************************
+*   Mailadressen 
+*;Reinhard.Baier@ITK-Rheinland.de;Produktions-Steuerung@itk-rheinland.de
+*****************************************************************************
+%%EMAIL-T=David.Mertens@itk-rheinland.de;Frank.Schau@itk-rheinland.de
+*%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL-A=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Auswertungen\Reportergebnis\MEE_Behaeltergroesse_%%$ODATE..csv
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL-U=%%JOBNAME %%TTMMJJJJP_%%$ODATE
+%%TEST=N
+

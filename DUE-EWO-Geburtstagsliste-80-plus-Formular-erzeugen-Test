@@ -1,0 +1,179 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Geburtstagsliste-80-plus-Formular-erzeugen-Test
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Geburtstagsliste-80-plus-Formular-erzeugen-Test
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Geburtstagsliste-80-plus-Formular-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* Jobname alt bis 12.2021 
+* DUE-Geburtstagsliste-80-plus-Formular-erzeugen
+***********************************************************
+* Standard Files                                          *
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+*********************************************************** 
+* %%LISTEN_DATUM=%%JJJJ_MM_P1_%%$ODATE.-%%MM_P1_%%$ODATE
+*********************************************************** 
+* Listen bekommen Datum des nächsten Monats 
+* zwei Punkte müssen sein           ..  
+%%LISTEN_DATUM=%%JJJJ_MM_P1_%%$ODATE..-%%MM_P1_%%$ODATE
+
+***********************************************************
+* Auftrag erteilt durch                                   *
+***********************************************************
+%%AUFTRAGGEBER=H.Möller 
+
+***************************************************************************************************
+* Directory der Prod Jarfiles nach Test
+* P R O D
+***************************************************************************************************
+%%JAR_DIR=\\msbmcc01\CTM_AV\Bin\Java\EWO\Altersjubilare_Paket20220218
+
+***************************************************************************************************
+* Directory der T E S T  Jarfiles
+* Überschreiben bei Test (zb neue Jar's
+***************************************************************************************************
+*%%JAR_DIR=\\msbmcc01\CTM_AV\Bin\Java\EWO\Altersjubilare_Paket20211117-Test
+
+***************************************************************************************************
+* Haupt Jarfile
+***************************************************************************************************
+%%JAR_FILE=%%JAR_DIR.\altersjubilare.jar
+
+
+***************************************************************************************************
+* weitere Jar's  %%JAR_DIR
+***************************************************************************************************
+%%GRAT_JRXML=%%JAR_DIR.\Gratulationsschreiben.jrxml
+%%PERS_JRXML=%%JAR_DIR.\Personenliste.jrxml
+%%STAT_JRXML=%%JAR_DIR.\Statistik.jrxml
+
+*  neu ab 17.11.2021
+%%HINW_JRXML=%%JAR_DIR.\Hinweisschreiben.jrxml
+
+
+***************************************************************************************************
+* Infile aus Ewoauswertung
+* \\srv03.asp.rzne.de\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div
+***************************************************************************************************
+
+%%INFILE=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div\ALTJ%%ODAY.%%OMONTH..DBL
+
+
+***************************************************************************************************
+* Druckerei Amt 16  OUTDIR
+***************************************************************************************************
+%%OUTDIR=\\vfdusalt\16\Amt16\DocuShare16
+
+***************************************************************************************************
+* Fachabteilung OUTDIR2
+***************************************************************************************************
+%%OUTDIR2=\\vfdusalt\B01\B01\01-14 Protokoll\Alters_und_Ehejubiläen\Hilden\Ehrungen\Altersjubiläen\Einzelfälle
+
+
+
+* !!!!!!!!!!!!!!!!! 
+* PROD = false !!!!
+* !!!!!!!!!!!!!!!!!
+*
+* Test = true
+%%SKIP_IMPORT=false
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*     nachfolgend aufgeführt sind die Test-Pfade für Test-Ein und Ausgabedateien,
+*     sowie Pfad für Test-Altersjubilare-Paket, dort bitte das Test-Java-Paket plazieren,
+*     zum Testen die Prod-Pfade austernen und die Test-Pfade aktivieren,
+*     bitte dazu die Infile-Datei aktualisieren,
+*     Ausgabe-Dateien zum Testen nich ändern,
+*     nach dem Test die Änderungen zurücksetzten
+*------------------------------------------------------------------------------------------------
+*    ab hier werden die PROD Angaben überschrieben mit Test Ein und Ausgaben 
+*------------------------------------------------------------------------------------------------
+*%%DESCRIPTION1= Engabedatei aus Erledigt Ordner...... 
+*%%DESCRIPTION2= Auf Wunsch nacherstellen neues Format
+
+* Original File für Test verwenden
+*%%INFILE=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div\ALTJ%%ODAY.%%OMONTH..DBL
+* oder
+* sonstige Datei verwenden
+* wenn nur die Formulare neu erzeugt oder getestet werden sollen  
+* müssen dann die Eingabe aus dem erledigt Ordner verwendet werden
+%%INFILE=\\srv03.asp.rzne.de\qaspDF$\Daten\Apps\OKEWO\okprg\okewo_DUE\CTM\erledigt\2022\ALTJ1502.DBL
+
+%%JAR_DIR=\\msbmcc01\CTM_AV\Bin\Java\EWO\Altersjubilare_Paket20220218 
+* 
+%%OUTDIR=\\srv03\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div\AV-Test
+%%OUTDIR2=\\srv03\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div\AV-Test
+%%HINW_JRXML=%%JAR_DIR.\Hinweisschreiben.jrxml
+*%%OUTDIR=\\msbmcc01\c$\temp
+%%JAR_FILE=%%JAR_DIR.\altersjubilare.jar
+
+*------------------------------------------------------------------------------------------------
+
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*  Ende Testbereich
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+******************************************************************
+*
+*        Ausgabe-Dateien OUTDIR
+*
+******************************************************************
+
+%%PERSONEN_PDF=%%OUTDIR.\DUE-80-plus-Personen-%%LISTEN_DATUM..pdf
+*  neu ab 17.11.2021
+%%HINW_PDF=%%OUTDIR.\DUE-80-plus-Hinweisschreiben-%%LISTEN_DATUM..pdf   
+
+
+******************************************************************
+*
+*        Ausgabe-Dateien OUTDIR2
+*
+******************************************************************
+%%LISTE_PDF=%%OUTDIR2.\DUE-80-plus-Liste-%%LISTEN_DATUM..pdf
+%%STATISTIK_PDF=%%OUTDIR2.\DUE-80-plus-Statistik-%%LISTEN_DATUM..pdf
+
+
+
+
+***************************************************************************************************
+* Parameter zusammengesetzt  neu 
+***************************************************************************************************
+%%PARAMETER= "%%INFILE" "%%GRAT_JRXML" "%%HINW_JRXML" "%%PERS_JRXML" "%%STAT_JRXML" "%%PERSONEN_PDF" "%%HINW_PDF" "%%LISTE_PDF" "%%STATISTIK_PDF" "UTF-8" "%%JAR_DIR.\DB_Connector.ini" "%%SKIP_IMPORT"
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.02.2022  10:49:15  zv173x2 TEST PARM
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

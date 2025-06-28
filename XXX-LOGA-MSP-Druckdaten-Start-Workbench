@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-Druckdaten-Start-Workbench
+* Start Abrechnungen.exe der Workbench
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\LOGA-USE-DRUCKEREI-NEUSS
+
+
+%%COMMAND=cmd /c "D:\Abrechnungen\Abrechnungen\bin\Debug\Abrechnungen.exe -H:d:\Abrechnungen\"
+
+
+%%EMAIL_NOTOK=produktions-steuerung@itk-rheinland.de;hr-support@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT_NOTOK=Das Aufbereiten der Gehaltabrechnungen Angestellte in der Workbench ist abgebrochen
+

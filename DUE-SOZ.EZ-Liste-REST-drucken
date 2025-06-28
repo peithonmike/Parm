@@ -1,0 +1,73 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.EZ-Liste-REST-drucken
+* 
+* 
+*********************************************************** 
+ 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR  alle Files mit vorgegebener Maske an beliebige Anzahl Printer.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Print-To-Printers.ps1 -INCLUDE %%INCLUDE -PRINTER %%PRINTER
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%BEIBLATT=N
+
+
+
+* ************************************************************************
+*   Name PRINTER-DLD508431 und DLD5081302
+* ************************************************************************
+
+
+* Eingabe Directory 
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE
+
+* Drucker Freigabe
+%%PRINTER=\\msdhp5\DLD508431 , \\msdhp8\DLD5081302
+
+%%PROT=EZ-030-DF_PFTXN100_PROT_EZ-REST_%%$ODATE..pdf 
+
+%%AUSZ=EZ-080-DF_PFZV0100_AUSZ_EZ-REST_%%$ODATE..pdf
+
+%%INCLUDE=%%PROT , %%AUSZ
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE.\gedruckt
+
+* Datei Auswahl
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%FORCE_OUTDIR=N
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.04.2018  13:34:27  zv171e1 Drucker DLD5081319 in DLD5081302 geändert
+*    09.06.2016  13:18:14  zv171e1 Drucker DLD5081309 in DLD5081319 geändert
+*    24.11.2015  08:24:27  zv171e1 neu
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

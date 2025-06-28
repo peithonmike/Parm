@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE_AVA_DATEN_KURIER_COPY_WEB
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%VZ=DVA
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\DUE-KURIER.ps1
+%%COMMAND=\\msbmcc03\ctm_av\Bin\bat\kurier.cmd
+
+
+**eindat=\\msbmcc03\ctm_av\Jasper-Output\daten-ava_relaunch.CSV
+**ausdat1=X:\DVA\daten-ava_relaunch.CSV
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-AVA_Daten_KURIER.pdf
+* ------------------------------------------------------------------
+

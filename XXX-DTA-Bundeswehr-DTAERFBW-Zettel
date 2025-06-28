@@ -1,0 +1,21 @@
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-DTA-Bundeswehr-DTAERFBW-Zettel
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###-DTA-Bundeswehr-DTAERFBW
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%STICHTAG *** %%ID-%%RUNNR 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+ 
+* ------------------------------------------------------------------
+*  Druckvorlage
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\NACH-DTA-Bundeswehr-Quartal.skels
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\NACH-DTA-Bundeswehr-Quartal.skels
+%%TEST=N

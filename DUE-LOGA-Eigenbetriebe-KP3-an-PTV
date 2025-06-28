@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-Eigenbetriebe-KP3-an-PTV
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+%%TEST=N
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LDAT=%%$OYEAR.%%OMONTH 
+
+* Beschreibung
+%%DESCRIPTION=DUE Eigenbetriebe an den PTV Server senden
+
+* Eingabe
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LOGA\DUE\KP3
+
+%%INCLUDE=IRP_%%LDAT._*
+
+%%EXCLUDE="-"
+
+* Ausgabe
+%%OUTDIR=\\msptv01\d$\PTV\Projekte\SAP_Export\LOGA_EHGB\Eingabe
+
+%%OUTFILE=*
+
+* erledigt
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+
+%%OUTFILE_PROCESSED=*
+
+* Log
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+
+%%MAIL_NOTOK=Daniel.Mendoza@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+
+%%BETREFF_NOTOK=Kopieren der KP3 auf dem PTV-Server Daten ist NOTOK
+
+%%TEXT_NOTOK=%%JOBNAME ist nicht OK gelaufen.
+ 
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    08.01.2016  09:59:35  zv171e1 neu
+*    *    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+  
+
+
+
+

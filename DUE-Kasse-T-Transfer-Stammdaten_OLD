@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Kasse-T-Transfer-Stammdaten
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+
+
+%%CLIENT=IFP
+%%MANDANT=400
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File c:\ctm_av\bin\ps\copysapsst.ps1 -modes stammdaten
+
+**MAIL_NOTOK=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%MAIL_NOTOK=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK
+
+%%TEXT_NOTOK=Transfer Stammdaten abgebrochen

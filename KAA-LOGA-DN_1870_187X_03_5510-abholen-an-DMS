@@ -1,0 +1,84 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-LOGA-DN_1870_187X_03_5510-abholen-an-DMS
+* 
+* 
+*********************************************************** 
+ 
+
+%%AUFTRAGGEBER=T.Hokamp 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+*********************************************************** 
+
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\DMS_LOGA
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\DMS_LOGAMAIL
+             
+**OUTDIR=\\MSD3DMSB02\DN_%%HMAN._%%MANX._0%%ART._%%LISTE._C1
+%%OUTDIR=\\vfd3dms\ProdImport\DCOLD_IMPORT\D3E\LOGA-KAA_DN_%%HMAN._%%MANX._0%%ART._%%LISTE._C1
+
+*%%OUTDIR=\\MSBMCC03\ctm_av\temp\dms
+
+
+%%OUTDIR2=Nicht-verwendet
+
+
+
+%%INCLUDE=DN_%%HMAN._%%MAN.*_*_%%LISTE._C1.pdf
+
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=option failonnomatch off
+
+%%Z05=open %%SITE -hostkey=%%HOSTKEY
+
+*%%Z06=DIR
+
+%%Z07=CD AN\
+*************************************************************************
+*                Beschäftigungsart 1 stellig wie von Lemgo erzeugt wird
+*                ohne führende Nullen   
+*                      |
+*                      |
+%%Z08=LS %%INCLUDE
+*DN_%%HMAN._%%MAN.*_*_%%LISTE._C1.pdf
+
+
+%%Z10=LCD %%OUTDIR.\
+%%Z11=mget %%INCLUDE
+
+
+
+%%Z20=bye 
+%%TEST=N
+
+
+
+
+
+
+*   Listen Nummern :\\msbmcc03\ctm_av\doc\loga\Lemgo-ListenNummern.jpg
+
+
+*   ********************************************************************************** 
+*    -- Änderungen -------------------------------------------------------------------
+*    20.04.2022  12:12:00  zv173xc outdir angepasst
+*    18.06.2021  07:33:36  zv173x2 Outdir1 in outdir.Ohne Anlistder gefunden Daten.
+*                                  endet dann mit cc4 weil die Liste bereits vom Empfänger verarbeitet wurde                          
+*    17.02.2021  14:49:25  zv173x2 
+*    15.02.2021  12:46:21  zv173x2 Jobname und Variablen Member DMS_LOG sind neu
+*    17.01.2021  19:03:50  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

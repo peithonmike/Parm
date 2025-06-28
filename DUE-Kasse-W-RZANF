@@ -1,0 +1,26 @@
+* *************************************************************
+* Table Variablen          
+* DUE-Kasse-W-RZANF
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+**SYSOUT=//sapftpitk.sapitk.krzn.de/SST/IFQ/SYSOUT_CTM/%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%MAIL01=joerg.huhn@itk-rheinland.de;daniel.mendoza@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK
+
+%%TEXT_NOTOK=%%JOBNAME ist abgebrochen
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-Kasse-W-AUSWERTUNG_ERWEITERUNG_T250719.pdf
+* ------------------------------------------------------------------

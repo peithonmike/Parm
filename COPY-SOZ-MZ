@@ -1,0 +1,52 @@
+* ------------------------------------------------------------------------------
+* S O Z I A L W E S E N 
+* ------------------------------------------------------------------------------
+* H A U P T L A U F
+*
+* ------------------------------------------------------------------------------
+* Hier werden Standard Vorgaben gemach, die für die meisten Mandanten zutreffen
+* Abweichungen könne. bzw werden im Job-LIBMEMSYM gemacht 
+
+* Abrechnungsmonat liegt in der Zukunft
+%%SOZ_DAT=%%JJJJ_MM_P1_%%$ODATE
+%%SOZ_DAT=%%SOZ_DAT.%%MM_P1_%%$ODATE
+%%SOZ_MONAT=%%MM_P1_%%$ODATE
+* Sachgebiet aus Jobnamen ermitteln
+%%SOZ_GKZ=%%SUBSTR %%JOBNAME 12 3
+
+%%INCLUDE=nbere*2*%%GKZ8_7_2._%%SOZ_DAT..PDF
+
+* --------------------------------------------------------------------------------------------
+* PDF_INDIR
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* --------------------------------------------------------------------------------------------
+*%%INDIR              =\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\xxx\%%SOZ_DAT
+%%INDIR              =\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.
+
+
+%%EXCLUDE="-"
+
+
+
+* --------------------------------------------------------------------------------------------
+* PDF_SAMMELDIR_PROCESSED
+* Erledigt Ordner.
+* --------------------------------------------------------------------------------------------
+*%%PDF_SAMMELDIR_PROCESSED=\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\%%SOZ_DAT.\verarbeitet
+%%PDF_SAMMELDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\verarbeitet
+
+
+
+%%DRUCK_LOG=\\msbmcc03\ctm_av\Log\ErgebnisLog\SOZ-DRUCK-%%$OYEAR..csv
+
+
+
+
+
+*INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avCopy-Move-Files.ps1
+
+
+
+
+

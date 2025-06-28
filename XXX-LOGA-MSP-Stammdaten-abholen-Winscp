@@ -1,0 +1,86 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-Stammdaten-abholen-Winscp
+* 
+* 
+*********************************************************** 
+ 
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-FIBU-NBE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-MOERS
+*********************************************************** 
+%%WINSCP_AKTION=MSP Stammdaten für täglichen Abgleich abholen  
+%%WINSCP_EXE=C:\Program Files (x86)\WinSCP\WinSCP.exe
+
+
+%%INCLUDE=*.csv
+* Ausgabe Directory
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\MSP\STAMMDATEN
+
+
+* Moers FTP !!!  Case Sensitiv
+
+%%Z01=open %%SITE
+%%Z02=ascii
+%%Z03=LCD %%OUTDIR
+
+*Neuss
+%%Z04=cd /Prod/DATEIEN/MAN1100
+%%Z05=mget %%INCLUDE 
+
+*Dormagen
+%%Z06=cd /Prod/DATEIEN/MAN1200
+%%Z07=mget %%INCLUDE 
+
+*Grevenbroich
+%%Z08=cd /Prod/DATEIEN/MAN1300
+%%Z09=mget %%INCLUDE 
+
+*Jüchen
+%%Z10=cd /Prod/DATEIEN/MAN1400
+%%Z11=mget %%INCLUDE 
+
+*Kaarst
+%%Z12=cd /Prod/DATEIEN/MAN1500
+%%Z13=mget %%INCLUDE 
+
+*Meerbusch
+%%Z14=cd /Prod/DATEIEN/MAN1800
+%%Z15=mget %%INCLUDE 
+
+
+
+%%Z20=bye 
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+%%AUFTAGGEBER=S.Berktin
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*     04.07.2018  12:57:45  zv173x2  %%AUFTAGGEBER=S.Berktin
+
+
+*    08.06.2018  11:14:27  zv173x2 LOGA-FIBU-NBE entfernt verwirrt nur
+
+*     08.06.2018  11:09:25  zv173x2  C:\Program Files (x86)\WinSCP\WinSCP.exe
+*    03.07.2017  14:29:07  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

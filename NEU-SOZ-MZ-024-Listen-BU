@@ -1,0 +1,109 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ-MZ-024-Listen-BU
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-SOZ-MZ
+ 
+
+* ------------------------------------------------------------------------------------------------------
+* PDF_MASK Auswahl Maske 	Include Exclude
+*
+* ------------------------------------------------------------------------------------------------------
+%%INCLUDE=%%SOZ_MZ_LISTEN_INCLUDE
+
+
+
+%%INCLUDE=           *ANOR-2024_%%SOZ_DAT..PDF
+%%INCLUDE=%%INCLUDE ,*BULI-2024_%%SOZ_DAT..PDF
+%%INCLUDE=%%INCLUDE ,*GESU-2024_%%SOZ_DAT..PDF
+%%INCLUDE=%%INCLUDE ,*BUHL-2024_%%SOZ_DAT..PDF
+%%INCLUDE=%%INCLUDE ,*BALI-2024_%%SOZ_DAT..PDF
+
+* zum restart falls warnliste immer noch nicht getrenn nach sachgebieten kommt 
+*%%INCLUDE=bere-110_PFBW0100_WARN_NE-2024_201610.pdf
+
+
+%%EXCLUDE=%%SOZ_MZ_LISTEN_EXCLUDE ,*EIPR_LOE*,*FEHL_NE*,*AEND_NE*,*FALL_NE*,*FASU_NE*,*AUSB_NE*
+* ------------------------------------------------------------------------------------------------------
+* Die Cover müssen je nach Empfänger angegeben werden
+* ------------------------------------------------------------------------------------------------------
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\AAA-%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Listen.pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\ZZZ-%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Listen.pdf
+
+* ------------------------------------------------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+* ------------------------------------------------------------------------------------------------------
+%%PDF_FILENAME=%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Listen-%%SOZ_DAT.-BU.PDF
+%%PDF_FILENAME=%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Listen-REST-%%SOZ_DAT.-BU.PDF
+* ------------------------------------------------------------------------------------------------------
+* ANZAHL
+* Anzahl der Ausdrucke 
+* ------------------------------------------------------------------------------------------------------
+%%ANZAHL=%%SOZ_MZ_LISTEN_ANZAHL
+
+* ------------------------------------------------------------------------------------------------------
+* Hotfolder FreeFlow
+* ------------------------------------------------------------------------------------------------------
+%%FREEFLOW_HOTFOLDER=%%SOZ_MZ_LISTEN_DRUCKER
+
+
+
+* ------------------------------------------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------------------------------------------
+%%TEST=N
+
+    
+* ------------------------------------------------------------------------------------------------------
+* Bei DEBUG =J werden  mehr Variablenwerte angezeigt
+* ------------------------------------------------------------------------------------------------------
+%%DEBUG=N
+
+* ------------------------------------------------------------------------------------------------------
+%%ONLY_BUENDEL=N
+* ------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.10.2016  09:17:30  zv173x2 Warnliste ist ab sofort dabei
+*    22.09.2016  09:40:14  zv173x2 1.Lauf ab Zeitalter Sachgebietstrennung
+*    22.08.2014  12:55:51  zv173x2 *AUSZ*,aus exclude entfernt
+*    22.08.2014  12:53:52  zv173x2 exclude FEHL_NE;   AEND_NE;   FALL_NE;   FASU_NE;   AUSB_NE
+*    18.06.2014  10:14:24  zv173x2 neu
+*    11.06.2014  12:33:55  ZV173X2 Entwurf MZ Bündel Listen
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+*%%PDF_INDIR              =\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\%%SOZ_DAT
+*%%PDF_SAMMELDIR_PROCESSED=\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\%%SOZ_DAT.\verarbeitet
+*%%PDF_SAMMELDIR          =\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\SOZ-MZ\%%JOBNAME.-%%SOZ_DAT
+*%%PDF_OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\SOZ-MZ\BUENDEL\MZ-%%SOZ_DAT
+*%%PDF_DEL_SAMMELDIR=J
+*%%FORCE_PDF_SAMMELDIR_PROCESSED=J
+
+
+
+
+
+
+

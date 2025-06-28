@@ -1,0 +1,35 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Jobname     : DUE-CHECK-MAX-1-FILE
+***********************************************************************************
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+%%INDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\GEW\DTA-FIN\DTA-Duesseldorf
+**INDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\cf\elster
+
+
+
+%%MAILSERVER=smtp.itk.local
+%%MAIL_FROM=produktions-steuerung@itk-rheinland.de
+%%MAIL_TO=produktions-steuerung@itk-rheinland.de, adelheid.fraedrich@duesseldorf.de, carolin.schwarz@duesseldorf.de   
+%%MAIL_BETREFF=ELSTER Gewerbesteuer
+%%MAIL_TEXT=\\msbmcc03\CTM_AV\Parm\Mail-Messages\DUE_ESTER_Gewerbesteuerbenachrichtigung.txt
+
+
+
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen bitte ueberpruefen!!!
+%%TEXT_NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\DUE-Pruef-max-1-File.ps1

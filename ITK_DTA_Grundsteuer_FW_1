@@ -1,0 +1,49 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland	
+***********************************************************************************
+*  Jobname     : ITK_DTA_Grundsteuer_FW_1
+*  APPLICATION : GBA
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%TT=%%ODAY
+%%MM=%%OMONTH
+%%JJ=%%OYEAR
+
+%%FILE1=GRST.KDE9.D%%TT.%%MM.%%JJ..txt
+**      GRST.KDE9.D
+%%INFOFILE=GRST.KDE9I.D%%TT.%%MM.%%JJ..txt
+**         GRST.KD09I.D
+%%INFOFILE2=Messbescheiddatum.txt
+
+
+**PFAD1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\dta-gba
+**PFAD2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\dta-gba\erledigt
+
+%%PFAD1=\\srv03\ftp$\av\dta-gba
+%%PFAD2=\\srv03\ftp$\av\dta-gba\erledigt
+
+
+
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\ReadFile.ps1 %%FILE1 %%INFOFILE  %%INFOFILE2 %%PFAD1 %%PFAD2
+
+*** TEST ***
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\ReadFile-TEST.ps1 %%FILE1 %%INFOFILE  %%INFOFILE2 %%PFAD1 %%PFAD2
+************
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\ReadFile_neu.ps1
+
+
+
+************************* Änderungen *************************
+*
+* 14.06.2024	zvaa241		ReadFile-TEST.ps1 mit "-INTO_FOLDER_ORDERID NEWF" gestestet.
+*
+**************************************************************

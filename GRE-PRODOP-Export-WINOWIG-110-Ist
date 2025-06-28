@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-PRODOP-Export-WINOWIG-110-Ist
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+*********************************************************** 
+* Istzahlen für WinOwig exportieren 
+* sonstige Ordnungswidrigkeiten
+*********************************************************** 
+ 
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=EXPORT
+%%VERF=WINOWIG Ist sonstiges
+
+
+* zur Information
+* wird im Prodoppik festgelegt
+%%DAT=GREXPWINOWIG_110
+%%BJ=730
+
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-GRE-WINOWIIG-IMP-EXP.pdf
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    08.03.2016  10:48:49  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* 
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ITK
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de;david.mertens@itk-rheinland.de;volker.ehmann@itk-rheinland.de
+
+
+
+%%BETREFF=NOTOK - Bitte Daten in KMV-Ordnern überprüfen
+%%TEXT=Es sind Dateien in KMV-Ordner vorhanden. Siehe Anhang!
+
+%%EINGABE=\\msbmcc03\ctm_av\Parm\KMV-Dateien.txt
+%%AUSGABE=\\msbmcc03\c$\Temp\LogKMV_ITK.txt
+%%BETREFF=Es sind Dateien in KMV-Ordnern vorhanden. Siehe Anhang!
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass "%PSScripts%\Global\Check_Projekte.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_100.cred" -ProjektTyp "KMV"

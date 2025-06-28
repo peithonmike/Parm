@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Beamte-Elster-Move-Druck
+* 
+* 
+*********************************************************** 
+ 
+
+*********************************************************** 
+* Mitarbeiter Service Portal 
+* 
+*********************************************************** 
+%%INIFILE=\\msbmcc03\ctm_av\PARM\LOGA-ELSTER-INCLUDE-INIDATEI
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%LIBMEMSYM=%%INIFILE
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\Elster
+
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\Elster
+
+%%OUTDIR2=\\srv03.asp.rzne.de\ftp$\av\MSP\LOGA_MSP_DAILY\Elster\%%$OYEAR.\%%OMONTH.\
+
+
+
+%%DESCRIPTION=ELSTER
+
+%%DESCRIPTION1= ELSTER wird separat in den  Ordner verschoben.
+%%DESCRIPTION2= 1. er muss einen Hinweis für die Druckerei auf ELSTER haben
+%%DESCRIPTION3= 2. er soll nicht kuvertiert werden soll und direkt an das Personalamt geschickt werden 
+
+%%DESCRIPTION4= INDIR  beinhaltet die Loagadaten aus Lemgo
+%%DESCRIPTION5= OUTDIR hierin kommen die DRUCK-relevanten Dateien
+%%DESCRIPTION6= OUTDIR2 ist die Directory für die täglichen Dokument Updates
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.05.2024  13:18:27  zvaa241  neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

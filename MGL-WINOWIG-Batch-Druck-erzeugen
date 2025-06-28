@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-Batch-Druck-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+******************************************** 
+ 
+
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\DOC\WINOWIG\MGL-WINOWIG-Batch-Druck-Sammler.TXT
+%%LIBMEMSYM=\\msbmcc03\ctm_av\DOC\WINOWIG\%%JOBNAME..TXT
+%%USE_INIFILE=J
+%%INIFILE=\\msbmcc03\ctm_av\PARM\WINOWIG-Batch-Druck-INIDATEI-%%GEM3
+%%LOGIN=%%WINOWIG_GKZ
+
+%%LIBMEMSYM=%%INIFILE
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+*%%WINOWIG_DRUCK_DIR= \\vfcitrix\citrix\Daten\MG\Winowig\ftp\ausgang\druckdateien\KONICA_MINOLTA_1250_1052PS 
+
+
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass  \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-WINOWIG-WoSpool.ps1
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.11.2019  11:16:34  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

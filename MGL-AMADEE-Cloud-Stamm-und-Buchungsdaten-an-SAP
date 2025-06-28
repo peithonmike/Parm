@@ -1,0 +1,88 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-AMADEE-Cloud-Stamm-und-Buchungsdaten-an-SAP
+* 
+* 
+*********************************************************** 
+ 
+* 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%DESCRIPTION=Amadee Stamm und Buchungsdaten (Soll) nach SAP kopieren
+%%RICHTUNG=Copy-from-Cloud
+
+
+%%AUFTRAGGEBER=M.Keil
+
+%%U=AmadeeAV
+%%P=QGV#W!92wUXn
+**P=secret-server
+
+
+*---------------------------------------------------------------
+* Eingabe Directory 
+* Directory in der Cloud
+* immer mit Laufwerksbezeichnung
+
+%%INDIR=X:\Musikschule\FromAmadee\%%GEM3
+
+* Datei Suchmaske
+%%INCLUDE=MUS*HIZ2
+%%EXCLUDE="-"
+
+* Ausgabe Directory für die Solldaten
+%%OUTDIR=\\vfmgapps\apps\Verfahren\SAP-V-MUS
+
+
+
+* Cloud Laufwerk
+%%LAUFWERK=X:
+
+ 
+*  
+* nach erledigt verschieben
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.01.2020  11:02:20  zv173x2 secure password
+*    13.01.2020  15:02:26  zv173x2 USE_PREFIX default (N) 
+*    16.12.2019  10:43:42  zv173x2 Berechtigung ist jetzt ok
+*    20.11.2019  07:08:31  zv173x2 Netuse
+*    15.11.2019  11:07:05  zv173x2 prod
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

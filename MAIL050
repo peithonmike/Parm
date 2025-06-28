@@ -1,0 +1,12 @@
+                                                  
+%%T=%%SUBSTR %%ODATE 5 2                                        
+%%M=%%SUBSTR %%ODATE 3 2                                        
+%%J=%%SUBSTR %%ODATE 1 2                                        
+%%DATUM=%%T..%%M..%%J                                             
+%%MIN=%%SUBSTR %%TIME 3 2                                       
+%%HOUR=%%SUBSTR %%TIME 1 2                                       
+%%ZEIT=%%HOUR..%%MIN  
+%%VERF=EZ                                                    
+%%ORT=DORTMUND
+%%OK=OK                                            
+%%SUBJECT=%%DATUM %%VERF %%ORT %%OK

@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-SYSOUT-Monat-07-sammeln
+* 
+* 
+*********************************************************** 
+    #$INDIR ="G:\Sysout\2012"
+    #$INDIR="E:\____PS\Test\Testdaten"
+    $INDIR ="\\msbmcc03\G$\CTM\Sysout\2012"
+    $INCLUDE ="*.txt"
+    $DATE_VON="01.12.2012"
+    $DATE_BIS="31.12.2012"
+    $OUTDIR ="\\msbmcc03\g$\CTM\Sysout\2012\12"
+    
+
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%JJJJ=%%JJJJ_M3_%%$ODATE
+%%MM=%%SUBSTR %%JOBNAME 18 2 
+
+
+ 
+* Eingabe Ordner
+* um einen Zip fähiger Ordner zu erstellt 
+%%INDIR=\\msbmcc03\G$\CTM\Sysout\%%JJJJ
+* von bis datum 
+%%DATE_VON=01.%%MM..%%JJJJ
+%%DATE_BIS=31.%%MM..%%JJJJ
+* nur  txt Dateien
+%%INCLUDE=*.txt
+
+
+* Ausgabeordner auf Monatsbasis 
+%%OUTDIR=\\msbmcc03\g$\CTM\Sysout\%%JJJJ.\%%MM
+
+%%DEBUG=N
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.03.2015  10:13:32  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+  
+

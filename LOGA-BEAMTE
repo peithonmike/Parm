@@ -1,0 +1,29 @@
+* Bündel Beamte.....
+* Grunddaten zum Bündeln
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\KN
+* Sammelbereich der fertigen Bündel für den Druckerei Copy-Job
+%%BUENDEL_DIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\KN\BUENDEL
+%%OUTDIR_PROCESSED=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\Druckerei-Neuss\gesendet
+%%USE_OUTDIR_PROCESSED=J
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*	 16.08.2023  12:00:00  zvaa241 OUTDIR_PROCESSED 	
+*    12.08.2020  12:16:59  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

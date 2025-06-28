@@ -1,0 +1,59 @@
+******************************** 
+%%AUFTRAGGEBER=D.SAUER 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=EVENTIM Kassendaten abholen
+%%RICHTUNG=Copy-from-Cloud
+
+
+
+%%U=avwebdav
+
+
+
+*---------------------------------------------------------------------------------
+#  Der Begriff secret-server wird im Job durch das verschlüsselte Passwort ersetzt 
+*%%P=secret-server
+%%P=conM27#AV
+*---------------------------------------------------------------------------------
+* Eingabe Directory 
+* Directory in der Cloud
+* immer mit Laufwerksbezeichnung
+
+%%INDIR=K:\eventimDatenaustausch
+
+* Datei Suchmaske
+%%INCLUDE=CTS-*%%$ODATE.-*.txt
+%%EXCLUDE="-"
+
+* Ausgabe Directory für die Solldaten
+%%OUTDIR=\\srv03\qaspkdvz$\daten\Apps\ftp\av\Eventim
+
+
+
+* Cloud Laufwerk
+%%LAUFWERK=K:
+ 
+* Dateien die in die Cloud geschrieben wurden 
+* nach erledigt verschieben
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+%%USE_PREFIX=N
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+************************************************************************** 
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.07.2020  14:03:09  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

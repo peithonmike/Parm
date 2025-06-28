@@ -1,0 +1,43 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Landeshauptstadt Düsseldorf
+***********************************************************************************
+*  Jobname     : DUE-Erinnerung-BPA-6Mon-PAP
+*  APPLICATION : OK.EWO.JASPER
+***********************************************************************************
+*********************************************************************************** 
+*
+
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Erinnerung-BPA-6Mon-PAP
+*
+* Druckdatei über Papyrus-Server an Duesseldorfer 
+* Druckerei (Amt 16) senden
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-PAPYRUS
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+ 
+
+
+*Eingabedatei
+%%SYSUT1=\\msbmcc03\ctm_av\Jasper-Output\DUE-Erinnerung-BPA-6Mon-%%TTMMJJJJP_%%$ODATE...CSV
+
+
+* Papyrus Document    
+%%SYSUT2=#DOCE300#THISFILE#EW31A#DFZSDSE##1_DUE-Erinnerung-BPA-6Mon-PAP
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\JASPER-DUE-ERINNERUNG-BPA-RP.pdf
+* ------------------------------------------------------------------

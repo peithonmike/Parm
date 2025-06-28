@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.EZ-Liste-Buchungsliste-Copy-Filer
+* DUE-SOZ.EZ-Liste-Buchungsliste-Copy-Filer für Frau Spottke
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\DUE\%%$ODATE
+        
+
+* Datei Auswahl
+
+%%INCLUDE=nbere-320-DF_PFZV0200_BULI_%%$ODATE..pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfduswba\51\Amt51\WirtschaftlicheHilfeIntegration_Leitung/SpottkeA
+
+* erledigt Ordner
+*%%OUTDIR_PROCESSED=%%INDIR.\gedruckt
+
+%%TEST=N
+%%DEBUG=N

@@ -1,0 +1,9 @@
+%%OWNER=controlm
+
+%%SERVER=msdhp01
+
+%%PATH=\\msbmcc03\c$\SilentInstallation\files
+
+%%COMMAND_Job1=ecaqrtab UPDATE %%SERVER 0
+%%COMMAND_Job2=\\msbmcc03\c$\SilentInstallation\files\silent.bat -i %%SERVER
+%%COMMAND_Job3=ecaqrtab UPDATE %%SERVER 50

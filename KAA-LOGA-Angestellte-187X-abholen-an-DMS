@@ -1,0 +1,69 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-LOGA-Angestellte-187X-abholen-an-DMS
+* 
+* 
+*********************************************************** 
+ 
+**************************** 
+%%AUFTRAGGEBER=T.Hokamp 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+*********************************************************** 
+
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\DMS_LOGAMAIL
+             
+%%OUTDIR1=\\MSD3DMSB02\DN_1870_187X_0X_1001_C1
+*%%OUTDIR1=\\MSBMCC03\ctm_av\temp\dms
+
+
+%%OUTDIR2=Nicht-verwendet
+
+
+
+%%INCLUDE=*.pdf
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=option failonnomatch off
+
+%%Z05=open %%SITE -hostkey=%%HOSTKEY
+
+*%%Z06=DIR
+
+%%Z07=CD AN\
+*************************************************************************
+*                Beschäftigungsart 1 stellig wie von Lemgo erzeugt wird
+*                ohne führende Nullen   
+*                      |
+*                      |
+*%%Z08=ls DN_1870_187*_*_1001_C1*.pdf
+
+%%Z10=LCD %%OUTDIR1
+%%Z11=mget DN_1870_187*_*_1001_C1.pdf
+
+
+
+%%Z20=bye 
+%%TEST=N
+
+
+
+
+
+
+*   Listen Nummern :\\msbmcc03\ctm_av\doc\loga\Lemgo-ListenNummern.jpg
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.01.2021  19:03:50  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

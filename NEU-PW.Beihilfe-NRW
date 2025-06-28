@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-PW.Beihilfe-NRW
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\Beihilfe\export\
+
+%%SEARCH=AL.tmp
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\PW-%%$OYEAR..csv
+%%OUTDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\BeihilfeNRW
+%%OUTFILE=input_beihinrw.txt
+
+
+
+* MAIL 
+
+%%SENDMAIL=J
+*%%EMAIL-T=Stephan.Huennekes@itk-rheinland.de 
+*%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de 
+
+%%EMAIL-T=Burghard.Schramm@itk-rheinland.de 
+%%EMAIL-CC=Produktions-Steuerung@itk-rheinland.de 
+%%EMAIL-U=%%JOBNAME    Beihilfe Zahldaten  
+%%EMAIL-A=%%OUTDIR.\%%OUTFILE
+
+
+
+
+
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.11.2013  08:53:14  zv173x2 eMail Hünni raus
+*    01.08.2013  12:20:14  zv173x2 email bs
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,104 @@
+############################################################################################################################
+
+##
+
+##     INAKTIV ab 04.12.2017 
+
+##     abgelöst durch XXX-LOGA-MSP-EGM-Dokument-Update
+
+############################################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* XXX-LOGA-MSP-EGM-Sonstige-Dokument-Update
+* 
+* 
+*********************************************************** 
+
+**************************************************************************** 
+* täglicher Dokumenten Update
+**************************************************************************** 
+* Job erzeugt Gehaltsmitteilungen oä. für die die am EGM nicht teilnehmen
+* Für die anderen Mitarbeiter werden die Mitteilungen in die DB geschrieben
+* Dieser Lauf kann wiederholt werden...
+**************************************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NZI
+
+
+%%MM=11
+%%JJJJ=2017
+* Zeitraum
+%%LOGA_DAT=%%MM.%%JJJJ
+
+* Loga PDF Druckdaten KN aus msp Ordner
+* 
+%%DESCRIPTION= Sonderaktion    Lauf findet nur für Monat %%MM..%%JJJJ statt
+%%INDIR=\\Msprintff01\source$\LOGA\%%JJJJ.\%%MM.\NZI\MSP-EGM
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%JJJJ.\LOGA\%%MM.\NZI\MSP-EGM\Daily
+
+
+
+* JAVA Variablen
+* Java Directories \\msbmcc03\ctm_av\Bin\Java\MSP
+
+*%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\MSP_Gehaltsabrechnungen_20170718_DEV.jar
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\MSP_Gehaltsmitteilungen_20170725_PROD.jar
+
+
+%%JAR_START=de.itk.projekte.gehaltsmitteilungen.Start
+
+
+%%EMAIL_T=Sascha.Berktin@itk-Rheinland.de;
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;
+%%EMAIL_U=%%JOBNAME  %%MM..%%JJJJ
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     25.08.2017  10:31:54  zv173x2  Datum
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-UMWELT-Import-Kopfdaten
+* 
+* 
+*********************************************************** 
+* TUBRCHTB (Kopfdaten der Probenahmen) 
+* MANDANTENDATEN -> ORACLE-DB
+*********************************************************** 
+ 
+  
+* Anweisungen für den Loader 
+%%CONTROL=\\%%NODEID.\c$\CTM_AV\Parm\CTL\load_tubrchtb.ctl
+
+* LOG File
+%%LOG=C:\ctm_av\temp\%%JOBNAME..log 
+
+%%SEARCH_DIR=\\vfdustvg\19\Amt19\Datenbanken\Grundwasserverfahren\grundwassertransfer_batch
+***Nwc3daten2.stv-ddorf.de\Daten2\T1900\Amt_19\Hilfe_19\grundwassertransfer_batch
+***%%SEARCH_DIR=\\10.128.13.26\Daten2\T1900\Amt_19\Hilfe_19\grundwassertransfer_batch
+
+
+
+%%SEARCH=dat_TUBRCHTB*.dat
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\UMWELT
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-UMWELT
+
+$$INCLUDE=\\msbmcc03\ctm_av\Log\ErgebnisLog\UMWELT-IMPORT-%%$OYEAR..csv
+ 
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\%%NODEID.\c$\CTM_AV\Parm\CTL\load_tubrchtb.ctl
+
+* ------------------------------------------------------------------
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.04.2015  10:46:22  zv173x2 NODEID
+*    16.12.2013  14:25:59  zv171e3 neuer Pfad Amt19
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

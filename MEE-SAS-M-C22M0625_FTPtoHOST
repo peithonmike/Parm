@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SAS-M-C22M0625_FTPtoHOST
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%SYSOUT=\\msbmcc03.itk.local\G$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%TEST=N
+
+%%FTP-RPATH1=PBA.GEMAG.GBA.KASS%%GKZ
+%%FTP-LPATH1=\av\GBA\SAS_Ausgabe\C22M0625_Ausgabe_KASS.txt
+%%FTP-NEWNAME1=\av\GBA\SAS_Ausgabe\Erledigt\C22M0625_Ausgabe_D%%ODATE..txt
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.07.2013  13:37:42  zv173x2 Odate wieder raus
+*    18.07.2013  08:58:57  zv173x2 Hostdatei mit ODATE
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

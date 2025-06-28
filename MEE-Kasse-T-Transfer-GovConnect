@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-Kasse-T-Transfer-GovConnect
+*
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_MEE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\GovConnect.ps1" -ErrDir "/SST/IFP/800/ELKOS/ELKO_EPAY" -TransDir "/SST/IFP/800/ELKOS/ELKO_EPAY" -Verbindung "SFTP2MEE"
+
+* ------------------------------------------------------------------

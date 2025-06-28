@@ -1,0 +1,17 @@
+* LIBMEMSYM
+* Variable KIVI-DAT
+
+
+
+
+ * Abrechnungsmonat liegt in der Zukunft
+*%%KIVI_DAT=%%JJJJ.%%MM_P1_%%$ODATE
+
+%%KIVI_DAT=%%JJJJ_MM_P1_%%$ODATE
+%%KIVI_DAT=GBA_EW_ZEIT_9_5_0_Anzahl_39
+
+
+
+%%BEIBLATT_DIR=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\Papyrus
+
+%%BEIBLATT_PRINTER=DFP16AH1

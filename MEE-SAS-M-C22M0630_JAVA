@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SAS-M-C22M0630_JAVA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA\SAS_Eingabe\C22M0630_Eingabe_AKT.txt
+%%INFILE2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA\SAS_Eingabe\C22M0630_Eingabe_AKT_ALT.txt
+%%INFILE3=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA\SAS_Eingabe\C22M0630_Eingabe_KASS.txt
+%%INFILE4=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA\SAS_Eingabe\C22M0630_Eingabe_KASS_ALT.txt
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA\SAS_Ausgabe\C22M0630_update_AKT.txt
+%%OUTFILE2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA\SAS_Ausgabe\C22M0630_update_KASS.txt
+
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\#22M0630.jar -inaktalt %%INFILE2 -inakt %%INFILE1 -inkassalt %%INFILE4 -inkass %%INFILE3 -outakt %%OUTFILE1 -outkass %%OUTFILE2
+

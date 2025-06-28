@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* EPAY_RegioIT_Aachen-GovDownload
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe MGL-CopyTaskFinanz2PTV.ps1
+
+%%MAIL_NOTOK=marius.sicha@itk-rheinland.de;daniel.mendoza@itk-rheinland.de;uta.webler@itk-rheinland.de
+%%MAIL_NOTOK_2=produktions-steuerung@itk-rheinland.de;
+
+
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK
+
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist NOTOK. Returncode: %%COMPSTAT  Bitte ueberpruefen. 
+

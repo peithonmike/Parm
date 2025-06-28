@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Beihilfe-T-Copy-XML
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\BEIHILFE-MAIL
+
+
+
+* Eingabe Directory 
+%%INDIR=\\vfdusalt\16\amt16\423_PBH\Kassenverfahren\Prod
+
+* Datei Auswahl
+%%INCLUDE=BE-%%$ODATE.-04-PAIN.XML
+
+%%EXCLUDE=*_*
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfdussap\SAP\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_Beihilfe
+
+
+* Mail senden
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\gedruckt
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    06.08.2020  15:11:13  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

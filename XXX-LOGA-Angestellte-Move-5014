@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Angestellte-Move-5014
+* 
+* 
+*********************************************************** 
+%%DESCRIPTION=Daten werden am letzten Tag des Monats verarbeitet. 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\KN
+
+* Datei Auswahl
+%%INCLUDE=KN*501*.PDF
+
+
+
+* Ausgabe Directory
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\5014
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*
+*    16.05.2024  11:58:37  zvaa241 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

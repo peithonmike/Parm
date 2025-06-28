@@ -1,0 +1,47 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+***********************************************************************************
+*  APPLICATION : ZSTV.OPENFT 
+*  Description : WuS-Anfragen
+***********************************************************************************
+***********************************************************************************
+* Verschieben Anfragen aus dem Mandantenverzeichnis in das Sendeverzeichnis 
+* auf dem OpenFT Server
+*
+
+
+* BFJ_ID des Mandanten übernehmen 
+* wird bei der Anfrage nur nachrichtlich verwendet
+%%BFJ_ID=%%BFJ_ID_ZSTV
+
+
+%%RICHTUNG=AnfrageMove
+
+
+* die zu verschiebenden Files werden anhand des Suchbegriffes ermittelt
+%%SEARCH=SR6128*%%$ODATE.*
+
+
+
+
+* Input_dir ist die Mandanten-Directory, in der die Anfrage liegt
+* wird im MemberOKEWO_%%GEM3 definiert
+%%INPUT_DIR=%%ZSTV_EXPORT
+
+
+
+* Output_dir ist die Sendedirectory auf dem OpenFT Server  
+* wird im Member OKEWO_%%GEM3 definiert
+%%OUTPUT_DIR=%%ZSTV_DIR_ANFRAGE
+ 
+
+
+
+
+%%SYSOUT          =%%OPENFT_SYSOUT
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+
+
+
+

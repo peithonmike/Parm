@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-Monat-Listen-1700-Arbeiter-FW
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+
+**INDIR=\\10.50.34.68\loga\ml2001jobmg\marudeuevarupdeuev
+%%INDIR=\\10.50.34.68\Loga\IP-Output\ITK-Rheinland\Mönchengladbach\Tarifbeschäftigte\Produktion
+
+%%NETUSE_PATH=\\10.50.34.68\loga
+
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\LOGA\MGL\1700_von_%%$ODATE.
+
+
+%%INCLUDE=%%MONAT-DAT.*.log
+
+%%EXCLUDE="-"
+
+%%LAUFWERK=Y:
+
+%%FORCE_OUTDIR=J
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.05.2016  12:57:32  neuer Job nach der Änderung 'Abholen aus der neuen Citrix-Farm' 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+

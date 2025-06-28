@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SOZ-RENTE-Druckdaten-Copy
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-EZ
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-SOZ-DATEN-MEE
+
+
+
+* Eingabe Directory 
+* %%INDIR=Definition in ...PARM\COPY-SOZ-EZ
+ 
+
+* Datei Auswahl
+**INDIR=\\Msprintff01\source$\SOZ-RENTEN\%%$OYEAR.\%%SOZ_DAT
+%%INDIR=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%OYEAR.%%OMONTH
+
+%%INCLUDE=*_2*22_%%$OYEAR.%%OMONTH..PDF
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\vfmeerbusch\Daten\ITKDruckausgaben\FB2Rente\%%$ODATE
+
+* erledigt Ordner
+
+**OUTDIR_PROCESSED=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%SOZ_DAT.\kopiert
+%%OUTDIR_PROCESSED=\\MSprintff01\SOURCE$\SOZ-RENTEN\%%$OYEAR.\%%OYEAR.%%OMONTH\kopiert
+
+
+
+* *********************************************************************
+
+%%NETUSE=N
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+

@@ -1,0 +1,41 @@
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Files.ps1 -INCLUDE %%INCLUDE
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\MSCEVAS01\c$\cks\dta_Krankenhaeuser
+\CEUS_VPN_Krhs-Bethesda
+
+
+* Datei Auswahl
+%%INCLUDE=*.*
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=? 
+%%FORCE_OUTDIR=N
+
+* erledigt Ordner
+%%TEST=J
+%%DEBUG=N
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de 
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT_NOTOK=Joblog: Pitte Prüfen
+

@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-SOZ.EZ-an-TravicLink
+* 
+* 
+*********************************************************** 
+ 
+* AN AUSCHALTEN 
+* BAT-Echo
+%%ECHO_ON=N
+*********************************************************** 
+
+%%SEARCH_DIR=\\srv03.asp.rzne.de\ftp$\av\TravicLink\SOZ\EZ
+%%GESENDET_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+
+* Daten-Datei Suchmaske
+%%SEARCH=500.SOZ.SRZ.*SEPAEZ.*_CT_%%$ODATE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\TRAVIC-LINK
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\TRAVICLINK-Dateinamen.pdf
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\TRAVIC-LINK-Dateinamen-'Konventionen' für Referenznummer-Mapping.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\TRAVIC-LINK-Testuser.pdf
+$$INCLUDE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\TRAVIC-LINK-%%$OYEAR..csv
+
+* ------------------------------------------------------------------
+
+**********************************************************
+*   Test für FTP Powershell Script
+
+**FTPSERVER=m180ongum.rz.krzn.de
+%%FTPSERVER=10.100.41.80
+**FTPUSERNAME=tr01itk
+%%FTPUSERNAME=zvaa405
+
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\TravicLink\SOZ\EZ\test
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\ftp$\av\TravicLink\SOZ\EZ\test\gesendet
+
+**OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+
+**REMOTEPATH=
+**REMOTEPATH=/ITK
+**REMOTEPATH=/Testordner
+**INCLUDE=500.SOZ.SRZ.*SEPAEZ.*_CT_%%$ODATE
+%%INCLUDE=999.SOZ.SRZ.*SEPAEZ.*_CT*
+%%PREFIX=T.
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\CF\JOB\Job-FTP-Transfer-CRC-Check.ps1
+
+
+

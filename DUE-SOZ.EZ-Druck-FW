@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.EZ-Druck-FW
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%OUTDIR=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE.\
+
+%%REMOTE_INDIR=EZ/%%$ODATE
+%%INCLUDE=EZ-Bestaetigung-DF_%%$ODATE..txt
+
+
+%%WINSCP_AKTION=ermitteln ob Bestätigungstext  %%INCLUDE vorliegt
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+*   Achtung Ausgabe-Directory muss mit \ enden
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+*%%Z04=open %%U.:%%P.@%%IP
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get %%INCLUDE  %%OUTDIR
+%%Z07=close
+%%Z08=exit
+
+ 
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+ 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.09.2015  13:57:17  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

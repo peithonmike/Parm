@@ -1,0 +1,11 @@
+
+
+
+%%OK_EMAIL_T=iambelieve@gmx.de;Produktions-Steuerung@itk-rheinland.de;Oliver.Emmel@ITK-Rheinland.de
+%%OK_EMAIL_CC=
+%%OK_EMAIL_U=%%JOBNAME erfolgreich gelaufen.
+
+
+%%NOTOK_EMAIL_T=iambelieve@gmx.de;Produktions-Steuerung@itk-rheinland.de
+%%NOTOK_EMAIL_CC=
+%%NOTOK_EMAIL_U=NOTOK %%JOBNAME Exit Code :%%COMPSTAT

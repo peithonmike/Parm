@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-SOPART.SOPMG-abholen
+* 
+* Achtung Test nicht OK 
+*********************************************************** 
+%%TEST=N
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOPART-MAIL 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-SOPART-SOPMG-DOR
+%%NETUSE=J
+
+%%VERFAHREN=SOPMG
+%%DESCRIPTION=Abholen Sopart Mündelgelder Zahldatei
+
+* Verfahrensbereich 
+* hier liegt die Eingabe
+* allerdings nicht TaviLink fähig 
+*%%SEARCH_DIR=\\n200d01s37.dormagen.int.de\sopart_ftp\export
+**SEARCH_DIR=\\n200d01s37.ad.stadt-dormagen.de\sopart_ftp\export
+%%SEARCH_DIR=\\mc-01-cifs-01.ad.stadt-dormagen.de\sopart_ftp\export
+
+
+%%SEARCH=*XML
+
+* Travi fähiger Name
+%%SEARCH_TRAVI_PREFIX=000.SOP.SRZ.%%GEM3.-SOPMG_CT_
+
+* TravicLink Sendebereich
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\TravicLink\SOPART
+
+* Eingabedateien im Erledigt Ordner unter Urgsprungsname ablegen 
+%%MOVE_ORDNER=erledigt
+
+* Log
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SOPART-SOPMG-Doppelte-Auszahlung.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.07.2016  12:13:24  zv173x2 ad.stadt-dormagen.de
+*    07.02.2014  13:46:46  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+* %%LOCAL_FTP_DIR=%%SEARCH_DIR

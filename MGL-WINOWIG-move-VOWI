@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-move-VOWI
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG_MOBIL-INFO
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+* VOWI-Fälle: 
+%%INDIR=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\eingang\winowigmobilexport
+
+%%INCLUDE=*.ZIP
+*falsch %%INCLUDE=XMLMDE_AOWI*.ZIP
+
+*ruhender  Verkehr
+%%OUTDIR=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\eingang\ruhenderVerkehr
+
+
+*ohne ohne ABS
+%%EXCLUDE=XMLMDE_ABS*
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+%%TEST=N
+%%AUFTRAGGEBER=A.Hillebrands
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.02.2022  08:49:25  zv173x2 Mehrfach Exclude funktioniert nicht aowi entfernt
+*    11.02.2022  07:29:09  zv173x2 %%EXCLUDE=XMLMDE_ABS*,XMLMDE_AOWI*
+*    10.02.2022  15:12:20  zv173x2 exclude XMLMDE_AOWI* entfernt 
+*                                  im INCLUDE *.zip  in XMLMDE_AOWI*.ZIP geändert
+*    02.03.2021  09:26:31  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,50 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Angestellte-Exclude
+* 
+*  $OUTDIR= $INDIR1+"\exclude" 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%INDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\DN
+%%INDIR2=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\KN
+%%OUTDIR1=%%INDIR1.\EXCLUDE
+%%OUTDIR2=%%INDIR2.\EXCLUDE
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+*********************************************************** 
+* EXCLUDE-Steuerung über Listensteuerung
+*
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Neuss.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Dormagen.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Grevenbroich.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Juechen.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Kaarst.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Korschenbroich.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Rommerskirchen.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Neuss.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Meerbusch.csv
+* \\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-Rhein-Kreis-Neuss.csv
+*
+*********************************************************** 
+ 
+
+*   ********************************************************************************** 
+*    -- Beschreibung siehe ----------------------------------------------------------- 
+     \\msbmcc03\ctm_av\DOC\Auftragsbeschreibung\Loga-Exclude.txt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+ 
+*    26.11.2021  11:30:13  zv173x2   gre 1840 1841  REPBEINA  n(icht drucken)
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

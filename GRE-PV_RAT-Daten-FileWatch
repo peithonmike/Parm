@@ -1,0 +1,26 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Grevenbroich
+***********************************************************************************
+*  Jobname     : GRE-PV_RAT-Daten-FileWatch
+*  Auftrag ist von Gudrun Ring
+   %%APPLICATION=PV_RAT
+***********************************************************************************
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**Eingabepfad=\\vfgv1\voldaten1\daten\stabsstelle 01\buero_bm\pv-rat-abrechnung\Starte_Verarbeitung
+**ingabepfad=\\vfgv1\voldaten1\daten\stabsstelle 30\Ratsangelegenheiten\PV-Rat-Abrechnung\Starte_Verarbeitung
+%%Eingabepfad=\\vfgv1\voldaten1\Daten\FB 01\PV-Rat-Abrechnung\Starte_Verarbeitung
+%%Zielpfad=
+%%ErledigtPfad=
+%%MANDANT=GV
+%%DATADATEI=data.xml
+%%PAYMENTDATEI=payment*.xml
+%%TEST=nein
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\XXX-PV_RAT-Daten-FileWatch.ps1
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\XXX-PV_RAT-Daten-FileWatch.ps1

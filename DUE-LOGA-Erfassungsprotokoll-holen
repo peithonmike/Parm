@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-Erfassungsprotokoll-holen
+* 
+* 
+*********************************************************** 
+ 
+
+
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA_NAR
+ 
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LOGA\Protokolle
+
+%%SITE=DUE-Bochum
+%%REMOTE_INDIR=/TDEP/
+
+%%INCLUDE=DTDEP-*-1010-0.pdf
+
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+
+
+

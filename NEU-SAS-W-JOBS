@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-X22W02-SAS-W-01
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%TEST=N
+
+%%MAILSB13=produktions-steuerng@itk-rheinland.de
+%%MAILSB22=manfred.dressen@itk-rheinland.de
+
+%%eindat="\\srv03.asp.rzne.de\qaspkdvz$\Daten\Orgaeinheit\Alle\SAS-Ablösung LPAR Neuss\#220230\#220230_Eingabe.txt"
+%%ausdat="\\srv03.asp.rzne.de\qaspkdvz$\Daten\Orgaeinheit\Alle\SAS-Ablösung LPAR Neuss\#220230\#220230_Ausgabe_D%%ODATE..txt"
+
+%%BETREFF-OK=%%JOBNAME-SAS-Verarbeitung OK
+%%BETREFF-NOTOK=%%JOBNAME-SAS-Verarbeitung NOTOK
+
+%%TEXT-OK=%%JOBNAME - SAS-Verarbeitung OK
+%%TEXT-NOTOK=%%JOBNAME -SAS-Verarbeitung NOTOK
+
+%%COMMAND=java -jar c:\CTM_AV\bin\Java\220230_test.jar %%eindat %%ausdat

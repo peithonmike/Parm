@@ -1,0 +1,40 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* NEU-WAHL-Druck-1
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* Output wird manuell über OKEWO als PDF erzeugt
+* und auf dem Printserver abgelegt.
+* M.Smits
+* B.Lieven
+* N.N.
+*********************************************************** 
+* Dieser Job sendet nach Confirm, 
+* den Output an den Printserver und verschiebt 
+* nach erledigt.  
+*********************************************************** 
+
+ 
+ 
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO-WAHL
+* Nur für Test
+%%INDIR=\\srv03.asp.rzne.de\qaspNE$\Daten\Apps\OKEWO\okprg\okewo_neuTest\pdf
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\Waehlerverzeichnis_erledigt
+
+
+
+%%DESCRIPTION=!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! T E S T V E R Z E I C H N I S  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+

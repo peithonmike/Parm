@@ -1,0 +1,70 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* DUE-LOGA-Abrechnung-PTI-Monat-Copy-an-Rheinbahn
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\DUE-PTI-Mail
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Put.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+%%SITE=DUE-PTI-RHEINBAHN
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Kopieren Loga-PTI Abrechnungsergebnis an Rheinbahn
+*---------------------------------------------------------------
+
+%%IP=nicht-verwendet
+%%P=nicht-verwendet
+%%U=nicht-verwendet
+*---------------------------------------------------------------
+* Local Eingabe Directory der WinSCP Aktion
+%%INDIR=\\vfdusalt\10\Amt10\Firmenticket-Monatsverarbeitung\Rheinbahndaten
+
+
+* Local Datei Auswahl Maske
+%%INCLUDE=abcdefgtest.txt
+%%AUFTRAGGEBER=S.Hünnekes 08.2020   vormals Lemke
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+
+%%Z05=put %%INDIR.\%%INCLUDE  
+%%Z06=ls  
+%%Z10=close
+%%Z11=exit 
+*%%Z09=?
+*%%Z10=?
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.08.2020  11:08:44  zv173x2 Email Libmemsym
+*    10.08.2020  10:38:55  zv173x2 AUFTRAGGEBER S.Hünnekes 08.2020   vormals Lemke
+*    15.01.2018  13:47:50  zv173x2 neu läuft nach Freigabe h.Lemke
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

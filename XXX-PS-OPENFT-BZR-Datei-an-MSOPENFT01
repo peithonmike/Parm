@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-PS-OPENFT-Datei-an-MSBZRFT02
+* MSBZRFT02 -> MSOpenFT01
+* ITKALT    -> ITK   
+* LIBMEMSYM OPENFT
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT
+
+* Senden per OpenFT  
+
+
+
+* RICHTUNG 
+* ist immer SENDEN
+%%RICHTUNG=SENDEN
+
+* Eingabe Directory der Anfragen
+%%INDIR=\\msbmcbatch01\ctm_av\MSBZRFT02-openft-test-senden-an-MSOPENFT01
+
+
+* Datei Auswahl Maske
+%%INCLUDE=*.txt
+
+* Anschluss\Partner 
+* so wie im OpenFT vergeben
+%%ANSCHLUSS=ITK
+
+* Zugriffspassord so wie vom 
+* Empfänger vorgegebn wurde
+%%TRANSFER_ADMISSION=ITKALT2##
+
+ 
+*  Speicherort für gesendete Anfragen
+%%OUTDIR_PROCESSED=\\msbmcbatch01\ctm_av\MSBZRFT02-openft-test-senden-an-MSOPENFT01\gesendet
+
+
+
+*nur für Test 
+%%TEST_OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\empfangen\BZR
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-SEDA-SODATIS
+ 
+
+*%%OUTDIR=\\n900d01vf01.n900d01.int.de\aemter$\KR5000\Sodatis-ITK\%%$OYEAR.\%%SOZ_DAT
+%%OUTDIR=\\RKN-Data01.n900d01.int.de\aemter$\KR5000\Sodatis-ITK\%%$OYEAR.\SEDA\%%SOZ_DAT
+
+%%STEPNAME=Kopieren-Sodatis-SEDA-Dateien
+%%INCLUDE=bere-280-NE_*.txt
+   
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden mehr Variablenwerte angezeigt
+%%DEBUG=N
+* ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+

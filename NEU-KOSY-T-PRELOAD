@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-KOSY-T-PRELOAD
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%MAIL01=itk.FB1_SB131_Windows@kdvzneuss
+%%MAIL02=produktions-steuerung@itk-rheinland.de;mike.philipsen@stadt.neuss.de;simone.thissen@itk-rheinland.de;tobias.redmann@itk-rheinland.de;Dieter.Assenmacher@itk-rheinland.de;Erich.Janke@itk-rheinland.de

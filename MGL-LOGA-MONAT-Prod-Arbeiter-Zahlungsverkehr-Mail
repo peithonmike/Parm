@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Arbeiter-Zahlungsverkehr-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VLK\MGL-LOGA-ZAHLUNGSVERKEHR-Beamte-Arbeiter-MAIL-ADR.vlk
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Absender
+%%EMAIL-F=Produktions-Steuerung@ITK-Rheinland
+
+
+* Empfänger MG-Buchhaltung  (durch Semikolon getrennt)
+
+%%INIFILE_MAILADR=\\msbmcc03\ctm_av\Parm\VLK\MGL-LOGA-ZAHLUNGSVERKEHR-Beamte-Arbeiter-MAIL-ADR.vlk
+
+* Mailempfänger in der %%INFILE_MAILADR Datei zu ändern!!!
+*%%EMAIL_T=Astrid.Mueller@moenchengladbach.de;Claudia.Esser@moenchengladbach.de;Daniel.Franken@moenchengladbach.de;Ellen.Wellershaus@moenchengladbach.de;Gisela.Hollendung@moenchengladbach.de;Maria.Krause@moenchengladbach.de
+*%%EMAIL_T=Ellen.Wellershaus@moenchengladbach.de;
+
+* Subject
+%%EMAIL_U=Job-Nachricht:   Listen 2303, 2310, 2320 fuer Arbeiter stehen auf Laufwerk V zur Verfuegung
+
+* Kopie
+%%EMAIL_CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;
+
+* Blindkopie
+*%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.09.2021  10:56:27  zv171e1 Mail-Adressen aus Inidatei 
+*    28.06.2017  11:19:50  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

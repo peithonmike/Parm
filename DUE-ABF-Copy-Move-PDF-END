@@ -1,0 +1,46 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* DUE-ABF-Copy-Move-PDF-END
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske unter neuem Namen.
+* Der neue Name ergibt sich aus der Vorgabe der NAMES Varibalen, der in der Ursprungsdatei auch enthalten ist. 
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+%%INDIR=\\vfcache\kmsta\daten\IFP\400\pdf
+%%INCLUDE_1=51981*.pdf
+%%OUTDIR_01=\\vfcache\kmsta\daten\IFP\400\pdf\archiv\%%$OYEAR
+%%OUTDIR_02=\\vfd3dms\prodimport\sap\Bescheide\D3D\Strassenreinigung
+%%OUTDIR_PROCESSED=\\msdpiom01\Transfer$\Abfallgebuehr_woche
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc01\c$\ctm_av\bin\powershell\cf\job\Job-Copy-Move-Files-Multi-Outdirs.ps1
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+

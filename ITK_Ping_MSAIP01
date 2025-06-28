@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK_Ping_MSAIP01
+* Ping nach Server Reboot
+* 
+*********************************************************** 
+%%GEM3 = %%SUBSTR %%JOBNAME 1 3
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+**%%SYSOUT=\\msbmcc03\ctm_av\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\Ping_Server.cmd
+
+%%NODEID=msbmcc03
+%%SERVER=MSAIP01
+
+%%MAIL01=itk.FB1_SB111@kdvzneuss
+
+
+%%TEST=N

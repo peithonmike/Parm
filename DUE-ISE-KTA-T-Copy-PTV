@@ -1,0 +1,25 @@
+* *************************************************************
+* Table Variablen          
+* DUE-ISE-KTA-T-Copy-PTV
+* alter Hostname Y37KTKIR
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\DUE-PTV
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%EINGABE_VZ=\\vfduswba\37\Amt37\Pfad_GBA\stadtkasse
+%%USERID=ZVDUEFTP
+%%PW=sgbTabelle21
+%%EINDAT=NKFoutfile.TXT
+
+%%AUSGABE_VZ=\\msptv02\ptvprojekte$\SAP_Export\ISEKTA_EXXX\InDir
+%%AUSDAT=DUE_KTA_T%%$ODATE..TXT
+%%AUSDAT2=NKFoutfile_T%%$ODATE..TXT
+
+%%COMMAND=\\msbmcc03\CTM_AV\Bin\BAT\DUE-PTV.cmd

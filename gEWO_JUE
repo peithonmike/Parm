@@ -1,0 +1,45 @@
+***************************************************************************************
+* neues OKEWO ab 2021
+***************************************************************************************
+
+
+* -------------------------------------------------
+* ab hier Mandantenspezifisch
+* -------------------------------------------------
+
+%%MANDANT=e01_jue
+
+%%USER=ewoav_jue
+%%PASS=secret-server
+
+* Mandanten-Server
+%%JBOSS=msnpaju01
+%%EWODIR_AUSWERTUNGEN=\\%%JBOSS.\Auswertungen$
+
+* Slash's müssen so bleiben sonst funktioniert die Auswertung nicht
+%%URL=http://msnpaju01.itk.local:8380
+
+%%JAR_FILE=\\msnpaju01\Auswertungen$\javafiles\qjob-cmdline-client-jar-with-dependencies.jar
+
+
+
+* -------------------------------------------------
+* globale für alle geltenden Variablen
+* -------------------------------------------------
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\gEWO
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.11.2021  09:22:10  zv173x2 globale für alle geltenden Variablen an das Ende verschoben
+*    26.01.2021         zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+

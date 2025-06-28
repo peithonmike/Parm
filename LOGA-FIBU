@@ -1,0 +1,8 @@
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+%%FIBU_GKZ=%%SUBSTR %%JOBNAME 22 4 
+%%FIBU_ART=%%SUBSTR %%JOBNAME 27 2

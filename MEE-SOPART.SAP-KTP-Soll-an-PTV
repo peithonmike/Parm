@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SOPART.SAP-KTP-Soll-an-PTV
+* 
+* 
+*********************************************************** 
+*Pfad Abholung:
+*SopartMEE\SoPart\Export\FiBu\KTP\EB\
+
+*Sicherung Ablage unter:
+*SopartMEE\SoPart\Export\FiBu\KTP\EB\erledigt\
+
+*Pfad Ziel:
+*wie in KiTa, bitte hier noch einmal prüfen, ob der Pfad auf KTP geändert werden muss.
+
+*Dateiname (Beispiel):
+*SoPart_Soll-Export_an_Kasse_KTP_2019-04-10_134421.txt
+ 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske 
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%AUFTRAGGEBER=C.Steenbergen
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\SopartMEE\SoPart\Export\FiBu\KTP\EB
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+* Eingabenamen mit Prefix versehen
+%%PREFIX=%%GEM3.-
+
+* Datei Auswahl alle 
+%%INCLUDE=SoPart_Soll-Export_an_Kasse_KTP_*_*.txt
+
+%%EXCLUDE="-"
+
+* PTV Directory 
+%%OUTDIR=\\msptv02.itk.local\ptvprojekte$\SAP_Export\SOPKIT2_EXXX\inDir
+
+
+* PTV Ordner werden nicht angelegt
+* müssen vorhanden sein !
+%%FORCE_OUTDIR=N
+
+%%TEST=N
+%%DEBUG=N
+

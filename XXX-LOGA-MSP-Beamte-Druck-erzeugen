@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-Update-Stammdaten
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Zeitraum
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+%%ART=NBE
+* Loga Stammdaten vom KRZN 
+%%INDIR=\\Msprintff01\source$\LOGA\test\%%$OYEAR.\%%OMONTH.\%%ART.\MSP-EGM\KN
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+
+* Ergebnis PDF Dateien je Mandant 
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\LOGA\test\%%$OYEAR.\%%OMONTH.\%%ART.\MSP-EGM\KN
+
+
+
+* JAVA Variablen
+* Java Directories \\msbmcc03\ctm_av\Bin\Java\MSP
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\TEST-gehaltsmitteilungen-0.0.1-jar-with-dependencies.jar
+%%JAR_START=de.itk.projekte.gehaltsmitteilungen.Start
+
+
+%%EMAIL_T=Sascha.Berktin@itk-Rheinland.de;
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;
+%%EMAIL_U=%%JOBNAME  %%OMONTH..%%$OYEAR
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;
+
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+

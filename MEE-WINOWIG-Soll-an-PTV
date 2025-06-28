@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-WINOWIG-Soll-an-PTV
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\WINOWIG
+%%DESCRIPTION=Solldaten an den PTV Server senden
+
+
+%%SEARCH_DIR=%%WINOWIG_SOLL_DIR
+*%%SEARCH=WiNOWIG_Uebsoll_XML_%%$ODATE._*.xml
+%%SEARCH=WiNOWIG_Uebsoll_XML*.xml
+%%MOVE_ORDNER=verarbeitet
+
+
+
+
+%%OUTDIR=\\msptv02\PTVProjekte$\SAP_Export\WINOWIG_EXXX\inDir 
+
+
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+* Nur Anlist der gesuchtren Dateien
+%%TEST=N
+
+* TESTAUSGABE
+*%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\test\ptv-projekte\WOWIGSAP\inDir 
+* Diese Mail benötigt nur die AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-EXPORT-AN-PTV.BAT
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.02.2017  08:43:20  zv173x2 Eingabe unabhängig vom Datum
+*    18.09.2013  09:58:51  zv173x2 search von_01 auf _* geändert
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+*   ********************************************************************************** 
+*    12.03.2015  zv173x2 \\msptv01\PTV-Projekte\WOWIGSAP
+*                        \\msptv01\d$\PTV\Projekte\SAP_Export\WINOWIG_EXXX
+*   ********************************************************************************** 
+

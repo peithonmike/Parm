@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-WINOWIG-LogTest
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avREAD-WINOWIG-PROTOKOLL.ps1
+* ------------------------------------------------------------------
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+%%LIST_COMPLETE=N 

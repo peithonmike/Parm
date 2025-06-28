@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-PhinAVV-Auswertung-DumpDB
+* 
+* 
+*********************************************************** 
+**LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%COMMAND=ls -l
+
+
+

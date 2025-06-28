@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-BEHERBUNG-Test-Move-Anlagen-D3
+* Move Anlagen nach Rüfung nach D3
+*********************************************************** 
+%%AUFTRAGGEBER=David Mertens
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=Move Formulare nach Rüfung an D3
+
+%%SLEEP=300
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1
+
+%%INDIR=\\MSAMPSCAN01\beherbergung$\DUE\check
+
+* Datei Suchmaske
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory für die Anlagen
+
+%%OUTDIR=\\vfd3dms\TestCacheImport\DCOLD_IMPORT\D3D\Beherbergungssteuer\Anlagen
+
+
+%%USE_PREFIX=N
+
+%%TEST=N
+%%DEBUG=N

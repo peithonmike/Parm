@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ-Sodatis-ZADA-724-Rename-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske unter neuem Namen.
+* Der neue Name ergibt sich aus der Vorgabe der NAMES Varibalen, der in der Ursprungsdatei auch enthalten ist. 
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* CTM-Command Aufruf :
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\bl\job\Job-Rename-Copy-Move-Sodatis.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SODATIS-ZADA
+
+
+
+
+* Ausgabe Directory
+%%OUTDIR=\\vfne\53\Amt53\Themen\KDN\zada\%%SOZ_DAT_YYYY
+
+
+*%%OUTDIR=\\ne1da03\1d02sons\INFO\fb05\seda50\%%$OYEAR.\ZADA\%%SOZ_DAT_YYYY
+*%%OUTDIR=\\ne1da03\1d03data\recht_o\ordnung\integration\%%$OYEAR.\ZADA\%%SOZ_DAT_YYYY
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    13.11.2018  08:15:36  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

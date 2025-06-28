@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-LOGA-MSP-EGM-Beamte-1900-XXXX-01-BU
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NBE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-USE-DRUCKEREI-NEUSS
+
+
+
+
+* Eingabe
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\NHCM
+
+*Directory der fertigen Bündel
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\Workbench
+
+* Ausgabe Datei
+%%OUTFILE=%%GEM3.-NHCM-KUVERT-BEAMTE-%%LOGA_DAT.-BU.pdf
+
+* Archiv
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+
+%%DESCRIPTION=Bündel Beamte %%LOGA_MAN_%%HMAN
+
+* Beispiel KN_1900_1900_01_1082NHCM
+%%INCLUDE =*KN_1900*_01_*NHCM*.pdf
+%%EXCLUDE=*_5060_*
+
+%%TEST=N
+%%DEBUG=N 
+
+%%USE_OUTDIR_PROCESSED=%%DRUCK_USE_OUTDIR_PROCESSED
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-LOGA-PDF-BUENDEL-2.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.05.2024  11:58:37  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

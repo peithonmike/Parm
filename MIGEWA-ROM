@@ -1,0 +1,9 @@
+*  M I G E W A 
+*  ROMMERSKIRCHEN
+*  -----------------------------
+
+* die zu verschiebenden Files 
+* werden anhand des Suchbegriffes ermittelt
+* Mandanetnbereich und OpenFT Sendebreich
+%%SEARCH=BZR*.BZR
+

@@ -1,0 +1,48 @@
+* Druckausgabe unter Verwendung von P&I
+%%USE_PI=J
+%%PRINTER_QUEUE=\\msprintff01\d$\R18personal
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\PI-DRUCK-%%$OYEAR..csv
+
+* ---------------------------------------------------------------
+* PDF_MASK Auswahl Maske 	Include Exclude
+* ---------------------------------------------------------------
+%%INCLUDE=?
+%%EXCLUDE=?
+
+
+* ---------------------------------------------------------------
+* OUTFILE
+* so soll das Bündel heißen
+* ---------------------------------------------------------------
+%%OUTFILE=%%GEM3-KUVERT-EGM-Beamte-BU.PDF
+
+%%ADD_TRENNBLATT=N
+
+* Die Cover müssen je nach Empfänger angegeben werden
+%%PDF_FRONTCOVER=
+%%PDF_BACKCOVER =
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\EGM\1-seitig\AAA-%%GEM3-KUVERT-Beamte.pdf
+%%PDF_BACKCOVER =\\msbmcc03\ctm_av\PDF-COVER\EGM\1-seitig\AAA-%%GEM3-KUVERT-Beamte.pdf
+
+
+* Trennblatt duplex 
+* %%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\2-seitig\Trennblatt.pdf
+* Trennblatt single 
+* %%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\1-seitig\Trennblatt.pdf
+
+%%KOPIE01=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\2-seitig\Kopie01.pdf 
+%%KOPIE02=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\2-seitig\Kopie02.pdf 
+
+
+
+* ---------------------------------------------------------------
+* ANZAHL
+* Anzahl der Ausdrucke 
+* ---------------------------------------------------------------
+%%COPYCOUNT=0
+
+* ---------------------------------------------------------------
+* Hotfolder FreeFlow P&I oder wer auch immer
+* ---------------------------------------------------------------
+%%PRINTER_QUEUE=%%SOZ_MZ_BESCH_DRUCKER
+

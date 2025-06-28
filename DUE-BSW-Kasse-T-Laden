@@ -1,0 +1,21 @@
+***********************************************************************************
+*  JOB-LIBMEMSYM                                                                   *
+***********************************************************************************
+*  Jobname     : DUE-BSW-Kasse-T-Laden
+***********************************************************************************
+
+
+
+
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%MAIL_NOTOK=prdouktions-steuerung@itk-rheinland.de;
+
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT_NOTOK=Bitte überprüfen
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msptv01\c$\CTM_AV\Bin\ps\copySapFile.ps1 -sysid IFP -mandt 400 -src_path BSW -src_pattern "BSW.*\.TXT" -done_path "BSW/Verarbeitet" -dest_path "\\vfdusalt\10\Amt10\Loga_PBS-Amt37" -overwrite $true

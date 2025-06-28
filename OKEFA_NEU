@@ -1,0 +1,13 @@
+
+* Die Dateien für Neuss sollten auf dem Rechner vsrv34.asp.rzne.de im Verzeichnis
+* C:\Dateiablage\900NE\okEFA\Bescheide abgelegt werden
+ 
+
+* SAPERION Beischeid Directory
+%%OKEFA_SAP_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EFA\Saperion\Bescheide\%%ORT
+
+* FTP Verzeichnis
+%%PCDIR=OKEFA\NE\Bescheide
+
+
+*if %GEM3% ==DUE set DIR=OKEFA\D\Bescheide

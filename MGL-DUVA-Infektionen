@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-DUVA-Infektionen
+* 
+* FTP -> Stadt MG Infektionen
+
+* Ansprechpartner bei der Stadt MG: 
+* Ingo Lenzen, Ingo.Lenzen@moenchengladbach.de
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-Baum-MGL
+
+%%INCLUDE=ODP_*.csv
+%%INDIR=\\vfmgorga.itk.local\Dez1\NodeRed_Transfer\Exporte_zu_ODP
+%%MOVE_OVERWRITE=J
+%%SET_NEWNAME=N
+**PREFIX=%%$OYEAR.%%OMONTH.%%ODAY._
+%%OUTDIR_PROCESSED=nicht-verwendet
+**OUTDIR_PROCESSED=Erledigt
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-WinSCP-Put-cf.ps1
+
+%%MAIL-OK=Ingo.Lenzen@moenchengladbach.de
+%%BETREFF-OK=Infektionsdaten für OPENDATA erfolgreich übertragen
+%%TEXT-OK=ODP_*.csv erfolgreich gesendet.
+%%MAIL-NOTOK=produktions-steuerung@itk-rheinland.de
+%%BETREFF-NOTOK=%%JOBNAME - Abbruch - Bitte ueberpuefen
+%%TEXT-NOTOK=FTP Infektionsdaten für OPENDATA NOTOK
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+
+%%SITE=Infektionsdaten für Opendata MG
+
+%%WINSCP_AKTION=Infektionen Stadt MG
+
+%%Z01=option batch continue
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z04=open p321218f11@daten.rhein-kreis-neuss.de
+%%z07=dir
+%%Z09=put %%INDIR.\%%INCLUDE 
+%%z10=dir
+ 
+*%%Z29=close
+%%Z30=exit 
+
+%%TEST=N
+%%DEBUG=N

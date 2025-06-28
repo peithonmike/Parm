@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-Test-Import
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+ 
+
+%%DESCRIPTION=Test Importieren %%ORT Eingabedaten ruhender-fließender Verkehr,Polizei,ePZA,Zahlungen usw. in DB 
+
+* Exe aus LIBMEMSYM WINOWIG : %%IMPORT_EXE
+%%PARAMETER=-Wo2000Login;%%WINOWIG_GKZ.;500 "Batchstart Dauer=ALLE"
+
+
+  
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\WinOWIG\Import Arten je Mandant.csv
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+%%EMAIL_T=Andreas.Hillebrands@itk-rheinland.de
+%%EMAIL_U=Ergebnis %%JOBNAME
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.10.2019  10:36:05  zv173x2 neu als Test Powershell soll später BAT Import ersetzen
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

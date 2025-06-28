@@ -1,0 +1,5 @@
+%%BETREFF_OK=QR %%SERVER starten OK
+%%BETREFF_NOTOK=ACHTUNG!!! QR %%SERVER starten NOTOK
+
+%%TEXT_OK=Joblog:     Das Starten der QR %%SERVER war erfolgreich.     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+%%TEXT_NOTOK=Joblog:     Das Starten der QR %%SERVER wurde nicht ausgeführt.     Returncode=%%COMPSTAT     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.

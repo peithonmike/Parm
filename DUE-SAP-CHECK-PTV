@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SAP-CHECK-PTV_*
+* 
+* 
+*********************************************************** 
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de;zv.nfw.KP4_Produktivsetzung_SST-Team
+**MAILSB13=produktions-steuerung@itk-rheinland.de;michael.hurtz@itk-rheinland.de
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de;Daniel.Mendoza@itk-rheinland.de
+
+%%MAILSB22_2=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de;Daniel.Mendoza@itk-rheinland.de
+
+%%BETREFF=NOTOK - Bitte Düsseldorfer PTV-Projekt überprüfen
+%%TEXT=Im %%PFAD sind Daten vorhanden. Bitte ueberpruefen.
+
+%%EINGABE=\\msbmcc03\ctm_av\Parm\PTV-Projekte_DUE.txt
+%%AUSGABE=\\msbmcc03\c$\Temp\LogPTV_DUE.html

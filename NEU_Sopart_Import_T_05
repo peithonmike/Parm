@@ -1,0 +1,12 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU_Sopart_Import_T_05
+* 
+* SoPart® AV - Amtsvormundschaft / Beistandschaft / Mündelgeld 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+ 

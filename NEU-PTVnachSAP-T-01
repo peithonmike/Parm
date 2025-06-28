@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-PTVnachSAP-T-01
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%CLIENT=IFP
+%%MAIL_NOTOK=steffen.brandemann@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=Übergabe Kassensätze vom PTV-Server nach SAP abgebrochen
+%%TEXT_NOTOK=Joblog:%%JOBNAME ist abgebrochen. Bitte ueberpruefen.
+
+*%%SYSOUT=\\msbmcc03\ctm_av\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    12.02.2014  08:56:19  zv173x2 sysout war kein standard, ging daher verloren
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

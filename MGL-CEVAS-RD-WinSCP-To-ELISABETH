@@ -1,0 +1,103 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-CEVAS-RD-WinSCP-To-ELISABETH
+* 
+* 
+*********************************************************** 
+ 
+******************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\CEVAS-KLINIKEN-MAIL 
+
+* SITE
+%%SITE=MGL-CEVAS-RD-ELISABETH
+
+%%PROTOCOL=[WinSCP.Protocol]::Sftp
+%%HOSTNAME=10.98.112.130
+%%USERNAME=feuerwehrmg
+%%PASSWORD=A!98765
+%%SshHostKeyFingerprint=ssh-ed25519 256 Cmx0F6QduI78o/8sqM4f88zWkti3xDbzPIJGOAgEZ1U=
+
+
+
+
+
+* INDIR Local
+%%INDIR=\\MSCEVAS01\c$\cks\dta_Krankenhaeuser\CEUS_VPN_Krhs-Elisabeth\
+
+%%INCLUDE=*.xml , *.pdf
+%%EXCLUDE="-"
+
+
+* OUTDIR_PROCESSED Local
+%%OUTDIR_PROCESSED=%%INDIR.gesendet-elisabeth\
+
+ 
+
+* REMOTE_OUTDIR  Remote:-)
+%%REMOTE_OUTDIR=/
+
+
+
+
+
+*********************************************************************************
+%%DESCRIPTION3=Datenaustausch mit Tunnel 
+*%%HOSTKEY=ssh-ed25519 256 Cmx0F6QduI78o/8sqM4f88zWkti3xDbzPIJGOAgEZ1U=
+*%%HOSTKEY=d4:50:6f:e7:c9:27:a5:89:07:fa:78:21:d8:1c:73:55
+%%HOSTKEY=
+%%IGNORE_HOSTKEY=J
+*********************************************************************************
+
+
+* DIRECTORYLIST_REMOTE J/N noch nicht implementiert
+%%DIRECTORYLIST_REMOTE=N
+
+* Logfile muss im C: Laufwerkliegen
+%%LOGFILE=c:\temp\%%JOBNAME._winscp.log
+
+* UPLOAD J/N 
+%%UPLOAD=J
+
+
+* Dateien die nach erledigt verschoben werden, 
+* bekommen einen TimeStamp J/N
+%%USE_MOVE_WITH_TIMESTAMP=J
+
+
+%%ANSPRECH_PARTNER_EMAIL=mark.gottmanns@sk-mg.de    
+**               Telefon: +49 2166 3942756
+
+
+* TEST J/N  
+* bei T E S T =J 
+* werden die gefundenen Dateien angezeigt
+* Open auf den Server gemacht
+* Upload simuliert
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-WinSCP-Copy-To-Remote-SEM_intern.ps1
+
+
+
+*ip 10.98.112.130   Stand 14.05.2021
+
+* Error: Ausnahme beim Aufrufen von "Open" mit 1 Argument(en):  "Netzwerkfehler: Zeitgrenze für Verbindung "10.98.112.130" wurde erreicht."
+* Lösung: Tunnel war Remote nicht aktiv
+* Taucht immer mal wieder auf 
+* dann mail an daniel.merbecks@sk-mg.de
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.09.2020  15:52:09  zv173x2 USE_MOVE_WITH_TIMESTAMP
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

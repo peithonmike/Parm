@@ -1,0 +1,12 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL_T_IST_ZIP-nach_PTV
+* 09.05.2018 ist fuer Joerg Huhn
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_MGL
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\MGL_T_IST_ZIP_nach_PTV.ps1"

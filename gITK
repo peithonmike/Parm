@@ -1,0 +1,21 @@
+* *************************************************************
+* Globale Variablen          
+* ITK Rheinland
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+%%STADT=ITK Rheinland
+%%ORT=Neuss
+
+%%MAIL01=itk.FB1_SB111@kdvzneuss
+%%mailITK=produktions-steuerung@itk-rheinland.de
+%%mailSYSOUT=produktions-steuerung@itk-rheinland.de
+%%GEM=KD
+
+* GEM wird momentan nur im SRV03 Aufruf verwendet
+%%GEM3=ITK
+%%GKZ=050
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.07.2014  14:31:43  zv173x2 gkz
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,47 @@
+
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* KAA-LOGA-EGM-Gehaltsmitteilungen
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Zeitraum
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\EGM\%%GEM3.\%%LOGA_DAT
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\EGM\%%GEM3.\%%LOGA_DAT.\CSV
+
+
+* Ausgabe Directory der Passwordlisten für den Anwender
+%%USERDIR=\\srv03\qaspka$\Daten\Orgaeinheit\EGM\Initialpasswort_Listen\%%LOGA_DAT
+
+
+* JAVA Variablen
+%%JAVA_EXE=\\msbmcc03\ctm_av\Bin\Java\jre1.8.0_66\bin\java.exe
+%%JAVA_PRG=\\msbmcc03\ctm_av\Bin\Java\EGM\PdfGehaltsmitteilungen-0.0.1-jar-with-dependencies.jar
+
+%%EMAIL_T=Sascha.Berktin@itk-Rheinland.de;
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;
+%%EMAIL_U=%%JOBNAME  %%OMONTH..%%$OYEAR
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;
+
+
+%%TEST=N
+%%DEBUG=N 
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     07.03.2016  13:22:42  zv173x2  %%USERDIR=\\srv03\qaspka$\Daten\Orgaeinheit\EGM\Initialpasswort_Listen
+*     12.02.2016  09:01:30  zv173x2 Ausgabe in Unterverzeichnis csv
+*     16.12.2015  10:27:12  zv173x2  neu
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+   
+   
+   

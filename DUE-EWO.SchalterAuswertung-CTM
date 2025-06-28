@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO.SchalterAuswertung-CTM
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+
+
+%%EMAIL-U=%%JOBNAME %%TTMMJJJJP_%%$ODATE
+%%EMAIL-T=ok-hotline@duesseldorf.de
+%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de
+ 
+%%TEST=N

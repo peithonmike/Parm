@@ -1,0 +1,80 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-CITKO-Kassenliste-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-POLIZEI-NRW-CITKO
+
+
+
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen CITKO Kassenlisten 
+%%WINSCP_EXE=C:\Program Files (x86)\WinSCP\WinSCP.exe
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=%%$ODATE*.hiz
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\srv03\ftp$\av\CITKO
+
+%%OUTFILE=%%$ODATE..hiz
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch continue
+%%Z02=option confirm off
+%%Z03=option echo off
+**Z04=open %%U.:%%P.@%%IP
+**Z04=open %%SITE -hostkey=65:48:d0:17:0c:8c:fb:3e:a6:f6:70:72:ff:27:1f:f3:bb:b3:b1:08
+%%Z04=open %%SITE -hostkey=60:d3:99:e7:51:f6:e8:f6:6f:94:54:eb:a1:8a:5d:52:95:e7:67:b1
+
+*%%Z05=ls
+%%Z06=get %%INCLUDE  "%%OUTDIR.\%%OUTFILE"
+%%Z07=close
+%%Z08=exit 
+*%%Z09=?
+*%%Z10=?
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen -------------------------------------------------------------------
+*	 27.11.2024  07:07:07  zvaa241 hostkey update 
+*    10.12.2020  08:56:15  zv173x2 hostkey
+*    08.06.2018  10:40:30  zv173x2  C:\Program Files (x86)\WinSCP\WinSCP.exe
+*    02.09.2016  08:10:58  zv173x2 ls
+*    22.08.2016  08:48:57  zv173x2 abort in continue 
+*    08.08.2016  15:23:16  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

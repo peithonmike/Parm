@@ -1,0 +1,114 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-LZPD-Meldungen-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1 
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+
+
+%%HostName=ftptrans.polizei.nrw.de
+%%PROXY=cwsa32.itk.local
+**PROXY=wsaproxy.itk.local
+%%U=DK_ITKAV
+%%RemoteDirectory=/
+
+
+
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR1=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\eingang\PolizeiMG
+%%OUTDIR2=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\eingang\Autobahnpolizei
+
+%%DATE=%%JJJJMMTT_TT_M1_%%$ODATE 
+
+
+
+**  PolizeiMG 
+%%File1=XMLMDE_GKZ_506
+
+**  Autobahnpolizei
+%%File2=XMLMDE_GKZ_500
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\CF\JOB\JOB-MGL-WINOWIG-Get-Files-FTPTrans.ps1
+
+
+
+
+******************       Alte Methode     **************************************
+
+
+
+
+%%SITE=MGL-WINOWIG-LZPD
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen MGL Meldedaten von Polizei und Autobahn Polizei 
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+*%%REMOTE_INDIR=
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=*.*
+%%OUTDIR=nicht-verwendet
+*---------------------------------------------------------------
+
+
+
+
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+
+%%Z04=open %%SITE
+**Z04=open %%SITE -hostkey=ba:8c:b7:c5:46:3b:0d:ca:93:c2:83:3e:58:26:19:d8:e8:13:39:a1
+**Z04=open %%SITE -hostkey=65:48:d0:17:0c:8c:fb:3e:a6:f6:70:72:ff:27:1f:f3:bb:b3:b1:08
+%%Z04=open %%SITE -hostkey=51:5b:60:95:9c:72:5f:92:26:f7:e9:fe:d3:21:76:d9:68:bd:01:2b
+%%Z05=ls
+*-delete 	Delete source remote file(s) after a successful transfer
+%%Z06=get -delete XMLMDE_GKZ_506_Abgabe_BG_506_Moenchengladbach_%%DATE.*.zip  %%OUTDIR1
+%%Z07=get -delete XMLMDE_GKZ_500_Abgabe_BG_506_Moenchengladbach_%%DATE.*.zip  %%OUTDIR2
+
+**Z06=get -delete XMLMDE_GKZ_513_Abgabe_BG_506_Moenchengladbach_20250119_180319_Anzahl_1.zip  %%OUTDIR1
+
+%%Z30=exit 
+
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.01.2025  11:11:00  zvaa405  Geändert auf Powershell Script
+*    14.12.2021  07:07:25  zv173x2 -hostkey ba:8c:b7:c5:46:3b:0d:ca:93:c2:83:3e:58:26:19:d8:e8:13:39:a1 -certificate=dd:ec:0c:de:a4:93:d0:0b:48:09:3b:c3:b1:2e:f3:80:c2:91:58:f6
+*    26.10.2021  08:28:50  zv173x2 -delete nach Abholung
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

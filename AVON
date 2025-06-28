@@ -1,0 +1,10 @@
+**********************************************************************************
+*                                                                                *
+* Member zur AVON Vorbereitung                                                   *
+*                                                                                *
+*   \\msbmc........   AVON    die erzeugte VLK Datei die ODATE gesteuert nur für * 
+*                             Verarbeitungen unter diesem Odate möglich sind     *
+*                                                                                * 
+********************************************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VLK\%%JOBNAME.-%%$ODATE..AVON

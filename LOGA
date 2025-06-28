@@ -1,0 +1,35 @@
+
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+* Beamte Monat +1 (ODATE)
+%%LOGA_NBE_DAT=%%JJJJ_MM_P1_%%$ODATE
+%%LOGA_NBE_DAT=%%LOGA_NBE_DAT.%%MM_P1_%%$ODATE
+
+
+* Arbeiter Angestellt aktueller Monat (ODATE)
+%%LOGA_NAR_DAT=%%$OYEAR.%%OMONTH
+
+
+
+* Eingabe Speicherort immer aktueller Monat (ODATE)
+%%LOGA_NBE_DIR=NBE%%OMONTH.%%OYEAR
+%%LOGA_NAR_DIR=NAR%%OMONTH.%%OYEAR
+
+
+
+
+
+
+%%DECKBLATT_DIR=\\msbmcbatch01\c$\ctm_av\Personal-DruckTest\DECKBLATT
+
+
+
+%%LOGA_STRING =%%SUBSTR %%JOBNAME 10 15

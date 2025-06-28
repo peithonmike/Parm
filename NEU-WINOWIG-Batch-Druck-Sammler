@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-WINOWIG-Batch-Druck-Sammler
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%DESCRIPTION=Druckdaten aus Verfahrensordner in AV Druck-Queue kopieren
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%WINOWIG_DRUCK_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\ausgang\druckdateien\Pro_8300_EB_35_v1.0_PS
+%%SEARCH_DIR=%%WINOWIG_DRUCK_DIR.\P%%$ODATE
+%%SEARCH=*.PRN
+**OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\WINOWIG\druckdateien
+%%OUTDIR="\\vfne\11\Amt11\03 Verwaltungsservice\04 Druckdienstleistungen\16 Druckaufträge WINOWIG"
+%%TEST=N
+%%VORBLATT=\\msbmcbatch01\c$\CTM_AV\DeckBlatt\WINOWIG-%%GEM3..prn
+%%ENDEBLATT=\\msbmcbatch01\c$\CTM_AV\DeckBlatt\WINOWIG-%%GEM3..prn
+
+*\\msbmcbatch01\c$\CTM_AV\DeckBlatt\WINOWIG-Ende-%%GEM3..prn
+
+* Diese Mail benötigt nur die AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+%%MAIL_OK=Vervielfaeltigungsstelle@stadt.neuss.de
+%%BETREFF_OK=Neue Druckdaten für WINOWIG
+%%TEXT_OK=Es stehen neue Druckdaten im Ordner %%OUTDIR zum Drucken bereit
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-DRUCK-SAMMLER.BAT
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.07.2014  15:29:32  ZV173X2 check_date in WINOWIG LIBMEMSYM
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

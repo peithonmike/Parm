@@ -1,0 +1,50 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : DUE                                                                  *
+***********************************************************************************
+*  Jobname     : DUE-DTA-KircheEV-GesamtBestand
+*  Description : DTA-KircheEV-GesamtBestand
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=21166-E01U0000
+*
+%%OKEWO_NR=P21166
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  Liste1 
+%%LISTE1=%%OKEWO_ROOT.\CTM\%%JOBNAME-%%VON-%%BIS..DBL 
+%%LISTE1_ACTION=N
+  
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=DTA-KircheEV-GesamtBestand
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U27301#BLAND_N.E01DUMMY#NW#UMFANG_N.E01DUMMY#B#REGIONAL_N.E01DUMMY#N#EMPF_N.E01DUMMY#EAK01#V_UZ331_LISTE.E01DUMMY#$$

@@ -1,0 +1,47 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-COBRA-Soll-an-PTV
+* 
+*********************************************************** 
+* Nur Anlist der gesuchten Dateien
+%%TEST=N
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+ 
+ 
+
+
+%%DESCRIPTION=Solldaten an den PTV Server senden
+
+
+%%SEARCH_DIR=\\mscobra01\Kasse$\NEU\Ausgang\Soll
+%%SEARCH=%%GEM3._COBRA_UEBSOLL_*
+%%MOVE_ORDNER=verarbeitet
+
+%%OUTDIR=\\msptv02\PTVProjekte$\SAP_Export\ISEKTA_EXXX\inDir
+**%%OUTDIR=\\msptv02\PTV-Projekte$\SAP_Export\ISEKTA_EXXX\inDir 
+
+
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+* TESTAUSGABE
+*%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\test\ptv-projekte\WOWIGSAP\inDir 
+
+ 
+
+* ------------------------------------------------------------------
+%%EMAIL_U=COBRA (Rett) %%GEM3 Buchungen an PTV gesendet
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.02.2021  07:47:05  zv173x2  PTVProjekte und User ControlM
+*    31.03.2014  11:16:05  zv173x2 email empfänger fehlte
+*    03.12.2013  13:01:58  zv173x2 NEU
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,89 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Dupl-Beamte-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+*********************************************************** 
+ 
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+             
+%%OUTDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NBE\Dupl
+*%%OUTDIR2=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NBE\DN
+
+
+
+
+%%INCLUDE=*.pdf
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=option failonnomatch on
+
+%%Z05=open %%SITE -hostkey=%%HOSTKEY 
+%%Z06=CD BE
+
+%%Z07=LCD %%OUTDIR1
+*%%Z10=mget KN*_1800*.pdf 
+*%%Z11=mget KN*_1820*.pdf 
+%%Z12=mget KN*_1840*.pdf 
+%%Z13=mget KN*_1850*.pdf 
+*%%Z14=mget KN*_1870*.pdf 
+%%Z15=mget KN*_1871*.pdf 
+*%%Z16=mget KN*_1872*.pdf 
+%%Z17=mget KN*_1910*.pdf 
+
+
+
+
+
+%%Z20=bye 
+%%TEST=N
+
+
+* DN_1800_1800_1_1003_C1.pdf	
+* DN_1800_1800_2_1003_C1.pdf	
+*DN_1800_1801_1_1003_C1.pdf	
+*DN_1800_1801_2_1003_C1.pdf	
+*DN_1800_1802_1_1003_C1.pdf	
+*DN_1800_1802_2_1003_C1.pdf	
+*DN_1800_1803_1_1003_C1.pdf	
+*DN_1800_1803_2_1003_C1.pdf	
+*DN_1800_1804_2_1003_C1.pdf	
+*DN_1800_1805_2_1003_C1.pdf	
+*DN_1800_1806_2_1003_C1.pdf	
+*DN_1800_1807_2_1003_C1.pdf	
+*DN_1800_1809_1_1003_C1.pdf	
+*DN_1800_1810_2_1003_C1.pdf	
+*DN_1800_1811_1_1003_C1.pdf	
+*DN_1800_1811_2_1003_C1.pdf	
+*DN_1800_1860_1_1003_C1.pdf	
+*DN_1800_1860_2_1003_C1.pdf	
+*DN_1840_1840_1_1001_C1.pdf	
+*DN_1850_1850_1_1001_C1.pdf	
+*DN_1870_1870_1_1001_C1.pdf	
+*DN_1870_1871_1_1001_C1.pdf	
+*DN_1870_1872_1_1001_C1.pdf	
+*DN_1870_1872_1_2001_C1.pdf	
+*DN_1910_1910_1_1001AR_C1.pdf	
+	
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    14.12.2021  10:49:49  zv173x2 Kaarst nur noch 1871
+*    14.12.2021  09:09:17  zv173x2 1800 entfernt wird von M.Milka per Hand erzeugt
+*    04.01.2019  10:05:43  zv173x2 neu Lemgo
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

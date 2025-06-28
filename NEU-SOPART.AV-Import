@@ -1,0 +1,27 @@
+************************************************************************* 
+* LIBMEMSYM 
+* NEU-SOPART.AV-Import
+* 
+* SoPart® AV - Amtsvormundschaft / Beistandschaft / Mündelgeld 
+* Kopieren  SOPART.AV Dateien (aus der Host Abendverarbeitung)
+*           aus FTP.Prodbereich in den Mandanten-Bereich
+* AV-Server          \\srv03.asp.rzne.de\ftp$\NE\sopart\avor\import
+                     
+* Mandantenbereich   \\srv03.asp.rzne.de\qaspne$\daten\apps\sopav\avor\import   
+
+************************************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+ 
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\srv03.asp.rzne.de\ftp$\ne\Sopart\Avor\Import\roboimp.txt
+$$INCLUDE_DIR=\\srv03.asp.rzne.de\ftp$\ne\Sopart\Avor\Import
+
+* ------------------------------------------------------------------

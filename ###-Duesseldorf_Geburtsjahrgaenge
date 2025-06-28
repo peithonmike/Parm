@@ -1,0 +1,31 @@
+* F?r den JASPER-Auftrag Schulveraenderungen
+* LIBMEMSYM f?r D?sseldorf Auswertungszeitraum der Geburtsjahrgaenge
+* LIBMEMSYM f?r D?sseldorf Auswertungszeitraum Lernanfaenger
+* LIBMEMSYM f?r D?sseldorf Auswertungszeitraum Primarstufe
+* LIBMEMSYM f?r D?sseldorf Auswertungszeitraum Sekundarstufe1
+* LIBMEMSYM f?r D?sseldorf Auswertungszeitraum Sekundarstufe2
+
+* Datum setzen FORMAT=STRING
+*
+* im Format JJJJMMTT  jeweils zu ?ndern vor dem 1.August des Jahres
+
+
+%%GEBDAT_VON=20060801 alt = 20060801 ab 01.08.2025 neu = 20070801
+
+%%GEBDAT_BIS=20190930 alt = 20190930 ab 01.08.2025 neu = 20200930
+
+%%ELA_GEBDAT_VON=20181001 alt = 20181001 ab 01.08.2025 neu = 20191001
+
+%%ELA_GEBDAT_BIS=20190930 alt = 20190930 ab 01.08.2025 neu = 20200930
+
+%%PRIM_GEBDAT_VON=20140801 alt = 20140801 ab 01.08.2025 neu = 20150801
+
+%%PRIM_GEBDAT_BIS=20180930 alt = 20180930 ab 01.08.2025 neu = 20190930
+
+%%SEK1_GEBDAT_VON=20080701 alt = 20080701 ab 01.08.2025 neu = 20090701
+
+%%SEK1_GEBDAT_BIS=20140731 alt = 20140731 ab 01.08.2025 neu = 20150731
+
+%%SEK2_GEBDAT_VON=20060801 alt = 20060801 ab 01.08.2025 neu = 20070801
+
+%%SEK2_GEBDAT_BIS=20080630 alt = 20080630 ab 01.08.2025 neu = 20090630

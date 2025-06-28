@@ -1,0 +1,14 @@
+*
+* LIBMEMSYM
+*
+
+
+* TYP 01   
+* Lauf findet am Anfang des Monats statt und wertet den vergangenen Monat aus
+
+%%Datum_von     =01.%%MM_M1_%%$ODATE..%%JJJJ_MM_M1_%%$ODATE
+%%Datum_bis     =%%LD_MM_M1_%%$ODATE..%%MM_M1_%%$ODATE..%%JJJJ_MM_M1_%%$ODATE 
+
+* Ausrechnen einer Variablen ODATE minus 18Jahre 
+
+%%Volljaehrig=%%JJJJ_M18_%%$ODATE..%%MM_M1_%%$ODATE..01

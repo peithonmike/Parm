@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-CEVAS-RD-WinSCP-To-FRANZISKUSHAUS
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* SITE
+%%SITE=MGL-CEVAS-RD-FRANZISKUSHAUS
+
+* INDIR Local
+%%INDIR=\\MSCEVAS01\c$\cks\dta_Krankenhaeuser\CEUS_VPN_Krhs-Franziskus\
+
+%%INCLUDE=*.xml , *.pdf
+%%EXCLUDE="-"
+
+
+* OUTDIR_PROCESSED Local
+%%OUTDIR_PROCESSED=%%INDIR.gesendet-franziskus\
+
+ 
+
+* REMOTE_OUTDIR  Remote:-)
+%%REMOTE_OUTDIR=/
+
+
+%%HOSTKEY=
+
+* IGNORE_HOSTKEY J/N
+* manche Keys werden nicht erkannt bis dahin...  
+%%IGNORE_HOSTKEY=J
+
+* DIRECTORYLIST_REMOTE J/N noch nicht implementiert
+%%DIRECTORYLIST_REMOTE=N
+
+* Logfile muss im C: Laufwerkliegen
+%%LOGFILE=c:\temp\%%JOBNAME._winscp.log
+
+* UPLOAD J/N 
+%%UPLOAD=N
+
+* TEST J/N  
+* bei TEST=J 
+* werden die gefundenen Dateien angezeigt
+* Open auf den Server gemacht
+* Upload simuliert
+%%TEST=J
+%%DEBUG=N
+
+
+

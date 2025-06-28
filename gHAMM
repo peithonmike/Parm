@@ -1,0 +1,26 @@
+* *************************************************************
+* Globale Variablen          
+* Stadt Hamminkeln					
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%Stadt  =Stadt
+%%ORT    ="Hamminkeln"
+%%ORT2   =Stadt_Hamminkeln
+
+%%GKZ8   =????????
+
+* Variablen für Wohnungswesen
+
+%%KSU_NR =470
+%%KSU_DIR=ksu2000_krzn 
+%%RZ=KRZNMO
+%%RZ2=krzn
+%%MD1=HAMM
+%%GEM4=HAMM
+%%MD2=Stadt Hamminkeln
+%%MD3=hamm
+%%LAUF=prod
+%%FW_MesoDatei=\\srv03.asp.rzne.de\KSU2000krzn$\SicherungProd\%%KSU_NR.\ewobewegung_mo_*.txt
+%%CTMFW=ctmfw -input c:\CTM_AV\Parm\KSU2000_FW_MESO_%%MD1..txt
+%%DELMESO=del \\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR.\meso\ewobewegung_mo_%%KSU_NR..txt

@@ -1,0 +1,27 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : DUE-VVB-SAS-Split
+* erstellt : 23.11.2011 14:27:51
+*    durch : zv173xc
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%TEST=N
+*
+* Config-Datei
+%%CONFIG=\\msbmcc03\ctm_av\Parm\config_DOXP.PVVBSASS.txt 
+* Input-Datei
+%%INPUT=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\KBASAS\input_DOXP.PVVBSASS.txt
+* OUTFILE
+%%OUTFILE=D:\CTM_AV\VVBSAS\csv_DOXP.PVVBSASS.csv
+* JAVA
+%%JAR=C:\CTM_AV\Bin\Java\Split.jar

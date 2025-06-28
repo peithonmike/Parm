@@ -1,0 +1,27 @@
+  
+|---------------------------------------------------------------------------------------------------| 
+|                          J o b b e s c h r e i b u n g         zv173x2                            | 
+|---------------------------------------------------------------------------------------------------| 
+|                                                                                                   | 
+|  Doku-Ordner : \\MSBMCC03\CTM_AV\DOC\BL                                                           | 
+|---------------------------------------------------------------------------------------------------| 
+SITE=MGL-WINOWIG-LZPD
+*---------------------------------------------------------------
+Abholen MGL Meldedaten von Polizei umd Autobahn Polizei 
+
+OUTDIR1=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\eingang\PolizeiMG\
+OUTDIR2=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\eingang\Autobahnpolizei\
+
+DATE=%%JJJJMMTT_TT_M1_%%$ODATE 
+get XMLMDE_GKZ_506_Abgabe_BG_506_Moenchengladbach_%%DATE.*.zip  %%OUTDIR1
+get XMLMDE_GKZ_500_Abgabe_BG_506_Moenchengladbach_%%DATE.*.zip  %%OUTDIR2
+
+
+   Antrag Benutzer Brechtigung
+ \\MSBMCC03\CTM_AV\DOC\BL\MGL-LZPD_Antrag_Benutzer_extern_2021.pdf
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.10.2021  08:28:50  zv173x2 -delete nach Abholung
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

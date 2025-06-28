@@ -1,0 +1,72 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-PRODOP-Copy-LOGA-AK01-PTV-Umwandlung
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* 1. Fibukirp Datei an PTV senden
+* 2. Pause, damit PTV umwandeln kann 
+* 3. nach Umwandlung vom PTV Server abholen 
+*    und nach Dormagen kopieren
+* 
+*********************************************************** 
+%%DEBUG=N
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRODOP
+
+
+%%B_ART=01
+
+* Eingaben aus Moers
+%%TO_PTV_INDIR=\\srv03.asp.rzne.de\ftp$\av\Personal\%%LOGA_NBE_DIR.\fibukirpneuss
+%%TO_PTV_INFILE=fibukkkk1%%GKZ._%%B_ART.%%LOGA_NBE_DAT..txt
+
+
+* zum PTV Server senden
+* PROD  %%TO_PTV_OUTDIR=\\msptv01\d$\PTV\Projekte\PD_LOGA\inDir
+%%TO_PTV_OUTDIR=\\msptv01\d$\PTV\Projekte\PD_LOGA\inDir
+%%TO_PTV_OUTFILE=%%TO_PTV_INFILE
+%%TO_PTV_OUTDIR_PROCESSED=%%TO_PTV_INDIR.\verarbeitet
+%%TO_PTV_OUTFILE_PROCESSED=%%TO_PTV_INFILE
+%%TO_PTV_OUTFILE_RENAMED=
+
+
+
+* vom PTV Server wieder abholen
+%%FROM_PTV_INDIR=\\msptv01\d$\PTV\Projekte\PD_LOGA\outDir
+%%FROM_PTV_INFILE=*%%TO_PTV_INFILE*
+
+%%FROM_PTV_OUTDIR=\\N200D01S29.dormagen.int.de\HH-Prog\Schnittstellen\ITKR\LOGA\%%GEM3
+
+%%FROM_PTV_OUTFILE=AK%%B_ART.-DAT_%%$ODATE..txt
+%%FROM_PTV_OUTFILE_RENAMED=AK%%B_ART.-DAT_%%$ODATE..txt
+
+
+%%FROM_PTV_OUTDIR_PROCESSED=\\msptv01\d$\PTV\Projekte\PD_LOGA\outDir\verarbeitet
+%%FROM_PTV_OUTFILE_PROCESSED=*%%TO_PTV_INFILE*
+
+
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\PRODOPPIK\PRODOP-GRE-LOGA-PTV.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avCopy-Move-Rename-File.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avFILE-WATCH-LOOP.ps1
+* ------------------------------------------------------------------
+
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+
+%%TEST=J
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.07.2014  15:38:23  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,59 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-SV-Lohnkonto-4000-Verteilen
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+
+
+
+
+%%INDIR=\\vfmgapps\apps\Verfahren\Loga\Personalwesen-Abrechnung\manuprodranur\output
+
+
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga-Abrechnungen\manuprodranur\output
+
+
+
+%%FORCE_OUTDIR=J
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.10.2017  14:56:44  zv171e1 Powershell  "Job-Copy-Directories.ps1
+*    06.07.2017  10:45:40  zv171e1 neu
+ 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

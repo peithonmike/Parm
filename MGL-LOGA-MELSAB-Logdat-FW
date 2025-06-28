@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MELSAB-Logdat-FW
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+
+%%NETUSE_PATH=\\10.50.34.68\loga
+**NETUSE_PATH=\\10.50.34.109\loga
+%%LAUFWERK=Y:
+
+%%INDIR=\\10.50.34.68\loga\ml2001jobmg\melsanuelsab
+**INDIR=\\10.50.34.109\loga\ml2001jobmg\melsanuelsab
+
+
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga\Personalwesen-Abrechnung\melsanuelsab
+
+
+%%INCLUDE=%%JJJJ.-%%MM.-%%TT.*.log
+%%EXCLUDE="-"
+
+
+%%FORCE_OUTDIR=J
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    06.07.2017  11:20:36  zv171e1 neu
+*    
+ 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+

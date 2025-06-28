@@ -1,0 +1,54 @@
+
+******** T E S T 
+
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+%%ART=NBE
+
+* Eingabe der kopierten KRZN PDF-Dateien
+* als Eingabe für die Druckausgabe 
+%%INDIR=\\Msprintff01\source$\LOGA\TEST\2017\02\EGM\%%ART.\KN
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+%%OUTDIR=\\MSprintff01\e\Duckdaten\LOGA\TEST\2017\02\EGM\%%ART.\KN
+%%OUTDIR_PROCESSED=%%INDIR\erledigt
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     14.03.2017  08:10:21  zv173x2  neu
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+*  ********************************************************************************** 
+*  Übersicht 
+*  Listennummern Kuvertierung
+*  ********************************************************************************** 
+
+*  JEL     Jahreslohnkonten aktiver Mitarbeiter 
+*  Elster  Jahreslohnkonten ausgeschiedene Mitarbeiter 
+*  DN_*_*_*_6011_C1.pdf
+
+*  Meldebescheinigungen 
+*  KN_*_*_*_5060_C1.pdf
+
+*  Entgeltabrechnung  03 04 .... 
+*  Beamtenbesoldung   01
+*  Pensionsabrechnung 02
+
+*  KN_*_*_*_1080_C1.pdf
+
+*  ********************************************************************************** 
+
+* monatlich  
+* KN_*_*_*_6011_C1.pdf
+* KN_*_*_*_1080_C1.pdf
+* KN_*_*_*_5060_C1.pdf
+* KN_*_*_*_1060_C1.pdf    Verdienstabrechnung
+* KN_*_*_*_1061_C1.PDF    Pensionsabrechnung
+* KN_*_*_*_1051_C1.pdf    Beamtenbesoldung
+
+
+
+
+

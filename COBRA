@@ -1,0 +1,15 @@
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*****************************************************************************
+*   Mail Empfänger bei Abbruch 
+*****************************************************************************
+%%EMAIL_T=produktions-steuerung@itk-rheinland.de, 
+%%EMAIL_CC=
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL_U=COBRA (Rett) %%GEM3 steht unter DesktopSymbol Cobra-Druckdaten bereit

@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-Aktendeckel-Informationen-GEW-BAT
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND="\\msaip01\swablage$\FB2\Software\KIVi\ControlM\NKM\MEE_GEW_dms_csv.bat"
+
+%%MAIL=David.Mertens@itk-rheinland.de;Volker.Ehmann@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+%%BETREFF=%%JOBNAME ist abgebrochen!
+
+%%TEXT=%%JOBNAME ist abgebrochen. Bitte ueberpruefen.

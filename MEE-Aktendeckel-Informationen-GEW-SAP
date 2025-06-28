@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-Aktendeckel-Informationen-GEW-SAP
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_MEE
+
+
+%%MAIL=David.Mertens@itk-rheinland.de;Volker.Ehmann@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+%%BETREFF=%%JOBNAME ist abgebrochen!
+
+%%TEXT=%%JOBNAME ist abgebrochen. Bitte ueberpruefen.

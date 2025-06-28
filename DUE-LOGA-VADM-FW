@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-VADM-FW
+*
+* Filewatcher auf Datei DZ_ATZ_%%$ODATE.csv
+* 
+*********************************************************** 
+%%AUFTRAGGEBER=J.Huhn
+
+
+
+
+%%DATE=%%$OYEAR.-%%OMONTH.-%%ODAY
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+

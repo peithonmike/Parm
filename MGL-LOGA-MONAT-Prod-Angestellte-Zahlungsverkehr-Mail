@@ -1,0 +1,49 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Angestellte-Zahlungsverkehr-Mail
+* 
+* 
+*********************************************************** 
+
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VLK\MGL-LOGA-ZAHLUNGSVERKEHR-Angestellte-MAIL-ADR.vlk
+
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Absender
+%%EMAIL-F=Produktions-Steuerung@ITK-Rheinland
+
+
+
+* Empfänger (durch Semikolon getrennt)  
+        
+%%INIFILE_MAILADR=\\msbmcc03\ctm_av\Parm\VLK\MGL-LOGA-ZAHLUNGSVERKEHR-Angestellte-MAIL-ADR.vlk
+
+* Subject
+%%EMAIL_U=Job-Nachricht:   Listen 2303, 2310, 2320 fuer Angestellte stehen auf Laufwerk V zur Verfuegung
+
+
+* Kopie
+%%EMAIL-CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;
+
+
+
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.01.2021  09:23:17  zv171e1 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

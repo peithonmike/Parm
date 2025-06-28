@@ -1,0 +1,88 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Copy Druckdaten DN Beamte nach Dormagen
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-ANGESTELLTE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\%%LOGA_ART
+%%INCLUDE=DN_1820_18*_*3*.pdf
+
+* ---------------------------------------------------------------
+* OUTDIR
+* Hier werden die PdfDateien hineinkopiert .
+* ---------------------------------------------------------------
+
+
+%%OUTDIR=\\mc-01-cifs-01.ad.stadt-dormagen.de\ausdrucke-itk-loga\NAR\%%$OYEAR.\%%OMONTH
+
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\%%LOGA_ART.\kopiert
+
+
+
+
+%%STEPNAME=Kopieren-MZ-Druckdaten
+
+
+* abweichend vom Standard
+%%EXCLUDE=*FALL*,*FASU*,*AUSB*,*LKTP*
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+* *********************************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-DATEN-DOR
+%%NETUSE=J
+* Path für den erweiterten Zugriff
+
+%%NETUSE_PATH=\\mc-01-cifs-01.ad.stadt-dormagen.de\ausdrucke-itk-loga\NAR
+             
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+%%MAIL_OK=gerhard.heeke@stadt-dormagen.de;heike.maier@stadt-dormagen.de
+%%BETREFF_OK=LOGA-Daten Personalabrechnung NAR
+%%TEXT_OK="Für das Personalamt der Stadt Dormagen wurden NAR-Listen bereitgestellt"
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.06.2018  10:34:39  zv173x2 ohne LKTP lt Frau Dudek
+*    16.12.2016  12:16:44  zv173x2 \\n200d01n01.ad.stadt-dormagen.de\AusdruckeITK
+*    07.09.2016  16:09:21  zv173x2 \\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\kopiert
+*     12.05.2016  13:47:41  zv173x2  umgestellt auf Netuse alt 
+*                           \\n200d01l42 in  n200d01n01
+*    07.09.2015  08:17:17  zv173x2 %%EXCLUDE=*FALL*,*FASU*,*AUSB*
+*    15.09.2014  15:09:55  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

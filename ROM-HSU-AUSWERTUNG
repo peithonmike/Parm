@@ -1,0 +1,47 @@
+* *************************************************************
+* zvaa405               
+* NEU-HSU-AUSWERTUNG
+* Erzeugt eine CSV Datei
+* Auftraggeber: Hendrick.Moeller@itk-rheinland.de
+* 
+
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+**  Verbidungsdaten
+
+%%SERVER=mssql01.itk.local
+%%DB=schild_%%GEM3
+
+
+%%SQL_CRED_FILE=\\msbmcc03\CTM_AV\TEMP\XXX-HSU-Auswertung\Schulen_AV_cred.xml
+
+%%SQLFILEPATH=\\msbmcc03\CTM_AV\TEMP\XXX-HSU-Auswertung\%%GEM3.\SQL\ROM_HSU_Auswertung.sql
+
+
+%%CSV_OUT=\\msbmcc03\CTM_AV\TEMP\XXX-HSU-Auswertung\%%GEM3.\Ausgabe\HSU_Rommerskirchen-%%JJJJMMTT_%%$ODATE...csv 
+
+%%XLSOUT=\\msbmcc03\CTM_AV\TEMP\XXX-HSU-Auswertung\%%GEM3.\Ausgabe\HSU_Rommerskirchen-%%JJJJMMTT_%%$ODATE...xlsx
+
+%%SMTPSERVER=smtp
+%%FROM=produktions-steuerung@itk-rheinland.de
+**TO=HSU@rhein-kreis-neuss.de
+%%TO=produktions-steuerung@itk-rheinland.de
+%%SUBJECT=HSU-Auswertung %%OMONTH./%%$OYEAR.
+%%BODYFILE=\\msbmcc03\CTM_AV\TEMP\XXX-HSU-Auswertung\mailtext.txt
+
+
+
+%%TEST=N
+
+%%MAIL_NOTOK=schulen@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT_NOTOK=Joblog: Fehler bei der Verarbeitung
+
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\XXX_HSU_Auswertung.ps1

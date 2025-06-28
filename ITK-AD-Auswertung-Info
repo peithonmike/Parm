@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-AD-Auswertung-Info
+* 
+* 
+***********************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=d:\ADInfoDaten\ITKundKundenADinfo.cmd
+
+
+%%MAIL01=harry.lemke@itk-rheinland.de;safaa.berli@itk-rheinland.de
+%%MAILSB13=produktions-steuerung@itk-rheinland.de
+
+
+%%BETREFF_OK=ITK-AD-Auswertung-Info OK
+%%BETREFF_NOTOK=ITK-AD-Auswertung-Info NOTOK
+
+%%TEXT_OK=Joblog: ITK-AD-Auswertung-Info ist OK.
+%%TEXT_NOTOK=Joblog: ITK-AD-Auswertung-Info ist NOTOK.

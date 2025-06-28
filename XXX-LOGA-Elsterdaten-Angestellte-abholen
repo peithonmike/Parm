@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Elsterdaten-Angestellte-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%MM=%%OMONTH             
+%%OUTDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NAR\Elster
+%%OUTDIR2=nicht-verwendet
+
+
+
+%%INCLUDE=*.pdf
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=option failonnomatch on
+
+%%Z05=open %%SITE -hostkey=%%HOSTKEY 
+%%Z06=CD ELSTER_AN
+
+%%Z07=LCD %%OUTDIR1
+%%Z08=mget KN*.pdf 
+
+*%%Z09=LCD %%OUTDIR2
+*%%Z10=mget DN*.pdf 
+
+
+
+
+%%Z20=bye 
+%%TEST=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.10.2019  07:46:30  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

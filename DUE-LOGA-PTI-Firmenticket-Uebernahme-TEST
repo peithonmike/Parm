@@ -1,0 +1,52 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-PTI-Firmenticket-Uebernahme-TEST
+* mit Test-DB
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-call-exe.ps1
+
+* PATH nur wenn der Systempfad erweiter werden soll
+%%PFAD=\\msbmcc03\ctm_av\Bin\sontiges\PTI-Firmenticket\
+
+* EXT_LOGFILE nur wenn das Programm eine externe Logdatei ausgibt
+%%EXT_LOGFILE=\\msbmcc03\c$\Program Files\BMC Software\Control-M Agent\Default\PersDatenImportLog.txt
+
+
+* Exe incl. Pfad 
+%%EXE=\\msbmcc03\ctm_av\Bin\sontiges\PTI-Firmenticket\PersDatenImport_TEST.exe
+
+
+%%FILENAME_1=\\srv03.asp.rzne.de\ftp$\av\LOGA\DUE\Stammdaten\PBS_Personalstammdaten.csv
+%%FILENAME_2=\\srv03.asp.rzne.de\ftp$\av\LOGA\DUE\Stammdaten\HR_Personalschnittstelle_Abgaenge.csv
+
+%%FILENAME_3=nicht-verwendet
+%%FILENAME_4=nicht-verwendet
+%%FILENAME_5=nicht-verwendet
+* Programm Parameter 
+* Position 1 Eingabedatei
+* Position 2 test/ prod 
+%%PARAMETER=%%FILENAME_1 %%FILENAME_2 test
+%%AUFTRAGGEBER=S.Hünnekes 08.2020
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.08.2020  10:38:55  zv173x2 AUFTRAGGEBER S.Hünnekes 08.2020   vormals Lemke
+*    12.11.2015  14:21:49  zv173x2 neu Eingabe files sind vertauscht
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

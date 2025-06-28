@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-Beitragsnachweise-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Empfänger MG-Buchhaltung (durch Semikolon getrennt) 
+          
+%%EMAIL_T=Claudia.Bolz@moenchengladbach.de;Kerstin.Joerissen@moenchengladbach.de;Rosa.Reisner@moenchengladbach.de;Ellen.Wellershaus@moenchengladbach.de;Thekla.Schmidt@moenchengladbach.de;Kevin.Mende@moenchengladbach.de;Jessica.Naegler@moenchengladbach.de;Vera.Berghausen@moenchengladbach.de;Svenja.Vath@moenchengladbach.de;Verena.Marto@moenchengladbach.de
+
+* Subject
+%%EMAIL_U=Job-Nachricht:   Beitragsnachweise fuer Monat %%JJJJ.-%%MM. stehen zur Verfuegung
+
+* Kopie
+%%EMAIL_CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;
+
+* Blindkopie
+*%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+*Anhang (durch Semikolon getrennt) 
+*%%EMAIL_A=
+
+%%DEBUG=N
+%%TEST=N
+
+
+

@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-Batch-Druck-Sammler-ODATE
+* 
+* 
+*********************************************************** 
+* Job wird benötigt wenn die Daten nocheinmal an die 
+* Druckerei gesendet werden sollen
+* Der Standard Job arbeitet mit RDATE!!!! 
+* deshalb hier mit ODATE um geziehlt aufzusetzen
+*
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\DOC\WINOWIG\%%JOBNAME..txt
+
+
+
+%%INDIR=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\ausgang\druckdateien\DLD32WINOWIG_RICOH_Pro_8300S_PCL_6\P%%$ODATE
+%%INCLUDE=*.prn
+%%DESCRIPTION=Wiederholung Druckübertragung an Druckerei MGL mit ODATE:%%ODATE
+
+
+%%OUTDIR=\\vfcache.itk.local\ITKAustausch\MGWinowigDruck
+
+* RDATE und ODATE Prefix unterscheiden sich!!
+%%PREFIX=%%ODATE.-
+
+%%RENAME_EXT=.PS
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    31.03.2021  08:35:20  zv173x2 KONICA_MINOLTA_C658SeriesPS in DLD32WINOWIG_Ricoh
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

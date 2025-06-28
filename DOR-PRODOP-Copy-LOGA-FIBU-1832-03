@@ -1,0 +1,85 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-PRODOP-Copy-LOGA-FIBU-1832-03
+* 
+* 
+*********************************************************** 
+ 
+
+%%NETUSE=J
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA_NAR
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-PRODOP-DOR
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+
+
+%%B_GKZ=%%SUBSTR %%JOBNAME 27 4
+%%B_ART=%%SUBSTR %%JOBNAME 32 2
+%%DESCRIPTION=%%LOGA_MAN_%%B_GKZ
+*********************************************************** 
+* Eingaben aus LEMGO
+*********************************************************** 
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\FIBU
+
+
+%%INFILE=fibualles%%B_GKZ._%%B_ART..txt
+
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+%%OUTFILE_PROCESSED=%%INFILE
+
+
+
+*********************************************************** 
+*   nach Dormagen kopieren
+*********************************************************** 
+*%%OUTDIR=\\N200D01S29.dormagen.int.de\HH-Prog\Schnittstellen\ITKR\LOGA\%%GEM3
+%%OUTDIR=\\N200D01S29.ad.stadt-dormagen.de\HH-Prog\Schnittstellen\Loga\LOGA %%$OYEAR
+
+*Dormagen: R:\Schnittstellen\Loga\LOGA 2015
+
+
+%%OUTFILE=AK%%B_ART.-%%B_GKZ.-DAT_%%$ODATE..txt
+
+
+
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avCopy-Move-File-V2.ps1
+* ------------------------------------------------------------------
+
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.02.2022  11:29:13  zv173x2   1er Lauf Daten nachgereicht fibualles_1832_3.txt 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

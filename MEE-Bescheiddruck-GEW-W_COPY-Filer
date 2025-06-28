@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-Bescheiddruck-GEW-W_COPY-Filer
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+ 
+
+* Datei Auswahl
+\\vfapps\apps\ITK\KMV\Produktion\8000\50101\Aktuell\_GEW-Bescheide_221108.pdf
+%%INDIR=\\vfapps\apps\ITK\KMV\Produktion\8000\50101\Aktuell
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\vfmeerbusch\Daten\ITKDruckausgaben\SFiSteuern\GEW\%%$ODATE
+%%FORCE_OUTDIR=J
+* erledigt Ordner
+
+%%OUTDIR_PROCESSED=\\vfapps\apps\ITK\KMV\Produktion\8000\50101\Aktuell\Verarbeitet
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\BL\JOB\Job-Copy-Files.ps1
+
+* *********************************************************************
+
+
+%%TEST=N
+%%DEBUG=N
+

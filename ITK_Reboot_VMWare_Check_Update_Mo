@@ -1,0 +1,34 @@
+﻿*********************************************************** 
+* LIBMEMSYM 
+* ITK_VM-Update_W_MSAUST01
+* Check welche VM-Server ein VMWARE-Update benötigen
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+**LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+**SYSOUT=\\msbmcc03.itk.local\C$\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+
+%%COMMAND=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Programme\PowerCLI-Skripte\Control-M\SaveListWithAllVMsNeedingVMwareToolsUpdateInAllvCenters.PS1
+
+
+%%OWNER=%%DOM.\controlm
+
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+**MAIL02=itk.FB1_SB131_Windows@itk-rheinland.de;itk.FB1_SB13@itk-rheinland.de
+%%MAIL02=uwe.zimmermann@itk-rheinland.de;
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Keine Weiteren Schritte nötig.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Die Prüfung auf erforderliche Updates der VMWare-Tools ist abgebrochen. Bitte überprüfen. (Siehe Anhang)
+
+
+%%TEST=N
+

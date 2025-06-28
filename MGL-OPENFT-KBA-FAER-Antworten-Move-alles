@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-OPENFT-KBA-FAER-Antwort-Move-alles
+* 
+* 
+*********************************************************** 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%DESCRIPTION=Antworten auf FAER Anfrage und Antworten auf FAER Mitteilungen 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* OpenFT Partner / Anschluss 
+* BAG, BZR,LZPD..... 
+%%ANSCHLUSS=KBA
+
+* SENDEN oder EMPFANGEN 
+%%RICHTUNG=HOLEN
+
+* Eingabe Directory 
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL
+%%INCLUDE=*%%KBA_NR.*
+%%EXCLUDE="-"
+* Ausgabe Directory
+%%OUTDIR=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_vom_KBA
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL\erledigt
+%%OUTFILE_PROCESSED=%%OUTFILE
+
+%%DEBUG=N
+%%TEST=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.06.2019  10:27:48  zv173x2 %%INCLUDE=*faer*_%%KBA_NR.*
+*    20.05.2019  15:05:43  zv173x2 %%INCLUDE=*faerausk
+*    10.05.2019  08:59:03  zv173x2 INCLUDE angepasst
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

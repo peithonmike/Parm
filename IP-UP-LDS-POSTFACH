@@ -1,0 +1,41 @@
+%%IP=192.168.22.12
+%%U=huesneu
+*Password wird im Jobmember erzeugt
+*%%P=WOGN%%RMONTH.%%RYEAR
+*%%P=WOGN%%RMONTH.%%RYEAR
+
+%%P=ITK%%RMONTH.%%RYEAR
+
+* P wird von allen Wohngeldjobs als aktuelles Password benutzt
+*********************************************************************************
+* Password 
+* 6- 8 Stellen !
+* Zahlen Buchstaben
+* keine Sonderzeichen 
+* IT-NRW zurückgesetztes Password kann nur für Vergabe
+* des neuen Password verwendet werden.
+* Jobs laufen nicht damit! 
+**********************************************************************************
+*   *****************************  
+*   Password? - Hotline IT-NRW         0211 9449 2121  07:00 - 16:00 Uhr
+*   Systemanfragen zB Herr Schmerling  0211 9449 3651
+*                     Herr manske oä.  0211 9449 6281
+*                     Frau Schürle !!  0211 9449 6288 
+*   *****************************  
+*   Telefonsammelnummer Leitstelle Wohngeld 
+*   Die Leitstelle Wohngeld von IT.NRW ist unter der Sammel-nummer 0211 / 9449 - 3383 zu erreichen. 
+*   Bei der Anwahl der Leitstelle Wohngeld wie bisher unter einer Einzelnummer (z. B. 3368, 2368), 
+*   ist eine Verbindung nicht garantiert. 
+*   Weiterhin kann die Leitstelle Wohngeld über die zentrale E-Mail-Adresse: 
+*   wohngeld-service@it.nrw.de
+*   wie über die zentrale Fax-Nummer: 0211 / 9449 - 3369 er-reicht werden. 
+
+
+*
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.07.2011  11:26:59  zv173x2 Telefonummern
+*    18.05.2011  09:03:54  ZV173X2 neues Passwort
+*    17.05.2011  17:14:04  ZV173X2 IP Adresse gesperrt, da das LDS Password nochok ist
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

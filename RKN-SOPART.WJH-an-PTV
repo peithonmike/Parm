@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOPART.UVG-an-PTV
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%AUFTRAGGEBER=C.Steenbergen
+
+%%EMAIL_NOTOK=uta.webler@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-Prefix-Copy-Move-Files.ps1
+
+* Eingabe Directory 
+%%INDIR=\\srv03\qaspkr$\Daten\Apps\SopartRKN\SoPart\FiBuExport\WJH
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+* Eingabenamen mit Prefix versehen
+%%PREFIX=%%GEM3.-
+
+* Datei Auswahl alle 
+**INCLUDE=RKN-SOPART.WJH-an-PTV_*.csv
+%%INCLUDE=SAP-WJH-RKN-%%GKZ._%%OYEAR.-%%OMONTH.-%%ODAY..csv
+%%EXCLUDE="-"
+
+* PTV Directory 
+%%OUTDIR=D:\Daten\SOPWJH_EXXX\outdir
+
+
+* PTV Ordner werden nicht angelegt
+* müssen vorhanden sein !
+%%FORCE_OUTDIR=N
+
+%%TEST=N
+%%DEBUG=N
+

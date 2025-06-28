@@ -1,0 +1,41 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Bescheiddruck-GEWMB-COPY-MOVE-FILER
+* 
+* 
+*********************************************************** 
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+%%INCLUDE_1=*_GEWMB_Bescheide_%%ODATE.*
+%%INCLUDE_2=*.pdf
+
+
+
+%%INDIR=\\vfitkablage\dta\daten\NEU\DTA-GEW\out
+%%OUTDIR=\\vfne\11\Amt11\03 Verwaltungsservice\04 Druckdienstleistungen\13 Druckaufträge Finanzen
+%%OUTDIR_NEU=\\vfne\20\Amt20\202\Austausch22\DTA-Belege Gewerbesteuer
+%%OUTDIR_PROCESSED=\\vfapps\apps\ITK\KMV\Produktion\1000\50101\DTA-Messbescheide\gedruckt
+
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Job-Copy-Move-Files-Multi-In-Out.ps1
+
+
+%%MAIL_OK=vervielfaeltigungsstelle@stadt.neuss.de
+%%BETREFF_OK=Neue PDFs zum Drucken
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=N
+%%DEBUG=N
+
+**INDIR=\\vfapps\apps\ITK\KMV\Produktion\1000\50101\DTA-Messbescheide

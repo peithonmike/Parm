@@ -1,0 +1,38 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Korschenbroich
+***********************************************************************************
+*  Jobname     : KOR-STATI-Erweiterte-BestStat-Move
+*  APPLICATION : OK.EWO.DTA
+***********************************************************************************
+*********************************************************************************** 
+*
+*
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\OKEWO\okprg\okewo_%%GEM3.\div
+%%SEARCH=e01e038.ffd
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Statistik\ErwBestandsstatistik
+
+
+
+
+
+
+
+
+%%TEST=N
+
+* * * * * * * * * * * * * * * * * * * *
+* Statistik
+* * * * * * * * * * * * * * * * * * * *
+
+* LGKZ=99999999
+* OKEWO_FILENAME=e01e038.ffd
+* OKEWO_SUBDIR=div
+* ITKR_SUBDIR=Statistik/ErwBestandsstatistik
+* TEXT=Erweiterte Bestandsstatistik
+* NEWRENAME=ITKR_DATUM_GKZ8_OKEWONAME
+* GROUP=Statistik
+* ITKR_090131_05116000_E01E038.ffd

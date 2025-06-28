@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SAS-W-C22W0615_JAVA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%TEST=N
+
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA\SAS_Eingabe\C22W0615_Eingabe.txt
+
+* wird als Jasper Eingabe verwende MEE-c22w0615-SQL1
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA\SAS_Ausgabe\C22W0615_Ausgabe_D%%$ODATE..csv
+
+
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\#220615.jar -infile %%INFILE1 -outfile %%OUTFILE1
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.08.2013  09:46:51  zv173x2 odate mit %%$
+*    31.07.2013  10:45:22  zv173x2 Ausgabe mit Odate
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

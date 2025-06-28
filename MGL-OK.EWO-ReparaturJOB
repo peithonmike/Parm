@@ -1,0 +1,46 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : MGL                                                                  *
+***********************************************************************************
+*  Jobname     : MGL-OK.EWO-ReparaturJOB
+*  Description : OK.EWO-ReparaturJOB
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME  *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=10718-E01U0000
+*
+%%OKEWO_NR=P10718
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=OK.EWO-ReparaturJOB
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%V=01.01.2014
+%%B=01.01.2014
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4A=$$ZJS_PARAMETER=E01U19609#A_VON_N.E01DUMMY#%%V#A_BIS_N.E01DUMMY#%%B#A_TRENNER_N.E01DUMMY#|#A_AUSWAHL_N.E01DUMMY#5#A_SPERREN_N#NJJNJNJJNJ__NNNNN_NN2#A_FLAG_N.E01DUMMY#0#A_GEBIETTYP_N.E01DUMMY#100#A_GEBIET1_N.E01DUMMY#10401#A_GEBIET2_N.E01DUMMY#10402#A_IQDRUCK_N.E01DUMMY#N
+%%ZEILE4B=#GES_VERTRETER.e01DUMMY##V_UZ331_LISTE.E01DUMMY#$$

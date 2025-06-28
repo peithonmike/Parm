@@ -1,0 +1,77 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-ACMP-Wareneingang-Update-PROT-Mail
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\HSK\Wareneingang\%%$ODATE
+
+
+
+%%INCLUDE=*.txt
+%%EXCLUDE="-"
+
+%%EMAIL_T=HASAR-Verwaltung-10@duesseldorf.de
+
+
+
+* Info
+*%%EMAIL_O=\\msbmcc03\ctm_av\Parm\Mail-Messages\DUE-SOZ-EZ-Sendung-Druckdateien.txt
+
+
+
+
+* Subject
+%%EMAIL_U=Sendung vom Job:      %%JOBNAME   %%$ODATE
+
+* Kopie
+%%EMAIL_CC=Sascha.Berktin@ITK-Rheinland.de;Daniela.Polarz@itk-rheinland.de;Rafael.Nic@itk-rheinland.de
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+%%IGNORE_RIGHT_BLANKS=J  
+
+
+%%EMAIL_A_MOVE=N
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.11.2021  09:51:22  zv173x2 neu Daniela.Polarz@itk-rheinland.de
+*    09.09.2021  16:17:09  zv173x2 email Berktin
+*    09.09.2021  12:35:22  zv173x2 *.txt da beim Nachfahren RDATE verwendet wird nicht odate
+*    09.06.2020  12:48:32  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+

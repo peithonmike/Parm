@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-LOGA-DN-Sonderlisten_1-To-Printer
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+
+
+
+
+* Eingabe Directory in der Form T:\Tausch ITK\Milka\Druck 2021-09
+*%%INDIR=\\msaip01\swablage$\Tausch ITK\Milka\Druck %%$OYEAR.-%%OMONTH Beamte
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NBE\DN\Sonderlisten
+
+* Datei Auswahl
+%%INCLUDE=*_1910_1*.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\msprintff01\d$\R18LP
+%%PREFIX=%%GEM3.-
+ 
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+%%TEST=N
+%%DEBUG=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.09.2021  14:26:50  zv173x2 neu läuft ab Abrechnung 10.2021 regelmässig
+*    --------------------------------------------------------------------------------- 
+
+*   ********************************************************************************** 
+
+
+
+
+
+

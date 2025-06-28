@@ -1,0 +1,18 @@
+﻿*********************************************************** 
+* LIBMEMSYM 
+* ITK-SAP-INFOMAT_OK-FTP_SaSo
+* 
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+*%%SYSOUT=\\msbmcc03.itk.local\C$\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%MAIL=sapbasis@itk-rheinland.de
+%%MAIL02=produktions-steuerung@itk-rheinland.de
+%%BETREFF=%%$ODATE - %%TIME Freigabe fuer INFOMAT-Sicherung ist erfolgt.
+%%TEXT=Um %%TIME am %%$ODATE ist die Freigabe fuer die Sicherung im KRZN erfolgt.

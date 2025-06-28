@@ -1,0 +1,19 @@
+*
+* LIBMEMSYM
+* Aufruf   ermittelten Anzahl Fälle DTA Kirche RK 
+*
+*
+*
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\parm\OKEWO
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\OK.EWO-KircheRK_%%GEM3..vlk
+
+* variablen für das Zählprogramm
+*
+%%VON=%%TTMMJJJJP_TT_M7_%%$ODATE
+%%BIS=%%TTMMJJJJP_TT_M1_%%$ODATE
+%%VERFAHREN=DTA-KircheRK
+%%DATUM =%%$ODATE
+%%LOGOUT=\\msbmcc03\ctm_av\log\OK.EWO-KircheRK-Satz.csv
+%%OFFSET=-2
+%%FILES=\\msbmcc03\ctm_av\Parm\OK.EWO-KircheRK_%%GEM3..vlk
+

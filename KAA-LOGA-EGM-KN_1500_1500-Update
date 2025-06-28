@@ -1,0 +1,91 @@
+   
+   
+   
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-LOGA-EGM-KN_1500_1500-Update
+* 
+* 
+*********************************************************** 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-EGM-HMAN-MAN
+
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\LOGA-EGM-Update.ps1
+
+
+
+* Zeitraum
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+
+
+* P1: Inputordner für PDF Abrechnungsdateien (Die Ursprungsdateien)
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\EGM\%%GEM3.\%%MAN.\%%LOGA_DAT
+
+
+* P2: Outputordner für Druck PDF Dokumente (Also die Leute, 
+*     die in Zukunft weiter gedruckte Abrechnungen erhalten) 
+*     Verzeichnis aus dem später der Druck erzeugt werden kann
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\EGM\%%GEM3.\%%MAN.\%%LOGA_DAT.\druck
+
+
+* P3 : Outputordner für die Initialpasswortdatei (Also die CSV Datei,
+*      die später auf dem Share-Laufwerk mit Kaarst abgelegt wird.
+*      Pfad: \\srv03\qaspka$\Daten\Orgaeinheit\EGM\Initialpasswort_Listen\)" 
+*      Ausgabe Directory der Passwordlisten für den Anwender
+%%USERDIR=\\srv03\qaspka$\Daten\Orgaeinheit\EGM\Initialpasswort_Listen\%%LOGA_DAT
+         
+
+* P4 : EGM Stammdatentabelle.csv (Die Tabelle ist neu und zwingend erforderlich um neue Personen zu identifizieren. 
+*      Sie liegt auf Q:\Alle\temp_zvaa045\EGM_Daten\)" 
+%%STAMMDIR=\\srv03\qaspka$\Daten\Orgaeinheit\EGM\Stammdaten\EGM_KA_Stammdatentabelle.csv
+
+
+* P5 : Eingabedatei Steuertabelle Druck: 
+*      alt \\msbmcc03\ctm_av\Bin\Java\EGM\input
+%%STEUER_TABELLE=\\srv03\qaspka$\Daten\Orgaeinheit\EGM\Druck_Steuertabelle_Produktionssteuerung\Aktuelle_Steuertabelle.csv
+
+
+
+* EXT_LOGFILE nur wenn das Programm eine externe Logdatei ausgibt
+* %%EXT_LOGFILE=
+
+* JarFile
+* \\msbmcc03\ctm_av\Bin\Java\EGM
+* PROD 
+
+*%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\EGM\PdfGehaltsmitteilungenProdDB.jar
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\EGM\PROD-PdfGehaltsmitteilungen-0.0.1-jar-with-dependencies.jar
+
+* TEST
+*%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\EGM\TEST-2017-PdfGehaltsmitteilungen-0.0.1-jar-with-dependencies.jar
+*%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\EGM\TEST-PdfGehaltsmitteilungen-0.0.1-jar-with-dependencies.jar
+
+
+
+* Programm Parameter 
+*%%PARAMETER=%%INDIR %%OUTDIR %%USERDIR %%STAMMDIR %%STEUER_TABELLE
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*    23.03.2017  11:43:00  zv173x2 PROD-PdfGehaltsmitteilungen-0.0.1-jar-with-dependencies.jar
+*    22.08.2016  16:33:12  zv173x2 MAN in der Eingabe
+*    22.07.2016  08:56:23  zv173x2  \\srv03\qaspka$\Daten\Orgaeinheit\EGM\Stammdaten\EGM_Stammdatentabelle.csv
+*                                  in \\srv03\qaspka$\Daten\Orgaeinheit\EGM\Stammdaten\EGM_KA_Stammdatentabelle.csv
+*     12.05.2016  11:25:28  zv173x2  Vaiable PARAMETER wird nicht mehr verwendet
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+

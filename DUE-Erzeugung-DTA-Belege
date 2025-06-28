@@ -1,0 +1,50 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Erzeugung-DTA-Belege
+* Auftraggeber: Volker Ehmann
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+
+%%COMMAND=\\msaip01\swablage$\FB2\Software\KIVi\ControlM\DTABelegeGEW\LHD_dtaBelegeGEW.bat
+
+***************************************
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+%%MAIL_OK=adelheid.fraedrich@duesseldorf.de;carolin.schwarz@duesseldorf.de;david.mertens@itk-rheinland.de
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%TEXT_OK=Joblog: Neue DTA Belege sind erfolgreich erzeugt worden.
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+

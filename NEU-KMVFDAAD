@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-KMVFDAAD
+* SAP-Job Adressliste KMV fuer Neuss
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%MAIL_NOTOK=volker.ehmann@itk-rheinland.de;david.mertens@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - ADRESSLISTE KMV fuer Neuss NOTOK
+%%TEXT_NOTOK=Bitte pruefen!

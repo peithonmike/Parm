@@ -1,0 +1,42 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* MEE-LOGA-EGM-PDF-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-EGM-HMAN-MAN
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-EGM
+
+
+
+%%INDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\KN\KN_%%MAN._%%MAN._01
+
+%%INDIR2=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\KN\KN_%%MAN._%%MAN._03
+
+* meerbusch hat keine 04er 
+%%INDIR3=nicht-verwendet
+
+
+%%INCLUDE=KN_%%HMAN._%%MAN._*_10*_C1.pdf
+
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    19.07.2017  15:35:48  zv173x2 indir3
+*    22.08.2016  16:40:46  zv173x2 HMAN MAn
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

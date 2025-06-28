@@ -1,0 +1,63 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-TEST-Druckdaten-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-MOERS
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DATE=1018
+
+%%OUTDIR1=\\Msprintff01\source$\LOGA\2018\10-TEST\NAR\DN
+%%OUTDIR2=\\Msprintff01\source$\LOGA\2018\10-TEST\NBE\DN
+%%OUTDIR3=\\Msprintff01\source$\LOGA\2018\10-TEST\NZI\DN
+%%OUTDIR4=\\Msprintff01\source$\LOGA\2018\10-TEST\NAR\KN
+%%OUTDIR5=\\Msprintff01\source$\LOGA\2018\10-TEST\NBE\KN
+%%OUTDIR6=\\Msprintff01\source$\LOGA\2018\10-TEST\NZI\KN
+
+
+
+%%INCLUDE=*.pdf
+
+%%Z01=open MOERS-LOGA-ABRECHNUNG
+%%Z02=ascii
+*%%Z03=cd "/Prod/gesonderte Abrechnung/AR/2018-09-25/DN"
+*%%Z04=LCD %%OUTDIR1
+*%%Z05=mget *.pdf 
+*%%Z06=cd "/Prod/gesonderte Abrechnung/BE/2018-09-25/DN"
+*%%Z07=LCD %%OUTDIR2
+*%%Z08=mget *.pdf 
+*%%Z09=cd "/Prod/gesonderte Abrechnung/ZI/2018-09-25/DN"
+*%%Z10=LCD %%OUTDIR3
+*%%Z11=mget *.pdf 
+%%Z12=cd "/Prod/gesonderte Abrechnung/AR/2018-09-25/KN"
+%%Z13=LCD %%OUTDIR4
+%%Z14=mget *.pdf 
+%%Z15=cd "/Prod/gesonderte Abrechnung/BE/2018-09-25/KN"
+%%Z16=LCD %%OUTDIR5
+%%Z17=mget *.pdf 
+%%Z18=cd "/Prod/gesonderte Abrechnung/ZI/2018-09-25/KN"
+%%Z19=LCD %%OUTDIR6
+%%Z20=mget *.pdf 
+
+
+
+
+
+
+
+%%Z30=bye 
+
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.10.2018  09:35:09  zv173x2 kn auch
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

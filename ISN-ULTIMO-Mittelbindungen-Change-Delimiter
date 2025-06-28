@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-Mittelbindungen-Change-Delimiter
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%INDIR   =\\srv03.asp.rzne.de\ftp$\av\Ultimo\ISN
+
+%%INCLUDE =MB%%$ODATE.*
+
+%%EXCLUDE ="-"
+%%OUTDIR  =\\srv03.asp.rzne.de\ftp$\av\Ultimo\ISN\umgewandelt
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\ftp$\av\Ultimo\ISN\erledigt
+%%TEST=N

@@ -1,0 +1,56 @@
+* *************************************************************
+* Globale Variablen          
+* Stadt Korschenbroich
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%STADT  =Stadt
+%%ORT    =Korschenbroich
+%%GKZ    =600
+%%GKZ8   =05162020
+%%GKZ8_7_2=%%SUBSTRING  %%GKZ8 7 2
+
+%%GEM    =KO
+%%GEM3   =KOR
+
+
+* OK.EWO Ortsnummer
+*  02.11.2015
+%%E01E200_ORTNR=7
+
+* FTP-Ordner
+%%ftp_lw = qaspko$
+
+*  
+*
+* Behördennummer für den Datenaustausch über OpenFT mit dem Bundesamt für Justiz (BfJ)
+*
+* Stadt Korschenbroich
+%%BFJ_ID_OKEWO=R8092
+
+*  -MIGEWA- 
+%%BFJ_ID_MIGEWA=wird-nicht-benutzt
+
+*  -WINOWIG-
+%%WINOWIG_GKZ=600
+*
+* KSU2000 OKEWO-Abgleich
+*
+%%KSU_NR =600
+%%KSU_DIR=ksu2000_krzn
+
+%%MD1=KOR
+
+%%MD2=ko
+%%MD3=kor
+%%MD4=Stadt Korschenbroich
+%%FW_MesoDatei=\\srv03.asp.rzne.de\qasp%%MD2.$\Daten\Apps\KSU\Wohnungswesen\EWO_ABGLEICH\EWO_Daten\ewo_%%MD2..txt
+%%FW_ImportDatei=\\srv03.asp.rzne.de\ftp$\ksu2000_krzn\prod\%%KSU_NR\kasse\%%KSU_NR._*.txt
+%%CTMFW=ctmfw -input c:\CTM_AV\Parm\KSU2000_FW_OKEWO_%%MD3..txt
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.08.2014  16:11:12  zv173x2 %%GKZ8_7_2=%%SUBSTRING  %%GKZ8 7 2
+*    01.07.2013  21:29:50  zv173x2 WINOWIG_GKZ
+*    18.02.2011  10:32:35  ZV173X2 Blankzeilen entferntwg CTM BUG
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

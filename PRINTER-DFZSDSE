@@ -1,0 +1,20 @@
+*   LIBMEMSYM   für Copy PDF auf Drucker
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\Test_Druck
+
+
+* Drucker Freigabe
+%%PRINTER=\\MSPRINTMIG01\ITKR-4204
+%%INCLUDE=EZ-030-DF_PFTXN100_PROT_EZ-1501_*.pdf
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\Test_Druck\fertig
+
+* Datei Auswahl
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%FORCE_OUTDIR=N
+

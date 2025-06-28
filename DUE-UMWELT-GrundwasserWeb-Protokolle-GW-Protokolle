@@ -1,0 +1,47 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-UMWELT-GrundwasserWeb-Protokolle-GW-Protokolle
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\DOC\Umwelt\DOKU_DUE-UMWELT-GrundwasserWeb-Protokolle
+
+* TEST Eingabe Directory 
+%%DESCRIPTION=    E i n g a b e   i s t   d e r  P R O D- S E R V E R 
+**INDIR=\\msjbosslhd01\import_daten_grundwasser$\Chemie\Protokolle
+**INDIR=\\msjbosslhd01\d$\import_daten_grundwasser\Protokolle
+%%INDIR=\\msjbosslhd01\import_daten_grundwasser$\protokolle
+%%LIST_DIRECTORY=N
+
+* Datei Auswahl
+%%INCLUDE=*.*
+
+
+
+
+
+* PROD Ausgabe Directory
+*%%OUTDIR= \\vfdustvg\19\Amt19\Datenbanken\GrundwasserWeb\GW-Chemie
+
+* TEST Ausgabe Directory
+*%%OUTDIR=\\msbmcc03\ctm_av\temp\GrundwasserWeb\GW-Chemie
+
+* PROD
+
+%%OUTDIR=\\vfdustvg\19\Amt19\Datenbanken\GrundwasserWeb\Importprotokolle\GW-Stände
+
+ 
+
+%%TEST=N
+%%DEBUG=N
+*
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

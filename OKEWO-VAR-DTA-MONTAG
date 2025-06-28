@@ -1,0 +1,14 @@
+* LIBMEMSYM
+* Variablen für den Montags DTA LAuf OK.EWO
+* es wird immer von Montags bis Sonntags ausgewertet
+*
+*
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+
+%%VON           =%%TTMMJJJJP_TT_M7_%%$ODATE
+%%BIS           =%%TTMMJJJJP_TT_M1_%%$ODATE
+%%VON_WDAY      =%%WDAY_TT_M7_%%$ODATE
+%%BIS_WDAY      =%%WDAY_TT_M1_%%$ODATE
+%%ODATE_P       =%%TTMMJJJJP_%%$ODATE
+%%ODATE_WDAY    =%%WDAY_%%$ODATE
+

@@ -1,0 +1,44 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant :    alle                                                              *
+***********************************************************************************
+*  APPLICATION : ZSTV.OPENFT 
+*  Description : BZR-ANTWORTEN(IMPORT?)
+***********************************************************************************
+***********************************************************************************
+* Antworten vom BfJ für  Waffen und Sprengstoff Anfragen
+*
+* Suchbegriff ist noch nicht klar
+***********************************************************************************
+ 
+
+
+* BFJ_ID des Mandanten übernehmen 
+%%BFJ_ID=%%BFJ_ID_ZSTV
+
+
+%%RICHTUNG=Antwort
+
+
+* zu kopierende  Files werden anhand des Suchbegriffes ermittelt
+%%SEARCH=*%%BFJ_ID
+
+
+
+* Input_dir ist die Directory, die auf dem OpenFT Server liegt
+* Dahinein schreibt das BfJ (BZR) die Antworten auf die Anfragen
+%%INPUT_DIR=%%ZSTV_DIR_ANTWORT
+
+
+
+* Output_dir ist die Empfangsdirectory des Anwenders im Verfahren  
+%%OUTPUT_DIR=%%ZSTV_IMPORT
+
+
+
+
+%%SYSOUT          =%%OPENFT_SYSOUT
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+*
+

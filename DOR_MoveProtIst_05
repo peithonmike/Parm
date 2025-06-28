@@ -1,0 +1,17 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* DOR_MoveProtIst_05
+* 
+* 
+*********************************************************** 
+* DOR-E12 kopieren der erzeugten Protokolldatei 
+* 'DOPROTIST[ODATE].TXT 
+* von \Daten\Apps\ftp\av\HUH 
+*  nach 
+*  HH\Protokolle\Export 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%TEST=N

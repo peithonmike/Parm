@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Dupl-Beamte-Rename
+* 
+* 
+*********************************************************** 
+ 
+********************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-BEAMTE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+%%LOGA_ART=KN
+%%DESCRIPTION=Rename Beschäftigungsart 2-stellig  %%LOGA_ART
+LOGA_ART=KN   
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NBE\Dupl
+
+
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+    
+* ------------------------------------------------------------------
+* Bei Test 
+* J / N
+* ------------------------------------------------------------------
+%%TEST=N
+
+
+
+

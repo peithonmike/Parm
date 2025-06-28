@@ -1,0 +1,69 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-OPENFT-KBA-FAER-Info-Holen
+* Mitteilungen Antworten/Info
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job holt Antworten aktiv über OpenFT ab.
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+
+%%DESCRIPTION=FAER Antworten der %%STADT %%ORT mit OpenFT beim KBA abholen
+%%AUFTRAGGEBER=W.Klerx 
+
+
+* Eingabe Directory der Anfragen
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL
+
+* Datei Auswahl Maske
+%%INCLUDE=%faeranf_info_**%%KBA_NR._%%$ODATE.*
+
+
+*******************************
+* PROD
+* Anschluss\Partner 
+%%ANSCHLUSS=KBA
+
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+%%TRANSFER_ADMISSION=XDs9nhSRYL
+*******************************
+
+
+*******************************
+* TEST
+* Anschluss\Partner 
+* %%ANSCHLUSS=KBATEST
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+* %%TRANSFER_ADMISSION=19629FMA
+*******************************
+
+
+
+
+
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+ 
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*     02.05.2019  12:40:20  zv173x2  scharf ab 03.05.2019
+*    09.04.2019  09:14:43  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

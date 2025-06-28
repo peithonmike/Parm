@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-OK.Vorfahrt_Anwohnerparken
+* 
+* 
+***********************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de
+
+
+%%BETREFF_OK=FTP OK.Vorfahrt_Anwohnerparken OK
+%%BETREFF_NOTOK=FileTransfer OK.Vorfahrt_Anwohnerparken %%GEM3. NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der OK.Vorfahrt_Anwohnerparken-Daten %%GEM3. ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der OK.Vorfahrt_Anwohnerparken-Daten %%GEM3. ist NOTOK.

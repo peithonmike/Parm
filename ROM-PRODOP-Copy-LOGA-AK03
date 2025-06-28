@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-PRODOP-Copy-LOGA-AK03
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\HUH\%%GEM
+%%OUTDIR=\\N200D01S29.dormagen.int.de\HH-Prog\Schnittstellen_roki\ITKR_Roki
+%%LOGFILE_AV=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+%%TEST=N
+%%DAT=AK03
+ 
+
+
+
+
+

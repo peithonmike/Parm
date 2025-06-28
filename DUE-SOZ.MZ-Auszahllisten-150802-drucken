@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-Auszahllisten-150802-Copy-Fachamt
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOZ-DAT
+
+
+* Eingabe Directory 
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\DUE\%%SOZ_DAT
+
+* Datei Auswahl
+%%INCLUDE=nbere-300-DF_PFZV0100_AUSZ-150802_%%SOZ_DAT..pdf
+%%EXCLUDE=*AUSB*
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfduswba\51\Amt51\GrundsicherungSued\Auszahllisten_Berechnungslauf
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\gedruckt
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.04.2021  13:05:11  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

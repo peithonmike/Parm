@@ -1,0 +1,75 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : GRE                                                                  *
+***********************************************************************************
+*  Jobname     : GRE-Familienverband-Aufloesen
+*  Description : Familienverband-Aufloesen
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+
+
+
+************************************************************************************
+* START
+* Manuell eingefügt
+* das ist der alles entscheidende Wert 
+
+%%JJ=18
+%%STICHTAG=%%ODAY..%%OMONTH..%%JJJJ_M%%JJ._%%$ODATE 
+%%VLK=%%STICHTAG
+* ENDE 
+************************************************************************************
+
+
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME Stichtag %%STICHTAG *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=6735-E01U0000
+*
+%%OKEWO_NR=P6735
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  Liste1 
+*%%LISTE1=%%OKEWO_ROOT.\CTM\%%JOBNAME-%%VON-%%BIS..DBL 
+%%LISTE1_ACTION=N
+  
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=Familienverband-Aufloesen
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U26701#GKB_N.E01DUMMY#1#JAHR_N.E01DUMMY#%%JJ#GEBDAT_N.E01DUMMY#%%STICHTAG#V_UZ331_LISTE.E01DUMMY#art=Job startid1=Auflösen Familienverbandid2=benutzer=Itkavom=bestand=begin=0000000015523500e01_pid=13977famname=vorname=gebdat=gebdat_srt=grund=adr1=adr2=adr3=adr4=adr5=adr6=adr7=adr8=om_bezpers=#$$
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    12.12.2011  09:16:46  zv173x2 LISTE1 gesternt
+*    25.03.2011  14:59:52  zv173x2 auf 18 Jahre geändert (HPixa)
+*    24.01.2011  22:31:50  zv173x2 VLK=stichtag
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+*

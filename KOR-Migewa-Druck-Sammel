@@ -1,0 +1,30 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Kaarst
+***********************************************************************************
+*  Jobname     : KAA-Migewa-Druck-Sammel
+*  APPLICATION : Migewa
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA-Druck
+
+
+%%EINGABE=\\msiris01\Mandanten$\%%GEM.\gewerbe\pdf
+%%AUSGABE=\\srv03.itk.local\qasp%%GEM.$\Daten\Apps\migewa\DRUCKABLAGE
+%%EXT=*.pdf
+
+%%Test=N
+%%DEBUG=N
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\Druck_Migewa_KOR_2.ps1
+
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -file \\msbmcc03\ctm_av\bin\Powershell\NeuerMigewaDruck_2.ps1 -eingabe %%EINGABE -ausgabe %%AUSGABE -ext %%EXT
+
+* Am 13.01.2020 geändert:
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\Druck_Migewa_KOR_2.ps1 -eingabe %%EINGABE -ausgabe %%AUSGABE -ext %%EXT

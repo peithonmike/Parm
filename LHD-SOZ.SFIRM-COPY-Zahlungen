@@ -1,0 +1,59 @@
+*********************************************************** 
+* LIBMEMSYM 
+* LHD-SOZ.SFIRM-COPY-Zahlungen
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-MSFTPINT01
+
+ 
+%%INCLUDE=EZ-115-DF_PFZZ0150_SEPA1400*.xml
+%%EXCLUDE="!"
+
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\EZ\SFIRM
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\EZ\SFIRM\ERLEDIGT
+
+
+%%OUTDIR=\\vfdusalt\21\Amt21\Themen\Nachtverarbeitung\FVB_KUENF
+ 
+
+%%STEPNAME=Kopieren-FIM-Dateien
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=J
+
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden mehr Variablenwerte angezeigt
+%%DEBUG=N
+* ------------------------------------------------------------------
+
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avCopy-Move-Files.ps1
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

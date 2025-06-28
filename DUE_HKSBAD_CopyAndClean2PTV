@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE_HKSBAD_CopyAndClean2PTV
+* Copy and Clean PTV
+* 
+*********************************************************** 
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%MAIL-NOTOK=schnittstellen-finanzwesen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+
+
+%%BETREFF-NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT-NOTOK=Joblog: %%JOBNAME ist abgebrochen. Returncode: %%COMPSTAT  Bitte ueberpruefen.
+
+
+%%COMMAND=powershell.exe Tool_FileCleaner.ps1 -Path '\\vfdusalt\52\Amt52\52_Austauschordner_BGD_ITK\EXTF_Buchungstapel-M-*.csv' -PathArchiv '\\vfdusalt\52\Amt52\52_Austauschordner_BGD_ITK\erledigt\' -Destination 'D:\PTV\Projekte\SAP_Export\HKSBAD_EDUE\inDir\' -SkipLines 2 -Replace @{'\"' = ''}

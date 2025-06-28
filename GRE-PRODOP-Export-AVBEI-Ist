@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-PRODOP-Export-AVBEI-Ist
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=EXPORT
+%%VERF=SOPART AVBEI Ist
+
+
+* zur Information
+* wird im Prodoppik festgelegt
+%%DAT=GRE_SOPMG_EXPORT_IST
+
+%%BJ=20
+
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+
+ 
+* Logdateien
+*$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUH\PRODOP-%%$OYEAR.-%%OMONTH..csv
+*$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+
+* die normale Mail ausschalten 
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+*;stefanie.drescher@itk-rheinland.de 
+
+
+
+
+
+
+

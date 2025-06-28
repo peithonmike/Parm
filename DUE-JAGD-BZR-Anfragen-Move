@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-JAGD-BZR-Anfragen-Move
+* Verschieben Mandantenanfragen 
+* 
+*********************************************************** 
+%%MAX=100 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JAGD
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JAGD-OPENFT-BZR-ANFRAGE
+%%TEST=N
+
+%%SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\CTM_AV\Log\ErgebnisLog\OPENFT-%%$OYEAR..csv
+* ------------------------------------------------------------------

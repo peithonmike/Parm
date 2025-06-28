@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-STICH-WAHL-Druck
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* Output wird manuell über OKEWO als PDF erzeugt
+* und auf dem Printserver abgelegt.
+* I.Franz
+* M.Smits
+* B.Lieven
+* N.N.
+*********************************************************** 
+* Dieser Job sende soweit vorhanden, 
+* den Output an die Druckerei Düsseldorf und verschiebt 
+* nach erledigt.  
+*********************************************************** 
+
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR  alle Files mit vorgegebener Maske an beliebige Anzahl Printer.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Print-To-Printers.ps1 -INCLUDE %%INCLUDE -PRINTER %%PRINTER
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO-STICH-WAHL
+%%DESCRIPTION= OKEWO Wahl Unterlagen an Düsseldorfer Druckerei senden
+
+
+%%WAHLART=NOPREFIX
+
+
+* Drucker Freigabe Liste
+* Outdir mit Düsseldorf überschreiben
+%%OUTDIR=\\msdpiom01\D$\DFZSDPF_PDF
+%%TEST=N
+%%DEBUG=N
+
+
+
+* Bartholome Anreas   89 96 944
+
+

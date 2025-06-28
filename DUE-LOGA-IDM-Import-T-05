@@ -1,0 +1,17 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Düsseldorf
+***********************************************************************************
+*  Jobname     : DUE-LOGA-IDM-Import-T-05
+*  APPLICATION : LOGA
+***********************************************************************************
+* Job holt Loga-PBS-Daten in Bochum ab.
+*********************************************************************************** 
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%MAIL_NOTOK=henning.henze@itk-rheinland.de;christian.hillmann@itk-rheinland.de;thomas.schueller@itk-rheinland.de
+%%MAIL_SB13=produktions-steuerung@itk-rheinland.de

@@ -1,0 +1,70 @@
+*********************************************************** 
+* LIBMEMSYM 
+* TMN-SAP.TRAVI-senden-DTAUS
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* LIBMEMSYM 
+* TMN-SAP.TRAVI-senden-DTAUS
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+*********************************************************** 
+* AN AUSCHALTEN 
+* BAT-Echo
+* ECHO_ON=N
+*********************************************************** 
+
+
+**SEARCH_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\SAP\TMN\DTAUS
+**GESENDET_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+
+**SEARCH=000.SAP.SRZ.TMN-SEPA_*_*
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\TRAVIC-LINK
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\TMN  GKZ 150  goes SAP.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\TRAVICLINK-Dateinamen.pdf
+
+
+$$INCLUDE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\TRAVIC-LINK-%%$OYEAR..csv
+* ------------------------------------------------------------------
+
+
+* ------------------------------------------------------------------
+
+*  FTP Powershell Script mit MD5 Hash
+
+%%FTPSERVER=m180ongum.rz.krzn.de
+%%FTPUSERNAME=tr01itk
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\SAP\TMN\DTAUS
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+%%INCLUDE=000.SAP.SRZ.TMN-SEPA_*_*
+%%PREFIX=T.
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\CF\JOB\Job-FTP-Transfer-CRC-Check.ps1
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.04.2024  Umstellung auf Powershell   zvaa405
+*    12.11.2013  06:40:11  zv173x2 CT in * DD auch zugelassen
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

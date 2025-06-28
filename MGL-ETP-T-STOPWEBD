@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-ETP-T-STOPWEBD
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "C:\Program Files\Scripte\kosy-services-stop.ps1"
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "C:\Program Files\Scripte\kosy-services-stop_MG.ps1"
+ 
+%%MAIL02=Tobias.Redmann@itk-rheinland.de;Simone.Thissen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de;Michael.Meuser@moenchengladbach.de;Jennifer.Grzeschik@moenchengladbach.de;Benjamin.Elias@moenchengladbach.de;Lars.Mackenbach@moenchengladbach.de;dieter.assenmacher@itk-rheinland.de;erich.janke@itk-rheinland.de
+

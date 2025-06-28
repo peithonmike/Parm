@@ -1,0 +1,78 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-MSP-Stammdaten-Sortieren
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+**************************************************************************** 
+* Dokumente sortieren und an Kunden weitergeben
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+
+
+
+
+%%AUFTAGGEBER=Laura Podschwadek ab 03.2023
+
+
+**  Das OUTDIR Kundenverzeichnis wird im Script gesetzt !!! 
+%%Use_NetPath=J
+%%MSP_CREDFILE=\\msbmcc03\CTM_AV\Parm\Credential\DOR_MSP_CRED.xml
+%%NETPATH=\\mc-01-cifs-01.ad.stadt-dormagen.de\ausdrucke-itk-loga\MSP
+
+%%INCL=.csv
+%%INCLUDE=*%%$ODATE*.csv
+**INCLUDE=*.csv
+%%EXCLUDE="-"
+
+
+ 
+%%INDIR=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\%%GEM3.\output\
+
+****** KUNDENVERZEICHNIS *******
+
+**OUTDIR=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\%%GEM3.\kundenpfad\
+**OUTDIR=\\mc-01-cifs-01.ad.stadt-dormagen.de\ausdrucke-itk-loga\MSP
+
+********************************
+
+%%OUTDIR_PROCESSED=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\%%GEM3.\gesendet\
+%%USE_OUTDIR_PROCESSED=J
+
+%%FILEPATH=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\%%GEM3
+%%FILEPATHDONE=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\%%GEM3.\verarbeitet\
+
+** %%ODATE vs %%$ODATE
+** %%ODATE  ->   YYMMTT
+** %%$ODATE -> YYYYMMTT
+** %%ODATE=%%$ODATE
+
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\AS\MSP_Stammdaten_SORT-COPY-MOVE-Files.ps1
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\CF\in_Arbeit\RKN_MSP_Stammdaten_SORT-COPY-MOVE-Files_neu.ps1
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.03.2023  11:51:10  zvaa241 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

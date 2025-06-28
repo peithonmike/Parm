@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* AV.TEST.OPENFT-BZR-FW
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JAGD
+
+%%WATCH_DIR=%%JAGD_BZR_EXPORT
+%%WATCH=*.*
+%%WATCH_MAX=1800
+%%WATCH_WAIT=600
+%%WATCH_FORCE_SCHEDULE=JAGD.OPENFT-BZR-Anfragen
+%%WATCH_FORCE_JOBNAME=*

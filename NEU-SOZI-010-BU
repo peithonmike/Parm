@@ -1,0 +1,71 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZI-010-BU
+* 
+* 
+*********************************************************** 
+%%ONLY_BUENDEL=N
+%%FORCE_PDF_SAMMELDIR_PROCESSED=J
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL
+ 
+
+
+* Die Cover müssen je nach Empfänger angegeben werden
+* alle anderen Angaben sollten aus dem Jobnamen lesbar sein.....
+
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\AAA-NEU-EZ-%%SOZ_SACHG.-Fr.Kindler.pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\ZZZ-NEU-EZ-%%SOZ_SACHG.-Fr.Kindler.pdf
+
+
+
+
+%%PDF_EXE=\\msbmcc03\ctm_av\Bin\sontiges\PDFtk\bin\pdftk.exe
+
+* ---------------------------------------------------------------
+* PDF_INDIR
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* ---------------------------------------------------------------
+%%PDF_INDIR=\\srv03.asp.rzne.de\ftp$\av\Sozitest
+%%PDF_MASK=*ez-%%SOZ_SACHG.*.pdf
+* ---------------------------------------------------------------
+* PDF_SAMMELDIR
+* Hier stehen die PDF die zu einem Output gebündeld werden sollen
+* Im Idealfall mit Front und Backcover
+* ---------------------------------------------------------------
+
+
+
+
+%%PDF_SAMMELDIR =\\srv03.asp.rzne.de\ftp$\av\Sozitest\Druckdaten\%%$OYEAR.\EZ\%%GEM3.-%%$ODATE.\%%SOZ_SACHG
+%%PDF_SAMMELDIR_PROCESSED=\\srv03.asp.rzne.de\ftp$\av\Sozitest\Druckdaten\%%$OYEAR.\erledigt\EZ\%%$ODATE
+* ---------------------------------------------------------------
+* PDF_OUTDIR
+* dahin kommt das erstellt Bündel
+* ---------------------------------------------------------------
+%%PDF_OUTDIR=\\srv03.asp.rzne.de\ftp$\av\Sozitest\Druckdaten\%%$OYEAR.\BUENDEL\EZ-%%$ODATE
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+* ---------------------------------------------------------------
+%%PDF_FILENAME=%%GEM3.-EZ-%%SOZ_SACHG.-%%$ODATE.-BU.PDF
+
+
+*    
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-FILES-SAMMELN.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-PDFTK.ps1
+* ------------------------------------------------------------------
+
+%%TEST=N
+%%DEBUG=J
+

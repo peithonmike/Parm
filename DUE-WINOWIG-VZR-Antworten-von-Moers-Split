@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-VZR-Antworten-von-Moers-Split
+* 
+* 
+*********************************************************** 
+%%ONLY_COUNT=N
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\srv03.asp.rzne.de\sys_all$\Programme\winowig\ftp\eingang\kba
+%%INFILE=KBA_AUSK_dfvau_%%$ODATE
+%%OUTFILE=KBA_AUSK_dfvau_winowig_%%$ODATE.
+
+%%OUTDIR_HOST=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Kba\zwischen
+%%OUTFILE_HOST=kba%%oday.%%omonth..emp
+%%SEARCH=dfvau
+
+
+
+
+* Logfilename 
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\WINOWIG-KBA-DTA-%%$OYEAR..csv
+%%LOGFILE_COUNTER=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\WINOWIG-KBA-DTA-%%$OYEAR..csv
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    06.06.2014  09:44:39  zv173x2 Count
+*    06.06.2014  09:44:33  zv173x2 Only count
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

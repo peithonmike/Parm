@@ -1,0 +1,41 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Kosis-Abzug-Religionen
+* Stichtagsauswertung ohne ODATE
+* ab 01.05. für Lauf 30.04.2012 mit ODATE
+* 
+*********************************************************** 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+* ------------------------------------------------------------------
+
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO_DB
+
+%%TRENNER=";"
+%%LISTE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Kosis\Bestand\NEU-%%$OYEAR.%%OMONTH.-Religion.csv
+
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\Religion_Statistik.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\Religion_Statistik.sql
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE="\\msbmcc03\ctm_av\DOC\Auftragserteilung\KOSIS-NEU  monatlicher SQL_ Religionen.pdf"
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.05.2012  13:24:32  zv173x2 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

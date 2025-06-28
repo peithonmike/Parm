@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SAS-M-C22M0630_FTPtoHOST
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%TEST=N
+
+%%FTP-RPATH1=PBA.GEMAG.GBA.AKT%%GKZ..UPD
+%%FTP-RPATH2=PBA.GEMAG.GBA.KASS%%GKZ..UPD
+
+%%FTP-LPATH1=\av\GBA\SAS_Ausgabe\C22M0630_update_AKT.txt
+%%FTP-LPATH2=\av\GBA\SAS_Ausgabe\C22M0630_update_KASS.txt
+
+%%FTP-NEWNAME1=\av\GBA\SAS_Ausgabe\Erledigt\C22M0630_update_AKT_D%%ODATE..txt
+%%FTP-NEWNAME2=\av\GBA\SAS_Ausgabe\Erledigt\C22M0630_update_KASS_D%%ODATE..txt

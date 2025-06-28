@@ -1,0 +1,21 @@
+***********************************************************************************
+*  JOB-LIBMEMSYM                                                                   *
+***********************************************************************************
+*  Jobname     : DUE-LOGA-BSW-FTP-Test
+***********************************************************************************
+
+%%TEST=JA
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%MAIL_NOTOK=prdouktions-steuerung@itk-rheinland.de;doris.huhn@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME - FTP Personaldaten Branssicherheitswachen aus Bochum - ist abgebrochen
+
+%%TEXT_NOTOK=Bitte überprüfen
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\DUE_BSW.ps1 -test %%TEST

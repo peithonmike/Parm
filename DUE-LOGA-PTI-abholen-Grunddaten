@@ -1,0 +1,69 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-PTI-abholen-Grunddaten
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+
+
+
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+* SERVER_TEXT IP P und U kommen meist aus IP-UP Member 
+*%%SERVER_TEXT
+%%IP=nicht-verwendet
+%%P=nicht-verwendet
+%%U=nicht-verwendet
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen Loga PTI Daten
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=DTSCOUTB\ 
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=*.*
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\msbmcc03\c$\Temp\loga\pti\
+
+  
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open logaftpd@10.50.34.109 
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get Personalschnittstelle_lfd.csv    %%OUTDIR  
+%%Z07=get Personalschnittstelle_Zugang.csv %%OUTDIR 
+
+
+%%Z09=close
+%%Z10=exit 
+
+
+%%TEST=N
+%%DEBUG=N
+
+

@@ -1,0 +1,20 @@
+* Mail Adressen für KSU Mails
+* Mail05- Mail08 
+*
+* Mail-Empfänger ITK Rheinland
+
+%%mailSYSOUT=produktions-steuerung@itk-rheinland.de
+%%mailITK=rudolf.dressel@itk-rheinland.de;oliver.emmel@itk-rheinland.de;produktions-steuerung@itk-rheinland.de;
+**mailITK=produktions-steuerung@itk-rheinland.de;
+%%mailITK01=rudolf.dressel@itk-rheinland.de
+%%mailITK02=oliver.emmel@itk-rheinland.de
+%%mailITK03=hubert.rechmann@itk-rheinland.de
+%%mailITK04=produktions-steuerung@itk-rheinland.de
+%%mailITK05=michael.hurtz@itk-rheinland.de
+%%mailITK06=Produktions-Steuerung@itk-rheinland.de
+
+*MESO-Abgleich
+%%BETREFF_NOTOK_MESO=%%JOBNAME ist abgebrochen. Bitte Überprüfen
+%%TEXT_NOTOK_MESO=Für den Meso-Abgleich ist der Job %%JOBNAME abgebrochen. Bitte den SYSOUT überprüfen.
+
+*Kassendaten

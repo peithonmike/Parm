@@ -1,0 +1,87 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Copy Druckdaten DN Beamte nach Jüchen
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-BEAMTE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+**INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\%%LOGA_ART\DN_1910_1910_01\erledigt
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\DN
+%%INCLUDE=*DN_1850_1850_01*.pdf
+
+
+* ---------------------------------------------------------------
+* OUTDIR
+* Hier werden die PdfDateien hineinkopiert .
+* ---------------------------------------------------------------
+%%USE_FREEFLOW=N
+
+%%OUTDIR=\\vfju\ju\Daten\LOGA Personal\Beamte\%%$OYEAR.\%%OMONTH
+
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\%%LOGA_ART.\kopiert
+
+
+
+
+%%STEPNAME=Kopieren-MZ-Druckdaten
+
+
+* abweichend vom Standard
+%%EXCLUDE="-"
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+* *********************************************************************
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-DATEN-DOR
+%%NETUSE=N
+* Path für den erweiterten Zugriff
+
+%%NETUSE_PATH=\\vfgv1\voldaten1\Daten\DruckausgabeITK\LOGA\NBE
+             
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+%%BETREFF_OK=LOGA-Daten Personalabrechnung NBE
+%%TEXT_OK="Für das Personalamt der Stadt Juechen wurden NBE-Listen bereitgestellt"
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+
+*    15.09.2014  15:09:55  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

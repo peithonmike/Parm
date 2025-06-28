@@ -1,0 +1,47 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-WOHN.LDS-Postfach-Mail
+* 
+* 
+*********************************************************** 
+
+* wenn Test aktiv ist, wird nicht gesendet
+%%TEST=N
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###WOHN-POSTFACH-GET
+
+
+*%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Log\ErgebnisLog\%%GEM3.-WOHN-LDS-POSTFACH-%%$OYEAR..csv
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\VLK\%%GEM3.-WOHN-POSTFACH-MAIL-ADR.vlk
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\EMail-Parameter.txt
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\StandardMessageWOHN-POSTFACH.txt
+
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.11.2021  10:40:12  zv173x2 rein Dominik.Clemens@stadt-dormagen.de
+*    11.11.2021  10:39:07  zv173x2 raus Monika.Brockers-Petry@stadt-dormagen.de
+*    09.11.2016  14:30:26  zv173x2 Wohnungsamt@stadt-dormagen.de
+*                                  Doris.Mils@stadt-dormagen.de
+*                                  Brigitte.Pfeiffer@stadt-dormagen.de
+*                                  Heinz.Esser@stadt-dormagen.de
+*    30.12.2011  08:44:52  zv173x2 gabriele.barakling@stadt-dormagen.de
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

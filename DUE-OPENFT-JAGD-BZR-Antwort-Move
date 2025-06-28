@@ -1,0 +1,52 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-OPENFT-JAGD-BZR-Antwort-Move
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-OpenFT-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\openft01
+
+* OpenFT Partner / Anschluss 
+* BAG, BZR,LZPD..... 
+%%ANSCHLUSS=BZR
+%%RICHTUNG=EMPFANGEN
+
+* Eingabe Directory 
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\empfangen\BZR
+
+* Datei Auswahl
+%%INCLUDE=U0752.A*R9144J
+
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\vfduswba\32\Amt32\FTP32\BZRIM
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\empfangen\BZR\verarbeitet\JAGD\DUE
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*     11.04.2016  11:25:19  zv173x2  \DUE
+*    04.05.2015  16:48:07  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

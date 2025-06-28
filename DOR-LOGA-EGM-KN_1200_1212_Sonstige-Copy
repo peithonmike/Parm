@@ -1,0 +1,39 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-LOGA-EGM-KN_1200_1212_Sonstige-Copy
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-EGM-HMAN-MAN
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-EGM-NZI
+
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\KN
+%%OUTDIR_PROCESSED=%%INDIR.\EGM
+       
+
+%%INCLUDE=KN_%%HMAN._%%MAN._*_1060*_C1.pdf
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.11.2016  07:58:14  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

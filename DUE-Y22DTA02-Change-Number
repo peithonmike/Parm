@@ -1,0 +1,15 @@
+* *************************************************************
+* Table Variablen          
+* DUE-Y22DTA02-Change-Number
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%INDIR=\\srv03\ftp$\AV\GWST\
+%%OUTPUT=\\srv03\ftp$\AV\GWST\Duesseldorf\Erledigt\
+%%PARMFILE=\\msbmcc03\ctm_av\Parm\DUE-Y22DTA02-ERRORLOG
+
+%%COMMAND=powershell.exe -executionpolicy bypass -File \\msbmcc03\ctm_av\Bin\PowerShell\AS\Change-NUMBER.ps1 -indir %%INDIR -output %%OUTPUT -parmFile %%PARMFILE

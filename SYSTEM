@@ -1,0 +1,259 @@
+* LIBMEMSYM
+* generelle Variablen
+%%CTM=msbmcc03
+*  
+%%GEM3            =%%SUBSTR %%JOBNAME 1 3
+%%GEM4            =%%SUBSTR %%JOBNAME 1 4
+%%GEM6            =%%SUBSTR %%JOBNAME 1 6
+
+
+
+%%INTO_TABLE_ORDERID=LEGACY
+
+* SYSOUT 
+*%%SYSOUT_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\CTM\Sysout\%%$OYEAR
+%%SYSOUT_DIR=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR
+
+* wurde anscheinden am 17.02.2014 11:55 geändert ist aber falsch 
+*%%SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT..txt
+* wurde anscheinden am 17.06.2015 14:00 wieder geändert ist aber wieder falsch
+*  
+
+
+* so muss es aussehen Finger weg!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+**SYSOUT=\\msbmcc03.itk.local\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt
+%%SYSOUT=\\msbmcc03.itk.local\sysout$\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt
+
+%%SAP_SYSOUT=\\vfcache\finanz\Daten\Logs\%%JOBNAME._%%$ODATE._%%TIME._%%COMPSTAT._.txt
+%%SST_SYSOUT=//sapftpitk.sapitk.krzn.e/sst/Test/%%JOBNAME._%%$ODATE._%%TIME._%%COMPSTAT._.log
+
+**SAPSYSOUT_VFCACHE=\\vfcache\finanz\Daten\Logs\%%JOBNAME._%%DateTime._%%COMPSTAT._.log
+%%SAPSYSOUT_VFCACHE=\\vfcache\finanz\Daten\Logs\%%JOBNAME._%%$ODATE._%%TIME._%%COMPSTAT._.log
+%%SAPSYSOUT_VFCACHE_2=/home/ctmagitk/vfcache/finanz/Daten/Logs/%%JOBNAME._%%$ODATE._%%TIME._%%COMPSTAT._.log
+%%mailSYSOUT=produktions-steuerung@itk-rheinland.de
+
+* 21.08.2013 %%CTM_SYSOUT=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\CTM\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%CTM_SYSOUT=%%SYSOUT
+
+
+* 21.08.2013 %%PhinAVV_SYSOUT =\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\CTM\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%PhinAVV_SYSOUT=%%SYSOUT
+
+******************************************************************************************************
+* SLEEP-Command - wartezeit bis Ausführung des Befehls/Script
+%%SLEEP="C:\Program Files\BMC Software\Control-M Agent\Default\EXE_9.0.18.200\_sleep.exe"
+* Beispiel: %%SLEEP 300
+******************************************************************************************************
+
+
+
+
+*%%OKEWO_SYSOUT=c:\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+*%%OKEWO_SYSOUT=\\msbmcbatch01\c$\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+* neu ab 12.06.2013   
+* Okewo und Okvisa
+* 21.08.2013 %%OKEWO_SYSOUT=\\srv03.asp.rzne.de\ftp$\av\CTM\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%OKEWO_SYSOUT=%%SYSOUT
+              
+
+
+%%JASPER_SYSOUT=\\msbmcc03\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%KSU2000_SYSOUT=\\msbmcc03\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+
+*%%OPENFT_SYSOUT =c:\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+* 21.08.2013  \\srv03.asp.rzne.de\ftp$\av\CTM\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%OPENFT_SYSOUT=%%SYSOUT
+
+
+
+
+%%DECKBLATT_ORDNER=\\msbmcc03\CTM_AV\DeckBlatt
+* Variable für Bet da? 92
+* Startdatum und Zeit, da es dafür keine AUTOEDIT Systemvariable gibt
+*
+%%START_DATE=%%RDATE
+%%START_TIME=%%TIME
+
+*
+* Variable für die zentrale Dokumentation
+*
+%%DOCLIB=\\msbmcc03\CTM_AV\Doc\
+
+
+* AUTOEDIT Variablen in den BAT-Pool übernehmen
+* BAT-Name       CTM-Name 
+*
+%%ORDER_ID=%%ORDERID.-%%RUNCOUNT
+%%TABLE=%%SCHEDTAB
+%%APPL=%%APPLIC
+%%GROUP=%%APPLGROUP
+%%FILE_PATH=%%MEMLIB
+%%FILE_NAME=%%MEMNAME 
+%%ID=%%ORDERID
+%%RUNNR=%%RUNCOUNT
+%%msbmcc03_BAT=\\msbmcc03\CTM_AV\Bin\Bat\
+
+*%%DESC=%%DESCRIPTION
+
+*
+* folgende Variablen werden für BAT Files erzeugt.
+*  
+*  Erstaz für %%$ODATE   JJJJMMTT
+%%odate=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%odateYY=%%OYEAR.%%OMONTH.%%ODAY
+
+%%odateYYYY=%%$OYEAR.%%OMONTH.%%ODAY
+
+
+%%ODATE_P=%%TTMMJJJJP_%%$ODATE
+
+%%ODATE_P=%%ODAY..%%OMONTH..%%$OYEAR
+
+%%ODATE_WDAY=%%WDAY_%%$ODATE
+
+* ODATE usw werden in BATFILES nicht direkt aufgelöst
+%%oday=%%ODAY
+%%omonth=%%OMONTH
+%%oyear_jj=%%YEAR
+%%oyear_jjjj=%%$YEAR
+%%nodeid=%%NODEID
+
+
+
+%%TT=%%RDAY
+%%MM=%%RMONTH
+%%JJJJ=%%$RYEAR
+%%JJ=%%RYEAR
+%%rdate=%%JJ.%%MM.%%TT
+
+*
+* Library
+*
+%%PARMLIB=\\msbmcc03\CTM_AV\Parm
+%%UTILIB=\\msbmcc03\CTM_AV\Bin\C\ITKR-Utilities\
+%%BATLIB=\\msbmcc03\CTM_AV\Bin\Bat\
+%%LOGLIB=\\msbmcc03\CTM_AV\Log
+
+%%OPENFT_LOGFILE_AV=\\msbmcc03\CTM_AV\Log\ErgebnisLog\OPENFT01-%%$OYEAR..csv
+
+
+
+
+*
+* MAIL
+*
+*%%MAILSERVER=kdvzsmtprelay.kdvz-neuss.int.de
+%%MAILSERVER=smtp.itk.local
+%%MAILSERVER_DOI=n05001i.asp.rzne.de
+
+
+
+%%EMAIL-L=\\msbmcc03\CTM_AV\Log\ErgebnisLog\sendMail_%%$OYEAR..log
+%%EMAIL-O=\\msbmcc03\CTM_AV\Parm\StandardMessageITKR.TXT
+%%EMAIL-F=Produktions-Steuerung@ITK-Rheinland.de
+
+* Mail Variablen dupliziert, da Powershell mit _ im Variablennamen arbeitet
+%%EMAIL_L=\\msbmcc03\CTM_AV\Log\ErgebnisLog\sendMail_%%$OYEAR..log
+%%EMAIL_O=\\msbmcc03\CTM_AV\Parm\StandardMessageITKR.TXT
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+
+*
+*   S t a n d a r d   P r o g r a m m e 
+*
+
+*  WinSCP  
+%%SFTP_EXE=\\msbmcc03\C$\Program Files (x86)\WinSCP\WinSCP.exe
+%%WINSCP_EXE=c:\Program Files (x86)\WinSCP\WinSCP.exe
+* Core FTP
+%%COREFTP_EXE=\\msbmcc03\c$\Program Files\CoreFTP\coreftp.exe
+
+* Standard FTP 
+%%FTP_EXE=\\msbmcc01\c$\Windows\System32\ftp.exe
+* Standard ZIP
+%%ZIP_EXE=\\MSBMCBATCH01\C$\Program Files\BMC Software\Control-M Agent\Default\EXE\zip.exe
+%%UNZIP_EXE=\\MSBMCBATCH01\C$\Program Files\BMC Software\Control-M Agent\Default\EXE\unzip.exe
+
+* SEND-MAIL
+%%MAIL_EXE=\\msbmcc03\CTM_AV\Bin\sontiges\EMail\SendEMail.exe
+
+* LPR Command
+%%LPR_EXE=\\msowigbat01\c$\Windows\System32\lpr.exe
+
+* PDF Programm
+%%PDF_EXE=\\msbmcc03\CTM_AV\Bin\sontiges\PDFtk\bin\pdftk.exe
+
+
+
+%%BATCH=J
+%%CTM_JOB=J
+
+*KSU2000-internes-password
+%%KSU2000_PW=28A543CBC3C2
+
+*SAP-Mail-Adresse für SB22
+%%SAP_MAIL=SAP_SB22@itk-rheinland.de
+
+
+
+%%IGNORE_RIGHT_BLANKS=N
+**************************************************************************************
+*   -- Änderungen ------------------------------------------------------------------- 
+ 
+*    14.04.2020  09:25:23  zv173x2 odate_p funktionierte nicht, das die Variablen(Djjjjmmtt) noch nicht eingelesen sind
+*    27.11.2019  10:38:05  zv173x2 CTM_JOB
+*    25.10.2018  07:37:13  zv173x2 Winscp immer von c:
+*    16.11.2016  10:28:00  zv173x2 SAP_SYSOUT
+*    09.02.2016  13:53:49  zv173x2 %%IGNORE_RIGHT_BLANKS=N wird teils im Powershell verwendet
+*    21.09.2015  09:51:00  zv173x2 pdf exe
+*    14.09.2015  12:10:50  zv173x2  \\msowigbat01\c$\Windows\System32\lpr.exe 
+*    22.06.2015  09:53:45  zv173x2 neu %%odateYYYY
+*    19.06.2015  10:28:41  zv173x2 Standard Mail Programm
+*    19.06.2015  10:24:00  zv173x2 Mail Variablen dupliziert
+*    18.05.2015  10:48:57  zv173x2 BATCH=J   Powershell unterscheidung BATCH ISE 
+*    25.03.2015  12:57:56  zv173x2 Standard FTP 
+
+*    17.03.2015  16:05:18  zv173x2 Standard FTP 
+*    12.03.2015  11:36:29  zv173x2 WinSCP_EXE
+*                                  COREFTP_EXE 
+*    08.07.2014  11:35:39  zv173x2 DESC entfernt
+*    22.04.2014  15:07:28  zv173x2 winscp
+*    18.12.2013  08:09:40  zv173x2 Sysout jetzt mit COMPSTAT
+*    20.08.2013  08:40:43  zv173x2 Sysout_dir angepasst
+*    19.08.2013  14:52:35  zv173x2 Sysout in Jahreszahl Ordner
+*    19.08.2013  14:38:52  zv173x2 Testsysout
+*    12.08.2013  09:29:22  zv173x2 JJ=RYear
+*    19.06.2013  12:09:15  zv173x2 Sysout_dir
+*    12.06.2013  08:40:01  zv173x2 ok:ewo oUTPUT Sysout auf srv03
+*    10.06.2013  16:14:28  zv173x2 OKEWO Sysout voll qualifiziert
+*    02.05.2013  10:12:06  zv173x2 DESC anstatt DESCRIPTION
+*    09.04.2013  09:42:41  zv173x2 DESCRIPTION
+*    19.03.2013  13:33:25  zv173x2 Deckblatt Ordner
+*    19.03.2013  09:20:23  zv173x2 ORDER_ID
+*    19.03.2013  08:48:56  zv171e1 smtp.itk.local
+*    30.10.2012  12:09:01  zv173x2 eMailLog nach von log nach Ergebnislog
+*    18.10.2012  13:16:02  zv173x2 OPENFT_LOGFILE_AV
+*    06.08.2012  09:54:08  zv173x2 MAIL Logfile und MessageFile von bmcc03 auf bmcc01 geändert
+*                                  da das Mailprogramm die Logfile nicht finden konnte
+*    15.12.2011  11:49:58  zv173x2 odateYY
+*    21.09.2011  11:04:14  ZV173X2 nodeid für Bat übernehmen
+*    13.07.2011  09:20:13  ZV173X2 oday omonth oyear_jjjj
+*    24.03.2011  16:01:40  ZV173X2 %%msbmcc03_BAT
+*    01.03.2011  10:33:17  ZV173X2 JasperSysout
+*    18.02.2011  13:13:18  ZV173X2 Standard Sysout geht jetzt immer auf das NODEID Laufwerk
+*    18.02.2011  10:44:41  ZV173X2 Blankzeilen entferntwg CTM BUG
+*    17.02.2011  12:15:50  ZV173X2 OwnerID RUNNR
+*    24.11.2010  12:12:22  ZV173X2 GEM3 und GEM4 aufgenommen
+*    04.11.2010  11:05:44  zv173x2 Mailserver geändert
+*                                  neu : kdvzsmtprelay.kdvz-neuss.int.de
+*                                  alt : n05001.kdvz-neuss.int.de
+*    28.10.2010  11:40:35  zv171e3 EMAIL-F variabel gemacht
+*    10.06.2010            zv173x2 von Jobid auf Runcount geändert
+*    29.09.2010            zv173x2 START_DATE und START_TIME
+*    06.03.2012  08:45     zv173xc %%PhinAVV_SYSOUT hinzugfefügt
+*   --------------------------------------------------------------------------------- 
+**************************************************************************************

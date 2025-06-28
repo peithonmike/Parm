@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Auswertung-PhinAVV
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC03\CTM_AV\PARM\g%%GEM3
+*%%SYSOUT=//msbmcc03/Sysout$/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt 
+ 
+%%COMMAND=powershell.exe PhinAVV-SQL-Export.ps1 -Path C:\PhinAVV\db_exp -Destination \\vfdussap\sap\sap\Kasse_Nachtverarbeitung\Auswertungen
+
+%%MAIL_NOTOK=
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Keine Weiteren Schritte nötig.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte überprüfen!

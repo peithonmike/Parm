@@ -1,0 +1,67 @@
+
+* LIBMEMSYM
+* J A G D 
+*
+* S Y S T E M F I L E 
+*
+* USER : WAFAV
+*
+* -------------------------------------------------------------------------------
+* *******************************************************************************
+
+* *******************************************************************************
+* generelle Variablen 
+* *******************************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+* Sysout 
+%%SYSOUT=%%OPENFT_SYSOUT
+
+* ErgebnisLog
+%%LOGFILE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\FW_OPENFT.csv
+
+
+
+
+* *******************************************************************************
+* Variablen zum Verfahren
+* *******************************************************************************
+
+* OPENFT
+%%TRANSFER_ADMISSION=ft#KD946Sa
+%%ANSCHLUSS=toBZRneu
+
+
+* Anfrage Directory des Mandanten 
+%%JAGD_BZR_EXPORT=\\vfduswba\32\Amt32\FTP32\BZREX
+*%%JAGD_BZR_EXPORT=\ \nwc2daten6.stv-ddorf.de\DATEN6\AMT32\User\FTP36\BZREX
+
+* Antwort EmpfangsDirectory des Mandanten 
+%%JAGD_BZR_IMPORT=\\vfduswba\32\Amt32\FTP32\BZRIM
+*%%JAGD_BZR_IMPORT=\ \nwc2daten6.stv-ddorf.de\DATEN6\AMT32\User\FTP36\BZRIM
+
+* Antwort Empfangsdirectory auf dem OpenFT Server (dahin kommen die Daten vom BZR zurück)                   
+%%JAGD_BZR_DIR_ANTWORT=\\msbmcbatch01\c$\CTM_AV\AntwortBZR
+
+
+* Anfrage Directory auf dem OpenFT Server (von da aus wird zum BZR gesendet)                   
+%%JAGD_BZR_DIR_ANFRAGE=\\msbmcbatch01\c$\CTM_AV\OpenFT-Prod-Dateien\JagdRegister
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Ausfallzeiten\BZR-GZR Ausfallzeiten.txt
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.10.2012  12:44:43  zv173x2 %%OPENFT_LOGFILE_AV
+*    09.07.2012  13:15:43  zv173x2 ANSCHLUSS
+*    11.04.2011  11:49:55  ZV173X2 ErgebnisLog
+*    18.02.2011  12:30:05  ZV173X2 Leerzeilen am Ende entfernt CTM BUG
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

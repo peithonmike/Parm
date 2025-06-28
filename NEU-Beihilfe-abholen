@@ -1,0 +1,65 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Beihilfe-abholen
+* 
+* 
+***********************************************************
+* 
+* Zuständig für die Beihilfe der Stadt Neuss ist der RKN (Rheinkreis Neuss)
+* Mail:            beihilfe@rhein-kreis-neuss.de
+* Ansprechpartner: Ursula Heinrichs
+* Tel:             02181 601-7127
+* Zugangsdaten für den Eingabeordner findet man im Parmmember IP-UP-BEIHILFE-NEU
+***********************************************************
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-BEIHILFE-NEU
+
+
+* Eingabe Directory 
+%%INDIR=%%IP
+
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+%%PREFIX=%%GEM3.-
+
+* Datei Auswahl
+%%INCLUDE=*.dat
+%%EXCLUDE=-
+
+* Dateien nur verschieben
+*%%SEARCH2=BE-*-*-UNI.dat
+
+* Ausgabe Directory
+*%%OUTDIR=\\srv03.asp.rzne.de\qaspne$\Daten\Apps\Beihilfe\export_SEPA
+%%OUTDIR=\\srv03\ftp$\av\Beihilfe\export_SEPA
+
+
+
+%%FORCE_OUTDIR=N
+
+
+%%NETUSE=J
+* erledigt Ordner =INDIR\verarbeitet
+%%TEST=N
+%%DEBUG=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.08.2019  07:37:32  zv173x2 OUTDIR 
+*    22.09.2017  10:08:04  zv171e1 Ansprechpartnerin für Kassendateien bei RKN ist
+*                          Frau Steinbach 
+*    10.10.2016  10:37:05  zv171e1 neu
+*    
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

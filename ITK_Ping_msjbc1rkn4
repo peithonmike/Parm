@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK_Ping_msjbc1rkn4
+* Ping nach Server Reboot
+* 
+*********************************************************** 
+%%GEM3 = %%SUBSTR %%JOBNAME 1 3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+**%%SYSOUT=\\msbmcc03\ctm_av\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\Ping_Server.cmd
+
+%%OWNER=controlm
+
+%%NODEID=msbmcc03
+%%SERVER=msjbc1rkn4
+
+%%MAIL01=itk.FB1_SB111@kdvzneuss
+
+
+%%TEST=N

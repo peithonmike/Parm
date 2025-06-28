@@ -1,0 +1,23 @@
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+
+%%DATE=%%OMONTH.%%OYEAR
+%%MM=%%OMONTH
+
+
+%%FIBU_GKZ=%%SUBSTR %%JOBNAME 22 4 
+%%FIBU_ART=%%SUBSTR %%JOBNAME 27 2
+
+* Empfangs Directory
+%%OUTDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\FIBU
+%%OUTDIR2=nicht-verwendet
+%%OUTDIR3=nicht-verwendet
+%%OUTDIR4=nicht-verwendet
+
+
+
+
+* Eingabe für die Verarbeitungen
+%%INDIR=%%OUTDIR1

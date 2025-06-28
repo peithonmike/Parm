@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-schwarze-Liste-Ok-Verkehr
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+**LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_RKN
+
+
+%%CLIENT=IFP
+%%MANDANT=900
+
+%%MAIL_NOTOK=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de;steffen.brandemann@itk-rheinland.de
+
+%%BETREFF_NOTOK=Schwarze Liste OK-Vorfahrt ist NOTOK!
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte ueberpruefen.
+
+%%SYSOUT=\\msbmcc03\ctm_av\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt

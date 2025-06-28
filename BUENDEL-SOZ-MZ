@@ -1,0 +1,217 @@
+* ------------------------------------------------------------------------------
+* S O Z I A L W E S E N 
+* ------------------------------------------------------------------------------
+* H A U P T L A U F
+*
+* ------------------------------------------------------------------------------
+* Hier werden Standard Vorgaben gemach, die für die meisten Mandanten zutreffen
+* Abweichungen können. bzw werden im Job-LIBMEMSYM gemacht 
+%%USE_DRUCKEREI=N
+* Pfad für die Deckblätter 
+* Original und PDF
+%%PDF_COVERDIR=\\msbmcc03\ctm_av\PDF-COVER
+
+* Abrechnungsmonat liegt in der Zukunft
+%%SOZ_DAT=%%JJJJ_MM_P1_%%$ODATE
+%%SOZ_DAT=%%SOZ_DAT.%%MM_P1_%%$ODATE
+
+* Sachgebiet aus Jobnamen ermitteln
+%%SOZ_GKZ=%%SUBSTR %%JOBNAME 12 3
+
+
+* --------------------------------------------------------------------------------------------
+* PDF_INDIR
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* --------------------------------------------------------------------------------------------
+*%%PDF_INDIR              =\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\xxx\%%SOZ_DAT
+%%PDF_INDIR               =\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT
+
+
+* --------------------------------------------------------------------------------------------
+* PDF_SAMMELDIR_PROCESSED
+* Erledigt Ordner.
+* --------------------------------------------------------------------------------------------
+*%%PDF_SAMMELDIR_PROCESSED=\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\verarbeitet
+%%PDF_SAMMELDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\verarbeitet
+
+
+* für Umstieg auf srv03 
+*%%PDF_INDIR              =\\srv03\ftp$\av\SOURCE\SOZ-MZ\%%$OYEAR.\xxx\%%SOZ_DAT
+*%%PDF_SAMMELDIR_PROCESSED=\\srv03\ftp$\av\SOURCE\SOZ-MZ\%%$OYEAR.\xxx\%%SOZ_DAT.\verarbeitet
+
+
+
+* --------------------------------------------------------------------------------------------
+* PDF_OUTDIR
+* dahin kommt das erstellte Bündel
+* --------------------------------------------------------------------------------------------
+%%PDF_OUTDIR             =\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\SOZ-MZ\BUENDEL\MZ-%%SOZ_DAT
+
+
+
+
+* --------------------------------------------------------------------------------------------
+* PDF_SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* Leere Dateien werden nicht kopiert sondern (nur nach erledigt verschoben) 
+* --------------------------------------------------------------------------------------------
+%%PDF_SAMMELDIR          =\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\SOZ-MZ\%%JOBNAME.-%%SOZ_DAT
+
+* ---------------------------------------------------------------
+* FORCE_SAMMELDIR_PROCESSED
+* Erledigt Ordner werden bei Bedarf angelegt
+* ---------------------------------------------------------------
+%%FORCE_PDF_SAMMELDIR_PROCESSED=J
+
+* --------------------------------------------------------------------------------------------
+* die Sammeldir wird nach erfolgreicher Verarbeitung gelöscht J/N
+* --------------------------------------------------------------------------------------------
+%%PDF_DEL_SAMMELDIR=J
+
+
+%%DRUCK_LOG=\\msbmcc03\ctm_av\Log\ErgebnisLog\SOZ-DRUCK-%%$OYEAR..csv
+
+
+
+
+
+
+
+*%%PDF_COVERDIR=\\msbmcc03\ctm_av\PDF-COVER
+
+
+* PDF Programm
+%%PDF_EXE=\\msbmcc03\ctm_av\Bin\sontiges\PDFtk\bin\pdftk.exe
+
+* Strandard Trenblatt 1-seitig
+%%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Trennblatt.pdf
+* wenn 2-seitig gefordert wird, dann  im Job-LIBMEMSYM 
+* %%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\2-seitig\ Trennblatt.pdf
+* angeben
+
+
+
+%%USE_FREEFLOW=N
+
+* ---------------------------------------------------------------------
+* Protokolle PROT
+* alle
+* weiß
+* duplex
+* Anzahl 1
+* gelocht 
+* ---------------------------------------------------------------------
+*%%SOZ_MZ_PROT_INCLUDE=nbere*PROT*2%%SOZ_GKZ._%%SOZ_DAT..PDF
+* geändert 22.07.2020 
+%%SOZ_MZ_PROT_INCLUDE=nbere*PROT*-2%%SOZ_GKZ._%%SOZ_DAT..PDF
+
+
+%%SOZ_MZ_PROT_EXCLUDE="-"
+%%SOZ_MZ_PROT_ANZAHL=1
+%%SOZ_MZ_PROT_DRUCKER=\\msprintff01\d$\R18DoppgelochtH
+
+
+* ---------------------------------------------------------------------
+* Bescheide KBES
+* alle
+* weiß
+* duplex
+* Anzahl 2
+* 
+* ---------------------------------------------------------------------
+* -2 geändert 22.07.2020 
+%%SOZ_MZ_BESCH_INCLUDE=nbere*KBES*-2%%SOZ_GKZ._%%SOZ_DAT..PDF
+%%SOZ_MZ_BESCH_EXCLUDE="-"
+%%SOZ_MZ_BESCH_ANZAHL=2
+%%SOZ_MZ_BESCH_DRUCKER=\\msprintff01\d$\R18doppel
+
+
+* ---------------------------------------------------------------------
+* Listen  
+* alle
+* weiß
+* einseitig
+* Anzahl 1
+*
+* ---------------------------------------------------------------------
+* nicht geändert war immer richtig 22.07.2020 
+
+%%SOZ_MZ_LISTEN_INCLUDE=nbere*-2%%SOZ_GKZ._%%SOZ_DAT..PDF
+%%SOZ_MZ_LISTEN_EXCLUDE=*PROT*,*KBES*,*EIPR_LOE*,*MAZE*
+%%SOZ_MZ_LISTEN_ANZAHL=1
+%%SOZ_MZ_LISTEN_DRUCKER=\\msprintff01\d$\R18LP
+
+
+
+* ---------------------------------------------------------------------
+* Listen2 AUSZ 
+* NEU  
+* weiß 
+* einseitig
+* Anzahl 2
+* EZ-080-NE_PFZV0100_AUSZ_MZ-2024_20140617.pdf
+%%SOZ_MZ_LISTEN2_INCLUDE=*AUSZ_MZ-2%%SOZ_GKZ._%%SOZ_DAT..PDF
+%%SOZ_MZ_LISTEN2_EXCLUDE="-"
+%%SOZ_MZ_LISTEN2_ANZAHL=2
+%%SOZ_MZ_LISTEN2_DRUCKER=\\msprintff01\d$\R18LP
+
+
+
+
+* Muster wenn kein Exclude vorhanden ist
+* %%SOZ_EZ_LISTEN_EXCLUDE="-"
+
+
+* Angaben aus B93 Host Stand 28.05.2014
+*************************************************************************** 
+* AUSZ  0030 Auszahlungsliste KO 2 Copies
+* BUHL  0031 Buchungshinweisliste 2 Copies bis auf DOR und NE ( nur einfach)
+*       0032 Ausz.Liste zur haushaltsmäßigen Verbuchung wie 0031
+*       0040 Giro Auszahlungsliste wie 0031
+* GESU  0041 Gesamtsummenliste wie 0031
+* BALI  0070 Bankliste GR,KA,KO,ME,RO 2 Copies.
+*       0090 Postliste wie 0031
+* AUSB  0140 HHST auflistung alle 2 Copies
+* ANOR  0141 Anordnungen Alle 2 Copies bis auf NE ( erinfach) 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+*$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-FILES-SAMMELN_INCL_EXCL.ps1
+*$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avBUENDEL-PDFTK.ps1
+
+
+*  FreeFlow Drucker  
+* --------------------------------
+
+*  R17doppel, 
+*  R17LP, 
+
+*  R18doppel
+*  R18DoppgelochtH
+*  R18DoppgelochtQ
+*  R18gelocht 
+*  R18LP
+*  R18personal
+*  R18Vorblatt 
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.08.2020  13:33:54  zv173x2 USE_DRUCKEREI=N
+*    25.03.2020  13:59:23  zv173x2 *AUSB* aus MZ-LISTEN EXXLUDE entfernt
+
+
+*    16.01.2019  16:34:43  zv173x2 exclude maze
+*    07.09.2016  14:55:22  zv173x2 \\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\verarbeitet
+*    07.09.2016  14:53:23  zv173x2 \\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT
+*    25.11.2015  11:51:47  zv173x2 SAMMELDIR_PROCESSED=\\Msprintff01\source$\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\v
+*    18.08.2014  08:38:24  zv173x2 MZ mit Freeflow (
+*    22.07.2014  14:59:12  zv173x2 MZ ohne Freeflow
+*    23.06.2014  13:49:02  zv173x2 \\msbmcc03\ctm_av\Log\ErgebnisLog
+*    18.06.2014  09:50:38  zv173x2 
+*    10.06.2014  08:51:33  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,70 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Düsseldorf
+***********************************************************************************
+*  Jobname     : DUE-LOGA-Transfer-ProTime
+   %%APPLICATION=LOGA.PBS
+***********************************************************************************
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;hr-support@itk-rheinland.de;
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen!!
+%%TEXT_NOTOK=Bitte überprüfen
+
+
+%%ProtimePfad=\\vfapps\apps\ITK\Protime
+**Adressat=martina.milka@itk-rheinland.de,stephan.huennekes@itk-rheinland.de,Alexander.Schoenfeld@itk-rheinland.de
+%%Adressat=zeitwirtschaft@itk-rheinland.de
+
+%%MAIL_OK=%%Adressat
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%TEXT_OK=Joblog: %%JOBNAME ist durchgelaufen. 
+
+*YYYYMMTT bei Bedarf angeben, ansonsten leer lassen, ist automatisch immer odate
+%%AendDate=
+%%FehlDate=
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\DUE_HCM_PT.ps1 -ProtimePfad %%ProtimePfad
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.10.2018  14:34:21  zv173x2 ersatz für Zugriff über SITE Protime-2.ps1 
+*    17.09.2018  08:03:03  zv171e1 auf wunsch von H.Lemke Mailadressen angepasst
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+*  26.04.2019 keine XML und keine CSV Datei.
+
+*  --------------------------------------------------------------------------------------
+*  Liste wie es Laufen musste
+*  --------------------------------------------------------------------------------------
+*  Odate     |AendDate  xml | FehlDate CSV | Status
+*  20190425  | 25.04         | 24.04       | letzter Lauf OK Freitag 26.04.2019  4:12 Uhr
+*  20190426  | 26.04         | 25.04       | Stand im Hold
+*  20190427  | 27.04         | 26.04       |
+*  20190428  | 28.04         | 27.04       |
+*  20190429  | 29.04         | 28.04       |
+
+
+
+
+
+*  --------------------------------------------------------------------------------------
+*  Plan zum Nachfahren
+*  --------------------------------------------------------------------------------------- 
+           
+*  --------------------------------------------------------------------------------------- 
+*  
+* Lauf | Odate     |AendDate  xml | FehlDate CSV | Status
+
+* FR   | 20190426  | 27.04         | 25.04       | Variable überschreiben  ok!!
+* SO   | 20190427  | 28.04         | 27.04       | Not Ok ist Sonntags immer so wird immer ignoriert
+* MO   | 20190429  | 29.04         | 28.04       | Variable zurück gesetzt 
+*                                                  läuft mit Odate richtig
+
+

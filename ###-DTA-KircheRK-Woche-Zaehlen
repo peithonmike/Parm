@@ -1,0 +1,26 @@
+*
+* LIBMEMSYM
+* Aufruf   ermittelten Anzahl Fälle DTA KircheRK Woche 
+*
+*
+*
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\parm\OKEWO
+
+
+
+* variablen für das Zählprogramm
+*
+%%VON=%%TTMMJJJJP_TT_M7_%%$ODATE
+%%BIS=%%TTMMJJJJP_TT_M1_%%$ODATE
+%%VERFAHREN=DTA-KircheRK
+%%DATUM =%%$ODATE
+%%LOGOUT=\\msbmcc03\ctm_av\LOG\ErgebnisLog\OK.EWO-KircheRK-Satz.csv
+%%OFFSET=-2
+%%FILES=\\msbmcc03\ctm_av\Parm\OK.EWO-DTA-KircheRK-Woche.vlk
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.04.2011  11:23:31  ZV173X2 LOGOUT von LOG nach LOG\ErgebnisLog geändert
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

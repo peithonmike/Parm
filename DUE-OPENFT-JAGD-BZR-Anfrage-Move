@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-OPENFT-JAGD-BZR-Anfrage-Move
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-OpenFT-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* OpenFT Partner / Anschluss 
+* BAG, BZR,LZPD..... 
+%%ANSCHLUSS=BZR
+%%BFJ_ID=%%BFJ_ID_JAGD
+
+
+* Eingabe Directory 
+%%INDIR=\\vfduswba\32\Amt32\FTP32\BZREX
+
+* Datei Auswahl
+%%INCLUDE=AB-U0752-*.txt
+%%INCLUDE=utf-832*.DAT
+
+%%EXCLUDE="_"
+
+%%RICHTUNG=AnfrageMove
+
+
+* Ausgabe Directory
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\BZR\JAGD
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfduswba\32\Amt32\FTP32\BZREX\erledigt
+%%TEST=N
+%%DEBUG=N
+
+$$INCLUDE=\\msbmcc03\ctm_av\log\ErgebnisLOG\OPENFT01-%%$OYEAR..csv 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.11.2021  10:21:21  zv173x2 INCLUDE=utf-832*.DAT
+*    03.12.2020  09:25:03  zv173x2 DAT für test muss wieder raus
+*    30.11.2015  15:53:35  zv173x2 Header mit jobname
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,40 @@
+* ------------------------------------------------------------------------------
+* S O Z I A L W E S E N 
+* ------------------------------------------------------------------------------
+* Kopieren Sodatis ZADA 
+* ------------------------------------------------------------------------------
+* Hier werden Standard Vorgaben gemacht, die für die meisten Mandanten zutreffen
+* Abweichungen können  bzw werden im Job-LIBMEMSYM gemacht 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+
+* Zeitraum aktueller Monat
+%%SOZ_DAT_YYYY=%%$OYEAR.%%OMONTH
+%%SOZ_DAT_YY=%%OYEAR.%%OMONTH
+
+
+* Sachgebiet aus Jobnamen ermitteln
+%%SOZ_GKZ=%%SUBSTR %%JOBNAME 22 3
+%%INCLUDE=EZ-GS-NE_20%%GKZ8_7_2._PFGS0700_SEI*_Kalendermonat_%%SOZ_DAT_YY..txt
+%%INCLUDE=EZ-GS-NE_2%%SOZ_GKZ._PFGS0700_SEI*_Kalendermonat_%%SOZ_DAT_YY..txt
+
+
+%%EXCLUDE="-"
+
+* --------------------------------------------------------------------------------------------
+* INDIR
+* Hier stehen die Dateien die über Mask ermittelt und kopiert werden
+* --------------------------------------------------------------------------------------------
+%%INDIR           =\\Msprintff01\source$\SOZ-SODATIS\%%$OYEAR.\ZADA\%%SOZ_DAT_YYYY
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-SODATIS\%%$OYEAR.\ZADA\%%SOZ_DAT_YYYY.\erledigt
+
+ 
+%%TEXT=C O P Y  and  R E N A M E Sodatis Zada Dateien   %%STADT %%ORT

@@ -1,0 +1,38 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-LOGA-DN_1700_1706_10-BU
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-ANGESTELLTE
+
+
+ 
+* ------------------------------------------------------------------
+* FreeFlow zuordnung
+%%FREEFLOW_HOTFOLDER=%%LOGA_DN_DRUCKER
+* ------------------------------------------------------------------
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\aaa-FrontCover-1-seitig.pdf 
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\zzz-Backcover-1-seitig.pdf 
+    
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* ------------------------------------------------------------------
+%%TEST=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.05.2016  13:39:14  zv173x2 aaa und zzz in standard cover einebaut
+*    20.10.2015  17:46:50  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

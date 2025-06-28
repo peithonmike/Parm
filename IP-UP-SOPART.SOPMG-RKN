@@ -1,0 +1,14 @@
+*--------------------------------------------------------------------------------------
+*
+* Zugriff auf den Anwendungsserver SFirm  
+* Rhein Kreis Neuss 
+* Zugriff über NET USE
+* 
+*  
+*--------------------------------------------------------------------------------------
+%%IP=\\n900d01m05.n900d01.int.de\DTAUS_Sopart_Muendel$
+%%U=n900d01m05\dtaussopart
+%%P=dtaus#RKN-itk
+
+
+

@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-KopierenVorlagen2010
+* 
+* 
+*********************************************************** 
+ 
+*********************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%AUFTRAGGEBER=B.Karp 
+%%DESCRIPTION= Zugriff Fehler wird zugelassen !!!!
+%%TEST=N
+%%DEBUG=N
+%%EMAIL_T=Burkhard.Karp@itk-rheinland.de
+
+%%PS1_FILE=\\vfdusprog\public\Public\ABK\_Skripte\KopierenVorlagen2010\CTM-KopierenVorlagen2010_Server.ps1

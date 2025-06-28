@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-Beamte-Jahres-Elster-Update-und-Druck-erzeugen
+* 
+* 
+*********************************************************** 
+
+
+**************************************************************************** 
+* Jahres Elster Update
+**************************************************************************** 
+* Dieser Lauf kann wiederholt werden...
+**************************************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NBE
+
+%%ART=NBE
+*********************************************************************************
+* Loga PDF Druckdaten KN aus msp Ordner
+*********************************************************************************
+* gehen in Ordner Aktuelles Jahr -1  (da das normalerweise das Erzeugungsjahr ist 
+* unter dem Jahresnamen des Bescheides
+* Beispiel 2020 März wird in JahresElster 2019 kopiert.
+* von da aus wird gebündelt und gedruckt
+*********************************************************************************
+
+%%INDIR=\\Msprintff01\source$\LOGA\Elster\%%JJJJ_M1_%%$ODATE..\%%ART.\MSP
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\JahresElster-%%JJJJ_M1_%%$ODATE..\%%ART
+
+* JAVA Variablen
+* Java Directories \\msbmcc03\ctm_av\Bin\Java\MSP\Lohnsteuerbescheinigung
+
+
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\Lohnsteuerbescheinigung\PdfLohnsteuerbescheinigungen-0.0.1-jar-with-dependencies.jar
+
+%%JAR_START=de.itk.projekte.pdf.lohnsteuerbescheinigung.Start
+
+
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.07.2019  09:59:06  zv171e1 Umgestellt auf "MSP_Gehaltsmitteilungen_20190729_PROD.jar"
+*    12.02.2019  11:05:41  zv173x2 Umgestellt auf Lemgo MSP_Gehaltsmitteilungen_20190212_PROD.jar
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

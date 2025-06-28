@@ -1,0 +1,84 @@
+Ersetzt durch Job mit Namen MGL-PMOWIG-OPENFT.......
+
+
+
+
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  
+*  Umstellung von PMOWI nach WINOWIG
+*
+*  muss auf Anforderung angepasst werden
+*
+* 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  
+*  %%INDIR=\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\ausgang\kba
+*  %%OUTDIR_PROCESSED=%%INDIR.\erledigt\%%GEM3
+
+
+
+
+
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-OPENFT-KBA-FAER-Mitteilungen-Move
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%DESCRIPTION=FAER Mitteilungen 
+%%DESCRIPTION=FAER Mitteilungen der %%STADT %%ORT aus Anwender-Verzeichnis nach OpenFT kopieren
+
+%%AUFRAGGEBER=W.Klerx
+
+
+%%INCLUDE=faermit_%%KBA_NR.*
+
+
+
+* Daten (include)nach dem kopieren in das Sendeverzeichnis (outdir) nach erledigt(outdir_process ) verschieben
+%%INDIR=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_zum_KBA
+
+%%OUTDIR_PROCESSED=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_zum_KBA\erledigt
+
+* falls eine Datei ein zweites Mal gesendet werden soll DUP Ordner verwenden
+*%%OUTDIR_PROCESSED=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_zum_KBA\erledigt\dup
+ 
+*OpenFT Sendeverzeichnis
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\%%GEM3.\PMOWI
+
+
+%%EXCLUDE="-"
+%%ANSCHLUSS=KBA
+%%RICHTUNG=SENDEN
+
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\OPENFT01-%%$OYEAR..csv
+
+%%TEST=J
+%%DEBUG=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    08.04.2019  07:28:52  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

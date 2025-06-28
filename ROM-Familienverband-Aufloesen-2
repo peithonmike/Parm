@@ -1,0 +1,44 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : ROM                                                                  *
+***********************************************************************************
+*  Jobname     : ROM-Familienverband-Aufloesen-2
+*  Description : Familienverband-Aufloesen-2
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###Famileinverband-Aufloesen
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%STICHTAG *** %%ID.-%%RUNNR
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=6621-E01U0000
+*
+%%OKEWO_NR=P6621
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=Familienverband-Aufloesen-2
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U26701#XARCHIVO.E01DUMMY#J#GKB_N.E01DUMMY#1#JAHR_N.E01DUMMY#%%JJ#GEBDAT_N.E01DUMMY#%%STICHTAG#V_UZ331_LISTE.E01DUMMY#art=Job startid1=Auflösen Familienverbandid2=benutzer=Itkavom=bestand=begin=0000000011505836e01_pid=10253famname=vorname=gebdat=gebdat_srt=grund=adr1=adr2=adr3=adr4=adr5=adr6=adr7=adr8=om_bezpers=#$$

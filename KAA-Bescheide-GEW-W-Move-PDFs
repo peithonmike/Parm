@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-Bescheide-GEW-W-Move-PDFs
+* Copy GEW-Bescheide fùr Finanzen zur Druckerei Stadt Kaarst
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+%%OUTDIR=\\vfapps\apps\ITK\KMV\Produktion\5000\50101\Aktuell\gedruckt
+
+**OUTDIR_PROCESSED=\\vfapps\apps\ITK\KMV\Produktion\5000\50101\Aktuell\gedruckt
+
+%%INDIR=\\vfapps\apps\ITK\KMV\Produktion\5000\50101\Aktuell
+
+
+%%INCLUDE=*.pdf
+%%EXCLUDE=*xyz*
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprùft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=N
+%%DEBUG=N
+

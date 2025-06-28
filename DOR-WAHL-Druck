@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-WAHL-Druck
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* Output wird manuell über OKEWO als PDF erzeugt
+* und mit diesem Job auf den Prinserver nach Freigabe 
+* übertragen.
+* möglich Wahlarten und deren Prefix
+*                   (I)ntegrationswahl   %%GEM.__
+* BW KW EW          (W)ahl               %%GEM3._
+* B.Lieven
+*********************************************************** 
+* E.Hamers
+* M.Smits
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO-WAHL
+%%DESCRIPTION1= OKEWO Wahl Unterlagen %%STADT %%ORT an Printserver ITK senden
+
+
+%%WAHLART=W
+* %%INCLUDE=01*Wahllokal*Waehlerverzeichnis.pdf
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+

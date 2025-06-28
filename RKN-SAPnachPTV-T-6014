@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-SAPnachPTV-T-6014
+* 
+* 28.04.2017 - Umstellung auf neue Powershell-FTP 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_RheinkreisNeuss
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%CLIENT=IFP
+%%MANDANT=900
+%%irFilePattern=6014
+%%ptvProject=SAP_IMPORT\SAP_WOWIG
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\PTV_Worker_IR.ps1" -Src_Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_%MANDANT%.cred" -System "%CLIENT%" -Mandant "%MANDANT%" -IRFilePattern "%irFilePattern%" -PTVProjekt "\\msptv01\PTV-Projekte\%ptvProject%" 

@@ -1,0 +1,28 @@
+﻿*********************************************************** 
+* LIBMEMSYM 
+* ITK-PowerCLI-VMware-Test-1
+* Test eines PowerCLI-Skripts
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+**LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+
+**COMMAND=C:\WINDOWS\system32\shutdown.exe -r -f -c "REBOOT AUS CONTROLM"
+**COMMAND=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Programme\PowerCLI-Skripte\Control-M\ListAllVMsNeedingVMwareToolsUpdate.PS1 
+
+%%COMMAND=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Programme\PowerCLI-Skripte\Control-M\UpdateAllVMsNeedingVMwareToolsUpdateInvCenterTest.PS1
+
+%%MAIL-NOTOK=uwe.zimmermann@itk-rheinland.de
+%%MAIL02=produktions-steuerung@itk-rheinland.de;dietmar.bolten@itk-rheinland.de
+
+
+%%BETREFF-OK=%%JOBNAME ist beendet!!
+%%BETREFF-NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT-OK=Joblog: %%JOBNAME ist gelaufen. Bitte ueberpruefen.
+%%TEXT-NOTOK=Joblog: %%JOBNAME ist abgebrochen. PowerCLI-Skript ListAllVMsNeedingVMwareToolsUpdate.PS1 ist abgebrochen

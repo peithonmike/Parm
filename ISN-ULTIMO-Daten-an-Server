@@ -1,0 +1,107 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* ISN-ULTIMO-Daten-an-Server
+* 
+* 
+*********************************************************** 
+
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Put.ps1 
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Senden Ultimo-Daten per WinSCP und an Server
+%%AUFTRAGGEBER=H-G.Robertz
+
+*---------------------------------------------------------------
+%%U=nicht-verwendet
+%%P=nicht-verwendet
+%%IP=nicht-verwendet
+* Remote Datei Auswahl Maske
+%%INCLUDE="-"
+
+*---------------------------------------------------------------
+* Local Eingabe Directory der WinSCP Aktion
+* Test 
+%%INDIR=\\sapftpitk.sapitk.krzn.de/SST/IFQ/124/EXPORT
+
+
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open ISN-ULTIMO-PUT
+
+* ------------------------------------------------------------------
+* Kostenstellen
+* ------------------------------------------------------------------
+%%Z05=CD
+%%Z06=CD SapCostCenter
+*%%z07=dir
+%%Z08=put %%INDIR.\UL__DZBW_ZBF_LFBI_V_ULTIMO.CSV 
+
+* ------------------------------------------------------------------
+* Kostenarten
+* ------------------------------------------------------------------
+* home
+%%Z09=CD
+%%Z10=CD SapCostType
+*%%z11=dir
+%%Z12=put %%INDIR.\UL_SKA1_ULTIMO.CSV
+
+
+
+* ------------------------------------------------------------------
+* Lieferanten
+* ------------------------------------------------------------------
+* home
+%%Z13=CD
+%%Z14=CD SapCostType
+*%%Z15=dir
+%%Z16=put %%INDIR.\UL__DZBW_LFBI_V_ULTIMO.CSV
+
+
+
+%%Z29=close
+%%Z30=exit 
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     17.04.2019  12:01:21  zv173x2  neu 
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+

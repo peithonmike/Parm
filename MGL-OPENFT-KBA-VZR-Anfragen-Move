@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-OPENFT-KBA-VZR-Anfragen-Move
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%DESCRIPTION=VZR Anfragedateien 
+%%DESCRIPTION=VZR Anfragedateien der %%STADT %%ORT aus Anwender-Verzeichnis nach OpenFT kopieren
+
+
+
+* Anwender Eingabe Verzeichnis
+%%INDIR=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_zum_KBA
+%%OUTDIR_PROCESSED=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_zum_KBA\erledigt
+
+ 
+%%INFILE=VAN%%KBA_NR
+%%OUTFILE=%%INFILE
+%%OUTFILE_PROCESSED=%%INFILE
+%%EXCLUDE="-"
+%%ANSCHLUSS=KBA
+%%RICHTUNG=SENDEN
+*OpenFT Sendeverzeichnis
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\%%GEM3
+%%OUTFILE_PROCESSED=%%OUTFILE
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\OPENFT01-%%$OYEAR..csv
+
+%%TEST=N
+%%DEBUG=N
+%%ADD_TYP=TIMESTAMP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    19.06.2017  09:51:37  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

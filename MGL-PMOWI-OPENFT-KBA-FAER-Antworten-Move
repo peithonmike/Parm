@@ -1,0 +1,66 @@
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+* PMOWI 
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-PMOWI-OPENFT-KBA-FAER-Antworten-Move
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%DESCRIPTION=Antworten auf FAER Anfrage und Antworten auf FAER Mitteilungen 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* OpenFT Partner / Anschluss 
+* BAG, BZR,LZPD..... 
+%%ANSCHLUSS=KBA
+
+* SENDEN oder EMPFANGEN 
+%%RICHTUNG=HOLEN
+
+* Eingabe Directory WINOWIG Abholung ist im ODATE erledigt Ordner
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL\%%$ODATE.\erledigt
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\PMOWI
+
+
+%%INCLUDE=*faer*_%%KBA_NR.*
+*%%INCLUDE=*faerausk*_%%KBA_NR.*
+%%EXCLUDE="-"
+
+* Ausgabe Directory PMOWI
+%%OUTDIR=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_vom_KBA
+
+%%OUTFILE_PROCESSED=%%OUTFILE
+
+%%DEBUG=N
+%%TEST=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.03.2021  09:59:15  zv173x2 * Eingabe Directory WINOWIG Abholung ist im ODATE erledigt Ordner
+*    03.03.2021  09:44:08  zv173x2 kopieren der WINOWIG und PMOWI Daten an PMOWI
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

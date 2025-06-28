@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-Vzr-Mitteilung-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+
+%%DESCRIPTION=VZR Mitteillungen erzeugen 
+%%AKTION1=VZR: Mitteilung*
+%%AKTION2=FAER: Mitteilung*
+%%AUSGABE=vmi10040.txt
+
+
+* Düsseldorfer Host VVB Datei
+%%HOSTFILE_ERLEDIGT_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Kbamit\MITSEND\erledigt 
+%%HOSTFILE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Kbamit\MITSEND\MIT%%ODAY.%%OMONTH..SEND
+
+
+
+
+
+
+
+
+
+
+%%TEST=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.11.2014  08:48:34  zv173x2 Düsseldorf hat die VZR: Aktionen in FAER (FahrEignungsRegister) umbenannt.
+*    24.04.2014  12:01:46  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-R22W0602_JAVA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Eingabe\R22W0602_ST0030_Eingabe.txt
+%%INFILE2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Eingabe\R22W0602_ST0045_Eingabe.txt
+
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Ausgabe\R22W0602_ST0030_Ausgabe.txt
+%%OUTFILE2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Gba\SAS_Ausgabe\R22W0602_ST0045_Ausgabe.txt
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\R22W0602.jar -in30 %%INFILE1 -in45 %%INFILE2 -out30 %%OUTFILE1 -out45 %%OUTFILE2
+

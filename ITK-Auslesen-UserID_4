@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-Auslesen-UserID_TH
+
+* 
+*********************************************************** 
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DruckerPfad=\\msbmcc03\ctm_av\Drucker\
+
+%%COMMAND=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "\\MSXDDC03\C$\Users\Public\Desktop\Citrix-Verwaltung\ControlM\AuswertungUser.ps1"
+
+%%MAIL_NOTOK=michael.haude@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen

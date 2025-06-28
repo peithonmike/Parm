@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA-1100-BU
+* 
+* 
+*********************************************************** 
+ 
+%%PDF_INDIR=\\srv03.asp.rzne.de\ftp$\av\test\LOGA
+%%PDF_OUTDIR=\\srv03.asp.rzne.de\ftp$\av\test\LOGA\Buendel
+%%PDF_FILENAME=TEST.PDF
+%%PDF_FRONTCOVER=
+%%PDF_BACKCOVER=
+%%PDF_MASK=*.PDF
+%%PDF_EXE=\\msbmcbatch01\c$\CTM_AV\Bin\EXE\PDFtk\pdftk.exe 
+
+
+
+ 

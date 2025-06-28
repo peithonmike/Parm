@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-TOPCASH-T-COPY-PTV-Test
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%eindat=\\msbmcc03\CTM_AV\Parm\ptv-test.txt
+%%ausdat2=\\msptv03.itk.local\ptv-projekte\Test\100_ptv-test_D%%$ODATE..txt
+%%ausdat1=\\msbmcc03\CTM_AV\Parm\100_TopCash_D%%$ODATE..txt
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer TopCash_Amt32-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer TopCash_Amt32-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der TopCash_Amt32-Daten %%GEM3. zum PTV-Server ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der TopCash_Amt32-Daten %%GEM3. zum PTV-Server ist NOTOK.

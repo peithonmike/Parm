@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-VADM-WinSCP
+*
+* Auftrag ist von SAP-Gruppe
+* 
+*********************************************************** 
+%%AUFTRAGGEBER=J.Huhn
+
+
+
+* spezieles Format erzeugen
+%%DATE=%%$OYEAR.-%%OMONTH.-%%ODAY
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*******************************************************************************************************
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\VADM_Kopy_File.ps1" -InDir  \\vfitk\daten\Daten\ControlM\Scout\ -OutDirEin \\vfdussap\SAPHCM_P1P\Daten\VADM\Eingabe\ -OutDirInbox \\vfdussap\SAPHCM_P1P\Daten\Inbox\ -DatumParam %ODATE%
+*******************************************************************************************************
+
+
+
+
+
+
+* Datei Ergebnis Anzeige-Maske
+%%INCLUDE=*.*
+
+
+%%TEST=N
+%%DEBUG=N

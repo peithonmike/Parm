@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Kasse-T-FTC-MOVE_FILES_FRE
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_Neuss
+
+
+%%CLIENT=IFP
+%%MANDANT=100
+ 

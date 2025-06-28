@@ -1,0 +1,24 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Dormagen
+***********************************************************************************
+*  Jobname     : DOR-OK.VISA-BZR-Anfragen-Move
+*  APPLICATION : OK.VISA.OPENFT
+***********************************************************************************
+*********************************************************************************** 
+*
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKVISA
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\OKVisa\bzr
+ 
+%%SEARCH=UTF-8BQU0752R8141A*.txt
+%%OUTDIR=\\msbmcbatch01\c$\CTM_AV\OpenFT-Prod-Dateien\OKVisa
+
+
+
+* Count Find in ""
+%%FIND=
+%%COUNT=N
+
+%%TEST=N

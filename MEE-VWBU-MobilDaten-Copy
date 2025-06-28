@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-VWBU-MobilDaten-Copy
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+%%SENDMAIL=N
+%%ERLEDIGT=Backups
+
+
+
+%%SEARCH_DIR=%%WINOWIG_RUHENDER_VERKEHR_DIR
+%%DIR_SEARCH=ITKAVVExport_%%$ODATE*
+%%LOGFILE=\\%%NODEID.\c$\ctm_av\log\ErgebnisLOG\VWBU-%%$OYEAR..csv
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\VWBU\MEE
+
+
+
+%%TEST=N
+
+$$INCLUDE=\\%%NODEID.\c$\ctm_av\log\ErgebnisLOG\VWBU-%%$OYEAR..csv
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\VWBU-MEE-Einspielen-WiNOWiGmobil-Fälle.pdf
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.04.2015  07:22:16  zv173x2 NODEID
+*    02.08.2013  07:11:47  zv173x2 entfernen OUTFILE
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

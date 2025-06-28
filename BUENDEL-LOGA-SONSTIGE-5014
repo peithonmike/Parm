@@ -1,0 +1,87 @@
+* Bündeln der Elsterdateien, die nicht nach MSP gehen 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-LOGA-SONSTIGE-DRUCKEREI
+
+
+%%USE_PI=N
+%%USE_DRUCKEREI=J
+
+
+%%PRINTER_QUEUE=\\msprintff01\d$\R18personal
+
+* --------------------------------------------------------------------------------------------
+* PDF_INDIR
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* --------------------------------------------------------------------------------------------
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\KN
+
+* --------------------------------------------------------------------------------------------
+* PDF_OUTDIR
+* dahin kommt das erstellte Bündel
+* --------------------------------------------------------------------------------------------
+* INCLUDE/EXCLUDE
+%%OUTDIR=%%INDIR.\Buendel
+
+
+%%USE_OUTDIR_PROCESSED=J
+%%OUTDIR_PROCESSED=%%OUTDIR.\erledigt
+
+* Variablen mit Werten aus dem Jobname füllen 
+%%HMAN=%%SUBSTRING %%JOBNAME 13 4
+%%MAN=%%SUBSTRING %%JOBNAME 18 4
+%%LIST_NR=%%SUBSTRING %%JOBNAME 23 4
+%%ART=%%SUBSTRING %%JOBNAME 28 2
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+
+
+
+%%INCLUDE=KN_%%HMAN._%%MAN._%%ART._%%LIST_NR._*
+%%EXCLUDE="-" 
+
+
+
+
+
+* KN_1870_1872_03_5014_C1.pdf
+%%FILE=KN_%%HMAN._%%MAN._%%LIST_NR._%%ART
+
+
+* Trennblätter einfügen  J/N
+%%ADD_TRENNBLATT=N
+%%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\allgemein\Trennblatt-1-seitig.pdf
+%%KOPIE01=\\msbmcc03\ctm_av\PDF-COVER\allgemein\Kopie01-1-seitig.pdf 
+%%KOPIE02=\\msbmcc03\ctm_av\PDF-COVER\allgemein\Kopie02-1-seitig.pdf 
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\LOGA\1-seitig\AAA-%%GEM3.-%%FILE..Pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\LOGA\1-seitig\ZZZ-%%GEM3.-%%FILE..Pdf
+%%COPYCOUNT=0
+* Name der PDF Ausgabe-Datei 
+* so soll das Bündel heißen
+
+%%OUTFILE=%%GEM3.-KN_%%HMAN._%%MAN._%%LIST_NR._%%ART.-%%LOGA_DAT.-BU.PDF
+
+
+
+
+* Sammeldirectory wird nach verwendung gelöscht
+
+%%SAMMELDIR_DELETE=J
+
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\PI-DRUCK-%%$OYEAR..csv
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.08.2020  11:26:45  zv173x2 druckerei
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

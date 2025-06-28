@@ -1,0 +1,99 @@
+\\*PROD_Änderungen_!!!_erledigt  
+
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-SAP-Stammdaten-SapVendor
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+*---------------------------------------------------------------
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=nicht-verwendet
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=nicht-verwendet
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=nicht-verwendet
+%%INCLUDE=nicht-verwendet
+
+
+\\* PROD    Eingabe
+%%IN_SITE=ISN-SAP-KRZN-CTM_IFP_120
+
+
+*\\* Test    Eingabe
+*%%IN_SITE=ISN-SAP-KRZN-CTM_IFQ _125
+
+* Datei
+%%FILE=UL__ITKR_ZBF_LFBI_V_ULTIMO.csv
+
+
+%%REMOTE_OUTDIR=SapVendor
+
+
+\\*Prod Ausgabe
+%%OUT_SITE=ISN-sap2ultimo
+
+*\\*Test Ausgabe
+*%%OUT_SITE=ISN-sap2ultimoTEST
+
+
+
+
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Kopieren   von %%IN_SITE %%FILE nach %%OUT_SITE %%REMOTE_OUTDIR 
+%%DESCRIPTION=Kopieren : %%FILE    
+%%DESCRIPTION=von SITE : %%IN_SITE  nach  SITE:%%OUT_SITE   Directory:%%REMOTE_OUTDIR 
+
+
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%IN_SITE
+%%Z05=dir
+%%Z06=get %%FILE  C:\TEMP\
+
+%%Z11=option batch abort
+%%Z12=option confirm off
+%%Z13=option echo off
+%%Z14=open %%OUT_SITE
+%%Z15=CD %%REMOTE_OUTDIR
+%%z16=dir
+%%Z17=put  C:\TEMP\%%FILE 
+%%z18=dir
+
+%%Z19=close
+%%Z20=exit
+
+
+%%TEST=N
+%%DEBUG=N
+
+%%MAIL_NOTOK=schnittstellen-finanzwesen@itk-rheinland.de,produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen bitte ueberpruefen!!!
+%%TEXT_NOTOK=%%JOBNAME ist abgebrochen
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.02.2022  21:33:22  zv173x2 PROD
+*    23.08.2021  16:40:43  zv173x2 ISN-SAP-KRZN- CTM_IFQ_124 in ISN-SAP-KRZN-CTM_IFQ _125
+
+*    28.04.2021  08:43:00  zv173x2 ISN-sap2ultimoTEST anstatt ISN-ULTIMO-PUT
+*    06.09.2019  07:31:58  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

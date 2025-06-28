@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-COBRA-Druck-Mail
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-COBRA
+
+
+*****************************************************************************
+*   M A I L 
+*  
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*****************************************************************************
+*   Mailadressen 
+*;Ralf.Lingel@ITK-Rheinland.de;Produktions-Steuerung@itk-rheinland.de
+*****************************************************************************
+%%EMAIL-T=rettungsdienst@rhein-kreis-neuss.de
+* Test %%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de
+**SEARCH_DIR=%%PDF_SAMMELDIR_PROCESSED
+**SEARCH_DIR=\\mscobra01\DRUCKE$\%%GEM3.\AUSGABE
+%%SEARCH_DIR=\\msprintff01\druckdaten$\%%$OYEAR.\COBRA\BUENDEL\RKN
+
+%%SEARCH01=RKN-COBRA-Buchungsprotokoll-%%$ODATE..pdf
+%%SEARCH02=RKN-COBRA-Sammelliste-%%$ODATE..pdf
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL-U=Cobra %%ORT %%STADT %%ODATE_P :  Buchungsprotokoll und Sammelliste
+%%TEST=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.10.2014  11:52:51  zv173x2 umgebaut auf Printserver
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

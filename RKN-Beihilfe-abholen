@@ -1,0 +1,25 @@
+* *************************************************************
+* Table Variablen          
+* RKN-Beihilfe-T-Copy-PTV
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+%%SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+**EINGABE_VZ=\\10.109.1.194\Beihilfe_Export$
+%%EINGABE_VZ=\\RKN-Data01.n900d01.int.de\Beihilfe_Export$
+%%USERID=n900d01.int.de\KR01Beihilfe
+%%PW=ZS1@ITK_expo
+%%EINDAT1=BE*09-VERW.DAT
+%%EINDAT2=BE*10-VERW.DAT
+
+%%AUSGABE_VZ=\\msptv01\d$\PTV\Projekte\SAP_Export\BEIHILF_EXXX\InDir
+%%AUSDAT1=RKN_BEIHILFE_09_%%$ODATE
+%%AUSDAT2=RKN_BEIHILFE_10_%%$ODATE
+

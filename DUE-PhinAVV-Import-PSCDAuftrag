@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-PhinAVV-Import-PSCDAuftrag
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PHINAVV-MAIL
+
+
+* Parameter für Powershell Programm
+**PARAMETER=-ini prod.ini -import PSCDAuftrag -source_dir "IFP/400/Vollstreckung" -source_pattern "^SOLL_.*\.TXT" -import_maxsize 10000000
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass \\msphinbatch02\c$\PhinAVV\usr\phinavv.ps1 %%PARAMETER
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass PhinAVV-Batch-Import.ps1 -Environment C:\PhinAVV\env\Produktion.xml -Type PSCDAuftrag -Client IFP -Mandant 400 -MaxSize 10000000
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-KASSE-T-VOLLSTRECKUNG-IMPORT.pdf
+* ------------------------------------------------------------------

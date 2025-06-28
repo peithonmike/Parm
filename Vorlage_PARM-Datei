@@ -1,0 +1,34 @@
+****************************************************************
+*
+* JOBNAME:              %%JOBNAME
+* FOLDER:               %%FOLDER 
+*
+* Verfahren:            %%APPLICATION
+*
+* Ansprechpartner:      Vorname Name
+* Telefon:              02131 750-xxxx
+* Email:                Vorname.Name@itk-rheinland.de
+*
+****************************************************************
+
+****************************************************************
+*
+* Folgende Standard-PARM-Dateien werden standardmäßig bei allen
+* Jobs benutzt:
+*
+****************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+****************************************************************
+*
+* Wenn Powershell-Scripte im Test-/Debug-Modus ausgeführt 
+* werden sollen:
+*
+****************************************************************
+
+%%TEST=N
+%%DEBUG=N
+

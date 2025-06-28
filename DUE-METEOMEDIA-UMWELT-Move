@@ -1,0 +1,52 @@
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Move-Files.ps1 -INCLUDE %%INCLUDE
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-METEOMEDIA
+
+* ######################################################################################################
+* NetUse Security aktivieren 
+%%NETUSE=J
+
+* NetUse Security User
+* andere Schreibweise als im IP UP Member ( n900d01.int.de\KR01Beihilfe )
+* ip-up... %%U=KR01Beihilfe@n900d01.int.de
+
+* NetUse Pfad 
+%%NETUSE_PATH=\\vfdustvg\19\Amt19\Internet\FILE_T\Klima\
+
+* NetUse Laufwerk 
+%%LAUFWERK=Y:
+* ######################################################################################################
+
+
+
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\Umwelt
+
+* Datei Auswahl
+%%INCLUDE="104001_Duesseldorf-Uni-10*.csv"
+
+
+* Ausgabe Directory
+%%OUTDIR=\\vfdustvg\19\Amt19\Internet\FILE_T\Klima\
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+
+

@@ -1,0 +1,20 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* DUE-ORBIS-Adressdaten-Detert
+* 
+* 
+*********************************************************** 
+ 
+
+* spezieles Format erzeugen
+%%DATE=%%$OYEAR.-%%OMONTH.-%%ODAY._
+
+* * * * *  %%DATE=2016-11-09
+
+%%AUFTRAGGEBER=G.Ring
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+$$INCLUDE=\\msbmcc03\ctm_av\doc\bl\Auftrag-Detert-ORBIS-Adressdaten.pdf

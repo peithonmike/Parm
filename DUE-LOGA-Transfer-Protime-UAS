@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-Transfer-ProTime-UAS
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;martina-milka@itk-rheinland.de;
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen!!
+%%TEXT_NOTOK=Bitte überprüfen
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\DUE-LOGA-Protime_uas-2.ps1
+

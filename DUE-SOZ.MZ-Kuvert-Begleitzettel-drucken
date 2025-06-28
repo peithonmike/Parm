@@ -1,0 +1,77 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-Kuvert-Begleitzettel-drucken
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR  alle Files mit vorgegebener Maske an beliebige Anzahl Printer.
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-FileS-To-Printer.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOZ-DAT
+
+*
+*%%SOZ_DAT=%%JJJJ_MM_P1_%%$ODATE.%%MM_P1_%%$ODATE 
+
+* Eingabe Directory 
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\DUE\%%SOZ_DAT.\kuvert
+
+* Datei Auswahlmaske
+%%INCLUDE=DUE*
+
+
+* Drucker
+
+
+%%PRINTER=\\msdhp5\DLD163-AH76-OUT
+
+
+%%OUTDIR_PROCESSED=n
+
+%%EXCLUDE="-"
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.02.2020  09:59:59  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

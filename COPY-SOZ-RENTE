@@ -1,0 +1,32 @@
+* ------------------------------------------------------------------------------
+* S O Z I A L W E S E N 
+* ------------------------------------------------------------------------------
+* E I N M A L Z A H L E R
+* ------------------------------------------------------------------------------
+* ---------------------------------------------------------------
+
+* INDIR
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* ---------------------------------------------------------------
+*%%INDIR=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE
+* ---------------------------------------------------------------
+* ---------------------------------------------------------------
+*%%SAMMELDIR_PROCESSED=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\verarbeitet
+%%SAMMELDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\verarbeitet
+
+
+
+
+* Sachgebiet aus Jobnamen ermitteln
+%%SOZ_GKZ=%%SUBSTR %%JOBNAME 12 3
+
+
+* INCLUDE alle PDF Dateien des Mandanten 
+%%INCLUDE=*EZ-*2%%SOZ_GKZ._%%$ODATE..PDF
+%%EXCLUDE="-"
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SOZI\SOZ-PDF-Namen.csv
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragsbeschreibung\XXX-SOZ.EZ-BU.txt
+

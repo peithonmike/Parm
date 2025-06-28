@@ -1,0 +1,12 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-ETP-T-STOPWEBD-PROD
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "C:\Program Files\Scripte\kosy-services-stop_ROKI.ps1"
+
+%%MAIL=tobias.redmann@itk-rheinland.de;simone.thissen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de;erich.janke@itk-rheinland.de;dieter.assenmacher@itk-rheinland.de
+

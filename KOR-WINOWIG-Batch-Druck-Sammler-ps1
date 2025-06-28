@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KOR-WINOWIG-Batch-Druck-Sammler
+* 
+* 
+*********************************************************** 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+%%DESCRIPTION=WinOwig Druckdaten aus Verfahrensordner in AV Druck-Queue kopieren
+
+* Kuvertieren J/N   default =N 
+%%KUVERT=N
+%%INDIR=%%WINOWIG_DRUCK_DIR.\P%%$ODATE
+%%INCLUDE="*.prn"
+%%EXCLUDE ="*Verwarngeldangebot_Betroffener*.prn"
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\WINOWIG\druckdateien
+
+%%VORBLATT =\\srv03\ftp$\av\WINOWIG\Deckblatt-Source\MNR_%%GKZ._AAA-Deckblatt.PRN
+%%ENDEBLATT=\\srv03\ftp$\av\WINOWIG\Deckblatt-Source\MNR_%%GKZ._ZZZ-Deckblatt.PRN
+
+* Diese Mail benötigt nur die AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+  
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-AKTIONSTARTEN.BAT
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     03.02.2017  11:04:33  zv173x2  neu
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+

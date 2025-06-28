@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ-Sodatis-SEDA-724-Rename-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske unter neuem Namen.
+* Der neue Name ergibt sich aus der Vorgabe der NAMES Varibalen, der in der Ursprungsdatei auch enthalten ist. 
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* CTM-Command Aufruf :
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\bl\job\Job-Rename-Copy-Move-Sodatis.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SODATIS-SEDA
+
+%%INCLUDE=nbere-*NE*%%SOZ_GKZ._*.txt
+
+
+* Ausgabe Directory
+%%OUTDIR=\\vfne\53\Amt53\Themen\KDN\seda\%%SEDA_DAT
+
+%%USE_OUTDIR2=nicht-verwendet
+%%OUTDIR2=
+
+%%AUFTRAGGEBER=Frau Dudek
+* erledigt Ordner
+*% %OUTDIR_PROCESSED=aus Member SODATIS-SEDA
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    06.11.2018  08:28:50  zv173x2 Ordner mm_jjjj
+*    03.09.2018  10:20:24  zv173x2 USE_OUTDIR2 für Neuss Amt50
+*    03.08.2018  12:59:05  zv173x2 OUTDIR2
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-VADM-Vert_ANW_Mischen_02
+*
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\GovConnect.ps1"
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\LOGA_Vert_ANW_Mischen.ps1" -InDir "\\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\" -OutDir "\\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\" -InFILE_01 "Vertrag_Komp_03_" -InFILE_02 "Azubis_Komp_01_REG_" -OutFILE_01 "Vertrag_Komp_04_" -DatumParam %ODATE%
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\LOGA_Vert_ANW_Mischen.ps1" -InDir \\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\ -OutDir \\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\ -InFILE_01 "Vertrag_Komp_03_" -InFILE_02 "Azubis_Komp_01_REG_" -OutFILE_01 "Vertrag_Komp_04_" -DatumParam %ODATE%

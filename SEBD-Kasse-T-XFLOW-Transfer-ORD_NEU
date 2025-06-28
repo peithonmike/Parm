@@ -1,0 +1,19 @@
+***********************************************************
+* LIBMEMSYM 
+* SEBD-Kasse-T-XFLOW-Transfer-ORD
+* Job ist fuer M.Gehring
+
+*  07.04.2017 - Umstellung auf Powershell FTP
+* 
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass "%PSScripts%\DTAUS\SEBD-XFLOW-Transfer-ORDER.ps1 -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_420.cred"
+

@@ -1,0 +1,38 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : KOR                                                                  *
+***********************************************************************************
+*  Jobname     : KOR-DTA-KircheEV-Woche
+*  Description : DTA-KircheEV-Woche
+***********************************************************************************
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OK.EWO-DTA-MONTAG
+*
+***********************************************************************************
+
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=4733-E01U0000
+*
+%%OKEWO_NR=P4733
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=J
+%%CHECKBAT=\\msbmcc03\ctm_av\bin\BAT\Check-Montag.bat
+  
+  
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+%%TEST=N
+*  Jobtext                                                       
+*  muss mit %%JOBTEXT=%%OKEWO_NR CTM-%%ID.-%%RUNNR anfangen
+%%JOBTEXT=%%OKEWO_NR CTM-%%ID.-%%RUNNR %%JOBNAME %%VON - %%BIS
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U22803#UEB_N.E01DUMMY#REL_01-#DATUM1_N.E01DUMMY#%%VON#DATUM2_N.E01DUMMY#%%BIS#MEDIUM_N.E01DUMMY#DATENTRAEGER#GKB.E01E300#1#B_LAND.E01DUMMY#NW#V_UZ331_LISTE.E01DUMMY#$$

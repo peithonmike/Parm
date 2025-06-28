@@ -1,0 +1,5 @@
+* LIBMEMSYM
+* Stichtag ist immer der 10. Tag im Monat 02,05,08,12
+
+%%STICHTAG=10.%%OMONTH..%%$OYEAR  
+%%VLK-LOGTEXT=%%STICHTAG

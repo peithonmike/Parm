@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-System-InstallFP-Agent-QR-Stoppen
+* Server Reboot
+* 
+***********************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\InstallFP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\QR_stoppen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE 
+
+%%SYSOUT=\\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%TEST=N

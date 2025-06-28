@@ -1,0 +1,81 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KOR-SOZ-EZ-Druckdaten-Copy nach Korschenbroich
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-MZ
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-SOZ-KOR
+
+
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\SOZ-MZ\BUENDEL\MZ-%%SOZ_DAT.
+%%INCLUDE=KOR-SOZ-MZ-020-*-BU.PDF
+
+%%EXCLUDE="-"
+* *********************************************************************
+* NETUSE_S ecurity
+%%NETUSE=J
+
+* *********************************************************************
+* Path für den erweiterten Zugriff
+* NETUSE_PATH wird als Einstieg vom Netuse benötigt
+* *********************************************************************
+
+%%NETUSE_PATH=\\srv06.korschenbroich.ads.de\TransferSoziales
+
+
+
+             
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+
+ 
+
+* ---------------------------------------------------------------
+* OUTDIR wird vom CopyProgramm benötigt
+* Hier werden die PdfDateien hineinkopiert .
+* ---------------------------------------------------------------
+
+%%OUTDIR=\\srv06.korschenbroich.ads.de\TransferSoziales
+
+
+%%OUTDIR_PROCESSED=%%INDIR.\kopiert
+
+%%AUFTRAGGEBER=Herr Ganter-Bödecker KOR
+
+
+
+
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+

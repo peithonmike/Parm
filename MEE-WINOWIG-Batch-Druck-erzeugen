@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-WINOWIG-Batch-Druck-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-WOSPOOL-PRINT.BAT
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%TEST=N
+
+
+

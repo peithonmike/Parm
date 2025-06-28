@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-ETP-T-PRELOAD
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**COMMAND="c:\Program Files\HKS Informatik\Kosy Enterprise WebServer\kosy-service-worker-preload-job_wrapper.bat"
+%%COMMAND="C:\Program Files\HKS Informatik\Kosy Enterprise WebServer (STADTMG)\kosy-service-worker-preload-job_wrapper.bat"
+
+%%MAIL02=Tobias.Redmann@itk-rheinland.de;Simone.Thissen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de;Michael.Meuser@moenchengladbach.de;Jennifer.Grzeschik@moenchengladbach.de;Benjamin.Elias@moenchengladbach.de;Lars.Mackenbach@moenchengladbach.de;dieter.assenmacher@itk-rheinland.de;erich.janke@itk-rheinland.de
+

@@ -1,0 +1,47 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-SOZ-MZ-BESCH-Copy
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-SOZ-MZ
+
+ 
+
+%%INDIR=%%PDF_INDIR
+
+%%INCLUDE=nbere-141-NE_PFVX0328_KBES-2016_%%SOZ_DAT..PDF
+
+%%EXCLUDE="-"
+
+%%OUTDIR=\\srv03\qaspka$\daten\orgaeinheit\Daten_Amt50\AKDN-Bescheide
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+  
+
+%%STEPNAME=Kopieren-Bescheide
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden mehr Variablenwerte angezeigt
+%%DEBUG=N
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.06.2017  10:57:36  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

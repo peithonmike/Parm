@@ -1,0 +1,39 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant :    alle                                                              *
+***********************************************************************************
+*  APPLICATION : MIGEWA.OPENFT 
+*  Description : BZR-Anfragen
+***********************************************************************************
+***********************************************************************************
+* Verschieben Anfragen aus dem Mandantenverzeichnis in das Sendeverzeichnis 
+* auf dem OpenFT Server
+*
+
+
+* BFJ_ID des Mandanten übernehmen 
+* wird bei der Anfrage nur nachrichtlich verwendet
+%%BFJ_ID=%%BFJ_ID_MIGEWA
+
+
+%%RICHTUNG=AnfrageMove
+
+
+* Input_dir ist die Mandanten-Directory, in der die Anfrage liegt
+* wird im Member MIGEWA_%%GEM3 definiert
+%%INPUT_DIR=%%MIGEWA_BZR_EXPORT
+
+
+
+* Output_dir ist die Sendedirectory auf dem OpenFT Server  
+* wird im Member MIGEWA_%%GEM3 definiert
+%%OUTPUT_DIR=%%MIGEWA_BZR_DIR_ANFRAGE
+ 
+
+
+
+
+%%SYSOUT          =%%OPENFT_SYSOUT
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+*

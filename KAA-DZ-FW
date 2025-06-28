@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-DZ-FW
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\system
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+
+%%eindat=\\vfapps\apps\ITK\KMV\Produktion\5000\Drucklisten\*.pdf
+
+
+%%Schedtab=KAA-DZ-Batchportal2-Tag
+**Job1=KAA-DZ-Bescheiddruck
+%%Job1=KAA-DZ-Copy-Filer
+**Job2=KAA-Bescheiddruck-Mail
+
+
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+
+
+%%BETREFF_OK=Druckdatei DZ-Batchportal gefunden OK
+%%BETREFF_NOTOK=Druckdatei KAA DZ-Batchportal nicht gefunden
+
+%%TEXT_OK=Joblog: Eine Druckdatei steht zur Verarbeitung an
+%%TEXT_NOTOK=Joblog: Es wurde keine Druckdatei gefunden
+ 

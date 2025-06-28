@@ -1,0 +1,11 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Kasse-T-GARATH_FDI_INFOM
+* Job ist von Joerg Huhn - 7.9.2017/Schr.
+* 
+*********************************************************** 
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE

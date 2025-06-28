@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-BEHERBUNG-Test-AMP-Move-Anlagen-Intern
+* Move Anlagen intern damit AMP sie prüft
+*********************************************************** 
+%%AUFTRAGGEBER=David Mertens
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=Move Formulare intern zur Prüfung durch AMP
+%%RICHTUNG=Copy-from-Cloud
+
+
+* Eingabe Directory 
+* Directory in der Cloud
+* immer mit Laufwerksbezeichnung
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files-check.ps1
+
+%%INDIR=\\MSAMPSCAN01\beherbergung$\DUE\in
+
+
+* Datei Suchmaske
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory für die Anlagen
+%%OUTDIR=\\MSAMPSCAN01\beherbergung$\DUE\check
+
+
+%%TEST=N
+%%DEBUG=N

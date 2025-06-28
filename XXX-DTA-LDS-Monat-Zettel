@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-DTA-LDS-Monat-Zettel
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###VLK-MONAT_01
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+*  Druckvorlage
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\NACH-DTA-LDS-Monat.skels
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\NACH-DTA-LDS-Monat.skels

@@ -1,0 +1,37 @@
+* *******************************************************************************
+* LIBMEMSYM
+* J A S P E R  
+* S Y S T E M F I L E 
+* -------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-JASPER
+
+* *******************************************************************************
+* sonstige Variablen
+* *******************************************************************************
+* ID und RUNNR werden als eindeutige Kennzeichnung im OK EWO Jobnamen aufgenommen
+* *******************************************************************************
+
+%%ID=%%ORDERID
+%%RUNNR=%%RUNCOUNT
+
+*%OKEWO_SYSOUTLIB =C:\okewo\ewoav\tmp\e01_%%GEM3
+%%JASPER_OUTPUT=\\msbmcc03\ctm_av\Jasper-Output
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+*%%SYSOUT=%%JASPER_SYSOUT
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    13.06.2013  12:00:00  zv171e3 SYSOUT auskommentiert
+*    02.04.2012  17:27:48  zv173x2 D_ODATE vor SYSTEM
+*    02.04.2012  11:06:52  zv173x2 c_bmc in c$
+*    01.04.2011  14:53:42  ZV173X2 IP-UP-JASPER eingefügt IP_UP verschoben
+*    01.03.2011  10:33:38  ZV173X2 JasperSysout anstatt OKEWO_Sysout
+*    18.02.2011  11:14:44  ZV173X2 Blankzeilen am Ende entfernt wg CTM BUG
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

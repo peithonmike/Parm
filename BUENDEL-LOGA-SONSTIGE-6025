@@ -1,0 +1,99 @@
+* Bündeln der Elsterdateien, die nicht nach MSP gehen 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-USE-DRUCKEREI-NEUSS
+
+%%USE_PI=N
+%%USE_DRUCKEREI=J
+
+
+
+%%ONLY_BUENDEL=N
+%%PDF_DEL_SAMMELDIR=N
+%%PRINTER_QUEUE=\\msprintff01\d$\R18personal
+
+* --------------------------------------------------------------------------------------------
+* PDF_INDIR
+* Hier stehen die PDF Dateien die über Mask in den Sammelordner kopiert
+* werden, um von da aus gebündelt zu werden
+* --------------------------------------------------------------------------------------------
+%%LOGA_SACHG=%%SUBSTR %%JOBNAME 10 15
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\Elster
+%%PDF_INDIR=%%INDIR
+%%PDF_SAMMELDIR          =%%PDF_INDIR.\%%LOGA_SACHG.
+%%PDF_SAMMELDIR_PROCESSED=%%PDF_SAMMELDIR.\erledigt
+%%ANZAHL=1
+* --------------------------------------------------------------------------------------------
+* PDF_OUTDIR
+* dahin kommt das erstellte Bündel
+* --------------------------------------------------------------------------------------------
+* INCLUDE/EXCLUDE
+%%OUTDIR=%%INDIR.\Druck
+
+
+%%USE_OUTDIR_PROCESSED=J
+%%OUTDIR_PROCESSED=%%OUTDIR.\erledigt
+
+* Variablen mit Werten aus dem Jobname füllen 
+%%HMAN=%%SUBSTRING %%JOBNAME 13 4
+%%MAN=%%SUBSTRING %%JOBNAME 18 4
+%%LIST_NR=%%SUBSTRING %%JOBNAME 23 4
+%%ART=%%SUBSTRING %%JOBNAME 28 2
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+
+
+
+%%INCLUDE=KN_%%HMAN._%%MAN._%%ART._%%LIST_NR._*
+%%EXCLUDE="-" 
+
+
+
+
+
+* KN_1870_1872_03_5014_C1.pdf
+%%FILE=KN_%%HMAN._%%MAN._%%LIST_NR._%%ART
+
+
+* Trennblätter einfügen  J/N
+%%ADD_TRENNBLATT=N
+%%TRENNBLATT=\\msbmcc03\ctm_av\PDF-COVER\allgemein\Trennblatt-1-seitig.pdf
+%%KOPIE01=\\msbmcc03\ctm_av\PDF-COVER\allgemein\Kopie01-1-seitig.pdf 
+%%KOPIE02=\\msbmcc03\ctm_av\PDF-COVER\allgemein\Kopie02-1-seitig.pdf 
+
+* Name der PDF Ausgabe-Datei 
+* so soll das Bündel heißen
+
+%%OUTFILE=%%GEM3.-KN_%%HMAN._%%MAN._%%LIST_NR._%%ART.-%%LOGA_DAT.-BU.PDF
+
+
+
+
+* Sammeldirectory wird nach verwendung gelöscht
+
+%%SAMMELDIR_DELETE=J
+
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\PI-DRUCK-%%$OYEAR..csv
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.10.2020  17:02:02  zv173x2 PI=n
+*    17.08.2020  16:16:38  zv173x2 Druckerei
+*    01.07.2020  07:39:18  zv173x2 PDF_DEL_SAMMELDIR=N
+
+*    01.07.2020  07:34:25  zv173x2 ONLY_BUENDEL
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+*** FEHLER *** Variable PDF_SAMMELDIR_PROCESSED ist nicht gefuellt!
+  *** FEHLER *** Variable PDF_SAMMELDIR ist nicht gefuellt!
+  *** FEHLER *** Variable PDF_INDIR    ist nicht gefuellt!
+

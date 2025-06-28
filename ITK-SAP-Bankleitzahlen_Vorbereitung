@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-SAP-Bankleitzahlen_Vorbereitung
+* 
+***********************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%OWNER=ITK\controlm
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\ReadBLZ_Manuell.ps1" -TechBankFile "%PSScripts%\blz_bundesbank_99999999.txt" -AllBankFile "%PSScripts%\blz-aktuell-txt-data.txt"
+
+
+
+

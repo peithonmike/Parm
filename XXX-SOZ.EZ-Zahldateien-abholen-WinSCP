@@ -1,0 +1,65 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* XXX-SOZ.EZ-Zahldateien-abholen-WinSCP
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get-3.ps1 
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+
+* WinSCP Session SITE
+%%SITE=CC-SOZ-NEUSS
+
+%%SERVER_TEXT= Lesezugriff auf %%SITE
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=SOZ-EZ Zahldateien abholen
+%%WINSCP_EXE=C:\Program Files (x86)\WinSCP\WinSCP.exe
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=EZ/%%$ODATE
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=500.SOZ.SRZ.*-SEPAEZ.*_CT_%%$ODATE
+
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\soz\EZ\UTF8
+
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get %%INCLUDE  %%OUTDIR
+%%Z07=close
+%%Z08=exit 
+*%%Z09=?
+*%%Z10=?
+
+
+%%TEST=J
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+%%DEBUG=N
+
+

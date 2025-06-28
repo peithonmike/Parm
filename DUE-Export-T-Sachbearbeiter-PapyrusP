@@ -1,0 +1,12 @@
+* *************************************************************
+* Table Variablen          
+* DUE-Export-T-Sachbearbeiter-PapyrusT
+* 11.05.2017 - Umstellung auf neue Powershell-FTP
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\Copy_SB-Tabelle_2_Papyrus.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_400.cred"  -LocalDir "\\mspapyrus02\d$\ISIS_SOURCE\ENVIRONMENT" 

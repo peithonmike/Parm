@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-OPENFT-EWO-GZR-Anfragen-Senden
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job versendet Anfragen usw per OpenFT.
+* Nach erfolgreichem senden werden die Einagbedateien nach OUTDIR_PROCESSED verschoben (wird angelegt falls nicht vorhanden)
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-OpenFT-Senden.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* Eingabe Directory der Anfragen
+%%INDIR=\\msopenft01\c$\ctm_av\openft\senden\BZR\GZR\okewo\%%GEM3
+
+* Datei Auswahl Maske
+%%INCLUDE=*AG-U0752*
+
+
+* Anschluss\Partner  LZPD,BZR usw 
+%%ANSCHLUSS=BZR
+
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+%%TRANSFER_ADMISSION=ft#KD946Sa
+
+ 
+
+*  Speicherort für gesendete Anfragen
+%%OUTDIR_PROCESSED=\\msopenft01\c$\ctm_av\openft\senden\BZR\GZR\okewo\gesendet\%%GEM3
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+
+
+***********************************************************************************
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.05.2015  15:52:51  zv173x2 \%%GEM3
+*    06.05.2015  07:02:48  zv173x2 neuer Jobname für NEU-OK.EWO-GZR-Anfragen
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

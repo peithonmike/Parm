@@ -1,0 +1,18 @@
+*********************************************************************************
+*  LIBMEMSYM
+*  T R A V I C - L I N K (ONGUM) 
+*  S Y S T E M F I L E 
+*********************************************************************************
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\TIP-UP-TRAVIC-LINK
+
+%%LOGFILE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\TRAVIC-LINK-%%$OYEAR..csv
+
+ 
+

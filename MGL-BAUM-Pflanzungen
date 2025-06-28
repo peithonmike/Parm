@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-BAUM-Pflanzungen
+* 
+* FTP -> daten.rhein-kreis-neuss.de
+* Ansprechpartner bei der Stadt MG: 
+* Ingo Lenzen, Tel. ???, Ingo.Lenzen@moenchengladbach.de
+*********************************************************** 
+ 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-Baum-NEU
+
+%%INCLUDE=move_export.csv
+%%INDIR=???
+%%MOVE_OVERWRITE=J
+%%SET_NEWNAME=N
+**PREFIX=%%$OYEAR.%%OMONTH.%%ODAY._
+%%OUTDIR_PROCESSED=nicht-verwendet
+**OUTDIR_PROCESSED=Erledigt
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-WinSCP-Put-cf.ps1
+
+%%MAIL-OK=Ingo.Lenzen@moenchengladbach.de
+%%BETREFF-OK=Baumpflanzungen Stadt MGnach recast-it.net
+%%TEXT-OK=Daten nach stadt-mg-web-01.web.stadt-mg.recast-it.net erfolgreich uebertragen.
+%%MAIL-NOTOK=produktions-steuerung@itk-rheinland.de
+%%BETREFF-NOTOK=%%JOBNAME - Abbruch - Bitte ueberpuefen
+%%TEXT-NOTOK=FTP Baumpflanzungen Stadt MG -> stadt-mg-web-01.web.stadt-mg.recast-it.net NOTOK
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+
+%%SITE=Baumpflanzungen_Stadt_MG
+**SITE=RKN-Stadtgruen
+%%WINSCP_AKTION=Baumpflanzungen Stadt MG nach recast-it.net
+
+%%Z01=option batch continue
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+**Z04=open p321218f11@daten.rhein-kreis-neuss.de
+%%z07=dir
+%%Z09=put %%INDIR.\%%INCLUDE 
+%%z10=dir
+ 
+*%%Z29=close
+%%Z30=exit 
+
+%%TEST=N
+%%DEBUG=N

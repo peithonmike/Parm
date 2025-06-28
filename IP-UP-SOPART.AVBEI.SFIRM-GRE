@@ -1,0 +1,18 @@
+*--------------------------------------------------------------------------------------
+*
+* Zugriff auf den Anwendungsserver SFirm  
+* Grevenbroich 
+* Zugriff über NET USE
+* 07.04.2016 13999  user
+*  
+*--------------------------------------------------------------------------------------
+%%IP="\\vfgv1\voldaten1\Daten\FB 20\FD 20.2 Finanzbuchhaltung\Zahlungsabwicklung\Mündelgelder"
+%%U=ITK\GR20500
+*%%U=ITK\GR13999
+%%P=4VvkPFz3
+
+
+
+
+
+

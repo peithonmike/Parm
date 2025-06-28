@@ -1,0 +1,20 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  
+***********************************************************************************
+*  Jobname     : DUE-EVK_Copy_MapinfoAdressen
+*  APPLICATION : EVK
+***********************************************************************************
+*
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+**COMMAND=\\msbmcc03\ctm_av\bin\bat\copy_lhd_haus_in.bat
+%%COMMAND=\\msgeomap03.itk.local\d$\Programme\Batchprogramme\ASP\copy_lhd_haus_in.bat
+%%MAIL_NOTOK=hendrik.possberg@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME abgebrochen
+%%TEXT_NOTOK=%%JOBNAME - Copy Mapinfo-Adressen abgebrochen_

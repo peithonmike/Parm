@@ -1,0 +1,8 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-Shout-msbmcc03
+* 
+* Test SHOUT Tabelle SHOUT_S bzw SHOUT_A
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSLOG

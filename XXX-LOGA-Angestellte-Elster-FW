@@ -1,0 +1,33 @@
+
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+%%SITE=LEMGO-LOGA-ABRECHNUNG
+%%PROTOKOLL=WebDav
+%%INCLUDE=*6025*.pdf
+%%REMOTE_INDIR=/1030/LOGA/PROD/out/Export/ELSTER_AN
+
+%%HOSTKEY=
+%%IGNORE_HOSTKEY=J
+* Logfile muss im C: Laufwerkliegen
+%%LOGFILE=c:\temp\%%JOBNAME._winscp.log
+%%SHOW_RESULT=J
+
+
+
+%%TEST=N
+%%DEBUG=N
+************************************************************************ 
+ 
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.09.2020  14:15:30  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

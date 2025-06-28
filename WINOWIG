@@ -1,0 +1,219 @@
+
+*********************************************************************************
+*  LIBMEMSYM
+*  W I N O W I G 
+*  S Y S T E M F I L E 
+*********************************************************************************
+%%CHECK_DATE=N
+
+
+
+* RDATE im WINOWIG Format
+%%RDATUM=%%$OYEAR.-%%OMONTH.-%%ODAY
+
+
+* ___ D R U C K A U S G A B E    _______________________________________________
+
+* WinOwig Treiber 
+* Stand 17.02.2014
+* muss local auf dem MSOWIGBAT01 installiert sein
+* 
+* bei Änderung WINOWIG_DRUCK_DIR auch anpassen
+* alt %%WINOWIG_TREIBER=\\msdrn01\ITKR-R18_PCL_D
+
+* falsch %%WINOWIG_TREIBER=\\MSDRE01\ITKR-R18_PCL_D_WINOWIG
+
+* alt     %%WINOWIG_DRUCK_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\winowig\ftp\ausgang\druckdateien\WiNOWiG_HP
+* alt     %%WINOWIG_DRUCK_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\winowig\ftp\ausgang\druckdateien\__msdrn01_ITKR-R18_PCL_D
+* falsch  %%WINOWIG_DRUCK_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\winowig\ftp\ausgang\druckdateien\__MSDRE01_ITKR-R18_PCL_D_Winowig
+
+
+
+
+
+*
+* Jüchen, Düsseldorf und Mönchengladbach haben einen eigenen Treiber
+* wird im LIBMEMSYM gJUE angelegt
+* wird im LIBMEMSYM gDUE angelegt
+* wird im LIBMEMSYM gMGL angelegt
+
+
+*********************************************************************************
+*                      g e n e r e l l                                          * 
+*********************************************************************************
+%%WINOWIG_TREIBER=Winowig_Xerox
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+%%WINOWIG_DRUCK_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\winowig\ftp\ausgang\druckdateien\Winowig_Xerox
+
+
+
+
+
+
+* Mail
+
+*****************************************************************************
+*   M A I L   und E R R _ M A I L 
+*   Im Fehlerfall werden die Ansprechpartner benachrichtigt   
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*   möglich nur Empfänger %%EMAIL_T
+*           und Kopie     %%EMAIL_CC 
+*****************************************************************************
+*   Mailadressen 
+*****************************************************************************
+
+
+%%ERR_EMAIL_T=Dieter.Guderley@itk-Rheinland.de;andreas.hillebrands@itk-rheinland.de
+%%ERR_EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+%%EMAIL_T=andreas.hillebrands@itk-rheinland.de
+
+%%EMAIL_CC=produktions-steuerung@itk-rheinland.de
+
+%%EMAIL_U=produktions-steuerung@itk-rheinland.de
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%ERR_EMAIL_U=Job-Fehlerhaft  CC:%%COMPSTAT  %%JOBNAME
+
+%%EMAIL_U=Job-Nachricht   CC:%%COMPSTAT  %%JOBNAME
+
+
+
+
+
+
+*********************************************************************************
+*                      O P E N F T                                              * 
+*********************************************************************************
+
+%%TRANSFER_ADMISSION=?????  ft#KD946Sa
+%%ANSCHLUSS=toKBAneu ?????
+%%BFJ_ID_WINOWIG=wird-nicht-benutzt
+
+
+
+
+
+*********************************************************************************
+*                      W  I  N  O  W  I  G                                      * 
+*********************************************************************************
+
+%%WINOWIG_LOG=\\srv03\sys_all$\Programme\Winowig\daten\syslog\syslog%%$OYEAR.-%%OMONTH..log
+
+
+%%HALTER_ANFRAGEN=kan10140.txt
+%%VZR_ANFRAGEN=van10140.txt
+%%VZR_MITTEILUNGEN=vmi10140.txt
+
+
+
+TREIBER
+
+* ___ S O L L S T E L L U N G E N _______________________________________________
+
+%%WINOWIG_SOLL_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\winowig\ftp\ausgang\soll
+
+
+* ___ B e s c h e i d e _________________________________________________________
+
+%%WINOWIG_BESCHEID_DIR=?\\srv03\sys_all$\Programme\Winowig\Daten\zentraleBescheide
+
+* ___ Z A H L U N G E N _________________________________________________________
+
+*%%WINOWIG_ZAHLUNGEN_DIR=\\srv03\sys_all$\Programme\Winowig\Daten\zentraleBescheide
+%%WINOWIG_ZAHLUNGEN_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\zahlungen
+
+%%WINOWIG_ZAHLUNGEN_AOWI_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\winowig\AOWI\ftp\eingang\zahlungen
+
+* ___ R U H E N D E R   V E R K E H R ______________________________________________
+
+*%%WINOWIG_ZAHLUNGEN_DIR=\\srv03\sys_all$\Programme\Winowig\Daten\zentraleBescheide
+%%WINOWIG_RUHENDER_VERKEHR_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\ruhenderVerkehr
+
+
+
+* ___ P r o t o k o l l e _______________________________________________________
+
+%%WINOWIG_PROTOKOLLE_DIR=\\srv03\sys_all$\Programme\Winowig\Daten\zentraleProtokolle
+
+
+
+* ___ S y s l o g _______________________________________________________________
+
+%%WINOWIG_SYSLOG_DIR=\\srv03\sys_all$\Programme\Winowig\Daten\syslog
+
+
+
+
+* ___ K B A - ANFRAGEN und MITTEILUNGEN ________________________________________
+
+* KBA Anfrage Directory des Mandanten 
+%%WINOWIG_KBA_EXPORT=\\srv03\sys_all$\Programme\Winowig\ftp\ausgang\kba
+
+
+* KBA Anfrage Directory auf dem OpenFT Server (von da aus wird zum KBA gesendet)                   
+
+* Openft nicht aktiv WINOWIG_KBA_DIR_ANFRAGE=\\msbmcbatch01\c$\CTM_AV\OpenFT-Prod-Dateien\WINOWIG
+%%WINOWIG_KBA_DIR_ANFRAGE=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\WINOWIG\Anfragen
+
+
+
+
+
+* ___ K B A - Antworten_________________________________________________________
+
+* KBA Antwort Empfangsdirectory auf dem OpenFT Server (dahin kommen die Daten vom KBA zurück)                   
+* Openft nicht aktiv %%WINOWIG_KBA_DIR_ANTWORT=\\msbmcbatch01\c$\CTM_AV\AntwortKBA
+%%WINOWIG_KBA_DIR_ANTWORT=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\WINOWIG\Antworten
+
+
+* KBA Antwort EmpfangsDirectory des Mandanten 
+%%WINOWIG_KBA_IMPORT=\\srv03\sys_all$\Programme\Winowig\ftp\eingang\kba
+
+* 
+%%AUFTRAGGEBER=A.Hillebrands
+
+%%IMPORT_EXE=\\srv03\sys_all$\Programme\winowig\prog\ImportNT.exe
+%%AKTIONSTARTEN=aktionstarten.exe
+%%WOSPOOL=WoSpool.exe
+%%WINOWIG_PROG_PATH=\\srv03\sys_all$\Programme\winowig\prog\
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.10.2019  13:01:07  zv173x2 aktionstarten.exe WoSpool.exe WINOWIG_PROG_PATH
+ 
+
+*    22.10.2019  10:31:35  zv173x2 %%IMPORT_EXE=\\srv03\sys_all$\Programme\winowig\prog\ImportNT.exe
+*     04.07.2018  11:31:52  zv173x2  AUFTRAGGEBER
+*    18.10.2016  10:53:37  zv173x2 Winowig_Xerox
+
+*    17.10.2016  09:06:12  zv173x2 \\MSDRE01\ITKR-R18_PCL_D_Winowig
+*    24.10.2014  09:17:48  zv173x2 Err_mail....
+*    14.04.2014  10:11:58  zv173x2 sigrun entfernt
+*    26.02.2014  10:57:33  zv173x2 Standard Treiber nach oben, 
+*                                  damit er zB durch gDue überschrieben werden kann 
+*    17.02.2014  10:27:20  zv173x2 Local ITKR-R18_PCL_D
+*    14.02.2014  11:38:57  zv173x2 \\msdrn01\ITKR-R18_PCL_D
+*    12.02.2014  14:57:37  zv173x2 WinOwig Treiber
+*    12.09.2013  12:01:48  zv173x2 eMail andreas.hillebrands@itk-rheinland.de
+*    18.07.2013  17:04:18  zv173x2 ruhenderVerkehr dir
+*    09.07.2013  20:41:56  ZV173X2 %%WINOWIG_BESCHEID_DIR=?
+*    09.07.2013  20:40:23  ZV173X2 %%WINOWIG_ZAHLUNGEN_DIR auf Gemeindebasis
+*    19.06.2013  13:20:18  zv173x2 eMail Empfänger DG
+*    09.04.2013  13:56:28  zv173x2 openft_sysout entfernt
+*    12.03.2013  11:02:53  zv173x2 message 2 wieder rausgenommen, wird nicht gefüllt wie erwartet
+*    07.03.2013  11:09:40  zv173x2 Betreff mit Message2
+*    23.01.2013  10:37:26  zv173x2 RDATE im WINOWIG Format
+*    15.01.2013  09:46:26  zv173x2 Verzeichnis winowig in winowig\anfragen und antworten
+*    16.10.2012  11:40:41  zv173x2 neu angelegt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

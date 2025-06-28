@@ -1,0 +1,66 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ-Sodatis-ZADA-024-Rename-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske unter neuem Namen.
+* Der neue Name ergibt sich aus der Vorgabe der NAMES Varibalen, der in der Ursprungsdatei auch enthalten ist. 
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* CTM-Command Aufruf :
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\bl\job\Job-Rename-Copy-Move-Sodatis.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SODATIS-ZADA
+
+
+* Erweiterung für Net Use
+
+%%NETWORKPATH=\\RKN-Data01.n900d01.int.de\aemter$\KR5000\Sodatis-ITK
+%%DRIVELETTER=X:
+%%USERNAME=n900d01.int.de\RKN00058
+
+
+* Eingabe Directory 
+* INDIR= aus Member SODATIS-ZADA
+
+* Datei Auswahl
+* INCLUDE=aus Member SODATIS-ZADA
+* EXCLUDE=aus Member SODATIS-ZADA
+* erledigt Ordner
+* OUTDIR_PROCESSED=aus Member SODATIS-ZADA
+
+%%INCLUDE=EZ-GS-NE_PFGS0700_SEI*_Kalendermonat_%%SOZ_DAT_YY..txt
+
+
+
+* Ausgabe Directory
+%%OUTDIR=x:\%%$OYEAR.\ZADA\%%SOZ_DAT_YYYY.\Altdaten
+
+**OUTDIR=\\RKN-Data01.n900d01.int.de\aemter$\KR5000\Sodatis-ITK\%%$OYEAR.\ZADA\%%SOZ_DAT_YYYY.\Altdaten
+
+%%TEST=N
+%%DEBUG=N
+
+
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-SODATIS\%%$OYEAR.\ZADA\%%SOZ_DAT_YYYY.\erledigt\altdaten
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc01\c$\ctm_av\bin\powershell\bl\job\Job-Rename-Copy-Move-Sodatis-RKN.ps1
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*	 02.05.2024  10:00:00  zvaa405 Änderung auf Verbindungsaufbau via Net Use wegen Änderung der Vertrauensstellung in der Domäne
+*    04.03.2016  08:51:00  zv173x2 outdir_processed altdaten wegen zugriff verweigerung beim mn. rename zv173x2
+*    08.09.2015  08:53:03  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

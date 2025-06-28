@@ -1,0 +1,82 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-VAR-Test
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*********************************************************** 
+* %%LISTEN_DATUM=%%JJJJ_MM_P1_%%$ODATE.-%%MM_P1_%%$ODATE
+*********************************************************** 
+* Listen bekommen Datum des nächsten Monats 
+* zwei Punkte müssen sein           ..  
+%%LISTEN_DATUM=%%JJJJ_MM_P1_%%$ODATE..-%%MM_P1_%%$ODATE
+***********************************************************
+* Auftrag erteilt durch                                   *
+***********************************************************
+%%AUFTRAGGEBER=H.Möller 
+
+***************************************************************************************************
+* Directory der Jarfiles
+***************************************************************************************************
+%%JAR_DIR=\\msbmcc03\ctm_av\Bin\Java\EWO\Altersjubilare_Paket
+
+***************************************************************************************************
+* Haupt Jarfile
+***************************************************************************************************
+%%JAR_FILE=%%JAR_DIR.\altersjubilare.jar
+
+***************************************************************************************************
+* weitere Jar's
+***************************************************************************************************
+%%GRAT_JRXML=%%JAR_DIR.\Gratulationsschreiben.jrxml
+%%PERS_JRXML=%%JAR_DIR.\Personenliste.jrxml
+%%STAT_JRXML=%%JAR_DIR.\Statistik.jrxml
+
+
+
+***************************************************************************************************
+* Infile aus Ewoauswertung
+* \\srv03.asp.rzne.de\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div
+***************************************************************************************************
+*%%INFILE=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div\av-test\ALTJ1501.DBL
+%%INFILE=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div\ALTJ%%ODAY.%%OMONTH..DBL
+
+
+***************************************************************************************************
+* Druckerei Amt 16  
+***************************************************************************************************
+%%OUTDIR=\\vfdusalt\16\Amt16\DocuShare16
+%%PERSONEN_PDF=%%OUTDIR.\DUE-80-plus-Personen-%%LISTEN_DATUM..pdf
+
+***************************************************************************************************
+* Fachabteilung
+***************************************************************************************************
+%%OUTDIR2=\\vfdusalt\B01\B01\01-14 Protokoll\Alters_und_Ehejubiläen\Hilden\Ehrungen\Altersjubiläen\Einzelfälle
+
+%%LISTE_PDF=%%OUTDIR2.\DUE-80-plus-Liste-%%LISTEN_DATUM..pdf
+%%STATISTIK_PDF=%%OUTDIR2.\DUE-80-plus-Statistik-%%LISTEN_DATUM..pdf
+
+
+***************************************************************************************************
+* Parameter zusammengesetzt
+***************************************************************************************************
+%%PARAMETER="%%INFILE"  "%%GRAT_JRXML"  "%%PERS_JRXML"  "%%STAT_JRXML" "%%PERSONEN_PDF"  "%%LISTE_PDF" "%%STATISTIK_PDF" "UTF-8" "%%JAR_DIR.\DB_Connector.ini"
+
+
+
+%%TEST=J
+%%DEBUG=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.03.2019  14:07:29  zv173x2 ListenDatum Monat plus 1
+*    13.03.2019  10:04:10  zv173x2 neu 1. Lauf 15.02.2019 nach Umstellung weg von Paypyrus 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

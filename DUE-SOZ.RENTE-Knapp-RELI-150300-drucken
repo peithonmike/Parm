@@ -1,0 +1,92 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.RENTE-Knapp-RELI-150300-drucken
+* 
+* 
+*********************************************************** 
+ 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR  alle Files mit vorgegebener Maske an beliebige Anzahl Printer.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Print-To-Printers.ps1 -INCLUDE %%INCLUDE -PRINTER %%PRINTER
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\RENT-DAT
+
+%%DAT1=%%OYEAR.%%OMONTH
+
+%%SOZ_DAT=%%$OYEAR.%%OMONTH
+
+
+
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\SOZ-Renten\%%$OYEAR.\DUE\%%DAT1.\KNAPP
+
+
+* Drucker Freigabe
+%%PRINTER=\\msdpiom01\D$\DFZSDPF_PDF
+
+
+%%PROT=KNAPP-PFDR0100-DF_RELI-1300_%%SOZ_DAT..pdf 
+
+
+%%INCLUDE=%%PROT
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-Renten\%%$OYEAR.\DUE\%%DAT1.\KNAPP\gedruckt
+
+* Datei Auswahl
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%FORCE_OUTDIR=N
+
+
+
+%%TEST=J
+%%DEBUG=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*   
+*    24.11.2015  08:24:27  zv171e1 neu
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

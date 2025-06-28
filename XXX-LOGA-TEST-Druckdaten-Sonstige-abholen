@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Druckdaten-Sonstige-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-MOERS
+
+ 
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+             
+%%OUTDIR1=nicht-verwendet
+*\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NBE\KN
+%%OUTDIR2=nicht-verwendet
+*\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NBE\DN
+%%OUTDIR3=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NZI\KN
+%%OUTDIR4=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NZI\DN
+
+
+
+%%DATE=%%OMONTH.%%OYEAR
+
+
+
+%%INCLUDE=*1200_1212*.pdf
+
+%%Z01=open %%SITE
+%%Z04=ascii
+%%Z11=cd /Prod/NZI/%%DATE./KN
+%%Z12=LCD %%OUTDIR3
+%%Z13=mget %%INCLUDE 
+%%Z14=cd /Prod/NZI/%%DATE./DN
+%%Z15=LCD %%OUTDIR4
+%%Z16=mget %%INCLUDE 
+
+%%Z20=bye 
+%%TEST=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.11.2016  14:07:15  zv173x2 NZI nicht vorhanden
+*    20.10.2016  14:52:06  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

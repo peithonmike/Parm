@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-Conditions
+* 
+* 
+*********************************************************** 
+
+
+%%SQL_SYSOUT_CSV=\\msbmcc03\c$\temp\ctm-conditions.csv
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+ 

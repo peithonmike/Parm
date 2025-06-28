@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-VADM-DZ_ITK_Kopie_Sort
+*
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\GovConnect.ps1"
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\LOGA_DZ_ITK_Kopie_Sort.ps1" -InDir "\\vfdussap\SAPHCM_P1P\Daten\VADM\Eingabe\" -InDirFile "\\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\" -OutDir "\\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\" -DatumParam %ODATE%
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\LOGA_DZ_ITK_Kopie_Sort.ps1" -InDir \\vfdussap\SAPHCM_P1P\Daten\VADM\Eingabe\ -InDirFile \\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\ -OutDir \\vfdussap\SAPHCM_P1P\Daten\VADM\Ausgabe\ -DatumParam %ODATE%

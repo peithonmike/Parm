@@ -1,0 +1,73 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-PRODOP-Ist-an-WINOWIG
+* 
+* 
+*********************************************************** 
+* PRODOP-Ist-Dormagen-> WINOWIG\Eingang\Zahlungen
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR eine Datei mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-File.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-PRODOP-DOR
+* Eingabe Directory
+%%INDIR=\\N200D01S29.ad.stadt-dormagen.de\HH-Prog\Schnittstellen\ITKR\winowig
+
+* Eingabe Datei
+%%INFILE=DOEXPORTISTOWI
+
+* Ausgabe Directory
+%%OUTDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\zahlungen
+
+* Ausgabe Datei
+%%OUTFILE=%%INFILE._%%ODATE
+%%OUTFILE_PROCESSED=%%INFILE._%%ODATE..bak
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+* ***************************************************************************
+%%NETUSE=J
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+%%NETUSE_PATH=\\N200D01S29.ad.stadt-dormagen.de\HH-Prog\Schnittstellen\ITKR\winowig
+*
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* ***************************************************************************
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-DOR-Auftragsänderung.pdf
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.08.2016  09:58:31  a-zv173x2 powershell
+*    25.07.2016  14:40:32  zv173x2 netuse
+*    20.07.2016  12:18:52  zv173x2 ad.stadt-dormagen.de
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

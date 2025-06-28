@@ -1,0 +1,24 @@
+* *************************************************************
+* Globale Variablen          
+* SAP Stadt Düsseldorf 
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+
+**MAIL_NOTOK=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+%%MAIL_NOTOK=SAP_SB22@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%MAIL_NOTOK_2=produktions-steuerung@itk-rheinland.de;
+**MAIL01=joerg.huhn@itk-rheinland.de;uta.webler@itk-rheinland.de;Christopher.Kober@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%MAIL01=SAP_SB22@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%MAIL02=sapbasis@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%MAIL_VADM=hr-support@itk-rheinland.de;Daniel.Mendoza@itk-rheinland.de;Erich.Janke@itk-rheinland.de;Joerg.Huhn@itk-rheinland.de
+%%MAIL-OK=hr-support@itk-rheinland.de
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK
+
+
+%%TEXT_OK=Die SAP/VADM Verarbeitung ist beendet. Wir wünschen ein fröhliches kontrollieren
+
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist NOTOK. Returncode: %%COMPSTAT  Bitte ueberpruefen. 

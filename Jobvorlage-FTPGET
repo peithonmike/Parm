@@ -1,0 +1,19 @@
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\?Verfahren?
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\?IP-UP-?
+
+
+* Eingabeverzeichnis
+%%LOCAL_FTP_DIR=\\srv03.asp.rzne.de\ftp$\av\?
+* Eingabedatei
+%%SYSUT1=kassene.txt
+
+* Ausgabedatei
+%%SYSUT2=RKN_OKEFA_SBZ_%%$ODATE..txt
+
+* SYSUT1 Remote umbenennen 
+%%NEWNAME=%%SYSUT2
+
+%%TEST=N
+

@@ -1,0 +1,81 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-KRZN-MIB-an-Ultimo-Server
+* 
+* 
+*********************************************************** 
+ 
+
+%%DESCRIPTION=Stammdaten aus Moers nach Ultimo übernehmen
+%%DESCRIPTION1=Directory SapVendor 
+%%DESCRIPTION2=Typ       Lieferanten
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=MIBULTM daten an Ultimo Server  
+
+
+%%AUFTRAGGEBER=H-G.Robertz
+
+*---------------------------------------------------------------
+%%U=nicht-verwendet
+%%P=nicht-verwendet
+%%IP=nicht-verwendet
+* Remote Datei Auswahl Maske
+
+
+*---------------------------------------------------------------
+* Local Eingabe Directory der WinSCP Aktion
+* Test 
+%%INDIR=\\srv03\ftp$\av\Ultimo\ISN
+%%OUTDIR_PROCESSED=\\srv03\ftp$\av\Ultimo\ISN\ToUltimo
+
+%%INCLUDE=MIBIULTM*.PRT.csv
+%%MOVE_OVERWRITE=J
+
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch continue
+%%Z02=option confirm off
+%%Z03=option echo off
+*%%Z04=open ISN-ULTIMO-PUT
+*%%Z04=open ISN-sap2ultimoTEST
+\\PROD
+%%Z04=open ISN-sap2ultimo
+* ------------------------------------------------------------------
+* Kostenstellen
+* ------------------------------------------------------------------
+%%Z05=CD
+%%Z06=CD SapMBNummer  
+
+%%z07=dir
+%%Z09=put %%INDIR.\%%INCLUDE 
+%%z10=dir
+ 
+*%%Z29=close
+%%Z30=exit 
+
+
+%%TEST=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    06.12.2021  08:54:59  zv173x2 %%MOVE_OVERWRITE=J
+*    31.05.2021  09:13:48  zv173x2 Dir Command nach kopieren und close(Session) raus
+*    27.05.2021  23:34:50  zv173x2 isn ultimo put in ISN-sap2ultimoTEST
+*    05.06.2019  12:34:33  zv173x2 ISN-ULTIMO-PUT in open ISN-SAP-ULTIMO
+*    10.05.2019  10:43:16  zv173x2 continue, damit falls keine Datei da ist, trotzdem die neue Datei kopiert wird
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

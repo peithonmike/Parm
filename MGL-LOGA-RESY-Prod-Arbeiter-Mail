@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-RESY-Prod-Arbeiter-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Empfänger (durch Semikolon getrennt)          
+%%EMAIL_T=Petra.Backus@moenchengladbach.de;Susanne.Baum-II@moenchengladbach.de;Claudia.Blaeser@moenchengladbach.de;Thomas.Kloeters@moenchengladbach.de
+
+* Subject
+%%EMAIL_U=Job-Nachricht:   Prod-Reisekosten-ARU-Abr-%%JJJJ.-%%MM  ist bereitgestellt!
+
+* Kopie
+%%EMAIL_CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;Produktions-Steuerung@itk-rheinland.de
+
+* Blindkopie
+*%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+*Anhang (durch Semikolon getrennt) 
+*%%EMAIL_A=
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+
+

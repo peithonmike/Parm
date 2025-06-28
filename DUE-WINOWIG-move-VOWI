@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-move-VOWI
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* VOWI-Fälle: 
+%%INDIR=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\winowig\ftp\eingang\WinowigMobilExport
+%%INCLUDE=*.ZIP
+%%EXCLUDE=XMLMDE_A*
+
+
+
+
+*fließender Verkehr
+%%OUTDIR=\\srv03.asp.rzne.de\qaspdf$\daten\apps\winowig\ftp\eingang\ruhenderVerkehr
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\winowig\ftp\eingang\WinowigMobilExport\verarbeitet
+%%TEST=N
+
+%%AUFTRAGGEBER=A.Hillebrands
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*     05.07.2018  15:00:45  zv173x2 AUFTRAGGEBER=A.Hillebrands
+*    06.10.2015  11:56:31  zv171e1 EXCLUDE von 'XMLMDE_AOWI' in 'XMLMDE_A*' geändert 
+*    08.04.2015  09:04:44  zv173x2  .zip
+*    07.04.2015            zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

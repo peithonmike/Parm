@@ -1,0 +1,49 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-COBRA-Urbeleg-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\BUENDEL-COBRA
+
+
+
+*****************************************************************************
+*   M A I L 
+*  
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*****************************************************************************
+*   Mailadressen 
+*****************************************************************************
+%%EMAIL-T=elke.esser@rhein-kreis-neuss.de;birgit.niesen@rhein-kreis-neuss.de
+%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+
+%%EMAIL-BCC=
+
+%%SEARCH_DIR=\\mscobra01\D$\ise\c4iseK\Daten\DTA\104212516\%%$ODATE
+
+
+%%SEARCH01=urbelegBegleitzettel102.txt
+*%%SEARCH02=NEU_COBRA_Sammelliste_*.pdf
+
+
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL-U=Cobra  %%STADT %%ORT %%ODATE_P :  Urbeleg Begleitzettel
+*%%EMAIL-U=Cobra  %%STADT %%ORT %%ODATE_P :  Sammelliste
+%%TEST=J
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.11.2014  11:20:36  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-CORONA-List-Directories
+* 
+* 
+*********************************************************** 
+ 
+******************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Orner im FachAmt 
+* darin stehen die DocX Dateien zur Abholung bereit
+
+*%%INDIR=\\vfduswba\53\Amt53\Abteilung2\survnet\Corona Druckausgabe
+
+* Ordner in der Druckerei
+* dahin kommen die Docx Dateien
+
+
+
+
+
+
+* Ordner in der Druckerei 
+* Abholung der PDF-Dokumente bei Amt 16 aus:
+
+*%%INDIR=\\msdpiom01\KoNa\fertige_pdf_Amt53
+
+* Ordner FachAmt
+* hierhin kommen die PDF Dateien
+* Speichern in folgenden Ordner bei Amt 53:
+
+%%INDIR=\\vfduswba\53\Amt53\Abteilung2\survnet\Corona PDF Ablage
+
+%%INDIR=\\msdpiom01\KoNa\Posteingang_Amt53 
+%%INDIR=\\vfduswba\53\Amt53\Abteilung2\survnet\Corona Druckausgabe\erledigt
+
+
+%%TEST=N
+%%DEBUG=N
+
+* ********************************************************************************** 
+* Ansprechpartner Berechtigung Amt53
+* oezcan.avci@duesseldorf.de
+* ********************************************************************************** 
+
+

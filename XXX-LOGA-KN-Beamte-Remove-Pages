@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Remove-Pages-from_PDF
+* Löscht die Statistik-Seiten aus PDF-Dateien
+* 
+*********************************************************** 
+
+* XXX-LOGA-KN-Beamte-Remove-Pages
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-BEAMTE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+ 
+
+
+
+%%INDIR=%%PDF_INDIR
+%%OUTDIR=%%INDIR.\original
+**KEYWORD1=Kuvert-Nr.
+**KEYWORD2=Statistik
+%%KEYWORD1=Kuvert-Nr.
+%%KEYWORD2=XMLKUVERT
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Job-Remove_Pages_from_PDF.ps1
+
+
+
+
+
+
+
+*    -- Änderungen ------------------------------------------------------------------- 
+*	 
+*	 20.05.2024  19:34:00  zvaa241  KEYWORDS angepasst
+*    19.03.2024  12:30:00  zvaa405
+*
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

@@ -1,0 +1,33 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-GBA-DTA-GRST-FW
+*  
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%FTPScript="\\msbmcc03\CTM_AV\Parm\SFTP\XXX-GBA-DTA-GRST-FW.txt"
+%%InDir="/Daten"
+%%OutDir="\\msbmcbatch01\CTM_AV\GBA-DTA"
+%%DoneDir="\\srv03\qaspkdvz$\Daten\Apps\ftp\av\GBA-DTA"
+%%FileName="GRST*"
+%%Verbindung="GBA-DTA"
+
+
+
+   
+%%COMMAND=powershell.exe -executionpolicy bypass -File \\msbmcc03\ctm_av\Bin\PowerShell\AS\Get-Files-WinSCP.ps1 -FTPScript %%FTPScript -InDir %%InDir -OutDir %%OutDir -DoneDir %%DoneDir -FileName %%FileName -Verbindung %%Verbindung
+
+%%MAIL_OK=Produktions-Steuerung@itk-rheinland.de
+%%MAIL_OK_CC=Alexander.Schoenfeld@itk-rheinland.de; Michael.Hurtz@itk-rheinland.de; Cristian.Fuchs@itk-rheinland.de
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=GRST Dateien sind da!!! Siehe Output-Datei.
+%%TEXT_NOTOK=Bitte ueberpruefen!!!

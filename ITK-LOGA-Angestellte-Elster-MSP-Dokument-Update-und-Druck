@@ -1,0 +1,50 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-LOGA-Angestellte-Elster-MSP-Dokument-Update-und-Druck
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+**************************************************************************** 
+* Dieser Lauf kann wiederholt werden...
+**************************************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NAR
+
+
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NAR\Elster\%%GEM3
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NAR\Elster\%%GEM3.\BUENDEL
+
+* JAVA Variablen
+* Java Directories \\msbmcc03\ctm_av\Bin\Java\MSP\Lohnsteuerbescheinigung
+
+
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\Lohnsteuerbescheinigung\PdfLohnsteuerbescheinigungen-0.0.1-jar-with-dependencies.jar
+
+%%JAR_START=de.itk.projekte.pdf.lohnsteuerbescheinigung.Start
+
+
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    07.03.2022  14:53:27  zv173x2 neue Jarfile
+*    05.02.2021  10:20:43  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

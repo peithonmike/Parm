@@ -1,0 +1,56 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.EZ-Buchungslisten-per-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE
+
+
+
+%%INCLUDE=*_BU*_EZ_%%$ODATE..pdf
+%%EXCLUDE="-"
+
+
+
+
+* Empfänger
+
+%%EMAIL_T=amt50nkfkoordination@duesseldorf.de;
+
+
+* Subject
+%%EMAIL_U=Job-Nachricht DUE-SOZ.EZ-Buchungslisten-per-Mail
+
+* Kopie <===== ab 16.02 ÄNDERN
+%%EMAIL_CC=paola.ciunimallia@duesseldorf.de;anela.hadzihamzic@duesseldorf.de;Daniela.Scepanovic-Dabic@duesseldorf.de;gunnar.luensmann@duesseldorf.de;celalettin.inci@duesseldorf.de;thorsten.haase@duesseldorf.de;bjoern.hall@duesseldorf.de;
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+%%EMAIL_A_MOVE=N
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+
+
+
+
+

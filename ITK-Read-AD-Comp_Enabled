@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-Read-AD-Comp_Enabled
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%COMMAND=C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File \\Msaip01\ctm_av$\Bin\PS\lizenz\ad-read_comp_enabled.ps1
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAIL_NOTOK=dietmar.bolten@itk-rheinland.de
+%%BETREFF_OK=ITK-Read-AD-Comp_Enabled OK
+%%BETREFF_NOTOK=ITK-Read-AD-Comp_Enabled NOTOK
+
+%%TEXT_OK=Joblog: ITK-Read-AD-Comp_Enabled OK.
+%%TEXT_NOTOK=Joblog: ITK-Read-AD-Comp_Enabled NOTOK.

@@ -1,0 +1,47 @@
+* VARIABLEN 
+* L O G A   A n g e s t e l l t e   A r b e i t e r
+* F I B U
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+* Arbeiter Angestellt aktueller Monat (ODATE)
+%%LOGA_NAR_DAT=%%$OYEAR.%%OMONTH
+
+
+
+* Eingabe Speicherort immer aktueller Monat (ODATE)
+%%LOGA_NAR_DIR=NAR%%OMONTH.%%OYEAR
+
+
+
+
+*  ab 11.2016
+*%%LOGA_FIBU_NAR_DIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\FIBU
+*%%LOGA_KN_NAR_DIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\KN
+*%%LOGA_DN_NAR_DIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\DN
+
+
+
+
+
+
+
+
+
+%%DECKBLATT_DIR=\\msbmcbatch01\c$\ctm_av\Personal-DruckTest\DECKBLATT
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.11.2016  12:11:28  zv173x2 neue INDIR
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

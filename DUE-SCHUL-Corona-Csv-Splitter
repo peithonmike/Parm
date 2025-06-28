@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SCHUL-Corona-Csv-Splitter
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%AUFTRAGGEBER=H.Möller  
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\%%GEM3.-SCHULJAHR 
+
+
+
+%%DATUM=%%$OYEAR.-%%OMONTH
+%%SPLIT_BY=Schulnr
+* wird in der PS1 angelegt 
+* %%HEADER="ID", "Kennzeichen", "Patient", "Geschlecht", "Titel", "Vorname", "Nachname", "Straße", "Hausnummer", "Postleitzahl", "Stadt", "legalAge", "Geburtstag", "Telefonnummer", "Beruf", "Systemrelevant", "Letzter Kontakt", "custodianPrefix", "custodianFirstName", "custodianLastName", "custodianSalutation", "custodianStreet", "custodianNumber", "custodianZip", "custodianLocation", "custodianTel", "custodianTwoPrefix", "custodianTwoFirstName", "custodianTwoLastName", "custodianTwoSalutation", "custodianTwoStreet", "custodianTwoNumber", "custodianTwoZip", "custodianTwoLocation", "custodianTwoTel", "Quarantäne Begin", "Quarantäne Ende", "Bearbeiter", "mündliche OV", "schriftliche OV", "senOv", "pzu", "status", "angelegt", "Zuletzt bearbeitet", "asyl", "symptoms", "kita", "Bemerkungen", "Kontaktbereich", "Klasse", "ASDJahrgang", "Schulnr", "Schule" 
+
+
+
+*********************************************************** 
+* VORLÄUFER
+* PROD Name der Eingabe Directory 
+* DUE-SCHUL-Ausw-Quartal-Logineo-Email-Adressen-nach-Straßen 
+*********************************************************** 
+%%JJJJ=%%SCHULJAHR_%%OMONTH
+
+
+
+
+
+* TEST überschreibt PROD
+%%INDIR=\\msbmcc03\ctm_av\temp\Amt53-40_Coronameldeliste
+
+
+
+%%OUTDIR=%%INDIR.\Ausgabe
+* Eingabe aus Vorjob
+%%FILENAME=DUE-SCHUL-Corona-Liste_%%JJJJ..CSV
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.10.2020  08:42:15  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

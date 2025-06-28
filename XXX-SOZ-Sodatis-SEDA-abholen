@@ -1,0 +1,75 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-SOZ-Sodatis-SEDA-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+* 3 Min
+%%SLEEP=180
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-NEU
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-SEDA-SODATIS
+
+
+
+
+* wird bei jedem Start temp. erzeugt 
+%%SFTP_SCRIPT=\\msbmcc03\ctm_av\Parm\SFTP\CC-SOZ-SODATIS-SEDA-NE.txt
+
+
+%%SFTP_LOG="\\msbmcc03\c$\TEMP\%%JOBNAME..log"
+
+* Remote Verzeichnis im CC-SOZ
+* SOADATIS/ SEDA wenns den mal gefült wird
+*%%SFTP_INDIR=SODATIS/SEDA/%%SOZ_DAT
+%%SFTP_INDIR=MZ/%%SOZ_DAT
+
+
+*%%SFTP_MASK=bere-280-NE-2*.txt  
+*           EZ-GS-NE_2002_PFGS0700_SEID_201405_Kalendermonat.txt
+*           EZ-GS-NE_2924_PFGS0700_SEIT_201408_Kalendermonat.txt
+%%SFTP_MASK=bere-280-NE*.txt
+
+%%SFTP_MASK=bere-270-NE*.txt,bere-280-NE*.txt,bere-290-NE*.txt,bere-300-NE*.txt
+
+
+
+* Lokales Empfangsverzeichnis aufgetrennt nach  MZ mit ODATE 
+* \\Msprintff01\source$\SOZ-SODATIS\
+%%SFTP_OUTDIR=\\Msprintff01\source$\SOZ-SODATIS\%%$OYEAR.\SEDA\%%SOZ_DAT
+%%TEST=N
+%%DEBUG=N
+
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SFTP\CC-SOZ-SODATIS-SEDA-NE.txt
+
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\gGET-CONTENT.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\SOZ-SCRIPT-CCSOZ-Daten-abholen.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avWINSCP_GET_2.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avLIST-FILES.ps1 
+
+* ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    19.09.2014  11:08:42  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

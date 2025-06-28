@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-Jahres-Elster-Beamte-Copy
+* 
+* 
+*********************************************************** 
+%%ART=NBE 
+
+
+*********************************************************** 
+* Mitarbeiter Service Portal 
+* 
+*********************************************************** 
+%%INIFILE=\\msbmcc03\ctm_av\PARM\LOGA-MSP-INCLUDE-INIDATEI
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=%%INIFILE
+%%INDIR=\\Msprintff01\source$\LOGA\Elster\%%JJJJ_M1_%%$ODATE.\%%ART.\TEST2019
+
+*** werden kopiert nach            : Source  Loga Elster Jahr Art MSP
+*** und sind dann die Eingabe 
+*** für die Druckaufbereitung      : 
+%%OUTDIR=\\Msprintff01\source$\LOGA\Elster\%%JJJJ_M1_%%$ODATE.\%%ART.\MSP
+*** in OUTDIR2 kommen jeweils die aktuellen Eingaben des Jahre für die täglichen Updates ohne DRUCK
+*** wird aktuell nicht verwendet, aber man weiß ja nie.
+*** vieleicht Update 1x im Jahr oder ähnich.... 
+%%OUTDIR2=\\srv03.asp.rzne.de\ftp$\av\MSP\LOGA_MSP_DAILY\Jahres-Elster
+%%FORCE_OUTDIR_PROCESSED=J
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+%%DESCRIPTION = INDIR  beinhaltet die Loagadaten aus Lemgo
+%%DESCRIPTION1= OUTDIR hierin kommen die MSP-relevanten Dateien
+%%DESCRIPTION2= OUTDIR2 ist die Directory für die täglichen Dokument Updates
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.04.2020  11:35:30  zv173x2  neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

@@ -1,0 +1,18 @@
+* *************************************************************
+* Table Variablen          
+* MGL-Change-Year-2-Files
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%FILE=\\msbmcc03\ctm_av\Parm\###-Schulueberwachung-MGL1
+%%FILE2=\\msbmcc03\ctm_av\Parm\###-Schulueberwachung-MGL2
+
+%%COMMAND=powershell.exe -executionpolicy bypass -File \\msbmcc03\ctm_av\Bin\PowerShell\AS\Change-YEAR.ps1 -Files %%FILE,%%FILE2
+
+%%MAIL01=produktions-steuerung@itk-rheinland.de; alexander.schoenfeld@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte unbedingt heute beheben, Member wird morgen benoetigt!!!

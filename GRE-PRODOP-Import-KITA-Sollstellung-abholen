@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-PRODOP-Import-KITA-Sollstellung-abholen
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+ 
+%%INDIR=\\srv03.asp.rzne.de\qaspgr$\daten\apps\SopartGRE\SoPart\Export\FiBu\Kita
+%%INFILE=Sopart_Export_an_Kasse.txt
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\GR
+%%OUTFILE=sollrest_%%$ODATE..txt
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+%%OUTFILE_PROCESSED=Sopart_Export_an_Kasse_%%$ODATE..txt
+
+%%
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avCopy-Move-File.ps1
+
+
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL_CC=
+%%EMAIL_U=%%JOBNAME CC:%%COMPSTAT
+
+
+* ------------------------------------------------------------------
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.12.2020  10:00:53  zv173x2 email
+*    21.05.2015  09:41:16  zv173x2 \\srv03.asp.rzne.de\qaspgr$\daten\apps\SopartGRE\SoPart\Export\FiBu\Kita
+*                                  anstatt
+*                                  \\vfgv1\voldaten1\daten\fb 51\fd 51.1\Elternbeiträge\Sopart\Daten
+
+*    17.06.2014  13:37:43  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

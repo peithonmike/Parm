@@ -1,0 +1,30 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Gemeinde Rommerskirchen
+***********************************************************************************
+*  Jobname     : ROM-OK.EWO-BZR-Anfragen-Move
+*  APPLICATION : OK.EWO.OPENFT
+***********************************************************************************
+*********************************************************************************** 
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO_OPENFT
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO-OPENFT-BZR-ANFRAGE
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qaspro$\Daten\Apps\OKEWO\okprg\okewo_rom\div
+
+* Datei Auswahl
+%%INCLUDE=*AG-U0752*
+%%EXCLUDE="
+
+* Ausgabe Directory
+%%OUTDIR=\\msbmcbatch01\c$\CTM_AV\OpenFT-Prod-Dateien\OKEwo\GZR 
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspro$\Daten\Apps\OKEWO\okprg\okewo_rom\div\Erledigt
+%%TEST=N
+%%DEBUG=N
+
+

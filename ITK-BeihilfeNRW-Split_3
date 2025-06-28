@@ -1,0 +1,35 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : ITK-BeihilfeNRW-Split
+*
+*    durch : zv173xc
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%TEST=N
+*
+
+* Input-Datei
+%%INPUT=\\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\BeihilfeNRW\text_temp_1.txt
+* OUTFILE
+%%OUTFILE=\\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\BeihilfeNRW\csv_temp_1.csv
+* Config-Datei
+%%CONFIG=\\msbmcc03\ctm_av\Parm\config_temp_1.txt
+* JAVA
+%%JAR=\\msbmcc03\ctm_av\Bin\Java\split.jar
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\ITK-BeihilfeNRW.pdf
+* ------------------------------------------------------------------

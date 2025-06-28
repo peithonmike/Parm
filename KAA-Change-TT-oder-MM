@@ -1,0 +1,34 @@
+*********************************************************** 
+*
+* zvaa405   20.11.2023
+*
+* LIBMEMSYM 
+* Datechanger
+* 
+* 
+*
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job ändert im November  Monat + 1   in Tag +1
+* und im Dezember wieder Tag +1 in Monat +1 
+*
+
+
+
+* Eingabe Directory 
+
+%%Altersjubilare=\\msbmcc03\CTM_AV\Parm\KAA_Altersjubilare
+
+%%Ehejubilare=\\msbmcc03\CTM_AV\Parm\KAA_Ehejubilare
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Datechanger.ps1
+
+
+

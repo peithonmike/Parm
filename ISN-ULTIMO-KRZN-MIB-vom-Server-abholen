@@ -1,0 +1,99 @@
+\\*PROD_Änderungen_!!!_erledigt  
+*    Interval bei Prod soll 2 Stunden sein
+*    Zeitraum von 08:00  ?   bis ?  
+
+
+*********************************************************** 
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-KRZN-MIB-vom-Server-abholen
+* 
+*********************************************************** 
+
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-NICHT-VERWENDET
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\ISN-ULTIMO-MAILADR
+
+
+
+******************************************************************
+* Remote Prod Verzeichnis
+\\*PROD
+%%REMOTE_INDIR=/SST/IFP/120/PRT
+
+******************************************************************
+* Remote Test Verzeichnis
+*\\*TEST    überschreibt PROD
+*%%REMOTE_INDIR=SST/IFQ/125/PRT
+******************************************************************
+
+
+
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=ISN-ULTIMO SAP-MIB Daten abholen ( %%REMOTE_INDIR )
+
+* Remote Datei Auswahl Maske bzw Anzeige der OUTDIR
+%%INCLUDE=MIBIULTM*.PRT
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\srv03\ftp$\av\Ultimo\ISN\
+
+*SITE 
+*%%SITE=ISN-SAP-KRZN 
+%%SITE=ISN-SAP-KRZN-CTM_IFP_120
+
+
+
+ 
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+
+%%Z04=open %%SITE
+%%Z05=CD 
+%%Z06=CD %%REMOTE_INDIR
+%%Z07=LS  
+
+
+%%Z10=get %%INCLUDE %%OUTDIR  
+%%Z11=ren %%INCLUDE %%INCLUDE._%%RDATE._%%TIME  
+%%Z29=close
+%%Z30=exit 
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.02.2022  21:52:13  zv173x2 ISN-SAP-KRZN in ISN-SAP-KRZN-CTM_IFP_120 geändert(auch im Winscp)
+
+*    28.02.2022  21:21:57  zv173x2 PROD
+*    27.08.2021  07:49:27  zv173x2 1 2 4 nach 125
+*    03.07.2019  10:41:02  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

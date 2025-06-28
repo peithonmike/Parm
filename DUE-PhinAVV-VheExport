@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-PhinAVV-VheExport
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PHINAVV-MAIL
+
+
+* Parameter für Powershell Programm
+%%PARAMETER=-export vheExport -expdir \\vfdusprog\21prog\Programme\PhinAVV\export\DdorfVHE
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragsbeschreibung\DUE-PhinAVV-EXPORT.txt
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\phinavv.ps1
+* ------------------------------------------------------------------
+%%TEST=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    08.04.2014  09:02:13  zv173x2 mail member
+*    02.04.2014     zv173x2 Umstellung auf Powershell
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

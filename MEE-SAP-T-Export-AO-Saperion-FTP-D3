@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SAP-T-Export-AO-Saperion-FTP-D3
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+**SYSOUT=\\msbmcc03.itk.local\G$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%FTP-LPATH1=/SST/IFP/800/Saperion/800_AO_%%$ODATE._*.CSV
+**           /SST/IFP/800/Saperion/800_AO_20140207_230002.CSV
+** z.B.      /SST/IFP/800/Saperion/800_AO_20140205_230004.csv
+**FTP-RPATH1=\\msbmcc03\CTM_AV\Temp\
+%%FTP-RPATH1=\\VFD3DMS\PRODIMPORT\SAP\SAP-Anordnungen
+%%FTP-NEWNAME1=/SST/IFP/800/Saperion/Verarbeitet/800_AO_%%$ODATE..csv
+**FTP-NEWNAME1=/SST/IFP/800/Saperion/Verarbeitet/
+
+**800_AO_%%$ODATE..csv
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=ruth.weyermanns@itk-rheinland.de;betina.kobecke@itk-rheinland.de
+%%MAIL_NOTOK=steffen.brandemann@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%BETREFF_OK=FileTransfer SAP-AO-Daten %%GEM3 nach D3 OK
+%%BETREFF_NOTOK=FileTransfer SAP-AO-Daten %%GEM3 nach D3 NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der SAP-AO-Daten %%GEM3 nach D3 ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der SAP-AO-Daten %%GEM3 nach D3 ist NOTOK.

@@ -1,0 +1,15 @@
+﻿*********************************************************** 
+* LIBMEMSYM 
+* NEVL_100.T.MESO-Abgleich_der_Einwohnerdaten
+* NEVL-MESO Abgleich der Einwohnerdaten
+* 
+*********************************************************** 
+%%GEM4=%%SUBSTR %%JOBNAME 1 4
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM4
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\KSU_MAIL_MOERS
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\KSU_MAIL_ITKR
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\KSU2000_Meso

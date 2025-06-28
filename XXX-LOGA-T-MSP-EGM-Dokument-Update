@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-EGM-Dokument-Update
+* 
+* 
+*********************************************************** 
+ 
+
+**************************************************************************** 
+* Dokumenten Update
+**************************************************************************** 
+* Für die Mitarbeiter werden die Mitteilungen in die DB geschrieben
+* Dieser Lauf kann wiederholt werden...
+* Dieser Lauf verarbeitet am 24 des Monats alle Beschäftigungsarten
+* Wird Mitte 2024 ausgesetzt
+**************************************************************************** 
+%%DESCRIPTION=Dieser Lauf verarbeitet am 24 des Monats alle Beschäftigungsarten
+%%DESCRIPTION2=Wird Mitte 2024 ausgesetzt
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+*LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NAR
+
+* Zeitraum
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+* Verzeichnisse
+* 
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\MSP-EGM
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\MSP-EGM\SPLIT
+
+%%OUTDIR_PROCESSED=%%OUTDIR.\erledigt
+%%USE_OUTDIR_PROCESSED=J
+
+* JAVA Variablen
+* Java Directories \\msbmcc03\ctm_av\Bin\Java\MSP
+
+**JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\MSP_Gehaltsabrechnungen_20190212_PROD.jar
+**JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\MSP_Gehaltsmitteilungen_20190729_PROD.jar
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\MSP\gehaltsmitteilungen-0.0.2-jar-with-dependencies.jar
+
+%%JAR_START=de.itk.projekte.gehaltsmitteilungen.Start
+
+%%TEST=N
+%%DEBUG=N 
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.05.2024  10:04:45  zvaa241 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+.
+
+
+

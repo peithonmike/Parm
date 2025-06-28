@@ -1,0 +1,17 @@
+* *************************************************************
+* Globale Variablen      
+* KSU-KRZ-T-OKEWO
+* 
+* *************************************************************
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP.ps1
+%%MAIL_NOTOK=rudolf.dressel@itk-rheinland.de;oliver.emmel@itk-rheinland.de
+%%MAIL_NOTOK_CC=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=ACHTUNG!!! %%JOBNAME ist abgebrochen
+
+%%TEXT_NOTOK=Bitte ueberpruefen.
+
+
+

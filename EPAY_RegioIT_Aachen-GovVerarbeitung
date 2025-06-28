@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* EPAY_RegioIT_Aachen-GovDownload
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_REGIOIT
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\MSPTV02.itk.local\C$\Programme\WindowsPowerShell\Scripts\EPAY_RegioIT_Aachen.ps1 -GovVerarbeitung
+%%COMMAND=powershell.exe EPAY_RegioIT_Aachen.ps1 -GovVerarbeitung

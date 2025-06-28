@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-Anhoerung24-Import
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%PARAMETER=-Wo2000Login;%%WINOWIG_GKZ;50 "Batchstart Dauer=ALLE" "Verzeichnis=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\eingang\OnlineAnhoerung"
+
+
+%%IMPORT_EXE=\\srv03\sys_all$\Programme\winowig\prog\ImportNT.exe
+
+%%EMAIL_T=Andreas.Hillebrands@itk-rheinland.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL_U=%%JOBNAME ist NOTOK gelaufen
+
+%%TEST=N
+%%DEBUG=N
+
+%%AUFTRAGGEBER=A.Hillebrands
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\job\Job-WINOWIG-ImportNT.ps1
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.02.2021  11:51:43  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,16 @@
+%%HMAN=%%SUBSTRING  %%JOBNAME 13 4
+%%MAN=%%SUBSTRING  %%JOBNAME 18 3
+%%MANX=%%MAN.X
+%%ART=%%SUBSTRING  %%JOBNAME 24 1
+%%LISTE=%%SUBSTRING  %%JOBNAME 26 4
+
+* Namens Struktur
+ 
+* DMS Ordner     \\MSD3DMSB02\DN_%%HMAN._%%MANX._0X._%%LISTE._C1
+* DMS Verzeichnis            |
+* Fester Begriff DN----------- 
+* HauptMandant   HMAN------------
+* alle Untermandanten 
+* Beschäftigungsart immer 0X 
+* ListenNummer
+ 

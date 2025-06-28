@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-BAUM-Pflanzungen
+* 
+* FTP -> daten.rhein-kreis-neuss.de
+* Ansprechpartner bei der Stadtneuss: 
+* Simon Schubert, Tel. 02131 90-3331, simon.schubert@stadt.neuss.de
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-Baum-NEU
+
+%%INCLUDE=move_export.csv
+%%INDIR=\\vfne\10\Amt10\Themen\Open_Data_Amt_19\Baumbestand
+%%MOVE_OVERWRITE=J
+%%SET_NEWNAME=N
+**PREFIX=%%$OYEAR.%%OMONTH.%%ODAY._
+%%OUTDIR_PROCESSED=nicht-verwendet
+**OUTDIR_PROCESSED=Erledigt
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-WinSCP-Put-cf.ps1
+
+%%MAIL-OK=simon.schubert@stadt.neuss.de
+%%BETREFF-OK=Baumpflanzungen zum Rheinkreis Neuss übertragen
+%%TEXT-OK=Daten nach daten.rhein-kreis-neuss.de erfolgreich gesendet.
+%%MAIL-NOTOK=produktions-steuerung@itk-rheinland.de
+%%BETREFF-NOTOK=%%JOBNAME - Abbruch - Bitte ueberpuefen
+%%TEXT-NOTOK=FTP Baumpflanzungen Stadt Neuss -> daten.rhein-kreis-neuss.de NOTOK
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+
+%%SITE=Baumpflanzungen_Stadt_Neuss
+**SITE=RKN-Stadtgruen
+%%WINSCP_AKTION=Baumpflanzungen Stadtr Neuss an RKN
+
+%%Z01=option batch continue
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+**Z04=open p321218f11@daten.rhein-kreis-neuss.de
+%%z07=dir
+%%Z09=put %%INDIR.\%%INCLUDE 
+%%z10=dir
+ 
+*%%Z29=close
+%%Z30=exit 
+
+%%TEST=N
+%%DEBUG=N

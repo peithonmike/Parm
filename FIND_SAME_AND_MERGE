@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* FIND_SAME_AND_MERGE
+*
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%INDIR=\\vfapps\apps\itk\kmv\Produktion\1000\50101\Aktuell\zuKlären\Test
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+%%python_exe=C:\Users\a-zvaa405\AppData\Local\Programs\Python\Python312\python.exe
+
+%%python_script=\\msbmcc03\CTM_AV\Bin\Python\CF\find_and_merge_pdf.py
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Find_Same_And_Merge.ps1
+

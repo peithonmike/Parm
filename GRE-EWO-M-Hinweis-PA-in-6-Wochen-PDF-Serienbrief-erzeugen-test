@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-EWO-M-Hinweis-PA-in-6-Wochen-PDF-erzeugen
+* PDF Datei erzeugen
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+%%AUFTRAGGEBER=Michael Peiffer, 02181 / 608 - 3399, Michael.Peiffer@Grevenbroich.de
+
+
+**docx_template=\\msbmcc03\CTM_AV\OK.EWO\GRE\Hinweis-PA-in-6-Wochen\05162008_Serienbrief_16_Jahre_dokumenthinweis.docx
+**csv_datei=\\msbmcc03\CTM_AV\OK.EWO\GRE\Hinweis-PA-in-6-Wochen\SQLCMD.csv
+**temp_folder=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\GRE-EWO-M-Hinweis-PA-in-6-Wochen\tmp
+**combined_file=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\GRE-EWO-M-Hinweis-PA-in-6-Wochen\05162008_Serienbrief_16_Jahre_dokumenthinweis.docx
+**pdf_file=\\msbmcc03\CTM_AV\OK.EWO\GRE\Hinweis-PA-in-6-Wochen\05162008_Serienbrief_16_Jahre_dokumenthinweis.pdf
+
+
+**docx_template=\\srv03\qaspkdvz$\daten\apps\ftp\cf\serienbrief\Serienbrief_Ablauf_Personalausweis-Stand_12.2022.docx
+**csv_datei=\\srv03\qaspkdvz$\daten\apps\ftp\cf\serienbrief\sqlcmd.csv
+**temp_folder=\\srv03\qaspkdvz$\daten\apps\ftp\cf\serienbrief\tmp
+**combined_file=\\srv03\qaspkdvz$\daten\apps\ftp\cf\serienbrief\05162008_Serienbrief_16_Jahre_dokumenthinweis.docx
+**pdf_file=\\srv03\qaspkdvz$\daten\apps\ftp\cf\serienbrief\05162008_Serienbrief_16_Jahre_dokumenthinweis.pdf
+
+
+
+%%docx_template=\\srv03\qaspkdvz$\daten\apps\ftp\cf\serienbrief\Serienbrief_Ablauf_Personalausweis-Stand_12.2022.docx
+%%csv_datei=\\srv03\qaspkdvz$\daten\apps\ftp\cf\serienbrief\sqlcmd.csv
+%%ausgabe_docx=\\srv03\qaspkdvz$\daten\apps\ftp\cf\serienbrief\out\merge.docx
+%%ausgabe_pdf=\\srv03\qaspkdvz$\daten\apps\ftp\cf\serienbrief\out\05162008_Serienbrief_16_Jahre_dokumenthinweis.pdf
+%%libreoffice_path=C:\Program Files\LibreOffice\program\soffice
+
+
+%%python_exe=C:\Users\a-zvaa405\AppData\Local\Programs\Python\Python312\python.exe
+
+%%python_script=\\msbmcc03\CTM_AV\Bin\Python\CF\test\Serienbrief.py
+
+
+**python_script=\\msbmcc03\CTM_AV\Bin\Python\CF\Mailmerger.py
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\in_arbeit\serienbrief.ps1
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Mailmerge_Call_Python.ps1
+
+
+
+
+
+
+
+
+ 
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\OK.EWO\GRE\Hinweis-PA-in-6-Wochen\MailMerge.ps1
+ 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*   30.01.2024  12:00:00  zvaa405 Änderung auf Verarbeitung durch Python 
+*   02.01.2023  12:00:00  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,27 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* TOPCASH Variablen
+* --------------------------------------------------------------------------------
+*      Job : MEE-TOPCASH-T-MERGE-KASSENDATEN
+* erstellt : 23.11.2011 14:27:51
+*    durch : zv173xc
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%TEST=N
+*
+
+* Input-Datei
+%%INPUT=\\srv03.asp.rzne.de\qaspme$\Daten\Apps\Topcash\KIRP_EXPORT\
+* OUTFILES
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspme$\Daten\Apps\Topcash\KIRP_EXPORT\KIRP_Verarbeitet\
+%%OUTFILE2=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TopCash\%%GEM3._TCtoKIRP%%OYEAR.%%OMONTH.%%ODAY..txt
+* JAVA
+%%JAR=\\msbmcc03\ctm_av\Bin\Java\ FileCopy

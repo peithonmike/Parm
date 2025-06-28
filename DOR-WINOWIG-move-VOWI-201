@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-WINOWIG-move-VOWI-201
+* 
+* 
+*********************************************************** 
+*Der Unterschied zum normalen Mandanten 200 Dormagen ist der Zusatz ...\AOWI\...
+*Die Eingangsverzeichnisse:
+\\srv03\qaspdo$\Daten\Apps\winowig\AOWI\ftp\eingang
+
+*Die Ausgangsverzeichnisse:
+\\srv03\qaspdo$\Daten\Apps\winowig\AOWI\ftp\ausgang
+
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* AOWI-Fälle: 
+%%INDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\AOWI\ftp\eingang
+%%INCLUDE=*.ZIP
+%%EXCLUDE=XMLMDE_AOWI*
+
+*ruhender  Verkehr
+%%OUTDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\ruhenderVerkehr
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+%%TEST=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.03.2017  11:59:59  zv173x2 neu 201er Job
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

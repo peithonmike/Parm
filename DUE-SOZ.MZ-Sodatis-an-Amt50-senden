@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-Sodatis-an-Amt50-senden
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\SOZ-SODATIS\2015\DUE
+
+* Datei Auswahl
+%%INCLUDE=*.*
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\vfduswba\51\Amt51\Themen\AKDN-Berechnungslauf
+ 
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-SODATIS\2015\DUE\Erledigt
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+

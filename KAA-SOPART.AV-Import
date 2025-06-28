@@ -1,0 +1,38 @@
+************************************************************************** 
+* LIBMEMSYM 
+* KAA-SOPART.AV-Import
+* 
+* SoPart® AV - Amtsvormundschaft / Beistandschaft / Mündelgeld 
+* Kopieren  SOPART.AV Dateien (aus der Host Abendverarbeitung)
+*           aus FTP.Prodbereich in den Mandanten-Bereich
+*
+* HOST -> AV-Server-> Mandantenbereich           
+*
+* AV-Server          \\srv03.asp.rzne.de\ftp$\ka\sopart\avor\import
+* Mandantenbereich   \\srv03.asp.rzne.de\qaspka$\daten\apps\sopart\avor\import  
+************************************************************************** 
+
+%%VERFAHREN=AV
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SOPART
+
+%%DESCRIPTION=Import Sopart AV
+
+%%SEARCH=SOPIM_%%ODATE..TXT
+
+%%SEARCH_DIR =\\srv03.asp.rzne.de\ftp$\ka\sopart\avor\import
+%%MOVE_ORDNER=erledigt
+
+%%OUTDIR =\\srv03.asp.rzne.de\qaspka$\daten\apps\sopart\avor\import 
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+ 
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Log\ErgebnisLog\SOPART-2013.csv
+* ------------------------------------------------------------------

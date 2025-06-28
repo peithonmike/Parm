@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Angestellte-Move-5010
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\KN
+
+* Datei Auswahl
+%%INCLUDE=*KN*5010*.PDF
+
+
+
+* Ausgabe Directory
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\KN\5010-anstatt-5014
+ 
+
+* erledigt Ordner
+%%TEST=J
+%%DEBUG=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.08.2021  08:20:11  zv173x2 fertig gestellt
+*    16.08.2021  17:05:00  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

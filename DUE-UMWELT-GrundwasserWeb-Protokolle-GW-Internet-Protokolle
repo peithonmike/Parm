@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-UMWELT-GrundwasserWeb-Protokolle-GW-Internet-Protokolle
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\DOC\Umwelt\DOKU_DUE-UMWELT-GrundwasserWeb-Protokolle
+
+* TEST Eingabe Directory 
+%%DESCRIPTION=   E i n g a b e   i s t   d e r  P R O D - S E R V E R 
+%%INDIR=\\msjbosslhd01\import_daten_grundwasser$\logger\done
+ 
+
+%%LIST_DIRECTORY=N
+
+* Datei Auswahl
+%%INCLUDE=Protokoll*
+
+
+* PROD
+%%OUTDIR=\\vfdustvg\19\Amt19\Datenbanken\GrundwasserWeb\GW-Internet-Protokolle
+
+
+
+ 
+
+%%TEST=N
+%%DEBUG=N
+*
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.07.2021  09:38:16  zv173x2  \\msjbosslhd01\import_daten_grundwasser$
+*    15.07.2021  09:46:12  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

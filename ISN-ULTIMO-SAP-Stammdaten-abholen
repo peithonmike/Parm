@@ -1,0 +1,77 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-SAP-Stammdaten-abholen
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1 
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+*%%SITE
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Drei Dateien  ISN-ULTIMO-SAP-Stammdaten-abholen
+
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+*%%REMOTE_INDIR=
+
+* Remote Datei Auswahl Maske bzw Anzeige der OUTDIR
+%%INCLUDE=*.csv
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR=\\srv03\ftp$\av\Ultimo\ISN\SAP-Stammdaten\
+
+* PROD
+%%SITE=ISN-SAP-KRZN-CTM_IFP_120
+*Test 
+%%SITE=ISN-SAP-KRZN-CTM_IFQ_124
+ 
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+* Hinweis : /SST/IFE/120/EXPORT
+*           entferntes Verzeichnis ist im WinSCP hinterlegt 
+
+%%Z01=option batch continue
+%%Z02=option confirm off
+%%Z03=option echo off
+*%%Z04=open %%U.:%%P.@%%IP
+%%Z04=open %%SITE
+*%%Z05=CD %%REMOTE_INDIR
+%%Z06=get UL__DZBW_ZBF_LFBI_V_ULTIMO.csv %%OUTDIR
+%%Z07=get UL_SKA1_ULTIMO.csv %%OUTDIR
+%%Z08=get UL_AUFK_ULTIMO.csv %%OUTDIR
+ 
+*%%Z09=?
+*%%Z10=?
+
+%%Z29=close
+%%Z30=exit 
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+

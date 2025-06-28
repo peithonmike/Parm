@@ -1,0 +1,82 @@
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  
+*
+* muss auf Anforderung an Prod angepasst werden
+*
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  
+
+
+
+
+
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-FR-an-PTV
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+ 
+%%DESCRIPTION=Rechnungen FR vom Ultimo-Server an PTV  ( SITE ISN-SAP-ULTIMO )  
+%%AUFTRAGGEBER=H-G.Robertz
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Eine Prefix für voaran gestellt
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\Ultimo\ISN
+
+* Datei Auswahl
+%%INCLUDE=FR%%$ODATE.*
+%%EXCLUDE="-"
+
+****************************************************************
+* P R O D  muss noch eingegeben werden
+* Ausgabe Directory
+%%OUTDIR=\\msptv01\d$\PTV\Projekte\SAP_Export\ULTRCH_EISN\indir
+
+
+
+****************************************************************
+* T E S T
+* Ausgabe Directory
+%%OUTDIR=\\msptv03\d$\PTV\Projekte\SAP_Export\ULTRCH_EISN\indir
+
+* Prefix     
+%%PREFIX=ISN-ULTIMO-
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\ftp$\av\Ultimo\ISN\erledigt
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.07.2019  10:50:00  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

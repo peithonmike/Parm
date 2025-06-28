@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-PhinAVV-Auswertung-DumpDB
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PHINAVV-MAIL
+
+%%COMMAND=\\msphinbatch03\c$\PhinAVV\db_dump\ul_csv.bat
+
+%%MAIL01=steffen.brandemann@itk-rheinland.de;produktions-steuerung@itk-rheinland.de;Mareen.Mengel@itk-rheinland.de
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-KASSE-T-VOLLSTRECKUNG-AUSWERTUNGEN.pdf
+* ------------------------------------------------------------------

@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-SOZ-EZ-Druckdaten-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-EZ
+
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output geb�ndelt werden sollen.
+* ---------------------------------------------------------------
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-FileS.ps1
+
+
+
+%%OUTDIR=\\vfka\50\Bereich 50\AustauschITK\EZ\%%$ODATE.
+
+
+%%OUTDIR_PROCESSED=\\vfcache\av\Daten\SOZ\SOZ-EZ\%%$OYEAR.\XXX\%%$ODATE.\kopiert
+
+
+*%%STEPNAME=Kopieren-EZ-Druckdaten
+
+
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\SOZ-EZ\BUENDEL\EZ-%%$ODATE
+%%EXCLUDE="-"
+
+%%INCLUDE=KAA-SOZ-EZ-*.pdf
+  
+
+
+%%MAIL_OK=frederike.kaufmann@kaarst.de
+%%BETREFF_OK=Neue PDFs zum Drucken
+%%TEXT_OK=Neue PDFs im Ordner %%OUTDIR.
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen gepr�ft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+

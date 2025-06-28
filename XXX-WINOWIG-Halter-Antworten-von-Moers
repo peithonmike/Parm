@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-Halter-Antworten-von-Moers
+* 
+* 
+*********************************************************** 
+ 
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc01\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de 
+%%DWSCRIPTION=Halter-Antworten-von-Moers abholen und abgeholte in Moers löschen (in .alt weiter vorhanden!)
+
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+
+%%SITE=%%GEM3.-WINOWIG-KRZN
+
+%%OUTDIR=\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\eingang\kba\
+
+
+
+%%INCLUDE=auskunft_*_%%KBA_NR.*.xml
+
+%%WINSCP_AKTION=Halteranfragen Antworten abholen ( %%INCLUDE )
+
+%%TEST=N
+%%WINSCP_TEST=N
+%%DEBUG=N
+
+
+
+

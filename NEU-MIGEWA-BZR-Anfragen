@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-MIGEWA-BZR-Anfragen
+* 
+* 
+*********************************************************** 
+ 
+*
+%%TEST=N
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA-NEU
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA-OPENFT-SENDEN-BZR
+*
+***********************************************************************************

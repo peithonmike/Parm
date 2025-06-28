@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-COBRA-DataWarehouse-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\COBRA
+
+ 
+%%STEPNAME='Kopieren DataWarehouse CSV'
+%%INCLUDE=*.csv
+%%EXCLUDE="-"
+%%TEST=N
+%%DEBUG=N
+%%FORCE_OUTFILE=J
+
+%%INDIR=\\mscobra01\Datawarehouse$\RKN\xls
+
+
+*%%OUTDIR=\\n900d01vf01\datawarehouse$ 
+%%OUTDIR=\\n900d01vf01.n900d01.int.de\datawarehouse$
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avCopy-Files.ps1
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\COBRA\Dateien kopieren vom MSCOBRA01-Server.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\COBRA\Datawarehouse _ Adressen.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\COBRA\Freigabe mit Lese- und Schreibberechtigung für Rettungsdiensta.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\COBRA\Pfad für Datenasustausch Rettungswesen.pdf
+* ------------------------------------------------------------------
+

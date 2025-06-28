@@ -1,0 +1,39 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-WINOWIG-FAER-Mitteilungen-an-Moers
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=FAER-Mitteilungen-an-Moers
+
+
+%%AUFTRAGGEBER=A.Hillebrands
+
+
+*---------------------------------------------------------------
+* Local Eingabe Directory der WinSCP Aktion
+* Test 
+%%INDIR=\\srv03.asp.rzne.de\sys_all$\Programme\Winowig\ftp\ausgang\kba
+%%INCLUDE=faermit_%%KBA_NR.*
+
+
+%%SITE=XXX-WINOWIG-KRZN
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt\%%GEM3
+
+
+%%TEST=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\c$\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Put-Filelist.ps1
+
+

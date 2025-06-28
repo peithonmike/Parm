@@ -1,0 +1,64 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Jahres-Elster-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+*********************************************************** 
+ 
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+             
+%%OUTDIR1=\\Msprintff01\source$\LOGA\Elster\2019\NZI
+%%OUTDIR2=\\Msprintff01\source$\LOGA\Elster\2019\NAR
+%%OUTDIR3=\\Msprintff01\source$\LOGA\Elster\2019\NBE
+
+
+
+%%INCLUDE=*.pdf
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=option failonnomatch on
+
+%%Z05=open %%SITE -hostkey=%%HOSTKEY 
+
+
+%%Z11=CD /1030/LOGA\PROD\out\Export
+%%Z12=DIR
+%%Z13=LCD %%OUTDIR2
+%%Z14=mget KN**_3_*.pdf 
+%%Z15=mget KN**_4_*.pdf 
+
+%%Z18=LCD %%OUTDIR3
+%%Z19=mget KN**_1_*.pdf
+%%Z20=mget KN**_2_*.pdf
+
+
+
+
+
+%%Z30=bye 
+%%TEST=N
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.03.2020  12:16:33  zv173x2 Verzeichnis angepasst ob das so bleibt :-(
+*    16.10.2019  07:46:30  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

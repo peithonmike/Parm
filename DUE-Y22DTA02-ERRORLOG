@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Y22DTA02-ERRORLOG
+* ErrorLog an Amt 22 
+* Bandnummer wird mit Vorlaeuferjob per PS1 hier eingetragen
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GWST\LieferNr_D%%$ODATE..txt
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+
+%%SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt 
+
+
+%%LPATH1=/BatchEingangsdaten/Protokolle/debug_log_Einspielen_765_%%TTMMJJP_TT_P1_%%$ODATE...txt
+%%LPATH2=/BatchEingangsdaten/Protokolle/error_log_Einspielen_765_%%TTMMJJP_TT_P1_%%$ODATE...txt
+%%LPATH3=/BatchEingangsdaten/Protokolle/debug_log_Pruefen_765_%%TTMMJJJJP_TT_P1_%%$ODATE...txt
+%%LPATH4=/BatchEingangsdaten/Protokolle/error_log_Pruefen_765_%%TTMMJJJJP_TT_P1_%%$ODATE...txt
+%%LPATH5=/BatchEingangsdaten/Archiv/dta_765_%%TTMMJJP_TT_P1_%%$ODATE...txt
+%%RPATH1=\Amt22-KiviListenProd\Gewerbesteuer\DTAProtokolle\debug_log_Einspielen_765_%%TTMMJJP_TT_P1_%%$ODATE...txt
+%%RPATH2=\Amt22-KiviListenProd\Gewerbesteuer\DTAProtokolle\error_log_Einspielen_765_%%TTMMJJP_TT_P1_%%$ODATE...txt
+%%RPATH3=\Amt22-KiviListenProd\Gewerbesteuer\DTAProtokolle\debug_log_Pruefen_765_%%TTMMJJJJP_TT_P1_%%$ODATE...txt
+%%RPATH4=\Amt22-KiviListenProd\Gewerbesteuer\DTAProtokolle\error_log_Pruefen_765_%%TTMMJJJJP_TT_P1_%%$ODATE...txt
+%%RPATH5=\Amt22-KiviListenProd\Gewerbesteuer\DTABaender\dta_765_%%TTMMJJP_TT_P1_%%$ODATE...txt
+
+
+**MAIL_NOTOK=volker.ehmann@itk-rheinland.de;david.mertens@itk-rheinland.de;   (ist die Mail noetig?)
+%%MAIL_NOTOK_2=alexander.schoenfeld@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - Uebertragung der DTA-Protokolle an Amt22 mit Fehlern gelaufen NOTOK

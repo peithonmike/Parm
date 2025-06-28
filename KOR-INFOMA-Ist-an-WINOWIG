@@ -1,0 +1,30 @@
+x*********************************************************** 
+* LIBMEMSYM 
+* KOR-INFOMA-Ist-an-WINOWIG
+* Gegenstück zum Hostjob F20T01GE/f20a0105 
+* 
+*********************************************************** 
+ 
+%%DAT=%%ODAY.%%OMONTH.%%OYEAR
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-INFOMA-KOR 
+
+%%SEARCH_DIR=%%IP
+
+%%OUTDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\zahlungen
+
+%%SEARCH=owiex_%%DAT..txt
+
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+
+* Email für Test überschreiben
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+%%NETUSE=J
+%%TEST=N
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+

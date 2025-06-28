@@ -1,0 +1,86 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-EWO-DTA-LKA-Senden
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-POLIZEI-NRW.txt
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\JOB-WinSCP-Put.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+* SERVER_TEXT IP P , U  und SITE kommen meist aus IP-UP Member 
+*%%SERVER_TEXT
+*%%IP
+*%%P
+*%%U
+%%SITE=POLIZEI-NRW
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Senden Ewo Änderungsdaten an LZPD
+
+*---------------------------------------------------------------
+* Remote Verzeichnis
+* %%REMOTE_OUTDIR=
+* Local Datei Auswahl Maske
+* im Gegansatz zu den OK.EWO Meldungen der Vergangenheit 
+* sind die letzten 2 Stellen des Dateinamens ein echter Zähler.
+* Bisher war 01 ein fester Wert
+*---------------------------------------------------------------
+
+ 
+*%%INCLUDE=EMA-*-%%$ODATE.*
+%%INCLUDE=EMA-*-%%$OYEAR.%%OMONTH.*
+
+*---------------------------------------------------------------
+* Local Eingabe Directory der WinSCP Aktion
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta\LKA\EWO-Typ-3
+%%OUTDIR_PROCESSED=%%INDIR.\verarbeitet
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+*%%Z04=open %%U.:%%P.@%%IP
+*%%Z04=open %%SITE -hostkey=dd:ec:0c:de:a4:93:d0:0b:48:09:3b:c3:b1:2e:f3:80:c2:91:58:f6
+**Z04=open %%SITE -hostkey=ba:8c:b7:c5:46:3b:0d:ca:93:c2:83:3e:58:26:19:d8:e8:13:39:a1
+%%Z04=open %%SITE -hostkey=65:48:d0:17:0c:8c:fb:3e:a6:f6:70:72:ff:27:1f:f3:bb:b3:b1:08
+
+%%Z05=put %%INDIR.\%%INCLUDE  
+*%%Z06=ls  
+%%Z10=close
+%%Z11=exit 
+*%%Z09=?
+*%%Z10=?
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.01.2022  08:17:31  zv173x2 neuer Hostkey
+*    06.12.2021  08:33:12  zv173x2 neu EWO-TYP-3
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

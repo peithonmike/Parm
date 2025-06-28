@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-GMN.KIRP-SyncDaten
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+* hier IP-UP Member anpassen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\TIP-UP-KIRP-IMSWARE-NEU
+
+
+*Eingabedatei
+%%SYSUT1=\\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\AV\GMN\IMS-KIRP\EXPORT\NEU\NEU-GMN-BUDGET.CSV
+
+%%PCDIR=KIRP/iefiles
+
+*    
+%%SYSUT2=Budget.CSV
+
+%%TEST=N
+ 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\WinScp\WinnSCP-Install.txt
+
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.12.2011  15:26:22  zv173x2 auf Test umgestellt
+*    28.12.2011  14:52:35  zv173x2 NEU-GMN-BUDGET.CSV oä.  in BUDGET.CSV
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

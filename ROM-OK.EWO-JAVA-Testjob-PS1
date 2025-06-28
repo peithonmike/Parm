@@ -1,0 +1,21 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* ROM-OK.EWO-JAVA-Testjob-PS1
+* 
+* 
+*********************************************************** 
+ 
+%%VON=01.01.2016
+%%BIS=31.01.2016
+
+%%PARAM_CLASS=de.akdb.oesio.okewo.bzrauskuenfte.gzrantrag.job.GzrAntragJobTO
+%%PARAM=antragDatumVon=D%%VON;antragDatumBis=D%%BIS
+%%JOBN=de.akdb.oesio.okewo.bzrauskuenfte.gzrantrag.job.GzrAntragVersendenJob
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO-JAVA
+
+%%DEBUG=N
+%%TEST=N
+%%ISE=N

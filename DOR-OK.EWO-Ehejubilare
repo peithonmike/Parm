@@ -1,0 +1,54 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : DOR                                                                  *
+***********************************************************************************
+*  Jobname     : DOR-OK.EWO-Ehejubilare
+*  Description : DOR-OK.EWO-Ehejubilare
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###DOR-EHEJUBILARE
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%VON - %%BIS *** %%ID.-%%RUNNR
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=12174-E01U0000
+*
+%%OKEWO_NR=P12174
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus aus
+%%TEST=N
+  
+*  Liste1 
+%%LISTE1=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..DBL
+%%LISTE1_ACTION=N
+  
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=N
+  
+*  es wird eine Mail mit Anhang versendet(nur wenn der Job OK ist)
+%%SENDMAIL=J
+%%EMAIL-U=%%LISTE
+%%EMAIL-T=ewo-auswertungen@stadt-dormagen.de
+%%EMAIL-A=%%LISTE1
+  
+* 
+*  Beschreibung   
+%%DESC=OK.EWO Ehejubilare
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U19605#A_VON_N.E01DUMMY#%%VON.#A_BIS_N.E01DUMMY#%%BIS.#A_TRENNER_N.E01DUMMY#;#A_AUSWAHL_N.E01DUMMY#2#A_SPERREN_N#JNJNNJNNNN__NNNNN_NN1#A_GEBIETTYP_N.E01DUMMY#901#A_GEBIET1_N.E01DUMMY#1#A_GEBIET2_N.E01DUMMY#1#A_NWJN.E01DUMMY#N#A_IQDRUCK_N.E01DUMMY#N#A_BEGRIFF_N.E01DUMMY#JE05#AUSG_FILE.E01DUMMY#%%LISTE1.#V_UZ331_LISTE.E01DUMMY#$$

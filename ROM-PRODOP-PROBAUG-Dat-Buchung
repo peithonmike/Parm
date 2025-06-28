@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-PRODOP-Import-FIM-Buchung
+* 
+* 
+*********************************************************** 
+ 
+
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=IMPORT
+%%VERF=PROBAU Baugenehmigung
+%%DAT=PROBAUG
+%%BJ=65
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+%%INI_DIR=\\srv03\qaspju$\Daten\Apps\HH\HKR\Script
+%%PF_DIR=\\srv03\qaspju$\Daten\Apps\HH\HKR\Script
+
+%%PRODOP_PROTOKOLLE=\\srv03\qaspju$\Daten\apps\HH\Protokolle\Import\Probaug_ROKI\
+
+* die normale Mail ausschalten 
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+*;stefanie.drescher@itk-rheinland.de 

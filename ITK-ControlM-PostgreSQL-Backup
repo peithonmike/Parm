@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-ControlM-PostgreSQL-Backup
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%date=%%CALCDATE %%ODATE -7
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - NOTOK
+%%TEXT_NOTOK=Das Backup der ControlM-DB ist abgebrochen. CYCLIC wurde gestoppt!!!

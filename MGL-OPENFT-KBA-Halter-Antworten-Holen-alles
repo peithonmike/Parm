@@ -1,0 +1,51 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* MGL-OPENFT-KBA-Halter-Antworten-Holen-alles
+* Sonderlauf alles abholen W.Klerx 
+* 
+*********************************************************** 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job holt Antworten aktiv über OpenFT ab.
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+
+%%DESCRIPTION=Halter Anfragedateien der %%STADT %%ORT mit OpenFT beim KBA abholen
+ 
+
+
+* Eingabe Directory der Anfragen
+%%OUTDIR=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL
+
+* Datei Auswahl Maske
+%%INCLUDE=*
+
+* Anschluss\Partner  LZPD,BZR usw 
+%%ANSCHLUSS=KBA
+
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+%%TRANSFER_ADMISSION=PKTAGTQL
+
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+ 
+*\\swvfileserver01\verfahren$\PMOWI\Produktion\Daten_vom_KBA
+*\\swvfileserver01\verfahren$\PMOWI\Produktion\Daten_zum_KBA
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     07.06.2017  08:47:04  zv173x2  neu
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+
+
+

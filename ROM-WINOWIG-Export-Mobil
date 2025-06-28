@@ -1,0 +1,39 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-WINOWIG-Export-Mobil
+* 
+* 
+*********************************************************** 
+EXE=\\srv03\sys_all$\Programme\winowig\prog\WinowigMobilExport.exe
+%%PARAMETER=-Wo2000Login;%%WINOWIG_GKZ.;500 "Batchstart Dauer=00:01:00"
+ 
+ 
+* Export aus Webanwendung nach WINOWIG
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+%%EXE=\\srv03\sys_all$\Programme\winowig\prog\WinowigMobilExport.exe
+%%PARAMETER=-Wo2000Login;%%WINOWIG_GKZ.;500 "Batchstart Dauer=00:01:00"
+ 
+
+* Search Dir wird nicht verwendet
+%%SEARCH=XMLMDE_%%$ODATE*
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\ruhenderverkehr
+
+%%TEST=N
+%%DEBUG=N
+
+ 
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.11.2021  10:37:25  zv173x2 neu
+*                          PS1 kann für alle bis auf DUE und MGL verwendet werden       
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

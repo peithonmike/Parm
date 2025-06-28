@@ -1,0 +1,99 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* MEE-LOGA-EGM-KN_1800_1800-Update
+* 
+* 
+*********************************************************** 
+
+*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*//    CTM 
+*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-EGM-HMAN-MAN
+
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\LOGA-EGM-Update.ps1
+
+
+* Zeitraum
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+
+*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*//    ITK 
+*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+* P1: Inputordner für PDF Abrechnungsdateien (Die Ursprungsdateien)
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\EGM\%%GEM3.\%%MAN.\%%LOGA_DAT
+
+
+* P2: Outputordner für Druck PDF Dokumente (Also die Leute, 
+*     die in Zukunft weiter gedruckte Abrechnungen erhalten) 
+*     Verzeichnis aus dem später der Druck erzeugt werden kann
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\EGM\%%GEM3.\%%MAN.\%%LOGA_DAT.\druck
+
+
+
+*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*//    USER / MANDANT 
+*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+* P3 : Outputordner für die Initialpasswortdatei (Also die CSV Datei,
+*      die später auf dem Share-Laufwerk mit zB.Kaarst abgelegt wird.
+*      Pfad: \\srv03\qaspka$\Daten\Orgaeinheit\EGM\Initialpasswort_Listen\)" 
+*      Ausgabe Directory der Passwordlisten für den Anwender
+%%USERDIR=\\vfmeerbusch\daten\egm\Initialpasswort_Listen\%%LOGA_DAT
+
+         
+
+* P4 : EGM Stammdatentabelle.csv (Die Tabelle ist neu und 
+*      zwingend erforderlich um neue Personen zu identifizieren. 
+*      Sie liegt auf Q:\Alle\temp_zvaa045\EGM_Daten\)" 
+
+%%STAMMDIR=\\vfmeerbusch\daten\egm\Stammdaten\EGM_MB_Stammdaten.csv
+
+* P5 : Eingabedatei Steuertabelle Druck: 
+*      alt \\msbmcc03\ctm_av\Bin\Java\EGM\input
+%%STEUER_TABELLE=\\vfmeerbusch\daten\egm\Druck_Steuertabelle_Produktionssteuerung\Aktuelle_Steuertabelle_MB.csv
+
+
+
+
+*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*//    APPL PROGRAMM 
+*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+* EXT_LOGFILE nur wenn das Programm eine externe Logdatei ausgibt
+* %%EXT_LOGFILE=
+
+* JarFile
+* PROD 
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\EGM\PdfGehaltsmitteilungenProdDB.jar
+
+* TEST
+* %%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\EGM\PdfGehaltsmitteilungenTestDB.jar
+
+* Programm Parameter  wird nicht mehr verwendet
+*%%PARAMETER="""%%INDIR""" """%%OUTDIR""" """%%USERDIR""" """%%STAMMDIR""" """%%STEUER_TABELLE"""
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+$$INCLUDE=\\msbmcc03\ctm_av\doc\egm\EGM-Einrichtung-Meerbusch.pdf
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*    22.08.2016  16:41:37  zv173x2 man
+*     08.07.2016  10:22:39  zv173x2  neu noch in Testphase
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+   

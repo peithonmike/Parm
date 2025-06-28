@@ -1,0 +1,321 @@
+
+#@#@#@#@#@#Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-LOGA-PDF-BUENDEL.ps1 -INCLUDE CTMERRINCLUDE -EXCLUDE CTMERREXCLUDE 
+DEBUG nicht initialisiert!  Auf J gesetzt
+
+
+########################################################################################
+    ...\module\LoadModule.ps1    
+########################################################################################
+
+
+========================================================================================
+    Import-Module   \\msbmcc01\CTM_AV\Bin\Powershell\BL\Module\                      
+========================================================================================
+
+ModuleType Version    Name                                ExportedCommands     
+---------- -------    ----                                ----------------     
+Script     0.0        Module-Global-V0                    {CENTER, LPAD, RPA...
+Script     0.0        Module-Info-V0                      {Write-Debug-Info,...
+Script     0.0        Module-Job-V20141023                {Ende, Job-Bottom,...
+Script     0.0        Module-Files-V20150409              {Add-System-Path, ...
+Script     0.0        Module-Spezial-V0                   Wait-For-File        
+Script     0.0        Module-FT-V0                        {Call-Exe, Call-Ex...
+Script     0.0        Module-PDF-V0                       {Get-PDF-Pagecount...
+Script     0.0        Module-Check-V0                     {Check-Directories...
+
+
+
+
+   ModuleName: Module-Check-V0
+
+CommandType     Name                                               ModuleName  
+-----------     ----                                               ----------  
+Function        Check-Directories                                  Module-Ch...
+Function        Check-Directories-And-Create                       Module-Ch...
+Function        Check-File                                         Module-Ch...
+Function        Check-File-Date                                    Module-Ch...
+Function        Check-File-Exists                                  Module-Ch...
+Function        Check-Files                                        Module-Ch...
+Function        Check-Server                                       Module-Ch...
+Function        Check-Variable                                     Module-Ch...
+Function        CopyItem                                           Module-Ch...
+Function        GetChildItem                                       Module-Ch...
+Function        Get-Hostname                                       Module-Ch...
+Function        Is-Directory-Empty                                 Module-Ch...
+Function        List-Variable                                      Module-Ch...
+
+
+   ModuleName: Module-Files-V20150409
+
+CommandType     Name                                               ModuleName  
+-----------     ----                                               ----------  
+Function        Add-System-Path                                    Module-Fi...
+Function        Copy-File                                          Module-Fi...
+Function        Copy-Move-File                                     Module-Fi...
+Function        Copy-Move-Files                                    Module-Fi...
+Function        Delete-File                                        Module-Fi...
+Function        Delete-Files-By-nDays                              Module-Fi...
+Function        Extract-Filename                                   Module-Fi...
+Function        Force-Directory                                    Module-Fi...
+Function        Force-Directory-                                   Module-Fi...
+Function        Get-Duration                                       Module-Fi...
+Function        Get-FileSize-Text                                  Module-Fi...
+Function        Move-File                                          Module-Fi...
+Function        Rename-File                                        Module-Fi...
+Function        Select-Files                                       Module-Fi...
+Function        Select-Files-By-Date                               Module-Fi...
+Function        Show-Selected-Files                                Module-Fi...
+Function        UTF8-To-ANSI                                       Module-Fi...
+Function        Write-OpenFT-Log                                   Module-Fi...
+
+
+   ModuleName: Module-FT-V0
+
+CommandType     Name                                               ModuleName  
+-----------     ----                                               ----------  
+Function        Call-Exe                                           Module-FT-V0
+Function        Call-Exe-2                                         Module-FT-V0
+Function        Call-FTP                                           Module-FT-V0
+Function        Call-WinSCP                                        Module-FT-V0
+Function        Check-CoreFTP-GetLog                               Module-FT-V0
+Function        Check-FTP-Log                                      Module-FT-V0
+Function        Send-Mail                                          Module-FT-V0
+Function        Write-Scriptfile                                   Module-FT-V0
+
+
+   ModuleName: Module-Global-V0
+
+CommandType     Name                                               ModuleName  
+-----------     ----                                               ----------  
+Function        CENTER                                             Module-Gl...
+Function        LPAD                                               Module-Gl...
+Function        RPAD                                               Module-Gl...
+Function        Set-Return-Code                                    Module-Gl...
+
+
+   ModuleName: Module-Info-V0
+
+CommandType     Name                                               ModuleName  
+-----------     ----                                               ----------  
+Function        Write-Debug-Info                                   Module-In...
+Function        Write-Header                                       Module-In...
+Function        Write-Header-2                                     Module-In...
+Function        Write-Header-3                                     Module-In...
+Function        Write-Header-4                                     Module-In...
+Function        Write-Info                                         Module-In...
+Function        Write-To-Errorlist                                 Module-In...
+
+
+   ModuleName: Module-Job-V20141023
+
+CommandType     Name                                               ModuleName  
+-----------     ----                                               ----------  
+Function        Ende                                               Module-Jo...
+Function        Job-Bottom                                         Module-Jo...
+Function        Job-Start                                          Module-Jo...
+
+
+   ModuleName: Module-PDF-V0
+
+CommandType     Name                                               ModuleName  
+-----------     ----                                               ----------  
+Function        Get-PDF-Pagecount                                  Module-PD...
+Function        Write-PDF-Pagecount-To-Csv                         Module-PD...
+
+
+   ModuleName: Module-Spezial-V0
+
+CommandType     Name                                               ModuleName  
+-----------     ----                                               ----------  
+Function        Wait-For-File                                      Module-Sp...
+
+
+========================================================================================
+========================================================================================
+
+
+
+
+###############################################################################################################
+#  TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST #  # TEST #  # TEST #  # TEST #
+###############################################################################################################
+##  ITK Rheinland                                       #######################################################
+###############################################################################################################
+##  JOBNAME            :  KAA-LOGA-EGM-PDF-KN-BU
+##  TABLE              :  LOGA-EGM-Update
+###############################################################################################################
+
+###############################################################################################################
+##  JOBSTART           :  30.03.2016 16:05:47
+##  ORDERID            :  11w0v
+##  RUNNR              :  1
+##  ODATE_P            :  18.03.2016
+###############################################################################################################
+
+###############################################################################################################
+##  COMPUTER           :  MSBMCC03
+##  OWNER              :  ITK\controlm
+##  USER               :  controlm
+###############################################################################################################
+
+###############################################################################################################
+##  MEMLIB / MEMNAME   :   /  
+##  BAT-VERSION        :  
+##  IGNORE_RIGHT_BLANKS:  N
+##  Powershell Version :  4
+##  TEST               :  J
+##  DEBUG              :  J
+###############################################################################################################
+#  TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST #  # TEST #  # TEST #  # TEST #
+###############################################################################################################
+
+
+
+
+
+###############################################################################################################
+##  INDIR              :  \\srv03.asp.rzne.de\ftp$\av\EGM\KAA\0316\druck
+##  OUTDIR             :  OUTDIR
+##  OUTFILE            :  OUTFILE
+##  INCLUDE            :  
+##  EXCLUDE            :  
+##  COPYCOUNT          :  COPYCOUNT 
+##  PDF_EXE            :  PDF_EXE
+##  PDF_FRONTCOVER     :  PDF_FRONTCOVER
+##  PDF_BACKCOVER      :  PDF_BACKCOVER
+##  TRENNBLATT         :  TRENNBLATT
+##  KOPIE01            :  KOPIE01
+##  KOPIE02            :  KOPIE02
+###############################################################################################################
+   INFO       Variable : PDF_EXE
+              Value    : PDF_EXE
+
+   FEHLER     PDF_EXE
+              Datei nicht vorhanden 
+
+   INFO       Variable : COPYCOUNT
+              Value    : COPYCOUNT 
+
+
+   ===============================================================================================================
+   FUNCTION   Check-Directories-And-Create
+   ===============================================================================================================
+   FEHLER     Variable  : SAMMELDIR
+                          nicht gefunden!
+7
+   --------------------------------------------------------------------------------------------------------------
+   COUNT      Directories    ErrorCount :  1
+   --------------------------------------------------------------------------------------------------------------
+
+
+
+
+==================================================================================================================
+=
+=                                                    Sammeln                                                    
+=
+=  alle     : CTMERRINCLUDE
+=  ausser   :CTMERREXCLUDE
+==================================================================================================================
+#      verarbeitet : 
+###############################################################################################################
+#      Fehler      :  2
+###############################################################################################################
+
+   ===============================================================================================================
+   FUNCTION   Show-Selected-Files
+              
+   ===============================================================================================================
+              Filelist 
+              indir        \\srv03.asp.rzne.de\ftp$\av\EGM\KAA\0316\druck
+
+
+###################################################################################################################################
+#########                              EEEEE   RRRR     RRRR      OOOO    RRRR                               ######################
+#########                              EE      RR RR    RR RR    OO  OO   RR RR                              ######################
+#########                              EEEE    RR RR    RR RR    OO  OO   RR RR                              ######################
+#########                              EEEE    RRRR     RRRR     OO  OO   RRRR                               ######################
+#########                              EE      RR RR    RR RR    OO  OO   RR RR                              ######################
+#########                              EEEEE   RR  RR   RR  RR    OOOO    RR  RR                             ######################
+###################################################################################################################################
+#   Programm  : +\\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-LOGA-PDF-BUENDEL.ps1
+###################################################################################################################################
+#   Zeile     : +Das angegebene Argument liegt außerhalb des gültigen Wertebereichs.
+Parametername: times.InvocationInfo.ScriptLineNumber
+#   
+#   Fehler    : +System.ArgumentOutOfRangeException: Das angegebene Argument liegt außerhalb des gültigen Wertebereichs.
+Parametername: times
+   bei System.Management.Automation.StringOps.Multiply(String s, Int32 times)
+   bei System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   bei System.Management.Automation.Interpreter.DynamicInstruction`3.Run(InterpretedFrame frame)
+   bei System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame).Message
+#   
+#   
+#   
+#   Abbruch der Verarbeitung !
+####################################################################################################################################
+####################################################################################################################################
+####################################################################################################################################
+####################################################################################################################################
+####################################################################################################################################
+####################################################################################################################################
+
+
+
+
+###############################################################################################################
+#  TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST #  # TEST #  # TEST #  # TEST #
+###############################################################################################################
+#                                                                                                             #
+#     J O B    E N D E                                                                                        #
+#                                                                                                             #
+#                                                                                                             #
+###############################################################################################################
+#       Jobstart  :  30.03.2016 16:05:47
+#       Jobende   :  30.03.2016 16:05:47
+#       Dauer     :  
+###############################################################################################################
+
+###############################################################################################################
+#      Test Exit Code : 9999- 20
+#      Exit Code   : 9999
+###############################################################################################################
+#      Fälle       :  0
+#      verarbeitet :  0
+###############################################################################################################
+#      Fehler      :  3
+###############################################################################################################
+#  TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST # # TEST #  # TEST #  # TEST #  # TEST #
+###############################################################################################################
+
+
+
+
+
+
+
+
+###############################################################################################################
+#   CTM Meldungen                                                                                             #
+###############################################################################################################
+
+     Job Object statistics
+     ====================
+Total User CPU Time: 0.891 second  
+
+Total Kernel CPU Time: 0.469 second  
+
+This Period Total User CPU Time: 0.891 second  
+
+This Period Total Kernel CPU Time: 0.469 second  
+
+Total Page Fault Count: 30297 
+
+Total Processes: 3 
+
+Active Processes: 0 
+
+Total Terminated Processes: 0 
+
+Total peak job memory used: 99.791 mega bytes  
+

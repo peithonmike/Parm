@@ -1,0 +1,67 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Druckdaten-1001-Beamte-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+*********************************************************** 
+ 
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+             
+%%OUTDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NAR\1001
+%%OUTDIR2=Nicht-verwendet
+
+
+
+%%INCLUDE=*.pdf
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=option failonnomatch on
+
+%%Z05=open %%SITE -hostkey=%%HOSTKEY 
+%%Z06=CD AN
+
+%%Z07=LCD %%OUTDIR1
+
+*Neuss/ITK
+%%Z08=mget KN_1800_18*_108*.pdf 
+
+*Grevenbroich
+%%Z09=mget KN_1840_18*_108*.pdf 
+
+*Jüchen
+%%Z10=mget KN_1850_18*_108*.pdf 
+
+*Kaarst
+%%Z11=mget KN_1870_1870*_108*.pdf 
+
+*Meerbusch
+%%Z12=mget KN_1910_19*_108*.pdf 
+
+
+
+
+%%Z20=bye 
+%%TEST=N
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.03.2019  09:42:58  zv173x2 neu übergangsweise bis Lemgo 1001 erzeugt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

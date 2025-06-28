@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-Kasse-T-ELKO
+* Stadt Kaarst
+* Sparkasse und Raiffeisenbank !
+* 20.04.2017 - Umstellung auf Powershell-FTP
+* 27.12.2018 - ELKO_SK69 hinzugefuegt
+* 27.10.2020 - ELKO_SKVHST, ELKO_SKVHSG und ELKO_SK hinzugefuegt
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Kaarst
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%client=IFP
+%%mandant=500
+%%source=\\srv03\qaspkdvz$\Daten\Apps\ftp\Travic-Link\KA\
+%%pattern=ELKO_SKVHST,ELKO_SKVHSG,ELKO_SK69,ELKO_SK,ELKO_RB,ELKO_DB     
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\copy_SAP_ELKO.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_500.cred" -sysid %client% -mandt %mandant% -source %source% -pattern %pattern% -jahr %elkoyear%
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\copy_SAP_ELKO_2.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_500.cred" -sysid %client% -mandt %mandant% -source %source% -pattern %pattern% -jahr %elkoyear%
+

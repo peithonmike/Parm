@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA.PBS-Daten-FileWatch
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* 
+* 
+* D u m m y   J o b m e m b e r  , ohne Funktion
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\%%GEM3.-CORONA_KONTAKT_MAIL
+
+%%BIS=%%JJJJMMTT_TT_P1_%%$ODATE..0557

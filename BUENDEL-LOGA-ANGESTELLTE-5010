@@ -1,0 +1,66 @@
+
+************************************************************************************************************
+*
+* wird in Verbindung mit LIBMEMSYM BUENDEL-LOGA-ANGESTELLTE verwendet
+*
+* zuerst werne die Standard Variabeln erzeugt LIBMEMSYM BUENDEL-LOGA-ANGESTELLTE
+* danach werden einzelnen Variablen an 5010 Listenformat angepasst
+************************************************************************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-ANGESTELLTE-DRUCKEREI
+
+
+
+
+
+
+
+
+
+
+
+
+
+************************************************************************************************************
+*
+* ab hier werden die Standards aus dem  LIBMEMSYM BUENDEL-LOGA-ANGESTELLTE überschrieben
+* 
+*
+************************************************************************************************************
+
+
+* LOGA_SACHG
+*
+*  alt DOR-LOGA-KN_1200_1200_5060_03-BU
+*           10----------- ------- 
+* neu       KN_1840_1841 _ 03_5014_C1.pdf
+
+%%VAR01=%%SUBSTR %%JOBNAME 10 12
+%%VAR02=%%SUBSTR %%JOBNAME 28 2
+
+
+* PDF Name AAA-DOR-KN_1820_1820_5014_03.pdf
+%%FILE=%%VAR01._5010_%%VAR02
+* PDF_FRONTCOVER
+* PDF_BACKCOVER
+* AAA-DOR-KN_1200_1200_03_5060.pdf
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\LOGA\1-seitig\AAA-%%GEM3.-%%FILE..Pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\LOGA\1-seitig\ZZZ-%%GEM3.-%%FILE..Pdf
+
+* INCLUDE/EXCLUDE
+%%INCLUDE=%%LOGA_SACHG.*
+%%EXCLUDE="-"
+
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+%%PDF_FILENAME=%%GEM3.-%%LOGA_SACHG.-%%LOGA_DAT.-BU.PDF
+* ---------------------------------------------------------------
+
+
+* -------------------------------------------------------------------------------------
+%%PDF_SAMMELDIR          =%%PDF_INDIR.\%%LOGA_SACHG.
+%%PDF_SAMMELDIR_PROCESSED=%%PDF_SAMMELDIR.\erledigt
+* -------------------------------------------------------------------------------------
+
+
+

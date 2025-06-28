@@ -1,0 +1,37 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-COBRA-Tagessicherung_DelFiles
+* 
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*********************************************************************************************
+%%COMMAND_Test=powershell -ExecutionPolicy bypass \\mscobra02\d$\ise\Datensicherung\DelFiles.ps1
+%%COMMAND_Prod=powershell -ExecutionPolicy bypass \\mscobra01\d$\ise\Datensicherung\DelFiles.ps1
+
+
+
+**NODEID=MSCOBRA02
+
+%%OWNER=%%DOM.\controlm
+
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+%%MAIL02=rudolf.dressel@itk-rheinland.de
+
+%%MAIL03=
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Keine Weiteren Schritte nötig.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Bitte ueberpruefen.
+
+
+%%TEST=N

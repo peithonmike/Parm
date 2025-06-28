@@ -1,0 +1,49 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-SOZ-MZ-Mail-BULI
+* 
+* 
+*********************************************************** 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\COPY-SOZ-MZ
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+
+**INDIR=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT.\kopiert
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\XXX\%%SOZ_DAT
+* Empfänger (durch Semikolon getrennt)          
+%%EMAIL_T=Joachim.Troll@grevenbroich.de;Catharina.Floeck@grevenbroich.de
+
+* Subject
+%%EMAIL_U=Job %%JOBNAME BUCHUNGSLISTE FUER STADTKASSE %%ORT %%SOZ_DAT
+
+* Kopie
+%%EMAIL_CC=
+
+* Blindkopie
+%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+*Anhang (durch Semikolon getrennt) 
+%%EMAIL_A=%%INDIR.\nbere-320-NE_PFZV0200_BULI-2008_%%SOZ_DAT..pdf
+%%EMAIL_A_MOVE=J
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+
+*    22.05.2024  15:22:00  zv173xc raus heike.engels@grevenbroich.de
+*                                  rein Joachim.Troll@grevenbroich.de
+*
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,30 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* XXX-WOHN-Termin-Anfrage
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+   
+%%MAIL_T=Rudolf.Dressel@ITK-Rheinland.de;Oliver.Emmel@ITK-Rheinland.de
+%%MAIL_CC=Produktions-Steuerung@itk-rheinland.de;Herber.Sajonz@@ITK-Rheinland.de
+
+%%MAIL_U=Terminanfrage Wohngeld WGPlus     
+
+
+
+
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     23.02.2017  09:28:29  zv173x2  neu
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+

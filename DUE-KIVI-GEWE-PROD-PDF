@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-KIVI-GEWE-PROD-PDF
+* 
+* 
+*********************************************************** 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\srv03\ftp$\KIVI\GEWE
+%%OUTDIR=\\msdpiom01\D$\ITK
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\copy_Kivi_pdf.ps1 -input_dir %%INDIR -output_dir %%OUTDIR
+
+
+
+

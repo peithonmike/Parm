@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-OK.Vorfahrt-T-FTP-PTV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+**SYSOUT=\\msbmcc03.itk.local\G$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%FTP-RPATH1=\ptv-sap\OK_Vorfahrt\%%GKZ._OK_VORFAHRT_D%%$ODATE..txt
+
+**FTP-RPATH2=\ptv-sap\hizpbuc_sap\indir\%%GKZ._OK_VORFAHRT_D%%$ODATE..txt
+**FTP-RPATH1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK_Vorfahrt\ptv-sap\%%GKZ._OK_VORFAHRT_D%%$ODATE..txt
+**FTP-RPATH2=\RKN-OKV\Verarbeitet\%%GKZ._OK_VORFAHRT_D%%$ODATE..txt
+**FTP-POSTPARAM213=./kasse_D%%$ODATE..txt
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer OK_Vorfahrt-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer OK_Vorfahrt-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der OK_Vorfahrt-Daten %%GEM3. ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der OK_Vorfahrt-Daten %%GEM3. ist NOTOK.

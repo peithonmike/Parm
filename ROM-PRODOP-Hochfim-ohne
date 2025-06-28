@@ -1,0 +1,56 @@
+wird nicht benötigt ist im 150 enthalten
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-PRODOP-Hochfim-ohne
+* 
+* 
+*********************************************************** 
+
+*  noch in der Testphase
+
+***********************************************************
+%%TEST=J
+
+*  Verfahrensvariablen
+%%ART=INTERN
+%%VERF=Hochfim für 02 (ohne offene Verwahrung) 
+
+%%BJ=100 
+
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+* Logdateien
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUH\PRODOP-%%$OYEAR.-%%OMONTH..csv
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+
+* Auftragserteilung
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-ROM-01-Variablen.pdf
+
+
+
+
+
+
+

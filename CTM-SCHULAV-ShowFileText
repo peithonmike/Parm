@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-SCHULAV-ShowFileText
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+%%INDIR=\\vfdusalt\40\Amt40\Themen\Statistik\Schulen\Logineo-Email-Adressen-nach-Straﬂen\2019-04
+
+%%INFILE=100274.csv
+%%TEST=N

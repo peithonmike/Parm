@@ -1,0 +1,84 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-SOPART.WIJU-an-SFirmP
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-SOPART.SFIRM-RKN
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SOPART
+
+
+
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qaspkr$\daten\apps\Sopart%%GEM3.\Sopart\FiBuExport\WJH
+
+* Datei Auswahl
+%%INCLUDE=*.XML
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=%%IP.\WiJu
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+
+* ***************************************************************************
+* Path für den erweiterten Zugriff 
+%%NETUSE_PATH=%%IP
+*
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* ***************************************************************************
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SOPART\Sopart Rheinkreis Neuss_ Umstellung DTAUS Laufwerke SOPART Skri.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\SOPART-RKN-WIJU-nach-SFIRM.pdf
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.09.2018  13:28:31  zv173x2 Netuse-s wieder entfernt 
+*    17.09.2018  15:00:27  zv173x2 Umstellung auf Netuse_s
+*    08.07.2016  09:59:29  zv173x2 Umstellung auf Powershell und neue OUTDIR User und Password
+*    11.06.2014  12:21:50  ZV173X2 wieder zurüch auf Verarbeitung mit sFirm
+*    27.05.2014  13:30:24  zv173x2 ABGELÖST DURCH RKN-SOPART.WIJU-an-TravicLink
+*    23.01.2014  11:13:32  zv173x2 neuer Ordner
+*    10.01.2014  15:28:36  zv173x2 wegen SEPA Umstellung von dta* nach *.XML
+*                                  Ordner bleibt anscheinend der alte    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

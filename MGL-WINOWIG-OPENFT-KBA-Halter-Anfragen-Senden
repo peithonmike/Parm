@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-OPENFT-KBA-Halter-Anfragen-Senden
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job versendet Anfragen usw per OpenFT.
+* Nach erfolgreichem senden werden die Einagbedateien nach OUTDIR_PROCESSED verschoben (wird angelegt falls nicht vorhanden)
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* Eingabe Directory der Anfragen
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\%%GEM3.\%%$ODATE.\WINOWIG
+\%%$ODATE
+%%DESCRIPTION=Halter Anfragedateien der %%STADT %%ORT mit OpenFT an das KBA   senden
+%%DESCRIPTION1=Job wird normaler Weise geforced wenn Daten zum Senden vorhanden sind
+
+* Datei Auswahl Maske
+%%INCLUDE=anfrage*%%KBA_NR.*
+
+* Anschluss\Partner  LZPD,BZR usw 
+%%ANSCHLUSS=KBA
+
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+%%TRANSFER_ADMISSION=TGBSKJZR
+
+*  Speicherort für gesendete Anfragen
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\senden\KBA\gesendet\%%GEM3.\%%$OYEAR.\WINOWIG\%%ODATE
+%%OPTIONEN=-b -n -c -k
+
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\JOB-OpenFT-KBA-Halter-Senden.ps1
+
+ 
+*\\swvfilesever01\verfahren$\PMOWI\Produktion\Daten_vom_KBA
+*\\swvfilesever01\verfahren$\PMOWI\Produktion\Daten_zum_KBA
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     07.06.2017  08:39:58  zv173x2  neu
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+
+
+
+
+

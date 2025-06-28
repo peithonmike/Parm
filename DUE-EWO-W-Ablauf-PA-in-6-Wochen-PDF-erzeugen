@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-W-Ablauf-PA-in-6-Wochen-PDF-erzeugen
+* PDF Datei erzeugen
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+%%AUFTRAGGEBER=T.Heister
+ 
+**CSV_FULLNAME=\\msbmcc03\CTM_AV\OK.EWO\Ablauf-PA-in-6-Wochen\Vorlagen\SQLCMD.csv
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\OK.EWO\Ablauf-PA-in-6-Wochen\ScriptModule\MailMerge.ps1 
+
+
+
+
+%%docx_template=\\Msbmcc03\ctm_av\OK.EWO\Ablauf-PA-in-6-Wochen\Vorlagen\Serienbrief_Ablauf_Personalausweis-Stand_12.2022.docx
+%%csv_datei=\\MSBMCC03\ctm_av\OK.EWO\Ablauf-PA-in-6-Wochen\Vorlagen\SQLCMD.csv
+%%temp_folder=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\Ablauf-PA-in-6-Wochen\tmp
+%%combined_file=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\Ablauf-PA-in-6-Wochen\Serienbrief_AblaufPersoIn6Wochen.docx
+%%pdf_file=\\MSBMCC03\ctm_av\OK.EWO\Ablauf-PA-in-6-Wochen\Vorlagen\Serienbrief_AblaufPersoIn6Wochen.pdf
+
+
+
+
+
+%%python_exe=C:\Users\a-zvaa405\AppData\Local\Programs\Python\Python312\python.exe
+
+%%python_script=\\msbmcc03\CTM_AV\Bin\Python\CF\Mailmerger.py
+
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Mailmerge_Call_Python.ps1
+
+
+ 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*   29.01.2024  12:00:00  zvaa405 Umstellung auf Python 
+*	02.01.2023  12:00:00  zvaa241 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

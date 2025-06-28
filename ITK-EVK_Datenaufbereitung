@@ -1,0 +1,22 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  
+***********************************************************************************
+*  Jobname     : ITK-EVK_Datenaufbereitung
+*  APPLICATION : EVK
+***********************************************************************************
+*
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%MAIL01=hendrik.possberg@itk-rheinland.de;volker.rath@itk-rheinland.de;ralf.dixneit@itk-rheinland.de
+
+**COMMAND=\\msgeomap03.itk.local\geoas_daten$\Evakuierung\Programm\EVK_HsNr_4MI.MBX
+**COMMAND=\\msgeomap03.itk.local\d_goja$\Daten\Evakuierung\Programm\EVK_HsNr_4MI.MBX
+%%COMMAND=D:\Programme\Batchprogramme\start_EVK_HsNr_4MI.bat
+
+%%MAIL_NOTOK=hendrik.possberg@itk-rheinland.de;volker.rath@itk-rheinland.de
+%%BETREFF_NOTOK=Datenaufbereitung MapBasic abgebrochen
+%%TEXT_NOTOK=%%JOBNAME - Datenaufbereitung MapBasic fehlerhaft

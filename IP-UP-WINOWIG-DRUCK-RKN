@@ -1,0 +1,10 @@
+* RKN Druckdaten übertragen
+
+
+%%IP=\\N900D01M63.n900d01.int.de\Input_ITK_WINOWIG$
+%%U=n900d01m63.n900d01.int.de\ITK-Datenimport
+%%P=ITK@rkn0815
+%%NETUSE_PATH=%%IP
+%%LAUFWERK=Y:
+
+

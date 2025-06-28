@@ -1,0 +1,31 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Düsseldorf
+***********************************************************************************
+*  Jobname     : DUE-DTA-GBA-GMBX-UNZIP
+*  APPLICATION : GWSST
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+
+
+%%INDIR=\\vfitkablage\DTA\Daten\LHD\DTA-GBA-GMBX\zip
+%%OUTDIR=\\vfitkablage\DTA\Daten\LHD\DTA-GBA-GMBX\xml
+
+%%COPY2SAP=J
+%%ZIP_OUTDIR=\\vfcache\kmsta\daten\IFP\400\GMBX
+
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\Script\Unzip_Files.ps1
+
+

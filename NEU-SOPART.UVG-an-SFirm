@@ -1,0 +1,62 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* NEU-SOPART.UVG-an-SFirm
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* Sopart-Verfahren AV.UVG -> Kasse Neuss Auszahlungsordner 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOPART-MAIL 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%VERFAHREN=SOPMG
+%%DESCRIPTION=Export Sopart UVG
+
+
+* Verfahrensbereich hier liegt die Eingabe
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspne$\daten\apps\SopartNEU\SoUVG\FiBu-Export\UVG
+%%SEARCH=*.XML
+
+
+
+* Kassenbereich
+*%%OUTDIR="\\ne1da03\1d03data\WIRT_FIN\FINANZEN\VOLLSTR\Auszahlung Sopart UVG"
+%%OUTDIR="\\vfne\20\Amt20\203 SFirm\51 SoPart UVG"
+
+
+
+* Eingabedatei im Erledigt Ordner mit ODATE abspeichen 
+%%MOVE_ORDNER=erledigt
+
+* Log
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\SOPART-NEU-UVG-Verarbeitung-nach-SFirm.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+%%TEST=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.11.2020  14:45:38  zv173x2 \\vfne\20\Amt20\203 SFirm\51 SoPart UVG
+*                          \\msbmcc03\ctm_av\DOC\SOPART\Umstellung-Sopart-Neuss-User-IDS-und-Server.jpg  
+*    23.04.2014  15:07:54  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

@@ -1,0 +1,13 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland
+***********************************************************************************
+*  Jobname     : KSU.W.KASSE-Abgabe-Kassendaten-BIM
+*  APPLICATION : KSU.W.KASSE
+***********************************************************************************
+
+%%GEM4=%%SUBSTR %%JOBNAME 1 4
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM4
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\KSU-KRZN-KASSE

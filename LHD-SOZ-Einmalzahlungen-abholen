@@ -1,0 +1,68 @@
+*********************************************************** 
+* LIBMEMSYM 
+* LHD-SOZ-Einmalzahlungen-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-DUE
+
+
+%%SOZ_DAT_YY=%%OYEAR.%%OMONTH
+%%SOZ_DAT_YYYY=%%$OYEAR.%%OMONTH
+
+* wird bei jedem Start temp. erzeugt 
+%%SFTP_SCRIPT=\\msbmcc03\ctm_av\Parm\SFTP\CC-SOZ-EZ-BARZAHL-DUE.txt
+
+
+%%SFTP_LOG="\\msbmcc03\c$\TEMP\%%JOBNAME..log"
+
+* Remote Verzeichnis im CC-SOZ
+
+ 
+%%SFTP_INDIR=EZ/%%$ODATE
+
+%%SFTP_MASK=EZ-115-DF_PFZZ0150_SEPA1400*.xml
+
+
+* Lokales Empfangsverzeichnis 
+%%SFTP_OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\SOZ\EZ\SFIRM
+%%TEST=J
+%%DEBUG=N
+
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+*  Powershell wird in BAT aufgerufen
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\SOZ-DUE-SCRIPT-CCSOZ-Daten-abholen.ps1
+*  Log der Verabeitung
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SFTP\CC-SOZ-EZ-BARZAHL-DUE.txt
+
+* Standard Scripte
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\gGET-CONTENT.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avWINSCP_GET_2.ps1
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avLIST-FILES.ps1 
+
+* ------------------------------------------------------------------
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.12.2014  12:00:04   neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

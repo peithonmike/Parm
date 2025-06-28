@@ -1,0 +1,23 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*
+%%RICHTUNG=SENDEN
+%%BFJ_ID=%%BFJ_ID_BAG
+*
+
+
+
+* Anfragedaten aus dem ZSTV Verfahren (OpenFT Server)
+* werden an das BfJ (ZSTV) gesendet
+%%INPUT_DIR=%%BAG_DIR_ANFRAGE
+
+
+* zu sendende Files werden anhand der Suchbegriffes ermittelt
+%%SEARCH=*.xml
+
+
+
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+
+

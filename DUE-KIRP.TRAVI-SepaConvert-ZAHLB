@@ -1,0 +1,73 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-KIRP.TRAVI-SepaConvert-ZAHLB
+* 
+* 
+*********************************************************** 
+* DD UND CT
+* 
+*********************************************************** 
+ 
+
+*********************************************************** 
+* Daten abholen und nach SEPA umwandeln
+ 
+*********************************************************** 
+ 
+
+* bei TEST J wird nur ein Anlist der Dateien erzeugt
+%%TEST=N
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe TRAVICLINK KIRP Bereich  
+%%SEARCH_DIR=\\srv03.asp.rzne.de\ftp$\av\TravicLink\KIRP-CONVERT
+
+
+* Daten-Datei Suchmaske
+%%SEARCH=000.IRP.SRZ.LHD-XML21.ZAHLB_*_*
+
+
+
+* Ausgabe TravicLink Sende-Verzeichnis
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\TravicLink\ADHOC
+
+
+
+* Logfile
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+* erledigt Ordner,
+%%MOVE_ORDNER=verarbeitet
+
+
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\KIRP-TRAVI-ZAHLB.pdf 
+
+%%EMAIL_T=Steffen.Brandemann@ITK-Rheinland.de
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;joerg.huhn@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+*;Produktions-Steuerung@itk-rheinland.de;Reinhard.Baier@itk-Rheinland.de
+%%EMAIL_U=Job-Nachricht CC:%%COMPSTAT  %%JOBNAME
+
+
+ 
+
+ 
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.12.2013  13:51:09  zv173x2 email angepasst
+*    14.11.2013  10:06:29  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\TRAVICLINK-Dateinamen.pdf
+* ------------------------------------------------------------------

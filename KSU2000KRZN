@@ -1,0 +1,8 @@
+%%LIBMEMSYM =\\msbmcc03\ctm_av\PARM\KSU_MAIL_MOERS
+%%LIBMEMSYM =\\msbmcc03\ctm_av\PARM\KSU_MAIL_ITK
+
+%%LAUF =prod
+%%Tag =%%ODAY
+%%Monat =%%OMONTH
+%%Jahr =%%$OYEAR
+%%Folgejahr=%%JJJJ_MM_P2_%%$ODATE

@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-CCM-Amt50-T-Copy-PTV
+* 
+* 
+*********************************************************** 
+ 
+
+* *************************************************************
+* Table Variablen          
+* DUE-CCM50-T-Copy-PTV
+* alter Hostjob Y50CCKIR
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+
+%%EINGABE_VZ=\\vfduswba\51\Amt51\Themen\CCM
+%%USERID=itk\zvdueftp
+%%PW=sgbTabelle21
+
+*   EINDAT enthät Teil des Pfades
+%%EINDAT=Kasse\CCM_Export_an_Kasse.txt
+
+%%AUSGABE_VZ=\\msptv01\d$\PTV\Projekte\SAP_Export\CCM_EDUE\InDir
+%%AUSDAT=DUE_CCM_50_T%%$ODATE..TXT
+%%AUSDAT2=CCM_50_Export_an_Kasse_T%%$ODATE..TXT
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\DUE-PTV.cmd
+

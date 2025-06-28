@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SOPART.AV-Export
+* 
+* SoPart® AV - Amtsvormundschaft / Beistandschaft / Mündelgeld 
+* 
+*************************************************************** 
+* Abholen Daten aus dem Mandantenbereich in den Prodbereich
+* Hostjob C50T42FT
+* ------------------------------------------------------------
+*
+* Eingabe aus Mandantenbereich
+* \\srv03.asp.rzne.de\qasp%%GEM.$\daten\apps\sopart\avor\export
+* Dateiname \\srv03.asp.rzne.de\qasp%%GEM.$\daten\apps\sopart\avor\export\Sopart_Export_an_Kasse.txt
+*
+* Ausgabe im AV-Bereich
+* \\srv03.asp.rzne.de\ftp$\%%GEM.\sopart\avor\export
+* \\srv03.asp.rzne.de\ftp$\%%GEM.\sopart\avor\export\sopart_export_neu.txt
+*************************************************************** 
+%%INDIR=\\srv03.asp.rzne.de\qaspme$\daten\apps\sopart\avor\export
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Pläne\SOPART-MEE-Export.jpg

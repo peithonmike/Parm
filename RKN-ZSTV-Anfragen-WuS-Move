@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-ZSTV-Anfragen-WuS-Move
+* Verschieben Anfragen aus dem Mandantenverzeichnis 
+* in das Sendeverzeichnis auf dem OpenFT Server
+*
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\ZSTV-RKN
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\ZSTV-OPENFT-WuS-ANFRAGE-RKN
+
+%%MAX=50
+
+
+
+%%TEST=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.05.2013  10:10:07  zv173x2 MAX 40 und DG angefragt
+*    26.11.2012  11:46:38  zv173x2 MAX 30 In der Vergangenheit,
+*                                         teilweise bis zu 50 mal ohne Ergebnis gewesen
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

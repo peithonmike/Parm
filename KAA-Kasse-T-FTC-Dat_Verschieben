@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-Kasse-T-FTC-Dat_Verschieben
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%CLIENT=IFP
+%%MANDANT=500
+
+%%MAIL_NOTOK=SAPSYSTEM@ITK-RHEINLAND.DE;PRODUKTIONS-STEUERUNG@ITK-RHEINLAND.DE
+%%BETREFF_NOTOK=%%JOBNAME IST ABGEBROCHEN
+%%TEXT_NOTOK=BITTE ÜBERPRÜFEN

@@ -1,0 +1,47 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-Batch-Druck-Sammler
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Doc\WINOWIG\%%JOBNAME..txt
+
+%%INDIR=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\ausgang\druckdateien\DLD32WINOWIG_RICOH_Pro_8300S_PCL_6\P%%$ODATE
+%%INCLUDE=*.prn
+
+
+
+
+
+%%OUTDIR=\\vfcache.itk.local\ITKAustausch\MGWinowigDruck
+
+
+%%PREFIX=%%RDATUM.-
+
+*----------------------------
+* Rename Extension 
+* EXT immer mit Punkt!
+* N oder leer = keine Änderung
+*----------------------------
+
+%%RENAME_EXT=.PS
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-WINOWIG-Druck-Sammler.ps1 -INCLUDE %%INCLUDE
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    02.06.2021  11:40:16  zv173x2   Rename to PS in Rename to PCL geändert 
+
+*    02.06.2021  09:05:35  zv173x2 D LD32WINOWIG_Ricoh          in D LD32WINOWIG_RICOH_Pro_8300S_PCL_6
+*    31.03.2021  08:33:41  zv173x2 K ONICA_MINOLTA_C658SeriesPS in D LD32WINOWIG_Ricoh
+*    28.11.2019  08:45:55  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

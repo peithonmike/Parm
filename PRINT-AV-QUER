@@ -1,0 +1,7 @@
+     
+* LIBMEMSYSM 
+* AV Duckerzuordnung Querdruck
+ 
+%%PRT_SERVER=msdhp01
+%%PRT_FREIGABE=itkr-4206Q
+%%PRT_SKELS_FORMAT=TXT

@@ -1,0 +1,63 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SCHUL-Ausw-Schülerzahlen-pro-Schule-und-Jahrgang
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\Aktuelle Schülerzahlen pro Schule und Jahrgang.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\Aktuelle Schülerzahlen pro Schule und Jahrgang.sql
+%%SERVER=??
+%%DB=??
+
+%%U=Schulen_AV
+%%P=VzNPzsN8&8rU
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+*%%VON=??
+*%%BIS=??
+
+
+%%JJJJ=2018
+
+%%SQL_FILE=\\msbmcc03\ctm_av\Parm\SQL
+\Original-SQL.sql
+
+* Name der Ausgabe Directory und Datei
+
+%%OUTDIR=\\msbmcc01\c$\
+%%FILENAME=%%JOBNAME-%%JJJJ..CSV
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+ 
+%%TEST=J
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    31.10.2018  08:30:55  zv173x2 neu noch nicht aktiv
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

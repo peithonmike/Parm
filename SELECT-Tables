@@ -1,0 +1,3 @@
+SELECT group_name, task_type, table_id, w_day_str, from_time  FROM public.def_ver_job
+WHERE group_name LIKE 'ITK_Reboot_%' AND task_type = 'SMART Table'
+ORDER BY group_name

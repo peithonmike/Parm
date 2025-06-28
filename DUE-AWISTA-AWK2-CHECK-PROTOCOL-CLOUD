@@ -1,0 +1,63 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-AWISTA-AWK2-CHECK-PROTOCOL-CLOUD  
+* Auftraggeber: Daniel Mendoza
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%NETWORKPATH=https://cloud.itk.local/remote.php/webdav
+%%DRIVELETTER=x:
+%%U=s-zv-awklhd
+%%INDIR=X:\AWK\AWK2\AWK2_Protokolle
+%%OUTDIR=X:\AWK\AWK2\AWK2_Protokolle\Verarbeitet
+%%INCLUDE=AWK2*.txt
+
+
+%%SMTPSERVER=smtp
+%%FROM=Produktions-Steuerung@itk-rheinland.de
+%%TO=schnittstellen-finanzwesen@itk-rheinland.de;Sabine.Manz@duesseldorf.de;natali.mares@duesseldorf.de;MOenen@awista-kommunal.de;jmaahs@awista-kommunal.de
+ 
+
+%%SUBJECT=Schnittstelle 2 : Fehler bei der Verarbeitung.
+%%BODY=Schnittstelle 2 : Es wurde ein Fehler ermittelt !
+
+
+***************************************
+
+
+
+%%TEST=N
+
+%%DEBUG=N
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog: %%JOBNAME hat keine Protokoll-Datei gefunden. 
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\CF\JOB\AWK2-Check-TXT-File.ps1
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+

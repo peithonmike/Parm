@@ -1,0 +1,65 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-UMWELT-Pegel-Online-Messstellen-Daten-Copy
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+
+
+%%DEBUG=N
+%%TEST=N
+%%AUFTRAGGEBER=B.Nilkes
+%%INDIR =\\msbmcc01\ctm_av\temp\Pegel-Online\Messdateien
+%%OUTDIR_PROCESSED=\\msbmcc01\ctm_av\temp\Pegel-Online\erledigt
+%%USE_ADD_TIMESTAMP=J
+%%TIMESTAMP_FORMAT=LASTWRITE
+%%FORCE_OUTDIR=J
+%%FORCE_OUTDIR_PROCESSED=J
+
+%%INCLUDE =*.dat
+%%EXCLUDE ="-"
+
+
+* Produktionsumgebung
+
+* ALT 
+*%%OUTDIR1=\\msjbossitk02\d\import_daten_grundwasser\logger
+
+*NEU 05.05.2021
+%%OUTDIR1=\\msjbosslhd01\import_daten_grundwasser$\logger
+*NEU 08.03.2022
+**OUTDIR1=\\msjbosslhd01\import_daten_grundwasser$\logger\done
+
+
+
+
+
+* Archiv
+%%OUTDIR2=\\vfdustvg\19\Amt19\Datenbanken\GrundwasserWeb\GW-Internet-Protokolle\GW-Stände
+**OUTDIR2=\\vfdustvg\19\Amt19\Datenbanken\GrundwasserWeb\GW-Internet-Protokolle
+** OUTDIR2=\\vfdustvg\19\Amt19\Datenbanken\GrundwasserWeb\Importprotokolle\GW-Stände
+
+
+* Testumgebung
+*%%OUTDIR1=\\msbmcc01\ctm_av\temp\Pegel-Online\OUTDIR1
+*%%OUTDIR2=\\msbmcc01\ctm_av\temp\Pegel-Online\OUTDIR2
+*%%OUTDIR2=\\msjbossitk01\d$\import_daten_grundwasser\logger
+ 
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.02.2022  10:03:48  zv173x2        Importprotokolle\GW-Stände  geändert
+*    15.02.2022  08:31:39  zv173x2  GW-Internet-Protokolle\GW-Stände ANGEHÄNGT
+*    18.05.2021  13:54:28  zv173x2 wieder rein \msjbosslhd01\import_daten_grundwasser$\logger
+*    05.05.2021  09:16:00  zv173x2 d\import_daten_grundwasser\logger in d\GrundwasserWeb/service/pegel/loggerimport
+*    04.05.2021  09:58:36  zv173x2 \\msjbossitk 02 auf \\msjbosslhd01
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* SZD-LECTOR-T-FTP-PTV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%SYSOUT=\\msbmcc03.itk.local\G$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+%%FTP-LPATH1=\fibu_ascii_2.txt
+%%FTP-RPATH1=\ptv-sap\SAP_Export\LECTOR_ESZD\inDir\%%GKZ._LECTOR_FIBU_ASCII_2_D%%$ODATE..txt
+
+
+%%FTP-SRCOPT1=\fibu_ascii_2_D%%$ODATE..TXT
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+
+%%BETREFF_OK=FileTransfer LECTOR-Daten %%GEM3.-%%ORT zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer LECTOR-Daten %%GEM3.-%%ORT zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der LECTOR-Daten %%GEM3.-%%ORT ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der LECTOR-Daten %%GEM3.-%%ORT ist NOTOK.

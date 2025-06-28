@@ -1,0 +1,52 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-W-Ablauf-PA-in-6-Wochen-MAIL-senden
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%AUFTRAGGEBER=T.HEISTER
+
+
+* Eingabe Directory
+%%INDIR=\\msbmcc03\CTM_AV\OK.EWO\Ablauf-PA-in-6-Wochen\Vorlagen\
+
+
+%%INCLUDE=*.PDF
+%%EXCLUDE="-"
+
+%%EMAIL_T=vervielfaeltigung@duesseldorf.de;einwohnermeldeamt_auswertung@duesseldorf.de
+**EMAIL_CC=
+%%EMAIL_BCC=Alexander.Schoenfeld@itk-rheinland.de;Torsten.Heister@itk-rheinland.de
+
+* Subject
+%%EMAIL_U=Anschreiben Ablauf Personalausweiss in 6 Wochen
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+%%EMAIL_A_MOVE=N
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Send-Mail-Attach.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    02.01.2023  12:00:00  zvaa241 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

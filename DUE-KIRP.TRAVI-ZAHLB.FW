@@ -1,0 +1,20 @@
+#***************************************************************************************
+# FileWatch für KSU2000 - MESO Datei
+#
+# Global Parameters
+# DO_CMD copy %FILENAME% \\srv03.asp.rzne.de\KSU2000krzn$\SicherungProd\%KSU_NR%\ewobewegung_mo_%KSU_NR%_%jjjj%%mm%%tt%.txt
+# DO_CMD del \\srv03.asp.rzne.de\ftp$\%KSU_DIR%\prod\%KSU_NR%\meso\ewobewegung_mo_%KSU_NR%.txt
+# DO_CMD copy %FILENAME% \\srv03.asp.rzne.de\ftp$\%KSU_DIR%\prod\%KSU_NR%\meso\ewobewegung_mo_%KSU_NR%.txt
+# DO_CMD del %FILENAME%
+# DO_CMD ctmorder -schedtab KSU.W.MESO-TAG-Abgleich_der_Einwohnerdaten -jobname KLF-KSU.W.MESO-Abgleich_der_Einwohnerdaten -odate odat -force y
+#
+INTERVAL 5 
+FROM_TIME 1100
+STOP_TIME 1333
+
+# ON_FILEWATCH statement  
+ON_FILEWATCH %FW_SEARCH%
+DO_CMD ctmorder -schedtab DUE-KIRP.TRAVICLINK-ZAHLB -jobname DUE-KIRP.TRAVI-SepaConvert-ZAHLB -odate odat -force y
+DO_CMD ctmorder -schedtab DUE-KIRP.TRAVICLINK-ZAHLB -jobname DUE-KIRP.TRAVI-senden-ZAHLB      -odate odat -force y
+
+END_ON

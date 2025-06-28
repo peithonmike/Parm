@@ -1,0 +1,40 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Grevenbroich
+***********************************************************************************
+*  Jobname     : GRE-WOHN.LDS-Postfach-Mail
+*  APPLICATION : WOHN.LDS
+***********************************************************************************
+*********************************************************************************** 
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###WOHN-POSTFACH-GET
+
+%%TEST=N
+*  Kontrolle als Blindkopie 
+%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\VLK\%%GEM3.-WOHN-POSTFACH-MAIL-ADR.vlk
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\EMail-Parameter.txt
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\StandardMessageWOHN-POSTFACH.txt
+
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.10.2016  12:22:11  zv173x2 dagmar.reitz@grevenbroich.de entfernt
+*    31.08.2016  16:04:03  zv173x2 
+*    31.08.2016  16:03:47  zv173x2 Astrid.Behr@grevenbroich.de für Herrn Godenau
+*    15.09.2014  10:39:27  zv173x2 Stephanie.Aschert@grevenbroich.de neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-PRODOP-Copy-Export-WINOWIG-Ist
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%FILENAME=JUEXPORTIST_%%$ODATE..txt
+
+%%IN_DIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM
+
+%%OUT_DIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\zahlungen
+
+%%TEST=N

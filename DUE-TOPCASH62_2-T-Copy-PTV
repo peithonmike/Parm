@@ -1,0 +1,23 @@
+* *************************************************************
+* Table Variablen          
+* DUE-TOPCASH62-T-Copy-PTV
+* alter Hostjob YZ1TCD62
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+
+%%EINGABE_VZ=\\mstcashlhd01\sapexport$\Amt62
+
+%%EINDAT=TCtoSAP*.TXT
+
+%%AUSGABE_VZ=\\msptv02\d$\ptv\Projekte\SAP_Export\TopCash_EXXX\InDir
+%%AUSDAT=DUE_TOP62_2*%%EINDAT._T%%$ODATE..TXT
+%%AUSDAT2=%%EINDAT._T%%$ODATE..TXT
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\TOPCASH_2_PTV.cmd

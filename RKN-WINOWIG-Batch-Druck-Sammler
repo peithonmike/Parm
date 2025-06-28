@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-WINOWIG-Batch-Druck-Sammler
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%DESCRIPTION=Druckdaten aus Verfahrensordner in AV Druck-Queue kopieren
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%SEARCH_DIR=%%WINOWIG_DRUCK_DIR.\P%%$ODATE
+*%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspKR$\Daten\Apps\winowig\ftp\ausgang\druckdateien\Winowig_Xerox\KRtest
+
+
+%%SEARCH=*.PRN
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\WINOWIG\druckdateien
+%%TEST=N
+*%%VORBLATT=\\msbmcbatch01\c$\CTM_AV\DeckBlatt\WINOWIG-%%GEM3..prn
+*%%ENDEBLATT=\\msbmcbatch01\c$\CTM_AV\DeckBlatt\WINOWIG-%%GEM3..prn
+
+*\\msbmcbatch01\c$\CTM_AV\DeckBlatt\WINOWIG-Ende-%%GEM3..prn
+
+* Diese Mail benötigt nur die AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-AKTIONSTARTEN.BAT
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.06.2015  11:46:07  zv173x2 vorblatt entfernt
+*    29.07.2014  15:29:10  ZV173X2 check_date in WINOWIG LIBMEMSYM
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

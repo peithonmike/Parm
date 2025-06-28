@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-Eigenbetriebe-KP3-abholen
+* 
+* 
+*********************************************************** 
+%%LDAT=%%$OYEAR.%%OMONTH
+
+
+
+
+ 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-PROT
+
+**INDIR=\\10.50.34.68\loga\logad\Import_variable_Daten\Export_Schnittstelle
+%%INDIR=\\10.50.34.68\loga\IP-Output\ITK-Rheinland\Scout
+%%NETUSE_PATH=\\10.50.34.68\loga\IP-Output\ITK-Rheinland\Scout
+%%OUTDIR=\\srv03\qaspkdvz$\daten\apps\ftp\av\LOGA\DUE\KP3\
+
+%%INCLUDE=IRP_%%LDAT._AK_*.csv
+%%EXCLUDE=*TEST*,*Kopie*,*Batch*
+%%LAUFWERK=Y:
+
+
+ 
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.07.2016  08:16:07  zv173x2 test auf N wurde bei der Änderung ,*Kopie*,*Batch* verwendet
+
+*    02.06.2016  14:03:47  zv173x2 1. Lauf mit netuse
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

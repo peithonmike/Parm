@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-PRODOP-Export-WINOWIG-Protokoll
+* 
+* 
+*********************************************************** 
+ 
+ 
+*********************************************************** 
+* LIBMEMSYM 
+* Job verschiebt das IstProtokoll aus der HOSTübernahme
+***********************************************************
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%FILE=JUEROTIST_%%odate..TXT 
+
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\Apps\ftp\av\HuH\%%GEM
+%%OUTDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\HH\Protokolle\Export
+
+
+
+
+

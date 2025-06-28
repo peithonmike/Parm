@@ -1,0 +1,11 @@
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+
+
+%%VON=%%TTMMJJJJP_TT_M7_%%$ODATE
+%%BIS=%%TTMMJJJJP_TT_M1_%%$ODATE
+%%VERFAHREN=DTA-KircheEV
+%%DATUM =%%$ODATE
+%%LOGOUT=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Dta\test\OK.EWO-KircheEV-Satz.log
+%%OFFSET=-2
+%%FILES=\\msbmcc03\ctm_av\Parm\OK.EWO-VLK-KircheEV.txt

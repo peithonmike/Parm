@@ -1,0 +1,16 @@
+* LIBMEMSYM
+* Variable SOZ-DAT
+
+
+
+
+ * Abrechnungsmonat liegt in der Zukunft
+*%%SOZ_DAT=%%JJJJ.%%MM_P1_%%$ODATE
+
+%%SOZ_DAT=%%JJJJ_MM_P1_%%$ODATE
+%%SOZ_DAT=%%SOZ_DAT.%%MM_P1_%%$ODATE
+
+
+%%BEIBLATT_DIR=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\Papyrus
+
+%%BEIBLATT_PRINTER=DFP16AH1

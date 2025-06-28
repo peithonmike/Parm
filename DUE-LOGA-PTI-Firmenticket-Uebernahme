@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-PTI-Firmenticket-Uebernahme
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-call-exe.ps1
+
+* PATH nur wenn der Systempfad erweiter werden soll
+%%PFAD=\\msbmcc03\ctm_av\Bin\sontiges\PTI-Firmenticket\
+
+* EXT_LOGFILE nur wenn das Programm eine externe Logdatei ausgibt
+%%EXT_LOGFILE=\\msbmcc03\c$\Program Files\BMC Software\Control-M Agent\Default\PersDatenImportLog.txt
+
+
+* Exe incl. Pfad 
+%%EXE=\\msbmcc03\ctm_av\Bin\sontiges\PTI-Firmenticket\PersDatenImport_13112015.exe
+
+
+%%FILENAME_1=\\srv03.asp.rzne.de\ftp$\av\LOGA\DUE\Stammdaten\PBS_Personalstammdaten.csv
+%%FILENAME_2=\\srv03.asp.rzne.de\ftp$\av\LOGA\DUE\Stammdaten\HR_Personalschnittstelle_Abgaenge.csv
+
+%%FILENAME_3=nicht-verwendet
+%%FILENAME_4=nicht-verwendet
+%%FILENAME_5=nicht-verwendet
+* Programm Parameter 
+* Position 1 Eingabedatei
+* Position 2 test/ prod 
+%%PARAMETER=%%FILENAME_1 %%FILENAME_2 prod
+%%AUFTRAGGEBER=S.Huennekes 08.2020
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.08.2020  10:38:55  zv173x2 AUFTRAGGEBER S.Hünnekes 08.2020   vormals Lemke 
+*    16.11.2015  11:37:49  zv173x2 neue Version und 1.stamm 2. aenderungen
+*    11.11.2015  15:56:40  zv173x2 testweise 1 und 2 gedreht
+*    09.11.2015  15:25:37  zv173x2 %%FILENAME_2 \\srv03.asp.rzne.de\ftp$\av\LOGA\DUE\Stammdaten\HR_Personalschnittstelle_Abgaenge.csv
+
+*    14.08.2015  10:31:33  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

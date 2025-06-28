@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-Delete-File
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* zu löschende Datei
+%%INFILE=\\srv03.asp.rzne.de\sys_all$\Programme\winowig\prog\!_secSignerAuslieferung.zip 
+%%TEST=N
+%%DEBUG=N

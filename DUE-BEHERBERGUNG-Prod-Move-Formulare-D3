@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-BEHERBUNG-P-Move-Formulare-D3
+* Move Formulare nach Rüfung nach D3
+*********************************************************** 
+%%AUFTRAGGEBER=David Mertens
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=Move Formulare nach Prüfung an D3
+
+%%SLEEP=300
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1
+
+%%INDIR=\\msampscan01\Beherbergung$\DUE\check
+
+* Datei Suchmaske
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory für die Anlagen
+
+%%OUTDIR=\\vfd3dms\ProdImport\DCOLD_IMPORT\D3D\BEHERBERGUNGSSTEUER\FORMULARE
+
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+%%USE_PREFIX=N
+
+%%TEST=N
+%%DEBUG=N
+

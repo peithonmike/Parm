@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-Kasse-T-Rückführung_Vollkomm
+* 
+* 09.05.2017 - Umstellung auf neue Powershell-FTP 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Meerbusch
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%client=IFP
+%%mandant=800
+**dest=\\vfmeerbusch\SFI\sfi_02\Vollkomm\Schnittstelle an Vollkomm
+%%dest=\\vfme\me\SB8_SFI\T_Buchhaltung\Vollkomm
+**OutDir=\\vfme\me\SB8_SFI\T_Buchhaltung\Vollkomm
+%%OUTDIR=\\vfme\me\sb8_sfi\T_Buchhaltung\Vollkomm\Schnittstelle an Vollkomm
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\MEE_Kasse_T_Rueckfuehrung_Vollkomm.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_800.cred"

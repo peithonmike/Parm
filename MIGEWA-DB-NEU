@@ -1,0 +1,17 @@
+* *******************************************************************************
+* LIBMEMSYM
+* MIGEWA_DB  
+* S Y S T E M F I L E 
+* Zugriff auf MIGEWA DB's zB per SQL_Z.BAT
+* -------------------------------------------------------------------------------
+
+* Standard Datenbank 
+* ODBC Verbindung SQL-Server 
+*                 MSSQL01.itk.local.
+%%DB=migewa_neu
+* Userangaben
+%%U=migewa_neu_read
+%%P="qh)7b&REJKYo"
+
+*
+

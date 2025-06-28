@@ -1,0 +1,42 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-LOGA-MSP-EGM-Beamte-1870-XXXX-BU
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NBE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-USE-DRUCKEREI-NEUSS
+
+
+
+%%DESCRIPTION=Bündel Beamte %%LOGA_MAN_%%HMAN
+
+
+* Eingabe aus XXX-LOGA-MSP-EGM-Beamte-Druck-erzeugen
+%%INDIR=%%DRUCK_OUTDIR
+
+%%OUTDIR_PROCESSED=%%DRUCK_OUTDIR_PROCESSED
+%%USE_OUTDIR_PROCESSED=%%DRUCK_USE_OUTDIR_PROCESSED
+
+
+*Directory der fertigen Bündel
+**OUTDIR=%%INDIR.\BUENDEL
+%%OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\KN\BUENDEL
+
+
+%%INCLUDE =*KN_%%HMAN._**.pdf
+%%TEST=N
+%%DEBUG=N 
+
+
+
+
+
+

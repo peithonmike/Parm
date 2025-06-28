@@ -1,0 +1,63 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-NKF-Listen-per-Mail-Senden
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOZ-DAT
+
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+%%INDIR=\\vfcache\av\Daten\SOZ\SOZ-MZ\%%$OYEAR.\DUE\%%SOZ_DAT
+
+
+
+%%INCLUDE=nbere-120-DF-SAP_PFVBK2*E_*_DF_%%SOZ_DAT..pdf,nbere-3*-DF_PFZV0*00_BU*_%%SOZ_DAT..pdf
+%%EXCLUDE=*AUSB*
+
+
+%%EMAIL_T=amt50nkfkoordination@duesseldorf.de
+
+
+
+* Subject
+%%EMAIL_U=Job-Nachricht
+
+* Kopie
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+* Absender
+%%EMAIL_F=Produktions-Steuerung@ITK-Rheinland.de
+%%IGNORE_RIGHT_BLANKS=J  
+
+
+%%EMAIL_A_MOVE=N
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.08.2020  12:25:44  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

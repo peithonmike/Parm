@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-CITKO-PBUC-an-PTV
+* 
+* 
+*********************************************************** 
+
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*   
+%%INDIR=\\srv03\ftp$\av\CITKO\
+%%INFILE=PBUC_%%$ODATE..hiz.txt
+
+* PTV Projekt
+%%OUTDIR=\\msptv01\d$\PTV\Projekte\SAP_Export\HIZPBUC_EXXX\inDir
+%%OUTFILE=900-WAF-PBUC_%%$ODATE..hiz.txt
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\srv03\ftp$\av\CITKO\verarbeitet
+%%OUTFILE_PROCESSED=PBUC_%%$ODATE..hiz.txt
+
+
+
+%%TEST=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    24.03.2015  11:38:27  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\CITKO\PTV-Projekte für die CITKO WW Daten.pdf
+* ------------------------------------------------------------------

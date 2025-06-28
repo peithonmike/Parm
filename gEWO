@@ -1,0 +1,53 @@
+* gilt für alle neuen OKEWO Jobs ab 2021
+* Variable USER ist kein AD User sondern ein OKEWO User
+* Hier liegen die Properties Dateien der AKD 
+\\msbmcc03\CTM_AV\Bin\Java\EWO_BATCH
+
+*******************************************************************************************
+* Auswerte Java wird aus Mandanten Ordner verwendet.
+* weil Updates nicht für alle Mandanten an einem Tag laufen.
+* Die Jar Files aber aktuell sein müssen.
+* alt vor Update 
+* neu nach Update
+*******************************************************************************************
+
+**%%JAR_FILE=\\msbmcc03\CTM_AV\Bin\Java\EWO_BATCH\jar-files\%%GEM3.\qjob-cmdline-client-jar-with-dependencies.jar
+**%%JAR_FILE=\\msnparo01\Auswertungen$\javafiles\qjob-cmdline-client-jar-with-dependencies.jar
+
+%%VERFAHREN=OK.EWO
+
+**ARBEITSPLATZ=PZV172i2C
+%%ARBEITSPLATZ=MSBMCBATCH01
+
+
+%%AUFTRAGGEBER=M.Pixa
+
+
+%%JOBLOG=\\msbmcc03\ctm_av\temp\%%JOBNAME._jobLog.log
+%%SYSLOG=\\msbmcc03\ctm_av\temp\%%JOBNAME._sysLog.log
+
+
+* EWO-Typ-1
+%%EWODIR_AUSWERTUNGEN=\\%%JBOSS.\Auswertungen$
+
+
+* EWO-Typ-2  ohne Auswerte Directory
+
+
+* EWO-Typ-3 
+* hier findet man auch beim neu erstellen die SubDirectory Namen wie sie von der EWO Truppe verwendet wurden
+%%EWODIR_AUSWERTUNGEN_TYP_3=\\%%JBOSS.\Auswertungen$\%%MANDANT.\de.akdb.oesio.okewo.auswertung.job\
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    08.02.2023  13:16:43  zvaa241 %%JARFILE
+*    28.10.2021  13:11:43  zv173x2 Auswerte Ordner in gEWO global
+*    28.10.2021  10:58:43  zv173x2 JOBLOG SYSLOG für Typ-3 oder mehr?
+*    20.07.2021  12:25:23  zv173x2 jarfile aus Mandanten Ordner verwenden.
+*    29.03.2021  13:39:55  zv173x2 %%AUFTRAGGEBER
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

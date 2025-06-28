@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Convert-ANSI-2-UTF-8
+* Konvertiert Dateien von ANSI nach UTF-8 
+*
+* Auftraggeber: 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3 
+
+
+
+
+
+%%INDIR=\\msbmcc03\CTM_AV\Parm\Testordner\ANSI2UTF-8
+%%INCLUDE=*.csv
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Job-Convert-ANSI2UTF-8.ps1
+
+
+
+
+

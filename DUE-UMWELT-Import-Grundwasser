@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-UMWELT-Import-Grundwasser
+* 
+* 
+*********************************************************** 
+  
+* Anweisungen für den Loader 
+%%CONTROL=\\%%NODEID.\c$\CTM_AV\Parm\CTL\load_tubrmess.ctl
+
+* Eingabedaten
+%%DATA=\\Nwc3daten2.stv-ddorf.de\Daten2\T1900\Amt_19\Hilfe_19\grundwassertransfer_batch\dat_vubrmess.dat
+
+
+* Vorbereitung Multi-Input
+
+%%SEARCH_DIR=\\Nwc3daten2.stv-ddorf.de\Daten2\T1900\Amt_19\Hilfe_19\grundwassertransfer_batch
+%%SEARCH1 =DAT_TUBRMESS*.dat
+%%CONTROL1=\\%%NODEID.\c$\CTM_AV\Parm\CTL\load_tubrmess.ctl
+%%LOG1=C:\ctm_av\temp\%%JOBNAME._load_tubrmess.log
+
+
+
+%%LOG=C:\ctm_av\temp\%%JOBNAME._load_tubrmess.log 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\UMWELT
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-UMWELT
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\%%NODEID.\c$\CTM_AV\Parm\CTL\TUBRMESSTEST.txt
+$$INCLUDE=\\%%NODEID.\c$\CTM_AV\Parm\CTL\load_tubrmess.ctl
+* ------------------------------------------------------------------

@@ -1,0 +1,41 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-Move-Directories
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR incl Unterordner  nach OUTDIR 
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Move-Directories.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\SOZ-EZ\2016\XXX
+#%%INDIR=\\Msprintff01\source$\SOZ-EZ\2016\XXX\20161031
+* Ausgabe Directory
+%%OUTDIR=\\vfcache\av\Daten\soz\SOZ-EZ\2016\XXX
+
+ 
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+
+
+
+

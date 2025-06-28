@@ -1,0 +1,105 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-SOZ-Personen-Abgleich-Ergebnis-Senden
+* 
+* 
+*********************************************************** 
+ 
+
+***************************************************************************
+* AKDB Jobname wird hier angegeben damit die Jobvariablen bereit stehen
+* Reihenfolge vor den LIBMEMSYM sind wichtig
+***************************************************************************
+%%EWOJOB_NAME=de.akdb.oesio.abgleich.jobs.AbgleichJob
+
+
+   
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\g%%GEM3
+
+
+* Mandantenspezifische Angaben CTM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_%%GEM3
+
+
+**********************************************
+* Verarbeitungs Variablen zentral erzeugen
+* und Dokumentation zum AKDB Job......  
+**********************************************
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\DOC\EWO\%%EWOJOB_NAME
+
+* WINSCP Angaben
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-DUE
+%%OUTDIR_PROCESSED=nicht-verwendet
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%REMOTE_INDIR=TMP_TAUSCH/
+
+%%WINSCP_AKTION=Personen Abgleich SOZ EWO Ergebnis in %%REMOTE_INDIR kopieren 
+
+
+%%AUFTRAGGEBER=M.Pixa / S.Kaufmann
+
+*---------------------------------------------------------------
+%%U=nicht-verwendet
+%%P=nicht-verwendet
+%%IP=nicht-verwendet
+* Remote Datei Auswahl Maske
+* SOZ_DAT
+*---------------------------------------------------------------
+* Local Eingabe Directory der WinSCP Aktion
+* Test 
+%%INDIR=%%EWODIR_AUSWERTUNGEN.\%%AUSWERTE_OUTDIR
+
+
+* Include dient nur zur Dateien Anzeige
+* 
+%%INCLUDE=nicht-verwendet
+%%DESCRIPTION= Kopieren EWO_Data_NE_%%ORT._%%DATUM._NEG.csv  und   EWO_Data_NE_%%ORT._%%DATUM._POS.csv
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch continue
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+
+* ------------------------------------------------------------------
+* Kostenstellen
+* ------------------------------------------------------------------
+%%Z05=CD
+%%Z06=DIR
+%%Z07=CD TMP_TAUSCH/
+%%Z08=CD TMP_EWO_Abgleich/
+
+%%z09=dir
+
+%%Z11=put %%INDIR.\%%GKZ8._ausgabe_personenabgleich_akdsoz_%%DATUM..csv
+%%Z12=put %%INDIR.\%%GKZ8._ausgabe_personenabgleich_akdsoz_%%DATUM..csv.neg
+ 
+%%Z29=close
+%%Z30=exit 
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.04.2021  13:56:32  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

@@ -1,0 +1,13 @@
+* LIBMEMSYSM 
+* Testdruck
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OK.EWO-DTA-MONTAG
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PRINT-AV
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\nach-KircheRK-Woche.skels
+%%PRT_SKELS=\\msbmcc03\ctm_av\Parm\Druck-Vorlagen\nach-KircheRK-Woche.skels
+%%TEST=N
+
+

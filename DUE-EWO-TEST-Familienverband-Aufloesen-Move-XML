@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-TEST-Familienverband-Aufloesen-Move-XML
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1 -INCLUDE %%INCLUDE
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\gEWO_%%GEM3
+
+* Eingabe Directory 
+%%INDIR=%%EWODIR_AUSWERTUNGEN.\Aufloesen_Familienverband
+
+
+* Datei Auswahl
+%%INCLUDE=%%GKZ8._Aufloesen*Familienverband_*.xml
+
+
+* Ausgabe Directory
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\AufloesenFamilienverband\DUE\TEST
+
+
+* Job Optionen 
+%%TEST=J
+%%DEBUG=N
+
+%%LIST_DIRECTORY=J
+%%LIST_SERVER=N
+
+
+

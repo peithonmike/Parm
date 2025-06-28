@@ -1,0 +1,69 @@
+* *************************************************************
+* zvaa405          
+* ITaS-ID_ Schüler_und_ Lehrerliste_Neuss
+* Erzeugt eine CSV Datei
+* Auftraggeber: Hendrick.Moeller@itk-rheinland.de
+* 
+
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+**  Verbidungsdaten
+
+%%SERVER=mssql01.itk.local
+%%DB=schild_jue
+
+**\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.
+
+%%SQL_CRED_FILE=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\Cred_File\Schulen_AV_cred.xml
+
+%%SQLFILEPATH_1=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\SQL\ITaS_ID_Schueler.sql
+%%SQLFILEPATH_2=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\SQL\ITaS_ID_Lehrer.sql
+%%SQLFILEPATH_3=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\SQL\ITaS_ID_Mitarbeiter.sql
+
+
+
+%%CSVPATH_1=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\Ausgabe\ITaS_ID_Schueler.ju.%%JJJJMMTT_%%$ODATE...csv 
+%%CSVPATH_2=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\Ausgabe\ITaS_ID_Lehrer.ju.%%JJJJMMTT_%%$ODATE...csv
+%%CSVPATH_3=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\Ausgabe\ITaS_ID_Mitarbeiter.ju.%%JJJJMMTT_%%$ODATE...csv 
+%%CSVPATH_TMP_1=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\Ausgabe\tmp\ITaS_ID_Schueler.ju.%%JJJJMMTT_%%$ODATE...csv 
+%%CSVPATH_TMP_2=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\Ausgabe\tmp\ITaS_ID_Lehrer.ju.%%JJJJMMTT_%%$ODATE...csv
+%%CSVPATH_TMP_3=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\Ausgabe\tmp\ITaS_ID_Mitarbeiter.ju.%%JJJJMMTT_%%$ODATE...csv 
+%%AUSGABE=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\Ausgabe
+
+%%CLOUD_CRED_FILE=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\Cred_File\s-zv-cloudav_cred.xml
+
+
+%%LW=Z:
+
+
+
+%%Net_Path=%%LW.\ITaS-ID-SchildExport
+%%INCLUDE=*.csv
+%%ZIPFILENAME=ITaS_ID_Juechen.7z
+
+** 7zip-Passwort im Secret Server: „ITaS-ID Schueler und Lehrer 7zip“
+**
+%%ZIP_CRED_FILE=\\msbmcc03\CTM_AV\TEMP\ITaS\%%GEM3.\Cred_File\zip_cred.xml
+
+
+%%TEST=N
+
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+**MAIL_NOTOK=schulen@itk-rheinland.de
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist durchgelaufen. 
+%%TEXT_NOTOK=Joblog: Fehler bei der Verarbeitung
+
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\XXX-ITAS-CSV-ZIP-CLOUD.ps1

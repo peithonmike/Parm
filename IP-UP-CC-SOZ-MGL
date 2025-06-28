@@ -1,0 +1,6 @@
+*  Lese Zugriff auf CC-SOZ 
+%%IP=LXSFTP.itk.local
+%%U=ccftpMG
+%%P=2MGsozT8$x;
+%%SITE=CC-SOZ-MOENCHENGLADBACH
+%%SERVER_TEXT=Lese Zugriff auf %%SITE

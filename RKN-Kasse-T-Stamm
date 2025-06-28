@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-Kasse-T-Stamm
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%CLIENT=IFP
+%%mandant=900
+%%dest=\\mskmv02\Programme\kmv\Batchdateien\   Meerbusch\hkrimport  NOCH ANPASSEN!!!
+
+
+
+

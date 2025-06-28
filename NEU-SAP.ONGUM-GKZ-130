@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAP.ONGUM-GKZ-130
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+%%MANDANT=130
+%%INPUTCHARSET=UTF-16LE
+%%DESCRIPTION=Merge Buchungsdateien auf dem PTV-Server
+
+
+
+*****************************************************************************
+*   M A I L 
+*   Im Fehlerfall werden die Ansprechpartner benachrichtigt   
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*   möglich nur Empfänger %%EMAIL_T
+*           und Kopie     %%EMAIL_CC 
+*****************************************************************************
+*   Mailadressen 
+*****************************************************************************
+%%EMAIL_T=Steffen.Brandemann@itk-rheinland.de 
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;Reinhard.Baier@itk-Rheinland.de
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL_U=Job-Nachricht CC:%%COMPSTAT  %%JOBNAME
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.06.2013  10:25:57  zv173x2 email
+*    19.02.2013  11:51:51  zv173x2 INPUTCHARSET=UTF-16LE
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

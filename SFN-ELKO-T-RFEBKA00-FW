@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* SFN-ELKO-T-RFEBKA00-FW
+* 
+* 
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass "%PSScripts%\Global\ExistsRemoteFile.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_140.cred" -RemoteFile "\SST\IFP\140\ELKOS\ELKO_SK.TXT"
+
+**MAIL_OK=produktions-steuerung@itk-rheinland.de
+**MAIL2_NOTOK=manfred.dressen@itk-rheinland.de;hans-georg.robertz@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+**MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;hans-georg.robertz@itk-rheinland.de
+
+**BETREFF_OK=%%JOBNAME ist OK gelaufen
+**BETREFF_NOTOK=%%JOBNAME ist NOTOK
+
+**TEXT_OK=Joblog: %%JOBNAME ist durchgelaufen. Juhu
+**TEXT_NOTOK=Joblog: %%JOBNAME ist NOTOK. Returncode: %%COMPSTAT  Keine Eingabedatei fuer Job SFN-ELKO-T-RFEBKA00 gefunden. FORCED OK
+**DATEI=IFP\140\ELKOS\ELKO_SK.TXT 

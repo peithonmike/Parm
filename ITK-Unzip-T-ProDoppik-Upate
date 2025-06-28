@@ -1,0 +1,22 @@
+***********************************************************************************
+*  JOB-LIBMEMSYM                                                                   *
+***********************************************************************************
+*  Jobname     : ITK-Unzip-T-ProDoppik-Upate
+*  10.05.2017 - Umstellung auf neue Powershell-FTP
+*********************************************************** 
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ITK
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%MAIL3=Stefanie.Buitink@itk-rheinland.de;Joerg.Huhn@itk-rheinland.de;Daniel.Weissberg@itk-rheinland.de;erich.jahnke@itk-rheinland.de
+%%MAIL4=produktions-steuerung@itk-rheinland.de
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\proDoppik_Update.ps1"
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "\\vfcache\finanz\Daten\PS\Scripts\Transfer\proDoppik_Update.ps1" -Zip_InDir = "\\msaip01\swablage$\FB2\Software\proDoppik\Auto_Update" -logFile = "\\msaip01\swablage$\FB2\Software\proDoppik\Auto_Update\log.txt"
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File "\\vfcache\finanz\Daten\PS\Scripts\Transfer\proDoppik_Update.ps1" -Zip_InDir = "\\srv03\qaspgr$\Daten\Apps\HH\HKR\eingespielte Hotfixe\Auto_Update" -logFile = "\\srv03\qaspgr$\Daten\Apps\HH\HKR\eingespielte Hotfixe\Auto_Update\log.txt"
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "\\vfcache\finanz\Daten\PS\Scripts\Transfer\proDoppik_Update.ps1"

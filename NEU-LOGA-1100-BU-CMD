@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA-1100-BU-cmd
+* 
+* 
+*********************************************************** 
+ 
+%%PDF_INDIR=\\msbmcbatch01\c$\ctm_av\Personal-DruckTest\NBE0112\DN
+%%PDF_OUTDIR=\\srv03.asp.rzne.de\ftp$\av\test\LOGA\Buendel
+%%PDF_FILENAME=DN_1100_1050_02_BU.PDF
+%%PDF_FRONTCOVER=
+%%PDF_BACKCOVER=
+%%PDF_MASK=DN_1100_1050_02_*.pdf
+%%PDF_EXE=\\msbmcbatch01\c$\CTM_AV\Bin\EXE\PDFtk\pdftk.exe 
+
+
+
+ 
+
+

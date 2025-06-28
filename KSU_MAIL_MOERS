@@ -1,0 +1,10 @@
+* Mail Adressen für KSU Mails
+* MAIL01 - MAIL04
+*
+* Mail Empfänger KRZN
+%%mailKRZN=dieter.heintz@krzn.de;christoph.schilcher@krzn.de;jonas.ahls@krzn.de;renate.celinsek@krzn.de
+**mailKRZN01=dieter.heintz@krzn.de
+%%mailKRZN01=jonas.ahls@krzn.de;bastian.isselhorst@krzn.de
+%%mailKRZN02=christoph.schilcher@krzn.de;jonas.ahls@krzn.de;bastian.isselhorst@krzn.de
+%%mailKRZN03=jonas.ahls@krzn.de
+%%mailKRZN04=renate.celinsek@krzn.de

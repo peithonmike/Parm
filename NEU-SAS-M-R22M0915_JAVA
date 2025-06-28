@@ -1,0 +1,40 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-M-R22M0915_JAVA
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%TEST=N
+
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUND\SAS_Eingabe\R22M0915_Eingabe.txt
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUND\SAS_Ausgabe\R22M0915_Ausgabe.txt
+
+
+
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\SAPHD3.jar -eingabeNeuss %%INFILE1 -ausgabeNeuss %%OUTFILE1
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    29.07.2013  21:03:59  ZV173X2 SAPHD3.jar
+*    29.07.2013  14:38:13  zv173x2 VeVeWe2.jar
+*    29.07.2013  13:58:37  zv173x2 neue jarfile 2
+*    29.07.2013  11:48:06  zv173x2 neue jarfile SAPHD3Neuss1.jar alt SAPHD3Neuss.jar
+*    26.07.2013    zv173x2 neu angelegt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

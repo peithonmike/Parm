@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-Import
+* 
+* 
+***********************************************************
+%%DESCRIPTION=Importieren Eingabedaten ruhender-flieﬂender Verkehr,Polizei,ePZA,Zahlungen usw. in DB 
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\WinOWIG\Import Arten je Mandant.csv
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+* ------------------------------------------------------------------
+%%TEST=N
+
+%%EMAIL_T=Andreas.Hillebrands@itk-rheinland.de
+%%EMAIL_U=Ergebnis %%JOBNAME
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+
+

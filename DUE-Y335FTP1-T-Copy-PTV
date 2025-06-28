@@ -1,0 +1,23 @@
+* *************************************************************
+* Table Variablen          
+* DUE-Y335FTP1-T-Copy-PTV
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+%%SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%EINGABE_VZ=10.254.23.143
+%%USERID=dftpokv
+%%PW=ft0920bg
+%%EINDAT=KIRP_DUE.TXT
+
+%%FTP-RPATH1=\ptv-sap\SAP_Export\OKVorf_EDUE\InDir\DUE_OKV_T%%$ODATE..TXT
+
+%%AUSGABE_VZ=\\msptv01\d$\ptv\Projekte\SAP_Export\OKVorf_EDUE\InDir
+%%AUSDAT=DUE_OKV_T%%$ODATE..TXT

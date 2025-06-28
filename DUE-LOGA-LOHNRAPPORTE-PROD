@@ -1,0 +1,24 @@
+***********************************************************************************
+*  JOB-LIBMEMSYM                                                                   *
+***********************************************************************************
+*  Jobname     : DUE-LOGA-LOHNRAPPORTE
+*  Auftrag ist von Gudrun Ring
+***********************************************************************************
+
+%%TEST=NEIN
+
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - DUE Ausgabe der Lohnrapporte - ist abgebrochen
+
+%%TEXT_NOTOK=Bitte überprüfen
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\DUE-Lohnrapporte.ps1 -test %%TEST
+

@@ -1,0 +1,68 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-MSP-Stammdaten-Update
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+**************************************************************************** 
+* Dokumenten Update
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP
+
+
+
+
+%%AUFTAGGEBER=Laura Podschwadek ab 03.2023
+
+
+
+ 
+%%INDIR=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\%%GEM3
+%%OUTDIR=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\%%GEM3.\output
+%%OUTDIR_PROCESSED=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\%%GEM3.\verarbeitet
+%%USE_OUTDIR_PROCESSED=J
+
+
+
+
+* JAVA Variablen
+* Java Directories \\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\Programme
+
+
+
+
+* Java Directories \\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\Programme
+%%JAR_FILE=\\Msprintff01\druckdaten$\MSP-LOGA-Stammdaten\PROD\Programme\Stammdatentabelle-0.0.1-jar-with-dependencies.jar
+
+
+%%JAR_START=de.itk.projekte.aktuallemitarbeiterinfo.Start
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-LOGA-MSP-JAVA.ps1
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\AS\Job-LOGA-MSP-JAVA-Stammdaten.ps1
+
+
+%%TEST=N
+%%DEBUG=N 
+
+   
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.03.2023  11:51:10  zvaa241 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

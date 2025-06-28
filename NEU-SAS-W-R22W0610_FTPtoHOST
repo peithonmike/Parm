@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-R22W0610_FTPtoHOST
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%FTP-LPATH1=\AV\GBA\SAS_AUSGABE\R22W0610_SASTRENN_Ausgabe_GBAK.txt
+%%FTP-LPATH2=\AV\GBA\SAS_AUSGABE\R22W0610_SASTRENN_Ausgabe_GBAR.txt
+*%%FTP-LPATH3=\AV\GBA\SAS_AUSGABE\R22W0610_STSASk71_Ausgabe.txt
+
+%%FTP-RPATH1=PBA.NEUAG.SOLLBUVD.K
+%%FTP-RPATH2=PBA.NEUAG.SOLLBUVD.R
+*%%FTP-RPATH3=PBA.NEUGV.SBZ.KASSN.K71
+
+%%FTP-NEWNAME1=\av\Gba\SAS_Ausgabe\Erledigt\R22W0610_SASTRENN_Ausgabe_GBAK_D%%ODATE..txt
+%%FTP-NEWNAME2=\av\Gba\SAS_Ausgabe\Erledigt\R22W0610_SASTRENN_Ausgabe_GBAR_D%%ODATE..txt
+*%%FTP-NEWNAME3=\av\Gba\SAS_Ausgabe\Erledigt\R22W0610_STSASk71_Ausgabe_D%%ODATE..txt
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.07.2013  12:58:32  zv173x2 71 dummy
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

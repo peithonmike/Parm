@@ -1,0 +1,12 @@
+*
+* LIBMEMSYM nur fuer Meerbusch
+* Ausrechnen einer Variablen ODATE - 251 Monate (nächster Monat - 21 Jahre)
+*
+* für alle anderen Gemeinden wird das Member ###Optionsdeutsche herangezogen (nächster Monat - 21 Jahre) 6.5.2014/BS
+* im Format JJJJMMTT  
+
+
+%%GEBDAT_VON=%%JJJJ_MM_M251_%%$ODATE..%%MM_MM_M251_%%$ODATE..01
+
+
+%%GEBDAT_BIS=%%JJJJ_MM_M251_%%$ODATE..%%MM_MM_M251_%%$ODATE..%%LD_MM_M251_%%$ODATE.

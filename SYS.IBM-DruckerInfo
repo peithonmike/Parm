@@ -1,0 +1,38 @@
+*********************************************************** 
+* LIBMEMSYM 
+* SYS.IBM-DruckerInfo
+* andre.pruter-kawelke
+* Tel. 0172 3831292
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\AVON
+
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\SYSTEM
+
+
+%%R17=%%AVON_ZAEHLERSTAND_R17
+%%R18=%%AVON_ZAEHLERSTAND_R18
+
+%%EMAIL-U= montliche Zählerstände IP 70 ITK-Rheinland  ( 0140186 0140187 )
+%%EMAIL-M=  Zählerstände ITK Rheinland \n  Stand    : %%RMONTH..%%$RYEAR \n \n  Typ      : InfoPrint 2770 \n  01-40186 : %%R18  \n  01-40187 : %%R17 \n 
+
+%%EMAIL-T=Andre.Prueter-Kawelke@ricoh.de
+%%EMAIL-BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+%%USE_LOG_BAT=J
+%%LOG_BAT=\\msbmcc03\ctm_av\bin\bat\DruckerInfo.BAT
+*%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Log\Joblog\SYS.IBM-DruckerInfo.csv
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.12.2011  14:37:23  zv173x2 emailadr
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

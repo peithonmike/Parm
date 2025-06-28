@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-EWO-SOZ-Personen-Abgleich
+* 
+* 
+*********************************************************** 
+ 
+
+
+******************************************************************************************** 
+* AKDB generelle Job Vorbereitung 
+******************************************************************************************** 
+*java -cp C:\Daten\job_personenabgleich\qjob-cmdline-client-jar-with-dependencies.jar;C:\Daten\job_personenabgleich\okewo-gui-jar-with-dependencies.jar de.akdb.qsys.qjob.cmdline.JobCommandLine --options=C:\Daten\job_personenabgleich\dor_system_config.properties --options=C:\Daten\job_personenabgleich\dor_Personenabgleich_job_config.properties
+
+
+
+
+* AKDB Jobname hier angeben
+* Reihenfolge vor den LIBMEMSYM sind wichtig
+%%EWOJOB_NAME=de.akdb.oesio.abgleich.jobs.AbgleichJob
+
+
+ 
+   
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\g%%GEM3
+
+
+* Mandantenspezifische Angaben CTM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWO_%%GEM3
+
+**********************************************
+* Verarbeitungs Variablen zentral erzeuen
+* und Dokumentation zum AKDB Job......  
+**********************************************
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\DOC\EWO\%%EWOJOB_NAME
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+

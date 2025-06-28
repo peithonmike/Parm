@@ -1,0 +1,47 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-INTEGRATION-WAHL-Druck-Test
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+*********************************************************** 
+* Output wird manuell über OKEWO als PDF erzeugt
+* und auf dem Printserver abgelegt.
+* I.Franz
+* M.Smits
+* B.Lieven
+* N.N.
+*********************************************************** 
+* Dieser Job sendet CYCL., soweit vorhanden, 
+* den Output an den Printserver und verschiebt 
+* nach erledigt.  
+*********************************************************** 
+
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO-INEGRATIONS-WAHL
+
+
+%%DESCRIPTION= OKEWO Integrationswahl T-E-S-T   Unterlagen %%STADT %%ORT an Printserver ITK senden
+%%WAHLART=I 
+
+* Nur für Test
+%%INDIR=\\srv03.asp.rzne.de\qaspNE$\Daten\Apps\OKEWO\okprg\okewo_neuTest\pdf
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\IntegrationsWahl_erledigt
+
+
+%%TEST=J
+%%DEBUG=N
+
+
+
+
+
+
+

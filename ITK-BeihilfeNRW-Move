@@ -1,0 +1,31 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : ITK-BeihilfeNRW-Move
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%jjjj=%%$OYEAR
+%%mm=%%OMONTH
+%%TT=%%ODAY
+
+%%TEST=N
+%%INPUT=\\SRV03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\BeihilfeNRW
+* OUTFILE
+%%OUTFILE=\\SRV03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\BeihilfeNRW\input_beihinrw.txt
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Jasper\ITK-BeihilfeNRW.pdf
+* ------------------------------------------------------------------

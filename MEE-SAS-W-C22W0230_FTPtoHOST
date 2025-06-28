@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SAS-W-C22W0230_FTPtoHOST
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%TEST=N
+%%FTP-LPATH1=\av\GEW\SAS_Ausgabe\C22W0230_Ausgabe.txt
+%%FTP-RPATH1=PBA.GEMAS.SAS%%GKZ
+%%FTP-NEWNAME1=\av\GEW\SAS_Ausgabe\Erledigt\C22W0230_Ausgabe_D%%ODATE..txt

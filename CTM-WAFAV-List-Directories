@@ -1,0 +1,23 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-WAFAV-List-Directories
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\mscitkoout01\citkoFtpAus$
+%%INDIR=\\vfduswba\32\Amt32\FTP32\BZREX
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+  ********************************************************************************** 
+

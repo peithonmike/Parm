@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+%%APPLICATION=ITK-System
+*********************************************************** 
+ 
+++LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+
+%%MAIL02=stefan.holzum@itk-rheinland.de;michael.bruns@moenchengladbach.de
+%%TEST=nein
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -file \\msbmcc03\CTM_AV\Bin\Powershell\ITK-FlushDNS.ps1

@@ -1,0 +1,38 @@
+
+* TEST ITK
+%%DFT_WEHRVERWALTUNG_MAIL=Produktions-Steuerung@itk-rheinland.de
+
+Düsseldorf 
+%%DUE_WEHRVERWALTUNG_MAIL=adv33@duesseldorf.de
+
+Mönchengladbach 
+%%MGL_WEHRVERWALTUNG_MAIL=Claudia.pflippen@moenchengladbach.de
+
+*Dormagen 
+%%DOR_WEHRVERWALTUNG_MAIL=buergeramt@stadt-dormagen.de
+
+*Grevenbroich 
+%%GRE_WEHRVERWALTUNG_MAIL=Mathias.claussen@grevenbroich.de
+
+*Jüchen 
+%%JUE_WEHRVERWALTUNG_MAIL=Lukas.Baettgen@juechen.de
+
+*Kaarst 
+%%KAA_WEHRVERWALTUNG_MAIL=Stefan.borck@kaarst.de
+
+*Korschenbroich 
+%%KOR_WEHRVERWALTUNG_MAIL=sabine.moebius@korschenbroich.de
+
+*Meerbusch 
+%%MEE_WEHRVERWALTUNG_MAIL=andrea.sarabi@meerbusch.de;buergerbuero@meerbusch.de
+
+*Neuss 
+%%NEU_WEHRVERWALTUNG_MAIL=Nilguen.Tepel@stadt.neuss.de
+
+*Rommerskirchen 
+%%ROM_WEHRVERWALTUNG_MAIL=buergerbuero@rommerskirchen.de
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    02.03.2022  09:45:56  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

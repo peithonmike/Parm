@@ -1,0 +1,99 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ-MZ-024-Listen2-BU
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-SOZ-MZ
+ 
+
+
+* ---------------------------------------------------------------
+* PDF_MASK Auswahl Maske 	Include Exclude
+* ---------------------------------------------------------------
+%%INCLUDE=*AUSZ-2024_%%SOZ_DAT..PDF
+
+%%EXCLUDE=%%SOZ_MZ_LISTEN2_EXCLUDE
+* ---------------------------------------------------------------
+* PDF_FILENAME
+* so soll das Bündel heißen
+* ---------------------------------------------------------------
+%%PDF_FILENAME=%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Listen2-%%$ODATE.-BU.PDF
+
+
+
+* Die Cover müssen je nach Empfänger angegeben werden
+* alle anderen Angaben sollten aus dem Jobnamen lesbar sein.....   siehe Member: BUENDEL
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\AAA-%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Listen2.pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\SOZ\1-seitig\ZZZ-%%GEM3.-SOZ-MZ-%%SOZ_GKZ.-Listen2.pdf
+
+
+* ---------------------------------------------------------------
+* ANZAHL
+* Anzahl der Ausdrucke 
+* ---------------------------------------------------------------
+%%ANZAHL=2
+
+
+* ---------------------------------------------------------------
+* Hotfolder FreeFlow
+* ---------------------------------------------------------------
+%%FREEFLOW_HOTFOLDER=%%SOZ_MZ_LISTEN2_DRUCKER
+
+
+
+
+
+
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden  Variablenwerte angezeigt
+%%DEBUG=N
+
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+%%TEST=N
+
+%%ONLY_BUENDEL=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    10.06.2014  11:22:19  zv171e1 Anzahl auf schriftlichen Wunsch Kaummanns von 2 auf 1  
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

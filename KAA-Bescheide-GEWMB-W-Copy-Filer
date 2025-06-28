@@ -1,0 +1,36 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-Bescheide-GEWMB-W-Copy-Filer
+* Copy GEW-Messbescheide für Finanzen zur Druckerei Stadt Kaarst
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-FileS.ps1
+
+%%OUTDIR=\\vfka\20\Bereich 20\AustauschITK
+
+%%OUTDIR_PROCESSED=\\vfapps\apps\ITK\KMV\Produktion\5000\50101\Druck\gedruckt
+
+%%INDIR=\\vfapps\apps\ITK\KMV\Produktion\5000\50101\DTA-Messbescheide
+
+%%INCLUDE=*_GEWMB-Bescheide_*.pdf
+%%EXCLUDE="-"
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=N
+%%DEBUG=N
+

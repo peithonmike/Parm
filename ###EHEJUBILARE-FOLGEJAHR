@@ -1,0 +1,3 @@
+* Auswertezeitraum komplettes nächste Jahr
+%%VON=01.01.%%JJJJ_P1_%%$ODATE
+%%BIS=31.12.%%JJJJ_P1_%%$ODATE

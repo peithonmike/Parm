@@ -1,0 +1,20 @@
+* *************************************************************
+* Table Variablen          
+* DUE-KASSE-T-DELETE_WI
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\CTM_AV\Parm\SAP_DUE
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$oyear.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+**SYSOUT=//sapftpitk.sapitk.krzn.de/SST/IFQ/SYSOUT_CTM/%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+
+* ------------------------------------------------------------------

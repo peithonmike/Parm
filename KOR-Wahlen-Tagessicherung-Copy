@@ -1,0 +1,67 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KOR-Wahlen-Tagessicherung-Copy-Wahlen-Tagessicherung-Copy
+* 
+* 
+*********************************************************** 
+ 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+* Zuordnung einer Berechtigung über Net Use möglich default NETUSE=N
+* Für Netuse Standard IP-UP Member verwenden %%U %%P
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-EWO-DATEN-KOR
+
+
+
+
+* Eingabe Directory 
+%%INDIR=\\vfitk\daten\Daten\Verfahrensdaten\Wahlen\Tagessicherungen\korschenbroich
+ 
+
+* Datei Auswahl
+%%INCLUDE=05162020_Ausgabe_STEWE_BT_%%$OYEAR._%%OMONTH._%%ODAY._*.csv,05162020_Ausgabe_STEWE_KW_%%$OYEAR._%%OMONTH._%%ODAY._*.csv
+**INCLUDE=05162004_Ausgabe_STEWE_*.csv
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\srv06.korschenbroich.ads.de\TransferEWO$
+
+
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+%%TEXT_NOTOK=
+
+* *********************************************************************
+%%NETUSE=J
+* Path für den erweiterten Zugriff
+%%NETUSE_PATH=\\srv06.korschenbroich.ads.de\TransferEWO$
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

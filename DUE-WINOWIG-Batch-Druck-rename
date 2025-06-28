@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-Batch-Druck-rename
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+%%SEARCH_DIR=\\Msdpiom01\d$\DFZSDST
+
+*%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\WINOWIG\Test
+
+
+%%SEARCH=*.prn
+
+%%SEARCH2=*.ps
+
+
+*%%SYSUT1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\WINOWIG\Test\*.prn
+
+%%SYSUT1=\\Msdpiom01\d$\DFZSDST\*.prn
+
+%%SYSUT2=*.ps
+
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\DUE-WINOWIG-Batch-Druck-rename.bat
+
+
+
+%%TEST=N

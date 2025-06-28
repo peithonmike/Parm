@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-PRODOP-Import-LOGA-AK01
+* 
+* 
+*********************************************************** 
+
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=IMPORT
+%%VERF=Loga (Besoldung für Beamte) AK01
+
+*AK01DAT
+%%DAT=AK01
+%%BJ=11
+ 
+*LOGDATEIEN Ordner
+%%ORDNER=LOGA
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_%%GEM3
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+
+
+
+ 

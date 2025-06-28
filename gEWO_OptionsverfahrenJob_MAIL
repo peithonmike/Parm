@@ -1,0 +1,48 @@
+
+*ITK AV
+%%ITK_OPTIONSVERFAHREN_MAIL=Produktions-Steuerung@itk-rheinland.de
+
+
+*Dormagen	
+%%DOR_OPTIONSVERFAHREN_MAIL=Martin.boese@stadt-dormagen.de;Beatrice.Jirmann@stadt-dormagen.de
+	
+*Grevenbroich	
+%%GRE_OPTIONSVERFAHREN_MAIL=ordnungsamt@rhein-kreis-neuss.de;buergerbuero@grevenbroich.de
+
+*Jüchen	
+%%JUE_OPTIONSVERFAHREN_MAIL=Claudia.Willkomm@juechen.de
+
+*Kaarst 	
+%%KAA_OPTIONSVERFAHREN_MAIL=stefan.borck@kaarst.de
+
+*Korschenbroich
+%%KOR_OPTIONSVERFAHREN_MAIL=sabine.moebius@korschenbroich.de
+
+*Meerbusch	
+%%MEE_OPTIONSVERFAHREN_MAIL=andrea.sarabi@meerbusch.de
+
+*Neuss
+%%NEU_OPTIONSVERFAHREN_MAIL=migration@stadt.neuss.de;Nilguen.Tepel@stadt.neuss.de
+
+*Rommerskirchen
+%%ROM_OPTIONSVERFAHREN_MAIL=buergerbuero@rommerskirchen.de
+
+*Mönchengladbach
+%%MGL_OPTIONSVERFAHREN_MAIL=claudia.pflippen@moenchengladbach.de
+
+*Düsseldorf
+%%DUE_OPTIONSVERFAHREN_MAIL=adv33@duesseldorf.de; petra.werth@duesseldorf.de
+	
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*	02.02.2022				Hinzugefügt  
+*						Grevenbroich   ordnungsamt@rhein-kreis-neuss.de
+*						Düsseldorf      petra.werth@duesseldorf.de 	
+*						Neuss          integration@stadt-neuss.de
+*                               ITK Pixa entfernt
+
+*    27.12.2021  13:51:15  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

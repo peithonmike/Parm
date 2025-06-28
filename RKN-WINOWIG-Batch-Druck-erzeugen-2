@@ -1,0 +1,41 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-WINOWIG-Batch-Druck-erzeugen-2
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+%%USE_INIFILE=J
+%%INIFILE=\\msbmcc03\ctm_av\PARM\WINOWIG-Batch-Druck-INIDATEI-%%GEM3
+%%LOGIN=%%WINOWIG_GKZ
+
+%%LIBMEMSYM=%%INIFILE
+
+%%COMMAND=Powershell.exe -executionpolicy bypass  \\msbmcc01\c$\CTM_AV\Bin\Powershell\BL\JOB\Job-WINOWIG-WoSpool.ps1
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.11.2019  11:16:34  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

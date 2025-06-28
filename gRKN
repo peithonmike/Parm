@@ -1,0 +1,56 @@
+ *************************************************************
+* Globale Variablen          
+* Rhein Kreis Neuss
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%STADT  =Kreis
+%%ORT    =Rhein-Kreis-Neuss
+
+%%GKZ    =900
+%%GEM    =KR
+%%GEM3   =RKN
+
+
+%%GKZ8_7_2=02
+*
+* Behördennummer für den Datenaustausch über OpenFT mit dem Bundesamt für Justiz (BfJ)
+*
+
+*
+* Rhein-Kreis Neuss-Ausländerbehörde - 
+*
+%%BFJ_ID_OKVISA=R9236A
+
+*  -JAGD- 
+*  wird für die Antwortabholung verwendet
+%%BFJ_ID_JAGD=R6128B
+
+*
+* KSU2000 OKEWO-Abgleich
+*
+%%KSU_NR=900
+%%KSU_DIR=ksu2000_krzn
+
+%%MD1=RKN
+
+%%MD2=kr
+%%MD3=rkn
+%%MD4="Rhein Kreis Neuss"
+%%MD5="Rhein Kreis Neuss Test"
+
+
+%%WINOWIG_GKZ=900
+
+* Rhein Kreis druckt selber ab 29.04.2020
+* WINOWIG_DRUCK_DIR löst WINOWIG_TREIBER Variable bei der Umstellung auf Powershell ab.
+* Der Treiber ist zwar wichtig ist. Aber der Job benötigt den Druckernamen.
+%%WINOWIG_DRUCK_DIR=\\srv03\qaspKR$\Daten\Apps\winowig\ftp\ausgang\druckdateien\DLD32OFFICEM
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.04.2020  09:13:21  zv173x2 WINOWIG_DRUCK_DIR=\\srv03\qaspKR$\Daten\Apps\winowig\ftp\ausgang\druckdateien\DLD32OFFICEM
+*    11.04.2016  09:52:33  zv173x2 BFJ_ID_JAGD=R9144J
+*    02.01.2014  07:45:50  zv173x2 winowig gkz
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-Monat-Kassendaten-Copy-Amt21
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\SOZ\MZ\Kasse
+
+*%%INDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\SOZ\Zwischen
+
+* Datei Auswahl
+%%INCLUDE=*.*
+%%EXCLUDE=*SEPA1500*
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfdussap\sap\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_AKDN_SOZIAL
+
+*%%OUTDIR=\\vfdussap\sap\sap\Kasse_Zahlungstraeger_TEST\
+
+* erledigt Ordner
+
+%%OUTDIR_PROCESSED=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\SOZ\MZ\Kasse\erledigt
+
+*%%OUTDIR_PROCESSED=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\SOZ\Zwischen\erledigt
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.11.2015  10:15:31  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

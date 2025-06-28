@@ -1,0 +1,11 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Mailtest-1
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL-U=  Test eMail 1 aus Job %%JOBNAME
+ 

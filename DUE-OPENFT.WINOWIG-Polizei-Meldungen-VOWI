@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-OPENFT.WINOWIG-Polizei-Meldungen-VOWI
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* zu kopierende  Files werden anhand des Suchbegriffes ermittelt
+%%SEARCH=*VOWI*
+* Input_dir ist die Directory, die auf dem OpenFT Server liegt
+* Dahinein schreibt das BfJ (BZR) die Antworten auf die Anfragen
+%%INPUT_DIR=\\msbmcbatch01\CTM_AV\MeldungLZPD\LHD
+
+%%MAX=20
+
+* Output_dir ist die Empfangsdirectory des Anwenders im Verfahren  
+%%OUTPUT_DIR=\\srv03.asp.rzne.de\qaspdf$\Daten\Apps\winowig\ftp\eingang\polizei
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\CTM_AV\Log\ErgebnisLog\FW_OPENFT.csv
+$$INCLUDE=\\msbmcbatch01\CTM_AV\Log\ErgebnisLog\OPENFT-2012.csv
+* ------------------------------------------------------------------
+
+
+%%TEST=N
+%%APPL=Meldungen
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.06.2014  17:18:52  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

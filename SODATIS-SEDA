@@ -1,0 +1,50 @@
+* ------------------------------------------------------------------------------
+* S O Z I A L W E S E N 
+* ------------------------------------------------------------------------------
+* Kopieren Sodatis SEDA
+* ------------------------------------------------------------------------------
+* Hier werden Standard Vorgaben gemacht, die für die meisten Mandanten zutreffen
+* Abweichungen können  bzw werden im Job-LIBMEMSYM gemacht 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+* Sodatis SEDA Monat +1
+%%SOZ_DAT_JJJJ=%%JJJJ_MM_P1_%%$ODATE
+%%SOZ_DAT_MM=%%MM_P1_%%$ODATE
+%%SOZ_DAT=%%SOZ_DAT_JJJJ.%%SOZ_DAT_MM
+
+%%SEDA_DAT=%%SOZ_DAT_MM._%%SOZ_DAT_JJJJ
+
+
+* Sachgebiet aus Jobnamen ermitteln
+%%SOZ_GKZ=%%SUBSTR %%JOBNAME 22 3
+
+
+* bere-280-NE-2022_PFGS0750_SA40Z_201409.txt
+
+%%INCLUDE=nbere-*NE*2*%%GKZ8_7_2._*.txt
+%%EXCLUDE="-"
+
+* --------------------------------------------------------------------------------------------
+* INDIR
+* Hier stehen die Dateien die über Mask ermittelt und kopiert werden
+* --------------------------------------------------------------------------------------------
+%%INDIR           =\\Msprintff01\source$\SOZ-SODATIS\%%$OYEAR.\SEDA\%%SOZ_DAT
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-SODATIS\%%$OYEAR.\SEDA\%%SOZ_DAT.\erledigt\RENAMED
+
+
+
+
+
+
+%%TEXT=C O P Y  and  R E N A M E Sodatis Seda Dateien   %%STADT %%ORT
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.08.2015  09:41:53  zv173x2 um 280 290 und 300 erweitert
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

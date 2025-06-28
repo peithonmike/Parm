@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Angestellte-Rename-From-5010-to-5014
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%DESCRIPTION=Meldebescheinigungen ListenNr 5010 in 5014 ändern  
+
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-Angestellte
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+%%LOGA_ART=LISTEN_NR
+
+%%DESCRIPTION=Rename Angestellte 5010 in 5014
+
+*%%INDIR=%%PDF_INDIR
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\KN
+
+%%INCLUDE=*5010*.pdf
+%%EXCLUDE="-"
+    
+* ------------------------------------------------------------------
+* Bei Test 
+* J / N
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.08.2021  11:40:46  zv173x2 neu um die alten Jobs weiter verwenden zu können 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

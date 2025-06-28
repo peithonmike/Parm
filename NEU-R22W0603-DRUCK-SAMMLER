@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-R22W0603-Druck-Sammler
+* aus der Bat-Datei "GESAMT" ausgebaut, Original unter bat.T280813 gesichert/Schr.
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+%%FEHLER_IN=\\msbmcc03\ctm_av\Jasper-Output\NEU-GBAAEND-Fehler-%%TTMMJJJJP_%%$ODATE...PDF
+%%GESAMT_IN=\\msbmcc03\ctm_av\Jasper-Output\NEU-GBAAEND-Gesamt-%%TTMMJJJJP_%%$ODATE...PDF
+
+%%FEHLER_OUT=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\Druckoutput\Druck\NEU-GBAAEND-Fehler-%%TTMMJJJJP_%%$ODATE...PDF
+%%GESAMT_OUT=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\Druckoutput\Druck\NEU-GBAAEND-Gesamt-%%TTMMJJJJP_%%$ODATE...PDF
+

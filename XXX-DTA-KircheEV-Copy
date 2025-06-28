@@ -1,0 +1,16 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-DTA-KircheEV-Copy
+* 
+* 
+*********************************************************** 
+%%DESCRIPTION=Dateien kopieren und ZIP Dateien zum versenden erzeugen
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\OK.EWO\Dta\KircheEV
+
+%%TEST=N

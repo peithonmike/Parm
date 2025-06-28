@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-schwarze-Liste-Ok-Verkehr
+* taeglich Montag bis Freitag und Samstag
+* Frau Webler
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+
+
+%%CLIENT=IFP
+%%MANDANT=400
+
+%%MAIL_NOTOK		=uta.webler@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK		=Schwarze Liste OK-Verkehr ist NOTOK!
+%%TEXT_NOTOK		=Joblob: %%Jobname ist abgebrochen. Bitte ueberpruefen.
+
+*%%SYSOUT        	=\\msbmcc03\ctm_av\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-SAP-T-OK-Vorfahrt-Ergänzung.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-SAP-T-OK-Vorfahrt.pdf
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.03.2015  10:54:06  zv173x2 sysout war kein standard jetzt aus der system file
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

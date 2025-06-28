@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LIMS-Sync-Ddorf-Mettmann_T_01
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+%%MAIL_01=michael.ufer@itk-rheinland;juergen.eitz@itk-rheinland.de	
+%%MAIL_02=produktions-steuerung@itk-rheinlande.de
+%%BETREFF_NOTOK=%%JOBNAME NOTOK
+%%TEXT_NOTOK=Der LIMS-Sync DUE <-> Mettmann ist nicht gelaufen

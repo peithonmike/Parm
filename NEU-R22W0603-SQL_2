@@ -1,0 +1,31 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : NEU-R22W0603-SQL_2
+* erstellt : 31.07.2013 14:27:51
+*    durch : zv171e3
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+* 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%TEST=N
+*
+* Config-Datei
+%%CONFIG= 
+* Input-Datei
+%%CSV=\\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\Gba\SAS_Ausgabe\R22W0603_ST0040_Ausgabe-%%$ODATE..csv
+* Datenbank
+%%DB=jasperjob
+* SQL-File
+%%SQL=\\msbmcc03\ctm_av\Parm\R22W0603_ST0040_Ausgabe.sql
+*Tabelle
+%%TABLE=gba_entsorger_gesamt
+* JAVA
+%%JAR=\\msbmcc03\ctm_av\Bin\Java\CsvToSql.jar

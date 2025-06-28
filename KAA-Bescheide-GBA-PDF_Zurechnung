@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-Bescheide-GBA-PDF_Zurechnung
+* Bescheide GBA PDF Zurechnung Stadt Kaarst
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\g%%GEM3
+
+
+
+* ---------------------------------------------------------------
+
+%%COMMAND=\\msaip01\swablage$\FB2\Software\KIVi\ControlM\NKM\KAA_GBA_pdfZurechnung.bat
+
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=N
+%%DEBUG=N
+

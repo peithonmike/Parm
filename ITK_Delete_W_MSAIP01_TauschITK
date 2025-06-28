@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK_Delete_W_MSAIP01_TauschITK
+* Delete aller Dateien im Ordner TauschITK, die älter als 30 Tage sind
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+*%%SYSOUT=\\msbmcc03.itk.local\C$\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "\\msaip01\ctm_av$\Bin\PS\delete\delete-files_folder-02.ps1"
+
+
+
+%%OWNER=itk\controlm
+
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+%%MAIL02=itk.FB1_SB131_Windows@itk-rheinland.de
+
+
+
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+
+%%TEXT_OK=Joblog: %%JOBNAME ist gelaufen. Keine Weiteren Schritte nötig.
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Delete aller Dateien im Ordner TauschITK die aelter als 30 Tage sind ist abgebrochen. Bitte ueberpruefen.
+
+
+%%TEST=N

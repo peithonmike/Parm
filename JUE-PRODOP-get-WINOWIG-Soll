@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-PRODOP-get-WINOWIG-Soll
+* 
+* 
+*********************************************************** 
+
+
+%%DESCRIPTION=abholen der Sollzahlungen aus dem täglichen Winowig Batch Lauf
+
+ 
+*  Datei wird in Prodoppik im Format WINOWIG_Soll_%%$ODATE erwartet. 
+%%INDIR=\\srv03.asp.rzne.de\qasp%%GEM.$\Daten\Apps\winowig\ftp\ausgang\soll
+%%OUTFILE=WINOWIG_Soll_%%$ODATE
+
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+
+* die normale Mail ausschalten 
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;stefanie.drescher@itk-rheinland.de 
+
+%%TEST=J

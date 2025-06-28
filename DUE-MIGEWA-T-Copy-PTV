@@ -1,0 +1,24 @@
+* *************************************************************
+* Table Variablen          
+* DUE-MIGEWA-T-Copy-PTV
+* alter Hostname Y323BKIR Amt32
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+%%EINGABE_VZ=\\vfduswba\32\Amt32\MIGEWA\KASSE
+%%USERID=ZVDUEFTP
+%%PW=sgbTabelle21
+%%EINDAT=BUCHUNGEN.TXT
+
+%%AUSGABE_VZ=\\msptv01\d$\ptv\Projekte\SAP_Export\Migewa_EDUE\InDir
+%%AUSDAT=DUE_MIG_T%%$ODATE..TXT
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\DUE-PTV-DEL.cmd

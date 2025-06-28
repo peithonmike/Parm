@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK_Reboot_MSBMCC02
+* Server Reboot
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\ServerReboot
+%%SERVER=msbmcc02
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\Reboot
+
+
+
+%%TEST=N

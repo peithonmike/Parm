@@ -1,0 +1,35 @@
+*  TODO : nach Testphase eMail zurücksetzen
+
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-PhinAVV-DTAUS_Export
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\PHINAVV-MAIL
+ 
+
+* Parameter für Powershell Programm
+**PARAMETER=-ini prod.ini -export DtausExport -dest_net dta -dest_pattern "DTAUS*.XML" -dest_dir "Kasse_Zahlungstraeger_Auszahlung\Ausgabe_PhinAVV"
+%%TEST=N
+
+**COMMAND=powershell.exe -ExecutionPolicy Bypass \\msphinbatch02\c$\PhinAVV\usr\phinavv.ps1 %%PARAMETER
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass PhinAVV-Batch-Export.ps1 -Environment C:\PhinAVV\env\Produktion.xml -Type DtausExport
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-PhinAVV-Export.txt
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\phinavv.ps1
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    08.04.2014  09:03:52  zv173x2 mail member
+*    02.04.2014     zv173x2 Umstellung auf Powershell
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

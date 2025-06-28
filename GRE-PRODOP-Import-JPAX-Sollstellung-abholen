@@ -1,0 +1,29 @@
+   
+   
+   
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-PRODOP-Import-JPAX-Sollstellung-abholen
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-JPAX-GRE
+
+%%OUTDIR=\\srv03\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM
+%%OUTFILE=sollhkx_%%$ODATE..txt
+
+* TEST =J macht nur einen Directory Anlist
+%%TEST=N
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     12.09.2016            zv173x2  letzter Lauf abgelöst durch GRE-PRODOP-JPAX-Sollstellung-abholen
+*     13.01.2016  12:36:31  zv173x2  kosmetik
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 

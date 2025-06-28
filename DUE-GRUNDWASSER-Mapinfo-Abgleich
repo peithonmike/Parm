@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-GRUNDWASSER-Mapinfo-Abgleich
+* 
+* 
+*********************************************************** 
+ 
+
+* CTM-Command Aufruf :
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Invoke-Web-Request.ps1
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* TEST Directory 
+%%URI=https://msjbosslhd01.itk.local:8443/GrundwasserWeb/service/mapinfo/abgleich
+
+
+%%TIMEOUT=600
+%%TEST=N
+%%DEBUG=N
+%%AUFTRAGGEBER=B.Nilkes
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.05.2021  10:07:01  zv173x2 https://msjbossitk 02.itk.local:8863 in //msjbosslhd01.itk.local:8443
+*    10.08.2020  08:31:50  zv173x2 PROD //msjbossitk 02.
+*    22.07.2020  11:16:45  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+* PROD !!  <https://msjbossitk 02.itk.local:8863/GrundwasserWeb/service/mapinfo/abgleich>
+
+

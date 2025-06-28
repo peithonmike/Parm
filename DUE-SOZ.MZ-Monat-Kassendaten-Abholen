@@ -1,0 +1,109 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOZ.MZ-Monat-Kassendaten-Abholen
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-CC-SOZ-DUE
+
+
+%%SOZ_DAT=%%JJJJ_MM_P1_%%$ODATE
+%%SOZ_DAT=%%SOZ_DAT.%%MM_P1_%%$ODATE
+
+
+
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-WinSCP-Get.ps1
+
+
+
+
+
+* Der Exec-Pfad ist grundsatzlich im SYSTEM Member
+*%%WINSCP_EXE
+* der WinSCP Log wird nur im Fehlerfall bzw bei DEBUG=J angelistet
+
+* SERVER_TEXT IP P und U kommen meist aus IP-UP Member 
+*%%SERVER_TEXT
+*%%IP
+*%%P
+*%%U
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Abholen Kassen Daten MONAT 
+ 
+*---------------------------------------------------------------
+* Remote Verzeichnis
+%%REMOTE_INDIR=MZ/%%SOZ_DAT
+*%%REMOTE_INDIR=TEST/T4/MZ/201802_20180205_093526
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=*.*
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+*%%OUTDIR=\\vfdussap\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_AKDN_SOZIAL
+%%OUTDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\SOZ\MZ\Kasse
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+*%%Z04=open %%U.:%%P.@%%IP
+%%Z04=open %%SITE
+%%Z05=CD %%REMOTE_INDIR
+%%Z06=get nbere-320-DF_PFZV0200_BULI_*.pdf %%OUTDIR.\
+*%%Z07=get EZ-120-DF_PFZZ0200_POLI_EZ_*.PDF %%OUTDIR.\
+%%Z08=get nbere-420-DF_PFZZ0150_SEPA1100_*.XML %%OUTDIR.\
+%%Z09=get nbere-420-DF_PFZZ0150_SEPA1300_*.XML %%OUTDIR.\
+%%Z10=get nbere-420-DF_PFZZ0150_SEPA1400_*.XML %%OUTDIR.\
+%%Z11=get nbere-420-DF_PFZZ0150_SEPA1500_*.xml %%OUTDIR.\
+*%%Z11=get ZZVDV101.MTL_DF_*  %%OUTDIR.\
+%%Z12=get nbere-430N-DF_PFZZ0250_*.xml  %%OUTDIR.\
+*%%Z14=get nbere-120N-DF_PFZZ0250_MAZE1100_*.pdf %%OUTDIR.\
+
+%%Z29=close
+%%Z30=exit
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.07.2018  00:07:24  zv173x2  ZZVDV101.MTL_DF_*  %%OUTDIR.\ entgfernt
+ 
+*    23.07.2018  00:04:21  zv173x2 %%Z16=get nbere-120N-DF_PFZZ0250_MAZE1100_*.pdf %%OUTDIR.\
+*     16.08.2017  11:18:53  zv173x2  Postbar
+*                                    zusätzlich zu   ZZVDV101.MTL_DF_* 
+*                                    im XML Format   bere-22N-DF_PFZZ0250_*.xml  
+*    22.10.2015  10:05:52  zv173x2 site
+*    08.10.2015  08:00:20  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

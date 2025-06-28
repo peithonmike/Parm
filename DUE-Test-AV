@@ -1,0 +1,59 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : DUE-Test-AV
+* erstellt : 02.06.2010 11:07:28
+*    durch : ZV173X2
+* --------------------------------------------------------------------------------
+* 
+* 
+* 
+* Jasper/ CTM Variablen
+%%bearb_von=%%TTMMJJJJP_TT_M7_%%$ODATE
+
+* CTMERR produzieren ...ODATE2
+* %%bearb_von=%%TTMMJJJJP_TT_M7_%%$ODATE2
+
+
+%%bearb_bis=%%TTMMJJJJP_TT_M1_%%$ODATE
+%%e01e200_ortnr=%%e01e200_ortnr
+%%REPORT_LOCAL=de
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=Test-AV.BAT
+ 
+ 
+* 
+* es wird eine Batfile zur externen Prüfung verwendet
+%%CHECKBAT=\\msbmcc03\ctm_av\Bin\BAT\Check-Montag.bat
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/DUE-Test-AV
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=DUE-Test-AV..%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : DUE-Test-AV.
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n  \n von=%%TTMMJJJJP_TT_M7_%%$ODATE \n bis=%%TTMMJJJJP_TT_M1_%%$ODATE \n 

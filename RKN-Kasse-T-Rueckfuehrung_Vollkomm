@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-Kasse-T-Rückführung_Vollkomm
+* 
+* 09.05.2017 - Umstellung auf neue Powershell-FTP 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_RheinkreisNeuss
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%CLIENT=IFP
+%%MANDANT=900
+%%DEST=\\n900d01m53.n900d01.int.de\TRANSFER_VOLLKOMM$\Ist_Vollkomm
+%%DEST_USER=n900d01m53\transfervollkomm
+%%DEST_PASS=vollkomm#RKN-itk
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\RKN_Kasse_T_Rueckfuehrung_Vollkomm.ps1" -Credentials "%PSCredentials%\sapftpitk_sapitk_krzn_de_CTM_IFP_900.cred"

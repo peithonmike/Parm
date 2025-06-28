@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* WOHN.LDS-Postfach-DIR
+* 
+* Anlist zB als Zugrifftest usw.
+*********************************************************** 
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LDS-POSTFACH
+
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###WOHN-POSTFACH-GET
+
+%%SYSIN_BAT=\\msbmcc03\ctm_av\BIN\BAT\WOHN-POSTFACH-DIR.BAT
+
+%%TEST=N
+%%NACH_BAT=
+ 
+*

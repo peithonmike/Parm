@@ -1,0 +1,58 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Meerbusch
+***********************************************************************************
+*  Jobname     : MEE-SOPART.SOPMG-an-SFirm
+*  APPLICATION : SOPART
+***********************************************************************************
+*********************************************************************************** 
+*
+* Sopart-Verfahren AV.SOPMG -> Kasse  Auszahlungsordner 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SOPART-MAIL 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%VERFAHREN=SOPMG
+%%DESCRIPTION=Export Sopart Mündelgelder
+
+* Verfahrensbereich hier liegt die Eingabe
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspme$\daten\apps\SopartMEE\SoPart\Avor\Export\
+%%SEARCH=*.XML
+
+* Kassenbereich
+%%OUTDIR=\\srv03.asp.rzne.de\transfer\Meerbusch\SoPart-Kassenaustausch
+
+
+* Eingabedatei im Erledigt Ordner mit ODATE abspeichen 
+%%MOVE_ORDNER=erledigt
+
+* Log
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SOPART-SOPMG-Doppelte-Auszahlung.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\log\ErgebnisLOG\SOPART-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.01.2014  16:14:19  zv173x2 \\srv03.asp.rzne.de\transfer\Meerbusch\SoPart-Kassenaustausch
+*    10.01.2014  15:32:14  zv173x2 SEARCH XML
+*    20.12.2013  14:23:21  zv173x2 neu 
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

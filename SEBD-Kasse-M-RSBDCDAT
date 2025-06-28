@@ -1,0 +1,20 @@
+***********************************************************
+* Jobname SEBD-Kasse-M-RSBDCDAT
+* 
+* zustaendig im SB 2.2 Martin Gehring und Silke Letzel
+* 30.05.2017 - Mailverteiler erweitert um norbert.doutrelepont fuer M.Gehring / Schr.
+***********************************************************
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%MAIL_NOTOK=martin.gehring@itk-rheinland.de;silke.letzel@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME im SAP ist NOTOK!
+%%TEXT_NOTOK=Bitte pruefen!
+
+%%MAIL_OK=rolf.leenen@duesseldorf.de;belen.freitaspena@duesseldorf.de;fibu.sebd.allgemein@duesseldorf.de
+
+**MAIL_GUT=britta.leinbaum@duesseldorf.de;norbert.doutrelepont@duesseldorf.de;martin.gehring@itk-rheinland.de
+%%MAIL_GUT=Jenny.Nguyen@duesseldorf.de;martin.gehring@itk-rheinland.de
+
+%%TEXT_OK=Diese Mail dient nur zur Info.

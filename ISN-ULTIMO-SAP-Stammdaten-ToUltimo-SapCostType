@@ -1,0 +1,64 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ISN-ULTIMO-SAP-Stammdaten-ToUltimo-SapCostType
+* 
+* für Test und Prod geeignet
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=Stammdaten aus Moers nach Ultimo übernehmen
+%%DESCRIPTION1=Directory SapCostType
+%%DESCRIPTION2=Typ       Kostenarten
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Senden Ultimo-Daten per WinSCP und UltimoServer  
+%%AUFTRAGGEBER=H-G.Robertz
+
+*---------------------------------------------------------------
+%%U=nicht-verwendet
+%%P=nicht-verwendet
+%%IP=nicht-verwendet
+* Remote Datei Auswahl Maske
+%%OUTDIR_PROCESSED=nicht-verwendet
+ 
+
+*---------------------------------------------------------------
+* Local Eingabe Directory der WinSCP Aktion
+* Test 
+%%INDIR=\\srv03\ftp$\av\Ultimo\ISN\SAP-Stammdaten
+%%INCLUDE=UL_SKA1_ULTIMO.csv
+
+
+
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch continue
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open ISN-ULTIMO-PUT
+* ------------------------------------------------------------------
+* Kostenstellen
+* ------------------------------------------------------------------
+%%Z05=CD
+%%Z06=CD SapCostType
+%%z07=dir
+*%%z08=rm %%INCLUDE
+%%Z09=put %%INDIR.\%%INCLUDE 
+
+%%Z29=close
+%%Z30=exit 
+
+
+
+%%TEST=N
+
+

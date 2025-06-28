@@ -1,0 +1,12 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Test-DELPHI
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%EXE=c:\ctm_av\bin\delphi\BatchTransfer.exe
+%%EXE_LOG=c:\TEMP\log_batchTransfer.log

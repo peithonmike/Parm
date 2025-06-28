@@ -1,0 +1,47 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-BEHERBUNG-P-Cloud-Formulare-D3
+* Copy Formulare Beherbungssteuer nach D3
+*********************************************************** 
+%%AUFTRAGGEBER=David Mertens
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=BEHERBUNG Stamm und Buchungsdaten (Soll) nach SAP kopieren
+%%RICHTUNG=Copy-from-Cloud
+
+
+
+%%U=BEHERBUNGAV
+
+
+*---------------------------------------------------------------------------------
+#  Der Begriff secret-server wird im Job durch das verschlüsselte Passwort ersetzt 
+%%P=secret-server
+*---------------------------------------------------------------------------------
+* Eingabe Directory 
+* Directory in der Cloud
+* immer mit Laufwerksbezeichnung
+
+%%INDIR=X:\Musikschule\FromBEHERBUNG\%%GEM3
+
+* Datei Suchmaske
+%%INCLUDE=AMA_800*
+%%EXCLUDE="-"
+
+* Ausgabe Directory für die Solldaten
+%%OUTDIR=\\vfd3dms\TestCacheImport\DCOLD_IMPORT\D3D\Beherbergungssteuer\Formulare
+
+* Cloud Laufwerk
+%%LAUFWERK=X:
+ 
+* Dateien die in die Cloud geschrieben wurden 
+* nach erledigt verschieben
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+
+%%USE_PREFIX=N
+
+%%TEST=J
+%%DEBUG=N

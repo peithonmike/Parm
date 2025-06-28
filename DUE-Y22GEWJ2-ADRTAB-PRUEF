@@ -1,0 +1,37 @@
+* LIBMEMSYM 
+* DUE-Y22GEWJ2-ADRTAB-PRUEF
+* 
+* 
+***********************************************************
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+**LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt
+ 
+
+%%TT=%%ODAY
+%%MM=%%OMONTH
+%%JJ=%%OYEAR
+
+%%SERVER=m180kiviitkp2.rz.krzn.de
+%%USER=kivibat
+%%PW=kivibat
+%%DATEI=tkadk005.txt
+
+%%VERZEICHNIS=/Shell-Scripte/AdrTabFuellen
+
+%%MAIL02=volker.ehmann@itk-rheinland.de;david.mertens@itk-rheinland.de;alexander.lausecker@duesseldorf.de;adelheid.fraedrich@duesseldorf.de
+%%MAIL01=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=Verarbeitung Gewerbesteuer Sollstellung NOTOK
+%%TEXT_NOTOK=Es sind noch Faelle zur Verbuchung gefunden worden. Beheben Sie das Problem und starten die Verarbeitung erneut.
+
+%%COMMAND=\\msbmcc03\ctm_av\bin\Bat\checkFile.bat
+
+rem #-1 = datei nicht da 
+rem # 0 = leer
+rem # 1 = inhalt vorhanden
+rem # parameter:
+rem # server user pw verzeichnis datei

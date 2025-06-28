@@ -1,0 +1,155 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-SYSOUT-WTS87
+* 
+* 
+*********************************************************** 
+ 
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+* START 
+* eingefügt aus SYSTEM
+* Variable für die zentrale Sicherung der Sysoutdateien
+
+*
+
+*  
+
+**************************************************************************************
+
+*   -- Änderungen ------------------------------------------------------------------- 
+*    20.12.2010  09:08:11  ZV173X2 SYSOUT auf msbmcc03 geändert
+
+*    04.11.2010  11:05:44  zv173x2 Mailserver geändert
+
+*                                  neu : kdvzsmtprelay.kdvz-neuss.int.de
+
+*                                  alt : n05001.kdvz-neuss.int.de
+
+*    28.10.2010  11:40:35  zv171e3 EMAIL-F variabel gemacht
+
+*    10.06.2010            zv173x2 von Jobid auf Runcount geändert
+
+*    29.09.2010            zv173x2 START_DATE und START_TIME
+
+*   --------------------------------------------------------------------------------- 
+
+**************************************************************************************
+
+
+
+
+
+* SYSOUT 
+
+%%mailSYSOUT    =produktions-steuerung@itk-rheinland.de
+
+*%%SYSOUT        =\\msbmcc03.asp.rzne.de\CTM_AV$\Sysout\%%ORDERID.-%%RUNCOUNT..txt
+%%SYSOUT        =\\msbmcc03\C$\Sysout\%%ORDERID.-%%RUNCOUNT..txt
+
+
+%%OKEWO_SYSOUT  =c:\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%OPENFT_SYSOUT =c:\CTM_AV\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+
+
+* Variable für Bet da? 92
+
+* Startdatum und Zeit, da es dafür keine AUTOEDIT Systemvariable gibt
+
+*
+
+%%START_DATE=%%RDATE
+
+%%START_TIME=%%TIME
+
+
+
+*
+* Variable für die zentrale Dokumentation
+*
+
+%%DOCLIB=\\msbmcc03\ctm_av\Doc\
+
+
+
+
+
+* AUTOEDIT Variablen in den BAT-Pool übernehmen
+
+* BAT-Name       CTM-Name 
+
+*
+
+%%TABLE       =%%SCHEDTAB
+
+%%APPL        =%%APPLIC
+
+%%GROUP       =%%APPLGROUP
+
+%%FILE_PATH   =%%MEMLIB      
+
+%%FILE_NAME   =%%MEMNAME 
+
+
+
+
+
+*
+
+* folgende Variablen werden für BAT Files erzeugt.
+
+*  
+
+%%odate=%%$OYEAR.%%OMONTH.%%ODAY
+
+%%ODATE_P=%%TTMMJJJJP_%%$ODATE 
+
+%%ODATE_WDAY=%%WDAY_%%$ODATE
+
+
+
+%%TT=%%RDAY
+
+%%MM=%%RMONTH
+
+%%JJJJ=%%$RYEAR
+
+
+
+*
+
+* Library
+
+*
+
+%%PARMLIB=\\msbmcc03\ctm_av\Parm
+
+%%UTILIB=\\msbmcc03\ctm_av\Bin\C\ITKR-Utilities\
+
+%%BATLIB=\\msbmcc03\ctm_av\Bin\Bat\
+
+%%LOGLIB=\\msbmcc03\ctm_av\Log
+
+
+
+*
+
+* MAIL
+
+*
+
+%%MAILSERVER=kdvzsmtprelay.kdvz-neuss.int.de
+
+%%EMAIL-L=\\msbmcc03\ctm_av\Log\SendMail.log
+
+%%EMAIL-O=\\msbmcc03\ctm_av\Parm\StandardMessageITKR.TXT 
+
+%%EMAIL-F=Produktions-Steuerung@ITK-Rheinland.de
+
+
+
+* ENDE
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+

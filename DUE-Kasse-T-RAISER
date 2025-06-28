@@ -1,0 +1,26 @@
+* *************************************************************
+* Table Variablen          
+* DUE-Kasse-T-RAISER
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$oyear.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+**SYSOUT=//sapftpitk.sapitk.krzn.de/SST/IFQ/SYSOUT_CTM/%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.02.2015  11:02:51  zv171e3 Start nach 5 Uhr morgens unterdrückt - lt.E.Brandimarte
+*    26.02.2015  15:05:11  zv171e3 Dieser Job ist von Efro Brandimarte - Lumpensammler 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-Kasse-T-RAISER.pdf
+* ------------------------------------------------------------------

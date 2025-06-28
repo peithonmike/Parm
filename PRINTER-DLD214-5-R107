@@ -1,0 +1,20 @@
+*   LIBMEMSYM   für Copy PDF auf Drucker
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE
+
+
+* Drucker Freigabe
+%%PRINTER=\\msdkm4\DLD214-5-R107
+%%INCLUDE=EZ-030-DF-SAP_PFVBK2*E_*_DF_EZ_%%$ODATE..pdf
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\SOZ-EZ\%%$OYEAR.\DUE\%%$ODATE.\gedruckt
+
+* Datei Auswahl
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%FORCE_OUTDIR=N
+

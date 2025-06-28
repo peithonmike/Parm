@@ -1,0 +1,47 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : ROM                                                                  *
+***********************************************************************************
+*  Jobname     : ROM-BZR-Fuehrungszeugnis
+*  Description : OK.EWO-BZR-Fuehrungszeugnis Anfragen
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%VON=%%TTMMJJJJP_MM_M12_%%$ODATE
+%%BIS=%%TTMMJJJJP_%%$ODATE
+
+
+%%JOBTEXT=CTM-BZR-Fuehrungszeugnis %%VON - %%BIS *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=4533-E01U0000
+*
+%%OKEWO_NR=P4533
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=OK.EWO-BZR-Fuehrungszeugnis Anfragen
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U20104#UEBERM_KZ_N.E01DUMMY#I#GKB_N.E01DUMMY##ANT_VDAT_N.E01DUMMY#%%VON#ANT_BDAT_N.E01DUMMY#%%BIS#REGVON_N.E01DUMMY##REGBIS_N.E01DUMMY##ED_NR_N.E01DUMMY##V_UZ331_LISTE.E01DUMMY#$$

@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-Meldebescheinigung-Angestellte-DELETE
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%INDIR=\\vfmgapps\apps\Verfahren\Loga\Personalwesen-Abrechnung\manuprod%%OMONTH.duanupduvl
+
+%%INCLUDE=MANUPROD*DUVL*
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+

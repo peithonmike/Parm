@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAP-T-Transfer_Anordnung_Auswertung
+* 
+* 11.09.2019 - neuer Job von Joerg Huhn
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_Neuss
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\Neuss_Anordnung.ps1"

@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-WINOWIG-Soll-an-PRODOP
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\WINOWIG
+%%DESCRIPTION=WinOWIG Solldaten nach AV-Filer kopieren
+
+
+%%SEARCH_DIR=%%WINOWIG_SOLL_DIR
+%%SEARCH=WiNOWIG_SOLL_%%$ODATE._01.txt
+%%MOVE_ORDNER=erledigt
+
+
+
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM
+%%OUTFILE=WiNOWIG_SOLL_%%$ODATE..txt
+
+
+
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+* Nur Anlist der gesuchten Dateien
+%%TEST=N
+
+* TESTAUSGABE
+*%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\test\ptv-projekte\WOWIGSAP\inDir 
+* Diese Mail benötigt nur die AV
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;Produktions-Steuerung@itk-rheinland.de
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-EXPORT-AN-PRODOP.BAT
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+*$ $INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+
+* ------------------------------------------------------------------
+

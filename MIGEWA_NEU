@@ -1,0 +1,21 @@
+* *******************************************************************************
+* Variablen zum Verfahren
+* *******************************************************************************
+*  -MIGEWA- 
+%%BFJ_ID_MIGEWA=wird-nicht-benutzt
+
+* Anfrage Directory des Mandanten 
+%%MIGEWA_BZR_EXPORT=\\nwc2daten6.stv-ddorf.de\DATEN6\AMT32\User\FTP36\MigewaBZREX
+
+
+* Antwort EmpfangsDirectory des Mandanten 
+* wird noch nicht verwendet  Stand 05.2012  
+%%MIGEWA_BZR_IMPORT=\\nwc2daten6.stv-ddorf.de\DATEN6\AMT32\User\FTP36\MigewaBZRIM
+
+
+* Antwort Empfangsdirectory auf dem OpenFT Server (dahin kommen die Daten vom BZR zurück)                   
+%%MIGEWA_BZR_DIR_ANTWORT=\\msbmcbatch01\c$\CTM_AV\AntwortBZR
+
+
+* Anfrage Directory auf dem OpenFT Server (von da aus wird zum BZR gesendet)                   
+%%MIGEWA_BZR_DIR_ANFRAGE=\\msbmcbatch01\c$\CTM_AV\OpenFT-Prod-Dateien\migewa_ddorf

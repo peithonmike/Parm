@@ -1,0 +1,5 @@
+* PDF_FRONTCOVER
+* PDF_BACKCOVER
+
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\LOGA\Monat\Lohnsteuerbescheinigungen\AAA-%%GEM3.-%%FILE..Pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\LOGA\Monat\Lohnsteuerbescheinigungen\\ZZZ-%%GEM3.-%%FILE..Pdf

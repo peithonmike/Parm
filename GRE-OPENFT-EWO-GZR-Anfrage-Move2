@@ -1,0 +1,48 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-OPENFT-EWO-GZR-Anfrage-Move2
+* 
+* 
+*********************************************************** 
+ 
+
+
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* Eingabe Directory 
+%%INDIR=\\msokkomm01.itk.local\gzr$
+
+* Datei Auswahl
+%%INCLUDE=utf-8AG-U0752_%%GKZ8.*
+%%EXCLUDE="-"
+%%RICHTUNG=SENDEN
+%%ANSCHLUSS=BZR
+* Ausgabe Directory
+%%OUTDIR=\\msopenft01\c$\ctm_av\OpenFT\senden\BZR\GZR\OKEWO\%%GEM3
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\msokkomm01.itk.local\gzr$\Erledigt
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.06.2016  15:00:30  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

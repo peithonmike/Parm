@@ -1,0 +1,36 @@
+******************************************************************************************
+* NOTOK Mail
+******************************************************************************************
+%%NOTOK_EMAIL_T=produktions-steuerung@itk-rheinland.de
+*%%NOTOK_EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;Bastian.Neuser@ITk-Rheinland.de
+%%NOTOK_EMAIL_CC=
+%%NOTOK_EMAIL_U=%%JOBNAME Fehlerhaft  Exit Code :%%COMPSTAT
+
+
+
+
+******************************************************************************************
+* OK Mail
+******************************************************************************************
+
+
+**%%OK_EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+**%%OK_EMAIL_CC=iambelieve@gmx.de
+
+%%OK_EMAIL_U=Ok %%JOBNAME Exit Code :%%COMPSTAT
+
+%%OK_MAIL_T=Produktions-Steuerung@itk-rheinland.de
+%%OK_MAIL_CC=Bastian.Neuser@ITk-Rheinland.de
+%%OK_MAIL_U=Ok %%JOBNAME Exit Code :%%COMPSTAT
+
+
+* Anwendungsmanagement:  In Feuerwehrangelegenheiten 02166/9989-2456
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.04.2022  11:53:31  zv173x2 produktions-steuerung@itk-rheinland.de
+*    09.12.2020  12:56:13  zv173x2 eigene OK Mail entfernt
+*    19.11.2020  09:09:57  zv173x2 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,12 @@
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_Kaarst
+
+%%MAIL_NOTOK		=steffen.brandemann@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK		=Abschluss Nachtverarbeitung ist abgebrochen!
+%%TEXT_NOTOK		=Joblob: %%Jobname ist abgebrochen. Bitte ueberpruefen.
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$oyear.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+**SYSOUT=//sapftpitk.sapitk.krzn.de/SST/IFQ/SYSOUT_CTM/%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt

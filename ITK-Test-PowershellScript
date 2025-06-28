@@ -1,0 +1,5 @@
+%%EINGABE_VZ=\\vfduswba\50\amt50\Themen\AKDN_Monatsdateien
+%%EINDAT=*.txt
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\bin\Powershell\CheckForSOZ.ps1 -Eingabeordner %%EINGABE_VZ -Eingabedatei %%EINDAT

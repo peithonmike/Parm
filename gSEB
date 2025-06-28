@@ -1,0 +1,58 @@
+* *************************************************************
+* Globale Variablen          
+* Landeshauptstadt Düsseldorf
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%STADT  =Landeshauptstadt
+%%ORT    =Düsseldorf
+%%ORT    =Duesseldorf
+
+%%GEM    =DF
+%%GEM3   =DUE
+%%MD4    =Stadt Düsseldorf
+
+%%MD2    =df
+%%GKZ    =000
+%%GKZ8   =05111000
+%%GKZ6   =111000
+
+* OK.EWO Ortsnummer
+%%e01e200_ortnr=41
+
+*
+* Behördennummer für den Datenaustausch über OpenFT mit dem Bundesamt für Justiz (BfJ)
+*
+
+* Stadt Düsseldorf -Einwohnerwesen-
+%%BFJ_ID_OKEWO=R6371
+
+* Stadt Düsseldorf -Ausländerbehörde- 
+%%BFJ_ID_OKVISA=R6086A
+
+
+*  -JAGD- 
+*  wird für die Antwortabholung verwendet
+%%BFJ_ID_JAGD=R9144J
+
+*  -ZSTV 
+*  wird für die Antwortabholung verwendet
+%%BFJ_ID_ZSTV=R6086B
+
+*  -WINOWIG 
+%%WINOWIG_GKZ=111
+%%WINOWIG_TREIBER=DLD32OFFICEM
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+
+*    26.02.2014  10:45:54  zv173x2 msdre4\DLD32OFFICEM
+*    13.02.2014  15:34:22  zv173x2 WINOWIG_TREIBER teilweise angelegt
+*    14.11.2012  14:15:22  zv173x2 Winowig_gkz
+*    02.11.2012  10:03:36  zv173x2 Probleme mit ÜÖÄ  temp. auf ue oe ae geändert, bis Lösung gefunden ist
+*    18.02.2011  11:15:17  ZV173X2 Blankzeilen am Ende entfernt wg CTM BUG
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,13 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MAG-ETP-T-REORG-PROD
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND="C:\Program Files\Scripte\MAG-REORG.bat"
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%MAIL=tobias.redmann@itk-rheinland.de;simone.thissen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de;dieter.assenmacher@itk-rheinland.de;erich.janke@itk-rheinland.de

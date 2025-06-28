@@ -1,0 +1,47 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA-Angestellte-Dta-Begleitzettel-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+*********************************************************** 
+ 
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+             
+%%OUTDIR1=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%MM.\NAR\DTA
+%%OUTDIR2=nicht-verwendet
+
+
+%%INCLUDE=18*_*AN_*_%%$OYEAR.%%OMONTH*_*.pdf
+
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=option failonnomatch on
+
+%%Z05=open %%SITE -hostkey=%%HOSTKEY 
+*%%Z06=CD
+
+%%Z07=LCD %%OUTDIR1
+%%Z08=mget %%INCLUDE 
+
+
+
+
+%%Z20=exit 
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+

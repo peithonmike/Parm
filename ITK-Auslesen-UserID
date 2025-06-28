@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-Auslesen-UserID
+
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DruckerPfad=\\msbmcc03\ctm_av\Drucker\
+
+%%COMMAND=\\msaip01\SWablage$\FB1\Scripting\VBS\Prod\ASP\AllesAuslesen_neu.bat %%OMONTH.%%$OYEAR %%$OYEAR
+**COMMAND=\\msaip01\SWablage$\FB1\Scripting\VBS\Prod\ASP\AllesAuslesen_NetUse.bat %%OMONTH.%%$OYEAR %%$OYEAR

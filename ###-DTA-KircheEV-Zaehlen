@@ -1,0 +1,32 @@
+ *
+* LIBMEMSYM
+* Aufruf   ermittelten Anzahl Fälle DTA Kirche EV 
+*
+*
+*
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\parm\OKEWO
+
+
+
+* variablen für das Zählprogramm
+*
+%%VON=%%TTMMJJJJP_TT_M7_%%$ODATE
+%%BIS=%%TTMMJJJJP_TT_M1_%%$ODATE
+%%VERFAHREN=DTA-KircheEV
+%%DATUM =%%$ODATE
+
+* ErgebnisLog 
+%%LOGOUT=\\msbmcc03\ctm_av\log\ErgebnisLog\OK.EWO-KircheEV-Satz.csv
+
+* Datei wird vom Programm LINECOUNT.EXE verwendet,
+* daraus ergibt sich der Mandant und die Datei, die gezählt werden soll.
+%%FILES=\\msbmcc03\ctm_av\Parm\OK.EWO-DTA-KircheEV-Woche.vlk
+
+* Offset für das Zählprogramm ( Header nicht mitzählen usw.)
+%%OFFSET=-2
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.04.2011  11:22:38  ZV173X2 LOGOUT von LOG nach LOG\ErgebnisLog geändert
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

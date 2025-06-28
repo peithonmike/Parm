@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-KIRP.FIN-Move-Produktsachkonten
+* 
+* 
+*********************************************************** 
+* AV-Serever -> Mandantenserver 
+* 
+* Copy der VGNST Kirpdaten in Mandanten Directory
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+*Suchverzeichnis, in dem die Daten vom Host bereitgelegt liegen,
+* dort holen wir ab
+ 
+%%SEARCH_DIR=\\srv03.asp.rzne.de\ftp$\av\Finanzen
+
+* Dateinamensmaske die wir suchen
+%%SEARCH=KIRP101.SAC33A.D%%ODATE..TXT
+
+
+* Speicherort der  Daten im Mandantenbereich 
+%%OUTDIR=\\ne1da03\1d03data\WIRT_FIN\FINANZEN\HAUSHALT\Datenaustausch_ITK
+
+
+%%LOGFILE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\%%GEM3.-KIRP.FIN-%%$OYEAR..csv
+
+
+
+
+
+* ------------------------------------------------------------------
+*
+
+%%TEST=N
+
+
+
+
+

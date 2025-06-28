@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-PRODOP-Import-LOGA-AK02
+* 
+* 
+*********************************************************** 
+ 
+%%TEST=N
+*  Verfahrensvariablen
+%%ART=IMPORT
+%%VERF=Loga Neuss AK02
+
+*AK01DAT
+%%DAT=AK02
+%%BJ=12
+
+ 
+*LOGDATEIEN Ordner
+%%ORDNER=LOGA
+
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_%%GEM3
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+
+

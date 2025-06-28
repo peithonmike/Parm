@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-PRODOP-Export-WINOWIG-Ist
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* Istzahlen für WinOwig exportieren
+* MANDANT -> AV-SERVER -> HOST G20t7825
+*********************************************************** 
+ 
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=EXPORT
+%%VERF=WINOWIG Ist
+
+
+* nur zur Information
+* wird im Prodoppik festgelegt
+%%DAT=JUEXPORTIST
+
+%%BJ=160
+
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\PRODOP-JUE-01-Variablen.pdf
+* Logdateien
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUH\PRODOP-2013-03.csv
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUH\PRODOP-%%$OYEAR.-%%OMONTH..csv
+$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+
+* die normale Mail ausschalten 
+*%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;stefanie.drescher@itk-rheinland.de 
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.02.2015  16:16:01  zv173x2 auf Server VSRV27
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

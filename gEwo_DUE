@@ -1,0 +1,49 @@
+
+***************************************************************************************
+* neues OKEWO ab 2021
+***************************************************************************************
+
+* -------------------------------------------------
+* globale für alle geltenden Variablen
+* -------------------------------------------------
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\gEWO entfernt sonst doppelt zv173x2 30.11.2021
+
+
+* -------------------------------------------------
+* ab hier Mandantenspezifisch
+* -------------------------------------------------
+
+%%MANDANT=e01_due
+
+%%USER=ewoav_due
+%%PASS=secret-server
+
+* Mandanten-Server
+%%JBOSS=msjbc1lhd1
+%%EWODIR_AUSWERTUNGEN=\\%%JBOSS.\Auswertungen$
+
+* Slash's müssen so bleiben sonst funktioniert die Auswertung nicht
+%%URL=http://msjbc1lhd1:8380
+
+%%JAR_FILE=\\msjbc1lhd1\Auswertungen$\javafiles\qjob-cmdline-client-jar-with-dependencies.jar
+
+
+
+* -------------------------------------------------
+* globale für alle geltenden Variablen
+* -------------------------------------------------
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\gEWO
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.01.2021         zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+

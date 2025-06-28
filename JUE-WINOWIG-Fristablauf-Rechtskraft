@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-WINOWIG-Fristablauf-Rechtskraft
+* 
+* 
+*********************************************************** 
+ 
+* VLK 
+
+%%ART=-F6140
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+
+
+
+%%TEST=N
+
+* Powershell DEBUG
+%%DEBUG=J
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-AKTIONSTARTEN.BAT
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Bin\Powershell\BL\avREAD-WINOWIG-PROTOKOLL.ps1
+* ------------------------------------------------------------------

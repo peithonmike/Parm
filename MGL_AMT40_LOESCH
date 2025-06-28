@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL_AMT40_LOESCH
+* JASPER-Report
+* OK.EWO.JASPER.MONAT-SCHULÜBERWACHUNG
+*********************************************************** 
+*   ********************************************************************************** 
+*    -- Änderungen -------------------------------------------------------------------
+*    19.09.2017  11:30 Uhr     zv171e3 Loeschen Daten für Mönchengladbach nach Erstellung
+*                              Daten dürfen bei uns nicht gespeichert bleiben! M.Pixa
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+
+* Dat1-Datei
+%%DAT1=\\msbmcc03\ctm_av\Jasper-Output\MGL_AMT40_KEINE_SPERREN2-%%TTMMJJJJP_%%$ODATE...XLSX
+*
+* Dat2-Datei
+%%DAT2=\\msbmcc03\ctm_av\Jasper-Output\MGL_AMT40_KEINE_SPERREN1-%%TTMMJJJJP_%%$ODATE...XLSX
+*
+* Dat3-Datei
+%%DAT3=\\msbmcc03\ctm_av\Jasper-Output\MGL_AMT40_SPERREN2-%%TTMMJJJJP_%%$ODATE...XLSX
+*
+* Dat4-Datei
+%%DAT4=\\msbmcc03\ctm_av\Jasper-Output\MGL_AMT40_SPERREN1-%%TTMMJJJJP_%%$ODATE...XLSX
+*
+

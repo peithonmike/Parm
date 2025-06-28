@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-OK.Verkehr-T-Copy-PTV
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\DUE-OK_Verkehr_PTV.cmd
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+%%BETREFF_OK=FileTransfer OK.Verkehr-Daten %%GEM3. zum PTV-Server OK
+%%BETREFF_NOTOK=FileTransfer OK.Verkehr-Daten %%GEM3. zum PTV-Server NOTOK
+
+%%TEXT_OK=Joblog: Der FileTransfer der OK.Verkehr-Daten %%GEM3. zum PTV-Server ist OK.
+%%TEXT_NOTOK=Joblog: Der FileTransfer der OK.Verkehr-Daten %%GEM3. zum PTV-Server ist NOTOK.

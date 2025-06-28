@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-EWO-Altersjubilare-Serienbrief
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%AUFTRAGGEBER=T.Heister
+
+
+%%GEM3.-Altersjubilare-%%TTMMJJJJP_%%$ODATE...CSV
+
+
+
+
+%%CSV_FULLNAME=\\MSBMCBATCH01\ctm_av\Temp\JubisMG\%%GEM3.-Altersjubilare-%%TTMMJJJJP_%%$ODATE...CSV
+%%XLSX_FULLNAME=\\Msbmcc03\CTM_AV\Jasper-Output\%%GEM3.-Altersjubilare-%%TTMMJJJJP_%%$ODATE...XLSX
+
+
+%%DEBUG=N
+%%TEST=N 
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.02.2022  08:53:33  zv173x2 1. Lauf  Ersatz für MGL_Altersjubilare
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

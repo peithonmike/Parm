@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-BEIHINRW1_FTP
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%FTP-RPATH1=n.n.
+
+%%FTP-LPATH1=\\msbmcc03\ctm_av\Jasper-Output\NEU-BEIHINRW1-%%TTMMJJJJP_%%$ODATE
+
+
+%%FTP-NEWNAME1=\av\Gba\SAS_Ausgabe\Erledigt\R22W0604_ST0030_Ausgabe.D%%ODAT..txt
+%%FTP-NEWNAME2=\av\Gba\SAS_Ausgabe\Erledigt\R22W0604_ST0045_Ausgabe.D%%ODAT..txt
+

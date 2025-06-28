@@ -1,0 +1,53 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-DEUV-Listen-1700* 
+* 
+*********************************************************** 
+ 
+
+%%NETUSE=J
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+%%NETUSE_PATH=\\10.50.34.68\loga
+
+%%LAUFWERK=Y:
+
+%%INDIR=\\10.50.34.68\loga\ml2001jobmg\manuwdeuevanuwpdeuev\output
+
+
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+
+
+
+
+
+* Empfänger (durch Semikolon getrennt)          
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+* Subject
+%%EMAIL_U=Job-Nachricht:   DEUV-Listen fuer Angestellte vom %%LOG-DAT.
+
+* Kopie
+*%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+* Blindkopie
+%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+%%EMAIL_A_MOVE=N
+%%OUTDIR_PROCESSED=%%INDIR.\Mail
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+

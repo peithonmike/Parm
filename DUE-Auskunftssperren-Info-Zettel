@@ -1,0 +1,26 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Auskunftssperren-Info-Zettel
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-PAPYRUS
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+
+
+ 
+
+
+*Eingabedatei
+%%SYSUT1=\\msbmcc03\C_BMC\CTM_AV\JASPER-BEGLEIT\Begleit-EW12C.TXT 
+
+
+* Papyrus Document
+%%SYSUT2=#DOCE300#THISFILE#LG211N#DFP16AH1##1_DUE-Auskunftssperren-Info-Zettel
+
+
+%%TEST=N

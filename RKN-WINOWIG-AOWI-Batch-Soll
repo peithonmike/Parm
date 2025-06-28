@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DOR-WINOWIG-AOWI-Batch-Soll
+* 
+* 
+*********************************************************** 
+ 
+ 
+*********************************************************** 
+* alle Mandanten laufen mit der gleichen ART 
+* Stand 18.12.2012
+*********************************************************** 
+ 
+* VLK 
+%%ART=-A11,12,13,15,16,18,14
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+%%WINOWIG_SOLL_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\winowig\AOWI\ftp\ausgang\soll
+
+
+%%WINOWIG_GKZ=901
+
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-AKTIONSTARTEN.BAT
+
+%%TEST=N
+
+
+
+
+

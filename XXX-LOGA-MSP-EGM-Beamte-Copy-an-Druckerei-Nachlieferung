@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-MSP-EGM-Beamte-Copy-an-Druckerei-Nachlieferung
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-MSP-EGM-NBE
+* überschreibt Werte aus LOGA-MSP-EGM-NBE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-USE-DRUCKEREI-NEUSS
+
+
+
+
+%%EMAIL_U=Beamte MSP-Nachlieferung steht bereit %%OMONTH..%%$OYEAR 
+%%DESCRIPTION= N A C H L I E F E R U N G  
+
+
+%%DESCRIPTION1=%%EMAIL_U 
+%%DESCRIPTION2=EMail_T  an %%EMAIL_T 
+%%DESCRIPTION3=EMail_CC an %%EMAIL_CC 
+
+
+%%IGNORE_RIGHT_BLANKS=J
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\MSP-EGM\BUENDEL\kopiert
+* Datei Auswahl
+%%INCLUDE=RKN*.pdf
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=%%DRUCKEREI_DIR
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\Nachlieferung
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    19.02.2021  09:58:47  zv173x2 RKN Nachlieferung wegen Drucke Dir Umstellung Poststelle Neuss ohne Vorankündigung
+*    02.02.2021  15:08:54  zv173x2 fehlende  Bescheide nachliefern
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

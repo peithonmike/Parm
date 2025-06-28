@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK_DTA_Grundsteuer_DTA2_DUE_FW1_FTP
+* Fehlerlog an Amt 22
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+**LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt 
+ 
+
+%%LPATH1=/BatchEingangsdatenGBA/Protokolle/errorLog_dta2_%%ODAY..%%OMONTH..%%OYEAR..txt
+%%RPATH1=\Amt22-KiviListenProd\Grundsteuer\DTAProtokolle\errorLog_dta2_%%ODAY..%%OMONTH..%%OYEAR..txt
+
+%%MAIL_NOTOK=nicole.schmeling@duesseldorf.de;claudia.thiel@duesseldorf.de;
+%%MAIL_NOTOK_2=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - Übertragung errorLog-Datei an Amt22 fehlerhaft

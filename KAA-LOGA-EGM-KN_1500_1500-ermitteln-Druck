@@ -1,0 +1,58 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* KAA-LOGA-EGM-KN_1500_1500-ermitteln-Druck
+* 
+* 
+*********************************************************** 
+ 
+
+* \\srv03.asp.rzne.de\ftp$\av\EGM\KAA
+* \\msbmcc03\ctm_av\Bin\Java\EGM\
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+*  S t e u e r t a b e l l e 
+*
+*  Eingabefile der Personen die nicht am EGM teilnehmen und deshalb gedruckt werden müssen
+*%%CSV_FILE=\\msbmcc03\ctm_av\Bin\Java\EGM\Scoutauswertung-Stichtag-21122015-Komplett.csv
+%%CSV_FILE=\\msaip01\swablage$\Tausch ITK\EGM\EGM_Druck_Steuertabelle\Aktuelle_Steuertabelle.csv
+
+*  Eingabe PDF's sind die Druckdateien aus dem Logaverfahren
+*  kopiert durch Job: KAA-LOGA-EGM-PDF-Copy
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\EGM\%%GEM3.\%%LOGA_DAT
+
+* Verzeichnis aus dem später der Druck erzeugt werden kann
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\EGM\%%GEM3.\%%LOGA_DAT.\druck
+
+* Hauptprogramm
+%%JAVA_EXE=\\msbmcc03\ctm_av\Bin\Java\jre1.8.0_66\bin\java.exe
+%%JAVA_PRG=\\msbmcc03\ctm_av\Bin\Java\EGM\PdfDruck_20160211.jar
+
+
+%%EMAIL_T=Sascha.Berktin@itk-Rheinland.de;
+%%EMAIL_CC=Produktions-Steuerung@itk-rheinland.de;
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;
+
+%%EMAIL_U=%%JOBNAME  %%OMONTH..%%$OYEAR
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+*     ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     31.03.2016  07:40:33  zv173x2  neuer Jobname  (alt KAA-LOGA-EGM-ermitteln-Druck)
+*     07.03.2016  13:21:08  zv173x2  steuertabelle an neuem Ort
+*     05.02.2016  09:40:21  zv173x2  neu
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+ 
+
+

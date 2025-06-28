@@ -1,0 +1,40 @@
+*********************************************************** 
+* 
+* 
+* D u m m y   J o b m e m b e r  , ohne Funktion
+* Job Import die vom Host zur verfügung gestellten Daten 
+*     nach PRODOPPIK.  
+*     \\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\HUH\
+*  'PBH.HUHGR.ADRS2619.D%%ODATE' \\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\HUH\ADRS2619.TXT
+*  'PBH.HUHGR.SOLLREST.D%%ODATE' \\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\HUH\SOLLREST.TXT
+*  'PBH.HUHGR.SOLL2619.D%%ODATE' \\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\HUH\SOLL2619.TXT
+*  'PBH.HUHGR.SOLLP60.D%%ODATE'  \\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\HUH\SOLLP60.TXT
+*  'PBH.HUHGR.ADRSP60.D%%ODATE'  \\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\HUH\ADRSP60.TXT
+*  'PBH.HUHGR.SOLLHKX.D%%ODATE'  \\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\HUH\SOLLHKX.TXT
+*********************************************************** 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\av\HUH\LOG.txt
+
+
+* ------------------------------------------------------------------
+* PRODOP NEU 2011  Schritt 01
+* ------------------------------------------------------------------
+* GRE_IMPORT_05 
+* wird ersetzt durch 
+*
+* GRE-PRODOP-Import-OWI-Adr
+* GRE-PRODOP-Import-OWI-Buchung
+* GRE-PRODOP-Import-VHS-Adr
+* GRE-PRODOP-Import-VHS-Buchung
+* GRE-PRODOP-Import-JPAX-Sollstellung
+* GRE-PRODOP-Import-KITA-Sollstellung
+* ------------------------------------------------------------------
+
+
+
+
+

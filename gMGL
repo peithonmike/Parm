@@ -1,0 +1,60 @@
+* *************************************************************
+* Globale Variablen          
+* Stadt Mönchengladbach
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%STADT  =Stadt
+%%GKZ    =000
+%%ORT    =Mönchengladbach
+%%ORT    =Moenchengladbach
+%%GKZ8   =05116000
+%%GEM    =MG
+%%GEM3   =MGL
+%%MD2    =MG
+%%MD4    =Stadt Mönchengladbach
+
+* OK.EWO Ortsnummer
+*  02.11.2015
+%%E01E200_ORTNR=17
+
+*
+* Behördennummer für den Datenaustausch über OpenFT mit dem Bundesamt für Justiz (BfJ)
+*
+* Stadt Mönchengladbach
+%%BFJ_ID_OKEWO=R6077
+
+* Stadt Mönchengladbach-Ausländerbehörde - 
+%%BFJ_ID_OKVISA=R6077A
+
+*  -MIGEWA- 
+%%BFJ_ID_MIGEWA=wird-nicht-benutzt
+
+%%EEL_Listen_ADR_FILE=\\msbmcc03\ctm_av\Parm\VLK\%%GEM3.-LOGA-EEL-Listen-MAIL-ADR.vlk
+
+%%LOG-DAT=%%$OYEAR.-%%OMONTH.-%%ODAY
+
+%%ABR-DAT=%%$OYEAR.-%%MM_M1_%%$ODATE
+
+
+
+%%KBA_NR=10044
+%%WINOWIG_GKZ=116
+* Fest verdrahtet
+* zv173x2 02.06.2021 
+* %%WINOWIG_TREIBER=KONICA_MINOLTA_1250_1052PS
+* %%WINOWIG_DRUCK_DIR=\\vfcitrix\citrix\Daten\MG\Winowig\ftp\ausgang\druckdateien\KONICA_MINOLTA_1250_1052PS
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.11.2019  11:15:53  zv173x2 \\vfcitrix\citrix\Daten\MG\Winowig\ftp\ausgang\druckdateien\KONICA_MINOLTA_1250_1052P
+
+*    22.11.2019  11:01:33  zv173x2 KONICA_MINOLTA_1250_1052PS
+
+
+*    21.10.2019  09:43:44  zv173x2 WINOWIG_GKZ=116
+*    18.02.2011  10:32:35  ZV173X2 Blankzeilen entfernt wg. CTM BUG
+*    --------------------------------------------------------------------------------- 
+*   **********************************************************************************

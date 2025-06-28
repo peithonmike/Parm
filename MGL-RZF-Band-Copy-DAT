@@ -1,0 +1,24 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Mönchengladbach
+***********************************************************************************
+*  Jobname     : MGL-RZF-Band-Copy-DAT
+***********************************************************************************
+
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=\\msaip01\swablage$\FB2\Software\KIVi\ControlM\DTABelegeGEW\CopyDTA.bat
+%%MAIL01=Dirk.Meyer@moenchengladbach.de;Anke.Hindsches@moenchengladbach.de;Sarah.Vieten@moenchengladbach.de;Georg.Bartilla@moenchengladbach.de
+%%MAIL02=David.Mertens@itk-rheinland.de;Volker.Ehmann@itk-rheinland.de
+
+%%BETREFF=RZF-Band für MG 
+%%TEXT=Der DTA-Gewerbesteuer wurde in den Mandanten KMP 710 eingespielt und die DTA-Belege erzeugt.
+%%MAIL-NOTOK=david.mertens@itk-rheinland.de;Volker.Ehmann@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+
+%%BETREFF-NOTOK=%%JOBNAME ist abgebrochen bitte ueberpruefen!!!
+%%TEXT-NOTOK=CopyDAT.bat ist abgebrochen

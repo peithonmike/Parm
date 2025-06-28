@@ -1,0 +1,49 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : GRE                                                                  *
+***********************************************************************************
+*  Jobname     : GRE-Elternbriefe-Monat
+*  Description : Elternbriefe
+***********************************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\###VLK-MONAT_01
+***********************************************************************************
+*
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=5982-E01U0000
+*
+%%OKEWO_NR=P5982
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=J
+  
+* Testmodus an
+%%TEST=N
+  
+*  Liste1 wird an einen anderen Ort unter neuem Namen kopiert
+%%LISTE1_ACTION=C
+%%LISTE1=%%OKEWO_ROOT.\CTM\e01awsch%%JOBNAME.-%%VON.-%%BIS..DBL
+%%LISTE1_TARGET=%%OKEWO_ROOT.\DIV\e01awsch.DBL
+  
+%%LISTE2_ACTION=C
+%%LISTE2=%%OKEWO_ROOT.\CTM\e01awsch%%JOBNAME.-%%VON.-%%BIS..sts
+%%LISTE2_TARGET=%%OKEWO_ROOT.\DIV\e01awsch.sts
+  
+*  es wird eine Mail versendet(nur wenn der Job OK ist)
+%%SENDMAIL=J
+%%EMAIL-U=%%LISTE1 drucken
+%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL-CC=
+*  Jobtext                                                       
+*  muss mit %%JOBTEXT=%%OKEWO_NR CTM-%%ID.-%%RUNNR anfangen
+%%JOBTEXT=%%OKEWO_NR CTM-%%ID.-%%RUNNR %%JOBNAME %%VON - %%BIS
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U19601#A_VON_N.E01DUMMY#%%VON#A_BIS_N.E01DUMMY#%%BIS#A_GEBIETSTYP_N.E01DUMMY#901#A_TRENNER_N.E01DUMMY#;#A_AUSWAHL_N.E01DUMMY#4#A_GEBIET1_N.E01DUMMY#1#A_GEBIET2_N.E01DUMMY#1#A_SPERREN_N#JNJJNJNNNN__NNNNN_NN1#A_IQDRUCK_N.E01DUMMY#N#A_SUCHART_N.E01DUMMY#2#AUSG_FILE.E01DUMMY#%%LISTE1#V_UZ331_LISTE.E01DUMMY#$$

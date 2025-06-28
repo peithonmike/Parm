@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-ETP-T-STOPWEBD-M03
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=Powershell.exe -executionpolicy bypass -file "C:\Program Files\Scripte\kosy-services-stop_MG.ps1"
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%MAIL=Tobias.Redmann@itk-rheinland.de;Simone.Thissen@itk-rheinland.de;produktions-steuerung@itk-rheinland.de;Michael.Meuser@moenchengladbach.de;Jennifer.Grzeschik@moenchengladbach.de;Benjamin.Elias@moenchengladbach.de;Lars.Mackenbach@moenchengladbach.de;dieter.assenmacher@itk-rheinland.de;erich.janke@itk-rheinland.de
+
+%%BETREFF-NOTOK=%%JOBNAME ist NOTOK
+
+%%TEXT-NOTOK=Stoppen der Dienste ist nicht gelaufen

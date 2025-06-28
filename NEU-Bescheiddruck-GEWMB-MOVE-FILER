@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Bescheiddruck-GEWMB-MOVE-FILER
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* ---------------------------------------------------------------
+* SAMMELDIR
+* Hier werden die PdfDateien hineinkopiert die zu einem Output gebündelt werden sollen.
+* ---------------------------------------------------------------
+
+
+%%INDIR=\\vfapps\apps\ITK\KMV\Produktion\1000\50101\DTA-Messbescheide
+%%OUTDIR=\\vfapps\apps\ITK\KMV\Produktion\1000\50101\DTA-Messbescheide\gedruckt
+
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1
+
+
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+  
+
+%%MAIL_OK=vervielfaeltigungsstelle@stadt.neuss.de
+%%BETREFF_OK=Neue PDFs zum Drucken
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+
+%%TEST=N
+%%DEBUG=N
+

@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-EWO-Test-Typ-3
+* 
+* 
+*********************************************************** 
+
+* Job arbeitet mit festen Werten......
+%%EWOJOB_NAME=de.akdb.oesio.okewo.auswertung.job.MammographieScreeningJob
+%%PARAM=gemeindeGs=S05111000;geschlecht=Sw;geburtstagVon=D01.01.1951;geburtstagBis=D11.01.1951;nichtMeldepflichtigePersonenBeruecksichtigen=Bfalse
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\g%%GEM3
+
+* Mandantenspezifische Angaben
+%%LIBMEMSYM=\\MSBMCC01\CTM_AV\PARM\gEWOTEST_DUE
+%%USER=ewoav_dueTest
+%%EWOSUBDIR_AUSWERTUNGEN=mammografie
+%%TEST=N
+%%DEBUG=N
+
+
+* JOB Config
+*   \\msbmcc03\CTM_AV\Bin\Java\EWO_BATCH\AKDB-Sourcen\job_mammografie\due_mammografie_job_config.properties
+*
+* System Config
+*   \\msbmcc03\CTM_AV\Bin\Java\EWO_BATCH\AKDB-Sourcen\job_mammografie\due_system_config.properties
+
+\\msbmcc01\ctm_av\temp\mammografie_jobLog.txt 
+\\msbmcc01\ctm_av\temp\mammografie_sysLog.txt 
+

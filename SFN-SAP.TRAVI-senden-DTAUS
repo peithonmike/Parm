@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* SFN-SAP.TRAVI-senden-DTAUS
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* AN AUSCHALTEN 
+* BAT-Echo
+%%ECHO_ON=N
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\TRAVIC-LINK
+
+%%SEARCH_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\SAP\%%GEM3.\DTAUS
+%%GESENDET_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+
+%%SEARCH=000.SAP.SRZ.%%GEM3.-SEPA_*_*
+
+
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\TRAVICLINK-Dateinamen.pdf
+$$INCLUDE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\TRAVIC-LINK-%%$OYEAR..csv
+* ------------------------------------------------------------------
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.01.2014  13:44:59  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

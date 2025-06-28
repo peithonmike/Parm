@@ -1,0 +1,31 @@
+
+
+
+Job wird nicht verwendet findet in der in der normalen Wahl mit statt.
+ 
+*********************************************************** 
+* Output wird manuell über OKEWO als PDF erzeugt
+* und mit diesem Job auf den Prinserver nach Freigabe 
+* übertragen.
+* möglich Wahlarten und deren Prefix
+*                   (I)ntegrationswahl   %%GEM.__
+* BW KW EW          (W)ahl               %%GEM3._
+*                   (S)eniorenberatswahl %%GEM.S._
+* B.Lieven
+*********************************************************** 
+* E.Hamers
+* I.Franz
+* M.Smits
+*********************************************************** 
+%%DESCRIPTION= OKEWO Seniorenbeiratswahl Wahl Unterlagen %%STADT %%ORT an Printserver ITK senden
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OKEWO-SENIORENBEIRATS-WAHL
+
+
+%%WAHLART=S
+
+%%TEST=N
+%%DEBUG=N
+
+

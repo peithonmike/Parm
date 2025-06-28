@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-WINOWIG-Export-Mobil
+* 
+* 
+*********************************************************** 
+ 
+ 
+* Export aus Webanwendung nach WINOWIG
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+
+
+* Search Dir wird nicht verwendet
+%%SEARCH=XMLMDE_%%$ODATE*
+%%SEARCH_DIR=\\srv03\qasp%%GEM.$\Daten\Apps\winowig\ftp\eingang\ruhenderverkehr
+
+%%TEST=N
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\WINOWIG-JUE-Export-Mobil-XML.pdf
+* ------------------------------------------------------------------
+
+

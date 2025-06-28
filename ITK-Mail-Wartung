@@ -1,0 +1,9 @@
+﻿*********************************************************** 
+* LIBMEMSYM 
+* ITK-Mail-Wartung
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3

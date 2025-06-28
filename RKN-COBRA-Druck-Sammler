@@ -1,0 +1,50 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-COBRA-Druck-Sammler
+* 
+* 
+*********************************************************** 
+
+
+
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-COBRA-RKN
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-COBRA
+
+%%FREEFLOW_LISTEN_FOLDER=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\COBRA\BUENDEL\RKN\
+%%FREEFLOW_BESCHEID_FOLDER=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\COBRA\BUENDEL\RKN\
+
+
+%%ANZAHL1=1
+%%ANZAHL2=1
+%%ANZAHL3=1
+
+*
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden alle Variablen angezeigt
+%%DEBUG=N
+* Bei Test =J werden nur die Variablen geprüft
+%%TEST=N
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\COBRA-SYSOUT-COPY.pdf
+* ------------------------------------------------------------------
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    25.06.2019  07:16:46  zv173x2 Pfad PS1 ohne c$
+*    07.11.2016  12:07:48  zv173x2 HOTFOLDER variabel
+*    07.08.2014  10:26:49  zv173x2 neues Drucksystem verwenden
+*    03.07.2014  12:32:03  zv173x2 freeflow nicht verwenden
+*    05.06.2014  10:20:49  zv173x2 umgestellt auf sammel include exclude
+*    14.05.2014  14:45:38  zv173x2 freeflow
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

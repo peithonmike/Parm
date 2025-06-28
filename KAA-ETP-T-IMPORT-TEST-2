@@ -1,0 +1,14 @@
+*********************************************************** 
+* LIBMEMSYM 
+* KAA-ETP-T-IMPORT-TEST-2
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+**COMMAND="C:\Programme\Scripte\Automatisierung_Kosy\KA_Auto_Kosy.bat"
+%%COMMAND="C:\Program Files\Scripte\Automatisierung_Kosy\KAA_Auto_Kosy6103FINAL_CONVFehler.bat"
+
+%%MAIL02=produktions-steuerung@itk-rheinland.de;simone.thissen@itk-rheinland.de;tobias.redmann@itk-rheinland.de;;dieter.assenmacher@itk-rheinland.de;erich.janke@itk-rheinland.de
+

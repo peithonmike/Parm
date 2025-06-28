@@ -1,0 +1,50 @@
+
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* XXX-LOGA-Jahreslohnkonten-Beamte-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-MOERS
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+             
+%%OUTDIR1=\\Msprintff01\source$\LOGA\Jahreslohnkonten\%%$OYEAR.\NBE
+%%OUTDIR2=nicht-verwendet
+%%OUTDIR3=nicht-verwendet
+%%OUTDIR4=nicht-verwendet
+
+
+%%INCLUDE=*.pdf
+
+%%Z01=open %%SITE
+%%Z04=ascii
+%%Z05=cd /Prod/NBE/JEL_%%$OYEAR./DN
+
+%%Z06=LCD %%OUTDIR1
+%%Z07=mget %%INCLUDE 
+*%%Z11=cd /Prod/NZI/%%DATE./KN
+*%%Z12=LCD %%OUTDIR3
+*%%Z13=mget %%INCLUDE 
+*%%Z14=cd /Prod/NZI/%%DATE./DN
+*%%Z15=LCD %%OUTDIR4
+*%%Z16=mget %%INCLUDE 
+
+%%Z20=bye 
+%%TEST=N
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     14.12.2016  08:25:20  zv173x2  NEU
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+   
+   
+   
+

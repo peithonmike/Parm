@@ -1,0 +1,29 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* NEU-WINOWIG-Check-Ist-Deadline-Mail
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG-CHECK-ZAHLUNGEN-MAIL
+
+
+%%INDIR=%%WINOWIG_ZAHLUNGEN_DIR
+%%INCLUDE=START*__________*
+
+%%TEST=N
+%%DEBUG=N
+%%EMAIL_U=Job-Nachricht  %%$RDATE %%TIME   %%JOBNAME
+
+* Mail an Sachbearbeiter
+%%EMAIL_T=%%EMAIL_T_%%GEM3
+%%EMAIL_BCC=andreas.hillebrands@itk-rheinland.de
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    14.07.2016  07:46:22  zv173x2 BCC rein
+*    17.06.2016  08:14:53  zv173x2 *.csv in *
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

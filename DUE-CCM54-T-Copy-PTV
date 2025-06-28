@@ -1,0 +1,24 @@
+* *************************************************************
+* Table Variablen          
+* DUE-CCM54-T-Copy-PTV
+* 
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+
+%%EINGABE_VZ=\\vfduswba\54\Amt54\Themen\CCM
+%%USERID=itk\zvdueftp
+%%PW=sgbTabelle21
+%%EINDAT=Kasse\CCM_Export_an_Kasse.txt
+
+%%AUSGABE_VZ=\\msptv01\d$\PTV\Projekte\SAP_Export\CCM_EDUE\InDir
+%%AUSDAT=DUE_CCM_54_T%%$ODATE..TXT
+%%AUSDAT2=CCM_54_Export_an_Kasse_T%%$ODATE..TXT
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\DUE-PTV.cmd

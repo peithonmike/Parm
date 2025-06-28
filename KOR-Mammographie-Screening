@@ -1,0 +1,51 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : KOR                                                                  *
+***********************************************************************************
+*  Jobname     : KOR-Mammographie-Screening
+*  Description : Mammographie-Screening
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###Mammographie-Screening
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%VON - %%BIS *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=5896-E01U0000
+*
+%%OKEWO_NR=P5896
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  Liste1 
+%%LISTE1=%%ORT._%%GKZ8._%%ODATE_P..CSV
+%%LISTE1_ACTION=N
+  
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=Mammographie-Screening
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01UOBJMAM#IP_GEB_VON_N.E01DUMMY#%%VON#IP_GEB_BIS_N.E01DUMMY#%%BIS#IP_GESCHLECHT_N.E01DUMMY#w#P_MELDPFLPRUEF_N.E01DUMMY#T#FELDFORMAT_DD_N.E01DUMMY#1#EINEADR_DD_N.E01DUMMY#1#IP_DATEINAME_N.E01DUMMY#%%LISTE1#GKB_DD_N.E01DUMMY#1#P_GKB.E01DUMMY#1#P_GS.E01DUMMY#05162020#P_BEH_NAME.E01DUMMY#Stadt Korschenbroich#P_BEH_PLZ.E01DUMMY#41352#P_BEH_ORT.E01DUMMY#Korschenbroich#V_UZ331_LISTE.E01DUMMY#$$

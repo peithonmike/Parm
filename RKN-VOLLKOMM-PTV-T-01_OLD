@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-VOLLKOMM-PTV-T-01
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_RKN
+
+%%MANDANT=900
+%%SOURCE=\\n900d01m53.n900d01.int.de\TRANSFER_VOLLKOMM$\Rueckfuehrung_SAP
+%%SOURCE_USER=n900d01m53\transfervollkomm
+%%SOURCE_PASS=vollkomm#RKN-itk
+
+%%COMMAND=c:\CTM_AV\Bin\BAT\copyVollkommPtv.bat %%MANDANT %%SOURCE %%SOURCE_USER %%SOURCE_PASS
+
+**MAIL_NOTOK=steffen.brandemann@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+**MAIL_NOTOK=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de
+%%MAIL_NOTOK=vollstreckung@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=Uebergabe Kassensaetze von Vollkomm zum PTV-Server ist NOTOK
+%%TEXT_NOTOK=Joblog:%%JOBNAME ist abgebrochen. Bitte ueberpruefen.
+
+**SYSOUT=\\msbmcc03\g$\CTM_AV\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\RKN-VOLLKOMM-PTV-T-01.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\VOLLKOMM_PTV.pdf
+* ------------------------------------------------------------------

@@ -1,0 +1,39 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* XXX-MSP-Individuelle-Nachrichten-Move
+* 
+* 
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\MSP-INDIVIDUELLE-INIDATEI
+
+
+%%DESCRIPTION  = Überprüfen ob individuelle Nachrichten zur Abholung bereitliegen
+%%DESCRIPTION1 = aktuell für DO GR JU KA ME
+
+%%JJJJMMTT=%%$ODATE
+%%INIFILE=\\msbmcc03\ctm_av\PARM\MSP-INDIVIDUELLE-INIDATEI
+
+
+* *********************************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-EGM-DATEN-DOR
+%%NETUSE=J
+* Path für den erweiterten Zugriff
+%%NETUSE_PATH=\\n200d01n01.ad.stadt-dormagen.de\egm
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+
+
+
+%%INCLUDE =*.pdf
+%%EXCLUDE="-"
+%%OUTDIR =\\srv03\ftp$\av\MSP\Individuelle-Nachrichten
+
+%%DEBUG=N
+%%TEST=J

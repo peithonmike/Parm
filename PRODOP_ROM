@@ -1,0 +1,17 @@
+*
+*  Prod/Test Variablen werden in der PRODOP-IMPORT.BAT ausgewählt
+*
+*
+
+
+*  PROD
+
+%%PV=Heiss
+%%PF=hkr-heiss.pf
+%%INI=hkr-heiss.ini
+
+* TEST
+%%PV_TEST=Test
+%%PF_TEST=hkr-test.pf
+%%INI_TEST=hkr-test.ini
+

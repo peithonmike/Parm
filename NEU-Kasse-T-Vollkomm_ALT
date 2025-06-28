@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Kasse-T-Vollkomm
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_Neuss
+
+%%client=IFP
+%%mandant=100
+%%dest=\\ne1da03\1d03data\WIRT_FIN\FINANZEN\VOLLSTR\Vollkomm_Schnittstellenübernahmen\Vollkomm_Infodatei
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\copySapVollstreckung.bat %%client %%mandant %%dest
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;steffen.brandemann@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist nicht gelaufen
+%%TEXT_NOTOK=Bitte überprüfen
+
+

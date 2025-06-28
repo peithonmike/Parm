@@ -1,0 +1,46 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-CORONA-Kontakt-Translate-Sormas-To-Survnet
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* aus Member übernommen 
+* DUE-TEST-CORONA-Kontakt-Translate-Sormas-To-Survnet
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\%%GEM3.-CORONA_KONTAKT_MAIL
+
+
+
+%%OK_EMAIL_U=Ok %%JOBNAME Exit Code :%%COMPSTAT
+ 
+    
+
+%%INDIR=\\vfduswba\53\amt53\Survnet-User\survnet\Corona_IRIS_Export
+
+%%INCLUDE=*.csv
+%%EXCLUDE="-"
+%%OUTDIR =\\vfduswba\53\amt53\Survnet-User\survnet\Corona_IRIS_SurvNet
+
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt
+%%CREATE_EXCELFILE=J
+
+
+ 
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    02.08.2021  11:51:41  zv173x2 eMail Parm
+*    30.07.2021  09:46:46  zv173x2 Produktionsstart
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

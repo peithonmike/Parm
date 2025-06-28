@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-Halter-Antworten-von-Moers-Split
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+ 
+%%INDIR=\\srv03.asp.rzne.de\sys_all$\Programme\winowig\ftp\eingang\kba
+%%INFILE=KBA_AUSK_dfausk_%%$ODATE
+
+%%OUTFILE=KBA_AUSK_dfausk_winowig_%%$ODATE
+
+%%OUTDIR_HOST=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Kbahalt\zwischen
+%%OUTFILE_HOST=halt%%oday.%%omonth..emp

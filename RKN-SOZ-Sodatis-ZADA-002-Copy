@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-SOZ-Sodatis-ZADA-002-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\COPY-SOZ-ZADA-SODATIS
+ 
+
+*%%OUTDIR=\\n900d01vf01.n900d01.int.de\aemter$\KR5000\Sodatis-ITK\%%$OYEAR.\%%SOZ_DAT
+%%OUTDIR=\\RKN-Data01.n900d01.int.de\aemter$\KR5000\Sodatis-ITK\%%$OYEAR.\ZADA\%%SOZ_DAT_YYYY
+
+%%STEPNAME=Kopieren-Sodatis-ZADA-Dateien
+*%%INCLUDE=EZ-GS-NE_2*%%GKZ8_7_2._PFGS0700_SEI*_%%SOZ_DAT._Kalendermonat.txt
+*%%INCLUDE=EZ-GS-NE_2*%%GKZ8_7_2._PFGS0700_SEI*_Kalendermonat_%%SOZ_DAT_YY..txt
+%%INCLUDE=EZ-GS-NE_PFGS0700_SEIT_Kalendermonat_%%SOZ_DAT_YY..txt,EZ-GS-NE_PFGS0700_SEID_Kalendermonat_%%SOZ_DAT_YY..txt
+
+* ------------------------------------------------------------------
+* Bei Test =J werden nur die Variablen geprüft
+* es erfolgt keine echte Verarbeitung
+* ------------------------------------------------------------------
+%%TEST=N
+
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden mehr Variablenwerte angezeigt
+%%DEBUG=N
+* ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.11.2014  13:30:44  zv173x2 EZ-GS-NE_PFGS0700_SEIT_Kalendermonat_%%SOZ_DAT_YY
+*                                  EZ-GS-NE_PFGS0700_SEID_Kalendermonat_%%SOZ_DAT_YY
+*                                  Der Kreis bekommt alles! 
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,9 @@
+%%OWNER=ITK\controlm
+
+%%COMMAND=\\msbmcc03\ctm_av\bin\bat\
+
+%%BETREFF_OK=Starten der Dienste auf dem Server %%SERVER OK
+%%BETREFF_NOTOK=ACHTUNG!!! Starten der Dienste auf dem Server %%SERVER NOTOK
+
+%%TEXT_OK=Joblog:     Das Starten der Dienste auf dem Server %%SERVER ist ohne Fehler geendet.     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+%%TEXT_NOTOK=Joblog:     Dass Starten der Dienste auf dem Server %%SERVER ist mit einem Fehler geendet.     Returncode=%%COMPSTAT     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.

@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-Install-CTM-FixPack
+* Installation FixPack
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\InstallFixPack
+
+%%BETREFF_OK=Install Fixpack auf %%SERVER OK
+%%BETREFF_NOTOK=ACHTUNG!!! Install Fixpack auf %%SERVER NOTOK
+
+%%TEXT_OK=Joblog: Das Installieren des FixPack auf %%SERVER war erfolgreich. Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+%%TEXT_NOTOK=Joblog: Das Installieren des FixPack auf %%SERVER wurde nicht ausgeführt. Returncode=%%OSCOMPSTAT  Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+
+%%Test=n

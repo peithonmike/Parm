@@ -1,0 +1,54 @@
+* *************************************************************
+* Table Variablen          
+* DUE-LOGA-Erfassungsprotokolle-Copy-Fachamt
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+
+
+%%AUSGABE_VZ=\\vfdusalt\10\Amt10\Loga_PBS-Sachbearbeitung\TDEP_Protokolle
+%%USERID=ZVDUEFTP
+%%PW=sgbTabelle21
+
+
+%%AUSDAT1=TDEP-M002-%%$ODATE..PDF
+%%AUSDAT2=TDEP-M007-%%$ODATE..PDF
+%%AUSDAT3=TDEP-M009-%%$ODATE..PDF
+%%AUSDAT4=TDEP-M010-%%$ODATE..PDF
+%%AUSDAT5=TDEP-M011-%%$ODATE..PDF
+%%AUSDAT6=TDEP-M090-%%$ODATE..PDF
+%%AUSDAT7=TDEP-M092-%%$ODATE..PDF
+%%AUSDAT8=TDEP-M095-%%$ODATE..PDF
+%%AUSDAT9=TDEP-M096-%%$ODATE..PDF
+%%AUSDAT10=TDEP-M097-%%$ODATE..PDF
+%%AUSDAT11=TDEP-M098-%%$ODATE..PDF
+%%AUSDAT12=TDEP-M099-%%$ODATE..PDF
+%%AUSDAT13=TDEP-M994-%%$ODATE..PDF
+%%AUSDAT14=TDEP-M996-%%$ODATE..PDF
+
+
+
+
+%%EINGABE_VZ=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\LOGA\Protokolle
+
+%%EINDAT1=DTDEP-10002-alle-REPCBREV-1010-0.pdf
+%%EINDAT2=DTDEP-10007-alle-REPCBREV-1010-0.pdf
+%%EINDAT3=DTDEP-10009-alle-REPCBREV-1010-0.pdf
+%%EINDAT4=DTDEP-10010-alle-REPCBREV-1010-0.pdf
+%%EINDAT5=DTDEP-10011-alle-REPCBREV-1010-0.pdf
+%%EINDAT6=DTDEP-10090-alle-REPCBREV-1010-0.pdf
+%%EINDAT7=DTDEP-10092-alle-REPCBREV-1010-0.pdf
+%%EINDAT8=DTDEP-10095-alle-REPCBREV-1010-0.pdf
+%%EINDAT9=DTDEP-10096-alle-REPCBREV-1010-0.pdf
+%%EINDAT10=DTDEP-10097-alle-REPCBREV-1010-0.pdf
+%%EINDAT11=DTDEP-10098-alle-REPCBREV-1010-0.pdf
+%%EINDAT12=DTDEP-10099-alle-REPCBREV-1010-0.pdf
+%%EINDAT13=DTDEP-10994-alle-REPCBREV-1010-0.pdf
+%%EINDAT14=DTDEP-10996-alle-REPCBREV-1010-0.pdf
+
+

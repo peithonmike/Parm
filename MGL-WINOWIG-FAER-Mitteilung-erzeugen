@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-WINOWIG-FAER-Mitteilung-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+
+%%DESCRIPTION=VZR Mitteillungen erzeugen 
+%%AKTION1=VZR: Mitteilung*
+%%AKTION2=FAER: Mitteilung*
+%%AUSGABE=vmi10040.txt???
+
+
+* Düsseldorfer Host VVB Datei
+*%%HOSTFILE_ERLEDIGT_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Kbamit\MITSEND\erledigt 
+*%%HOSTFILE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\Kbamit\MITSEND\MIT%%ODAY.%%OMONTH..SEND
+
+
+
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-MGL-WINOWIG-KBA-DTA-Erzeugen.BAT
+
+
+
+
+
+%%TEST=N
+
+

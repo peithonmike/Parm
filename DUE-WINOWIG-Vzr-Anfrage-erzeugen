@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-WINOWIG-Vzr-Anfrage-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WINOWIG
+
+%%DESCRIPTION=VZR Anfragen erzeugen 
+%%AKTION1=VZR: Anfrage
+%%AKTION2=FAER: Anfrage
+
+%%AUSGABE=van10040.txt
+
+
+* Düsseldorfer Host VVB Datei
+%%HOSTFILE_ERLEDIGT_DIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\KBA\Kbasend\erledigt
+%%HOSTFILE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\KBA\Kbasend\KBA%%ODAY.%%OMONTH..SEND 
+
+%%TEST=N
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.11.2014  08:46:36  zv173x2 Düsseldorf hat die VZR: Aktionen in FAER (FahrEignungsRegister) umbenannt.
+*    23.04.2014  08:02:20  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\WinOWIG\WINOWIG-DUE-VZR-Einfügen-in-KBA_Batch.pdf
+* ------------------------------------------------------------------

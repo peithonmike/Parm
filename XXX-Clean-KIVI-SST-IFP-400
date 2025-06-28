@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-Clean-KIVI-SST-IFP-400
+* 
+* 
+*********************************************************** 
+ 
+%%AUFTRAGGEBER=D.Mendoza 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files.ps1 -INCLUDE %%INCLUDE
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\sapftpitk.sapitk.krzn.de\SST\IFP\400\IstRueckFuehrung
+
+
+* Datei Auswahl
+%%INCLUDE=*IST_RUECK_VOM_*2211.TXT
+
+
+
+* Ausgabe Directory
+%%OUTDIR=\\sapftpitk.sapitk.krzn.de\SST\IFP/400\IstRueckFuehrung\Kivi_Backup
+ 
+
+* erledigt Ordner
+%%TEST=J
+%%DEBUG=N
+
+

@@ -1,0 +1,67 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-LOGA-MSP-EGM-Beamte-Move
+* 
+* 
+*********************************************************** 
+%%DESCRIPTION=Daten werden in %%GEM3 Ordner kopiert für verzögerte Einspielung nach MSP 
+
+
+
+
+
+
+
+*********************************************************** 
+* Mitarbeiter Service Portal 
+* 
+*********************************************************** 
+%%INIFILE=\\msbmcc03\ctm_av\PARM\LOGA-MSP-NEU-INCLUDE-INIDATEI
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-MSP-EGM-NBE
+%%LIBMEMSYM=%%INIFILE
+
+*** Standard OUTDIR wird hier überschrieben !!!!!
+*** werden kopiert nach            : Source  Loga Jahr Monat Art MSP GEM3
+*** und sind dann die Eingabe 
+*** für die Druckaufbereitung      : XXX-LOGA-MSP-EGM-Beamte-Druck-erzeugen
+**OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\MSP-EGM\%%GEM3
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\MSP-EGM\M-28
+
+*** in OUTDIR2 kommen jeweils die aktuellen Eingaben des Monats für die täglichen Updates ohne DRUCK
+%%OUTDIR2=\\srv03.asp.rzne.de\ftp$\av\MSP\LOGA_MSP_DAILY\%%GEM3
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+%%DESCRIPTION = INDIR  beinhaltet die Loagadaten aus Lemgo
+%%DESCRIPTION1= OUTDIR hierin kommen die MSP-relevanten Dateien
+%%DESCRIPTION2= OUTDIR2 ist die Directory für die täglichen Dokument Updates
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\XXX-LOGA-MSP-EGM-Move.ps1
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    14.05.2020  13:42:01  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+*
+

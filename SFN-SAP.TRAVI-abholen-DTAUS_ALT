@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* SFN-SAP.TRAVI-abholen-DTAUS
+* 
+* 
+*********************************************************** 
+* DD UND CT
+* 
+*********************************************************** 
+* abholen vom SAP Server an TravicLink Sendeordner
+ 
+*********************************************************** 
+ 
+* bei TEST J wird nur ein Anlist der Dateien erzeugt
+%%TEST=N
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe SAP-Server  
+%%SEARCH_DIR=\\sapftpitk.sapitk.krzn.de\sapmntitk\SST\IFP\%%GKZ.\DTAUS
+
+* Daten-Datei Suchmaske
+%%SEARCH=000.SAP.SRZ.%%GEM3.-SEPA_*_*
+
+* Ausgabe TravicLink Sende-Verzeichnis
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\TravicLink\SAP\%%GEM3.\DTAUS
+
+* Logfile
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+* erledigt Ordner,
+%%MOVE_ORDNER=verarbeitet
+
+
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+ 
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.01.2014  13:46:33  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

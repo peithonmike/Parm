@@ -1,0 +1,61 @@
+*********************************************************** 
+* LIBMEMSYM 
+* JUE-PRODOP-Import-WINOWIG-Soll
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* Sollzahlen aus WinOwig für Prodoppik importieren
+* (übernehmen)
+* erstellt duch JUE-WINOWIG.PRODOP-Soll-an-PRODOP
+*********************************************************** 
+
+
+%%TEST=N
+
+*  Verfahrensvariablen
+%%ART=IMPORT
+%%VERF=WINOWIG Soll
+%%DAT=WINOWIG_Soll
+%%BJ=60
+
+ 
+
+* Standard 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* PRODOP
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP_%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\PRODOP
+
+
+* die normale Mail ausschalten 
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de;stefanie.drescher@itk-rheinland.de 
+
+
+
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+*$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\HUH\PRODOP-%%$OYEAR.-%%OMONTH..csv
+*$$INCLUDE=\\srv03.asp.rzne.de\qaspkdvz$\daten\apps\ftp\av\huh\%%GEM3.-PRODOP-%%$OYEAR..csv
+
+* Auftragserteilung
+* ------------------------------------------------------------------
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    11.02.2015  16:20:13  zv173x2 \\VSRV27
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

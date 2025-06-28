@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SOZ.EZ-024-an-TravicLink
+* 
+* 
+*********************************************************** 
+* alter Aufruf:
+*  \\msBMCBATCH01\c$\ctm_av\bin\bat
+*   J-TRAVICLINK-SENDEN.BAT
+
+ 
+* AN AUSCHALTEN 
+* BAT-Echo
+**ECHO_ON=N
+*********************************************************** 
+
+**SEARCH_DIR=\\srv03\ftp$\av\TravicLink\SOZ\EZ\FREIGABE
+**GESENDET_DIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+
+* Daten-Datei Suchmaske
+**SEARCH=500.SOZ.SRZ.NEU-SEPAEZ.024_CT_%%$ODATE
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\TRAVIC-LINK
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\TRAVICLINK-Dateinamen.pdf
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\TRAVIC-LINK-Dateinamen-Konventionen-für-Referenznummer-Mapping.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\TRAVIC-LINK-Testuser.pdf
+* ------------------------------------------------------------------
+
+*  FTP Powershell Script mit MD5 Hash
+
+%%FTPSERVER=m180ongum.rz.krzn.de
+%%FTPUSERNAME=tr01itk
+%%INDIR=\\srv03\ftp$\av\TravicLink\SOZ\EZ\FREIGABE
+%%OUTDIR_PROCESSED=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\TravicLink\_gesendet
+%%INCLUDE=500.SOZ.SRZ.NEU-SEPAEZ.024_CT_%%$ODATE
+%%PREFIX=T.
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\CF\JOB\Job-FTP-Transfer-CRC-Check.ps1
+
+** 23.04.2024  Umstellung auf Powershell  
+
+
+
+
+
+
+
+
+

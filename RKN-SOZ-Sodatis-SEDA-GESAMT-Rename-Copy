@@ -1,0 +1,92 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* RKN-SOZ-Sodatis-SEDA-GESAMT-Rename-Copy
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR nach OUTDIR alle Files mit vorgegebener Maske unter neuem Namen.
+* Der neue Name ergibt sich aus der Vorgabe der NAMES Varibalen, der in der Ursprungsdatei auch enthalten ist. 
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* CTM-Command Aufruf :
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\bin\powershell\bl\job\Job-Rename-Copy-Move-Sodatis.ps1
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SODATIS-SEDA
+
+
+*GKZ bzw UnterGKZ aus Jobnamen übernehmen
+*%%INCLUDE=bere-280-NE-2%%SOZ_GKZ._*.txt
+%%INCLUDE=nbere-610*-NE_*_*_*.txt
+
+
+
+* Eingabe Directory 
+*% %INDIR= aus Member SODATIS-SEDA
+
+* Datei Auswahl
+*% %INCLUDE=aus Member SODATIS-SEDA
+*% %EXCLUDE=aus Member SODATIS-SEDA
+
+* NETUSE
+**********************************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-SOZ-DATEN-RKN
+%%NETUSE=J
+
+
+%%USERNAME=n900d01.int.de\RKN00058
+
+* Path für den erweiterten Zugriff
+**NETUSE_PATH=\\RKN-Data01.n900d01.int.de\aemter$\KR5000\Sodatis-ITK\%%$OYEAR.\SEDA\%%SOZ_DAT.\GESAMT\Altdaten
+%%NETUSE_PATH=\\RKN-Data01.n900d01.int.de\aemter$\KR5000\Sodatis-ITK
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+**********************************************************************
+
+
+
+
+
+
+* Ausgabe Directory
+
+%%OUTDIR=\\RKN-Data01.n900d01.int.de\aemter$\KR5000\Sodatis-ITK\%%$OYEAR.\SEDA\%%SOZ_DAT.\GESAMT\Altdaten
+
+
+* erledigt Ordner
+*% %OUTDIR_PROCESSED=aus Member SODATIS-SEDA
+
+%%TEST=N
+%%DEBUG=N
+
+
+*%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc01\c$\ctm_av\bin\powershell\bl\job\Job-Rename-Copy-Move-Sodatis.ps1
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc01\c$\ctm_av\bin\powershell\bl\job\Job-Rename-Copy-Move-Sodatis-XXX.ps1
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    08.04.2016  08:20:35  zv173x2 bere-280 ENTHÄLT DIE BENÖTIGTEN DATEN
+*     08.12.2015  10:19:06  zv173x2  neu löst 002 und 702 ab und kopiert jetzt die Ausgangsdateien
+*                                    in den alle Gemeinden des Kreises enthalten sind  
+*     03.12.2015  17:14:57  zv173x2  neue Maske muss erst noch getestet werden
+*     24.06.2015  09:24:16  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+

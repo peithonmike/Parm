@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-DATUEV-Angestellte-Listen-Copy
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+
+%%NETUSE_PATH=\\10.50.34.68\loga
+%%LAUFWERK=Y:
+
+%%INDIR=\\10.50.34.68\loga\ml2001jobmg\manuprod0anuzp\output
+
+
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga\Personalwesen-Abrechnung\manuprod0anuzp\output
+
+%%INCLUDE=MANUDATUEV%%OMONTH.*
+*%%INCLUDE=MANUDATUEV12*
+%%EXCLUDE="-"
+
+
+%%FORCE_OUTDIR=J
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    06.07.2017  10:45:40  zv171e1 neu
+ 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

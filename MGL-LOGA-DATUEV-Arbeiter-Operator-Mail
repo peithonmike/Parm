@@ -1,0 +1,57 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-DATUEV-Arbeiter-Operator-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+
+* Standard Variablen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+******************************************************************
+* Send-Mail Variablen
+******************************************************************
+
+* Empfänger MG-Buchhaltung (durch Semikolon getrennt) 
+          
+%%EMAIL_T=Operator@moenchengladbach.de
+
+* Subject
+%%EMAIL_U=Job-Nachricht: Die Output-Verzeichnisse aus V:\loga\Personalwesen-Aberechnung\Maruprod0aruzp\output koennen ausgedruckt werden.
+
+* Kopie
+%%EMAIL_CC=martina.milka@itk-rheinland.de;oliver.giesler@moenchengladbach.de;
+
+* Blindkopie
+*%%EMAIL_BCC=Produktions-Steuerung@itk-rheinland.de
+
+
+*Anhang (durch Semikolon getrennt) 
+*%%EMAIL_A=
+
+
+%%DEBUG=N
+%%TEST=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    05.07.2017  10:53:16  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+

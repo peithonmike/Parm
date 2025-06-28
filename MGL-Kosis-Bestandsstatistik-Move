@@ -1,0 +1,29 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-Kosis-Bestandsstatistik-Move
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%INDIR=%%OKEWO_ROOT.\ffd
+%%FILE=KOSIS_1_%%TTMMJJJJP_%%$ODATE...txt
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Kosis\Bestand
+
+%%OUTFILE=ITKR_%%ODATE._%%GKZ8._KOSIS_1_%%TTMMJJJJP_%%$ODATE...txt
+%%FIND="%%GKZ8."
+%%COUNT=J
+
+
+* LGKZ=99999999
+* OKEWO_FILENAME=KOSIS_1*.txt
+* OKEWO_SUBDIR=ffd
+* ITKR_SUBDIR=Kosis/Bestand
+* TEXT=KOSIS-Bestandsstatistik
+* NEWRENAME=ITKR_DATUM_GKZ8_OKEWONAME
+* GROUP=Kosis
+
+

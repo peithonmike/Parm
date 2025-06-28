@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAP-T-Export-AO-Saperion
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%ORDER=%%$OYEAR.%%OMONTH.%%ODAY
+%%SYSOUT=\\msbmcc03.itk.local\G$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%MAILSB13=produktions-steuerung@itk-rheinland.de 
+%%MAILSB22=Christopher.Kober@itk-rheinland.de;uta.webler@itk-rheinland.de
+%%MAIL_NOTOK=steffen.brandemann@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%BETREFF_OK=Erstellen SAP-AO-Daten %%GEM3 für SAPERION OK
+%%BETREFF_NOTOK=Erstellen SAP-AO-Daten %%GEM3 für SAPERION NOTOK
+
+%%TEXT_OK=Joblog: Erstellen SAP-AO-Daten %%GEM3 für SAPERION ist OK.
+%%TEXT_NOTOK=Joblog: Erstellen SAP-AO-Daten %%GEM3 für SAPERION NOTOK.

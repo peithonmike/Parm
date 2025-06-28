@@ -1,0 +1,44 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-GMN-Import-Budget
+* 
+* 
+*********************************************************** 
+* HOST -> AV-Server ->OracleServer->Gebäudemanagement   
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+* hier IP-UP Member anpassen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\TIP-UP-KIRP-IMSWARE-NEU
+
+
+*Eingabedatei
+%%SYSUT1=\\srv03.asp.rzne.de\QASPKDVZ$\Daten\Apps\ftp\AV\GMN\IMS-KIRP\EXPORT\NEU\NEU-GMN-BUDGET.CSV
+
+%%PCDIR=KIRP/iefiles
+
+*    
+%%SYSUT2=Budget.CSV
+
+%%TEST=N
+ 
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\WinScp\WinnSCP-Install.txt
+
+* ------------------------------------------------------------------
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    13.01.2012  12:56:53  zv173x2 alter Name NEU-GMN-SyncDaten
+*    03.01.2012  15:51:25  zv173x2 KIRP aus Jobnamen entfernt
+*    28.12.2011  15:26:22  zv173x2 auf Test umgestellt
+*    28.12.2011  14:52:35  zv173x2 NEU-GMN-BUDGET.CSV oä.  in BUDGET.CSV
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

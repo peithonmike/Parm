@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK_Reboot_MSDAVIDBUCH02
+* Server Reboot
+* 
+*********************************************************** 
+%%GEM3 = %%SUBSTR %%JOBNAME 1 3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+**%%SYSOUT=\\msbmcc03\ctm_av\Sysout\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt
+
+%%COMMAND=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File \\MSAIP01\ctm_av$\Bin\PS\wsus_reboot\wsus-reboot.ps1
+
+%%NODEID=msdavidbuch02.stv-ddorf.de
+
+%%OWNER=ITK\controlm
+
+%%MAIL01=itk.FB1_SB111@kdvzneuss
+
+%%TEST=N

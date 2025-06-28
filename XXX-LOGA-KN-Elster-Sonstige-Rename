@@ -1,0 +1,36 @@
+******************************************************** 
+ 
+
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+%%LOGA_ART=KN
+
+%%DESCRIPTION=Rename Beamte Elster %%LOGA_ART
+
+*%%INDIR=%%PDF_INDIR
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NZI\Elster
+
+%%INCLUDE=*.pdf
+%%EXCLUDE="-"
+%%NODATA_CC=4 
+
+    
+* ------------------------------------------------------------------
+* Bei Test 
+* J / N
+* ------------------------------------------------------------------
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+

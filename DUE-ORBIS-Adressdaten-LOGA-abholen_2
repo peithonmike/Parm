@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-ORBIS-Adressdaten-LOGA-abholen_2
+* 
+* 
+*********************************************************** 
+ 
+%%NETUSE=N
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-PROT
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de;martina.milka@itk-rheinland.de;
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen!!
+%%TEXT_NOTOK=Bitte überprüfen
+
+**INDIR=\\10.50.34.68\loga\IP-Output\ITK-Rheinland\Scout
+%%INDIR=\\vfitk\daten\Daten\ControlM\Scout
+**NETUSE_PATH=\\10.50.34.68\loga\IP-Output\ITK-Rheinland\Scout
+%%OUTDIR=\\srv03\ftp$\av\LOGA\ORBIS
+%%INCLUDE=HR_02W1_%%$OYEAR.-%%OMONTH.-%%ODAY..csv
+%%EXCLUDE="-"
+%%LAUFWERK=Y:
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Files_3.ps1 -INCLUDE %%INCLUDE -EXCLUDE %%EXCLUDE
+
+
+%%TEST=N
+%%DEBUG=N

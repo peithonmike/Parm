@@ -1,0 +1,93 @@
+*********************************************************** 
+* JOB-LIBMEMSYM 
+* DOR-LOGA-EGM-KN_1200_1200-Update
+* 
+* 
+*********************************************************** 
+ 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-EGM-HMAN-MAN
+
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\LOGA-EGM-Update.ps1
+
+* *********************************************************************
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-EGM-DATEN-DOR
+%%NETUSE=J
+* Path für den erweiterten Zugriff
+%%NETUSE_PATH=\\n200d01n01.ad.stadt-dormagen.de\egm
+* Laufwerksbuchstabe in der Form Y:
+%%LAUFWERK=Y:
+* *********************************************************************
+
+
+
+* Zeitraum
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+
+
+* P1: Inputordner für PDF Abrechnungsdateien (Die Ursprungsdateien)
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\EGM\%%GEM3.\%%MAN.\%%LOGA_DAT
+
+
+* P2: Outputordner für Druck PDF Dokumente (Also die Leute, 
+*     die in Zukunft weiter gedruckte Abrechnungen erhalten) 
+*     Verzeichnis aus dem später der Druck erzeugt werden kann
+%%OUTDIR=\\srv03.asp.rzne.de\ftp$\av\EGM\%%GEM3.\%%MAN.\%%LOGA_DAT.\druck
+
+
+* P3 : Outputordner für die Initialpasswortdatei (Also die CSV Datei,
+*      die später auf dem Share-Laufwerk mit Kaarst abgelegt wird.
+*      Pfad: \\srv03\qaspka$\Daten\Orgaeinheit\EGM\Initialpasswort_Listen\)" 
+*      Ausgabe Directory der Passwordlisten für den Anwender
+%%USERDIR=\\n200d01n01.ad.stadt-dormagen.de\egm\%%MAN.\Initialpasswort_Listen\%%LOGA_DAT
+         
+
+* P4 : EGM Stammdatentabelle.csv (Die Tabelle ist neu und zwingend erforderlich um neue Personen zu identifizieren. 
+*      Sie liegt auf Q:\Alle\temp_zvaa045\EGM_Daten\)" 
+%%STAMMDIR=\\n200d01n01.ad.stadt-dormagen.de\egm\%%MAN.\Stammdaten\EGM_DOR_Stammdaten.csv
+
+* P5 : Eingabedatei Steuertabelle Druck: 
+*      alt \\msbmcc03\ctm_av\Bin\Java\EGM\input
+%%STEUER_TABELLE=\\n200d01n01.ad.stadt-dormagen.de\egm\%%MAN.\Druck_Steuertabelle_Produktionssteuerung\Aktuelle_Steuertabelle_DOR.csv
+
+
+
+* EXT_LOGFILE nur wenn das Programm eine externe Logdatei ausgibt
+* %%EXT_LOGFILE=
+
+* JarFile
+* PROD 
+%%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\EGM\PdfGehaltsmitteilungenProdDB.jar
+* TEST
+* %%JAR_FILE=\\msbmcc03\ctm_av\Bin\Java\EGM\PdfGehaltsmitteilungenTestDB.jar
+
+* Programm Parameter  wird nicht mehr verwendet
+*%%PARAMETER="""%%INDIR""" """%%OUTDIR""" """%%USERDIR""" """%%STAMMDIR""" """%%STEUER_TABELLE"""
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+*     22.08.2016  15:44:48  zv173x2  1200 im Pfadnamen
+*     23.06.2016  13:24:58  zv173x2  neu
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+ 
+
+
+
+
+
+

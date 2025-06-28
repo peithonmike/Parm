@@ -1,0 +1,27 @@
+***********************************************************************************
+*  JOB-LIBMEMSYM                                                                   *
+***********************************************************************************
+*  Jobname     : JUE-WOHN-IT-NRW-Postfach-Copy-TAR
+***********************************************************************************
+
+ 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IT-NRW-POSTFACH-abholen
+
+
+%%DESCRIPTION3=  FORCED_BY %%GEM3.-WOHN-IT-NRW-Postfach-abholen
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\Job-Move-Files_2.ps1
+
+%%INCLUDE=D%%DATUM.*.tar
+%%EXCLUDE="-"
+**OUTDIR=\\msaip01\swablage$\TauschITK\Dreﬂel\IT-NRW-Postfach\%%GEM3
+%%OUTDIR=\\srv03\qaspkdvz$\Daten\Apps\ftp\av\IT-NRW-Postfach\%%GEM3.\gesendet\Mandant
+
+%%TEST=N
+%%DEBUG=N
+

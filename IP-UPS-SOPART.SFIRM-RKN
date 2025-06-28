@@ -1,0 +1,21 @@
+*--------------------------------------------------------------------------------------
+*
+* Zugriff auf den Anwendungsserver SFirm  
+* Rhein Kreis Neuss 
+* Zugriff über NET USE S
+* 
+*--------------------------------------------------------------------------------------
+
+*%%IP=\\N900D01VF01.n900d01.int.de\DTAUSSopart$
+*%%IP=\\10.109.1.194\DTAUSSopart$
+%%IP=\\RKN-Data01.n900d01.int.de\DTAUSSopart$
+%%U=Srv_ITK_Daten@n900d01.int.de
+*%%P=ITK-900@rkn
+%%P=Secret-Server
+%%NETUSE_S=J
+
+*   
+*    Herr Frank Meger Tel. 02181-601 1105
+ *   ********************************************************************************** 
+
+

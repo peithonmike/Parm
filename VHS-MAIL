@@ -1,0 +1,21 @@
+* *************************************************************
+* Globale Variablen          
+* VHS Stadt Düsseldorf 
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+**SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+**SYSOUT=//sapftpitk.sapitk.krzn.de/SST/IFQ/SYSOUT_CTM/%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+%%MAIL_OK=produktions-steuerung@itk-rheinland.de
+
+**MAIL_KASSE=swetlana.reimer@duesseldorf.de;jennifer.jury@duesseldorf.de;axel.vonfuerstenberg@duesseldorf.de;daniel.heinrichs@duesseldorf.de;hotline_stadtkasse@duesseldorf.de
+
+%%MAIL_KASSE=lhd.Verteiler_21-Ausgabe_XML@duesseldorf.de
+
+%%TEXT_VHS=Joblog: Es wurde eine neue VHS Datei kopiert
+ 
+
+%%MAIL_XML=daniel.mendoza@itk-rheinland.de
+
+%%MAIL_PROD=Produktions-Steuerung@itk-rheinland.de
+
+%%TEXT_XML=Uebertragen der Datei " %%INCLUDE. " vom Fachamtsserver an SAP abgebrochen, Datei im Verzeichnis " %%INDIR. " nicht vorhanden. Bitte prüfen!

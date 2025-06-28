@@ -1,0 +1,28 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Korschenbroich
+***********************************************************************************
+*  Jobname     : KOR-PV_RAT-Daten-FileWatch
+*  Auftrag ist von Gudrun Ring
+   %%APPLICATION=PV_RAT   
+***********************************************************************************
+*****  Amt01\Ratsangelegenheiten\Ratsarbeit\PVRat\Abrechnung funktioniert nicht!
+
+ 
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%eindat_1=payment_%%$ODATE.*.xml
+%%eindat_2=data.xml
+%%Eingabepfad=\\SRV06.korschenbroich.ads.de\TransferPVRat$
+%%Zielpfad=
+%%ErledigtPfad=
+%%MANDANT=KO
+%%DATADATEI=data.xml
+%%PAYMENTDATEI=payment_%%$ODATE.*.xml
+%%SQL_SYSOUT_CSV=Personen_Kor.csv
+%%TEST=nein
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\ctm_av\Bin\Powershell\XXX-PV_RAT-Daten-FileWatch.ps1

@@ -1,0 +1,52 @@
+* Datei wurde automatisch erstellt. Änderungen nur über das ITKR Utility vornehmen
+* --------------------------------------------------------------------------------
+* LIBMEMSYM    
+* JASPER Report Variablen
+* --------------------------------------------------------------------------------
+*      Job : Testjob2
+* erstellt : 07.12.2011 13:51:48
+*    durch : zv173x2
+* --------------------------------------------------------------------------------
+* 
+* 
+***********************************************************************************
+*
+* %%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE entfernt 22.03.2011 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JASPER
+%%TEST=J
+*
+***********************************************************************************
+* 
+* Jasper/ CTM Variablen
+%%a=A
+ 
+* 
+* Batch zum erstellen der JasperReport-VLK-File
+%%BATFILE=BAT File.BAT
+ 
+* 
+* Jasper-Report incl Pfad
+%%REPORT=/Reports/CTM/testid1
+ 
+* 
+* Jasper Report Ausgabe
+%%EXT=CSV
+%%OUTFILE=%%JASPER_OUTPUT.\Output File..%%EXT
+* 
+ 
+* --------------------------------------------------------------------------------
+* E M A I L    
+* --------------------------------------------------------------------------------
+%%SENDMAIL=J
+%%EMAIL-U=Auftrag : Output File.
+ 
+* 
+* Mail Anhang
+%%EMAIL-A=%%OUTFILE
+ 
+* 
+* Mail Empfänger
+ 
+* 
+* Message-Box wird verwendet
+%%EMAIL-M=Control-M Meldung \n  \n Auftrag : %%JOBNAME \n ODate   : %%TTMMJJJJP_%%$ODATE \n  \n Vorlage : \n OK.EWO\Serienbrief-Vorlagen\allg.Liste\allg-Liste-Etiketten\An die Eltern \n von.doc \n  \n bitte Daten auf Etiketten drucken, und an Herrn Pilger weiterleiten. \n 

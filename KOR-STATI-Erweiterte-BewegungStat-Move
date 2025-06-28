@@ -1,0 +1,29 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : Stadt Korschenbroich
+***********************************************************************************
+*  Jobname     : KOR-STATI-Erweiterte-BewegungStat-Move
+*  APPLICATION : OK.EWO.STATI.MONAT
+***********************************************************************************
+*********************************************************************************** 
+*
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%INDIR=%%OKEWO_ROOT.\div
+
+* OK.EWO Dateiname
+%%FILE=E01E045.ffd
+
+* ZIEL Directory und File
+%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\OK.EWO\Statistik/ErwBewegungsstatistik
+%%OUTFILE=ITKR_%%ODATE._%%GKZ8._E01E045.ffd
+
+
+* Count 
+%%FIND=" "
+%%COUNT=J
+
+
+*
+

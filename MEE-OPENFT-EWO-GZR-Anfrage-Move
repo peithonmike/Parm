@@ -1,0 +1,38 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-OK.EWO-GZR-Anfragen-Move
+* 
+* 
+*********************************************************** 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qaspME$\Daten\Apps\OKEWO\okprg\okewo_mee\div
+
+* Datei Auswahl
+%%INCLUDE=*AG-U0752*
+%%EXCLUDE="-"
+%%RICHTUNG=SENDEN
+%%ANSCHLUSS=BZR
+* Ausgabe Directory
+%%OUTDIR=\\msopenft01\c$\ctm_av\OpenFT\senden\BZR\GZR\OKEWO\%%GEM3
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\srv03.asp.rzne.de\qaspME$\Daten\Apps\OKEWO\okprg\okewo_mee\div\Erledigt
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+

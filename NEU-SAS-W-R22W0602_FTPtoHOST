@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-SAS-W-R22W0602_FTPtoHOST
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%FTP-RPATH1=PZA.NEUAG.AWL.D%%ODATE..JAVA
+%%FTP-RPATH2=PZA.NEUAG.AWL.D%%ODATE..KOMP.ZWI.JAVA
+%%FTP-NEWNAME1=\av\Gba\SAS_Ausgabe\Erledigt\R22W0602_ST0030_Ausgabe_D%%ODATE..txt
+%%FTP-NEWNAME2=\av\Gba\SAS_Ausgabe\Erledigt\R22W0602_ST0045_Ausgabe_D%%ODATE..txt

@@ -1,0 +1,36 @@
+*********************************************************** 
+*  
+* ITK-LOGA-Beamte-Elster-MSP-Remove-Empty-Files
+*
+* zvaa241  / 02.10.2023
+*
+*
+**********************************************************
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+%%INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\Elster\MSP\ITK\BUENDEL
+
+%%INCLUDE=*.pdf
+
+%%MAIL_OK=Produktions-Steuerung@itk-rheinland.de 
+%%BETREFF_OK=%%JOBNAME ist OK gelaufen
+%%TEXT_OK=Joblog: %%JOBNAME war erfolgreich und leere Dateien wurden gelöscht.
+
+
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de 
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen
+%%TEXT_NOTOK=Joblog: Die Dateien wurden nicht gefunden 
+
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\CF\JOB\Job-Remove-Empty-Files.ps1
+

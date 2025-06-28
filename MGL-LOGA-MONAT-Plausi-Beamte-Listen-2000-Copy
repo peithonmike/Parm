@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Plausi-Beamte-Listen-2000-Copy
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+
+
+
+%%INDIR=\\vfmgapps\apps\Verfahren\Loga\Personalwesen-Abrechnung\mbeplaubev\FIBU
+
+%%OUTDIR=\\vfmgapps\apps\Verfahren\Loga-Abrechnungen\Dateien aus Buchungsliste 2000 nach Plausi\Abr. %%JAHR.-%%MONAT.\Beamte\Output
+
+
+
+
+%%FORCE_OUTDIR=J
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    27.06.2017  07:17:40  zv171e1 neu    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

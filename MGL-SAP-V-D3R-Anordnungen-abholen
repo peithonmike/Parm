@@ -1,0 +1,96 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-SAP-V-DR3-Anordnungen-abholen
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%MAIL_NOTOK=marius.sicha@itk-rheinland.de
+%%MAIL_CC=produktions-steuerung@itk-rheinland.de
+
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen!!!
+
+%BETREFF_NOTOK=Bitte ueberpruefen! Siehe Anhang!
+
+*******************************************************************************************************
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-LOGA-WinSCP-Get.ps1
+* WinSCP Optionen zb. Batch siehe:  \\msbmcc03\ctm_av\DOC\WinSCP\WinSCP-Option.docx
+*******************************************************************************************************
+%%CHECK_MOVERENAME=J
+
+
+*---------------------------------------------------------------
+* Ziel der WinSCP Verarbeitung  
+%%WINSCP_AKTION=Download Anordnungen vom ITK FTP nach MG Verzeichnis
+
+
+%%AUFTRAGGEBER=M.Sicha
+
+*---------------------------------------------------------------
+%%U=nicht-verwendet
+%%P=nicht-verwendet
+%%IP=nicht-verwendet
+
+* Remote Datei Auswahl Maske
+%%INCLUDE=*.TXT.KRED
+
+*---------------------------------------------------------------
+* Local Ausgabe Directory der WinSCP Aktion
+%%OUTDIR1=\\vfmgapps\apps\Verfahren\SAP-V-D3R\PRS710\Anordnungen\
+
+
+%%SITE=MGL-SAP-V-D3R-ANORDNUNG-KRED
+
+
+*  ------------------------------------------------------------
+*   W i n S C P   S c r i p t - Z e i l e n  z01 bis z30
+*  ------------------------------------------------------------
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=open %%SITE
+
+* EinsprungDirectory ist im WinSCP fest vorgegeben 
+* /Daten/PRS/Anordnungen
+%%Z05=CD /Daten/PRS/Anordnungen
+
+
+* Anlist vorher  nur CSV
+%%Z06=dir *.KRED
+
+
+* alle Anordnungen abholen 
+%%Z07=mget *.KRED  %%OUTDIR1
+
+* verschieben nach Archiv
+%%Z09=mv *.KRED Archiv/
+
+* Anlist nachher alle
+%%Z20=CD Archiv
+%%Z21=dir *.KRED 
+%%Z30=exit
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.09.2020  13:10:44  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

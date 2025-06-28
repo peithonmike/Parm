@@ -1,0 +1,12 @@
+* *************************************************************
+* Table Variablen          
+* ITK-List-Home-SAP
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM_LINUX
+**LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_RKN
+
+%%COMMAND=uname -n;ls /home/ctmagitk/msbmcc03/ -la
+**COMMAND=uname -n;ls /home/ctmagitk/ctm/sysout/ -la

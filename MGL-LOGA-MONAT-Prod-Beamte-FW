@@ -1,0 +1,60 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-LOGA-MONAT-Prod-Beamte-FW
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+%%NETUSE=J
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-BOCHUM-MG
+
+
+%%NETUSE_PATH=\\10.50.34.68\loga
+
+%%LAUFWERK=Y:
+
+**INDIR=\\10.50.34.68\loga\ml2001jobmg\mbeprodbep
+%%INDIR=\\10.50.34.68\Loga\IP-Output\ITK-Rheinland\Mönchengladbach\Beamte\Produktion
+
+**OUTDIR=\\vfmgapps\apps\Verfahren\Loga\LAI_Beamte\Produktion
+%%OUTDIR=\\vfmgapps\apps\verfahren\Loga\LAI-Beamte
+
+
+*%%INCLUDE=*03.2023*.*
+%%INCLUDE=*%%MM_P1_%%$ODATE...%%JJJJ_MM_P1_%%$ODATE.*.*
+%%EXCLUDE="-"
+
+
+%%FORCE_OUTDIR=J
+%%TEST=N
+%%DEBUG=N
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    28.06.2017  10:22:18  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

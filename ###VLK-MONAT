@@ -1,0 +1,16 @@
+*
+* LIBMEMSYM
+* Aufruf   ermittelten Gesamten Monataszeitraum
+*
+*
+*
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+
+* TYP 1   
+* Lauf findet am letzten Tag des Monat nach Online statt
+* 
+%%IF %%TYP EQ 1
+ %%VON=01..%%OMONTH..%%$YEAR
+ %%BIS=%%ODAY..%%OMONTH..%%$YEAR
+%%ENDIF

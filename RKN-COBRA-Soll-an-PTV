@@ -1,0 +1,49 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-COBRA-Soll-an-PTV
+* 
+* 
+*********************************************************** 
+* Nur Anlist der gesuchten Dateien
+%%TEST=N
+*********************************************************** 
+
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+ 
+ 
+
+
+%%DESCRIPTION=Solldaten an den PTV Server senden
+
+
+%%SEARCH_DIR=\\mscobra01\Kasse$\%%GEM3.\Ausgang\Soll
+%%SEARCH=%%GEM3._COBRA_UEBSOLL_*
+%%MOVE_ORDNER=verarbeitet
+
+
+
+%%OUTDIR=\\msptv02\PTVProjekte$\SAP_Export\ISEKTA_EXXX\inDir 
+
+
+%%LOGFILE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\KASSEN-IMP-EXP-%%$OYEAR..csv
+
+* TESTAUSGABE
+*%%OUTDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\test\ptv-projekte\WOWIGSAP\inDir 
+
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.02.2021  07:54:26  zv173x2 PTVProjekte und User ControlM
+*    07.02.2014  08:26:13  zv173x2 Odate aus Maske abfrage entfernt
+*    23.01.2014  12:20:51  zv173x2 neu
+*   
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

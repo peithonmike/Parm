@@ -1,0 +1,31 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-LOGA-Angestellte-Check
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA_CHECK_ANGESTELLTE_%%GEM3
+
+
+%%CSV_FILE=\\msbmcc03\ctm_av\doc\loga\Listensteuerung\Loga-Listensteuerung-%%ORT..csv
+%%INIFILE=\\msbmcc03\ctm_av\Parm\LOGA_CHECK_ANGESTELLTE_%%GEM3
+
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR
+%%MSP_INDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NAR\MSP-EGM
+%%TEST=N
+%%DEBUG=N
+
+
+
+-
+
+
+
+
+

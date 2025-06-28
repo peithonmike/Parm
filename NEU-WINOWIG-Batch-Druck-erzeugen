@@ -1,0 +1,15 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-WINOWIG-Batch-Druck-erzeugen
+* 
+* 
+*********************************************************** 
+* markierte Bescheide erzeugen 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\WINOWIG
+%%WINOWIG_TREIBER=Pro 8300 EB-35 v1.0 PS
+%%WINOWIG_DRUCK_DIR=\\srv03\qaspne$\Daten\Apps\winowig\ftp\ausgang\druckdateien\Pro_8300_EB_35_v1.0_PS
+%%TEST=N
+
+%%COMMAND=\\MSOWIGBAT01\d$\ctm_av\bin\bat\J-WINOWIG-WOSPOOL-PRINT.BAT

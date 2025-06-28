@@ -1,0 +1,9 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Sicherung CTM-AV-Bereich
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\SYSTEM

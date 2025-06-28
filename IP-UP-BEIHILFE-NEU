@@ -1,0 +1,13 @@
+* RKN verarbeitet auch Meerbusch 
+* User und Password wie RKN Verarbeitung
+
+%%IP=\\n900d01vf01.n900d01.int.de\Export_Neuss$
+%%U=n900d01.int.de\KR01Beihilfe
+%%P=ZS1@ITK_expo
+
+%%NETUSE_PATH=%%IP
+%%LAUFWERK=Y:
+
+
+
+

@@ -1,0 +1,51 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-LOGA-KN_1700_1706_10_5060-BU
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-ANGESTELLTE-5060
+ 
+*%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\AAA-FrontCover-1-seitig.pdf 
+*%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\ZZZ-Backcover-1-seitig.pdf 
+
+* FreFlow Zuordnung KN
+%%FREEFLOW_HOTFOLDER=%%LOGA_KN_DRUCKER
+
+* ------------------------------------------------------------------------------------ 
+* Bei Test =J werden nur die Variablen geprüft
+* ------------------------------------------------------------------------------------ 
+%%TEST=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.10.2015  17:45:13  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

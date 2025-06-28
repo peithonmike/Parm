@@ -1,0 +1,41 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-LOGA-Angestellte-Move-6021
+* 
+* 
+*********************************************************** 
+%%DESCRIPTION=Daten werden am letzten Tag des Monats verarbeitet. 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\KN
+
+* Datei Auswahl
+%%INCLUDE=*KN*602*.PDF
+
+
+
+* Ausgabe Directory
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NAR\Elster
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    22.02.2022  14:47:37  zv173x2 %%DESCRIPTION
+*    15.09.2021  15:19:17  zv173x2 Elster
+*    16.08.2021  17:05:00  zv173x2 neu 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

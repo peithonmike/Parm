@@ -1,0 +1,78 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-LOGA-DN_1910_1910_01-abholen-fuer-DMS
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%AUFTRAGGEBER=T.Hokamp 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\IP-UP-LOGA-LEMGO
+*********************************************************** 
+
+%%MM=%%OMONTH
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\DMS_LOGA
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\DMS_LOGAMAIL
+             
+                          
+* Zwischenspeicher für alle DN's des Mandanten
+%%OUTDIR1=\\MSbmcc01\ctm_av\temp\dms\%%$ODATE.\%%GEM3.\01
+
+
+
+*%%OUTDIR1=\\MSBMCC03\ctm_av\temp\dms
+
+
+%%OUTDIR2=Nicht-verwendet
+
+**********************************************************
+*following mask includes all JPG and GIF images, 
+* but excludes those starting with 2010 and 2011:
+*       *.jpg; *.gif | 2010*; 2011*.
+********************************************************** 
+* INCLUDE
+%%INCLUDE=DN_%%HMAN*_1_*.pdf
+
+
+%%Z01=option batch abort
+%%Z02=option confirm off
+%%Z03=option echo off
+%%Z04=option failonnomatch off
+
+%%Z05=open %%SITE -hostkey=%%HOSTKEY
+
+%%Z06=CD BE\
+
+
+*OUTDIR Zwischenspeicher DMS
+%%Z10=LCD %%OUTDIR1.\
+
+
+%%Z11=mget %%INCLUDE
+
+
+
+
+%%Z20=bye 
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    17.05.2021  08:07:35  zv173x2 neu 1. Lauf
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+

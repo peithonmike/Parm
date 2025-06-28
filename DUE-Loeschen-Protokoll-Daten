@@ -1,0 +1,66 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : DUE                                                                  *
+***********************************************************************************
+*  Jobname     : DUE-Loeschen-Protokoll-Daten
+*  Description : Loeschen-Protokoll-Daten
+***********************************************************************************
+***********************************************************************************
+*
+*
+**********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###-LOESCH-PROTOKOLL
+
+
+
+
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%VON - %%BIS *** %%ID.-%%RUNNR
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=23537-E01U0000
+*
+%%OKEWO_NR=P23537
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  Liste1 
+%%LISTE1=%%OKEWO_ROOT.\CTM\%%JOBNAME.-%%VON.-%%BIS..DBL
+%%LISTE1_ACTION=N
+  
+*  Liste1 darf nicht überschrieben werden
+%%OVERWRITE=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=Loeschen-Protokoll-Daten
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U307#von#%%VON#bis#%%BIS#auskunft.E01DUMMY#T#aenderungen.E01DUMMY#F#web.E01DUMMY#T#testmodus.E01DUMMY#F#verwaltung.E01DUMMY#F#SONSTIGE.E01DUMMY#F#V_UZ331_LISTE.E01DUMMY#$$
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\OK.EWO-DUE-löschen-Protokolldaten-wöchntlich.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\OK.EWO-DUE-löschen-Protokolldaten.pdf
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\Auftragserteilung\OK.EWO-DUE-löschen-Protokolldaten-02.pdf
+
+* ------------------------------------------------------------------

@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-ControlM-PostgreSQL-Backup
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%date=%%CALCDATE %%ODATE -7
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME - NOTOK
+%%TEXT_NOTOK=Das Backup der ControlM-DB ist abgebrochen. CYCLIC wurde gestoppt!!!
+
+%%DBPATH=D:\PostgreSQL
+%%PREVIOUS=D:\PostgreSQL\previous
+%%CURRENT=D:\PostgreSQL\current
+%%LOGFILES=D:\PostgreSQL\logs
+%%PROG=C:\Program Files\BMC Software\CONTROL-M Server\Ctm_server\Exe\DBUtils\DBUHotBackup.exe
+%%ARG1=-backup_directory %%CURRENT
+%%ARG2= -administrator_password Starten1
+%%ARG3= -REMOVE_UNNECESSARY_LOGS n
+
+%%COMMAND=powershell.exe -executionpolicy bypass -file \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\SQL-Backup.ps1

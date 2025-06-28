@@ -1,0 +1,28 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-LOGA-Stammdaten-aufbereiten
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Prodserver
+%%SERVER=MSPAPYRUS02.itk.local
+
+*Testserver
+*%%SERVER=MSISIST.itk.local
+
+%%TEST=N
+%%DEBUG=N
+%%INDIR=\\srv03.asp.rzne.de\ftp$\av\LOGA\DUE\Stammdaten
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    12.08.2015  09:53:33  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

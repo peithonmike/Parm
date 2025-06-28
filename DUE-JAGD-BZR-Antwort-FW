@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-JAGD-BZR-Antwort-FW
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\JAGD
+
+
+
+
+%%WATCH_DESC=Überwachen OpenFT Server nach Antworten für JagdregisterVerzeichnis 
+%%WATCH_DIR=%%JAGD_BZR_DIR_ANTWORT
+%%WATCH=U0752.A*%%BFJ_ID_JAGD
+%%WATCH_MAX=1800
+%%WATCH_WAIT=3600
+%%WATCH_FORCE_SCHEDULE=JAGD.OPENFT-BZR-Antwort
+%%WATCH_FORCE_JOBNAME=*
+
+%%EMAIL-T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL-U=%%JOBNAME Filewatcher hat ausgelöst
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\FW_OPENFT.csv
+* ------------------------------------------------------------------
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    18.02.2011  12:31:06  ZV173X2 Leerzeilen am Ende entfernt CTM BUG
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,55 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SESSION-Copy-Sepa-xml
+* 
+* 
+*********************************************************** 
+ 
+
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job verschiebt von INDIR nach OUTDIR alle Files mit vorgegebener Maske.
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+* Eingabe Directory 
+
+%%INDIR=\\vfdusalt\b01\b01\01-13 Rat-HFA-VK-Stadtverfassung\Stammdatenverwaltung-Abrechnung\Abrechnung\%%$OYEAR.\%%OMONTH.
+* Datei Auswahl
+%%INCLUDE=Sepa.xml
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfdussap\sap\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_Session
+%%FORCE_OUTDIR=N
+
+%%MAIL_NOTOK=Produktions-Steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog: %%JOBNAME ist abgebrochen. Returncode: %%COMPSTAT  Bitte ueberpruefen.
+
+%%MAIL_SESSION=daniel.schiecke@duesseldorf.de;jennifer.jury@duesseldorf.de;axel.vonfuerstenberg@duesseldorf.de;daniel.heinrichs@duesseldorf.de;hotline_stadtkasse@duesseldorf.de;Swetlana.Reimer@duesseldorf.de
+
+%%BETREFF_SESSION=%%JOBNAME ist OK gelaufen
+%%TEXT_SESSION=Es wurde eine neue Datei  Sepa.xml übertragen 
+
+
+
+* erledigt Ordner
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Files.ps1
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

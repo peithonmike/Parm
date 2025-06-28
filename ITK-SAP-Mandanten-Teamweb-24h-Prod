@@ -1,0 +1,20 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ITK-SAP-Mandanten-Teamweb-Prod
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\TeamWeb\SAPMandanten.ps1" -Server "https://teamweb.itk.local" -TeamWebCredentials "%PSCredentials%\sap_teamweb.cred" -SAPCredentials "%PSCredentials%\CTM_WEB.cred" 
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\ITK-SAP_TeamWeb.pdf
+* ------------------------------------------------------------------

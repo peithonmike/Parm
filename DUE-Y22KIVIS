@@ -1,0 +1,22 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Y22KIVIS
+* IstRueckfuehrung GWST
+* Gewerbesteuer (Ersatz fuer HOST-Jobs Y22KIVIS und Y22KIVIX)
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt 
+
+
+%%COMMAND=\\MSAIP01.ITK.LOCAL\SWAblage$\FB2\Software\KIVi\ControlM\IstRueckfuehrung\GEW-IstRueckfuehrung.bat
+
+%%MAIL-NOTOK=volker.ehmann@itk-rheinland.de;david.mertens@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+%%MAIL-KOPIE=Peter.Goll@duesseldorf.de;Christina.Kujath@duesseldorf.de;Alexander.Lausecker@duesseldorf.de
+
+%%BETREFF-NOTOK=%%JOBNAME - IstRueckfuehrung GWST NOTOK - bitte pruefen!
+

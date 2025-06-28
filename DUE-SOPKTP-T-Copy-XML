@@ -1,0 +1,67 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SOPKTP-T-Copy-XML
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+ 
+* Job kopiert von INDIR nach OOUDIR alle Files mit vorgegebener Maske.
+*
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Files.ps1 
+
+*****     für den Move den Owner  ITK\controlm   benutzen *****
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\KTP-MAIL
+
+
+
+* Eingabe Directory 
+
+%%INDIR=\\vfduswba\51\Amt51\Sopart_KTP\Kasse
+
+* Datei Auswahl
+
+%%INCLUDE=DUSSDEDDXXX_*.xml
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+
+%%OUTDIR=\\vfdussap\SAP\sap\Kasse_Zahlungstraeger_Auszahlung\Ausgabe_Sopart_KTP
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=\\vfduswba\51\Amt51\Sopart_KTP\Backup
+
+%%MAIL_PROD=Produktions-Steuerung@itk-rheinland.de
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    23.02.2021  09:13:59  zv173x2 Mail an Kasse nur noch wenn Compstat=0
+*    19.11.2020  07:50:25  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+

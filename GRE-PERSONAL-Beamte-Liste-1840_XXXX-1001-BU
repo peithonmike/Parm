@@ -1,0 +1,63 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-PERSONAL-Beamte-Liste-1840_XXXX-1001-BU
+* 
+* 
+*********************************************************** 
+ 
+
+ 
+ 
+%%ONLY_BUENDEL=N
+%%FORCE_PDF_SAMMELDIR_PROCESSED=J
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\BUENDEL-LOGA-BEAMTE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\LOGA-LEMGO
+%%PDF_FRONTCOVER=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\AAA-FrontCover-1-seitig.pdf
+%%PDF_BACKCOVER=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\ZZZ-BackCover-1-seitig.pdf
+
+
+%%PDF_INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\1001
+
+
+
+%%LOGA_SACHG=%%SUBSTR %%JOBNAME 27 4
+%%INCLUDE=*%%LOGA_SACHG.*.pdf
+%%PDF_SAMMELDIR          =%%PDF_INDIR.\%%LOGA_SACHG.
+%%PDF_SAMMELDIR_PROCESSED=%%PDF_SAMMELDIR.\erledigt
+%%PDF_FILENAME=%%JOBNAME..pdf
+
+
+%%DESCRIPTION=%%LOGA_MAN_%%LOGA_SACHG
+
+%%FREEFLOW_HOTFOLDER=%%LOGA_DN_DRUCKER
+
+
+
+
+*    
+* ------------------------------------------------------------------
+* Bei DEBUG =J werden alle Variablen angezeigt
+%%DEBUG=N
+
+* Bei Test =J werden nur die Variablen geprüft
+%%TEST=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+

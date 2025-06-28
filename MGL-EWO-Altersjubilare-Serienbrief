@@ -1,0 +1,64 @@
+*********************************************************** 
+* LIBMEMSYM 
+* 20240208
+* aus CSV Datei in Verbindung mit einer -DOTX Datei 
+* eine PDF Datei erzeugen
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Serienbrief Druckvorlagen   \\Msbmcc03\ctm_av\Parm\Druck-Vorlagen
+%%AUFTRAGGEBER=T.Heister
+
+*Serienbrief -- alte Version
+**DOTX_FULLNAME=\\Msbmcc03\ctm_av\Parm\Druck-Vorlagen\MGL_Schreiben_Altersjubilare_mit_Antwortbogen.dotx
+**CSV_FULLNAME=\\MSBMCBATCH01\ctm_av\Temp\JubisMG\%%GEM3.-Altersjubilare-%%TTMMJJJJP_%%$ODATE...CSV
+**PDF_FULLNAME=\\Msbmcc03\CTM_AV\Jasper-Output\%%GEM3.-Altersjubilare-%%TTMMJJJJP_%%$ODATE...PDF
+**COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc01\c$\CTM_AV\Bin\Powershell\BL\JOB\Job-EWO-Altersjubilare-Serienbrief.ps1
+
+
+** neue Version 02.02.2024 - zvaa405
+
+%%docx_template=\\Msbmcc03\ctm_av\Parm\Druck-Vorlagen\MGL_Schreiben_Altersjubilare_mit_Antwortbogen.docx
+%%csv_datei=\\MSBMCBATCH01\ctm_av\Temp\JubisMG\%%GEM3.-Altersjubilare-%%TTMMJJJJP_%%$ODATE...CSV
+**csv_datei=\\MSBMCBATCH01\ctm_av\Temp\JubisMG\%%GEM3.-Altersjubilare-01.02.2024.CSV
+%%temp_folder=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\XXX-EWO-M-Altersjubilare\tmp
+%%combined_file=\\msbmcbatch01\CTM_AV\temp\EWO_Serienbrief_docx_temp\XXX-EWO-M-Altersjubilare\%%GEM3.-Altersjubilare-%%TTMMJJJJP_%%$ODATE...docx
+%%pdf_file=\\Msbmcc03\CTM_AV\Jasper-Output\%%GEM3.-Altersjubilare-%%TTMMJJJJP_%%$ODATE...pdf
+
+
+
+
+
+%%python_exe=C:\Users\a-zvaa405\AppData\Local\Programs\Python\Python312\python.exe
+
+%%python_script=\\msbmcc03\CTM_AV\Bin\Python\CF\Mailmerger.py
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\JOB\Mailmerge_Call_Python.ps1
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%DEBUG=N
+
+
+%%TEST=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    01.02.2022  08:53:11  zv173x2 1.Lauf  Jasper Ersatz für   MGL_Altersjubilare
+*                                  gespeichert werden die Dateien weiterin im Jasperbereich         
+
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

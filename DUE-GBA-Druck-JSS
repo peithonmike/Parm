@@ -1,0 +1,68 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-GBA-Druck-JSS
+* 
+* 
+*********************************************************** 
+ 
+ 
+ 
+ 
+
+* ---------------------------------------------------------------------------------------------------------------------------
+* Job kopiert von INDIR  alle Files mit vorgegebener Maske an beliebige Anzahl Printer.
+* Nach erfolgreichem kopieren werden die Einagbedateien nach OUTDIR_PROCESSED verschoben
+*
+* ---------------------------------------------------------------------------------------------------------------------------
+* Command
+* Powershell.exe -executionpolicy bypass \\msbmcc03\ctm_av\Bin\Powershell\BL\JOB\Job-Copy-Move-Print-To-Printers.ps1 -INCLUDE %%INCLUDE -PRINTER %%PRINTER
+* ---------------------------------------------------------------------------------------------------------------------------
+* Wie arbeiten die Powershell Jobs 
+* \\msbmcc03\ctm_av\DOC\Powershell\Wie-arbeiten-die-Powershell-Jobs.docx
+* ---------------------------------------------------------------------------------------------------------------------------
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\GWST-Druck
+
+* Eingabe Directory 
+%%INDIR=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\KIVI\Jahr\GrundsteuerProd
+
+* Datei Auswahlmaske
+%%INCLUDE=*.pdf
+
+* Drucker Freigabe Liste
+%%PRINTER=\\msdpiom01\D$\DFZSDPF_PDF
+
+
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\gedruckt
+
+%%BEIBLATT=N
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    15.11.2018  11:57:00  zv171e1 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+
+
+
+
+

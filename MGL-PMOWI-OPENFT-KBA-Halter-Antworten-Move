@@ -1,0 +1,54 @@
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+* PMOWI 
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-PMOWI-OPENFT-KBA-Halter-Antworten-Move
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* OpenFT Partner / Anschluss 
+* BAG, BZR,LZPD..... 
+%%ANSCHLUSS=KBA
+
+* SENDEN oder EMPFANGEN 
+%%RICHTUNG=HOLEN
+
+* Eingabe Directory WINOWIG Abholung ist im ODATE erledigt Ordner
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\holen\KBA\MGL\%%$ODATE.\erledigt
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\PMOWI
+
+
+
+
+* Datei Auswahl
+%%INCLUDE=%auskunft_*_*10044*
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+%%OUTDIR=\\vfmgapps\apps\Verfahren\PMOWI\Produktion\Daten_vom_KBA
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    03.03.2021  10:01:44  zv173x2 Eingabe Directory WINOWIG Abholung ist im ODATE erledigt Ordner
+*    03.03.2021  09:44:08  zv173x2 kopieren der WINOWIG und PMOWI Daten an PMOWI
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+

@@ -1,0 +1,90 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-MIGEWA-Auswertung-Inhaber
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\CHECK-ODATE-MONTAG
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SQL\QueryInhaber.sql
+
+
+%%AUFTRAGGEBER=A.Peltzer 02.2020
+
+%%TEST=N
+%%DEBUG=N
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+%%U=migewa_av_neu
+%%P=secret-server
+%%DB=migewa_neu
+%%SERVER=MSSQL01
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+%%VON=%%JJJJMMTT_TT_M8_%%$ODATE
+%%BIS=%%JJJJMMTT_%%$ODATE
+
+
+*  ******************************************** 
+*  sehr spezielles Datum für den Dateinamen :-)
+*  z.B.
+*  MigewaBetriebe2018-05-28-2018-06-03.csv
+*  MigewaInhaber2018-05-28-2018-06-03.csv
+*  ******************************************** 
+
+%%JJJJ_V=%%SUBSTRING %%JJJJMMTT_TT_M8_%%$ODATE   1 4
+%%MM_V=%%SUBSTRING %%JJJJMMTT_TT_M8_%%$ODATE   5 2
+%%TT_V=%%SUBSTRING %%JJJJMMTT_TT_M8_%%$ODATE   7 2
+
+%%CSV_VON=%%JJJJ_V.-%%MM_V.-%%TT_V
+
+
+%%JJJJ_B =%%$OYEAR
+%%MM_B=%%OMONTH
+%%TT_B=%%ODAY
+
+%%CSV_BIS=%%JJJJ_B.-%%MM_B.-%%TT_B
+
+
+
+%%SQL_FILE=\\msbmcc03\ctm_av\Parm\SQL\Migewa\QueryInhaber.sql
+%%FILENAME=%%GEM3._MigewaInhaber_%%CSV_VON.-%%CSV_BIS..csv
+
+* Prod Ausgabe
+*%%OUTDIR=\\srv03\qaspne$\daten\apps\cobra\daten
+%%OUTDIR=\\vfneapps\apps\Verfahren\Cobra_crm\Daten
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+* Test Ausgabe
+*%%OUTDIR=\\msbmcc01\c$\temp
+
+ 
+
+
+*   ********************************************************************************** 
+*    -- Änderungen -------------------------------------------------------------------
+*    20.07.2021  13:09:29  zv173x2 Orner Migewa
+*    20.07.2021  13:06:05  zv173x2 neue SQL Version Version 16.07.2121
+*    04.02.2020  13:28:21  zv173x2 Neue Outdir \\vfneapps\apps\Verfahren\Cobra_crm\Daten
+*    18.09.2018  09:23:43  zv173x2 1 Lauf geplant 24.09.2018
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

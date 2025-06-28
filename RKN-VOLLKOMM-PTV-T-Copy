@@ -1,0 +1,19 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-VOLLKOMM-PTV-T-01
+* 
+* 03.05..2017 - Umstellung auf Powershell-FTP
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SAP_RheinKreis
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+**MANDANT=900
+**SOURCE=\\n900d01m53.n900d01.int.de\TRANSFER_VOLLKOMM$\Rueckfuehrung_SAP
+**SOURCE_USER=n900d01m53\transfervollkomm
+**SOURCE_PASS=vollkomm#RKN-itk
+
+%%COMMAND=\\msbmcc03\ctm_av\bin\bat\RKN-VOLLKOMM-PTV-T-Copy.cmd

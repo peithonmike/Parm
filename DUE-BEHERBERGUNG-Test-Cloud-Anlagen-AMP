@@ -1,0 +1,62 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-BEHERBUNG-Test-Cloud-Anlagen-AMP
+* Copy Anlagen Beherbungssteuer für Prüfung an AMP
+*********************************************************** 
+%%AUFTRAGGEBER=David Mertens
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%DESCRIPTION=Move Formulare nach Prüfung an D3
+%%RICHTUNG=Copy-from-Cloud
+
+**COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-Cloud-Copy-Move-Files-5.ps1
+
+%%U=s-zv-BehSt
+
+
+*---------------------------------------------------------------------------------
+#  Der Begriff secret-server wird im Job durch das verschlüsselte Passwort ersetzt 
+%%P=secret-server
+*---------------------------------------------------------------------------------
+* Eingabe Directory 
+* Directory in der Cloud
+* immer mit Laufwerksbezeichnung
+
+
+
+%%INDIR=X:\Beherbergungssteuer\DUE\beherbergungtest
+
+* Datei Suchmaske
+%%INCLUDE=*.pdf,*.jpg,*.jpeg,*.png
+
+%%EXCLUDE=*_Zusammenfassung_*.pdf
+
+* Ausgabe Directory für die Solldaten
+%%OUTDIR=\\MSAMPSCAN01\beherbergung$\DUE\in
+
+* Cloud Laufwerk
+%%LAUFWERK=X:
+ 
+* Dateien die in die Cloud geschrieben wurden 
+* nach erledigt verschieben
+%%OUTDIR_PROCESSED=%%INDIR.\Erledigt
+
+%%USE_PREFIX=N
+
+%%TEST=N
+%%DEBUG=N
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\MSBMCC03\CTM_AV\Bin\Powershell\BL\JOB\Job-Cloud-Copy-Move-Files-5.ps1
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    09.03.2020  09:12:47  zv173x2 auf AMA_800* 
+*    13.01.2020  15:02:26  zv173x2 USE_PREFIX default (N) 
+*    13.01.2020  15:01:33  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

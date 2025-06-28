@@ -1,0 +1,52 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : MGL                                                                  *
+***********************************************************************************
+*  Jobname     : MGL-DTA-BZR
+*  Description : DTA-BZR
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###VLK-MONAT_01
+%%CHECK1=01
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%VON - %%BIS *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=6769-E01U0000
+*
+%%OKEWO_NR=P6769
+*
+*  eine Check....bat wird eingesetzt
+*  diese prüft zB ob der Lauftag, dem geplanten Lauf entspricht
+%%USE_CHECKBAT=J
+%%CHECKBAT=\\msbmcc03\ctm_av\bin\BAT\Check-MONAT_01.bat
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=DTA-BZR
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U22803#RZ_N.E01DUMMY#81654#UEB_N.E01DUMMY#RES1-#DATUM1_N.E01DUMMY#%%VON#DATUM2_N.E01DUMMY#%%BIS#MEDIUM_N.E01DUMMY#DATENTRAEGER#GKB.E01E300#1#B_LAND.E01DUMMY#NW#V_UZ331_LISTE.E01DUMMY#$$
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    02.03.2011  09:10:50  ZV173X2 Leerzeile wegen CTM Bug entfernt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

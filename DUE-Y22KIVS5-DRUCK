@@ -1,0 +1,17 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Y22KIVS5-DRUCK
+* Ausdruck Liste auf Fachamtsdrucker
+* 
+*********************************************************** 
+%%GEM3=%%SUBSTR %%JOBNAME 1 3
+%%DOM=ITK
+
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03.itk.local\c$\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+**SYSOUT=//msbmcc03.itk.local/g$/CTM/Sysout/%%$OYEAR./%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT._%%COMPSTAT._.txt 
+
+%%DRUCKER=DLD212-7-R13
+%%EINGABE=\\VFDUSSAP\SAP\SAP\Kasse_Nachtverarbeitung\Eigentumswechsel_Grundsteuer\Düsseldorf_Produktion_GBA-Liste_der_Eigentumswechsel-Fälligkeiten-_%%TTMMJJJJP_%%$ODATE.._%%TTMMJJJJP_%%$ODATE...PDF
+%%ERRORCODE=99

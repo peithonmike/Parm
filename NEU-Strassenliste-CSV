@@ -1,0 +1,67 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-Strassenliste-CSV
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\Strassenliste.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\Strassenliste.sql
+%%SERVER=mssql2008.itk.local
+%%DB=agk_strassen
+
+
+
+%%U=sb131
+%%P=l&A&%je$F77f
+%%P=secret-server
+
+
+%%UNDERLINE=N
+%%NOCOUNT=J
+%%SEP=;
+
+
+
+***********************************************
+*  Autoedit Standard Variablen
+*  können im SQL Script verwendet werden
+*  %%VON, %%BIS 
+*  ******************************************** 
+
+*%%VON=??
+*%%BIS=??
+
+
+
+
+%%SQL_FILE=\\msbmcc03\ctm_av\Parm\SQL\Strassenliste.sql
+
+
+* Name der Ausgabe Directory und Datei
+
+%%OUTDIR=\\msbmcc03\ctm_av\temp
+%%FILENAME=Strassenliste-Neuss.csv
+
+
+%%EXE=\\MSBMCBATCH01\C$\Programme\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\sqlcmd.exe
+
+ 
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    30.10.2019  07:00:45  zv173x2 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

@@ -1,0 +1,58 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE-SOPART.KTP-an-Fibu
+* 
+* 
+*********************************************************** 
+ 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SOPART
+
+* überschreibt Empfänger
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+
+
+
+* Eingabe Directory 
+* G:\FB 51\FD 51.1\Kindertagespflege\Sopart Export\
+
+* Muster!! %%INDIR=\\srv03\qaspgr$\Daten\Apps\SopartGRE\SoPart\Export\FiBu\WJH
+%%INDIR=\\vfgv1\voldaten1\Daten\FB 51\FD 51.1\Kindertagespflege\Sopart Export\
+
+* Datei Auswahl
+%%INCLUDE=*.XML
+%%EXCLUDE="-"
+
+* Ausgabe Directory
+*G:\FB 20\FD 20.2 Finanzbuchhaltung\Zahlungsabwicklung\KTP-Auszahlungen\
+%%OUTDIR=\\vfgv1\voldaten1\Daten\FB 20\FD 20.2 Finanzbuchhaltung\Zahlungsabwicklung\KTP-Auszahlungen
+%%FORCE_OUTDIR=N
+
+* erledigt Ordner
+%%OUTDIR_PROCESSED=%%INDIR.\Archiv
+
+%%AUFTRAGGEBER=C.Steenbergen 06.2020
+
+%%TEST=N
+%%DEBUG=N
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    04.06.2020  10:18:39  zv173x2 neu
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

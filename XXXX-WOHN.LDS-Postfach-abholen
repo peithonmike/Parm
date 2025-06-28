@@ -1,0 +1,12 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXXX-WOHN.LDS-Postfach-abholen
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LDS
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\WOHN
+%%SYSINBAT=\\msbmcc03\ctm_av\BIN\BAT\WOHN-POSTFACH-GET.BAT
+
+%%TEST=N

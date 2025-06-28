@@ -1,0 +1,16 @@
+*********************************************************** 
+* Jobname Hans-Georg.Robertz@itk-rheinland.de
+* 
+* zustaendig im SB 2.2 Hans-Georg Robertz
+*********************************************************** 
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_ITK
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%MAIL_NOTOK=Hans-Georg.Robertz@itk-rheinland.de;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=%%JOBNAME im SAP ist NOTOK!
+
+%%TEXT_NOTOK=Bitte pruefen!

@@ -1,0 +1,125 @@
+*********************************************************** 
+* LIBMEMSYM 
+* LOGA-MSP-EGM
+* Mitarbeitenden Service Portal
+*********************************************************** 
+* B E A M T E
+*********************************************************** 
+ 
+%%LOGA_DAT=%%OMONTH.%%OYEAR
+
+* MUSTER
+*                         HMAN alle 
+* DOR-LOGA-MSP-EGM-Beamte-1820-XXXX-BU
+
+%%HMAN =%%SUBSTR %%JOBNAME 25 4
+%%MAN  =%%SUBSTR %%JOBNAME 30 4
+%%AK_NUMMER =%%SUBSTR %%JOBNAME 35 2
+
+
+
+
+%%EXCLUDE="-"
+
+
+*** Abholen der Daten             : XXX-LOGA-MSP-Stammdaten-abholen-Winscp
+*** Daten aus LEMGO                : Source Loga Jahr Monat Art KN 
+
+*** kopieren nach MSP             : XXX-LOGA-MSP-EGM-Beamte-Copy                                 
+*** kopierte MSP Daten gehen nach : Source Loga Jahr Monat Art MSP
+%%INDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\KN
+%%OUTDIR_PROCESSED=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\MSP-EGM
+
+
+*** werden kopiert nach            : Source  Loga Jahr Monat Art MSP
+*** und sind dann die Eingabe 
+*** für die Druckaufbereitung      : XXX-LOGA-MSP-EGM-Beamte-Druck-erzeugen
+%%OUTDIR=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\NBE\MSP-EGM
+%%OUTDIR_M28=\\Msprintff01\source$\LOGA\%%$OYEAR.\%%OMONTH.\MSP-EGM\M-28
+
+*** in OUTDIR2 kommen jeweils die aktuellen Eingaben des Monats für die täglichen Updates ohne DRUCK
+%%OUTDIR2=\\srv03.asp.rzne.de\ftp$\av\MSP\LOGA_MSP_DAILY
+
+
+
+*** EGM Druck erzeugen             : XXX-LOGA-MSP-EGM-Beamte-Druck-erzeugen
+%%DRUCK_INDIR=%%OUTDIR
+%%DRUCK_INDIR_M28=%%OUTDIR_M28
+%%DRUCK_OUTDIR=\\MSPRINTFF01\Druckdaten$\%%$OYEAR.\LOGA\%%OMONTH.\NBE\MSP-EGM
+%%DRUCK_OUTDIR_PROCESSED=%%DRUCK_OUTDIR.\erledigt
+%%DRUCK_USE_OUTDIR_PROCESSED=J
+
+
+%%KOPIE01=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie01.pdf
+%%KOPIE02=\\msbmcc03\ctm_av\PDF-COVER\sonstiges\Kopie02.pdf
+%%COPYCOUNT=0
+
+
+* P&I verwenden
+%%USE_PI=J
+* P&I Druck Queue
+%%PRINTER_QUEUE=\\msprintff01\d$\R18personal
+
+
+* Standard 
+%%INCLUDE =*KN_%%HMAN._**.pdf
+%%EXCLUDE=*_5060_*
+
+%%LOGFILE=\\msbmcc03\ctm_av\log\ErgebnisLOG\PI-DRUCK-%%$OYEAR..csv
+%%OUTFILE =%%GEM3.-MSP-KUVERT-BEAMTE-%%AK_NUMMER.-%%LOGA_DAT.-BU.pdf
+
+* Sammeldir für mehr als eine PDF
+%%SAMMELDIR_DELETE=J
+  
+%%ADD_TRENNBLATT=N
+%%ADD_FRONTCOVER=N
+%%ADD_BACKCOVER=N
+%%ADD_KOPIE=N
+%%FORCE_OUTDIR_PROCESSED=J
+
+
+%%AUFTAGGEBER=S.Huennekes ab 06.2022
+
+
+
+
+
+
+*    ********************************************************************************** 
+*     -- Änderungen ------------------------------------------------------------------- 
+
+*     --------------------------------------------------------------------------------- 
+*    ********************************************************************************** 
+
+*  ********************************************************************************** 
+*  Übersicht 
+*  Listennummern Kuvertierung
+*  ********************************************************************************** 
+
+*  JEL     Jahreslohnkonten aktiver Mitarbeiter 
+*  Elster  Jahreslohnkonten ausgeschiedene Mitarbeiter 
+*  DN_*_*_*_6011_C1.pdf
+
+*  Meldebescheinigungen 
+*  KN_*_*_*_5060_C1.pdf
+
+*  Entgeltabrechnung  03 04 .... 
+*  Beamtenbesoldung   01
+*  Pensionsabrechnung 02
+
+*  KN_*_*_*_1080_C1.pdf
+
+*  ********************************************************************************** 
+
+* monatlich  
+* KN_*_*_*_6011_C1.pdf
+* KN_*_*_*_1080_C1.pdf
+* KN_*_*_*_5060_C1.pdf
+* KN_*_*_*_1060_C1.pdf    
+* KN_*_*_*_1061_C1.PDF    
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\LOGA-LEMGO
+* KN_*_*_*_1051_C1.pdf    
+
+
+
+

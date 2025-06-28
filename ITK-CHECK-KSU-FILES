@@ -1,0 +1,12 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-CHECK_KSU_FILES
+*  
+*********************************************************** 
+ 
+**LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+%%COMMAND=powershell.exe -executionpolicy bypass -File \\msbmcc03\CTM_AV\Bin\PowerShell\mh\Check_KSU_Files.ps1

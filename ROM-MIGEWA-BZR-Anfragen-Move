@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* ROM-MIGEWA-BZR-Anfragen-Move
+* 
+* 
+*********************************************************** 
+ 
+
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA-ROM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\MIGEWA-OPENFT-BZR-ANFRAGE
+%%TEST=N
+%%MAX=150
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\MIGEWA\Migewa Rommerskirchen, Pfad für BZR.pdf
+* ------------------------------------------------------------------

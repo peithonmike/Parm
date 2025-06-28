@@ -1,0 +1,21 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MEE-SAS-W-C22M0625_JAVA
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+*%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\EVENTIM
+
+%%TEST=N
+
+%%INFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA\SAS_Eingabe\C22M0625_Eingabe_KASS.txt
+
+%%OUTFILE1=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\ftp\av\GBA\SAS_Ausgabe\C22M0625_Ausgabe_KASS.txt
+
+
+%%COMMAND=java -jar \\msbmcc03\ctm_av\Bin\Java\#22M0625.jar -inkass %%INFILE1 -outkass %%OUTFILE1
+

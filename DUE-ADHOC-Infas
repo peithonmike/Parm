@@ -1,0 +1,58 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant : DUE                                                                  *
+***********************************************************************************
+*  Jobname     : DUE-ADHOC-Infas
+*  Description : Infas Auswertung nach Geb Wohnsitz alle
+***********************************************************************************
+***********************************************************************************
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\AVON
+
+%%VON=%%AVON_VON
+%%BIS=%%AVON_BIS
+%%INFAS_TEXT=%%AVON_INFAS_TEXT
+%%ANZAHL=%%AVON_ANZAHL
+%%LISTE1=%%GEM3.-Infas-%%INFAS_TEXT.-%%VON.-%%BIS.-%%ANZAHL..DBL
+%%LISTE2=%%GEM3.-Infas-%%INFAS_TEXT.-%%VON.-%%BIS.-%%ANZAHL..STS
+
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%VON - %%BIS %%ANZAHL *** %%ID.-%%RUNNR 
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=21422-E01U0000
+*
+%%OKEWO_NR=P21422
+*
+*  eine Check....bat wird nicht verwendet
+%%USE_CHECKBAT=N
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+*  Beschreibung   
+%%DESC=Infas Auswertung nach Geb Wohnsitz alle
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U19609#A_VON_N.E01DUMMY#%%VON#A_BIS_N.E01DUMMY#%%BIS#A_TRENNER_N.E01DUMMY#;#A_AUSWAHL_N.E01DUMMY#5#A_SPERREN_N#JNJNNJNNNN__NNNNN_NN2#A_FLAG_N.E01DUMMY#0#A_GEBIETTYP_N.E01DUMMY#8888#A_GEBIET1_N.E01DUMMY#1#A_GEBIET2_N.E01DUMMY#1#A_IQDRUCK_N.E01DUMMY#N#A_GESCHLECHT_N.E01DUMMY#0#A_FAMSTAND_N.E01DUMMY#AL#A_STAATANG_N.E01DUMMY#0#A_STAAT_N.E01DUMMY##ZUZUG_GDE_VON.E01DUMMY##ZUZUG_GDE_BIS.E01DUMMY##AUSG_FILE.E01DUMMY#%%LISTE1#A_ANZAHL_N.E01DUMMY#%%ANZAHL#A_STARTWERT_N.E01DUMMY#0#A_INTERVALL_N.E01DUMMY#0##V_UZ331_LISTE.E01DUMMY#$$
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    20.04.2011  14:35:37  ZV173X2 #A_FLAG_N.E01DUMMY von 1 auf 0
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+*

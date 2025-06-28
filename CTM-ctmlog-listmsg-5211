@@ -1,0 +1,34 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-ctmlog-listmsg-5211
+* 
+* täglich
+*********************************************************** 
+ 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+* START 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+Schreib in die Datei
+*=\\msbmcc03\CTM_AV/Log/LISTMSG\ctmlog_listmsg%%$ODATE..txt
+
+
+%%VON=%%JJJJMMTT_TT_M1_%%$ODATE
+%%BIS=%%$ODATE
+
+
+
+
+Schreib in die Datei
+**COMMAND=ctmlog listmsg 5211  %%VON  0600  %%BIS   0600  \\msbmcc03\CTM_AV/Log/LISTMSG\ctmlog_listmsg%%$ODATE..txt
+
+Schreib in den OUTPUT
+%%COMMAND=ctmlog listmsg 5211  %%VON  0600  %%BIS   0600
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* ENDE
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 

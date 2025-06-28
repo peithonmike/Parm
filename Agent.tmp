@@ -1,0 +1,121 @@
+Aktive Codepage: 1252.
+  **********************************************************************************
+  **  Computer      : MSXA017
+  **********************************************************************************
+  **  Jobname       : DOR-Geburtstagsliste-Quartal
+  **  Tabelle       : OK.EWO-Geburtstagsliste
+  **  Job Start     : 27.02.2013 11:57:46
+  **********************************************************************************
+  **  ITK Rheinland                                     ****************************
+  **  ZV173X2                                           ****************************
+  **********************************************************************************
+  **  Owner         : ASP\EWOAV
+  **  User          : EWOAV
+  **  Memlib        : c:\ctm_av\bin\bat
+  **  Memname       : J-OK.EWO.bat 
+  **  Version       : 24.10.2012 08:04  
+  **********************************************************************************
+* TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  
+* TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  
+* TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  
+*
+*
+* Job befindet sich im Test Modus
+* Die OK.EWO Batchverarbeitung wird nicht ausgeführt
+*
+*
+* TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  
+* TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  
+* TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  * TEST  
+
+
+  ----------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------- 
+  -       Beschreibung     : Geburtstagsliste-Quartal                                                
+  -       VLK              :           
+  ----------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------
+  STADT / ORT              : Stadt Dormagen
+  ----------------------------------------------------------------------------------
+  Tabelle                  : OK.EWO-Geburtstagsliste
+  ID /RUNNR /OWNER         : 064oi /1 /ASP\EWOAV
+  ---------------------------------------------------------------------------------- 
+  ODATE_WDAY /ODATE_P      : Mittwoch /27.02.2013 
+  ---------------------------------------------------------------------------------- 
+  OKEWO_NR                 : P10666
+  OKEWO Jobtext            : CTM-Geburtstagsliste-Quartal CTMERRVON - CTMERRBIS *** 064oi-1
+  max Länge                  ....:....1....:....2....:....3....:....4....;....5....:....6...E
+  ----------------------------------------------------------------------------------
+  OKEWO_ROOT               : \\srv03.asp.rzne.de\qaspDO$\Daten\Apps\OKEWO\okprg\okewo_DOR 
+  ----------------------------------------------------------------------------------
+  USE_LAST_RUN             : N       
+  USE_CHECKBAT             : N
+  LISTE1_ACTION            : N 
+  LISTE1                   : \\srv03.asp.rzne.de\qaspDO$\Daten\Apps\OKEWO\okprg\okewo_DOR\CTM\DOR-Geburtstagsliste-Quartal-CTMERRVON-CTMERRBIS.DBL 
+  LISTE2_ACTION            : N  
+  ----------------------------------------------------------------------------------
+  SENDMAIL                 : J
+  ----------------------------------------------------------------------------------
+  STS und DBL Merge        : N 
+  ----------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------
+  Inhat der VLK-Datei  10666-E01U0000.txt
+  ZEILE1  : Parametersetzungen: 
+  ZEILE2  : $$ZJS_JOBNAME=CTM-Geburtstagsliste-Quartal CTMERRVON - CTMERRBIS *** 064oi-1 $$ 
+  ZEILE3  : $$ZJS_PROG=E01U0000$$ 
+  ZEILE4  : $$ZJS_PARAMETER=E01U19603#A_VON_N.E01DUMMY#CTMERRVON#A_BIS_N.E01DUMMY#CTMERRBIS#A_TRENNER_N.E01DUMMY#;#A_AUSWAHL_N.E01DUMMY#1#A_SPERREN_N#JNJJNJNNNN__NNNNN_NN0#A_GEBIETSTYP_N.E01DUMMY#901#A_GEBIET1_N.E01DUMMY#1#A_GEBIET2_N.E01DUMMY#1#A_NWJN.E01DUMMY#N#A_IQDRUCK_N.E01DUMMY#N#A_BEGRIFF_N.E01DUMMY#M25#AUSG_FILE.E01DUMMY#\\srv03.asp.rzne.de\qaspDO$\Daten\Apps\OKEWO\okprg\okewo_DOR\CTM\DOR-Geburtstagsliste-Quartal-CTMERRVON-CTMERRBIS.DBL#V_UZ331_LISTE.E01DUMMY#$$
+  ----------------------------------------------------------------------------------
+  $$ZJS_JOBNAME=CTM-Geburtstagsliste-Quartal CTMERRVON - CTMERRBIS *** 064oi-1 $$
+  $$ZJS_PARAMETER=E01U19603#A_VON_N.E01DUMMY#CTMERRVON#A_BIS_N.E01DUMMY#CTMERRBIS#A_TRENNER_N.E01DUMMY#;#A_AUSWAHL_N.E01DUMMY#1#A_SPERREN_N#JNJJNJNNNN__NNNNN_NN0#A_GEBIETSTYP_N.E01DUMMY#901#A_GEBIET1_N.E01DUMMY#1#A_GEBIET2_N.E01DUMMY#1#A_NWJN.E01DUMMY#N#A_IQDRUCK_N.E01DUMMY#N#A_BEGRIFF_N.E01DUMMY#M25#AUSG_FILE.E01DUMMY#\\srv03.asp.rzne.de\qaspDO$\Daten\Apps\OKEWO\okprg\okewo_DOR\CTM\DOR-Geburtstagsliste-Quartal-CTMERRVON-CTMERRBIS.DBL#V_UZ331_LISTE.E01DUMMY#$$
+  ---------------------------------------------------------------------------------- 
+  -                                                                                -
+  -     J O B    E N D E                                                           -
+  -                                                                                -
+  -                                                                                -
+  ---------------------------------------------------------------------------------- 
+  -                  CTMERR in VLK Datei 
+  -      lnotes Code : 16     
+  -  Ok.EWO Status : 
+  -                  
+  -                  
+  -       Jobstart : 27.02.2013 11:57:46
+  -       Jobende  : 27.02.2013 11:57:47
+  -   Anzahl Fälle : 
+  ---------------------------------------------------------------------------------- 
+  -   OK.EWO Status    
+  -   B abgebrochen
+  -   E rledigt
+  -   F ehlerhaft        
+  -   D efiniert
+  -   A ktiv
+  ---------------------------------------------------------------------------------- 
+
+
+
+Microsoft Windows [Version 6.1.7601]
+
+
+  ---------------------------------------------------------------------------------- 
+  -   CTM Meldungen
+  ---------------------------------------------------------------------------------- 
+
+     Job Object statistic
+     ====================
+Total User CPU Time: 0.016 second  
+
+Total Kernel CPU Time: 0.047 second  
+
+This Period Total User CPU Time: 0.016 second  
+
+This Period Total Kernel CPU Time: 0.047 second  
+
+Total Page Fault Count: 6772 
+
+Total Processes: 3 
+
+Active Processes: 0 
+
+Total Terminated Processes: 0 
+
+Total peak job memory used: 12.313 mega bytes  
+

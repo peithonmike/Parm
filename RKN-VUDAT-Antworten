@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* RKN-VUDAT-Antworten
+* 
+* 
+*********************************************************** 
+*ca 10x am Tag  
+%%MAX=400
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\VUDAT
+
+
+%%SEARCH_DIR=%%BAG_DIR_ANTWORT
+%%SEARCH=05-038_*.xml
+
+* Kreis Antwort Directory
+* von da aus holt sich der Kreis aus seinem Anwendungsprogramm die 
+* Antworten ab.
+%%OUTPUT_DIR=\\msbmcbatch01\c$\CTM_AV\OpenFT-FTP\BAG\Antwort
+%%RICHTUNG=Antwort
+
+
+
+%%TEST=N
+
+$$INCLUDE=\\msbmcbatch01\c$\ctm_av\log\ErgebnisLOG\OPENFT-%%$OYEAR..csv
+
+
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    21.10.2013  15:07:29  zv173x2 1.Lauf 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+

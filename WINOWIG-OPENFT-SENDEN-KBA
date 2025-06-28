@@ -1,0 +1,33 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant :    NEU KAA MEE RKN                                                   *
+***********************************************************************************
+*  APPLICATION : WINOWIG.OPENFT 
+*  Description : KBA-ANFRAGEN (EXPORT)
+***********************************************************************************
+*
+%%RICHTUNG=SENDEN
+%%BFJ_ID=%%BFJ_ID_WINOWIG
+*
+*
+
+
+* Anfragedaten aus dem WINOWIG Verfahren
+* zu sendende Files werden anhand der Suchbegriffes ermittelt
+
+* !! SEARCH mus im Job LIBMEMSYM beschrieben sein
+%%INPUT_DIR=%%WINOWIG_KBA_DIR_SEND
+
+
+
+* umlenken CTM-Sysout und Log auf den msBZRFT02
+* soll einmal alles auf dem msbmcc03 sein
+%%SYSOUT          =%%OPENFT_SYSOUT
+%%LOGLIB          =\\msbmcbatch01\c$\CTM_AV\Log
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    16.10.2012  11:34:14  zv173x2 neu angelegt
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

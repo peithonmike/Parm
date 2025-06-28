@@ -1,0 +1,18 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-R22W0265-DRUCK-SAMMLER
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+
+
+%%GESAMT_IN=\\msbmcc03\ctm_av\Jasper-Output\NEU-R22W0265-GEW-%%TTMMJJJJP_%%$ODATE...PDF
+
+%%GESAMT_OUT=\\srv03.asp.rzne.de\qaspkdvz$\Daten\Apps\Druckoutput\Druck\NEU-R22W0265-GEW-%%TTMMJJJJP_%%$ODATE...PDF
+

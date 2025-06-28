@@ -1,0 +1,43 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-OPENFT-TEST-BZR-Anfragen-Senden
+* 
+* 
+*********************************************************** 
+ 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\OPENFT01
+
+* Eingabe Directory der Anfragen
+%%INDIR=\\msOpenFT01\c$\ctm_av\OpenFT\senden\BZR\?\%%GEM3
+
+* Datei Auswahl Maske
+%%INCLUDE=?
+
+* Anschluss\Partner  LZPD,BZR usw 
+%%ANSCHLUSS=BZR
+
+* Berechtigung
+* Zugriffspassord so wie vom 
+* Empfänger vorgegeben wurde
+%%TRANSFER_ADMISSION=kaa93Rdw
+
+
+
+*  Speicherort für gesendete Anfragen
+%%OUTDIR_PROCESSED=\\msOpenFT01\c$\ctm_av\OpenFT\senden\BZR\?\gesendet\%%GEM3
+
+*************************************************************************** 
+%%TEST=N
+%%DEBUG=N
+%%ISE=N
+
+
+%%MOVE_OVERWRITE=J
+
+
+
+
+
+
+

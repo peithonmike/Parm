@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-Copy-Formulare-Amt40-01
+* Copy Formulare 
+* 
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\PARM\System
+**LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\CTM_AV\Parm\g%%GEM3
+
+%%UserPassword=\\msbmcc03\CTM_AV\Bin\Powershell\BN\DUE-Copy-Amt40\PS-Drive\Password.txt
+%%KeyFile=\\msbmcc03\CTM_AV\Bin\Powershell\BN\DUE-Copy-Amt40\PS-Drive\AES.key
+%%UserName=ITK\d40formularcopy
+%%FromPSDrive=V
+%%FromDrive=V:\
+%%FromPath=\\vfdusalt\40\amt40\Formular\PDF\Int_Fach\Telefonlisten40\
+%%ToPSDrive=W
+%%ToDrive=W:\
+%%ToPath=\\vfdusalt\40s\amt40s\Formular\PDF\Int_Fach\Telefonlisten40\
+%%Include=*.PDF
+%%Exclude=*.KRAB
+
+%%COMMAND=\\msbmcc03\CTM_AV\Bin\BAT\Amt40.cmd
+**COMMAND=powershell.exe -ExecutionPolicy Bypass -File \\msbmcc03\CTM_AV\Bin\Powershell\BN\DUE-Copy-Amt40\PS-Drive\ps-drive_delete_copy_move_Variabel.ps1
+
+%%TEST=N

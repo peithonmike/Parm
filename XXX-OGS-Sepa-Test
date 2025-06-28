@@ -1,0 +1,47 @@
+
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-OGS-Sepa-Test
+* 
+* 
+*********************************************************** 
+ 
+
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* Command 
+* Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\BL\JOB\JOB-Call-Java.ps1
+
+
+
+
+* ORDNER    \\msbmcc03\CTM_AV\Bin\Java\OGS\SEPA
+* %%EXT_LOGFILE=
+
+* JarFile
+%%JAR_FILE=\\msbmcc03\CTM_AV\Bin\Java\OGS\SEPA\SepaConverter-0.0.1-jar-with-dependencies.jar
+
+* Programm Parameter 
+* zb.
+*%%PARAMETER=de.kin_top.lv.transfer.Start "output/ogs_tmp_time.xml" "output/ogs_time.xml" "output/ogs_tmp_time.csv" "output/ogs_time.csv"
+%%PARAMETER=de.kin_top.lv.transfer.Start  "\\vfdusalt\40\Amt40\Ausgabe_Dozentenhonorare\ogs_tmp_time.xml" "\\vfdusalt\40\Amt40\Ausgabe_Dozentenhonorare\ogs_time.xml" "\\vfdusalt\40\Amt40\Ausgabe_Dozentenhonorare\ogs_tmp_time.csv"  "\\vfdusalt\40\Amt40\Ausgabe_Dozentenhonorare\ogs_time.csv"
+%%AUFTRAGGEBER=M.Vilents
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+
+
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.04.2021  09:27:51  zv173x2 Original Parameter
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

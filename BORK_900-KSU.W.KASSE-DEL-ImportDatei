@@ -1,0 +1,22 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Mandant     : ITK Rheinland
+***********************************************************************************
+*  Jobname     : BORK_900-KSU.W.KASSE-DEL-ImportDatei
+*  APPLICATION : KSU.W.KASSE
+***********************************************************************************
+
+%%GEM4=%%SUBSTR %%JOBNAME 1 4
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM4
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\KSU-KRZN-KASSE
+
+
+%%EINGABE=\\srv03\ftp$\ksu2000_krzn\prod\%%KSU_NR.\kasse
+%%AUSGABE=\\srv03\ksu2000krzn$\SicherungProd\%%KSU_NR
+%%INCLUDE=*.csv
+%%NEWNAME=%%$OYEAR._%%OMONTH._%%ODAY._ALL.sic
+
+%%EINGABE_DATEI=%%EINGABE.\%%INCLUDE

@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-UMWELT-Pegel-Online-Update-DB
+* 
+* 
+*********************************************************** 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+* TEST Directory 
+*  ALT
+*%%URI=https://msjbossitk02.itk.local:8863/GrundwasserWeb/service/pegel/loggerimport
+%%DESCRIPTION=unter  https://www.duesseldorf.de/umweltamt/umwelt-und-verbraucherthemen-von-a-z/wasser/grundwasser/aktuelle-grundwasserstaende/online-pegel.html
+Noch alter Server
+
+*  NEU
+%%URI=https://msjbosslhd01.itk.local:8443/GrundwasserWeb/service/pegel/loggerimport
+%%TIMEOUT=600
+%%TIMEOUT=1200
+
+%%TEST=N
+%%DEBUG=N
+%%AUFTRAGGEBER=B.Nilkes
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.05.2021  07:31:20  zv173x2 %%TIMEOUT=1200 verdoppelt
+*    18.05.2021            zv173x2 
+*    04.05.2021  10:02:26  zv173x2 //msjbossitk 02.itk.local:8863 in msjbosslhd01.itk.local:8443
+*    26.11.2019  12:15:30  zv173x2 Prod //msjbossitk 02.itk.local:8863/GrundwasserWeb/service/pegel/loggerimport
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

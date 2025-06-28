@@ -1,0 +1,11 @@
+*
+* LIBMEMSYM f?r Schul?berwachung M?nchengladbach Lauf2
+* Datum setzen
+* Job wertet Vormonat aus
+* Datumsangaben wurden lt. Mail M.Pixa 4.9.18 angepasst!
+* im Format JJJJMMTT  jeweils zu ?ndern vor dem 1.September des Jahres
+
+
+%%STICHTAG_VON=20181001 alt = 20181001 ab 01.09.2025 neu = 20191001
+
+%%STICHTAG_BIS=20190930 alt = 20190930 ab 01.09.2025 neu = 20200930

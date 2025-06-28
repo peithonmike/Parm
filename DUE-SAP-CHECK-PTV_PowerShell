@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-SAP-CHECK-PTV_*
+* 
+* 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+**MAILSB13=produktions-steuerung@itk-rheinland.de;zv.nfw.KP4_Produktivsetzung_SST-Team
+%%MAILSB13=produktions-steuerung@itk-rheinland.de;uta.webler@itk-rheinland.de;Daniel.Mendoza@itk-rheinland.de;christopher.kober@itk-rheinland.de
+%%MAILSB22=uta.webler@itk-rheinland.de;Daniel.Mendoza@itk-rheinland.de;christipher.kober@itk-rheinland.de
+%%MAILSB22_2=uta.webler@itk-rheinland.de;Daniel.Mendoza@itk-rheinland.de;christipher.kober@itk-rheinland.de
+
+%%BETREFF=NOTOK - Bitte Düsseldorfer PTV-Projekt überprüfen
+%%TEXT=Im %%PFAD sind Daten vorhanden. Bitte ueberpruefen.
+
+%%EINGABE=\\msbmcc03\ctm_av\Parm\PTV-Projekte_DUE.txt
+%%AUSGABE=\\msbmcc03\c$\Temp\LogPTV_DUE.html
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "\\msbmcc03\ctm_av\Bin\Powershell\CheckPTV-Projekte.ps1" -mail_1 "%%MAILSB13" -eingabe "%%EINGABE" -ausgabe "%%AUSGABE"
+
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\DUE-SAP-CHECK-PTV_PowerShell.pdf

@@ -1,0 +1,35 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-JUBILARE-Rename
+* 
+* 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+ 
+*%%INDIR=\\vfdusalt\16\Amt16\DocuShare16
+
+
+
+%%INDIR=\\vfdusalt\B01\B01\01-14 Protokoll\Alters_und_Ehejubiläen\Hilden\Ehrungen\Altersjubiläen\Einzelfälle
+%%INFILE =DUE-80-plus-Liste-CTMERRJJJJ_MM_P1_20190715.-CTMERRMM_P1_20190715.pdf
+%%OUTFILE=DUE-80-plus-Liste-2019-08.pdf
+
+
+
+
+*%%INDIR=\\vfdusalt\B01\B01\01-14 Protokoll\Alters_und_Ehejubiläen\Hilden\Ehrungen\Altersjubiläen\Einzelfälle
+*%%INFILE =DUE-80-plus-Statistik-CTMERRJJJJ_MM_P1_20190715.-CTMERRMM_P1_20190715.pdf
+*%%OUTFILE=DUE-80-plus-Statistik-2019-08.pdf
+
+%%OUTDIR=%%INDIR
+
+
+
+
+
+
+        
+%%DEBUG=N
+%%TEST=N

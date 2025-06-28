@@ -1,0 +1,32 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-Anzahl-Einwohner-Mail
+* 
+* 
+*********************************************************** 
+ 
+ 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+*****************************************************************************
+*   M A I L 
+*  
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*****************************************************************************
+*   Mailadressen 
+*;Ralf.Lingel@ITK-Rheinland.de;Produktions-Steuerung@itk-rheinland.de
+*****************************************************************************
+%%EMAIL-T=Ralf.Lingel@ITK-Rheinland.de
+%%EMAIL-CC=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL-A=\\msbmcc03\ctm_av\Log\Anzahl-Einwohner.csv
+
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL-U=Anzahl-Einwohner-am: %%ODATE
+%%TEST=N
+

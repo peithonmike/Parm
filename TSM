@@ -1,0 +1,9 @@
+%%OWNER=ITK\controlm
+
+%%COMMAND=\\msbmcc03\ctm_av\bin\bat\
+
+%%BETREFF_OK=TSM-Sicherung des %%SERVER OK
+%%BETREFF_NOTOK=ACHTUNG!!! TSM-Sicherung des %%SERVER NOTOK
+
+%%TEXT_OK=Joblog:     Eine TSM-Sicherung des Server %%SERVER ist ohne Fehler geendet.     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.
+%%TEXT_NOTOK=Joblog:     Eine TSM-Sicherung des Server %%SERVER ist mit Fehler geendet.     Returncode=%%COMPSTAT     Der Log ist unter \\msbmcc03\d$\CTM_AV\Sysout\%%APPLIC.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%RUNCOUNT..txt gespeichert.

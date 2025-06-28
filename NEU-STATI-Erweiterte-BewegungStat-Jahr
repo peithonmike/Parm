@@ -1,0 +1,54 @@
+*********************************************************** 
+* LIBMEMSYM 
+* NEU-STATI-Erweiterte-BewegungStat-Jahr
+* 
+* 
+*********************************************************** 
+ 
+*
+***********************************************************************************
+*
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\OKEWO
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\###VLK-JAHR_31
+%%JOBTEXT=CTM-%%OKEWO_JOBNAME %%$OYEAR *** %%ID.-%%RUNNR 
+*  Beschreibung   
+%%DESC=STATI-Erweiterte-BewegungStat Jahr   
+
+%%CHECK1=%%LD_TTMMJJJJP_%%$ODATE
+*
+***********************************************************************************
+*
+* Name der Original OK.EWO Datei ohne Endung
+%%OKEWO_FILE=7570-E01U0000
+*
+%%OKEWO_NR=P7570
+*
+*  eine Check....bat wird eingesetzt
+*  diese prüft zB ob der Lauftag, dem geplanten Lauf entspricht
+%%USE_CHECKBAT=J
+%%CHECKBAT=\\msbmcc03\ctm_av\bin\BAT\Check-MONAT_31.bat
+  
+* Testmodus an
+%%TEST=N
+  
+*  es wird keine Mail versendet
+%%SENDMAIL=N
+  
+* 
+* 
+* 
+*  
+*  OK.EWO BATCH-Vordatei
+*  
+%%ZEILE1=Parametersetzungen:
+%%ZEILE2=$$ZJS_JOBNAME=%%JOBTEXT $$
+%%ZEILE3=$$ZJS_PROG=E01U0000$$
+%%ZEILE4=$$ZJS_PARAMETER=E01U28101#GKB.E01E300#1#B_VON_N.E01DUMMY#%%VON#B_BIS_N.E01DUMMY#%%BIS#E_VON_N.E01DUMMY##E_BIS_N.E01DUMMY##V_UZ331_LISTE.E01DUMMY#$$
+ 
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+
+* ------------------------------------------------------------------

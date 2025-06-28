@@ -1,0 +1,27 @@
+*********************************************************** 
+* LIBMEMSYM 
+* CTM-CMS_JOBDEF-Auftrag
+* 
+* 
+*********************************************************** 
+ 
+%%TRENNER=","
+%%DB=CONTROL_M
+*CTRLM640
+%%U=control_m
+%%P=ctmuser
+%%SHOW_HEADER=J
+
+* Ausgabe
+%%FILE=\\msbmcc03\ctm_av\bin\c\online\ctm_SQL-auftrag.csv
+ 
+* ------------------------------------------------------------------
+*  SQL-Script
+* ------------------------------------------------------------------
+* ------------------------------------------------------------------
+*$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\CTM_JOBDEF.sql
+*%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\CTM_JOBDEF.sql
+%%INPUTFILE=\\msbmcc03\ctm_av\Parm\SQL\CTM_flasher.sql
+$$INCLUDE=\\msbmcc03\ctm_av\Parm\SQL\CTM_flasher.sql
+%%TEST=N
+

@@ -1,0 +1,14 @@
+* *******************************************************************************
+* LIBMEMSYM
+* OKEWO_DB  
+* S Y S T E M F I L E 
+* Zugriff auf OKEWO DB's zB per SQL.BAT
+* -------------------------------------------------------------------------------
+
+* Standard Datenbank
+%%DB=e01_%%GEM3
+
+* Userangaben
+%%U=e01_jasper
+%%P=jasperav
+*

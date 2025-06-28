@@ -1,0 +1,72 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL-Ist-an-AMADEE-Cloud
+* 
+* 
+*********************************************************** 
+%%AUFTRAGGEBER=M.Keil
+
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\g%%GEM3
+
+
+%%DESCRIPTION=Amadee Ist-Zahlungen nach Cloud kopieren 
+%%RICHTUNG=Copy-to-Cloud
+
+%%U=AmadeeAV
+%%P=QGV#W!92wUXn
+%%P=secret-server
+
+
+
+*---------------------------------------------------------------
+* Eingabe Directory 
+%%INDIR=\\vfmgapps\apps\Verfahren\Musikschule
+
+
+* Datei Suchmaske
+%%INCLUDE=IST_musikschule_*.TXT
+%%EXCLUDE="-"
+
+* Directory in der Cloud
+* immer mit Laufwerksbezeichnung
+%%OUTDIR=T:\Musikschule\ToAmadee\%%GEM3
+
+
+
+* T E S T    Anfang 
+*%%INDIR=\\msbmcc03\ctm_av\temp\amadeeTest\mgl
+*%%OUTDIR=X:\Musikschule\ITK-TEST
+*%%INCLUDE=*.TXT
+* T E S T    Ende
+
+
+* Cloud Laufwerk
+%%LAUFWERK=T:
+
+ 
+* Dateien die in die Cloud geschrieben wurden 
+* nach erledigt verschieben
+%%OUTDIR_PROCESSED=%%INDIR.\erledigt\%%GEM3
+
+
+
+
+
+
+
+
+%%TEST=N
+%%DEBUG=N
+*   ********************************************************************************** 
+*    --  nderungen ------------------------------------------------------------------- 
+*    23.01.2020  11:02:20  zv173x2 secure password
+*    13.01.2020  15:12:46  zv173x2 RICHTUNG
+*    13.01.2020  15:02:26  zv173x2 USE_PREFIX default (N) 
+*    20.11.2019  07:08:31  zv173x2 Netuse
+*    15.11.2019  11:07:05  zv173x2 prod
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

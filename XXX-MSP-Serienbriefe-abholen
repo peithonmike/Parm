@@ -1,0 +1,33 @@
+*********************************************************** 
+* LIBMEMSYM 
+* XXX-MSP-Serienbriefe-abholen
+* 
+* 
+*********************************************************** 
+%%AUFTAGGEBER=S.Huennekes ab 04.2021
+
+
+
+
+* In dieser IniDatei stehen alle Verzeichnisse die eingelesen werden sollen 
+%%INIFILE=\\msbmcc03\CTM_AV\Parm\MSP-SERIENBRIEF-INIDATEI
+
+
+ 
+%%LIBMEMSYM=\\MSBMCC03\CTM_AV\PARM\D%%$ODATE
+%%LIBMEMSYM=\\MSBMCC03\CTM_AV\PARM\SYSTEM
+%%LIBMEMSYM=\\MSBMCC03\CTM_AV\PARM\g%%GEM3
+
+%%LIBMEMSYM=%%INIFILE
+
+
+%%OUTDIR=\\srv03\ftp$\av\MSP\Serienbriefe\%%$ODATE
+
+%%TEST=N
+%%DEBUG=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    26.05.2021  10:12:28  zv173x2 %%OYEAR.\%%OMONTH. im ODATE
+ 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

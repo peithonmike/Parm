@@ -1,0 +1,20 @@
+%%SITE=LEMGO-LOGA-ABRECHNUNG
+**HOSTKEY="b9:da:0c:fb:73:90:aa:78:2b:0c:25:79:ae:c4:1b:2e:5f:16:39:27"
+**HOSTKEY="49:b5:b6:9d:31:f7:f2:48:87:08:ab:3c:7e:15:f4:e7:02:03:5a:d3"
+**HOSTKEY="c9:e7:c5:e6:b8:a2:36:17:60:26:50:e4:b3:ca:58:90:ce:1e:c6:ee"
+**HOSTKEY="60:02:2c:54:d4:28:9e:18:1b:79:49:4d:a3:6b:f2:10:45:d3:52:c6"
+**HOSTKEY="fc:f8:45:86:66:93:c8:a2:57:c8:70:91:d6:22:29:bf:e1:69:71:5e"
+%%HOSTKEY="d2:59:0c:1e:8a:99:a1:e9:72:f2:87:25:fa:b8:eb:f3:10:df:09:96"
+%%IP=nicht-verwendet
+%%P=secret-server
+%%U=nicht-verwendet
+%%SERVER_TEXT=Personal-Server Lemgo
+%%MAIL_T=Michael.Hurtz@itk-Rheinland.de;Cristian.Fuchs@itk-rheinland.de;Alexander.Schoenfeld@itk-rheinland.de
+%%MAIL_CC=Produktions-Steuerung@itk-rheinland.de
+
+ 
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*    12.10.2020  07:56:46  zv173x2 email Alex rein, Burgl raus
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 

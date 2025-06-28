@@ -1,0 +1,192 @@
+*********************************************************** 
+* LIBMEMSYM 
+* DUE-EWO-Geburtstagsliste-80-plus-Formular-erzeugen
+* 
+* 
+*********************************************************** 
+ 
+*********************************************************** 
+* Jobname alt bis 12.2021 
+* DUE-Geburtstagsliste-80-plus-Formular-erzeugen
+***********************************************************
+* Standard Files                                          *
+***********************************************************
+
+%%LIBMEMSYM=\\msbmcc01\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc01\ctm_av\PARM\SYSTEM
+%%LIBMEMSYM=\\msbmcc01\ctm_av\PARM\g%%GEM3
+
+
+
+*********************************************************** 
+* %%LISTEN_DATUM=%%JJJJ_MM_P1_%%$ODATE.-%%MM_P1_%%$ODATE
+*********************************************************** 
+* Listen bekommen Datum des nächsten Monats 
+* zwei Punkte müssen sein           ..  
+%%LISTEN_DATUM=%%JJJJ_MM_P1_%%$ODATE..-%%MM_P1_%%$ODATE
+
+***********************************************************
+* Auftrag erteilt durch                                   *
+***********************************************************
+%%AUFTRAGGEBER=H.Möller 
+
+***************************************************************************************************
+* Directory der Prod Jarfiles nach Test
+* P R O D
+***************************************************************************************************
+**JAR_DIR=\\msbmcc03\CTM_AV\Bin\Java\EWO\Altersjubilare_Paket20220218
+%%JAR_DIR=\\msbmcc03\CTM_AV\Bin\Java\EWO\Altersjubilare_Paket20240613
+
+***************************************************************************************************
+* Directory der T E S T  Jarfiles
+* Überschreiben bei Test (zb neue Jar's
+***************************************************************************************************
+**JAR_DIR=\\msbmcc01\CTM_AV\Bin\Java\EWO\Altersjubilare_Paket20211117-Test
+
+***************************************************************************************************
+* Haupt Jarfile
+***************************************************************************************************
+%%JAR_FILE=%%JAR_DIR.\altersjubilare.jar
+
+
+***************************************************************************************************
+* weitere Jar's  %%JAR_DIR
+***************************************************************************************************
+%%GRAT_JRXML=%%JAR_DIR.\Gratulationsschreiben.jrxml
+%%PERS_JRXML=%%JAR_DIR.\Personenliste.jrxml
+%%STAT_JRXML=%%JAR_DIR.\Statistik.jrxml
+
+*  neu ab 17.11.2021
+%%HINW_JRXML=%%JAR_DIR.\Hinweisschreiben.jrxml
+
+
+***************************************************************************************************
+* Infile aus Ewoauswertung
+* \\srv03.asp.rzne.de\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div
+***************************************************************************************************
+%%INFILE=\\srv03\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div\ALTJ%%ODAY.%%OMONTH..DBL
+
+
+
+***************************************************************************************************
+* wenn nur das Formular neu erstellt werden muss 
+* und die Eingabe Datei bereits weiter verarbeitet wurde
+* Eingabe aus erledigt ordner verwenden.
+* Danach wieder aussternen :-)
+*!!!!!!!!*******************************************************************************************
+*%%DESCRIPTION=Formulare wurden neu erstellt   2023\ALTJ1502.DBL
+*%%INFILE=\\srv03\qaspDF$\Daten\Apps\OKEWO\okprg\okewo_DUE\CTM\erledigt\2023\ALTJ1502.DBL
+*!!!!!!!!*******************************************************************************************
+
+
+***************************************************************************************************
+* Druckerei Amt 16  OUTDIR
+***************************************************************************************************
+%%OUTDIR=\\vfdusalt\16\Amt16\DocuShare16
+
+***************************************************************************************************
+* Fachabteilung OUTDIR2
+***************************************************************************************************
+**OUTDIR2=\\vfdusalt\B01\B01\01-14 Protokoll\Alters_und_Ehejubiläen\Hilden\Ehrungen\Altersjubiläen\Einzelfälle
+%%OUTDIR2=\\vfdusalt\B01\B01\01-14 operatives Protokoll\Alters_und_Ehejubiläen\HILDEN\Ehrungen\Altersjubiläen\Einzelfälle
+
+
+
+* !!!!!!!!!!!!!!!!! 
+* PROD = false !!!!
+* !!!!!!!!!!!!!!!!!
+*
+* Test = false oder true
+* 
+%%SKIP_IMPORT="false"
+
+
+
+
+
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*     nachfolgend aufgeführt sind die Test-Pfade für Test-Ein und Ausgabedateien,
+*     sowie Pfad für Test-Altersjubilare-Paket, dort bitte das Test-Java-Paket plazieren,
+*     zum Testen die Prod-Pfade austernen und die Test-Pfade aktivieren,
+*     bitte dazu die Infile-Datei aktualisieren,
+*     Ausgabe-Dateien zum Testen nich ändern,
+*     nach dem Test die Änderungen zurücksetzten
+*------------------------------------------------------------------------------------------------
+*    ab hier werden die PROD Angaben überschrieben mit Test Ein und Ausgaben 
+*------------------------------------------------------------------------------------------------
+*%%DESCRIPTION1= Engabedatei aus Erledigt Ordner...... 
+*%%DESCRIPTION2= Auf Wunsch nacherstellen neues Format
+*%%INFILE=\\srv03\qaspDF$\Daten\Apps\OKEWO\okprg\okewo_DUE\CTM\erledigt\ALTJ1511.DBL
+*%%SKIP_IMPORT="true"
+
+
+*%%JAR_DIR=\\msbmcc01\ctm_av\Bin\Java\EWO\Altersjubilare_Paket20211117-Test
+*%%OUTDIR=\\srv03\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div\AV-Test
+*%%OUTDIR2=\\srv03\qaspdf$\Daten\Apps\OKEWO\okprg\okewo_due\div\AV-Test
+*%%HINW_JRXML=%%JAR_DIR.\Hinweisschreiben.jrxml
+*%%OUTDIR=\\msbmcc01\c$\temp
+*%%JAR_FILE=%%JAR_DIR.\altersjubilare.jar
+
+*------------------------------------------------------------------------------------------------
+
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*  Ende Testbereich
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+******************************************************************
+*
+*        Ausgabe-Dateien OUTDIR
+*
+******************************************************************
+
+%%PERSONEN_PDF=%%OUTDIR.\DUE-80-plus-Personen-%%LISTEN_DATUM..pdf
+*  neu ab 17.11.2021
+%%HINW_PDF=%%OUTDIR.\DUE-80-plus-Hinweisschreiben-%%LISTEN_DATUM..pdf   
+
+
+******************************************************************
+*
+*        Ausgabe-Dateien OUTDIR2
+*
+******************************************************************
+%%LISTE_PDF=%%OUTDIR2.\DUE-80-plus-Liste-%%LISTEN_DATUM..pdf
+%%STATISTIK_PDF=%%OUTDIR2.\DUE-80-plus-Statistik-%%LISTEN_DATUM..pdf
+
+
+
+
+***************************************************************************************************
+* Parameter zusammengesetzt  neu 
+***************************************************************************************************
+%%PARAMETER= "%%INFILE" "%%GRAT_JRXML" "%%HINW_JRXML" "%%PERS_JRXML" "%%STAT_JRXML" "%%PERSONEN_PDF" "%%HINW_PDF" "%%LISTE_PDF" "%%STATISTIK_PDF" "UTF-8" "%%JAR_DIR.\DB_Connector.ini" "%%SKIP_IMPORT"
+
+%%TEST=N
+%%DEBUG=N
+*   ********************************************************************************** 
+*    -- Änderungen ------------------------------------------------------------------- 
+*	 13.06.2024  16:00:00  zvaa405 neues Paket Altersjubilare_Paket20240613 mit neuen jrxml Dateien  
+*    18.02.2022  10:50:23  zv173x2 neues Paket Altersjubilare_Paket20220218
+*    15.02.2022  08:48:45  zv173x2 neues Paket Altersjubilare_Paket20220210 angepasst an neue EwoJobs 
+*    13.01.2022  13:49:58  zv173x2 neuer Jobname 
+*    23.11.2021  14:49:56  zv173x2 Paket20211123
+
+*    22.11.2021  11:58:54  zv173x2 Altersjubilare_Paket20211117 mit neuen Parametern übernommen
+*                                  PARM vorher nach Parm\alt gesichert
+*    15.10.2020  07:31:32  zv173x2 Gratulationsschreiben_20190815.jrxml in Gratulationsschreiben.jrxml
+*    14.10.2020  10:01:35  zv173x2 neus Paket Altersjubilare_Paket_20201013.7z
+*                                  Signature_OB_Keller
+*    16.08.2019  12:34:19  zv173x2 Gratulationsschreiben_20190815.jrxml
+*    25.03.2019  14:07:29  zv173x2 ListenDatum Monat plus 1
+*    13.03.2019  10:04:10  zv173x2 neu 1. Lauf 15.02.2019 nach Umstellung weg von Paypyrus 
+*    --------------------------------------------------------------------------------- 
+*   ********************************************************************************** 
+
+
+
+
+
+

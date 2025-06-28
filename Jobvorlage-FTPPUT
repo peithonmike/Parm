@@ -1,0 +1,30 @@
+*********************************************************** 
+* LIBMEMSYM 
+* Jobvorlage-FTPPUT
+* 
+* 
+*********************************************************** 
+ 
+* hier IP-UP Member anpassen
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\IP-UP-?PAPYRUS?
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\c_bmc\CTM_AV\Parm\SYSTEM
+
+
+
+*Eingabedatei
+%%SYSUT1=?
+
+
+* Papyrus Document   
+%%SYSUT2=?
+
+%%TEST=N
+ 
+* ------------------------------------------------------------------
+* Diese Bat muss in der Commandzeile des Schedule aufgerufen werden
+* im Format \\msbmcc03\c_bmc\CTM_AV\Bin\BAT\FTP_PUT.BAT
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\c_bmc\CTM_AV\Bin\BAT\FTP_PUT.BAT
+* ------------------------------------------------------------------

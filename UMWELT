@@ -1,0 +1,25 @@
+*****************************************************************************
+*   M A I L 
+*   Im Fehlerfall werden die Ansprechpartner benachrichtigt   
+*   Empfänger müssen mit SEMIKOLON getrennt eingetragen werden 
+*   möglich nur Empfänger %%EMAIL_T
+*           und Kopie     %%EMAIL_CC 
+*****************************************************************************
+*   Mailadressen Testoä. 
+*;Reinhard.Baier@ITK-Rheinland.de;Produktions-Steuerung@itk-rheinland.de
+*****************************************************************************
+
+
+%%EMAIL_T=Produktions-Steuerung@itk-rheinland.de
+%%EMAIL_CC=barbara.nilges@itk-rheinland.de
+
+
+
+*****************************************************************************
+*   Mail Betreff 
+*****************************************************************************
+%%EMAIL_U=Job-Nachricht CC:%%COMPSTAT  %%JOBNAME
+%%LOGFILE=\\msbmcbatch01\c$\CTM_AV\Log\ErgebnisLog\UMWELT-IMPORT-%%$OYEAR..csv
+
+
+

@@ -1,0 +1,24 @@
+*********************************************************** 
+* LIBMEMSYM 
+* MGL_PTV_MAIL
+* 
+* 29.06.2018 - neuer Job, beauftragt durch D.Mendoza/Schr. 
+*********************************************************** 
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SAP_ALLE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+%%COMMAND=powershell.exe -ExecutionPolicy Bypass -File "%PSScripts%\Transfer\MGL_PTV_MAIL.ps1" -Credentials "%PSCredentials%\lxsftp_itk_local_DaSAP14Mg20.cred"
+
+%%MAIL_NOTOK=%%SAP_MAIL.;produktions-steuerung@itk-rheinland.de
+
+%%BETREFF_NOTOK=MGL_MGL_PTV_MAIL ist NOTOK gelaufen
+%%TEXT_NOTOK=Joblog:%%JOBNAME ist NOTOK. Bitte ueberpruefen.
+
+* ------------------------------------------------------------------
+* freie Analyse-Datei(en) 
+* haben eventuell keinen Einfluss auf die Funktion der Verarbeitung 
+* ------------------------------------------------------------------
+$$INCLUDE=\\msbmcc03\ctm_av\DOC\SAP-Doku\MGL_OWIMAHN.pdf
+* ------------------------------------------------------------------

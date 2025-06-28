@@ -1,0 +1,25 @@
+*********************************************************** 
+* LIBMEMSYM 
+* GRE_MoveProtIst_05
+* 
+* 
+*********************************************************** 
+*  GRE-E12 kopieren der erzeugten Protokolldatei 
+* 'DOPROTIST[ODATE].TXT 
+* von \Daten\Apps\ftp\av\HUH 
+*  nach 
+*  HH\Protokolle\Export 
+*********************************************************** 
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\SYSTEM
+
+%%TEST=N
+
+
+* ------------------------------------------------------------------
+* PRODOP NEU 2011  Schritt 01
+* ------------------------------------------------------------------
+* GRE_MOVEPROTIST_05 entfällt
+* ------------------------------------------------------------------
+

@@ -1,0 +1,31 @@
+* *************************************************************
+* Table Variablen          
+* DUE-SOLANLIEGER-T-Copy-PTV
+* alter Hostjob Y6005KIR
+* Achtung CTM-PC verwendet Blanks nach dem Gleichheitszeichen
+* *************************************************************
+
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SYSTEM
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\g%%GEM3
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\SAP_DUE
+%%LIBMEMSYM       =\\msbmcc03\ctm_av\Parm\DUE-PTV
+
+**SYSOUT=\\msbmcc03\g$\CTM\Sysout\%%$OYEAR.\%%JOBNAME.-%%ODATE.-%%ORDERID.-%%JOBID..txt
+
+*%%EINGABE_VZ=\\vfdustvg\60\Amt60\Sold\Prod --> Pfad gültig bis 15.01.2016
+
+*neuer Pfad ab 18.01.2016
+
+%%EINGABE_VZ=\\vfdusprog\public\public\sold\produktion\sap
+
+
+%%USERID=ZVDUEFTP
+%%PW=sgbTabelle21
+%%EINDAT=SLDAnlieger.TXT
+
+%%AUSGABE_VZ=\\msptv01\d$\ptv\Projekte\SAP_Export\Sold_EDUE\InDir
+%%AUSDAT=DUE_SOL_Anlieger_T%%$ODATE..TXT
+%%AUSDAT2=SLDAnlieger_T%%$ODATE..TXT
+
+%%COMMAND=\\msbmcc03\ctm_av\Bin\BAT\DUE-PTV.cmd

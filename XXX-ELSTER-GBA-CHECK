@@ -1,0 +1,31 @@
+***********************************************************************************
+*  LIBMEMSYM                                                                      *
+***********************************************************************************
+*  Jobname     : XXX-ELSTER-Sortierung
+***********************************************************************************
+
+
+%%LIBMEMSYM=\\msbmcc03\ctm_av\PARM\System
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\D%%$ODATE
+%%LIBMEMSYM=\\msbmcc03\ctm_av\Parm\g%%GEM3
+
+
+%%INDIR_KAA=\\srv03\qaspkdvz$\daten\apps\ftp\av\ELSTER\KAA
+%%INDIR_MEE=\\srv03\qaspkdvz$\daten\apps\ftp\av\ELSTER\MEE
+%%INDIR_DUE=\\srv03\qaspkdvz$\daten\apps\ftp\av\ELSTER\DUE
+%%INDIR_MGL=\\srv03\qaspkdvz$\daten\apps\ftp\av\ELSTER\MGL
+%%INDIR_NEU=\\srv03\qaspkdvz$\daten\apps\ftp\av\ELSTER\NEU
+%%INDIR_GRE=\\srv03\qaspkdvz$\daten\apps\ftp\av\ELSTER\GRE
+
+
+
+
+%%COMMAND=Powershell.exe -executionpolicy bypass \\msbmcc03\CTM_AV\Bin\Powershell\CF\Job\ELSTER_check_4_GBA_Files.ps1
+
+%%MAIL_NOTOK=produktions-steuerung@itk-rheinland.de
+%%BETREFF_NOTOK=%%JOBNAME ist abgebrochen bitte ueberpruefen!!!
+%%TEXT_NOTOK=%%JOBNAME ist abgebrochen
+
+%%ISE=N
+%%TEST=N
+%%DEBUG=N
